@@ -480,6 +480,25 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 /* ── Results: share URL input ── */
 .share-url-input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:.45rem .65rem;font-size:.76rem;color:var(--muted);font-family:'Inter',sans-serif;cursor:pointer;box-sizing:border-box}
 .share-url-input:focus{outline:none;border-color:var(--ca)}
+
+/* ── Election countdown ── */
+.countdown-bar{
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:.55rem 1rem;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--border);
+  border-radius:8px;margin:.6rem 0 1rem;
+  max-width:620px;width:100%;
+}
+.cd-label{font-size:.75rem;color:var(--muted)}
+.cd-num{
+  font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;
+  color:var(--sk-red);
+}
+.cd-lbl{font-size:.75rem;color:var(--muted)}
+.cd-date{font-size:.72rem;color:var(--muted)}
+/* hide unused elements */
+.cd-units,.cd-sep{display:none}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
 </head>
@@ -492,17 +511,25 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
   <div class="w-hero">
     <span class="flag">🇸🇰</span>
     <h1>Koho voliť<br>v <span>októbri 2026</span>?</h1>
-    <div class="badge-vote">Najdôležitejší krok je ísť voliť. Nenechaj iných rozhodovať o tvojom meste a kraji.</div>
+    <div class="badge-vote">Nenechaj iných rozhodovať o tvojom meste a kraji. Choď voliť.</div>
     <div class="hero-crest-bg"><svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#0B4EA2"/></svg></div>
-    <p class="tagline">Odpovedz na 25 až 30 otázok o živote vo svojom meste alebo kraji a zisti, kto myslí podobne ako ty.</p>
+    <p class="tagline">Odpovedz na 25 otázok o živote vo svojom meste alebo kraji a zisti, kto myslí podobne ako ty.</p>
   </div>
 
   <div class="stats-strip">
-    <div class="stat-item"><span class="stat-num">≤30</span><span class="stat-lbl">otázok</span></div>
+    <div class="stat-item"><span class="stat-num">25</span><span class="stat-lbl">otázok</span></div>
     <div class="stat-sep"></div>
     <div class="stat-item"><span class="stat-num">~10</span><span class="stat-lbl">minút</span></div>
     <div class="stat-sep"></div>
     <div class="stat-item"><span class="stat-num">✓</span><span class="stat-lbl">bez cookies</span></div>
+  </div>
+
+  <!-- Election countdown -->
+  <div class="countdown-bar" id="countdownBar">
+    <span class="cd-label">Do volieb zostáva</span>
+    <span class="cd-num" id="cdDays">—</span>
+    <span class="cd-lbl">dní</span>
+    <span class="cd-date">· 24. október 2026</span>
   </div>
 
   <div class="value-cards">
@@ -514,7 +541,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
     <div class="value-card">
       <div class="value-icon">⚖️</div>
       <div class="value-title">Každá otázka má kontext</div>
-      <div class="value-body">Pri každej otázke môžeš rozbaliť neutrálne pozadie: fakty, čísla, čo robia iné mestá. Aby si sa rozhodol/a informovane.</div>
+      <div class="value-body">Ku každej otázke si môžeš rozbaliť kontext — fakty, čísla a reálne príklady z iných miest — aby si sa rozhodol/a na základe informácií, nie len pocitov.</div>
     </div>
     <div class="value-card">
       <div class="value-icon">🔓</div>
@@ -724,7 +751,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
         <div class="footer-col__title">Transparentnosť</div>
         <p>Všetky pozície kandidátov sú odvodené z verejne dostupných volebných programov, rozhovorov a hlasovaní. Každé priradenie je overiteľné.</p>
         <p>Zdrojový kód kalkulačky je verejne dostupný na GitHub, kde si ktokoľvek môže skontrolovať, ako funguje porovnávanie a skórovanie.</p>
-        <a class="footer-link" href="https://github.com/rozhodnisa/rozhodnisa-sk" target="_blank" rel="noopener">→ GitHub repozitár</a>
+        <a class="footer-link" href="https://github.com/Ranenter/rozhodnisa" target="_blank" rel="noopener">→ GitHub repozitár</a>
       </div>
 
       <div class="footer-col">
@@ -1866,6 +1893,25 @@ function makeVAA(){
 }
 
 const VAA = makeVAA();
+
+// ── Election countdown ──
+(function(){
+  const ELECTION = new Date('2026-10-24T07:00:00');
+  function tick(){
+    const now = new Date();
+    const diff = ELECTION - now;
+    if(diff <= 0){
+      const el = document.getElementById('countdownBar');
+      if(el) el.innerHTML = '<span class="cd-label">🗳 Dnes sú voľby! Choď voliť.</span>';
+      return;
+    }
+    const days = Math.floor(diff / 864e5);
+    const el = document.getElementById('cdDays');
+    if(el) el.textContent = days;
+  }
+  tick();
+  setInterval(tick, 60000);
+})();
 
 </script>
 
