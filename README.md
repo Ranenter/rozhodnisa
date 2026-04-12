@@ -1,4 +1,4 @@
-# rozhodnisa.sk — Volebná kalkulačka 2026
+# Volebná kalkulačka 2026
 
 **Komunálne a župné voľby na Slovensku, 24. októbra 2026.**
 
@@ -8,23 +8,23 @@
 
 ## Prečo sme to vytvorili
 
-Občania štátu majú jeden cieľ: priviesť ťa k volebnej urne.
+Sme Občania štátu máme len jeden cieľ: priviesť ťa k volebnej urne.
 
 Sme apolitickí a nezávislí. Nevznikli sme na objednávku žiadnej strany, kandidáta ani sponzora. Nikto z nás za túto prácu nedostáva odmenu.
 
-Frustruje nás, že kandidáti otvorene klamú a voliči nemajú nástroj, ako ich porovnať. Táto kalkulačka dáva každému transparentnosť, ktorú naša demokracia potrebuje.
+Frustruje nás, že niektorí kandidáti otvorene klamú a voliči nemajú nástroj, ako ich porovnať. Táto kalkulačka dáva každému transparentnosť, ktorú naša demokracia potrebuje.
 
 ---
 
 ## Ako to funguje
 
-Odpovedz na 25 otázok a zisti, s ktorým kandidátom sa najviac zhoduješ. Odpovede kandidátov sú buď priamo overené, alebo odvodené z verejných zdrojov: volebný program, hlasovanie v zastupiteľstve, vyjadrenia v médiách. Vždy je uvedené, ktoré.
+Odpovedz na 25 otázok a zisti, s ktorým kandidátom sa najviac zhoduješ. Odpovede kandidátov sú buď priamo overené, alebo odvodené z verejných zdrojov: volebný program, hlasovanie v zastupiteľstve, strannícka príslušnosť, vyjadrenia v médiách.
 
 Bez cookies. Bez reklám. Bez sledovania. Tvoje odpovede zostávajú iba v tvojom prehliadači.
 
 ---
 
-## Dostupné mestá
+## Dostupné mestá a regióny
 
 | | Primátor/ka | Župan/ka |
 |---|---|---|
@@ -44,5 +44,3 @@ build.py         # Spoj dátové súbory do index.html
 ```
 
 ---
-
-📧 [obcaniasztatu@rozhodnisa.sk](mailto:obcaniasztatu@rozhodnisa.sk) — MIT License
