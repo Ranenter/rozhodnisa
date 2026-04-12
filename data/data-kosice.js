@@ -10,7 +10,7 @@ window.VAA_DATA.candidates['kosice_primator'] = [{id:'polac',name:'Jaroslav Pola
 window.VAA_DATA.candidates['kosice_vuc'] = [
   {id:'trnka',  name:'Rastislav Trnka',   party:'Nezávislý (obžalovaný)',  color:'#78909c'},
   {id:'simko',  name:'Igor Šimko',        party:'Hlas-SD',                 color:'#e63946'},
-  {id:'porvaz', name:'Marián Porvažník',  party:'Progresívne Slovensko',   color:'#64b5f6'},
+  {id:'porvaz', name:'Marián Porvažník',  party:'PS / Za ľudí',            color:'#64b5f6'},
   {id:'gurbal', name:'Lucia Gurbáľová',   party:'KDH',                     color:'#90caf9'},
   {id:'hirman', name:'Karel Hirman',      party:'Demokrati',               color:'#7b1fa2'},
 ];
