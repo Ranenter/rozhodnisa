@@ -542,22 +542,18 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 
 /* ── Election countdown ── */
 .countdown-bar{
-  display:flex;align-items:center;justify-content:center;gap:.6rem;
-  padding:.55rem 1.2rem;
-  background:rgba(11,78,162,.07);
-  border:1px solid rgba(11,78,162,.2);
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  padding:.45rem 1.1rem;
+  background:#eef3ff;
+  border:1.5px solid #c5d5f0;
   border-radius:99px;
   margin:.75rem auto 1.4rem;
-  max-width:360px;
-  width:fit-content;
+  width:auto;
 }
-.cd-label{font-size:.75rem;color:var(--muted)}
-.cd-num{
-  font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;
-  color:var(--sk-red);
-}
-.cd-lbl{font-size:.75rem;color:var(--muted)}
-.cd-date{font-size:.72rem;color:var(--muted)}
+.cd-label{font-size:.75rem;color:#5a6e8c}
+.cd-num{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:#CE1126;}
+.cd-lbl{font-size:.75rem;color:#5a6e8c}
+.cd-date{font-size:.72rem;color:#8a9ab8}
 /* hide unused elements */
 .cd-units,.cd-sep{display:none}
 
@@ -594,11 +590,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
   </div>
 
   <!-- Election countdown -->
+  <div style="text-align:center">
   <div class="countdown-bar" id="countdownBar">
     <span class="cd-label">Do volieb zostáva</span>
     <span class="cd-num" id="cdDays">?</span>
     <span class="cd-lbl">dní</span>
     <span class="cd-date">· 24. október 2026</span>
+  </div>
   </div>
 
   <div class="value-cards">
