@@ -563,6 +563,54 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 /* Komunálne/župné explanation */
 .volby-explain{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;padding:.75rem 1rem;background:rgba(11,78,162,.05);border-left:3px solid var(--sk-blue);border-radius:0 8px 8px 0}
 .volby-explain strong{color:var(--text)}
+
+/* ── Turnout widget ── */
+.turnout-widget{
+  background:var(--surface);
+  border:1.5px solid var(--border);
+  border-radius:14px;
+  padding:1.1rem 1.2rem;
+  margin:1.2rem 0;
+}
+.tw-header{
+  font-size:.7rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--muted);margin-bottom:.9rem;
+}
+.tw-cards{display:grid;grid-template-columns:1fr;gap:.75rem}
+.tw-card{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem}
+.tw-type{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.3rem}
+.tw-pct{font-size:1.6rem;font-weight:700;color:var(--text);line-height:1;margin-bottom:.2rem}
+.tw-sub{font-size:.75rem;color:var(--muted);margin-bottom:.75rem}
+.tw-bar-wrap{position:relative;height:7px;background:rgba(255,255,255,.1);border-radius:99px;margin-bottom:.35rem}
+.tw-bar-fill{height:100%;border-radius:99px}
+.tw-bar-goal{position:absolute;top:-4px;left:50%;width:1.5px;height:15px;background:rgba(255,255,255,.3);border-radius:2px}
+.tw-bar-labels{display:flex;justify-content:space-between;font-size:.65rem;color:var(--muted);position:relative}
+.tw-bar-center{position:absolute;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.35)}
+.tw-fact{
+  margin-top:.75rem;padding:.55rem .75rem;
+  border-radius:8px;border-left:3px solid;
+  font-size:.78rem;line-height:1.6;color:var(--muted);
+  background:rgba(255,255,255,.03);
+}
+.tw-fact strong{color:var(--text)}
+
+/* ── Collapsible detail ── */
+.detail-toggle{
+  display:flex;align-items:center;justify-content:space-between;
+  width:100%;padding:.9rem 0;
+  background:none;border:none;border-top:1px solid var(--border);
+  color:var(--ca);font-family:'Syne',sans-serif;font-size:.95rem;
+  font-weight:700;cursor:pointer;text-align:left;margin-top:1.2rem;
+  transition:opacity .15s;
+}
+.detail-toggle:hover{opacity:.8}
+.toggle-arrow{
+  font-size:1.3rem;color:var(--muted);
+  transition:transform .25s ease;display:inline-block;
+}
+.toggle-arrow.open{transform:rotate(90deg)}
+.detail-collapsed{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.detail-expanded{max-height:9999px;transition:max-height .6s ease}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
 </head>
@@ -713,8 +761,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
       </div>
 
     </div>
-    <div class="detail-title">Porovnanie tvojich odpovedí s kandidátmi</div>
-    <div id="detailList"></div>
+    <div id="turnoutWidget"></div>
+
+    <button class="detail-toggle" id="detailToggle" onclick="VAA.toggleDetail()">
+      <span>Porovnanie tvojich odpovedí s kandidátmi</span>
+      <span class="toggle-arrow" id="toggleArrow">›</span>
+    </button>
+    <div id="detailList" class="detail-collapsed"></div>
   </div>
   <div class="voting-info-section">
     <div class="voting-box voting-box--location">
@@ -1764,6 +1817,22 @@ function makeVAA(){
     return sentence1 + ' ' + sentence2 + ' Pamätaj, že každý hlas sa počíta, nenechaj iných rozhodovať za teba! Choď voliť 🗳';
   }
 
+
+  // ── Turnout data 2022 ──
+  const TURNOUT_2022 = {
+    bratislava: {
+      primator: { ucast: 36.88, winner: 'Vallo',    winnerPct: 60.2, winnerVotes: 86981,  registered: 407650, color: '#CE1126' },
+      vuc:      { ucast: 38.60, winner: 'Droba',    winnerPct: 63.6, winnerVotes: 99870,  registered: 407650, color: '#0B4EA2' }
+    },
+    kosice: {
+      primator: { ucast: 30.89, winner: 'Polaček',  winnerPct: 36.79, winnerVotes: 20561, registered: 194700, color: '#D4AF37' },
+      vuc:      { ucast: 43.74, winner: 'Trnka',    winnerPct: 51.31, winnerVotes: 43680, registered: 194700, color: '#0B4EA2' }
+    },
+    presov: {
+      primator: { ucast: 42.66, winner: 'Oľha',     winnerPct: 37.26, winnerVotes: 10934, registered: 68600,  color: '#CC3322' },
+      vuc:      { ucast: 43.74, winner: 'Majerský', winnerPct: 41.96, winnerVotes: 12450, registered: 68600,  color: '#0B4EA2' }
+    }
+  };
   function _showResults(){
     const cands = (window.VAA_DATA.candidates && window.VAA_DATA.candidates[`${city}_${type}`]) || [];
     const scores = cands.map(c=>({ ...c, pct: _calcMatch(c.id) }))
@@ -1819,6 +1888,10 @@ function makeVAA(){
         </div>`;
       }).filter(Boolean).join('');
     }
+
+    // Turnout widget
+    const tw = $('turnoutWidget');
+    if(tw) tw.innerHTML = _buildTurnoutWidget(city, type);
 
     // Share URL with hash for shareability
     const baseUrl = window.location.href.split('#')[0].split('?')[0];
@@ -1901,6 +1974,53 @@ function makeVAA(){
     }
   }
 
+  function toggleDetail(){
+    const el = $('detailList');
+    const arrow = $('toggleArrow');
+    if(!el) return;
+    if(el.classList.contains('detail-collapsed')){
+      el.classList.remove('detail-collapsed');
+      el.classList.add('detail-expanded');
+      if(arrow) arrow.classList.add('open');
+    } else {
+      el.classList.remove('detail-expanded');
+      el.classList.add('detail-collapsed');
+      if(arrow) arrow.classList.remove('open');
+    }
+  }
+
+  function _buildTurnoutWidget(cityKey, typeKey){
+    const d = TURNOUT_2022[cityKey] && TURNOUT_2022[cityKey][typeKey];
+    if(!d) return '';
+    const elected = ((d.ucast / 100) * (d.winnerPct / 100) * 100).toFixed(1);
+    const barW = Math.min(d.ucast, 100).toFixed(1);
+    const typeLabel = typeKey === 'primator' ? 'primátora' : 'župana';
+    const quizTypeLabel = typeKey === 'primator' ? 'Primátor' : 'Župan';
+    return `
+      <div class="turnout-widget">
+        <div class="tw-header">Volebná účasť 2022</div>
+        <div class="tw-cards">
+          <div class="tw-card">
+            <div class="tw-type">${quizTypeLabel}</div>
+            <div class="tw-pct">${d.ucast.toFixed(1)} %</div>
+            <div class="tw-sub">prišlo voliť v roku 2022</div>
+            <div class="tw-bar-wrap">
+              <div class="tw-bar-fill" style="width:${barW}%;background:${d.color}"></div>
+              <div class="tw-bar-goal"></div>
+            </div>
+            <div class="tw-bar-labels">
+              <span>0 %</span>
+              <span class="tw-bar-center">cieľ 50 %</span>
+              <span>100 %</span>
+            </div>
+            <div class="tw-fact" style="border-color:${d.color}">
+              Súčasný ${typeLabel} <strong>${d.winner}</strong> bol zvolený hlasmi iba <strong>${elected} % všetkých voličov</strong>. Malá skupina rozhodla za všetkých.
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+
   function restart(){
     city = null; type = null; Qs = []; userAns = []; qIdx = 0;
     document.querySelectorAll('.city-card,.type-card').forEach(b=>b.classList.remove('sel'));
@@ -1966,7 +2086,7 @@ function makeVAA(){
     }
   })();
 
-  return { pickCity, pickType, startQuiz, ans, goBack, restart, toggleInfo, shareFB: sf.shareFB, shareLI: sf.shareLI, shareTW: sf.shareTW, copyURL: sf.copyURL };
+  return { pickCity, pickType, startQuiz, ans, goBack, restart, toggleInfo, toggleDetail, shareFB: sf.shareFB, shareLI: sf.shareLI, shareTW: sf.shareTW, copyURL: sf.copyURL };
 }
 
 const VAA = makeVAA();
