@@ -110,94 +110,101 @@ window.VAA_DATA.questions.bratislava_primator = [
 window.VAA_DATA.questions.bratislava_vuc = [
   {t:'Vzdelávanie',    q:'Mal by kraj zatvárať stredné školy, ktoré majú dlhodobo málo žiakov, aj keby to znamenalo zánik niektorých typov škôl?',
    info:'Demografický pokles znižuje počty žiakov, no politicky je veľmi ťažké zatvárať školy. Prázdne školy sú finančnou záťažou, ale ich zatvorenie ničí komunity a ruší vzdelávacie tradície.',
-   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'neutral',krajco:'neutral'}},
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'neutral'}},
+
   {t:'Zdravotníctvo',  q:'Mal by kraj udržiavať stratové krajské nemocnice otvorené aj bez štátnej pomoci?',
    info:'Krajské nemocnice sú pre stovky tisíc ľudí jedinou dostupnou zdravotnou starostlivosťou. Ich zatvorenie šetrí peniaze kraja, ale ničí prístup k zdravotnej starostlivosti — špeciálne pre starých a chudobných.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Dane',           q:'Mal by kraj znížiť poplatky za sociálne služby (domovy dôchodcov, denné centrá) pre seniorov s nižšími príjmami?',
    info:'Poplatky za sociálne zariadenia sú pre mnohých dôchodcov vyššie ako ich dôchodok. Kraj môže nastaviť škálu poplatkov podľa príjmu — ale to znamená menej príjmov a nutnosť hľadať úspory inde.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Doprava',        q:'Chceš, aby Bratislavský kraj investoval viac do vlakových a autobusových spojení medzi obcami namiesto ciest pre autá?',
    info:'Stovky obcí v BSK sú zle prepojené verejnou dopravou, čo núti ľudí k vlastným autám. Investície do vlakov a autobusov sú dlhodobé, ale vyžadujú koordináciu so štátom a ŽSR.',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Životné prostredie',q:'Chceš, aby kraj aktívne bránil Malé Karpaty pred zástavbou a komerčným využitím?',
    info:'Malé Karpaty sú pľúcami Bratislavy, no tlak developerov na ich okraje neustále rastie. Kraj rozhoduje o územnom pláne kraja — môže definitívne zablokovať alebo umožniť zástavbu.',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree',krajco:'agree'}},
+
   {t:'Korupcia',       q:'Chceš povinné zverejňovanie všetkých župných zákaziek vrátane odôvodnenia výberu dodávateľa?',
    info:'Kraj má ročný rozpočet stovky miliónov eur. Transparentnosť zákaziek znižuje korupčné riziká, no politici sa jej niekedy bránia, lebo odhaľuje klientelizmus a stranícke záujmy.',
    a:{droba:'agree',smer_ba:'disagree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Sociálne služby',q:'Mal by kraj výrazne rozšíriť kapacity domovov sociálnych služieb pre seniorov v menších mestách?',
    info:'Domovy dôchodcov v Bratislavskom kraji sú preplnené a čakacie lehoty sú niekoľkoročné. Riešenie vyžaduje obrovské investície — kraj ich môže financovať z eurofondov, ale to trvá roky.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Lokálny patriotizmus',q:'Vadí ti, že vláda posiela oveľa viac eurofondov do iných krajov ako do Bratislavského?',
    info:'BSK je bohatší kraj a EÚ pravidlá obmedzujú eurofondy pre vyspelé regióny. Niektorí to považujú za spravodlivosť — iní za diskrimináciu bohatšieho regiónu, ktorý taktiež potrebuje investície do infraštruktúry.',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Kultúra',        q:'Mal by kraj financovať kultúrne podujatia aj v menších obciach, nielen v Bratislave?',
    info:'Väčšina krajských kultúrnych výdavkov ide do hlavného mesta, zatiaľ čo vidiecke obce majú minimálnu kultúrnu ponuku. Decentralizácia kultúry posilňuje komunity, ale vyžaduje systém spravodlivého prideľovania.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'neutral'}},
-  {t:'LGBTQ+',         q:'Mal by kraj financovať komunitné programy pre LGBTQ+ mládež, napríklad preventívne programy proti šikane na školách?',
-   info:'Stredné školy patria pod kraj a šikana LGBTQ+ žiakov je dokumentovaným problémom. Kraj môže alokovať granty na inkluzívne programy — alebo sa môže rozhodnúť, že to nie je jeho priorita.',
-   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'disagree',krajco:'agree'}},
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Rómske komunity',q:'Mal by kraj investovať do integračných programov pre Rómov — vzdelávanie, bývanie, zamestnávanie — nad rámec minimálnych zákonných povinností?',
    info:'BSK má menší podiel marginalizovaných Rómov ako východ Slovenska, ale integračné výzvy existujú aj tu. Dobrovoľné programy nad zákonný rámec sú politicky citlivé, ale môžu prelomiť cyklus vylúčenia.',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Energetická chudoba',q:'Mal by kraj platiť časť nákladov na zateplenie domov pre ľudí v energetickej chudobe?',
    info:'Energetická chudoba zasiahla desaťtisíce domácností. Kraj nemôže regulovať ceny energií, ale môže subvenciovať zateplenie alebo sprostredkovávať skupinový nákup energie pre domácnosti s nízkymi príjmami.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'neutral'}},
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Hodnoty',        q:'Mal by župan verejne hradiť práva LGBTQ+ komunity, alebo sa má zdržať hodnotových vyjadrení a sústrediť sa len na správu kraja?',
    info:'Župan je politická funkcia s verejnou viditeľnosťou. Niektorí voliči chcú reprezentanta, ktorý stojí za inkluzívnymi hodnotami; iní preferujú pragmatického správcu bez ideologického komentára.',
    a:{droba:'agree',smer_ba:'disagree',kdh_ba:'disagree',krajco:'agree'}},
+
   {t:'Infraštruktúra', q:'Chceš, aby kraj prioritizoval opravu existujúcich krajských ciest pred budovaním nových?',
    info:'Stovky kilometrov krajských ciest sú v zlom stave, ale politicky atraktívnejšie sú pásky pri otváraní nových projektov. Oprava ciest je nudná, ale nevyhnutná pre každodennú bezpečnosť tisícov vodičov.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Digitalizácia',  q:'Mal by kraj zaviesť digitálnu žiackú knižku a plné digitálne hodnotenie na krajských školách?',
    info:'Digitalizácia škôl urýchľuje komunikáciu s rodičmi a znižuje papierovanie. Vyžaduje však investície do zariadení, preškolenia učiteľov a riešenie digitálnej nerovnosti medzi žiakmi.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'neutral'}},
-  {t:'Podnikanie',     q:'Mal by kraj aktívne lákať zahraničné firmy do regiónu aj za cenu daňových úľav alebo zvýhodneného predaja pôdy?',
-   info:'Investičné stimuly privádzajú pracovné miesta, ale môžu oškodiť miestne firmy, ktoré takéto výhody nedostávajú. Otázka je, komu skutočne slúžia — pracovníkom, alebo predovšetkým veľkým korporáciám.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Zdravotníctvo',  q:'Mal by kraj povinne zverejňovať čakacie doby na jednotlivých špecializovaných oddeleniach krajských nemocníc?',
    info:'Pacienti dnes čakajú mesiace bez informácie o tom, kde sa čaká kratšie. Zverejňovanie čakacích dôb umožňuje pacientom lepšie sa rozhodovať a vytvára tlak na nemocnice, aby zlepšili efektivitu.',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Vzdelávanie',    q:'Mal by kraj vytvoriť odborné stredné školy priamo prepojené s miestnymi firmami, kde časť vyučovania prebieha v podnikoch?',
    info:'Duálny systém vzdelávania funguje úspešne v Nemecku a postupne sa zavádza na Slovensku. Kraj môže aktívne tlačiť firmy k partnerstvám so školami — čo znižuje nezamestnanosť absolventov a zlepšuje ich praxu.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-  {t:'Životné prostredie',q:'Mal by kraj zakázať nové priemyselné parky v blízkosti obytných zón, aj keby to odradilo investorov?',
-   info:'Priemyselné parky prinášajú prácu, ale aj hluk, smog a zvýšenú dopravu do susedských oblastí. Kraj rozhoduje o územnom pláne — môže nastaviť prísnejšie ochranné pásma ako zákon vyžaduje.',
-   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Participácia',   q:'Mal by kraj každoročne alokovať aspoň 5 % svojho rozpočtu na projekty, o ktorých hlasujú priamo občania?',
    info:'Participatívny krajský rozpočet je inovatívny nástroj, ktorý posilňuje demokraciu zdola. Vyžaduje dôveru v občanov a ochotu politikov vzdať sa časti kontroly nad rozhodovaním.',
    a:{droba:'agree',smer_ba:'disagree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Sociálne služby',q:'Mal by kraj vyplácať príspevok rodinným príslušníkom, ktorí sa starajú o odkázaných seniorov doma namiesto ústavu?',
    info:'Neformálna starostlivosť v rodine je lacnejšia a pre seniora ľudskejšia ako ústav. Jej finančné ocenenie by pomohlo tisíckám rodín — no kraj by musel nájsť zdroje na tento systém.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-  {t:'Korupcia',       q:'Chceš, aby župan osobne majetkovo zodpovedal za stratu verejných financií pri zlom rozhodnutí?',
-   info:'Verejní funkcionári dnes nesú len politickú, nie osobnú finančnú zodpovednosť za svoje rozhodnutia. Zmena by mohla odradiť od riskantných rozhodnutí, ale aj od odvážnych investícií.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Mládež',         q:'Mal by kraj poskytovať štipendium najlepším stredoškolákom z chudobných rodín, aby mohli študovať bez finančných bariér?',
    info:'Sociálne štipendiá sú jedným z najefektívnejších nástrojov na prelomenie chudoby cez vzdelávanie. Kraj vie takýto program financovať z vlastného rozpočtu bez čakania na štátne riešenie.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Doprava',        q:'Chceš, aby kraj spolufinancoval bezplatnú MHD pre stredoškolákov v Bratislavskom kraji?',
    info:'Stredoškoláci musia každý deň cestovať do školy — čo stojí rodiny tisíce eur ročne. Bezplatná MHD pre žiakov existuje v niektorých krajoch a znižuje tlak na rodinné rozpočty, ale zaťažuje krajskú kasu.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Vízia',          q:'Je pre teba dôležitejšia schopnosť župana vyjednávať s Bruselom a čerpať eurofondy ako jeho hodnotová orientácia?',
    info:'Kraj dostáva každé štyri roky stovky miliónov eur z EÚ. Schopnosť tieto peniaze zmysluplne použiť je kľúčová — ale záleží ti tiež na tom, aké hodnoty župan reprezentuje navonok?',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
-,
 
   {t:'Doprava',           q:'Má BSK dobudovať sieť terminálov integrovanej dopravy (TIOP) na prestup vlak–autobus v celom Bratislavskom kraji?',
    info:'BSK buduje sieť prestupných terminálov, kde sa stretáva vlak, autobus a mestská doprava — prvý funguje od 2024 vo Vrakuni, ďalší sa plánuje v Ružinove. Terminály prepájajú IDS BK (Integrovaný dopravný systém Bratislavského kraja) s mestskou dopravou a znižujú závislosť od auta. Každý terminál stojí desiatky miliónov eur, z čoho veľkú časť pokrývajú eurofondy. Kľúčová otázka je, kto má terminály dlhodobo financovať — mesto, kraj, štát alebo developeri v okolí.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},,
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Zdravotníctvo',     q:'Má BSK zaviesť motivačné schémy pre lekárov, ktorí sa usadia v obciach Bratislavského kraja bez všeobecného lekára?',
    info:'V mnohých obciach Bratislavského kraja chýba všeobecný lekár — pacienti musia za zdravotnou starostlivosťou cestovať desiatky kilometrov. Kraj má kompetenciu zriaďovať zdravotnícke zariadenia a motivovať lekárov štipendijnými programami alebo garantovanou ordináciou. Prešovský a Trnavský kraj zaviedli podobné schémy s pozitívnymi výsledkami. Systémovým riešením by mohla byť kombinácia krajských stimulov a štátnych platieb za dostupnosť.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},,
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Bývanie',           q:'Má BSK koordinovať územné plány obcí, aby dostupné bývanie vznikalo pri dopravných uzloch a nie na okraji zástavby?',
    info:'Ceny nehnuteľností v Bratislave ženia záujemcov o bývanie do okolitých obcí — tento trend sa nazýva suburbanizácia a zvyšuje závislosť od auta. BSK má kompetencie územného plánovania na úrovni kraja a môže usmerňovať lokalizáciu novej výstavby. Bývanie pri dopravných uzloch umožňuje ľuďom žiť bez auta, čo znižuje dopravné zaťaženie a emisie. Koordinácia si vyžaduje spoluprácu desiatokvôbcí, čo je politicky a administratívne náročné.',
-   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},,
+   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Životné prostredie', q:'Má BSK zakázať zástavbu poľnohospodárskej pôdy I. triedy v celom Bratislavskom kraji?',
    info:'Bratislavský kraj stráca každoročne desiatky hektárov najúrodnejšej poľnohospodárskej pôdy kvôli výstavbe logistických centier, obytných štvrtí a priemyselných parkov. Záber pôdy je prakticky nezvratný — pôda I. triedy vzniká tisíce rokov. Kraj Malé Karpaty chráni ako prírodný park, no iným poľnohospodárskym oblastiam venuje menej pozornosti. Niektoré krajiny EÚ zavádzajú striktnejšiu ochranu pôdy na národnej úrovni a kraj môže toto lobovanie iniciálne tlačiť.',
-   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},,
-  {t:'Regionálne rozdiely', q:'Má BSK aktívne podporovať najmenšie obce kraja, aby sa zabránilo ich úplnému vyľudneniu?',
-   info:'Okolie Bratislavy zažíva paradox — niektoré obce sa predražujú a rastú, zatiaľ čo vzdialenejšie dediny sa vyľudňujú a zanikajú. BSK môže v rámci integrovanej územnej stratégie smerovať eurofondy do takýchto obcí na školy, cesty alebo komunitné centrá. Zachovanie vidieckeho osídlenia má kultúrnu a krajinnú hodnotu, no prináša vysoké náklady na infraštruktúru na obyvateľa. Otázkou je, či má kraj financovať zachovanie osídlenia, alebo nechať demografické trendy pôsobiť voľne.',
-   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'agree'}},
+   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}}
 ];
