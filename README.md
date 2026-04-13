@@ -10,7 +10,7 @@
 
 Sme Občania štátu máme len jeden cieľ: priviesť ťa k volebnej urne.
 
-Sme apolitickí a nezávislí. Nevznikli sme na objednávku žiadnej strany, kandidáta ani sponzora. Nikto z nás za túto prácu nedostáva odmenu. Odmeníte nás, keď pojdete voliť.
+Sme apolitickí a nezávislí. Nevznikli sme na objednávku žiadnej strany, kandidáta ani sponzora. Nikto z nás za túto prácu nedostáva odmenu. Odmeníte nás, keď pôjdete voliť.
 
 Frustruje nás, že niektorí kandidáti otvorene klamú a voliči nemajú nástroj, ako kandidátov porovnať. Táto kalkulačka dáva každému transparentnosť, ktorú naša demokracia potrebuje.
 
