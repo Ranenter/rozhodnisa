@@ -564,6 +564,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .volby-explain{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;padding:.75rem 1rem;background:rgba(11,78,162,.05);border-left:3px solid var(--sk-blue);border-radius:0 8px 8px 0}
 .volby-explain strong{color:var(--text)}
 
+.cand-link{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.35);transition:text-decoration-color .15s}
+.cand-link:hover{text-decoration-color:rgba(255,255,255,.8)}
 /* ── Turnout widget ── */
 .turnout-widget{
   background:var(--surface);
@@ -956,35 +958,35 @@ window.VAA_DATA = window.VAA_DATA || {};
 
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
-window.VAA_DATA.candidates['bratislava_primator'] = [{id:'vallo',name:'Matúš Vallo',party:'Team BA / PS / SaS / Demokrati',color:'#e63946'},{id:'cahoj',name:'Dana Čahojová',party:'Nezávislá',color:'#457b9d'},{id:'winkl',name:'Martin Winkler',party:'Strana Dunaj',color:'#2a9d8f'},{id:'hered',name:'Miro Heredoš',party:'Nezávislý (ex-Republika)',color:'#6d4c41'},{id:'geci',name:'Ľubomír Geci',party:'Nezávislý',color:'#78909c'}];
-window.VAA_DATA.candidates['bratislava_vuc'] = [{id:'droba',name:'Juraj Droba',party:'SaS / PS / Team BA / Demokrati',color:'#0097a7'},{id:'krajco',name:'Zuzana Krajčovičová',party:'Právo na pravdu',color:'#2e7d32'},{id:'smer_ba',name:'Kandidát SMER',party:'SMER-SD',color:'#e63946'},{id:'kdh_ba',name:'Kandidát KDH',party:'KDH',color:'#90caf9'}];
+window.VAA_DATA.candidates['bratislava_primator'] = [{id:'vallo',name:'Matúš Vallo',party:'Team BA / PS / SaS / Demokrati',color:'#e63946',url:'https://teamba.sk'},{id:'cahoj',name:'Dana Čahojová',party:'Nezávislá',color:'#457b9d',url:''},{id:'winkl',name:'Martin Winkler',party:'Strana Dunaj',color:'#2a9d8f',url:'https://martinwinkler.sk'},{id:'hered',name:'Miro Heredoš',party:'Nezávislý (ex-Republika)',color:'#6d4c41',url:''},{id:'geci',name:'Ľubomír Geci',party:'Nezávislý',color:'#78909c',url:''}];
+window.VAA_DATA.candidates['bratislava_vuc'] = [{id:'droba',name:'Juraj Droba',party:'SaS / PS / Team BA / Demokrati',color:'#0097a7',url:'https://droba.sk'},{id:'krajco',name:'Zuzana Krajčovičová',party:'Právo na pravdu',color:'#2e7d32',url:'https://zupanka.sk'},{id:'smer_ba',name:'Kandidát SMER',party:'SMER-SD',color:'#e63946',url:''},{id:'kdh_ba',name:'Kandidát KDH',party:'KDH',color:'#90caf9',url:''}];
 
 // ── Otázky: Primátor / Primátorka ──
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 window.VAA_DATA.questions.bratislava_primator = [
   {t:'Doprava',        q:'Chceš menej parkovacích miest v centre a viac cyklotrás?',
-   info:'Bratislava dlhodobo rozširuje cykloinfraštruktúru a obmedzuje autá v centre. Toto rozhodnutie priamo ovplyvňuje každodenný život státisícov ľudí, buď uľahčuje pohyb cyklistov a chodcov, alebo komplikuje život tým, ktorí cestujú autom.',
+   info:'Bratislava dlhodobo rozširuje cykloinfraštruktúru a obmedzuje autá v centre. Toto rozhodnutie priamo ovplyvňuje každodenný život státisícov ľudí — buď uľahčuje pohyb cyklistov a chodcov, alebo komplikuje život tým, ktorí cestujú autom.',
    a:{vallo:'agree',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
   {t:'Dane',           q:'Vadí ti, že Bratislava zdvojnásobila miestne dane za posledné štyri roky?',
-   info:'Mestské dane vzrástli výrazne, čo vyvolalo vlnu kritiky. Na druhej strane, vyššie príjmy umožnili financovať rekonštrukcie ciest, škôl a parkov, otázka je, či to stálo za to.',
+   info:'Mestské dane vzrástli výrazne, čo vyvolalo vlnu kritiky. Na druhej strane, vyššie príjmy umožnili financovať rekonštrukcie ciest, škôl a parkov — otázka je, či to stálo za to.',
    a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
   {t:'Transparentnosť',q:'Myslíš si, že magistrát je príliš nafúknutý a plný zbytočných úradníkov?',
    info:'Vinkler navrhuje znížiť počet administratívnych zamestnancov magistrátu o 30 percent a ušetrené peniaze presunúť do mestskej polície a údržby. Ide o klasický spor medzi štíhlou efektívnou správou a robustným verejným sektorom.',
    a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
   {t:'Zadlženie',      q:'Vadí ti, že Bratislava má rekordný dlh a stále si berie nové úvery?',
-   info:'Bratislava patrí k najzadlženejším mestám v regióne. Dlhy financujú rozvoj, ale zaťažujú budúce rozpočty, kedy je pôžička investícia a kedy problém?',
+   info:'Bratislava patrí k najzadlženejším mestám v regióne. Dlhy financujú rozvoj, ale zaťažujú budúce rozpočty — kedy je pôžička investícia a kedy problém?',
    a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'neutral'}},
   {t:'Električka',     q:'Považuješ dvojročné meškanie petržalskej električky za zlyhanie vedenia mesta?',
    info:'Projekt za vyše 300 miliónov eur sa opakovane oneskoroval a predražoval. Primátor hovorí o objektívnych príčinách; oponenti vidia symptóm slabého manažmentu megaprojektov.',
    a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'neutral',geci:'agree'}},
   {t:'Bývanie',        q:'Mal by magistrát stavať vlastné nájomné byty pre mladých a nízkopríjmových ľudí?',
-   info:'Bratislava čelí extrémnej bytovej kríze, priemerná cena bytu je desaťnásobok priemerného platu. Mestské nájomné byty môžu pomôcť, ale vyžadujú obrovské investície a dlhodobý záväzok.',
+   info:'Bratislava čelí extrémnej bytovej kríze — priemerná cena bytu je desaťnásobok priemerného platu. Mestské nájomné byty môžu pomôcť, ale vyžadujú obrovské investície a dlhodobý záväzok.',
    a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},
   {t:'Životné prostredie',q:'Súhlasíš so zákazom vjazdu starých dieselových áut do centra Bratislavy?',
-   info:'Nízkoemisné zóny fungujú v desaťkách európskych miest a znižujú znečistenie ovzdušia. Ale pre mnohých Bratislavčanov by to znamenalo povinnosť vymeniť auto, čo si môžu dovoliť len niektorí.',
+   info:'Nízkoemisné zóny fungujú v desaťkách európskych miest a znižujú znečistenie ovzdušia. Ale pre mnohých Bratislavčanov by to znamenalo povinnosť vymeniť auto — čo si môžu dovoliť len niektorí.',
    a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'agree',geci:'neutral'}},
   {t:'MHD',            q:'Chceš, aby MHD bola zadarmo pre dôchodcov a ľudí so ZŤP bez ohľadu na príjem?',
-   info:'Bezplatná MHD pre zraniteľné skupiny zvyšuje sociálnu dostupnosť mesta. Stojí to peniaze z mestského rozpočtu, ktoré by mohli ísť inam, napríklad na frekvenciu spojov.',
+   info:'Bezplatná MHD pre zraniteľné skupiny zvyšuje sociálnu dostupnosť mesta. Stojí to peniaze z mestského rozpočtu, ktoré by mohli ísť inam — napríklad na frekvenciu spojov.',
    a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
   {t:'Bezpečnosť',     q:'Chceš výrazne viac viditeľných mestských policajtov v uliciach Bratislavy?',
    info:'Bratislava trpí pocitom neistoty v niektorých štvrtiach, aj keď štatistiky kriminality nie sú dramatické. Viac policajtov znamená vyššie náklady a otázku, kto a ako bude kontrolovať ich prácu.',
@@ -993,7 +995,7 @@ window.VAA_DATA.questions.bratislava_primator = [
    info:'Bezplatné obedy odstraňujú stigmu aj administratívnu záťaž pri testovaní príjmu. Ročne by to stálo desiatky miliónov eur z mestského rozpočtu, ale garantovalo by výživu pre každé dieťa.',
    a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
   {t:'Korupcia',       q:'Chceš, aby boli všetky mestské zákazky a zmluvy povinne zverejnené aj s odôvodnením výberu dodávateľa?',
-   info:'Transparentnosť verejného obstarávania je kľúčová v boji s klientelizmom. Bratislava má povinné zverejňovanie, ale odôvodnenie výberu nie je vždy podrobné, ide o nastavenie kultúry otvorenosti.',
+   info:'Transparentnosť verejného obstarávania je kľúčová v boji s klientelizmom. Bratislava má povinné zverejňovanie, ale odôvodnenie výberu nie je vždy podrobné — ide o nastavenie kultúry otvorenosti.',
    a:{vallo:'agree',cahoj:'disagree',winkl:'neutral',hered:'disagree',geci:'neutral'}},
   {t:'LGBTQ+',         q:'Mal by mestský magistrát aktívne podporovať LGBTQ+ komunitné centrá a projekty z mestských grantov?',
    info:'Mestá majú vlastné grantové programy, kde môžu podporiť rôznorodé komunity. Toto je otázka hodnotovej orientácie mesta: inkluzivita vs. tradičné chápanie verejného priestoru. Primátor nemôže zákonom garantovať "bezpečné priestory", ale môže financovať ich vznik.',
@@ -1002,7 +1004,7 @@ window.VAA_DATA.questions.bratislava_primator = [
    info:'V Bratislave žijú tisíce ľudí v extrémnej chudobe bez prístupu k dôstojnému bývaniu. Primátor môže iniciovať terénnu sociálnu prácu, integračné programy a nájomné byty. Ide o citlivú tému s rôznymi pohľadmi naprieč politickým spektrom.',
    a:{vallo:'disagree',cahoj:'agree',winkl:'disagree',hered:'agree',geci:'neutral'}},
   {t:'Lokálny patriotizmus',q:'Vadí ti, že Bratislava dostáva neúmerne veľa štátnych investícií v porovnaní s ostatnými regiónmi?',
-   info:'Bratislava ako hlavné mesto prirodzene ťaží z centralizácie. Ale ako primátor musíš lobovať za vlastné mesto, nie za ostatných. Táto otázka testuje, či voliš celoštátne alebo lokálne uvažovanie.',
+   info:'Bratislava ako hlavné mesto prirodzene ťaží z centralizácie. Ale ako primátor musíš lobovať za vlastné mesto — nie za ostatných. Táto otázka testuje, či voliš celoštátne alebo lokálne uvažovanie.',
    a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'neutral',geci:'neutral'}},
   {t:'Energetická chudoba',q:'Mal by magistrát pomáhať domácnostiam s najnižšími príjmami znižovať energetické náklady napríklad cez mestské solárne programy?',
    info:'Energetická chudoba zasiahla desaťtisíce domácností. Magistrát nemôže priamo regulovať ceny energií, ale môže sprostredkovať skupinový nákup energie, subvenciovať izoláciu budov alebo inštaláciu solárnych panelov na mestské nehnuteľnosti.',
@@ -1014,7 +1016,7 @@ window.VAA_DATA.questions.bratislava_primator = [
    info:'Mestská zeleň znižuje tepelné ostrovy, zlepšuje kvalitu ovzdušia a zvyšuje kvalitu života. Výsadba stromov je relatívne lacná, ale ich dlhodobá starostlivosť si vyžaduje systémový prístup a rozpočet.',
    a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'disagree',geci:'neutral'}},
   {t:'Kultúra',        q:'Mal by magistrát zvýšiť granty pre nezávislé kultúrne organizácie a festivaly?',
-   info:'Bratislava má bohatú kultúrnu scénu závislú na mestskej podpore. Otázka je, či uprednostniť zavedené inštitúcie alebo dávať šancu novým, inovatívnym projektom, a kto o tom rozhoduje.',
+   info:'Bratislava má bohatú kultúrnu scénu závislú na mestskej podpore. Otázka je, či uprednostniť zavedené inštitúcie alebo dávať šancu novým, inovatívnym projektom — a kto o tom rozhoduje.',
    a:{vallo:'neutral',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
   {t:'Participácia',   q:'Chceš, aby ľudia v mestských častiach mohli priamo rozhodovať o časti mestského rozpočtu (participatívny rozpočet)?',
    info:'Participatívny rozpočet umožňuje občanom navrhovať a hlasovať o projektoch vo svojom okolí. Posilňuje zapojenie, ale vyžaduje administratívnu kapacitu a ochotu politikov vzdať sa časti kontroly.',
@@ -1025,8 +1027,8 @@ window.VAA_DATA.questions.bratislava_primator = [
   {t:'Doprava',        q:'Mal by magistrát zakázať záber verejného priestoru placenými terasami v úzkych uliciach?',
    info:'Terasy oživujú mesto, ale v úzkych uliciach blokujú prechod chodcov, vozíčkárov a kočiarov. Ide o spor medzi záujmami gastronomie a verejnou dostupnosťou priestoru.',
    a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
-  {t:'Digitalizácia',  q:'Chceš, aby magistrát digitalizoval väčšinu agendy, vydávanie povolení, hlásenie problémov, platby, a minimalizoval osobné návštevy úradu?',
-   info:'Digitálna správa mesta znižuje korupčné riziká, urýchľuje procesy a zvyšuje komfort. Nevýhodou je vylúčenie tých, ktorí nemajú prístup k internetu alebo technológiám, najmä seniori.',
+  {t:'Digitalizácia',  q:'Chceš, aby magistrát digitalizoval väčšinu agendy — vydávanie povolení, hlásenie problémov, platby — a minimalizoval osobné návštevy úradu?',
+   info:'Digitálna správa mesta znižuje korupčné riziká, urýchľuje procesy a zvyšuje komfort. Nevýhodou je vylúčenie tých, ktorí nemajú prístup k internetu alebo technológiám — najmä seniori.',
    a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
   {t:'Sport a voľný čas',q:'Mal by magistrát viac investovať do bezplatných verejných ihrísk a športovísk dostupných pre všetkých?',
    info:'Platené telocvične a športové zariadenia sú mimo dosahu mnohých rodín. Verejné ihriská a posilňovne v parkoch sú dostupné pre každého, ale vyžadujú investície a pravidelnú údržbu.',
@@ -1035,21 +1037,21 @@ window.VAA_DATA.questions.bratislava_primator = [
    info:'Mestské spoločnosti spravujú obrovský majetok, ale kontrola ich hospodárenia je nedostatočná. Nezávislý audit odhalí plytanie, no stojí peniaze a môže narážať na odpor vnútri systému.',
    a:{vallo:'agree',cahoj:'agree',winkl:'disagree',hered:'neutral',geci:'neutral'}},
   {t:'Vízia',          q:'Je pre teba dôležitejšie, aby primátor Bratislavy riešil dennodenné problémy (cesty, koše, čistota) než veľké vízie a projekty?',
-   info:'Spor medzi "dobrým správcom" a "vizionárom" je klasická politická dilema. Bratislava potrebuje oboje, ale v akom pomere? Táto otázka odhaľuje, čo od vedenia mesta primárne očakávaš.',
+   info:'Spor medzi "dobrým správcom" a "vizionárom" je klasická politická dilema. Bratislava potrebuje oboje — ale v akom pomere? Táto otázka odhaľuje, čo od vedenia mesta primárne očakávaš.',
    a:{vallo:'agree',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
 ,
 
   {t:'Bývanie',          q:'Mal by magistrát povinne zahrnúť 10 % nájomných bytov do každého veľkého developerského projektu?',
-   info:'Bratislava patrí k najmenej dostupným hlavným mestám v Európe, kúpa bytu stojí priemerne vyše 15 ročných platov. Mesto uzavrelo zmluvy s developermi, podľa ktorých za zmenu územného plánu odovzdajú 5 % bytov mestu. Niektoré mestá v Európe vyžadujú až 10–30 % sociálnych bytov v každom projekte. Otázka je, či by takáto povinnosť nezastavila súkromnú výstavbu celkovo.',
+   info:'Bratislava patrí k najmenej dostupným hlavným mestám v Európe — kúpa bytu stojí priemerne vyše 15 ročných platov. Mesto uzavrelo zmluvy s developermi, podľa ktorých za zmenu územného plánu odovzdajú 5 % bytov mestu. Niektoré mestá v Európe vyžadujú až 10–30 % sociálnych bytov v každom projekte. Otázka je, či by takáto povinnosť nezastavila súkromnú výstavbu celkovo.',
    a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},,
   {t:'PAAS parkovanie',   q:'Je systém plateného parkovania PAAS pre Bratislavu správnou cestou, aj napriek jeho zložitosti?',
-   info:'Systém PAAS bol spustený v januári 2022 a do roku 2026 pokrýva väčšinu vnútorného mesta, pokračuje aj rozšírenie nedieľneho spoplatnenia. Podľa prieskumov je parkovanie pre Bratislavčanov najvnímanejší problém v meste. Odborníci z európskych miest tvrdia, že cena parkovania je najúčinnejší nástroj na reguláciu dopravy a ochranu rezidentov. Kritici namietajú, že systém je príliš komplikovaný, samotní manažéri PAAS ho nazvali najkomplexnejším v Európe.',
+   info:'Systém PAAS bol spustený v januári 2022 a do roku 2026 pokrýva väčšinu vnútorného mesta — pokračuje aj rozšírenie nedieľneho spoplatnenia. Podľa prieskumov je parkovanie pre Bratislavčanov najvnímanejší problém v meste. Odborníci z európskych miest tvrdia, že cena parkovania je najúčinnejší nástroj na reguláciu dopravy a ochranu rezidentov. Kritici namietajú, že systém je príliš komplikovaný — samotní manažéri PAAS ho nazvali najkomplexnejším v Európe.',
    a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},,
   {t:'Bezpečnosť',        q:'Má magistrát zriadiť anonymnú aplikáciu, kde môžu ľudia hlásiť agresívne správanie vo verejnom priestore?',
-   info:'Bratislava navýšila rozpočet mestskej polície na historicky najvyšší objem, 18,8 milióna eur v roku 2026, čo je dvojnásobok oproti roku 2018. Napriek tomu sa pocit bezpečnosti zhoršuje, mesto to čiastočne pripisuje liberalizácii trestných zákonov. Anonymné nahlasovanie existuje v mnohých európskych mestách a zvyšuje participáciu občanov na verejnom poriadku. Otáznou zostáva, či je efektívnejšie investovať do technológií, alebo priamo do počtu hliadok v uliciach.',
+   info:'Bratislava navýšila rozpočet mestskej polície na historicky najvyšší objem — 18,8 milióna eur v roku 2026, čo je dvojnásobok oproti roku 2018. Napriek tomu sa pocit bezpečnosti zhoršuje — mesto to čiastočne pripisuje liberalizácii trestných zákonov. Anonymné nahlasovanie existuje v mnohých európskych mestách a zvyšuje participáciu občanov na verejnom poriadku. Otáznou zostáva, či je efektívnejšie investovať do technológií, alebo priamo do počtu hliadok v uliciach.',
    a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},,
   {t:'Transparentnosť',   q:'Má magistrát zverejňovať kompletné zápisnice zo všetkých rokovaní mestskej rady do 24 hodín?',
-   info:'Transparentnosť verejnej správy je základným princípom demokracie, občania majú právo vedieť, ako sa rozhoduje o ich meste v reálnom čase. V súčasnosti sa zápisnice zverejňujú s oneskorením a niektoré rokovania prebehajú neverejne. Niektoré mestá v Čechách a Rakúsku zaviedli živé prenosy zo zastupiteľstiev aj povinné online komentáre k zákazkám. Odporcovia namietajú, že úplná transparentnosť môže obmedziť otvorenosť a úprimnosť vnútorných rokovaní.',
+   info:'Transparentnosť verejnej správy je základným princípom demokracie — občania majú právo vedieť, ako sa rozhoduje o ich meste v reálnom čase. V súčasnosti sa zápisnice zverejňujú s oneskorením a niektoré rokovania prebehajú neverejne. Niektoré mestá v Čechách a Rakúsku zaviedli živé prenosy zo zastupiteľstiev aj povinné online komentáre k zákazkám. Odporcovia namietajú, že úplná transparentnosť môže obmedziť otvorenosť a úprimnosť vnútorných rokovaní.',
    a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},,
   {t:'Klíma',             q:'Má Bratislava zakázať vjazd áut so spaľovacím motorom do historického centra po vzore Viedne a Prahy?',
    info:'Viedeň, Praha a desiatky ďalších európskych miest zavádzajú nízkoemisné zóny alebo úplné zákazy spaľovacích motorov v centre. Znečistenie ovzdušia je v Bratislave dlhodobý problém, ktorý výrazne zasiahnutý tranzitnou dopravou. Zákaz by zlepšil kvalitu vzduchu a verejný priestor, no mohol by poškodiť obchodníkov v centre a tých, ktorí autom dojazdiť do práce. Bratislava má kompetenciu zaviesť nízkoemisné zóny podľa zákona o cestnej premávke.',
@@ -1060,213 +1062,146 @@ window.VAA_DATA.questions.bratislava_primator = [
 window.VAA_DATA.questions.bratislava_vuc = [
   {t:'Vzdelávanie',    q:'Mal by kraj zatvárať stredné školy, ktoré majú dlhodobo málo žiakov, aj keby to znamenalo zánik niektorých typov škôl?',
    info:'Demografický pokles znižuje počty žiakov, no politicky je veľmi ťažké zatvárať školy. Prázdne školy sú finančnou záťažou, ale ich zatvorenie ničí komunity a ruší vzdelávacie tradície.',
-   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'neutral',krajco:'neutral'}},
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'neutral'}},
+
   {t:'Zdravotníctvo',  q:'Mal by kraj udržiavať stratové krajské nemocnice otvorené aj bez štátnej pomoci?',
-   info:'Krajské nemocnice sú pre stovky tisíc ľudí jedinou dostupnou zdravotnou starostlivosťou. Ich zatvorenie šetrí peniaze kraja, ale ničí prístup k zdravotnej starostlivosti, špeciálne pre starých a chudobných.',
+   info:'Krajské nemocnice sú pre stovky tisíc ľudí jedinou dostupnou zdravotnou starostlivosťou. Ich zatvorenie šetrí peniaze kraja, ale ničí prístup k zdravotnej starostlivosti — špeciálne pre starých a chudobných.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Dane',           q:'Mal by kraj znížiť poplatky za sociálne služby (domovy dôchodcov, denné centrá) pre seniorov s nižšími príjmami?',
-   info:'Poplatky za sociálne zariadenia sú pre mnohých dôchodcov vyššie ako ich dôchodok. Kraj môže nastaviť škálu poplatkov podľa príjmu, ale to znamená menej príjmov a nutnosť hľadať úspory inde.',
+   info:'Poplatky za sociálne zariadenia sú pre mnohých dôchodcov vyššie ako ich dôchodok. Kraj môže nastaviť škálu poplatkov podľa príjmu — ale to znamená menej príjmov a nutnosť hľadať úspory inde.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Doprava',        q:'Chceš, aby Bratislavský kraj investoval viac do vlakových a autobusových spojení medzi obcami namiesto ciest pre autá?',
    info:'Stovky obcí v BSK sú zle prepojené verejnou dopravou, čo núti ľudí k vlastným autám. Investície do vlakov a autobusov sú dlhodobé, ale vyžadujú koordináciu so štátom a ŽSR.',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Životné prostredie',q:'Chceš, aby kraj aktívne bránil Malé Karpaty pred zástavbou a komerčným využitím?',
-   info:'Malé Karpaty sú pľúcami Bratislavy, no tlak developerov na ich okraje neustále rastie. Kraj rozhoduje o územnom pláne kraja, môže definitívne zablokovať alebo umožniť zástavbu.',
+   info:'Malé Karpaty sú pľúcami Bratislavy, no tlak developerov na ich okraje neustále rastie. Kraj rozhoduje o územnom pláne kraja — môže definitívne zablokovať alebo umožniť zástavbu.',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree',krajco:'agree'}},
+
   {t:'Korupcia',       q:'Chceš povinné zverejňovanie všetkých župných zákaziek vrátane odôvodnenia výberu dodávateľa?',
    info:'Kraj má ročný rozpočet stovky miliónov eur. Transparentnosť zákaziek znižuje korupčné riziká, no politici sa jej niekedy bránia, lebo odhaľuje klientelizmus a stranícke záujmy.',
    a:{droba:'agree',smer_ba:'disagree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Sociálne služby',q:'Mal by kraj výrazne rozšíriť kapacity domovov sociálnych služieb pre seniorov v menších mestách?',
-   info:'Domovy dôchodcov v Bratislavskom kraji sú preplnené a čakacie lehoty sú niekoľkoročné. Riešenie vyžaduje obrovské investície, kraj ich môže financovať z eurofondov, ale to trvá roky.',
+   info:'Domovy dôchodcov v Bratislavskom kraji sú preplnené a čakacie lehoty sú niekoľkoročné. Riešenie vyžaduje obrovské investície — kraj ich môže financovať z eurofondov, ale to trvá roky.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Lokálny patriotizmus',q:'Vadí ti, že vláda posiela oveľa viac eurofondov do iných krajov ako do Bratislavského?',
-   info:'BSK je bohatší kraj a EÚ pravidlá obmedzujú eurofondy pre vyspelé regióny. Niektorí to považujú za spravodlivosť, iní za diskrimináciu bohatšieho regiónu, ktorý taktiež potrebuje investície do infraštruktúry.',
+   info:'BSK je bohatší kraj a EÚ pravidlá obmedzujú eurofondy pre vyspelé regióny. Niektorí to považujú za spravodlivosť — iní za diskrimináciu bohatšieho regiónu, ktorý taktiež potrebuje investície do infraštruktúry.',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Kultúra',        q:'Mal by kraj financovať kultúrne podujatia aj v menších obciach, nielen v Bratislave?',
    info:'Väčšina krajských kultúrnych výdavkov ide do hlavného mesta, zatiaľ čo vidiecke obce majú minimálnu kultúrnu ponuku. Decentralizácia kultúry posilňuje komunity, ale vyžaduje systém spravodlivého prideľovania.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'neutral'}},
-  {t:'LGBTQ+',         q:'Mal by kraj financovať komunitné programy pre LGBTQ+ mládež, napríklad preventívne programy proti šikane na školách?',
-   info:'Stredné školy patria pod kraj a šikana LGBTQ+ žiakov je dokumentovaným problémom. Kraj môže alokovať granty na inkluzívne programy, alebo sa môže rozhodnúť, že to nie je jeho priorita.',
-   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'disagree',krajco:'agree'}},
-  {t:'Rómske komunity',q:'Mal by kraj investovať do integračných programov pre Rómov, vzdelávanie, bývanie, zamestnávanie, nad rámec minimálnych zákonných povinností?',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
+  {t:'Rómske komunity',q:'Mal by kraj investovať do integračných programov pre Rómov — vzdelávanie, bývanie, zamestnávanie — nad rámec minimálnych zákonných povinností?',
    info:'BSK má menší podiel marginalizovaných Rómov ako východ Slovenska, ale integračné výzvy existujú aj tu. Dobrovoľné programy nad zákonný rámec sú politicky citlivé, ale môžu prelomiť cyklus vylúčenia.',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Energetická chudoba',q:'Mal by kraj platiť časť nákladov na zateplenie domov pre ľudí v energetickej chudobe?',
    info:'Energetická chudoba zasiahla desaťtisíce domácností. Kraj nemôže regulovať ceny energií, ale môže subvenciovať zateplenie alebo sprostredkovávať skupinový nákup energie pre domácnosti s nízkymi príjmami.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'neutral'}},
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Hodnoty',        q:'Mal by župan verejne hradiť práva LGBTQ+ komunity, alebo sa má zdržať hodnotových vyjadrení a sústrediť sa len na správu kraja?',
    info:'Župan je politická funkcia s verejnou viditeľnosťou. Niektorí voliči chcú reprezentanta, ktorý stojí za inkluzívnymi hodnotami; iní preferujú pragmatického správcu bez ideologického komentára.',
    a:{droba:'agree',smer_ba:'disagree',kdh_ba:'disagree',krajco:'agree'}},
+
   {t:'Infraštruktúra', q:'Chceš, aby kraj prioritizoval opravu existujúcich krajských ciest pred budovaním nových?',
    info:'Stovky kilometrov krajských ciest sú v zlom stave, ale politicky atraktívnejšie sú pásky pri otváraní nových projektov. Oprava ciest je nudná, ale nevyhnutná pre každodennú bezpečnosť tisícov vodičov.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Digitalizácia',  q:'Mal by kraj zaviesť digitálnu žiackú knižku a plné digitálne hodnotenie na krajských školách?',
    info:'Digitalizácia škôl urýchľuje komunikáciu s rodičmi a znižuje papierovanie. Vyžaduje však investície do zariadení, preškolenia učiteľov a riešenie digitálnej nerovnosti medzi žiakmi.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'neutral'}},
-  {t:'Podnikanie',     q:'Mal by kraj aktívne lákať zahraničné firmy do regiónu aj za cenu daňových úľav alebo zvýhodneného predaja pôdy?',
-   info:'Investičné stimuly privádzajú pracovné miesta, ale môžu oškodiť miestne firmy, ktoré takéto výhody nedostávajú. Otázka je, komu skutočne slúžia, pracovníkom, alebo predovšetkým veľkým korporáciám.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Zdravotníctvo',  q:'Mal by kraj povinne zverejňovať čakacie doby na jednotlivých špecializovaných oddeleniach krajských nemocníc?',
    info:'Pacienti dnes čakajú mesiace bez informácie o tom, kde sa čaká kratšie. Zverejňovanie čakacích dôb umožňuje pacientom lepšie sa rozhodovať a vytvára tlak na nemocnice, aby zlepšili efektivitu.',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Vzdelávanie',    q:'Mal by kraj vytvoriť odborné stredné školy priamo prepojené s miestnymi firmami, kde časť vyučovania prebieha v podnikoch?',
-   info:'Duálny systém vzdelávania funguje úspešne v Nemecku a postupne sa zavádza na Slovensku. Kraj môže aktívne tlačiť firmy k partnerstvám so školami, čo znižuje nezamestnanosť absolventov a zlepšuje ich praxu.',
+   info:'Duálny systém vzdelávania funguje úspešne v Nemecku a postupne sa zavádza na Slovensku. Kraj môže aktívne tlačiť firmy k partnerstvám so školami — čo znižuje nezamestnanosť absolventov a zlepšuje ich praxu.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-  {t:'Životné prostredie',q:'Mal by kraj zakázať nové priemyselné parky v blízkosti obytných zón, aj keby to odradilo investorov?',
-   info:'Priemyselné parky prinášajú prácu, ale aj hluk, smog a zvýšenú dopravu do susedských oblastí. Kraj rozhoduje o územnom pláne, môže nastaviť prísnejšie ochranné pásma ako zákon vyžaduje.',
-   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Participácia',   q:'Mal by kraj každoročne alokovať aspoň 5 % svojho rozpočtu na projekty, o ktorých hlasujú priamo občania?',
    info:'Participatívny krajský rozpočet je inovatívny nástroj, ktorý posilňuje demokraciu zdola. Vyžaduje dôveru v občanov a ochotu politikov vzdať sa časti kontroly nad rozhodovaním.',
    a:{droba:'agree',smer_ba:'disagree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Sociálne služby',q:'Mal by kraj vyplácať príspevok rodinným príslušníkom, ktorí sa starajú o odkázaných seniorov doma namiesto ústavu?',
-   info:'Neformálna starostlivosť v rodine je lacnejšia a pre seniora ľudskejšia ako ústav. Jej finančné ocenenie by pomohlo tisíckám rodín, no kraj by musel nájsť zdroje na tento systém.',
+   info:'Neformálna starostlivosť v rodine je lacnejšia a pre seniora ľudskejšia ako ústav. Jej finančné ocenenie by pomohlo tisíckám rodín — no kraj by musel nájsť zdroje na tento systém.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-  {t:'Korupcia',       q:'Chceš, aby župan osobne majetkovo zodpovedal za stratu verejných financií pri zlom rozhodnutí?',
-   info:'Verejní funkcionári dnes nesú len politickú, nie osobnú finančnú zodpovednosť za svoje rozhodnutia. Zmena by mohla odradiť od riskantných rozhodnutí, ale aj od odvážnych investícií.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Mládež',         q:'Mal by kraj poskytovať štipendium najlepším stredoškolákom z chudobných rodín, aby mohli študovať bez finančných bariér?',
    info:'Sociálne štipendiá sú jedným z najefektívnejších nástrojov na prelomenie chudoby cez vzdelávanie. Kraj vie takýto program financovať z vlastného rozpočtu bez čakania na štátne riešenie.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Doprava',        q:'Chceš, aby kraj spolufinancoval bezplatnú MHD pre stredoškolákov v Bratislavskom kraji?',
-   info:'Stredoškoláci musia každý deň cestovať do školy, čo stojí rodiny tisíce eur ročne. Bezplatná MHD pre žiakov existuje v niektorých krajoch a znižuje tlak na rodinné rozpočty, ale zaťažuje krajskú kasu.',
+   info:'Stredoškoláci musia každý deň cestovať do školy — čo stojí rodiny tisíce eur ročne. Bezplatná MHD pre žiakov existuje v niektorých krajoch a znižuje tlak na rodinné rozpočty, ale zaťažuje krajskú kasu.',
    a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Vízia',          q:'Je pre teba dôležitejšia schopnosť župana vyjednávať s Bruselom a čerpať eurofondy ako jeho hodnotová orientácia?',
-   info:'Kraj dostáva každé štyri roky stovky miliónov eur z EÚ. Schopnosť tieto peniaze zmysluplne použiť je kľúčová, ale záleží ti tiež na tom, aké hodnoty župan reprezentuje navonok?',
+   info:'Kraj dostáva každé štyri roky stovky miliónov eur z EÚ. Schopnosť tieto peniaze zmysluplne použiť je kľúčová — ale záleží ti tiež na tom, aké hodnoty župan reprezentuje navonok?',
    a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
-,
 
   {t:'Doprava',           q:'Má BSK dobudovať sieť terminálov integrovanej dopravy (TIOP) na prestup vlak–autobus v celom Bratislavskom kraji?',
-   info:'BSK buduje sieť prestupných terminálov, kde sa stretáva vlak, autobus a mestská doprava, prvý funguje od 2024 vo Vrakuni, ďalší sa plánuje v Ružinove. Terminály prepájajú IDS BK (Integrovaný dopravný systém Bratislavského kraja) s mestskou dopravou a znižujú závislosť od auta. Každý terminál stojí desiatky miliónov eur, z čoho veľkú časť pokrývajú eurofondy. Kľúčová otázka je, kto má terminály dlhodobo financovať, mesto, kraj, štát alebo developeri v okolí.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},,
+   info:'BSK buduje sieť prestupných terminálov, kde sa stretáva vlak, autobus a mestská doprava — prvý funguje od 2024 vo Vrakuni, ďalší sa plánuje v Ružinove. Terminály prepájajú IDS BK (Integrovaný dopravný systém Bratislavského kraja) s mestskou dopravou a znižujú závislosť od auta. Každý terminál stojí desiatky miliónov eur, z čoho veľkú časť pokrývajú eurofondy. Kľúčová otázka je, kto má terminály dlhodobo financovať — mesto, kraj, štát alebo developeri v okolí.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Zdravotníctvo',     q:'Má BSK zaviesť motivačné schémy pre lekárov, ktorí sa usadia v obciach Bratislavského kraja bez všeobecného lekára?',
-   info:'V mnohých obciach Bratislavského kraja chýba všeobecný lekár, pacienti musia za zdravotnou starostlivosťou cestovať desiatky kilometrov. Kraj má kompetenciu zriaďovať zdravotnícke zariadenia a motivovať lekárov štipendijnými programami alebo garantovanou ordináciou. Prešovský a Trnavský kraj zaviedli podobné schémy s pozitívnymi výsledkami. Systémovým riešením by mohla byť kombinácia krajských stimulov a štátnych platieb za dostupnosť.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},,
+   info:'V mnohých obciach Bratislavského kraja chýba všeobecný lekár — pacienti musia za zdravotnou starostlivosťou cestovať desiatky kilometrov. Kraj má kompetenciu zriaďovať zdravotnícke zariadenia a motivovať lekárov štipendijnými programami alebo garantovanou ordináciou. Prešovský a Trnavský kraj zaviedli podobné schémy s pozitívnymi výsledkami. Systémovým riešením by mohla byť kombinácia krajských stimulov a štátnych platieb za dostupnosť.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
   {t:'Bývanie',           q:'Má BSK koordinovať územné plány obcí, aby dostupné bývanie vznikalo pri dopravných uzloch a nie na okraji zástavby?',
-   info:'Ceny nehnuteľností v Bratislave ženia záujemcov o bývanie do okolitých obcí, tento trend sa nazýva suburbanizácia a zvyšuje závislosť od auta. BSK má kompetencie územného plánovania na úrovni kraja a môže usmerňovať lokalizáciu novej výstavby. Bývanie pri dopravných uzloch umožňuje ľuďom žiť bez auta, čo znižuje dopravné zaťaženie a emisie. Koordinácia si vyžaduje spoluprácu desiatokvôbcí, čo je politicky a administratívne náročné.',
-   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},,
+   info:'Ceny nehnuteľností v Bratislave ženia záujemcov o bývanie do okolitých obcí — tento trend sa nazýva suburbanizácia a zvyšuje závislosť od auta. BSK má kompetencie územného plánovania na úrovni kraja a môže usmerňovať lokalizáciu novej výstavby. Bývanie pri dopravných uzloch umožňuje ľuďom žiť bez auta, čo znižuje dopravné zaťaženie a emisie. Koordinácia si vyžaduje spoluprácu desiatokvôbcí, čo je politicky a administratívne náročné.',
+   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
   {t:'Životné prostredie', q:'Má BSK zakázať zástavbu poľnohospodárskej pôdy I. triedy v celom Bratislavskom kraji?',
-   info:'Bratislavský kraj stráca každoročne desiatky hektárov najúrodnejšej poľnohospodárskej pôdy kvôli výstavbe logistických centier, obytných štvrtí a priemyselných parkov. Záber pôdy je prakticky nezvratný, pôda I. triedy vzniká tisíce rokov. Kraj Malé Karpaty chráni ako prírodný park, no iným poľnohospodárskym oblastiam venuje menej pozornosti. Niektoré krajiny EÚ zavádzajú striktnejšiu ochranu pôdy na národnej úrovni a kraj môže toto lobovanie iniciálne tlačiť.',
-   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},,
-  {t:'Regionálne rozdiely', q:'Má BSK aktívne podporovať najmenšie obce kraja, aby sa zabránilo ich úplnému vyľudneniu?',
-   info:'Okolie Bratislavy zažíva paradox, niektoré obce sa predražujú a rastú, zatiaľ čo vzdialenejšie dediny sa vyľudňujú a zanikajú. BSK môže v rámci integrovanej územnej stratégie smerovať eurofondy do takýchto obcí na školy, cesty alebo komunitné centrá. Zachovanie vidieckeho osídlenia má kultúrnu a krajinnú hodnotu, no prináša vysoké náklady na infraštruktúru na obyvateľa. Otázkou je, či má kraj financovať zachovanie osídlenia, alebo nechať demografické trendy pôsobiť voľne.',
-   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'agree'}},
+   info:'Bratislavský kraj stráca každoročne desiatky hektárov najúrodnejšej poľnohospodárskej pôdy kvôli výstavbe logistických centier, obytných štvrtí a priemyselných parkov. Záber pôdy je prakticky nezvratný — pôda I. triedy vzniká tisíce rokov. Kraj Malé Karpaty chráni ako prírodný park, no iným poľnohospodárskym oblastiam venuje menej pozornosti. Niektoré krajiny EÚ zavádzajú striktnejšiu ochranu pôdy na národnej úrovni a kraj môže toto lobovanie iniciálne tlačiť.',
+   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}}
 ];
 // ══ DATA: KOSICE ══
 window.VAA_DATA = window.VAA_DATA || {};
 
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
-window.VAA_DATA.candidates['kosice_primator'] = [{id:'polac',name:'Jaroslav Polaček',party:'Nezávislý / KH2030',color:'#0097a7'},{id:'mudrak',name:'Martin Mudrák',party:'Progresívne Slovensko',color:'#64b5f6'},{id:'lorinc',name:'Ladislav Lörinc',party:'Košická strana',color:'#ffd166'}];
+window.VAA_DATA.candidates['kosice_primator'] = [{id:'polac',name:'Jaroslav Polaček',party:'Nezávislý / KH2030',color:'#0097a7',url:'https://jaropolacek.sk'},{id:'mudrak',name:'Martin Mudrák',party:'Progresívne Slovensko',color:'#64b5f6',url:'https://martinmudrak.sk'},{id:'lorinc',name:'Ladislav Lörinc',party:'Košická strana',color:'#ffd166',url:'https://ladislavlorinc.sk'}];
 window.VAA_DATA.candidates['kosice_vuc'] = [
-  {id:'trnka',  name:'Rastislav Trnka',   party:'Nezávislý (obžalovaný)',  color:'#78909c'},
-  {id:'simko',  name:'Igor Šimko',        party:'Hlas-SD',                 color:'#e63946'},
-  {id:'porvaz', name:'Marián Porvažník',  party:'Progresívne Slovensko',   color:'#64b5f6'},
-  {id:'gurbal', name:'Lucia Gurbáľová',   party:'KDH',                     color:'#90caf9'},
-  {id:'hirman', name:'Karel Hirman',      party:'Demokrati',               color:'#7b1fa2'},
+  {id:'trnka',  name:'Rastislav Trnka',   party:'Nezávislý (obžalovaný)',  color:'#78909c',url:'https://rastotrnka.sk'},
+  {id:'simko',  name:'Igor Šimko',        party:'Hlas-SD',                 color:'#e63946',url:'https://igorsimko.sk/pocuvam-vas/'},
+  {id:'porvaz', name:'Marián Porvažník',  party:'PS / Za ľudí',            color:'#64b5f6',url:'https://porvaznik.sk'},
+  {id:'gurbal', name:'Lucia Gurbáľová',   party:'KDH',                     color:'#90caf9',url:'https://luciagurbalova.sk'},
+  {id:'hirman', name:'Karel Hirman',      party:'Demokrati',               color:'#7b1fa2',url:'https://karelhirman.sk'},
 ];
 
 // ── Otázky: Primátor / Primátorka ──
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 window.VAA_DATA.questions.kosice_primator = [
-  {t:'Spolupráca',     q:'Vadí ti, že primátor Košíc a župan KSK roky otvorene bojujú namiesto toho, aby spolupracovali?',
-   info:'"Košická komunálna vojna" medzi vedením mesta a kraja brzdí desiatky projektov, blokuje spoločné financovanie z eurofondov a škodí obrazu mesta. Koalícia, ktorá by ukončila konflikty, je jednou z najcitovanejších tém kampane.',
-   a:{polac:'disagree',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Infraštruktúra', q:'Sú pre teba rozbitné cesty a chodníky v Košiciach dôležitejší problém ako veľké dopravné projekty?',
-   info:'Košice majú jedny z najhorších ciest spomedzi slovenských miest. Každodenný problém stoviek tisíc obyvateľov kontrastuje s veľkými projektmi, ktoré sa otvoria až o roky, ak vôbec.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Sovietsky pamätník', q:'Má mesto Košice aktívne presadzovať odstránenie kosákov a kladív z pamätníka Červenej armády na Námestí osloboditeľov, aj napriek zákonu, ktorý ochranu vojnových hrobov nedávno posilnil?',
-   info:'Košické mestské zastupiteľstvo hlasovalo v novembri 2024 za preskúmanie premiestnenia alebo odstránenia pamätníka vojakov Sovietskej armády na Námestí osloboditeľov vrátane jeho komunistických symbolov. Poslanec NR SR Igor Šimko (Hlas-SD), kandidát na župana KSK, následne v parlamente predložil a presadil novelu zákona o vojnových hroboch, ktorá posilňuje ochranu takýchto pamätníkov pred poškodením aj premiestnením. Zákon č. 125/1996 označuje komunistický režim za „zločinecký, nemorálny a protiprávny", časť právnikov a verejnosti preto považuje zobrazovanie kosákov a kladív vo verejnom priestore za propagáciu komunizmu v rozpore s týmto zákonom. Za zachovanie pamätníka podpísalo petíciu viac ako 10 000 Košičanov, za odstránenie symbolov vyše 3 300.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Zmena',          q:'Chceš nového primátora, aj keby to znamenalo spomalenie alebo prerušenie rozrobených projektov?',
-   info:'Kontinuita je dôležitá pri veľkých projektoch (električka, rekonštrukcie), no "únavou moci" trpia aj inak dobrí politici. Je zmena pre zmenu hodnotná, alebo riziko?',
-   a:{polac:'disagree',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Bezpečnosť',     q:'Mal by primátor presadiť, aby mestskí policajti pravidelne pešo hliadkovali v štvrtiach a poznali miestnych obyvateľov, namiesto toho, aby sedeli v autách?',
-   info:'Komunitná polícia, kde policajt pozná svoju štvrť a jej ľudí, je osvedčený model znižovania kriminality. Košice majú v rizikových oblastiach problém s viditeľnosťou a dôverou, nestačí viac kameier ani áut, potrebná je fyzická prítomnosť.',
-   a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Inovácie',       q:'Je pre teba dôležité, aby Košice aktívne priťahovali IT firmy, startupy a vedomostnú ekonomiku?',
-   info:'Košice sa úspešne profilujú ako IT hub, Košice IT Valley má stovky firiem a tisíce pracovných miest. Primátor môže podporovať toto smerovanie inkubátormi, daňovými úľavami alebo spolupráca s TUKE.',
-   a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
-
-  {t:'Korupcia',       q:'Chceš povinné zverejňovanie všetkých mestských zákaziek Košíc nad 5 000 € aj s odôvodnením?',
-   info:'Transparentnosť zákaziek je základná podmienka dôvery verejnosti v správu mesta. V Košiciach boli zákazky opäť a opäť predmetom škandálov, povinné odôvodnenie by sťažilo klientelizmus.',
-   a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
-
-  {t:'Kultúra',        q:'Malo by mesto Košice investovať viac do kultúry a využiť dedičstvo Európskeho hlavného mesta kultúry 2013?',
-   info:'Košice investíciou do kultúry v roku 2013 zmenili svoju tvár. Kultúrna infraštruktúra potrebuje udržiavanie a rozvoj, no mnohí preferujú investície do "tvrdých" projektov, cesty, školy, mosty.',
-   a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
-
-  {t:'Bývanie',        q:'Mal by magistrát Košíc stavať vlastné nájomné byty dostupné pre stredné vrstvy?',
-   info:'Košice sa stali prvým mestom v SR, ktoré do štátneho programu nájomného bývania vstúpilo s vlastnými pozemkami, plánuje sa až 5 400 bytov počas desiatich rokov v spolupráci s rakúskym investorom a vládou Roberta Fica. Primátor Polaček spolupracoval s Ficom na tomto projekte napriek tomu, že PS je voči vládnej koalícii v opozícii. Korzár však upozornil, že mesto nafúklo deklarovaný počet bytov a pri realizácii na Jesenského ulici obišlo víťaza architektonickej súťaže. Ceny bytov v Košiciach medzitým rastú rýchlejšie ako mzdy, čo vyháňa mladých za prácou inam.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'LGBTQ+',         q:'Mal by primátor Košíc aktívne podporovať inkluzívne programy pre LGBTQ+ v školách a komunitných centrách?',
-   info:'Košice sú konzervatívnejšie mesto ako Bratislava, primátor môže ovplyvniť kultúru inklúzie cez mestské granty, vzdelávacie programy a symbolické gesty. Toto je otázka hodnotovej odvahy vs. politickej opatrnosti.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'disagree'}},
-
-  {t:'Rómske komunity',q:'Mal by magistrát Košíc aktívne a cielene zamestnávať obyvateľov Luníka IX na mestských pozíciách, v správe, údržbe a komunitných službách, ako súčasť integračnej politiky?',
-   info:'Luník IX nie je len bytová kríza, je to aj kríza vylúčenia z ekonomiky mesta. Kým štát rieši energetickú chudobu a infraštruktúru, primátor môže otvoriť dvere mestského zamestnávania: cielene, nie ako charitu, ale ako verejnú politiku.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'neutral'}},
-
-  {t:'Bývanie',        q:'Mal by primátor Košíc aktívne zónovať nové plochy a urýchliť stavbu nájomných bytov, aby mesto zvládlo príchod tisícov nových pracovníkov do závodu Volvo vo Valalikoch?',
-   info:'Volvo plánuje spustiť výrobu v decembri 2026 a priamo zamestná 3 300 ľudí, s dodávateľmi až 12 000. Mesto sa zmluvne zaviazalo zabezpečiť bývanie a nové linky MHD. Nový územný plán bol schválený v júni 2025, no rýchlosť výstavby závisí od toho, ako aktívne primátor tlačí na developerov a stavia vlastné nájomné byty. Prvá bytovka v rámci štátneho programu má vyrásť na Jesenského ulici po víťazstve architektonickej súťaže, magistrát však čelí kritike, že deklarované počty bytov sú prehnané a postup výberu nebol transparentný.',
-   a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Lokálny patriotizmus',q:'Vadí ti, že Bratislava dominuje v štátnych investíciách a Košice sú chronicky podfinancované?',
-   info:'Košičania dlhodobo vnímajú nerovnomerné rozdeľovanie štátnych zdrojov, väčšina eurofondov, ministerstiev a investícií smeruje do hlavného mesta. Primátor môže lobovať za väčší podiel, ale rozhoduje vláda.',
-   a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Doprava',        q:'Mal by primátor nariadiť nezávislý audit DPMK zameraný na korupciu a neefektivitu, a podmieňovať ďalšie dotácie mestu konkrétnymi výsledkami, nie len žiadosťami o viac peňazí?',
-   info:'DPMK skončil rok 2024 so stratou takmer 830 000 €, napriek rastu tržieb. Autobusy a električky sú staré, spoje sa rušia pre poruchovosť. Problémom nie je nedostatok financií, ale netransparentné obstarávanie a riadenie. Primátor je akcionár DPMK a môže priamo požadovať výsledky.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Participácia',   q:'Chceš, aby košickí občania priamo rozhodovali o časti mestského rozpočtu cez digitálne hlasovanie?',
-   info:'Participatívny rozpočet bol skúšaný v rôznych slovenských mestách s rôznymi výsledkami. Zapája občanov, ale vyžaduje systematickú komunikáciu a dôveru, že ich hlasovanie skutočne niečo zmení.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'neutral'}},
-
-  {t:'Podnikanie',     q:'Mal by magistrát zjednodušiť a urýchliť vydávanie stavebných povolení pre malé projekty?',
-   info:'Stavebné konania v Košiciach trvajú roky, čo odstrašuje investorov a zdražuje projekty. Primátor môže reformovať vnútorné procesy na magistráte bez čakania na zmenu zákona.',
-   a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Školstvo',       q:'Mal by primátor Košíc zaviesť rozšírené mimoškolské aktivity zadarmo pre deti zo sociálne slabšieho prostredia?',
-   info:'Záujmová činnosť po škole je pre mnohé rodiny finančne nedostupná. Mesto môže financovať krúžky, športové aktivity a doučovanie, čo znižuje nerovnosti v príležitostiach medzi deťmi.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Bezpečnosť',     q:'Malo by mesto Košice financovať stacionárne zariadenie pre alkoholikov a drogovo závislých, aby ich dostalo z ulíc, a koordinovať s políciou aktívne hliadky v rizikových oblastiach?',
-   info:'Problém bezdomovcov a závislých v centre Košíc a pri hlavnej stanici sa nerieši kamerami ani náhodným hliadkovaním. Stacionárne zariadenie s odbornou pomocou kombinované s cielenou terénnou prácou polície je model, ktorý funguje vo viacerých európskych mestách.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Vízia',          q:'Je pre teba dôležitejšie, aby primátor Košíc bol dobrý manažér každodennej správy mesta ako veľký vizionár?',
-   info:'Vizionári prinášajú zmenu, ale môžu zanedbávať dennodenné problémy. Dobrí správcovia udržujú mesto v chode, ale nemenia jeho charakter. Čo Košice teraz viac potrebujú?',
-   a:{polac:'disagree',mudrak:'neutral',lorinc:'agree'}},
-
-  {t:'Doprava',        q:'Chceš, aby Košice budovali cyklotrasy aj v obytných štvrtiach, nielen v centre?',
-   info:'Cykloinfraštruktúra v Košiciach je sústredená do centra a na niekoľko hlavných ťahov. Rozšírenie do sídlisk by umožnilo každodenné cyklovanie, ale narušilo by zaužívané parkovacie návyky.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'neutral'}},
-
-  {t:'Kultúra',        q:'Mal by magistrát Košíc finančne podporovať miestne festivaly a komunitné podujatia bez ohľadu na ich politické alebo hodnotové zameranie?',
-   info:'Kultúrne granty by mali byť dostupné pre všetky legálne aktivity, bez ideologickej filtrácie. Primátor môže nastaviť transparentné kritériá hodnotenia, ktoré nepretláčajú žiadnu agendu.',
-   a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
-
-  {t:'Korupcia',       q:'Chceš nezávislý etický ombudsman pre magistrát Košíc, na ktorého sa môžu zamestnanci aj občania anonymne sťažovať?',
-   info:'Whistleblowing je dôležitý mechanizmus odhaľovania korupcie zvnútra. Etický ombudsman nezávislý od primátora mohol byť bariérou klientelizmu a tlaku na zamestnancov magistrátu.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'neutral'}},
-
-  {t:'Transparentnosť',q:'Mal by primátor a poslanci mestského zastupiteľstva Košíc zmraziť svoje odmeny a platy po celé funkčné obdobie, kým mesto neodstráni rozpočtový deficit?',
-   info:'Košice vstúpili v roku 2023 do krízového režimu. Primátorov plat bol navýšený o 40 % nad zákonné minimum, poslanci ho znížili až pod tlakom verejnej krízy. Poslanecké odmeny predstavujú ~600 000 € ročne. Otázka je, či volení zástupcovia majú zdieľať úsporné opatrenia, ktoré ukladajú ostatným.',
-   a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Električka',        q:'Má mesto Košice udržať plánovaný termín dokončenia modernizácie električkovej trate na Jazere, september 2026?',
-   info:'Modernizácia košickej elektrickej dráhy na Jazere je projekt za 77 miliónov eur financovaný z eurofondov, ide o jeden z najväčších dopravných projektov v histórii mesta. Súčasťou je 200-miliónový celkový balík investícií do Dopravného podniku Košíc vrátane 30 CNG autobusov a 11 elektrobusov. Modernizácia prinesie 12 nových zastávok a moderné semafory s preferenciou MHD. Meškanie by ohrozilo čerpanie ďalších eurofondov a dôveryhodnosť vedenia mesta.',
-   a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
-
-  {t:'Luník IX',          q:'Má magistrát Košíc financovať búranie ďalších havarijných panelákov na Luníku IX a presídlenie ich obyvateľov?',
-   info:'Luník IX je najväčšia rómska osada v strednej Európe, v bytoch pre 2 400 ľudí žije odhadom viac ako 6 000 obyvateľov. Tri paneláky boli zbúrané v posledných rokoch pre havarijný stav, ďalšie sú vo vážnom technickom ohrození. Komunitné projekty (ETP Slovensko, KSK, mesto) za posledných 10 rokov zlepšili situáciu, obyvatelia platia za bývanie a energie. Dlhy za nájomné a systémové riešenie prehustenosti ostávajú nevyriešené.',
-   a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}}
+  {t:'Bývanie',q:'Mal by magistrát Košíc priamo stavať nájomné byty dostupné pre stredné a nižšie príjmové skupiny, aj keby to znamenalo zadlženie mesta?',h:'Košice majú len 1 600 mestských nájomných bytov, čo je 1,6 % bytového fondu. Trhové nájomné za 2-izbový byt dosahuje 650 až 900 € mesačne. Priemerná mzda v Košickom kraji nestačí na pokrytie hypotéky ani trhového nájmu bez výrazného obmedzenia ostatných výdavkov rodiny.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Bývanie',q:'Mal by primátor Košíc presadiť, aby stavebník pri každom väčšom projekte povinne odovzdal mestu časť bytov alebo pozemkov ako podmienku stavebného povolenia?',h:'Povinný príspevok stavebníka za právo stavať vo verejnom záujme funguje vo Viedni, Prahe, Londýne či Amsterdame. Mestu umožňuje získavať nájomné byty bez priameho zadlženia. V Košiciach za uplynulých desať rokov vznikli tisíce súkromných bytov, z ktorých mesto nezískalo nič.',a:{polac:'neutral',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Bývanie',q:'Má magistrát Košíc uprednostniť prestavbu a rekonštrukciu prázdnych mestských budov na nájomné byty pred ich predajom súkromným developerom?',h:'Mesto Košice vlastní desiatky nevyužívaných alebo čiastočne využívaných budov, napríklad bývalé školy, administratívne objekty a správcovské domy. Magistrát v roku 2024 zrekonštruoval šesť mestských bytov pre rodiny v núdzi v spolupráci s organizáciou Úsmev ako dar. Každá takáto rekonštrukcia stojí desiatky tisíc eur, no mestu zostáva majetok a kontrola nad nájmom. Predaj tých istých budov prinesie jednorazový príjem, no mestu zmizne možnosť ovplyvňovať dostupnosť bývania.',a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
+  {t:'Bývanie',q:'Má primátor Košíc urýchliť vydávanie stavebných povolení pre menšie projekty, aj keby to znamenalo menej individuálneho posudzovania každej žiadosti?',h:'Priemerná doba vybavenia stavebného povolenia v Košiciach trvá 12 až 18 mesiacov, čo je dvojnásobok európskeho priemeru. Zdĺhavý proces predražuje projekty a odrádzal investorov. Na druhej strane, zníženie kontroly môže umožniť výstavbu, ktorá ignoruje záujmy existujúcich obyvateľov a zaťažuje infraštruktúru.',a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
+  {t:'Bývanie',q:'Má mesto Košice zaviesť reguláciu krátkodobého prenájmu cez platformy ako Airbnb, aby sa obmedzilo vyťahovanie bytov z trhu dlhodobého nájmu?',h:'Košice sú druhým najväčším trhom krátkodobého prenájmu na Slovensku po Bratislave. V niektorých košických štvrtiach tvorí Airbnb odhadom 5 až 10 % bytového fondu. Reguláciu krátkodobého prenájmu majú Amsterdam, Berlín, Paríž aj Praha. V Košiciach zatiaľ neexistuje, hoci magistrát má nástroje ju zaviesť.',a:{polac:'neutral',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Samospráva',q:'Malo by mesto Košice zlúčiť niektoré zo svojich 22 mestských častí, aby sa znížili administratívne náklady a zjednodušilo riadenie mesta?',h:'Košice sú rozdelené na 22 mestských častí, čo je viac ako Paríž, Barcelona či New York. Samotná prevádzka 22 miestnych úradov, platov starostov a odmien viac ako 300 poslancov stojí mesto 8,7 milióna eur ročne, teda takmer 35 miliónov za volebné obdobie. Návrhy na zlúčenie do 4 až 12 mestských častí sa v zastupiteľstve ani v parlamente doteraz presadiť nepodarilo.',a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
+  {t:'Transparentnosť',q:'Chceš povinné zverejňovanie všetkých mestských zákaziek Košíc nad 5 000 € vrátane odôvodnenia výberu dodávateľa ešte pred podpisom zmluvy?',h:'V Košiciach sú zákazky bežne zverejňované až po výbere dodávateľa, bez povinnosti uviesť dôvod, prečo bol vybraný práve on. Občan sa tak nemá šancu ozvať predtým, ako je vec rozhodnutá. Bratislava a Trenčín zverejňujú zámer aj odôvodnenie výberu vopred, dobrovoľne nad rámec zákona. V Košiciach takáto prax chýba.',a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
+  {t:'Financie',q:'Má primátor Košíc prioritizovať splácanie mestského dlhu pred novými investíciami, aj keby to znamenalo spomalenie rozvoja infraštruktúry?',h:'Dlh mesta Košice k roku 2025 presahuje 200 miliónov eur, čo je pri bežných príjmoch mesta okolo 270 miliónov eur takmer 75 % týchto príjmov. Zákon stanovuje pre mestá strop dlhu na 60 % bežných príjmov, pri prekročení hrozí pokuta od ministerstva financií. Košice sa pohybujú nad týmto stropom, čo im reálne obmedzuje priestor na ďalšie úvery. Pri priemernej úrokovej sadzbe okolo 3 % mesto ročne platí zhruba 6 miliónov eur len na úrokoch, bez toho aby za to získalo čokoľvek nové.',a:{polac:'neutral',mudrak:'neutral',lorinc:'agree'}},
+  {t:'Samospráva',q:'Mal by primátor Košíc zmraziť platy poslancov mestského zastupiteľstva a odmeny členov komisií na súčasnej úrovni po celé volebné obdobie?',h:'Košické mestské zastupiteľstvo má 41 poslancov, každý dostáva mesačne okolo 700 eur. K tomu sa pripočítavajú odmeny za zasadnutia komisií. Celkovo mesto ročne vyplatí poslancom viac ako 800 000 eur. Za štyri roky volebného obdobia to predstavuje vyše 3 miliónov eur len na odmeny ľudí, ktorí sú volení zástupcovia, nie zamestnanci mesta.',a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
+  {t:'Korupcia',q:'Chceš, aby mal magistrát Košíc nezávislý útvar pre hlásenie podozrení z korupcie, na ktorý sa môže obrátiť ktokoľvek, zamestnanec aj občan, bez strachu z postihu?',h:'Zákon o ochrane oznamovateľov platí od roku 2022, no jeho reálne uplatňovanie závisí od vôle vedenia každej inštitúcie. V Košiciach neexistuje nezávislý útvar priamo pri primátorovi. Niektoré európske mestá, napríklad Kodaň alebo Zürich, majú dlhodobo fungujúce systémy hlásenia, ktoré preukázateľne znižujú korupciu v obstarávaní.',a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
+  {t:'Infraštruktúra',q:'Sú rozbitné cesty a chodníky v Košiciach pre teba dôležitejší problém ako nové veľké investičné projekty?',h:'Podľa pravidelných prieskumov spokojnosti je stav chodníkov a ciest dlhodobo jednou z top sťažností košických obyvateľov. Odhaduje sa, že výmena len najhoršieho úseku košických chodníkov by si vyžiadala desiatky miliónov eur. Mestský rozpočet nedokáže pokryť zároveň bežnú údržbu aj veľké investičné projekty, čo núti vedenie mesta robiť ťažké výbery priorít.',a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
+  {t:'Doprava',q:'Súhlasíš s tým, aby primátor Košíc presadil jasnú výkonnostnú zmluvu s vedením DPMK, kde budú merateľné ciele pre obsadenosť, dochvíľnosť a hospodárnosť a ich nesplnenie bude mať dôsledky?',h:'DPMK skončil v roku 2024 so stratou takmer 830 000 eur. Dotácia mesta vzrástla za šesť rokov z 19 miliónov na rekordných 37 miliónov eur ročne, pričom kvalita dopravy neklesla, ale ani nerástla. V roku 2023 prepukol ostrý štrajk vodičov, MHD sa takmer zastavila. DPMK zmeškal eurofondový tender na 20 miliónov eur na nové električky. Celá táto kríza sa odohrávala na pozadí rokov trvajúceho verejného konfliktu medzi primátorom a riaditeľom podniku, pričom obaja si navzájom hadzali vinu za zlý stav. Nový primátor zdedí podnik s rastúcimi nákladmi, zastaraným vozovým parkom a bez jasných pravidiel zodpovednosti.',a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
+  {t:'Doprava',q:'Má primátor Košíc aktívne tlačiť na výstavbu nových električkových tratí, napríklad na Sídlisko Ťahanovce alebo ku Volvu, a to aj za cenu spolufinancovania z mestského rozpočtu?',h:'Sídlisko Ťahanovce s 22 000 obyvateľmi nemá od zrušenia trate v roku 1965 žiadne elektrické spojenie. Nový závod Volvo pri Valalikoch zamestná v prvej fáze tisíc, neskôr až 8 000 ľudí, no žiadna plánovaná trasa električky k nemu neexistuje. Aktuálna modernizácia trate na Nad jazerom za 77 miliónov eur z eurofondov mení existujúcu trať, nebuduje novú. Košice majú stratégiu rozvoja električiek do roku 2050, no konkrétne financovanie nových tratí chýba.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Doprava',q:'Chceš, aby Košice budovali bezpečné cyklotrasy aj v obytných štvrtiach a na sídliskách, nielen v centre mesta?',h:'Košice majú len asi 40 km evidovaných mestských cyklotrás, pričom väčšina vedie mimo sídlisk. Západ, KVP, Ťahanovce či Dargovských hrdinov sú prakticky bez cyklistickej infraštruktúry. Plány sa opakovane posúvajú, napríklad cyklotrasa na Alpinku plánovaná na rok 2023 sa realizuje až od roku 2026. Skutočne bezpečná cyklotrasa musí mať fyzické oddelenie od automobilovej dopravy, nestačí namaľovať čiaru na vozovku.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Doprava',q:'Mal by primátor Košíc aktívne lobovať a spolufinancovať zlepšenie železničného spojenia Košíc s Bratislavou, Prahou, Viedňou, Budapešťou, Miskolcom a Užhorodom, aj keď železnica nie je priamo v kompetencii mesta?',h:'Najrýchlejší vlak z Košíc do Bratislavy trvá v roku 2025 takmer 5 hodín, čo je viac než autom. IC vlaky boli od decembra 2024 zrušené. Spojenie s Užhorodom a Miskolcom je pomalé a nepravidelné, hoci Košice sú geograficky logistickým centrom regiónu. Primátor nemá priamu kompetenciu nad železnicami, no má nástroje tlačiť vládu, vyjednávať s ŽSR a spolufinancovať prestupné terminály. Každý rok nečinnosti túto príležitosť zmenšuje.',a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
+  {t:'Rómske komunity',q:'Mal by magistrát Košíc aktívne a cielene ponúkať pracovné miesta na mestských prácach obyvateľom Luníka IX ako súčasť integračnej politiky?',h:'Luník IX je najväčšia rómska komunita v strednej Európe, s odhadovanou populáciou 7 000 až 8 000 ľudí v komplexe pôvodne navrhnutom pre 2 500. Nezamestnanosť tam dosahuje takmer 100 %. Magistrát realizoval projekt zamestnávania obyvateľov Luníka IX v U.S. Steel od roku 2008, v prvej vlne nastúpilo 20 ľudí. Projekt sa každý rok obnovoval, no nikdy nedosiahol rozsah, ktorý by štrukturálne zmenil situáciu. Otázka je, či a čo môže a má spraviť mesto nad rámec toho, čo robí dnes.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Sociálne',q:'Má magistrát Košíc financovať búranie ďalších havarijných panelákov na Luníku IX len vtedy, ak zároveň zabezpečí náhradné bývanie pred samotnou asanáciou?',h:'Mesto búralo havarijné vchody na Luníku IX bez toho, aby vopred zaistilo náhradné bývanie pre rodiny. Výsledkom bolo, že obyvatelia sa presunuli do nelegálnych osídlení v iných častiach mesta a okolia. Okolo Košíc vzniklo viac ako desať nových nelegálnych rómskych osídlení. Búranie bez riešenia bývania nepomáha integrácii, ale rozptyľuje problém do ďalších komunít a zvyšuje konflikty.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Hodnoty',q:'Má primátor Košíc verejne zastávať práva všetkých menšín žijúcich v meste, vrátane rómskej komunity a LGBTQ+ komunity, alebo sa má vyhýbať politicky citlivým témam a sústrediť sa výlučne na správu mesta?',h:'Košice sú multietnickým mestom s významnou maďarskou, rómskou, rastúcou ukrajinskою a zahraničnou komunitou. Primátor je najviditeľnejší volený zástupca mesta a jeho slová majú váhu. Niektorí voliči od neho očakávajú hodnotové vedenie a verejné postoje, iní považujú politické vyjadrenia primátora za rozdeľujúce a uprednostňujú, aby sa sústredil na konkrétne problémy. Táto voľba odráža, čo od komunálneho politika základne očakávaš.',a:{polac:'neutral',mudrak:'agree',lorinc:'disagree'}},
+  {t:'Školstvo',q:'Mal by primátor Košíc zaviesť rozšírené mimoškolské aktivity zadarmo pre deti zo sociálne slabších rodín, aj keby to znamenalo prerozdelenie časti existujúceho kultúrneho alebo športového rozpočtu?',h:'Prístup detí k mimoškolským aktivitám je v Košiciach silne závislý od príjmu rodiny. Magistrát spravuje sieť základných škôl a má kompetenciu financovať rozšírené programy. Niektoré európske mestá, napríklad Viedeň, financujú mimoškolské aktivity centrálne a zadarmo pre všetky deti bez ohľadu na príjem. Otázka je, odkiaľ zobrať financovanie bez navyšovania celkového rozpočtu.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Bezpečnosť',q:'Chceš, aby mestskí policajti v Košiciach pravidelne a pešo pôsobili priamo v konkrétnych štvrtiach a poznali ich obyvateľov, namiesto toho aby len reagovali na tiesňové volania?',h:'Mestská polícia Košíc funguje prevažne reakčne a hliadkuje prevažne v autách. Komunitný model polície, kde policajti dlhodobo pôsobia v konkrétnych štvrtiach, poznajú ľudí a problémy v nich, preukázateľne znižuje kriminalitu. V Manchestri sa vďaka tomuto modelu kriminalita znížila o 20 % za päť rokov. V Amsterdame má každá štvrť dedikovaného komunitného policajta. V Košiciach takýto systém neexistuje.',a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
+  {t:'Priemysel',q:'Je príchod Volva a transformácia U.S. Steel pod Nippon Steel pre Košice skôr príležitosťou, ktorú má primátor aktívne rozvíjať dopravnou a bytovou politikou, alebo rizikom jednostrannej závislosti na veľkom priemysle?',h:'Volvo Cars Košice spustilo v roku 2025 nábor prvých tisíc zamestnancov, závod má plne fungovať v roku 2026 s kapacitou až 8 000 pracovných miest. Nippon Steel prebral U.S. Steel a avizoval ďalšie investície. Obe spoločnosti požadujú od mesta bytovú politiku, lepšiu dopravu a cyklotrasy pre zamestnancov. Magistrát doteraz žiadne konkrétne dopravné ani bytové opatrenia priamo spojené s príchodom Volva nerealizoval.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Sovietský pamätník',q:'Má primátor Košíc aktívne presadzovať odstránenie komunistických symbolov z vojenského pamätníka Červenej armády a premenovanie Námestia osloboditeľov?',h:'V centre Košíc stojí pamätník sovietskeho vojaka s kosákmi a kladivami, symbolmi komunistickej strany, ktorej systém slovenský zákon č. 125/1996 Z.z. označuje za zločinecký, nemorálny a protiprávny. Paradox je hlboký: tá istá armáda, ktorá v januári 1945 vyhnala fašistov, obsadila Československo a uvrhla ho do 40 rokov komunistickej totality. A práve na tomto námestí v auguste 1968 sovietske tanky zabíjali ľudí, ktorí sa bránili vojenskej invázii, ktorou ZSSR zničil Pražskú jar. Pritom Košice boli v roku 1919 naozaj oslobodené, ale legionármi od boľševickej maďarskej armády, a námestie sa vtedy vďačne premenovalo na Legionárske. V roku 1949 komunisti toto meno vymazali a nahradili ho dnešným názvom. Odborná pracovná skupina mesta v roku 2025 potvrdila, že pamätník ako vojnový hrob a národná kultúrna pamiatka zákon legálne odstránenie symbolov neumožňuje. Premenovanie námestia však priamo v kompetencii mesta je a ani k nemu za 35 rokov nedošlo. V novembri 2024 mesto za 11 100 € zo štátneho rozpočtu nainštalovalo kosáky a kladivá späť.',a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
+  {t:'Medzinárodná spolupráca',q:'Mal by primátor Košíc aktívne budovať ekonomické a logistické partnerstvá s ukrajinskými mestami v kontexte povojnovej obnovy, aj keď výsledky sa prejavia až za 5 až 10 rokov?',h:'Košice sú najbližšie veľké mesto EÚ k ukrajinskej hranici, vzdialené len 90 km od Užhorodu. Objem povojnovej obnovy Ukrajiny odhaduje EÚ na 500 miliárd eur. Košické firmy zo stavebného, technického a logistického sektora majú reálnu šancu získať zákazky, ak mesto vytvorí inštitucionálne rámce spolupráce. Budapešť, Krakov a Varšava sa o pozíciu centra pre Ukrajinu aktívne uchádzajú od roku 2022. Košice zatiaľ nemajú systematický prístup.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Spolupráca',q:'Vadí ti, že primátor Košíc a župan KSK roky otvorene bojujú namiesto toho, aby spolupracovali v prospech mesta a regiónu?',h:'Konflikt medzi vedením mesta a Košickým samosprávnym krajom trvá od roku 2019 a má reálne dôsledky pre obyvateľov. Spoločné projekty v doprave, sociálnych službách a vzdelávaní sú opakovane blokované alebo oneskorované. Napríklad prepojenie dopravných systémov mesta a kraja do jedného integrovaného systému sa nepodarilo napriek tomu, že na to existujú technické aj finančné predpoklady. Každý rok nefunkčnej spolupráce stojí obyvateľov konkrétne peniaze a čas.',a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
+  {t:'Vízia',q:'Je pre teba dôležitejšie, aby primátor Košíc bol dobrý manažér každodennej správy mesta, alebo vizionár schopný presadiť veľké transformačné projekty pre budúcnosť?',h:'Táto otázka nemá správnu odpoveď. Mestá, ktoré sa príliš sústredili na prevádzku, niekedy zmeškali zásadné príležitosti pre rozvoj. Mestá, ktoré sa venovali len veľkým víziám, niekedy zanedbali základné služby a stratili dôveru obyvateľov. Odpoveď prezradí, čo v tejto chvíli Košice podľa teba viac potrebujú.',a:{polac:'disagree',mudrak:'neutral',lorinc:'agree'}}
 ];
 
 // ── Otázky: Župan / VÚC ──
@@ -1283,22 +1218,22 @@ window.VAA_DATA.questions.kosice_vuc = [
 
   {t:'Sovietsky pamätník',
    q:'Mal by župan KSK podporovať premiestnenie alebo odstránenie komunistických symbolov z pamätníka Červenej armády v Košiciach, aj napriek zákonu, ktorý ich ochranu nedávno posilnil?',
-   info:'Košické mestské zastupiteľstvo hlasovalo v novembri 2024 za preskúmanie premiestnenia alebo odstránenia pamätníka vojakov Sovietskej armády na Námestí osloboditeľov vrátane jeho komunistických symbolov. Poslanec NR SR Igor Šimko (Hlas-SD), kandidát na župana KSK, následne v parlamente predložil a presadil novelu zákona o vojnových hroboch, ktorá posilňuje ochranu takýchto pamätníkov pred poškodením aj premiestnením. Zákon č. 125/1996 označuje komunistický režim za „zločinecký, nemorálny a protiprávny", časť právnikov a verejnosti preto považuje zobrazovanie kosákov a kladív vo verejnom priestore za propagáciu komunizmu v rozpore s týmto zákonom. Za zachovanie pamätníka podpísalo petíciu viac ako 10 000 Košičanov, za odstránenie symbolov vyše 3 300.',
+   info:'Košické mestské zastupiteľstvo hlasovalo v novembri 2024 za preskúmanie premiestnenia alebo odstránenia pamätníka vojakov Sovietskej armády na Námestí osloboditeľov vrátane jeho komunistických symbolov. Poslanec NR SR Igor Šimko (Hlas-SD) — kandidát na župana KSK — následne v parlamente predložil a presadil novelu zákona o vojnových hroboch, ktorá posilňuje ochranu takýchto pamätníkov pred poškodením aj premiestnením. Zákon č. 125/1996 označuje komunistický režim za „zločinecký, nemorálny a protiprávny" — časť právnikov a verejnosti preto považuje zobrazovanie kosákov a kladív vo verejnom priestore za propagáciu komunizmu v rozpore s týmto zákonom. Za zachovanie pamätníka podpísalo petíciu viac ako 10 000 Košičanov, za odstránenie symbolov vyše 3 300.',
    a:{trnka:'neutral',simko:'disagree',porvaz:'agree',gurbal:'disagree',hirman:'disagree',gurbal:'agree',hirman:'agree'}},
 
   {t:'Zdravotníctvo',
    q:'Má kraj aktívne riešiť nedostatok lekárov na vidieku cez krajské motivačné štipendiá pre medikov?',
-   info:'Desiatky obcí na juhu a severovýchode KSK nemajú všeobecného lekára. Kraj môže ponúknuť štipendium medikom výmenou za záväzok pracovať v podrozvinutých oblastiach, efektívny, ale dlhodobý nástroj.',
+   info:'Desiatky obcí na juhu a severovýchode KSK nemajú všeobecného lekára. Kraj môže ponúknuť štipendium medikom výmenou za záväzok pracovať v podrozvinutých oblastiach — efektívny, ale dlhodobý nástroj.',
    a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
 
   {t:'Spolupráca kraj–mesto',
    q:'Vadí ti, keď si župan a primátor toho istého mesta roky otvorene konkurujú namiesto toho, aby spolupracovali?',
-   info:'Napätie medzi Trnkom a Polačekom je dobre zdokumentované, primátor Polaček ho opakovane nazýval "obvineným Trnkom" na zastupiteľstve a žiadal správu o kauzách. Komunálna vojna blokuje spoločné projekty.',
+   info:'Napätie medzi Trnkom a Polačekom je dobre zdokumentované — primátor Polaček ho opakovane nazýval "obvineným Trnkom" na zastupiteľstve a žiadal správu o kauzách. Komunálna vojna blokuje spoločné projekty.',
    a:{trnka:'disagree',simko:'neutral',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
 
   {t:'Cesty a infraštruktúra',
    q:'Má kraj vložiť viac peňazí do opravy krajských ciest v odľahlých oblastiach Gemera a Abova?',
-   info:'Vidiecke cesty v KSK patria k najhoršie udržiavaným v krajine. Kraj ich spravuje cez Správu ciest KSK, tú istú organizáciu, ktorej vedenie figurovalo v kauze Valentín.',
+   info:'Vidiecke cesty v KSK patria k najhoršie udržiavaným v krajine. Kraj ich spravuje cez Správu ciest KSK — tú istú organizáciu, ktorej vedenie figurovalo v kauze Valentín.',
    a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'neutral',hirman:'neutral'}},
 
   {t:'Rómske komunity',
@@ -1308,27 +1243,27 @@ window.VAA_DATA.questions.kosice_vuc = [
 
   {t:'Vzdelávanie',
    q:'Má kraj zatvárať prázdne stredné školy, aj keď to zasiahne menšie mestá?',
-   info:'KSK spravuje desiatky stredných škôl, no demografický pokles znižuje ich naplnenosť. Prázdne školy sú drahé, no zatvorenie školy je symbolickou ranou pre malé mesto.',
+   info:'KSK spravuje desiatky stredných škôl, no demografický pokles znižuje ich naplnenosť. Prázdne školy sú drahé — no zatvorenie školy je symbolickou ranou pre malé mesto.',
    a:{trnka:'agree',simko:'neutral',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
 
   {t:'Eurofondy',
    q:'Je schopnosť župana čerpať eurofondy dôležitejšia ako jeho hodnotová orientácia?',
-   info:'KSK dostáva každé obdobie stovky miliónov eur z EÚ. Merateľná schopnosť tieto peniaze využiť je legitímny argument pre voličov, aj pri kandidátovi s právnymi problémami.',
+   info:'KSK dostáva každé obdobie stovky miliónov eur z EÚ. Merateľná schopnosť tieto peniaze využiť je legitímny argument pre voličov — aj pri kandidátovi s právnymi problémami.',
    a:{trnka:'agree',simko:'agree',porvaz:'neutral',gurbal:'agree',hirman:'agree'}},
 
   {t:'Lokálny patriotizmus',
    q:'Vadí ti, že Bratislava dostáva oveľa viac štátnych investícií a pozornosti ako Košický kraj?',
-   info:'Ľudia na východe dlhodobo vnímajú, že všetko ide do Bratislavy. Župan môže byť hlasom za spravodlivejšie rozdeľovanie, pričom kandidát Hlas (vládna koalícia) a PS (opozícia) tvrdia, že dokážu tento boj vyhrať z rôznych pozícií.',
+   info:'Ľudia na východe dlhodobo vnímajú, že všetko ide do Bratislavy. Župan môže byť hlasom za spravodlivejšie rozdeľovanie — pričom kandidát Hlas (vládna koalícia) a PS (opozícia) tvrdia, že dokážu tento boj vyhrať z rôznych pozícií.',
    a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
 
   {t:'Seniori',
    q:'Má kraj znížiť poplatky v domovoch sociálnych služieb pre seniorov s nízkymi dôchodkami?',
-   info:'Mnohí seniori v KSK platia za domov dôchodcov viac ako dostávajú v dôchodku. Kraj nastavuje výšku poplatkov a môže zaviesť príjmovú škálu, Hlas-SD takéto opatrenia presadzuje na celoštátnej úrovni.',
+   info:'Mnohí seniori v KSK platia za domov dôchodcov viac ako dostávajú v dôchodku. Kraj nastavuje výšku poplatkov a môže zaviesť príjmovú škálu — Hlas-SD takéto opatrenia presadzuje na celoštátnej úrovni.',
    a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'disagree'}},
 
   {t:'Hodnoty',
    q:'Je pre teba dôležité, aby župan KSK verejne hájil konzervatívne a kresťanské hodnoty?',
-   info:'KSK je tradičnejší región s hlbokými náboženskými koreňmi. Župan môže tieto hodnoty reprezentovať aktívne, alebo môže zvoliť hodnotovo neutrálne, manažérske riadenie kraja.',
+   info:'KSK je tradičnejší región s hlbokými náboženskými koreňmi. Župan môže tieto hodnoty reprezentovať aktívne — alebo môže zvoliť hodnotovo neutrálne, manažérske riadenie kraja.',
    a:{trnka:'agree',simko:'neutral',porvaz:'disagree',gurbal:'disagree',hirman:'disagree',gurbal:'agree',hirman:'agree'}},
 
   {t:'LGBTQ+',
@@ -1338,7 +1273,7 @@ window.VAA_DATA.questions.kosice_vuc = [
 
   {t:'Zdravotníctvo II',
    q:'Má kraj zverejňovať čakacie doby na špecializovanú starostlivosť vo všetkých krajských zariadeniach?',
-   info:'Pacienti v KSK čakajú na špecialistu niekoľko mesiacov, bez možnosti porovnania. Transparentnosť čakacích dôb je jednoduchý lacný nástroj, ktorý pomáha pacientom.',
+   info:'Pacienti v KSK čakajú na špecialistu niekoľko mesiacov — bez možnosti porovnania. Transparentnosť čakacích dôb je jednoduchý lacný nástroj, ktorý pomáha pacientom.',
    a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
 
   {t:'Mládež',
@@ -1358,7 +1293,7 @@ window.VAA_DATA.questions.kosice_vuc = [
 
   {t:'Podnikanie',
    q:'Má kraj aktívne propagovať KSK ako destináciu pre zahraničný turizmus a investície?',
-   info:'KSK má bohaté prírodné a kultúrne dedičstvo, Slovenský kras, Spišský hrad, Košice. Aktívny marketing kraja môže priniesť prácu do zabudnutých oblastí.',
+   info:'KSK má bohaté prírodné a kultúrne dedičstvo — Slovenský kras, Spišský hrad, Košice. Aktívny marketing kraja môže priniesť prácu do zabudnutých oblastí.',
    a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
 
   {t:'Participácia',
@@ -1372,8 +1307,8 @@ window.VAA_DATA.questions.kosice_vuc = [
    a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
 
   {t:'Duálne vzdelávanie',
-   q:'Má kraj presadzovať duálne vzdelávanie, priame partnerstvo škôl a firiem, ako hlavný model odborného vzdelávania?',
-   info:'Duálne vzdelávanie znižuje nezamestnanosť absolventov. KSK má silnú priemyselnú základňu, Volvo od decembra 2026, U.S. Steel, ktorá môže byť partnerom krajských škôl.',
+   q:'Má kraj presadzovať duálne vzdelávanie — priame partnerstvo škôl a firiem — ako hlavný model odborného vzdelávania?',
+   info:'Duálne vzdelávanie znižuje nezamestnanosť absolventov. KSK má silnú priemyselnú základňu — Volvo od decembra 2026, U.S. Steel — ktorá môže byť partnerom krajských škôl.',
    a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
 
   {t:'Životné prostredie',
@@ -1383,7 +1318,7 @@ window.VAA_DATA.questions.kosice_vuc = [
 
   {t:'Zodpovednosť',
    q:'Má župan každoročne zverejňovať detailnú správu o plnení volebného programu?',
-   info:'Účet za sľuby je základom zodpovednej demokracie. Krajskí poslanci KSK opakovane žiadali Trnku o správu o jeho kauzách, župan odmietal.',
+   info:'Účet za sľuby je základom zodpovednej demokracie. Krajskí poslanci KSK opakovane žiadali Trnku o správu o jeho kauzách — župan odmietal.',
    a:{trnka:'neutral',simko:'neutral',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
 
   {t:'Rodinná starostlivosť',
@@ -1400,16 +1335,16 @@ window.VAA_DATA.questions.kosice_vuc = [
   {t:'Volvo a subdodávatelia', q:'Má KSK aktívne lákať subdodávateľov pre závod Volvo Cars, ktorý od decembra 2026 spúšťa výrobu v Košiciach?',
    info:'Volvo Cars otvára v Košiciach závod, ktorý je najväčšou greenfield investíciou v histórii Košického kraja a má zamestnávať tisíce ľudí. Automobilové závody zvyčajne priťahujú desiatky subdodávateľov, ktorí sa usadzujú v okolí a generujú ďalšie tisíce pracovných miest. KSK môže koordinovať prípravu priemyselných parkov, odborného vzdelávania a dopravnej infraštruktúry. Otáznou zostáva, do akej miery by mal kraj subvenciovať príchod zahraničných subdodávateľov na úkor miestnych firiem.',
    a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},,
-  {t:'Zdravotníctvo na vidieku', q:'Má KSK zaviesť program, garantovaná ordinácia a príspevok na bývanie, pre lekárov, ktorí sa usadia v odľahlých obciach kraja?',
-   info:'V mnohých obciach Košického kraja dlhodobo chýba všeobecný lekár, pacienti cestujú za zdravotnou starostlivosťou aj hodinu. KSK zriaďuje zdravotnícke zariadenia a má kompetenciu motivovať lekárov k usadeniu na vidieku prostredníctvo krajských stimulov. Prešovský kraj zaviedol podobné schémy a záujem lekárov výrazne vzrástol. Systémovým riešením by mohla byť kombinácia krajských a štátnych stimulov, samotný kraj nestačí financovať celú sústavu.',
+  {t:'Zdravotníctvo na vidieku', q:'Má KSK zaviesť program — garantovaná ordinácia a príspevok na bývanie — pre lekárov, ktorí sa usadia v odľahlých obciach kraja?',
+   info:'V mnohých obciach Košického kraja dlhodobo chýba všeobecný lekár — pacienti cestujú za zdravotnou starostlivosťou aj hodinu. KSK zriaďuje zdravotnícke zariadenia a má kompetenciu motivovať lekárov k usadeniu na vidieku prostredníctvo krajských stimulov. Prešovský kraj zaviedol podobné schémy a záujem lekárov výrazne vzrástol. Systémovým riešením by mohla byť kombinácia krajských a štátnych stimulov — samotný kraj nestačí financovať celú sústavu.',
    a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'neutral',hirman:'neutral'}},,
-  {t:'Turistika',          q:'Má KSK vybudovať spojenú cykloturistickú trasu cez celý kraj, od Tokajskej oblasti až po Slovenský raj?',
-   info:'Košický kraj zahŕňa mimoriadne rôznorodé prírodné a kultúrne lokality, Slovenský kras, Slovenský raj, Tokajské vinohradníctvo zapísané do UNESCO a termálne kúpele. Cykloturistika patrí v strednej Európe k najrýchlejšie rastúcim segmentom cestovného ruchu s nadpriemerným výdavkom na osobu. Súvislá cyklotrasa by zvýšila návštevnosť a príjmy malých obcí. Financovanie infraštruktúry cez stovky kilometrov je technicky a finančne náročné, no viaceré eurofondy na také projekty pamätajú.',
+  {t:'Turistika',          q:'Má KSK vybudovať spojenú cykloturistickú trasu cez celý kraj — od Tokajskej oblasti až po Slovenský raj?',
+   info:'Košický kraj zahŕňa mimoriadne rôznorodé prírodné a kultúrne lokality — Slovenský kras, Slovenský raj, Tokajské vinohradníctvo zapísané do UNESCO a termálne kúpele. Cykloturistika patrí v strednej Európe k najrýchlejšie rastúcim segmentom cestovného ruchu s nadpriemerným výdavkom na osobu. Súvislá cyklotrasa by zvýšila návštevnosť a príjmy malých obcí. Financovanie infraštruktúry cez stovky kilometrov je technicky a finančne náročné, no viaceré eurofondy na také projekty pamätajú.',
    a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},,
   {t:'Školy a demografia', q:'Má KSK zlučovať stredné školy s klesajúcim zápisom, aj keby to znamenalo zánik niektorých odborov v menších mestách?',
-   info:'Demografický pokles znižuje počet žiakov na stredných školách v celom Košickom kraji, viaceré školy fungujú pod 50 % kapacity. Prázdne triedy zaťažujú krajský rozpočet, no zánik školy je pre komunitu traumatizujúci a ničí vzdelávacie tradície v meste. Racionalizácia siete škôl je jednou z kľúčových kompetencií kraja, no vyžaduje politickú odvahu. Trenčiansky kraj racionalizáciou ušetril a zdroje presmeroval do zvýšenia kvality zostávajúcich škôl.',
+   info:'Demografický pokles znižuje počet žiakov na stredných školách v celom Košickom kraji — viaceré školy fungujú pod 50 % kapacity. Prázdne triedy zaťažujú krajský rozpočet, no zánik školy je pre komunitu traumatizujúci a ničí vzdelávacie tradície v meste. Racionalizácia siete škôl je jednou z kľúčových kompetencií kraja, no vyžaduje politickú odvahu. Trenčiansky kraj racionalizáciou ušetril a zdroje presmeroval do zvýšenia kvality zostávajúcich škôl.',
    a:{trnka:'neutral',simko:'neutral',porvaz:'neutral'}},,
-  {t:'Regionálna značka',  q:'Má KSK aktívne propagovať Košický kraj v zahraničí ako samostatnú turistickú destináciu, nie len ako súčasť Slovenska?',
+  {t:'Regionálna značka',  q:'Má KSK aktívne propagovať Košický kraj v zahraničí ako samostatnú turistickú destináciu — nie len ako súčasť Slovenska?',
    info:'Košický kraj disponuje unikátnou kombináciou kultúrneho dedičstva (Košice, Levoča, Spišský hrad), prírody a gastronómie (tokajské vína). Bratislava dominuje v zahraničí ako turistická destinácia, zatiaľ čo Košice a okolie zostávajú medzinárodne neznáme napriek bohatej histórii a dostupnosti. Viaceré európske regióny (napr. Toskánsko, Provence) budujú vlastnú medzinárodnú značku nezávisle od národnej turistiky. KSK má agentúru cestovného ruchu, no jej dosah zostáva obmedzený.',
    a:{trnka:'agree',simko:'agree',porvaz:'agree'}},
 ];;
@@ -1418,146 +1353,146 @@ window.VAA_DATA = window.VAA_DATA || {};
 
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
-window.VAA_DATA.candidates['presov_primator'] = [{id:'olha',name:'František Oľha',party:'SaS/PS (úradujúci primátor)',color:'#4db6ac'},{id:'smer_pe',name:'Kandidát SMER',party:'SMER-SD',color:'#e63946'},{id:'kdh_pe',name:'Kandidát KDH',party:'KDH',color:'#90caf9'}];
-window.VAA_DATA.candidates['presov_vuc'] = [{id:'majersky',name:'Milan Majerský',party:'KDH (úradujúci župan)',color:'#90caf9'},{id:'ps_pe',name:'Kandidát PS',party:'Progresívne Slovensko',color:'#64b5f6'},{id:'smer_pvu',name:'Kandidát SMER',party:'SMER-SD',color:'#e63946'},{id:'mazurek',name:'Milan Mazurek',party:'Republika',color:'#6d4c41'}];
+window.VAA_DATA.candidates['presov_primator'] = [{id:'olha',name:'František Oľha',party:'Demokrati (úradujúci primátor)',color:'#4db6ac',url:'https://feroolha.sk'},{id:'mochnacky',name:'Rastislav Mochnacký',party:'KDH',color:'#90caf9',url:''},{id:'hagyari',name:'Pavel Hagyari',party:'Nezávislý',color:'#78909c',url:'https://hagyari.sk'},{id:'estocak',name:'Martin Eštočák',party:'Nezávislý',color:'#43a047',url:'https://martinestocak.sk'}];
+window.VAA_DATA.candidates['presov_vuc'] = [{id:'majersky',name:'Milan Majerský',party:'KDH (úradujúci župan)',color:'#90caf9',url:''},{id:'ps_pe',name:'Kandidát PS',party:'Progresívne Slovensko',color:'#64b5f6',url:''},{id:'smer_pvu',name:'Kandidát SMER',party:'SMER-SD',color:'#e63946',url:''},{id:'mazurek',name:'Milan Mazurek',party:'Republika',color:'#6d4c41',url:''}];
 
 // ── Otázky: Primátor / Primátorka ──
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 window.VAA_DATA.questions.presov_primator = [
   {t:'Doprava',        q:'Chceš, aby Prešov výrazne rozšíril sieť cyklotrás a tým znížil závislosť ľudí od áut?',
    info:'Prešov má minimálnu cyklistickú infraštruktúru napriek tomu, že je tretím najväčším mestom. Rozsiahla sieť cyklotrás by zmenila každodenný transport tisícov ľudí, no vyžaduje rozsiahle investície a odber parkovacích miest.',
-   a:{olha:'agree',smer_pe:'disagree',kdh_pe:'neutral'}},
+   a:{olha:'agree',mochnacky:'disagree',hagyari:'neutral',estocak:'agree'}},
   {t:'Infraštruktúra', q:'Sú rozbitné chodníky a cesty v Prešove tvojou hlavnou výhradou voči vedeniu mesta?',
    info:'Prešovské cesty a chodníky sú dlhodobo v zlom stave, čo komplikuje pohyb najmä pre starých a hendikepovaných. Oprava základnej infraštruktúry je menšie politické víťazstvo ako veľké projekty, ale priamejší dopad na život ľudí.',
-   a:{olha:'neutral',smer_pe:'agree',kdh_pe:'agree'}},
+   a:{olha:'neutral',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
   {t:'Dane',           q:'Nesúhlasíš s postupným zvyšovaním miestnych daní v Prešove v posledných rokoch?',
-   info:'Vyššie miestne dane sú spôsobom, ako financovať rozvoj a služby bez zadlžovania, no zaťažujú domácnosti a podnikateľov. Kde je hranica medzi nevyhnutným zdrojom a neprijateľnou záťažou?',
-   a:{olha:'disagree',smer_pe:'agree',kdh_pe:'agree'}},
+   info:'Vyššie miestne dane sú spôsobom, ako financovať rozvoj a služby bez zadlžovania — no zaťažujú domácnosti a podnikateľov. Kde je hranica medzi nevyhnutným zdrojom a neprijateľnou záťažou?',
+   a:{olha:'disagree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
   {t:'Bývanie',        q:'Mal by Prešov stavať vlastné nájomné byty dostupné pre stredné a nižšie príjmové skupiny?',
-   info:'Bytová kríza zasiahla aj Prešov, nájomné rastie rýchlejšie ako mzdy. Mestské nájomné byty riešia symptóm, nie príčinu, ale pre konkrétnych ľudí môžu znamenať stabilitu a dôstojné bývanie.',
-   a:{olha:'agree',smer_pe:'agree',kdh_pe:'neutral'}},
+   info:'Bytová kríza zasiahla aj Prešov — nájomné rastie rýchlejšie ako mzdy. Mestské nájomné byty riešia symptóm, nie príčinu — ale pre konkrétnych ľudí môžu znamenať stabilitu a dôstojné bývanie.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'neutral',estocak:'neutral'}},
   {t:'Bezpečnosť',     q:'Potrebuje Prešov viac mestských policajtov pre väčší pocit bezpečia v meste?',
-   info:'Pocit bezpečia v meste závisí od viditeľnosti polície aj od sociálnych podmienok. Viac policajtov je rýchle riešenie, ktoré voliči vnímajú pozitívne, ale bez sociálnych opatrení rieši len symptómy.',
-   a:{olha:'agree',smer_pe:'agree',kdh_pe:'agree'}},
+   info:'Pocit bezpečia v meste závisí od viditeľnosti polície aj od sociálnych podmienok. Viac policajtov je rýchle riešenie, ktoré voliči vnímajú pozitívne — ale bez sociálnych opatrení rieši len symptómy.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
   {t:'Korupcia',       q:'Chceš povinné zverejňovanie všetkých mestských zákaziek Prešova vrátane odôvodnenia výberu dodávateľa?',
-   info:'Transparentnosť verejného obstarávania je základom dôvery v samosprávu. Prešov, rovnako ako iné slovenské mestá, mal zákazky, ktoré vyvolali otázky o klientelizme. Povinné odôvodnenie by tieto riziká znížilo.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'agree'}},
+   info:'Transparentnosť verejného obstarávania je základom dôvery v samosprávu. Prešov — rovnako ako iné slovenské mestá — mal zákazky, ktoré vyvolali otázky o klientelizme. Povinné odôvodnenie by tieto riziká znížilo.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
   {t:'Školstvo',       q:'Mal by magistrát Prešova zadarmo zabezpečiť obedy pre všetky deti na mestských základných školách?',
-   info:'Bezplatné obedy eliminujú sociálnu stigmu a administratívnu záťaž testovania príjmu. Pre mesto to predstavuje výdavok, ale výskumy ukazujú, že sýte deti sa lepšie učia a menej absentujú.',
-   a:{olha:'agree',smer_pe:'agree',kdh_pe:'neutral'}},
+   info:'Bezplatné obedy eliminujú sociálnu stigmu a administratívnu záťaž testovania príjmu. Pre mesto to predstavuje výdavok — ale výskumy ukazujú, že sýte deti sa lepšie učia a menej absentujú.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'neutral',estocak:'agree'}},
   {t:'LGBTQ+',         q:'Mal by primátor Prešova podporovať LGBTQ+ komunitné programy z mestských grantov?',
-   info:'Prešov je konzervatívne mesto s silnou cirkvou. Primátor môže ovplyvniť kultúru tolerancie cez grantovú politiku, alebo sa môže pridŕžať tradičného hodnotového rámca väčšiny voličov. Táto voľba odráža hlboké hodnotové rozdiely.',
-   a:{olha:'agree',smer_pe:'disagree',kdh_pe:'disagree'}},
+   info:'Prešov je konzervatívne mesto s silnou cirkvou. Primátor môže ovplyvniť kultúru tolerancie cez grantovú politiku — alebo sa môže pridŕžať tradičného hodnotového rámca väčšiny voličov. Táto voľba odráža hlboké hodnotové rozdiely.',
+   a:{olha:'agree',mochnacky:'disagree',hagyari:'disagree',estocak:'disagree'}},
   {t:'Rómske komunity',q:'Mal by primátor Prešova aktívne presadzovať integračné programy pre Rómov žijúcich na okraji mesta?',
-   info:'Prešov má tisíce Rómov v marginalizovaných komunitách na okraji mesta. Integrácia je dlhodobý, drahý a politicky náročný proces, no bez neho sa problém prehlbuje a mení na trvalý sociálny výdavok.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'neutral'}},
+   info:'Prešov má tisíce Rómov v marginalizovaných komunitách na okraji mesta. Integrácia je dlhodobý, drahý a politicky náročný proces — no bez neho sa problém prehlbuje a mení na trvalý sociálny výdavok.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'neutral'}},
   {t:'Energetická chudoba',q:'Mal by magistrát pomáhať prešovským domácnostiam v energetickej chudobe cez mestské programy?',
    info:'Tisíce domácností v Prešove míňajú na energie neúmernú časť príjmu. Magistrát môže sprostredkovať skupinový nákup energií, subvencovať zatepľovanie starých bytov alebo inštalovať solárne panely na mestské budovy.',
-   a:{olha:'neutral',smer_pe:'agree',kdh_pe:'neutral'}},
+   a:{olha:'neutral',mochnacky:'agree',hagyari:'neutral',estocak:'agree'}},
   {t:'Lokálny patriotizmus',q:'Vadí ti, že Bratislava a Košice dostávajú oveľa viac pozornosti a investícií ako Prešov?',
-   info:'Prešov je tretie najväčšie mesto, no v investičných zámeroch vlády často figuruje až za Žilinou alebo Nitrou. Primátor, ktorý aktívne lobuje za záujmy mesta, môže zmeniť tento vzorec, no závisí to aj od politických väzieb.',
-   a:{olha:'agree',smer_pe:'agree',kdh_pe:'agree'}},
+   info:'Prešov je tretie najväčšie mesto, no v investičných zámeroch vlády často figuruje až za Žilinou alebo Nitrou. Primátor, ktorý aktívne lobuje za záujmy mesta, môže zmeniť tento vzorec — no závisí to aj od politických väzieb.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
   {t:'Životné prostredie',q:'Mal by Prešov zakázať spaľovanie uhlia a tuhých palív v domácnostiach v husto obývaných oblastiach?',
-   info:'Ovzdušie v Prešove je v zimných mesiacoch znečistené starými kotlami. Zákaz je účinný, no sociálne citlivý, rodiny bez prostriedkov na výmenu kotla by trpeli. Riešením môže byť zákaz kombinovaný s dotačným programom.',
-   a:{olha:'neutral',smer_pe:'neutral',kdh_pe:'neutral'}},
+   info:'Ovzdušie v Prešove je v zimných mesiacoch znečistené starými kotlami. Zákaz je účinný, no sociálne citlivý — rodiny bez prostriedkov na výmenu kotla by trpeli. Riešením môže byť zákaz kombinovaný s dotačným programom.',
+   a:{olha:'neutral',mochnacky:'neutral',hagyari:'neutral',estocak:'neutral'}},
   {t:'Kultúra',        q:'Mal by magistrát zvýšiť granty pre nezávislé kultúrne organizácie, festivaly a komunitné projekty v Prešove?',
-   info:'Prešov má bohatú kultúrnu scénu, ale podfinancovanú. Kultúrne granty sú nástrojom, ako podporiť miestnu kreativitu a súdržnosť komunity, pričom primátor určuje kritériá ich prideľovania.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'neutral'}},
+   info:'Prešov má bohatú kultúrnu scénu, ale podfinancovanú. Kultúrne granty sú nástrojom, ako podporiť miestnu kreativitu a súdržnosť komunity — pričom primátor určuje kritériá ich prideľovania.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},
   {t:'Participácia',   q:'Chceš, aby prešovskí občania mohli cez digitálne hlasovanie rozhodovať o časti mestského rozpočtu?',
    info:'Participatívny rozpočet zvyšuje záujem o samosprávu a garantuje, že aspoň časť peňazí ide na projekty, ktoré ľudia skutočne chcú. Vyžaduje dôveru v systém a aktívnu komunikáciu zo strany mesta.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'neutral'}},
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},
   {t:'Podnikanie',     q:'Mal by Prešov aktívne lákať nových investorov a firmy znížením poplatkov a zrýchlením povolení?',
-   info:'Prešov potrebuje nové pracovné miesta, keďže mnohí mladí odchádzajú. Ústretovosť voči investorom môže lákať firmy, no nesmie to byť na úkor práv existujúcich obyvateľov a životného prostredia.',
-   a:{olha:'agree',smer_pe:'agree',kdh_pe:'agree'}},
+   info:'Prešov potrebuje nové pracovné miesta, keďže mnohí mladí odchádzajú. Ústretovosť voči investorom môže lákať firmy — no nesmie to byť na úkor práv existujúcich obyvateľov a životného prostredia.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
   {t:'MHD',            q:'Chceš, aby mestská autobusová doprava v Prešove bola zadarmo pre dôchodcov a zdravotne znevýhodnených?',
    info:'Bezplatná MHD pre zraniteľné skupiny je sociálne spravodlivé opatrenie, ktoré zvyšuje mobilitu tých, ktorí si dopravu nemôžu dovoliť. Stojí to peniaze z mestského rozpočtu, no znižuje závislosť od áut.',
-   a:{olha:'agree',smer_pe:'agree',kdh_pe:'agree'}},
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
   {t:'Digitalizácia',  q:'Chceš, aby magistrát Prešova digitalizoval vydávanie povolení a minimalizoval potrebu osobných návštev úradu?',
-   info:'Digitálne úrady šetria čas a znižujú korupčné príležitosti. Prešov môže tento proces výrazne urýchliť bez nutnosti meniť zákony, stačí vôľa a investícia do IT systémov magistrátu.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'neutral'}},
+   info:'Digitálne úrady šetria čas a znižujú korupčné príležitosti. Prešov môže tento proces výrazne urýchliť bez nutnosti meniť zákony — stačí vôľa a investícia do IT systémov magistrátu.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},
   {t:'Zelené mestá',   q:'Mal by Prešov vytvoriť viac mestských parkov a zelených plôch, aj na úkor parkovacích miest?',
-   info:'Prešov trpí nedostatkom zelene v husto obývaných oblastiach. Parky a stromoradia zlepšujú kvalitu ovzdušia a znižujú tepelné ostrovy, ale každé parkovacie miesto, ktoré zmizne, vytvorí nespokojného voliča.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'neutral'}},
+   info:'Prešov trpí nedostatkom zelene v husto obývaných oblastiach. Parky a stromoradia zlepšujú kvalitu ovzdušia a znižujú tepelné ostrovy — ale každé parkovacie miesto, ktoré zmizne, vytvorí nespokojného voliča.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},
   {t:'Sport',          q:'Mal by magistrát Prešova viac investovať do bezplatných verejných ihrísk a športovísk dostupných pre všetkých?',
-   info:'Komerčné telocvične a športoviská sú mimo dosahu mnohých rodín. Verejné ihriská a outdoorové posilňovne v parkoch sú dostupné pre každého, od detí po seniorov, a zvyšujú fyzickú aktivitu obyvateľov.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'agree'}},
+   info:'Komerčné telocvične a športoviská sú mimo dosahu mnohých rodín. Verejné ihriská a outdoorové posilňovne v parkoch sú dostupné pre každého — od detí po seniorov — a zvyšujú fyzickú aktivitu obyvateľov.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
   {t:'Korupcia',       q:'Chceš pravidelný nezávislý audit hospodárenia mestského magistrátu a všetkých mestských podnikov?',
-   info:'Audit mestského hospodárenia je štandardom zodpovednej správy. Nezávislý audítor, nie kontrolovaný magistrátom, môže odhaliť plytavosť alebo klientelizmus skôr, než narastú do škandálu.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'agree'}},
+   info:'Audit mestského hospodárenia je štandardom zodpovednej správy. Nezávislý audítor — nie kontrolovaný magistrátom — môže odhaliť plytavosť alebo klientelizmus skôr, než narastú do škandálu.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
   {t:'Mládež',         q:'Mal by magistrát vytvoriť stáže a pracovné príležitosti pre mladých absolventov priamo na úrade a v mestských podnikoch?',
-   info:'Prešovský region trpí odlevom mladých, mnohí odchádzajú za lepšou prácou. Mestský úrad a podniky môžu byť prvým zamestávateľom absolventov, čím ich udržia v meste a vychujú generáciu správcov.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'agree'}},
+   info:'Prešovský region trpí odlevom mladých — mnohí odchádzajú za lepšou prácou. Mestský úrad a podniky môžu byť prvým zamestávateľom absolventov, čím ich udržia v meste a vychujú generáciu správcov.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
   {t:'Hodnoty',        q:'Je pre teba dôležité, aby primátor Prešova aktívne reprezentoval kresťanské a konzervatívne hodnoty?',
    info:'Prešov je hlboko veriacim mestom s veľkým vplyvom cirkvi na každodenný život. Pre časť voličov je hodnotová orientácia primátora rovnako dôležitá ako jeho kompetentnosť.',
-   a:{olha:'neutral',smer_pe:'neutral',kdh_pe:'agree'}},
+   a:{olha:'neutral',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
   {t:'Transparentnosť',q:'Chceš, aby primátor Prešova každý rok zverejnil detailný účet plnenia volebných sľubov?',
-   info:'Zodpovednosť politikov za ich sľuby je základ demokratickej kultúry. Ročná správa o plnení programu by umožnila voličom porovnávať sľuby s realitou, no vyžaduje odvahu priznat aj neúspechy a oneskorenia.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'agree'}},
+   info:'Zodpovednosť politikov za ich sľuby je základ demokratickej kultúry. Ročná správa o plnení programu by umožnila voličom porovnávať sľuby s realitou — no vyžaduje odvahu priznat aj neúspechy a oneskorenia.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
   {t:'Vízia',          q:'Je pre teba primátor Prešova predovšetkým dobrý správca každodenných problémov mesta, alebo vizionár budúcnosti?',
-   info:'Prešov potrebuje oboje, no v akom pomere? Dobrý správca opravuje cesty a nezakladá dlhy; vizionár mení charakter mesta na desaťročia. Tvoja odpoveď odhaľuje, aký typ vedenia teraz mestu chýba najviac.',
-   a:{olha:'disagree',smer_pe:'agree',kdh_pe:'agree'}},
+   info:'Prešov potrebuje oboje — no v akom pomere? Dobrý správca opravuje cesty a nezakladá dlhy; vizionár mení charakter mesta na desaťročia. Tvoja odpoveď odhaľuje, aký typ vedenia teraz mestu chýba najviac.',
+   a:{olha:'disagree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
   {t:'Životné prostredie',q:'Mal by Prešov vytvoriť viac mestských parkov a zelených plôch, aj na úkor parkovacích miest?',
-   info:'Prešov trpí nedostatkom zelene v husto obývaných oblastiach. Parky a stromoradia zlepšujú kvalitu ovzdušia a znižujú tepelné ostrovy, no každé parkovacie miesto, ktoré zmizne, vytvorí nespokojného voliča.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'neutral'}},
+   info:'Prešov trpí nedostatkom zelene v husto obývaných oblastiach. Parky a stromoradia zlepšujú kvalitu ovzdušia a znižujú tepelné ostrovy — no každé parkovacie miesto, ktoré zmizne, vytvorí nespokojného voliča.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},
 ,
 
   {t:'Most JP II.',        q:'Je 18-mesačná uzávierka mosta Jána Pavla II. adekvátne kompenzovaná mestskými dopravnými opatreniami?',
-   info:'Most Jána Pavla II. je kľúčovým dopravným spojením medzi Sídliskom III., Novosvitom a centrom, jeho rekonštrukcia trvá 18 mesiacov a zásadne zmenila dopravu v meste. Nový most bude bez stredového piliera, odolný voči 100-ročnej povodni a so semaformi preferujúcimi MHD. Primátor Oľha sľúbil dokončenie v jeseni 2026 za vlastné mestské zdroje. Mnohí Prešovčania sa sťažujú na nedostatočné obchádzkové trasy a informovanie verejnosti počas výstavby.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'neutral'}},,
+   info:'Most Jána Pavla II. je kľúčovým dopravným spojením medzi Sídliskom III., Novosvitom a centrom — jeho rekonštrukcia trvá 18 mesiacov a zásadne zmenila dopravu v meste. Nový most bude bez stredového piliera, odolný voči 100-ročnej povodni a so semaformi preferujúcimi MHD. Primátor Oľha sľúbil dokončenie v jeseni 2026 za vlastné mestské zdroje. Mnohí Prešovčania sa sťažujú na nedostatočné obchádzkové trasy a informovanie verejnosti počas výstavby.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},,
   {t:'Solivary',           q:'Má primátor zabezpečiť dlhodobý plán riešenia poddolovaného územia v Solivaroch, vrátane prípadného presídlenia?',
-   info:'Primátor Oľha vyhlásil v februári 2026 mimoriadnu situáciu pre poddolované územie v dobývacom priestore Solivar, historická soľná baňa spôsobuje nestabilitu pôdy. Mimoriadna situácia umožňuje samospráve flexibilnejšie a rýchlejšie reagovať na riziko subsidencie. Poddolované územia predstavujú dlhodobé geologické riziko, ktoré sa s časom prehlbuje. Riešenie môže vyžadovať presídlenie časti obyvateľov, to je finančne a sociálne mimoriadne náročné.',
-   a:{olha:'agree',smer_pe:'agree',kdh_pe:'agree'}},,
+   info:'Primátor Oľha vyhlásil v februári 2026 mimoriadnu situáciu pre poddolované územie v dobývacom priestore Solivar — historická soľná baňa spôsobuje nestabilitu pôdy. Mimoriadna situácia umožňuje samospráve flexibilnejšie a rýchlejšie reagovať na riziko subsidencie. Poddolované územia predstavujú dlhodobé geologické riziko, ktoré sa s časom prehlbuje. Riešenie môže vyžadovať presídlenie časti obyvateľov — to je finančne a sociálne mimoriadne náročné.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},,
   {t:'Štadión a šport',    q:'Stojí rekonštrukcia futbalového štadióna za vynaložené verejné zdroje, keď Prešov zároveň bojuje s dierami v rozpočte?',
-   info:'Prešov organizoval Majstrovstvá Európy hráčov do 21 rokov, na čo bola nevyhnutná rekonštrukcia štadióna, projekt bol ironicky nazývaný "stavbou storočia" pre svoju zdĺhavosť. Primátor Oľha narazil na komplikácie, trestné oznámenie poslanca a kontroly spomalili projekt. Verejné financovanie štadiónov je v európskych mestách kontroverzné, prinesie príjmy z cestovného ruchu a prestíž, no peniaze mohli smerovať do základnej infraštruktúry. Výsledkom má byť moderné multifunkčné zariadenie aj pre iné podujatia.',
-   a:{olha:'agree',smer_pe:'neutral',kdh_pe:'neutral'}},,
+   info:'Prešov organizoval Majstrovstvá Európy hráčov do 21 rokov, na čo bola nevyhnutná rekonštrukcia štadióna — projekt bol ironicky nazývaný "stavbou storočia" pre svoju zdĺhavosť. Primátor Oľha narazil na komplikácie — trestné oznámenie poslanca a kontroly spomalili projekt. Verejné financovanie štadiónov je v európskych mestách kontroverzné — prinesie príjmy z cestovného ruchu a prestíž, no peniaze mohli smerovať do základnej infraštruktúry. Výsledkom má byť moderné multifunkčné zariadenie aj pre iné podujatia.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},,
   {t:'Mestský dlh',        q:'Má primátor Prešova prioritizovať splácanie dlhov pred novými investíciami, aj za cenu zastavenia niektorých projektov?',
-   info:'Prešov plánoval na rok 2026 investície za 45 miliónov eur, z toho 21 miliónov z eurofondov podmieňuje 6 miliónov vlastného spolufinancovania. Štát posiela samosprávam menej peňazí ako zákon predpokladá, primátor preto tvorí finančnú rezervu. Príliš konzervatívny prístup k dlhu môže o nenávratné eurofondy prísť, no príliš odvážny zadlžuje budúce generácie. Väčšina slovenských miest balansuje medzi investičnou aktivitou a fiškálnou zodpovednosťou.',
-   a:{olha:'neutral',smer_pe:'agree',kdh_pe:'agree'}},,
+   info:'Prešov plánoval na rok 2026 investície za 45 miliónov eur — 21 miliónov z eurofondov podmieňuje 6 miliónov vlastného spolufinancovania. Štát posiela samosprávam menej peňazí ako zákon predpokladá — primátor preto tvorí finančnú rezervu. Príliš konzervatívny prístup k dlhu môže o nenávratné eurofondy prísť, no príliš odvážny zadlžuje budúce generácie. Väčšina slovenských miest balansuje medzi investičnou aktivitou a fiškálnou zodpovednosťou.',
+   a:{olha:'neutral',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},,
   {t:'Vojenská nemocnica', q:'Má primátor Prešova aktívne podporovať výstavbu novej vojenskej nemocnice v meste, aj keby si to vyžiadalo zmeny v územnom pláne?',
-   info:'Vláda SR oznámila zámer vybudovať novú vojenskú nemocnicu v Prešove za odhadovaných 550 miliónov eur, prípravné práce sa začali v roku 2025. Prešov je sídlom armádneho výcvikového pluku a má strategickú polohu pri hraniciach s Poľskom a Ukrajinou. Nemocnica by priniesla stovky pracovných miest a zlepšila zdravotnícke kapacity celého regiónu. Kľúčovou otázkou zostáva, či bude nemocnica slúžiť aj civilnému obyvateľstvu, alebo zostane výlučne vojenská.',
-   a:{olha:'agree',smer_pe:'agree',kdh_pe:'agree'}},
+   info:'Vláda SR oznámila zámer vybudovať novú vojenskú nemocnicu v Prešove za odhadovaných 550 miliónov eur — prípravné práce sa začali v roku 2025. Prešov je sídlom armádneho výcvikového pluku a má strategickú polohu pri hraniciach s Poľskom a Ukrajinou. Nemocnica by priniesla stovky pracovných miest a zlepšila zdravotnícke kapacity celého regiónu. Kľúčovou otázkou zostáva, či bude nemocnica slúžiť aj civilnému obyvateľstvu, alebo zostane výlučne vojenská.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
 ];
 
 // ── Otázky: Župan / VÚC ──
 window.VAA_DATA.questions.presov_vuc = [
   {t:'Zdravotníctvo',  q:'Chceš, aby PSK aktívne riešil nedostatok lekárov na vidieku cez krajské štipendiá pre medikov?',
-   info:'Desiatky obcí v Prešovskom kraji nemajú vlastného lekára. Kraj môže ponúknuť štipendiá výmenou za záväzok pracovať v podrozvinutých oblastiach, no trvá roky, kým sa to prejaví v praxi.',
+   info:'Desiatky obcí v Prešovskom kraji nemajú vlastného lekára. Kraj môže ponúknuť štipendiá výmenou za záväzok pracovať v podrozvinutých oblastiach — no trvá roky, kým sa to prejaví v praxi.',
    a:{majersky:'agree',ps_pe:'agree',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Doprava',        q:'Chceš, aby PSK výrazne zlepšil autobusové spojenie malých obcí s okresnými mestami?',
-   info:'Stovky obcí v hornatom Prešovskom kraji sú zle prepojené s okresnými mestami. Bez dobrého autobusu sú ľudia odkázaní na auto, čo je problém pre tých, ktorí auto nemajú alebo si ho nemôžu dovoliť.',
+   info:'Stovky obcí v hornatom Prešovskom kraji sú zle prepojené s okresnými mestami. Bez dobrého autobusu sú ľudia odkázaní na auto — čo je problém pre tých, ktorí auto nemajú alebo si ho nemôžu dovoliť.',
    a:{majersky:'agree',ps_pe:'agree',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Vzdelávanie',    q:'Mal by kraj zatvárať nenaplnené stredné školy, aj keď to zasiahne malé mestá a obce?',
    info:'PSK spravuje desiatky stredných škôl vrátane tých v malých, dopravne odľahlých mestách. V Svidníku kraj od septembra 2026 zlúčil gymnázium so spojenou školou, keďže malo len 144 žiakov, o viac ako stovku menej než pred desiatimi rokmi. Demografický pokles je najsilnejší v severovýchodných okresoch Medzilaborce, Snina a Svidník. Zatvorenie školy šetrí peniaze, no pre malé komunity znamená stratu symbolu i ďalší dôvod odísť.',
    a:{majersky:'neutral',ps_pe:'agree',smer_pvu:'disagree',mazurek:'disagree'}},
 
-  {t:'Rómske komunity',q:'Mal by PSK investovať do komplexných integračných programov pre Rómov, vzdelávanie, bývanie, práca, nad rámec zákonných povinností?',
-   info:'PSK má najvyšší podiel marginalizovaných Rómov v SR, odhadom 8 až 10 percent obyvateľov. Bez aktívnych programov sa cyklus extrémnej chudoby prenáša na ďalšie generácie, integrácia je však drahá, dlhodobá a politicky kontroverzná. Milan Mazurek (Republika) bol v roku 2019 právoplatne odsúdený za hanobenie rasy za výroky o rómskom etniku odvysielané v rádiu. Majerský ani SMER aktívnu integračnú politiku nad rámec zákonných povinností dlhodobo nepresadzujú.',
+  {t:'Rómske komunity',q:'Mal by PSK investovať do komplexných integračných programov pre Rómov — vzdelávanie, bývanie, práca — nad rámec zákonných povinností?',
+   info:'PSK má najvyšší podiel marginalizovaných Rómov v SR — odhadom 8 až 10 percent obyvateľov. Bez aktívnych programov sa cyklus extrémnej chudoby prenáša na ďalšie generácie, integrácia je však drahá, dlhodobá a politicky kontroverzná. Milan Mazurek (Republika) bol v roku 2019 právoplatne odsúdený za hanobenie rasy za výroky o rómskom etniku odvysielané v rádiu. Majerský ani SMER aktívnu integračnú politiku nad rámec zákonných povinností dlhodobo nepresadzujú.',
    a:{majersky:'neutral',ps_pe:'agree',smer_pvu:'neutral',mazurek:'disagree'}},
 
   {t:'Korupcia',       q:'Chceš povinný verejný register všetkých zákaziek PSK vrátane odôvodnenia výberu dodávateľa?',
-   info:'PSK spravuje stovky miliónov eur ročne. Transparentnosť zákaziek je základom dôvery verejnosti v samosprávu, no politici sa jej niekedy bránia, lebo odhaľuje siete záujmov a stranícke klientelizmy.',
+   info:'PSK spravuje stovky miliónov eur ročne. Transparentnosť zákaziek je základom dôvery verejnosti v samosprávu — no politici sa jej niekedy bránia, lebo odhaľuje siete záujmov a stranícke klientelizmy.',
    a:{majersky:'neutral',ps_pe:'agree',smer_pvu:'disagree',mazurek:'agree'}},
 
   {t:'Sociálne služby',q:'Mal by kraj znížiť poplatky za sociálne zariadenia pre seniorov s nízkymi dôchodkami?',
-   info:'Mnohí seniori v PSK platia za domov dôchodcov viac ako dostávajú v dôchodku. Kraj nastavuje výšku poplatkov, môže zaviesť sociálnu škálu, ale to znižuje príjmy zariadení a krajský budúcet.',
+   info:'Mnohí seniori v PSK platia za domov dôchodcov viac ako dostávajú v dôchodku. Kraj nastavuje výšku poplatkov — môže zaviesť sociálnu škálu, ale to znižuje príjmy zariadení a krajský budúcet.',
    a:{majersky:'agree',ps_pe:'agree',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Lokálny patriotizmus',q:'Vadí ti, že Bratislava a iné kraje dostávajú viac štátnych zdrojov ako Prešovský kraj?',
-   info:'PSK je jeden z najchudobnejších krajov EÚ, no jeho podiel na štátnych investíciách neodráža jeho potreby. Župan môže byť silným advokátom regiónu voči vláde, no záleží aj na jeho politickej väzbe na vládnu koalíciu.',
+   info:'PSK je jeden z najchudobnejších krajov EÚ, no jeho podiel na štátnych investíciách neodráža jeho potreby. Župan môže byť silným advokátom regiónu voči vláde — no záleží aj na jeho politickej väzbe na vládnu koalíciu.',
    a:{majersky:'agree',ps_pe:'agree',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Hodnoty',        q:'Je pre teba dôležité, aby župan PSK verejne hájil kresťanské a konzervatívne hodnoty?',
-   info:'PSK je historicky kresťanský región s hlbokými tradíciami. Pre mnohých voličov je hodnotová orientácia župana rovnako dôležitá ako jeho manažérske schopnosti, pre iných sú hodnoty súkromnou vecou.',
+   info:'PSK je historicky kresťanský región s hlbokými tradíciami. Pre mnohých voličov je hodnotová orientácia župana rovnako dôležitá ako jeho manažérske schopnosti — pre iných sú hodnoty súkromnou vecou.',
    a:{majersky:'agree',ps_pe:'disagree',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Eurofondy',      q:'Je schopnosť župana čerpať eurofondy pre teba dôležitejšia ako jeho ideologická orientácia?',
-   info:'PSK dostáva každé funkčné obdobie stovky miliónov eur z EÚ. Tieto peniaze ide zlepšiť cesty, školy a sociálne zariadenia, ale len ak ich kraj dokáže efektívne vyčerpať a správne použiť.',
+   info:'PSK dostáva každé funkčné obdobie stovky miliónov eur z EÚ. Tieto peniaze ide zlepšiť cesty, školy a sociálne zariadenia — ale len ak ich kraj dokáže efektívne vyčerpať a správne použiť.',
    a:{majersky:'agree',ps_pe:'agree',smer_pvu:'neutral',mazurek:'agree'}},
 
   {t:'LGBTQ+',         q:'Mal by PSK financovať programy na predchádzanie šikane a podporu LGBTQ+ žiakov na krajských školách?',
-   info:'Stredné školy patria pod kraj. Šikana LGBTQ+ žiakov je dokumentovaným problémom aj v konzervatívnych regiónoch. Preventívne programy sú lacné a efektívne, no v konzervatívnom Prešovskom kraji politicky citlivé.',
+   info:'Stredné školy patria pod kraj. Šikana LGBTQ+ žiakov je dokumentovaným problémom aj v konzervatívnych regiónoch. Preventívne programy sú lacné a efektívne — no v konzervatívnom Prešovskom kraji politicky citlivé.',
    a:{majersky:'disagree',ps_pe:'agree',smer_pvu:'disagree',mazurek:'disagree'}},
 
   {t:'Zdravotníctvo',  q:'Mal by kraj zatvoriť neefektívne oddelenia v krajských nemocniciach, aj keby to sťažilo dostupnosť starostlivosti?',
@@ -1565,11 +1500,11 @@ window.VAA_DATA.questions.presov_vuc = [
    a:{majersky:'neutral',ps_pe:'neutral',smer_pvu:'disagree',mazurek:'neutral'}},
 
   {t:'Mládež',         q:'Mal by kraj zaviesť štipendiá pre talentovaných žiakov z chudobných rodín, aby zostali v PSK?',
-   info:'Odlev mladých a vzdelaných ľudí je jednou z najväčších výziev PSK. Štipendiá môžu byť motívom zostať v regióne, ak sú kombinované s reálnymi pracovnými príležitosťami po skončení školy.',
+   info:'Odlev mladých a vzdelaných ľudí je jednou z najväčších výziev PSK. Štipendiá môžu byť motívom zostať v regióne — ak sú kombinované s reálnymi pracovnými príležitosťami po skončení školy.',
    a:{majersky:'agree',ps_pe:'agree',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Kultúra',        q:'Mal by kraj rovnomerne rozdeľovať kultúrne dotácie medzi Prešov a ostatné okresy?',
-   info:'Väčšina kultúrnych výdavkov PSK plynie do krajského mesta. Decentralizácia kultúry je spravodlivejšia, no menej efektívna ako koncentrácia zdrojov do kvalitných projektov v krajskom centre.',
+   info:'Väčšina kultúrnych výdavkov PSK plynie do krajského mesta. Decentralizácia kultúry je spravodlivejšia — no menej efektívna ako koncentrácia zdrojov do kvalitných projektov v krajskom centre.',
    a:{majersky:'agree',ps_pe:'agree',smer_pvu:'neutral',mazurek:'agree'}},
 
   {t:'Podnikanie',     q:'Mal by kraj aktívne pomáhať malým poľnohospodárom a rodinným farmám v PSK?',
@@ -1577,7 +1512,7 @@ window.VAA_DATA.questions.presov_vuc = [
    a:{majersky:'agree',ps_pe:'agree',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Participácia',   q:'Mal by kraj každoročne vyčleniť aspoň 5 % rozpočtu na projekty, o ktorých hlasujú občania?',
-   info:'Participatívny rozpočet je inovatívny nástroj, ktorý posilňuje záujem ľudí o samosprávu. V krajoch sa zatiaľ neujal, župan, ktorý ho zavedie, by dal silný signál o otvorenosti a dôvere v občanov.',
+   info:'Participatívny rozpočet je inovatívny nástroj, ktorý posilňuje záujem ľudí o samosprávu. V krajoch sa zatiaľ neujal — župan, ktorý ho zavedie, by dal silný signál o otvorenosti a dôvere v občanov.',
    a:{majersky:'neutral',ps_pe:'agree',smer_pvu:'disagree',mazurek:'disagree'}},
 
   {t:'Korupcia',       q:'Chceš, aby župan PSK zverejňoval každoročne detailnú správu o plnení volebného programu?',
@@ -1585,7 +1520,7 @@ window.VAA_DATA.questions.presov_vuc = [
    a:{majersky:'neutral',ps_pe:'agree',smer_pvu:'neutral',mazurek:'agree'}},
 
   {t:'Sociálne služby',q:'Chceš, aby kraj preplácal rodinnú starostlivosť o seniorov doma ako alternatívu k ústavnej starostlivosti?',
-   info:'Rodinná starostlivosť je pre seniora ľudskejšia a pre krajský rozpočet lacnejšia ako miesto v domove dôchodcov. Kraj môže zaviesť systém odmeňovania príbuzných-opatrovateľov, čo by pomohlo tisíckam rodín.',
+   info:'Rodinná starostlivosť je pre seniora ľudskejšia a pre krajský rozpočet lacnejšia ako miesto v domove dôchodcov. Kraj môže zaviesť systém odmeňovania príbuzných-opatrovateľov — čo by pomohlo tisíckam rodín.',
    a:{majersky:'neutral',ps_pe:'agree',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Rómske komunity',    q:'Mal by PSK zaviesť aktívnu politiku zamestnávania a uprednostniť uchádzačov z rómskych komunít pri obsadzovaní krajských pracovných miest?',
@@ -1593,19 +1528,19 @@ window.VAA_DATA.questions.presov_vuc = [
    a:{majersky:'neutral',ps_pe:'agree',smer_pvu:'neutral',mazurek:'disagree'}},
 
   {t:'Doprava',        q:'Chceš, aby kraj spolufinancoval bezplatnú MHD pre dôchodcov a stredoškolákov v celom PSK?',
-   info:'Prešovský kraj je rozsiahly a dopravná dostupnosť je kľúčová. Bezplatná MHD pre zraniteľné skupiny znižuje finančnú záťaž rodín a seniorov, no vyžaduje trvalé financovanie z krajského rozpočtu.',
+   info:'Prešovský kraj je rozsiahly a dopravná dostupnosť je kľúčová. Bezplatná MHD pre zraniteľné skupiny znižuje finančnú záťaž rodín a seniorov — no vyžaduje trvalé financovanie z krajského rozpočtu.',
    a:{majersky:'neutral',ps_pe:'agree',smer_pvu:'neutral',mazurek:'agree'}},
 
   {t:'Zdravotníctvo',  q:'Chceš, aby PSK zverejňoval čakacie doby na špecializovanú starostlivosť vo všetkých krajských zdravotníckych zariadeniach?',
-   info:'Pacienti v PSK čakajú na špecialistov aj niekoľko mesiacov bez možnosti porovnať dostupnosť. Zverejnenie čakacích dôb je jednoduchý nástroj, lacný, transparentný a priamo pomáhajúci tisíckam pacientov.',
+   info:'Pacienti v PSK čakajú na špecialistov aj niekoľko mesiacov bez možnosti porovnať dostupnosť. Zverejnenie čakacích dôb je jednoduchý nástroj — lacný, transparentný a priamo pomáhajúci tisíckam pacientov.',
    a:{majersky:'neutral',ps_pe:'agree',smer_pvu:'neutral',mazurek:'agree'}},
 
   {t:'Vízia',          q:'Je pre teba župan PSK predovšetkým správca krajských financií, alebo hlas regiónu smerom k Bratislave?',
-   info:'Tieto dve role sa dopĺňajú, no niekedy si protirečia. Silný hlas pre región môže byť v konflikte s vládnou koalíciou, no práve cez politický tlak sa dajú získať investície a fondy, ktoré kraj potrebuje.',
+   info:'Tieto dve role sa dopĺňajú, no niekedy si protirečia. Silný hlas pre región môže byť v konflikte s vládnou koalíciou — no práve cez politický tlak sa dajú získať investície a fondy, ktoré kraj potrebuje.',
    a:{majersky:'agree',ps_pe:'neutral',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Zdravotníctvo',      q:'Má PSK prevziať aktívnejšiu koordináciu zdravotníckych kapacít v Prešove, kde kraj narážajú na dlhodobý nedostatok špecialistov?',
-   info:'PSK spravuje krajské nemocnice a ambulancie, no nemá priamu kontrolu nad Nemocnicou L. Pasteura v Prešove, tá je v správe štátu. Nedostatok špecialistov v rôznych oddeleniach je dlhodobý problém celého regiónu. PSK rozbieha centrá integrovanej zdravotnej starostlivosti spolufinancované z eurofondov, čo má skrátiť čakacie doby. Rozdelenie zodpovednosti medzi kraj a štát komplikuje koordináciu zdravotnej politiky na regionálnej úrovni.',
+   info:'PSK spravuje krajské nemocnice a ambulancie, no nemá priamu kontrolu nad Nemocnicou L. Pasteura v Prešove — tá je v správe štátu. Nedostatok špecialistov v rôznych oddeleniach je dlhodobý problém celého regiónu. PSK rozbieha centrá integrovanej zdravotnej starostlivosti spolufinancované z eurofondov, čo má skrátiť čakacie doby. Rozdelenie zodpovednosti medzi kraj a štát komplikuje koordináciu zdravotnej politiky na regionálnej úrovni.',
    a:{majer:'agree',ps_pvu:'agree',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Transparentnosť župana', q:'Vadilo by ti, ak by sa potvrdilo, že župan žije v luxusnom sídle, ktorého majetkové pomery nie sú transparentne zdokumentované?',
@@ -1613,11 +1548,11 @@ window.VAA_DATA.questions.presov_vuc = [
    a:{majer:'disagree',ps_pvu:'agree',smer_pvu:'neutral',mazurek:'agree'}},
 
   {t:'Poľnohospodárstvo',  q:'Má PSK podporovať priamy predaj miestnych potravín do krajských škôl a sociálnych zariadení, čím obíde veľké distribučné siete?',
-   info:'PSK vyhlásil v roku 2026 špeciálnu dotačnú výzvu na riešenie potravinovej dostupnosti, malé rodinné farmy majú nízku vyjednávaciu silu voči veľkým obchodným reťazcom. Priamy nákup potravín pre krajské inštitúcie by skrátil dodávateľský reťazec, podporil lokálnu ekonomiku a zabezpečil čerstvejšie potraviny. Rakúsko, Nemecko a Fínsko majú dlhodobé programy inštitucionálneho nakupovania miestnych potravín. Na Slovensku je táto prax v plienkach, no je právne možná v rámci verejného obstarávania.',
+   info:'PSK vyhlásil v roku 2026 špeciálnu dotačnú výzvu na riešenie potravinovej dostupnosti — malé rodinné farmy majú nízku vyjednávaciu silu voči veľkým obchodným reťazcom. Priamy nákup potravín pre krajské inštitúcie by skrátil dodávateľský reťazec, podporil lokálnu ekonomiku a zabezpečil čerstvejšie potraviny. Rakúsko, Nemecko a Fínsko majú dlhodobé programy inštitucionálneho nakupovania miestnych potravín. Na Slovensku je táto prax v plienkach, no je právne možná v rámci verejného obstarávania.',
    a:{majer:'agree',ps_pvu:'agree',smer_pvu:'agree',mazurek:'agree'}},
 
   {t:'Odliv mozgov',       q:'Má PSK zaviesť program, ktorý ponúkne absolventom vysokých škôl finančnú motiváciu vrátiť sa a pracovať v Prešovskom kraji?',
-   info:'Prešovský kraj trpí silným odlivom vzdelaných ľudí do Bratislavy, Košíc a zahraničia, tento trend oslabuje lokálnu ekonomiku a spomaľuje rozvoj. PSK spravuje stredné školy, no vysoké školy sú v kompetencii štátu, čo obmedzuje jeho vplyv na vzdelávaciu politiku. Viaceré regióny v EÚ ponúkajú finančné stimuly absolventom, ktorí sa vrátia a pracujú v regióne, napríklad odpustenie časti študentských pôžičiek. Otázkou zostáva, či sú tieto programy skutočne efektívne, alebo len dočasne spomaľujú odliv bez riešenia štrukturálnych príčin.',
+   info:'Prešovský kraj trpí silným odlivom vzdelaných ľudí do Bratislavy, Košíc a zahraničia — tento trend oslabuje lokálnu ekonomiku a spomaľuje rozvoj. PSK spravuje stredné školy, no vysoké školy sú v kompetencii štátu, čo obmedzuje jeho vplyv na vzdelávaciu politiku. Viaceré regióny v EÚ ponúkajú finančné stimuly absolventom, ktorí sa vrátia a pracujú v regióne — napríklad odpustenie časti študentských pôžičiek. Otázkou zostáva, či sú tieto programy skutočne efektívne, alebo len dočasne spomaľujú odliv bez riešenia štrukturálnych príčin.',
    a:{majer:'agree',ps_pvu:'agree',smer_pvu:'agree',mazurek:'agree'}}
 ];
 // ══ DATA: ZILINA ══
@@ -1851,8 +1786,11 @@ function makeVAA(){
     if(list){
       list.innerHTML = scores.map((c,i)=>{
         const medal = i===0 ? '🥇' : i===1 ? '🥈' : i===2 ? '🥉' : '';
+        const nameHtml = c.url
+          ? `<a href="${c.url}" target="_blank" rel="noopener" class="cand-link">${c.name}</a>`
+          : c.name;
         return `<div class="res-row">
-          <div class="res-name">${medal} ${c.name} <span class="res-party">${c.party}</span></div>
+          <div class="res-name">${medal} ${nameHtml} <span class="res-party">${c.party}</span></div>
           <div class="res-bar-wrap">
             <div class="res-bar" data-pct="${c.pct}" style="width:0%;background:${c.color}"></div>
             <span class="res-pct">${c.pct}%</span>
