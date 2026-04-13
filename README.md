@@ -10,15 +10,15 @@
 
 Sme Občania štátu máme len jeden cieľ: priviesť ťa k volebnej urne.
 
-Sme apolitickí a nezávislí. Nevznikli sme na objednávku žiadnej strany, kandidáta ani sponzora. Nikto z nás za túto prácu nedostáva odmenu.
+Sme apolitickí a nezávislí. Nevznikli sme na objednávku žiadnej strany, kandidáta ani sponzora. Nikto z nás za túto prácu nedostáva odmenu. Odmeníte nás, keď pojdete voliť.
 
-Frustruje nás, že niektorí kandidáti otvorene klamú a voliči nemajú nástroj, ako ich porovnať. Táto kalkulačka dáva každému transparentnosť, ktorú naša demokracia potrebuje.
+Frustruje nás, že niektorí kandidáti otvorene klamú a voliči nemajú nástroj, ako kandidátov porovnať. Táto kalkulačka dáva každému transparentnosť, ktorú naša demokracia potrebuje.
 
 ---
 
 ## Ako to funguje
 
-Odpovedz na 25 otázok a zisti, s ktorým kandidátom sa najviac zhoduješ. Odpovede kandidátov sú buď priamo overené, alebo odvodené z verejných zdrojov: volebný program, hlasovanie v zastupiteľstve, strannícka príslušnosť, vyjadrenia v médiách.
+Odpovedz na 25 otázok a zisti, s ktorým kandidátom sa najviac zhoduješ. Odpovede kandidátov sú buď priamo overené, alebo odvodené z verejných zdrojov: volebný program, hlasovanie v zastupiteľstve, strannícka príslušnosť alebo ich vyjadrenia v médiách.
 
 Bez cookies. Bez reklám. Bez sledovania. Tvoje odpovede zostávajú iba v tvojom prehliadači.
 
