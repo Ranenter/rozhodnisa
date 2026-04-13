@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- Primary SEO -->
+<title>Volebná kalkulačka 2026 | Koho voliť v komunálnych voľbách</title>
+<meta name="description" content="Zisti, s ktorým kandidátom sa zhoduješ. 25 otázok o Bratislave, Košiciach a Prešove. Komunálne a župné voľby 24. októbra 2026. Bez cookies.">
+<meta name="keywords" content="volebná kalkulačka, komunálne voľby 2026, kto voliť, primátor, župan, Bratislava, Košice, Prešov, BSK, KSK, PSK">
+<meta name="author" content="Občania štátu">
+<link rel="canonical" href="https://rozhodnisa.sk/">
+
+<!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rozhodnisa.sk/">
+<meta property="og:title" content="Volebná kalkulačka 2026 | Koho voliť v komunálnych voľbách">
+<meta property="og:description" content="Zisti, s ktorým kandidátom sa zhoduješ. 25 otázok o Bratislave, Košiciach a Prešove. Komunálne a župné voľby 24. októbra 2026. Bez cookies.">
+<meta property="og:image" content="https://rozhodnisa.sk/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Volebná kalkulačka 2026 – Koho voliť v komunálnych a župných voľbách?">
+<meta property="og:locale" content="sk_SK">
+<meta property="og:site_name" content="rozhodnisa.sk">
+
+<!-- Twitter / X card -->
+<meta name="twitter:title" content="Volebná kalkulačka 2026 | Koho voliť v komunálnych voľbách">
+<meta name="twitter:description" content="Zisti, s ktorým kandidátom sa zhoduješ. 25 otázok o Bratislave, Košiciach a Prešove. Komunálne a župné voľby 24. októbra 2026. Bez cookies.">
+<meta name="twitter:site" content="@rozhodnisa">
+<meta name="twitter:image" content="https://rozhodnisa.sk/og.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Mobile / PWA -->
+<meta name="theme-color" content="#0B4EA2">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Volebná kalkulačka">
+
+<!-- Sitemap reference -->
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<!-- Structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Volebná kalkulačka 2026",
+  "url": "https://rozhodnisa.sk",
+  "description": "Volebná kalkulačka pre komunálne a župné voľby na Slovensku 2026.",
+  "applicationCategory": "PoliticsApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "sk",
+  "author": {
+    "@type": "Organization",
+    "name": "Občania štátu",
+    "url": "https://rozhodnisa.sk"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+}
+</script>
+
+<title>Volebná kalkulačka 2026 | Koho voliť v komunálnych voľbách</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sk-red:  #CE1126;
+  --sk-blue: #0B4EA2;
+  --green:   #1e8a4a;
+  --yellow:  #c8860a;
+  --purple:  #5a3d8a;
+  --bg:      #ffffff;
+  --surface: #f0f4fa;
+  --surface2:#e4eaf5;
+  --border:  #c5d0e8;
+  --text:    #1a2540;
+  --muted:   #5a6e8c;
+  --ca: var(--sk-red);
+  --cb: var(--sk-blue);
+  --cc: #c8860a;
+  --cglow: rgba(206,17,38,.12);
+}
+/* In-quiz dark theme - applied when a city is chosen */
+body.in-quiz {
+  --bg:      #0a1628;
+  --surface: #132040;
+  --surface2:#1a2d54;
+  --border:  #223a6a;
+  --text:    #e8eef8;
+  --muted:   #6a8ab0;
+  --green:   #28c76f;
+  --yellow:  #f0b429;
+  --purple:  #7b5ea7;
+}
+body.t-ba-p{--ca:#CE1126;--cb:#f5f5f5;--cc:#CE1126;--cglow:rgba(206,17,38,.22)}
+body.t-ba-v{--ca:#003F87;--cb:#F5B800;--cc:#fff;--cglow:rgba(0,63,135,.28)}
+body.t-ke-p{--ca:#D4AF37;--cb:#003DA5;--cc:#b8960c;--cglow:rgba(212,175,55,.28)}
+body.t-ke-v{--ca:#003DA5;--cb:#D4AF37;--cc:#002570;--cglow:rgba(0,61,165,.25)}
+body.t-pe-p{--ca:#CC3322;--cb:#f5f5f5;--cc:#CC3322;--cglow:rgba(204,51,34,.22)}
+body.t-pe-v{--ca:#CC3322;--cb:#f5f5f5;--cc:#8B1A0A;--cglow:rgba(204,51,34,.22)}
+/* ── Žilina themes ── */
+.t-zi-p{--ca:#003580;--cb:#FFD700;--cc:#C0C0C0;--cglow:rgba(0,53,128,.22)}
+.t-zi-v{--ca:#003580;--cb:#C0C0C0;--cc:#FFD700;--cglow:rgba(0,53,128,.22)}
+/* ── Banská Bystrica themes ── */
+.t-bb-p{--ca:#CC0000;--cb:#FFD700;--cc:#fff;--cglow:rgba(204,0,0,.22)}
+.t-bb-v{--ca:#1B5E20;--cb:#FFD700;--cc:#CC0000;--cglow:rgba(27,94,32,.22)}
+/* ── Nitra themes ── */
+.t-ni-p{--ca:#8B0000;--cb:#C0C0C0;--cc:#FFD700;--cglow:rgba(139,0,0,.22)}
+.t-ni-v{--ca:#8B0000;--cb:#FFD700;--cc:#C0C0C0;--cglow:rgba(139,0,0,.22)}
+/* ── Trnava themes ── */
+.t-tt-p{--ca:#CC0000;--cb:#FFD700;--cc:#C0C0C0;--cglow:rgba(204,0,0,.22)}
+.t-tt-v{--ca:#1A237E;--cb:#FFD700;--cc:#CC0000;--cglow:rgba(26,35,126,.22)}
+/* ── Trenčín themes ── */
+.t-tn-p{--ca:#003580;--cb:#FFD700;--cc:#C0C0C0;--cglow:rgba(0,53,128,.22)}
+.t-tn-v{--ca:#4A148C;--cb:#FFD700;--cc:#003580;--cglow:rgba(74,20,140,.22)}
+
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+button,a,select{touch-action:manipulation}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:16px;line-height:1.6}
+
+/* Progress */
+#topBar{position:fixed;top:0;left:0;right:0;height:4px;background:var(--border);z-index:999;opacity:0;transition:opacity .3s}
+#topBar.show{opacity:1}
+#topFill{height:100%;background:linear-gradient(90deg,var(--ca),var(--cb));width:0%;transition:width .45s ease}
+
+/* Screens */
+.screen{display:none;min-height:100vh;flex-direction:column}
+.screen.active{display:flex;animation:fadeUp .3s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── WELCOME ── */
+.w-hero{background:linear-gradient(170deg,#ffffff 0%,#f2f6ff 60%,#eaf0ff 100%);padding:3.5rem 1.4rem 2.5rem;text-align:center;position:relative;overflow:hidden;border-bottom:2px solid var(--border)}
+.w-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#fff 33.3%,#0B4EA2 33.3% 66.6%,#CE1126 66.6%)}
+.w-hero::after{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:560px;height:560px;border-radius:50%;background:radial-gradient(ellipse,rgba(11,78,162,.10) 0%,transparent 68%);pointer-events:none}
+.w-hero .flag{font-size:3.2rem;display:block;margin-bottom:.9rem}
+.w-hero h1{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,6.5vw,3.2rem);font-weight:800;line-height:1.1;margin-bottom:.8rem;letter-spacing:-.02em;color:var(--sk-blue)}
+.w-hero h1 span{color:var(--sk-red)}
+.w-hero .tagline{color:var(--muted);font-size:.98rem;max-width:380px;margin:0 auto 1.6rem}
+.badge-vote{display:inline-flex;align-items:center;gap:.45rem;background:rgba(11,78,162,.08);border:1px solid rgba(11,78,162,.25);border-radius:99px;padding:.4rem 1rem;font-size:.8rem;font-weight:600;color:var(--sk-blue);margin-bottom:1.8rem}
+
+/* Picker */
+.picker{padding:1.6rem 1.2rem;flex:1;max-width:620px;margin:0 auto;width:100%}
+.pick-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--sk-blue);margin-bottom:.75rem;display:block}
+
+.city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem;margin-bottom:1.8rem}
+@media(min-width:560px){.city-grid{grid-template-columns:repeat(2,1fr)}}
+.city-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1rem .9rem;cursor:pointer;transition:all .18s;text-align:left;font-family:'Inter',sans-serif;position:relative;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.city-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--c1,#555),var(--c2,#777));opacity:0;transition:opacity .2s}
+.city-card:hover::before,.city-card.sel::before{opacity:1}
+.city-card:hover{border-color:var(--c1,var(--sk-red));transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.city-card.sel{border-color:var(--c1,var(--sk-red));background:rgba(11,78,162,.04)}
+.city-card.locked{opacity:.38;cursor:not-allowed;pointer-events:none}
+.cn{display:block;font-weight:700;font-size:.93rem;margin-bottom:.1rem;color:var(--text)}
+.cs{display:block;font-size:.7rem;color:var(--muted);line-height:1.4}
+.cpop{display:block;font-size:.68rem;color:#c8860a;font-weight:600;margin-top:.25rem}
+
+.type-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-bottom:1.8rem}
+.type-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.2rem 1rem;cursor:pointer;transition:all .18s;text-align:center;font-family:'Inter',sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.type-card:hover,.type-card.sel{border-color:var(--sk-blue);background:rgba(11,78,162,.1)}
+.type-card .ti{font-size:2rem;display:block;margin-bottom:.4rem}
+.type-card .tl{display:block;font-weight:700;font-size:.92rem}
+.type-card .td{display:block;font-size:.75rem;color:var(--muted);line-height:1.4;margin-top:.3rem}
+
+.comp-box{background:#eef3ff;border:1px solid #b0c0e0;border-radius:12px;padding:1rem 1.1rem;margin-bottom:1.4rem;font-size:.83rem;color:#3a5080;line-height:1.65;display:none}
+.comp-box.show{display:block}
+.comp-box strong{color:var(--text)}
+.comp-title{font-weight:700;color:var(--sk-blue);font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:.5rem;display:block}
+
+.start-btn{display:block;width:100%;padding:1.1rem;border-radius:12px;background:linear-gradient(135deg,var(--ca),var(--cc,var(--ca)));color:#fff;font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;border:none;cursor:pointer;transition:all .18s;letter-spacing:.01em}
+.start-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(206,17,38,.35)}
+.start-btn:disabled{background:var(--surface2);color:var(--muted);transform:none;box-shadow:none;cursor:not-allowed}
+
+/* ── QUESTION ── */
+.q-header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--border)}
+.q-banner{display:flex;align-items:center;gap:.9rem;padding:.75rem 1.2rem;background:linear-gradient(135deg,var(--cglow) 0%,transparent 100%);border-bottom:1px solid var(--border);transition:background .4s}
+.q-banner .city-crest{width:38px;height:46px;flex-shrink:0;filter:drop-shadow(0 2px 6px rgba(0,0,0,.45))}
+.city-name{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:#fff;display:block}
+.city-type-label{font-size:.72rem;color:var(--muted);display:block}
+.q-nav-row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1.2rem}
+.q-back{background:var(--surface);border:1px solid var(--border);border-radius:8px;min-width:44px;min-height:44px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.05rem;color:var(--muted);flex-shrink:0;transition:all .15s}
+.q-back:hover{color:var(--ca);border-color:var(--ca)}
+.q-num{font-size:.85rem;font-weight:600;color:var(--ca);opacity:.8}
+
+.q-body{padding:1.4rem 1.2rem;flex:1;max-width:620px;margin:0 auto;width:100%}
+.q-topic{display:inline-block;background:rgba(255,255,255,.07);color:var(--ca);border:1px solid var(--ca);border-radius:99px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:.22rem .75rem;margin-bottom:1.1rem;opacity:.9}
+.q-text{font-family:'Syne',sans-serif;font-size:clamp(1.05rem,4vw,1.45rem);font-weight:700;line-height:1.3;margin-bottom:.75rem;color:#fff}
+.q-info-btn{display:inline-flex;align-items:center;gap:.35rem;margin-bottom:.9rem;padding:.35rem .75rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:99px;color:var(--muted);font-size:.78rem;font-weight:600;letter-spacing:.04em;cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+.q-info-btn:hover{background:rgba(255,255,255,.15);color:#e2e8f0;border-color:rgba(255,255,255,.35)}
+.q-info-btn.active{background:rgba(255,255,255,.1);color:var(--ca);border-color:var(--ca)}
+.q-info-panel{max-height:0;overflow:hidden;transition:max-height .35s ease,opacity .25s ease,margin .25s ease;opacity:0;margin-bottom:0;font-size:.87rem;line-height:1.75;color:var(--muted);padding:0 .9rem;border-left:2.5px solid var(--border)}
+.q-info-panel.open{max-height:300px;opacity:1;margin-bottom:1.4rem}
+
+.ans-stack{display:flex;flex-direction:column;gap:.6rem}
+.ans-btn{display:flex;align-items:center;gap:.85rem;padding:1rem 1.1rem;min-height:52px;border-radius:12px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;font-family:'Inter',sans-serif;font-size:.94rem;font-weight:500;transition:all .15s;text-align:left;width:100%}
+.ans-btn.sel{border-color:var(--ca);background:rgba(255,255,255,.07);box-shadow:0 0 0 1px var(--ca)}
+.ans-btn .ai{font-size:1.2rem;flex-shrink:0}
+.ans-btn:hover{transform:translateX(4px);border-color:var(--sk-blue)}
+.ans-btn.sa{border-color:var(--green)!important;background:rgba(40,199,111,.09)!important;color:var(--green)!important}
+.ans-btn.sn{border-color:var(--yellow)!important;background:rgba(240,180,41,.09)!important;color:var(--yellow)!important}
+.ans-btn.sd{border-color:var(--sk-red)!important;background:rgba(206,17,38,.08)!important;color:#ff6b6b!important}
+.skip-btn{display:block;text-align:center;margin-top:.75rem;color:var(--ca);opacity:.6;font-size:.84rem;cursor:pointer;background:none;border:none;font-family:'Inter',sans-serif;text-decoration:underline;width:100%;padding:.9rem;min-height:44px}
+
+/* ── RESULTS ── */
+.res-hero{padding:2.5rem 1.2rem 1.8rem;text-align:center;background:linear-gradient(160deg,#06101f,#0d1e3a);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.res-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,var(--cglow) 0%,transparent 65%);pointer-events:none}
+.res-crest{width:52px;height:62px;margin:0 auto .8rem;display:block;filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}
+.res-hero h2{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,5vw,2.2rem);font-weight:800;margin-bottom:.25rem}
+.res-hero .sub{color:var(--muted);font-size:.88rem}
+
+.res-body{padding:1.4rem 1.2rem;flex:1;max-width:620px;margin:0 auto;width:100%}
+.profile-card{background:linear-gradient(135deg,rgba(123,94,167,.15),rgba(11,78,162,.12));border:1px solid rgba(123,94,167,.3);border-radius:16px;padding:1.1rem 1.2rem;margin-bottom:1.2rem}
+.profile-card .pc-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--purple);margin-bottom:.5rem;display:block}
+.profile-card p{font-size:.91rem;line-height:1.7;color:var(--text)}
+
+.r-card{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:1.1rem;margin-bottom:.7rem}
+.r-card.top{border-color:var(--green)}
+.r-row{display:flex;align-items:center;gap:.6rem;margin-bottom:.7rem;flex-wrap:nowrap}
+.r-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0}
+.r-name{font-weight:700;font-size:.93rem;flex:1;min-width:0;word-break:break-word}
+.r-party{font-size:.73rem;color:var(--muted);display:block;margin-top:.1rem}
+.r-pct{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;flex-shrink:0}
+.top-badge{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:var(--green);color:#000;border-radius:99px;padding:.15rem .5rem;white-space:nowrap;margin-left:.4rem}
+.r-bar{height:6px;background:var(--border);border-radius:99px;overflow:hidden}
+.r-fill{height:100%;border-radius:99px;transition:width 1.1s cubic-bezier(.4,0,.2,1);width:0%}
+
+.share-section{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:1.2rem;margin:1.2rem 0}
+.share-section h4{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:.25rem}
+.share-section p{font-size:.82rem;color:var(--muted);margin-bottom:.9rem}
+.share-btns{display:flex;gap:.45rem;flex-wrap:wrap}
+.sh-btn{display:inline-flex;align-items:center;gap:.35rem;padding:.5rem .9rem;border-radius:8px;font-size:.8rem;font-weight:600;cursor:pointer;border:none;font-family:'Inter',sans-serif;transition:all .15s}
+.sh-fb{background:#1877f2;color:#fff}
+.sh-li{background:#0077b5;color:#fff}
+.sh-tw{background:#1da1f2;color:#fff}
+.sh-cp{background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.sh-btn:hover{opacity:.85;transform:translateY(-1px)}
+.url-box{margin-top:.75rem;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.5rem .75rem;font-size:.76rem;color:var(--muted);word-break:break-all}
+
+.detail-title{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;margin:1.8rem 0 .8rem;color:var(--muted)}
+.d-item{background:var(--surface);border-radius:10px;padding:.85rem 1rem;margin-bottom:.5rem;border-left:3px solid var(--border)}
+.d-item.match{border-left-color:var(--green)}
+.d-item.mismatch{border-left-color:var(--sk-red)}
+.d-q{font-size:.83rem;font-weight:600;margin-bottom:.5rem;line-height:1.4}
+.d-chips{display:flex;flex-wrap:wrap;gap:.3rem}
+.chip{font-size:.69rem;font-weight:700;border-radius:99px;padding:.2rem .55rem;white-space:nowrap}
+.ca{background:rgba(40,199,111,.13);color:var(--green)}
+.cn2{background:rgba(240,180,41,.12);color:var(--yellow)}
+.cd{background:rgba(206,17,38,.11);color:#ff6b6b}
+.cy{background:rgba(123,94,167,.18);color:#b39ddb}
+
+.restart-row{padding:1rem 1.2rem 3rem;max-width:620px;margin:0 auto;width:100%}
+.ghost-btn{display:block;width:100%;padding:.9rem;border-radius:12px;background:transparent;border:1.5px solid var(--border);color:var(--muted);font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;transition:all .15s}
+.ghost-btn:hover{border-color:var(--text);color:var(--text)}
+
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--green);color:#000;font-weight:700;font-size:.85rem;padding:.6rem 1.2rem;border-radius:99px;transition:transform .3s;z-index:9999;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.sk-stripe{height:6px;background:linear-gradient(90deg,#fff 33.3%,#0B4EA2 33.3% 66.6%,#CE1126 66.6%);flex-shrink:0;border-top:1px solid #d0d8ea}
+
+/* ── Welcome screen explicit light overrides ── */
+#sc-welcome { background: #fff; }
+#sc-welcome .picker { background: #fff; }
+#sc-welcome .cs { color: #5a6e8c; }
+#sc-welcome .pick-label { color: #0B4EA2; }
+#sc-welcome .city-card.locked { background: #f8f9fc; opacity: .45; }
+#sc-welcome .type-card .td { color: #5a6e8c; }
+#sc-welcome .type-card .tl { color: #1a2540; }
+#sc-welcome .type-card:hover,
+#sc-welcome .type-card.sel { 
+  border-color: var(--sk-blue); 
+  background: rgba(11,78,162,.06); 
+}
+#sc-welcome .comp-box strong { color: #1a2540; }
+/* Slovak flag-coloured horizontal rule */
+.sk-divider {
+  height: 3px;
+  background: linear-gradient(90deg, var(--sk-white,#fff) 33.3%, var(--sk-blue) 33.3% 66.6%, var(--sk-red) 66.6%);
+  border-radius: 2px;
+  margin: 1.2rem 0;
+}
+/* Hero sub-badge in white bg */
+#sc-welcome .w-hero .tagline { color: #3a5580; }
+/* Coat of arms watermark in hero */
+.hero-crest-bg {
+  position: absolute; right: -20px; top: 50%; transform: translateY(-50%);
+  width: 160px; height: 190px; opacity: .05; pointer-events: none;
+}
+
+/* Force dark bg on quiz and results screens regardless of welcome-screen overrides */
+#sc-question {
+  background: #0a1628;
+  color: #e8eef8;
+  --bg: #0a1628;
+  --surface: #132040;
+  --surface2: #1a2d54;
+  --border: #223a6a;
+  --text: #e8eef8;
+  --muted: #6a8ab0;
+  --green: #28c76f;
+  --yellow: #f0b429;
+  --purple: #7b5ea7;
+}
+#sc-results {
+  background: #0a1628;
+  color: #e8eef8;
+  --bg: #0a1628;
+  --surface: #132040;
+  --surface2: #1a2d54;
+  --border: #223a6a;
+  --text: #e8eef8;
+  --muted: #6a8ab0;
+  --green: #28c76f;
+  --yellow: #f0b429;
+  --purple: #7b5ea7;
+}
+#sc-question .q-header { background: #0a1628; border-color: #223a6a; }
+#sc-question .q-text { color: #ffffff; }
+#sc-question .q-info-panel { color: #6a8ab0; border-left-color: #223a6a; }
+#sc-question .ans-btn { background: #132040; border-color: #223a6a; color: #e8eef8; }
+#sc-question .ans-btn:hover { border-color: #0B4EA2; }
+#sc-question .q-back { background: #132040; border-color: #223a6a; color: #6a8ab0; }
+#sc-question .skip-btn { color: #6a8ab0; }
+#sc-question .q-num { color: #e8eef8; }
+
+/* ── SITE FOOTER ── */
+.site-footer{background:#0a0f1a;color:#a0aec0;font-size:.82rem;line-height:1.6;padding:2.5rem 1rem 1.5rem;margin-top:0}
+.site-footer__inner{max-width:960px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem}
+.footer-col__title{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#e2e8f0;margin-bottom:.6rem}
+.footer-col p{margin:0 0 .5rem;color:#718096}
+.footer-col strong{color:#cbd5e0}
+.footer-link{display:inline-block;margin-top:.3rem;color:#63b3ed;text-decoration:none;font-size:.8rem}
+.footer-link:hover{color:#90cdf4;text-decoration:underline}
+.footer-donate{display:inline-block;margin:.5rem 0;padding:.45rem .9rem;background:#2d3748;border:1px solid #4a5568;border-radius:6px;color:#e2e8f0;text-decoration:none;font-size:.82rem;transition:background .2s}
+.footer-donate--project{background:linear-gradient(135deg,#0B4EA2,#1a6bc4);color:#fff;border-color:#0B4EA2}
+.footer-donate--project:hover{background:linear-gradient(135deg,#0a3d80,#155aa8)}
+.footer-donate:hover{background:#4a5568}
+.footer-contact{margin-top:.7rem !important;color:#718096}
+.footer-contact a{color:#63b3ed;text-decoration:none}
+.footer-contact a:hover{text-decoration:underline}
+.footer-bottom{border-top:1px solid #1e2a3a;padding-top:1rem;display:flex;flex-wrap:wrap;gap:.4rem .7rem;align-items:center;color:#4a5568;font-size:.75rem}
+.footer-dot{color:#2d3748}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;align-items:flex-start}}
+
+/* ── Stats strip ── */
+.stats-strip{display:flex;align-items:center;justify-content:center;gap:0;margin:0 auto 1.8rem;max-width:340px;background:#fff;border:1.5px solid #d8e4f5;border-radius:99px;overflow:hidden;box-shadow:0 2px 10px rgba(11,78,162,.07)}
+.stat-item{display:flex;flex-direction:column;align-items:center;padding:.65rem 1.4rem;flex:1}
+.stat-num{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:800;color:#0B4EA2;line-height:1}
+.stat-lbl{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:#6a8ab0;margin-top:.15rem}
+.stat-sep{width:1px;height:2.2rem;background:#d8e4f5;flex-shrink:0}
+
+/* ── Value cards (desktop) ── */
+.value-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:860px;margin:0 auto 2.2rem;padding:0 1.2rem}
+.value-card{background:#fff;border:1.5px solid #e4ecf8;border-radius:14px;padding:1.3rem 1.2rem;display:flex;flex-direction:column;gap:.5rem;box-shadow:0 2px 10px rgba(11,78,162,.06);transition:transform .18s,box-shadow .18s}
+.value-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(11,78,162,.11)}
+.value-icon{font-size:1.6rem;line-height:1.2}
+.value-title{font-family:'Syne',sans-serif;font-size:.96rem;font-weight:700;color:#0a1628}
+.value-body{font-size:.84rem;color:#4a6080;line-height:1.65}
+
+/* ── FAQ section ── */
+.faq-section{background:#f7faff;border-top:2px solid #e4ecf8;padding:3rem 1.2rem 3.5rem}
+.faq-inner{max-width:680px;margin:0 auto}
+.faq-title{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:#0a1628;margin-bottom:1.6rem;text-align:center}
+.faq-item{border:1.5px solid #d8e4f5;border-radius:14px;margin-bottom:.75rem;background:#fff;overflow:hidden;transition:box-shadow .18s}
+.faq-item.open{box-shadow:0 4px 16px rgba(11,78,162,.1)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 1.2rem;background:none;border:none;cursor:pointer;text-align:left;font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;color:#0a1628;min-height:52px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.faq-q:hover{background:#f0f6ff}
+.faq-arrow{font-size:1.3rem;color:#4a6080;flex-shrink:0;transition:transform .25s;line-height:1}
+.faq-item.open .faq-arrow{transform:rotate(90deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s ease}
+.faq-item.open .faq-a{max-height:600px;padding:0 1.2rem 1.2rem}
+.faq-a p{font-size:.9rem;color:#3a5070;line-height:1.75;margin-bottom:.7rem}
+.faq-a p:last-child{margin-bottom:0}
+.faq-a strong{color:#0a1628}
+.faq-a em{font-style:italic}
+
+/* ═══════════════════════════════
+   MOBILE , max-width: 600px
+   ═══════════════════════════════ */
+@media(max-width:600px){
+
+  /* Hero */
+  .w-hero{padding:2rem 1rem 1.5rem}
+  .w-hero h1{font-size:clamp(1.55rem,8vw,2.3rem)}
+  .w-hero .flag{font-size:2.2rem}
+  .tagline{font-size:.88rem;margin-bottom:1rem}
+  .badge-vote{font-size:.72rem;padding:.3rem .75rem}
+
+  /* Stats strip */
+  .stats-strip{max-width:100%;margin:0 .9rem 1.4rem;border-radius:14px}
+  .stat-item{padding:.55rem 0;flex:1}
+  .stat-num{font-size:1.1rem}
+  .stat-lbl{font-size:.6rem}
+
+  /* Value cards */
+  .value-cards{grid-template-columns:1fr;gap:.6rem;padding:0 .9rem;margin:0 auto 1.6rem}
+  .value-card{flex-direction:row;align-items:flex-start;gap:.85rem;padding:.9rem 1rem}
+  .value-icon{font-size:1.3rem;flex-shrink:0;padding-top:.15rem}
+  .value-title{font-size:.87rem}
+  .value-body{font-size:.8rem}
+
+  /* Picker */
+  .picker{padding:1rem .9rem}
+  .pick-label{font-size:.68rem}
+  .city-grid{gap:.45rem}
+  .city-card{padding:.8rem .7rem}
+  .cn{font-size:.84rem}
+  .cs{font-size:.66rem}
+  .cpop{font-size:.63rem}
+  .type-card{padding:.9rem .8rem}
+  .type-card .ti{font-size:1.5rem}
+  .type-card .tl{font-size:.84rem}
+  .type-card .td{font-size:.71rem}
+  .comp-box{font-size:.79rem;padding:.8rem .85rem}
+  .start-btn{font-size:.97rem;padding:1rem;min-height:52px}
+.start-btn:disabled{opacity:.3;cursor:not-allowed;filter:grayscale(.4)}
+
+  /* Question screen */
+  .q-banner{padding:.55rem .85rem;gap:.6rem}
+  .city-name{font-size:.85rem}
+  .city-type-label{font-size:.64rem}
+  .q-nav-row{padding:.5rem .85rem;gap:.6rem}
+  .q-back{min-width:44px;min-height:44px;width:44px;height:44px}
+  .q-num{font-size:.78rem}
+  .q-body{padding:1.1rem .9rem}
+  .q-topic{font-size:.65rem;padding:.18rem .6rem;margin-bottom:.65rem}
+  .q-text{font-size:clamp(1rem,4.5vw,1.3rem);margin-bottom:.6rem}
+  .q-info-btn{font-size:.75rem;padding:.3rem .65rem;margin-bottom:.75rem}
+  .q-info-panel{font-size:.83rem}
+  .ans-stack{gap:.5rem}
+  .ans-btn{padding:.9rem 1rem;min-height:52px;font-size:.9rem;border-radius:10px}
+  .ans-btn .ai{font-size:1.1rem}
+  .skip-btn{font-size:.8rem;padding:.85rem;min-height:44px}
+
+  /* Results screen */
+  .res-hero{padding:1.8rem .9rem 1.4rem}
+  .res-hero h2{font-size:clamp(1.4rem,6vw,1.9rem)}
+  .res-body{padding:1.1rem .9rem}
+  .profile-card{padding:.9rem 1rem;margin-bottom:1rem}
+  .profile-card p{font-size:.86rem}
+  .r-card{padding:.9rem}
+  .r-name{font-size:.87rem}
+  .r-party{font-size:.69rem}
+  .r-pct{font-size:1.25rem}
+  .r-dot{width:9px;height:9px}
+  .detail-title{font-size:.88rem;margin:1.4rem 0 .65rem}
+
+  /* Share buttons , 2×2 grid on mobile */
+  .share-section{padding:1rem}
+  .share-btns{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}
+  .sh-btn{justify-content:center;padding:.65rem .5rem;font-size:.78rem;border-radius:8px}
+
+  /* Restart */
+  .restart-row{padding:.9rem .9rem 2.5rem}
+  .ghost-btn{min-height:48px;font-size:.88rem}
+
+  /* FAQ */
+  .faq-section{padding:2rem .9rem 2.5rem}
+  .faq-title{font-size:1.25rem;margin-bottom:1.2rem}
+  .faq-q{font-size:.88rem;padding:.95rem 1rem}
+  .faq-a p{font-size:.85rem}
+
+  /* Footer */
+  .footer-grid{grid-template-columns:1fr}
+  footer{padding:2rem .9rem 1.2rem}
+}
+
+/* Safe area for iPhone home bar */
+@supports(padding-bottom:env(safe-area-inset-bottom)){
+  .restart-row{padding-bottom:calc(2.5rem + env(safe-area-inset-bottom))}
+  .ans-stack{padding-bottom:env(safe-area-inset-bottom)}
+}
+
+/* ── Voting info boxes ── */
+.voting-info-section{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:620px;margin:0 auto 1.2rem;padding:0 1.2rem;width:100%}
+.voting-box{background:linear-gradient(135deg,#fff8f0,#fff3e6);border:1.5px solid #f4a261;border-radius:14px;padding:1.2rem 1.1rem}
+.voting-box__head{display:flex;align-items:center;gap:.55rem;margin-bottom:.65rem}
+.voting-box__icon{font-size:1.2rem;line-height:1;flex-shrink:0}
+.voting-box__title{font-family:'Syne',sans-serif;font-size:.92rem;font-weight:700;color:#7c2d12}
+.voting-box__text{font-size:.83rem;color:#431407;line-height:1.65;margin-bottom:.85rem}
+.voting-box__text strong{color:#7c2d12}
+.voting-box__btn{display:inline-block;background:#e76f2a;color:#fff;font-size:.82rem;font-weight:700;padding:.5rem 1rem;border-radius:8px;text-decoration:none;transition:background .18s}
+.voting-box__btn:hover{background:#c45a1e}
+.voting-box__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}
+.voting-box__list li{display:flex;align-items:baseline;gap:.4rem;font-size:.83rem;color:#431407;line-height:1.5}
+.voting-box__list li::before{content:"✔";color:#e76f2a;font-size:.8rem;flex-shrink:0}
+.voting-box__list li strong{color:#7c2d12}
+.voting-box__list li span{color:#92400e}
+@media(max-width:600px){
+  .voting-info-section{grid-template-columns:1fr;padding:0 .9rem}
+  .voting-box{padding:1rem}
+  .voting-box__title{font-size:.88rem}
+  .voting-box__text,.voting-box__list li{font-size:.81rem}
+}
+
+/* ── Step 2: type-section reveal ── */
+.type-section{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transform:translateY(-8px);
+  transition:max-height .38s ease, opacity .3s ease, transform .3s ease;
+  pointer-events:none;
+}
+.type-section.visible{
+  max-height:600px;
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+/* Scroll anchor so the section slides into view nicely */
+.type-section.visible .pick-label--type{
+  display:block;
+}
+/* Dim the city label once a city is chosen */
+.city-chosen .pick-label:first-child{
+  opacity:.55;
+}
+
+/* ── Results: candidate bars ── */
+.res-row{margin-bottom:1rem}
+.res-name{font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:.35rem;display:flex;align-items:baseline;gap:.4rem;flex-wrap:wrap}
+.res-party{font-size:.75rem;font-weight:400;color:var(--muted);margin-left:.2rem}
+.res-bar-wrap{display:flex;align-items:center;gap:.6rem;height:28px}
+.res-bar{height:100%;border-radius:6px;min-width:4px;transition:width .6s cubic-bezier(.4,0,.2,1);flex-shrink:0}
+.res-pct{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);min-width:2.8rem;text-align:right}
+
+/* ── Results: detail comparison ── */
+.dl-row{padding:.75rem 0;border-bottom:1px solid var(--border);font-size:.83rem}
+.dl-row:last-child{border-bottom:none}
+.dl-q{color:var(--muted);margin-bottom:.4rem;line-height:1.5}
+.dl-q em{color:var(--ca);font-style:normal;font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;margin-right:.3rem}
+.dl-ans{color:var(--text);display:flex;align-items:center;flex-wrap:wrap;gap:.35rem}
+.dl-cand{display:inline-flex;align-items:center;gap:.2rem;padding:.18rem .5rem;border-radius:6px;border:1.5px solid;font-size:.75rem;font-weight:600;background:rgba(255,255,255,.04)}
+
+/* ── Results: share URL input ── */
+.share-url-input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:.45rem .65rem;font-size:.76rem;color:var(--muted);font-family:'Inter',sans-serif;cursor:pointer;box-sizing:border-box}
+.share-url-input:focus{outline:none;border-color:var(--ca)}
+
+/* ── Election countdown ── */
+.countdown-bar{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  padding:.45rem 1.1rem;
+  background:#eef3ff;
+  border:1.5px solid #c5d5f0;
+  border-radius:99px;
+  margin:.75rem auto 1.4rem;
+  width:auto;
+}
+.cd-label{font-size:.75rem;color:#5a6e8c}
+.cd-num{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:#CE1126;}
+.cd-lbl{font-size:.75rem;color:#5a6e8c}
+.cd-date{font-size:.72rem;color:#8a9ab8}
+/* hide unused elements */
+.cd-units,.cd-sep{display:none}
+
+/* Election official name */
+.election-name{font-size:.8rem;font-weight:600;color:var(--muted);letter-spacing:.05em;margin-top:-.4rem;margin-bottom:.6rem}
+
+/* Komunálne/župné explanation */
+.volby-explain{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;padding:.75rem 1rem;background:rgba(11,78,162,.05);border-left:3px solid var(--sk-blue);border-radius:0 8px 8px 0}
+.volby-explain strong{color:var(--text)}
+
+.cand-link{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.35);transition:text-decoration-color .15s}
+.cand-link:hover{text-decoration-color:rgba(255,255,255,.8)}
+/* ── Turnout widget ── */
+.turnout-widget{
+  background:var(--surface);
+  border:1.5px solid var(--border);
+  border-radius:14px;
+  padding:1.1rem 1.2rem;
+  margin:1.2rem 0;
+}
+.tw-header{
+  font-size:.7rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--muted);margin-bottom:.9rem;
+}
+.tw-cards{display:grid;grid-template-columns:1fr;gap:.75rem}
+.tw-card{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem}
+.tw-type{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.3rem}
+.tw-pct{font-size:1.6rem;font-weight:700;color:var(--text);line-height:1;margin-bottom:.2rem}
+.tw-sub{font-size:.75rem;color:var(--muted);margin-bottom:.75rem}
+.tw-bar-wrap{position:relative;height:7px;background:rgba(255,255,255,.1);border-radius:99px;margin-bottom:.35rem}
+.tw-bar-fill{height:100%;border-radius:99px}
+.tw-bar-goal{position:absolute;top:-4px;left:50%;width:1.5px;height:15px;background:rgba(255,255,255,.3);border-radius:2px}
+.tw-bar-labels{display:flex;justify-content:space-between;font-size:.65rem;color:var(--muted);position:relative}
+.tw-bar-center{position:absolute;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.35)}
+.tw-fact{
+  margin-top:.75rem;padding:.55rem .75rem;
+  border-radius:8px;border-left:3px solid;
+  font-size:.78rem;line-height:1.6;color:var(--muted);
+  background:rgba(255,255,255,.03);
+}
+.tw-fact strong{color:var(--text)}
+
+/* ── Collapsible detail ── */
+.detail-toggle{
+  display:flex;align-items:center;justify-content:space-between;
+  width:100%;padding:.9rem 0;
+  background:none;border:none;border-top:1px solid var(--border);
+  color:var(--ca);font-family:'Syne',sans-serif;font-size:.95rem;
+  font-weight:700;cursor:pointer;text-align:left;margin-top:1.2rem;
+  transition:opacity .15s;
+}
+.detail-toggle:hover{opacity:.8}
+.toggle-arrow{
+  font-size:1.3rem;color:var(--muted);
+  transition:transform .25s ease;display:inline-block;
+}
+.toggle-arrow.open{transform:rotate(90deg)}
+.detail-collapsed{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.detail-expanded{max-height:9999px;transition:max-height .6s ease}
+</style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
+</head>
+<body>
+<div id="topBar"><div id="topFill"></div></div>
+<div class="toast" id="toast">✓ Odkaz skopírovaný!</div>
+
+<!-- WELCOME -->
+<div class="screen active" id="sc-welcome">
+  <div class="w-hero">
+    <span class="flag">🇸🇰</span>
+    <h1>Koho voliť<br>v <span>októbri 2026</span>?</h1>
+    <p class="election-name">Komunálne a župné voľby 2026</p>
+    <div class="badge-vote">Nenechaj iných rozhodovať o tvojom meste a kraji. Choď voliť.</div>
+    <div class="hero-crest-bg"><svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#0B4EA2"/></svg></div>
+    <p class="tagline">Odpovedz na 25 otázok o živote vo svojom meste alebo kraji a zisti, kto myslí podobne ako ty.</p>
+  </div>
+
+  <div class="stats-strip">
+    <div class="stat-item"><span class="stat-num">25</span><span class="stat-lbl">otázok</span></div>
+    <div class="stat-sep"></div>
+    <div class="stat-item"><span class="stat-num">~10</span><span class="stat-lbl">minút</span></div>
+    <div class="stat-sep"></div>
+    <div class="stat-item"><span class="stat-num">✓</span><span class="stat-lbl">bez cookies</span></div>
+  </div>
+
+  <!-- Election countdown -->
+  <div style="text-align:center">
+  <div class="countdown-bar" id="countdownBar">
+    <span class="cd-label">Do volieb zostáva</span>
+    <span class="cd-num" id="cdDays">?</span>
+    <span class="cd-lbl">dní</span>
+    <span class="cd-date">· 24. október 2026</span>
+  </div>
+  </div>
+
+  <div class="value-cards">
+    <div class="value-card">
+      <div class="value-icon">📊</div>
+      <div class="value-title">Viac než percento</div>
+      <div class="value-body">Uvidíš, v ktorých témach sa s kandidátom zhoduješ a kde nie. Nie len číslo, ale konkrétne témy.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">⚖️</div>
+      <div class="value-title">Každá otázka má kontext</div>
+      <div class="value-body">Ku každej otázke si môžeš rozbaliť kontext, fakty, čísla a reálne príklady z iných miest, aby si sa rozhodol/a na základe informácií, nie len pocitov.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🔓</div>
+      <div class="value-title">Open source a bez reklám</div>
+      <div class="value-body">Zdrojový kód je verejný na GitHub. Žiadne cookies, žiadna reklama, žiadny zber dát. Transparentné a overiteľné.</div>
+    </div>
+  </div>
+
+  <div class="picker">
+    <span class="pick-label">1. Vyber svoje mesto</span>
+    <div class="city-grid">
+      <button class="city-card" style="--c1:#CE1126;--c2:#f5f5f5" onclick="VAA.pickCity('bratislava',this)">
+        <span class="cn">🏛 Bratislava</span><span class="cs">hlavné mesto · BSK</span><span class="cpop">475 503 ob.</span>
+      </button>
+      <button class="city-card" style="--c1:#D4AF37;--c2:#003DA5" onclick="VAA.pickCity('kosice',this)">
+        <span class="cn">🏰 Košice</span><span class="cs">metropola východu · KSK</span><span class="cpop">228 249 ob.</span>
+      </button>
+      <button class="city-card" style="--c1:#CC3322;--c2:#f5f5f5" onclick="VAA.pickCity('presov',this)">
+        <span class="cn">⛪ Prešov</span><span class="cs">3. mesto Slovenska · PSK</span><span class="cpop">88 464 ob.</span>
+      </button>
+      <button class="city-card locked" tabindex="-1" aria-disabled="true">
+        <span class="cn">🏔 Žilina</span><span class="cs">čoskoro · ŽSK</span><span class="cpop">84 228 ob.</span>
+      </button>
+      <button class="city-card locked" tabindex="-1" aria-disabled="true">
+        <span class="cn">🌲 Banská Bystrica</span><span class="cs">čoskoro · BBSK</span><span class="cpop">74 412 ob.</span>
+      </button>
+      <button class="city-card locked" tabindex="-1" aria-disabled="true">
+        <span class="cn">🏙 Nitra</span><span class="cs">čoskoro · NSK</span><span class="cpop">67 179 ob.</span>
+      </button>
+      <button class="city-card locked" tabindex="-1" aria-disabled="true">
+        <span class="cn">🏰 Trnava</span><span class="cs">čoskoro · TTSK</span><span class="cpop">65 628 ob.</span>
+      </button>
+      <button class="city-card locked" tabindex="-1" aria-disabled="true">
+        <span class="cn">🏯 Trenčín</span><span class="cs">čoskoro · TSK</span><span class="cpop">54 980 ob.</span>
+      </button>
+    </div>
+
+    <div class="type-section" id="typeSection">
+      <span class="pick-label pick-label--type">Vyber si druh voľby</span>
+      
+      <div class="type-grid">
+        <button class="type-card" onclick="VAA.pickType('primator',this)">
+          <span class="ti">🏙</span><span class="tl">Primátor / Primátorka</span>
+          <span class="td">Šéf mesta: cesty, polícia, územný plán, školstvo, miestne dane</span>
+        </button>
+        <button class="type-card" onclick="VAA.pickType('vuc',this)">
+          <span class="ti">🗺</span><span class="tl">Župan / Predseda VÚC</span>
+          <span class="td">Stredné školy, nemocnice, krajské cesty, sociálne zariadenia, eurofondy</span>
+        </button>
+      </div>
+      <div class="comp-box" id="compBox"></div>
+      <button class="start-btn" id="startBtn" onclick="VAA.startQuiz()" disabled>Spustiť kalkulačku →</button>
+    </div>
+  </div>
+  <div class="sk-stripe"></div>
+</div>
+
+<!-- QUESTION -->
+<div class="screen" id="sc-question">
+  <div class="q-header">
+    <div class="q-banner" id="qBanner">
+      <div class="city-crest" id="qCrest"></div>
+      <div><span class="city-name" id="qCityName"></span><span class="city-type-label" id="qCityType"></span></div>
+    </div>
+    <div class="q-nav-row">
+      <button class="q-back" onclick="VAA.goBack()">←</button>
+      <div class="q-num" id="qNum"></div>
+    </div>
+  </div>
+  <div class="q-body">
+    <div class="q-topic" id="qTopic"></div>
+    <div class="q-text" id="qText"></div>
+    <button class="q-info-btn" id="qInfoBtn" onclick="VAA.toggleInfo()" aria-label="Zobraziť kontext k otázke">ⓘ Kontext</button>
+    <div class="q-info-panel" id="qInfoPanel"></div>
+    <div class="ans-stack">
+      <button class="ans-btn" id="ba" onclick="VAA.ans('agree')"><span class="ai">👍</span><span>Áno, súhlasím</span></button>
+      <button class="ans-btn" id="bn" onclick="VAA.ans('neutral')"><span class="ai">🤷</span><span>Záleží / neviem</span></button>
+      <button class="ans-btn" id="bd" onclick="VAA.ans('disagree')"><span class="ai">👎</span><span>Nie, nesúhlasím</span></button>
+    </div>
+    <button class="skip-btn" onclick="VAA.ans('skip')">Radšej preskočím túto otázku</button>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="screen" id="sc-results">
+  <div class="res-hero">
+    <div class="res-crest" id="resCrest"></div>
+    <h2>Tvoje výsledky 🎉</h2>
+    <p class="sub" id="resSub"></p>
+  </div>
+  <div class="res-body">
+    <div class="profile-card"><span class="pc-title">🧠 Tvoj voličský profil</span><p id="profileText"></p></div>
+    <div id="resultsList"></div>
+    <div class="share-section">
+      <h4>📢 Zdieľaj výsledky</h4>
+      <p>Pozvi aj kamarátov, nech každý zistí sám za seba, koho podporuje.</p>
+      <div class="share-btns">
+        <button class="sh-btn sh-fb" onclick="VAA.shareFB()">📘 Facebook</button>
+        <button class="sh-btn sh-li" onclick="VAA.shareLI()">💼 LinkedIn</button>
+        <button class="sh-btn sh-tw" onclick="VAA.shareTW()">🐦 X / Twitter</button>
+        <button class="sh-btn sh-cp" onclick="VAA.copyURL()">🔗 Kopírovať</button>
+      </div>
+
+    </div>
+    <div id="turnoutWidget"></div>
+
+    <button class="detail-toggle" id="detailToggle" onclick="VAA.toggleDetail()">
+      <span>Porovnanie tvojich odpovedí s kandidátmi</span>
+      <span class="toggle-arrow" id="toggleArrow">›</span>
+    </button>
+    <div id="detailList" class="detail-collapsed"></div>
+  </div>
+  <div class="voting-info-section">
+    <div class="voting-box voting-box--location">
+      <div class="voting-box__head">
+        <span class="voting-box__icon">📍</span>
+        <span class="voting-box__title">Nájdi svoju volebnú miestnosť</span>
+      </div>
+      <p class="voting-box__text">Voľby sa konajú <strong>24. októbra 2026</strong> od <strong>7:00 do 22:00</strong>. Svoju volebnú miestnosť nájdeš podľa trvalého pobytu na webe Ministerstva vnútra SR.</p>
+      <a class="voting-box__btn" href="https://www.minv.sk/?kde-volit" target="_blank" rel="noopener">Hľadať volebnú miestnosť ↗</a>
+    </div>
+    <div class="voting-box voting-box--checklist">
+      <div class="voting-box__head">
+        <span class="voting-box__icon">✅</span>
+        <span class="voting-box__title">Čo priniesť do volebnej miestnosti</span>
+      </div>
+      <ul class="voting-box__list">
+        <li><strong>Občiansky preukaz alebo pas</strong> <span>na overenie totožnosti</span></li>
+        <li><strong>Hlasovací preukaz</strong> <span>ak voliš mimo trvalého bydliska</span></li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="restart-row"><button class="ghost-btn" onclick="VAA.restart()">&#8592; Začať odznova</button></div>
+  <div class="sk-stripe"></div>
+</div>
+
+<!-- ── FAQ ── -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <h2 class="faq-title">Časté otázky</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span>Kto za tým stojí a prečo to robíte zadarmo?</span>
+        <span class="faq-arrow">›</span>
+      </button>
+      <div class="faq-a">
+        <p>rozhodnisa.sk je občiansky projekt skupiny Občania štátu. Nikto z nás za to nedostáva zaplatené. Robíme to, lebo komunálna a krajská politika má na váš každodenný život väčší vplyv ako národná, a napriek tomu ju väčšina voličov podceňuje.</p>
+        <p>Zdrojový kód je verejný na GitHube. Projekt nevznikol na objednávku žiadnej strany, kandidáta ani sponzora. Ak nájdete chybu alebo máte návrh, napíšte nám.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span>Ako vznikajú odpovede kandidátov?</span>
+        <span class="faq-arrow">›</span>
+      </button>
+      <div class="faq-a">
+        <p>Kandidátom posielame dotazník s rovnakými 25 otázkami, aké odpovedáte vy. Ak kandidát odpovie priamo, jeho odpoveď označíme ako <strong>overenú</strong>. Ak kandidát neodpovie, jeho pozíciu odhadujeme z verejne dostupných zdrojov: programu strany, hlasovaní v parlamente alebo zastupiteľstve, vyjadrení v médiách.</p>
+        <p>Odhadnuté odpovede sú vždy označené. Nikdy nevymýšľame pozície. Ak nevieme, nastavíme neutrál. Keď kandidát odpovie neskôr, odpovede aktualizujeme.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span>Ako sa počíta percentuálna zhoda?</span>
+        <span class="faq-arrow">›</span>
+      </button>
+      <div class="faq-a">
+        <p>Za každú otázku porovnávame vašu odpoveď s odpoveďou kandidáta. Ak sa zhodujete (obaja <em>súhlasíte</em> alebo obaja <em>nesúhlasíte</em>), dostanete plný bod. Ak jeden z vás odpovedal <em>neviem</em>, dostanete polovičný bod. Ak ste na opačných póloch, nedostanete nič.</p>
+        <p>Výsledok je podiel získaných bodov z maximálneho možného počtu, vyjadrený v percentách. Otázky, ktoré preskočíte, sa do výpočtu nezapočítajú, ani pre vás, ani pre kandidáta. Všetky otázky majú rovnakú váhu.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span>Sledujete moje odpovede? Čo sa deje s mojimi dátami?</span>
+        <span class="faq-arrow">›</span>
+      </button>
+      <div class="faq-a">
+        <p>Vaše individuálne odpovede nevidíme a neukladáme. Kalkulačka beží celá vo vašom prehliadači, žiadne odpovede sa neposielajú na žiadny server.</p>
+        <p>Sledujeme iba anonymné agregované štatistiky: koľko ľudí spustilo kalkulačku, pre ktoré mesto, koľko z nich ju dokončilo. Tieto čísla sú anonymné a slúžia výhradne na zlepšovanie projektu. Nepoužívame cookies. Neodovzdávame žiadne dáta tretím stranám.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span>Výsledok ma prekvapil. Mám voliť podľa neho?</span>
+        <span class="faq-arrow">›</span>
+      </button>
+      <div class="faq-a">
+        <p>Nie nutne. Kalkulačka je pomôcka, nie návod. Výsledok ukazuje, kto myslí podobne ako vy na základe týchto 25 otázok , no voľba závisí aj od toho, nakoľko kandidátovi dôverujete, čo sľuboval v minulosti a či svoje sľuby plnil.</p>
+        <p>Ak vás výsledok prekvapil, pozrite si detail odpovedí: uvidíte, v ktorých témach sa líšite. Možno zistíte, že na niektoré otázky vám záleží viac ako na iné, a to kalkulačka nevie. Hlavný cieľ je ísť voliť, informovane.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SITE FOOTER ── -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <div class="footer-col__title">O projekte</div>
+        <p>Volebná kalkulačka 2026 je nezávislý občiansky projekt skupiny <strong>Občania štátu</strong>. Nevznikla na objednávku žiadnej strany, kandidáta ani sponzora. Nikto z nás za túto prácu nedostáva odmenu.</p>
+        <p>Naším cieľom je pomôcť voličom zorientovať sa pred komunálnymi a krajskými voľbami v októbri 2026, nie povedať im, koho voliť.</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col__title">Transparentnosť</div>
+        <p>Všetky pozície kandidátov sú odvodené z verejne dostupných volebných programov, rozhovorov a hlasovaní. Každé priradenie je overiteľné.</p>
+        <p>Zdrojový kód kalkulačky je verejne dostupný na GitHub, kde si ktokoľvek môže skontrolovať, ako funguje porovnávanie a skórovanie.</p>
+        <a class="footer-link" href="https://github.com/Ranenter/rozhodnisa" target="_blank" rel="noopener">→ GitHub repozitár</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col__title">Ochrana dát</div>
+        <p>Táto stránka <strong>nepoužíva cookies</strong>, nesleduje používateľov a neodosiela žiadne osobné údaje na server. Tvoje odpovede zostávajú výhradne v tvojom prehliadači a po zatvorení záložky zmiznú.</p>
+        <p>Zbierame <strong>anonymné štatistiky návštevnosti</strong> (počet návštev, výber mesta) bez identifikácie jednotlivcov prostredníctvom nástroja Umami Analytics, bez cookies, v súlade s GDPR.</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col__title">Podpora</div>
+        <p>Robíme to zadarmo. Žiadna reklama, žiadna strana za nami. Ak sa ti páči, čo robíme, nepodporuj nás — pomôž radšej zvieratkám:</p>
+        <a class="footer-donate" href="https://www.uvp.sk/ako-pomoct/" target="_blank" rel="noopener">🐾 Darovať útulku</a>
+        <p class="footer-contact"><a href="#" onclick="this.href='mail'+('to:ranenter7@'+'proton.me');return true;" style="color:#63b3ed">Napíšte nám</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Občania štátu</span>
+      <span class="footer-dot">·</span>
+      <span>Nezávislý občiansky projekt</span>
+      <span class="footer-dot">·</span>
+      <span>Anonymná návštevnosť · Žiadne cookies · Žiadna reklama</span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ── City crests as inline SVG strings ──
+window.CRESTS = {
+  bratislava_primator:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cba"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z"/></clipPath></defs><!-- Shield: red top, white bottom (flag) --><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#CE1126" stroke="#8B0000" stroke-width="2"/><path d="M2 64 L98 64 L98 68 Q98 100 50 114 Q2 100 2 68 Z" fill="#f5f5f5"/><g clip-path="url(#cba)"><!-- Red background of inner shield area --><rect x="8" y="8" width="84" height="100" fill="#CE1126"/><!-- Crenellated wall base (white) --><rect x="12" y="72" width="76" height="14" fill="#f0f0f0"/><!-- Crenellations on wall --><rect x="12" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="24" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="36" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="48" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="60" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="72" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="80" y="66" width="8" height="8" fill="#f0f0f0"/><!-- Gate arch in wall --><path d="M44 86 Q50 76 56 86 L56 86 L44 86 Z" fill="#CE1126"/><rect x="44" y="82" width="12" height="4" fill="#CE1126"/><!-- Left tower --><rect x="14" y="46" width="20" height="26" fill="#f0f0f0"/><rect x="12" y="40" width="24" height="8" fill="#f0f0f0"/><!-- Left tower crenellations --><rect x="12" y="33" width="6" height="9" fill="#f0f0f0"/><rect x="20" y="33" width="6" height="9" fill="#f0f0f0"/><rect x="28" y="33" width="6" height="9" fill="#f0f0f0"/><!-- Left tower window --><rect x="21" y="52" width="6" height="8" fill="#CE1126" rx="1"/><!-- Right tower --><rect x="66" y="46" width="20" height="26" fill="#f0f0f0"/><rect x="64" y="40" width="24" height="8" fill="#f0f0f0"/><!-- Right tower crenellations --><rect x="64" y="33" width="6" height="9" fill="#f0f0f0"/><rect x="72" y="33" width="6" height="9" fill="#f0f0f0"/><rect x="80" y="33" width="6" height="9" fill="#f0f0f0"/><!-- Right tower window --><rect x="73" y="52" width="6" height="8" fill="#CE1126" rx="1"/><!-- Center tower (tallest) --><rect x="36" y="32" width="28" height="36" fill="#f0f0f0"/><rect x="33" y="25" width="34" height="9" fill="#f0f0f0"/><!-- Center tower crenellations --><rect x="33" y="16" width="7" height="10" fill="#f0f0f0"/><rect x="43" y="16" width="7" height="10" fill="#f0f0f0"/><rect x="53" y="16" width="7" height="10" fill="#f0f0f0"/><!-- Center tower windows --><rect x="44" y="38" width="6" height="9" fill="#CE1126" rx="1"/><rect x="44" y="52" width="6" height="8" fill="#CE1126" rx="1"/></g></svg>`,
+
+  bratislava_vuc:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cbav"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z"/></clipPath></defs><!-- Shield: red top, white bottom --><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#CE1126" stroke="#8B0000" stroke-width="2"/><path d="M2 64 L98 64 L98 68 Q98 100 50 114 Q2 100 2 68 Z" fill="#f5f5f5"/><g clip-path="url(#cbav)"><rect x="8" y="8" width="84" height="100" fill="#CE1126"/><rect x="12" y="72" width="76" height="14" fill="#f0f0f0"/><rect x="12" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="24" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="36" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="48" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="60" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="72" y="66" width="8" height="8" fill="#f0f0f0"/><rect x="80" y="66" width="8" height="8" fill="#f0f0f0"/><path d="M44 86 Q50 76 56 86 L56 86 L44 86 Z" fill="#CE1126"/><rect x="44" y="82" width="12" height="4" fill="#CE1126"/><rect x="14" y="46" width="20" height="26" fill="#f0f0f0"/><rect x="12" y="40" width="24" height="8" fill="#f0f0f0"/><rect x="12" y="33" width="6" height="9" fill="#f0f0f0"/><rect x="20" y="33" width="6" height="9" fill="#f0f0f0"/><rect x="28" y="33" width="6" height="9" fill="#f0f0f0"/><rect x="21" y="52" width="6" height="8" fill="#CE1126" rx="1"/><rect x="66" y="46" width="20" height="26" fill="#f0f0f0"/><rect x="64" y="40" width="24" height="8" fill="#f0f0f0"/><rect x="64" y="33" width="6" height="9" fill="#f0f0f0"/><rect x="72" y="33" width="6" height="9" fill="#f0f0f0"/><rect x="80" y="33" width="6" height="9" fill="#f0f0f0"/><rect x="73" y="52" width="6" height="8" fill="#CE1126" rx="1"/><rect x="36" y="32" width="28" height="36" fill="#f0f0f0"/><rect x="33" y="25" width="34" height="9" fill="#f0f0f0"/><rect x="33" y="16" width="7" height="10" fill="#f0f0f0"/><rect x="43" y="16" width="7" height="10" fill="#f0f0f0"/><rect x="53" y="16" width="7" height="10" fill="#f0f0f0"/><rect x="44" y="38" width="6" height="9" fill="#CE1126" rx="1"/><rect x="44" y="52" width="6" height="8" fill="#CE1126" rx="1"/></g></svg>`,
+
+  kosice_primator:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="ck"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z"/></clipPath></defs><!-- Shield background: gold top half, blue bottom half (flag colors) --><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#D4AF37" stroke="#B8960C" stroke-width="2"/><path d="M2 59 L98 59 L98 68 Q98 100 50 114 Q2 100 2 68 Z" fill="#003DA5"/><!-- Inner coat of arms shield, centered --><g clip-path="url(#ck)"><!-- Inner shield frame --><rect x="22" y="18" width="56" height="68" rx="2" fill="#D4AF37"/><!-- Quarter top-left: red with white stripes (Hungarian bars) --><rect x="23" y="19" width="27" height="33" fill="#C0392B"/><rect x="23" y="24" width="27" height="4" fill="#fff" opacity=".9"/><rect x="23" y="32" width="27" height="4" fill="#fff" opacity=".9"/><rect x="23" y="40" width="27" height="4" fill="#fff" opacity=".9"/><!-- Quarter top-right: blue with gold fleur-de-lis --><rect x="51" y="19" width="27" height="33" fill="#003DA5"/><text x="57" y="46" font-family="serif" font-size="20" fill="#D4AF37">⚜</text><!-- Quarter bottom-left: blue with gold fleur-de-lis --><rect x="23" y="53" width="27" height="32" fill="#003DA5"/><text x="29" y="79" font-family="serif" font-size="20" fill="#D4AF37">⚜</text><!-- Quarter bottom-right: red with white stripes --><rect x="51" y="53" width="27" height="32" fill="#C0392B"/><rect x="51" y="58" width="27" height="3.5" fill="#fff" opacity=".9"/><rect x="51" y="65" width="27" height="3.5" fill="#fff" opacity=".9"/><rect x="51" y="72" width="27" height="3.5" fill="#fff" opacity=".9"/><!-- Central cross dividing quarters --><rect x="47" y="19" width="6" height="66" fill="#D4AF37"/><rect x="23" y="49" width="54" height="6" fill="#D4AF37"/><!-- Shield border --><rect x="22" y="18" width="56" height="68" rx="2" fill="none" stroke="#B8960C" stroke-width="1.5"/></g></svg>`,
+
+  kosice_vuc:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="kv"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z"/></clipPath></defs><!-- Shield: blue top half (KSK VUC color), gold bottom half --><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#003DA5" stroke="#002570" stroke-width="2"/><path d="M2 59 L98 59 L98 68 Q98 100 50 114 Q2 100 2 68 Z" fill="#D4AF37"/><!-- Inner coat of arms shield --><g clip-path="url(#kv)"><rect x="22" y="18" width="56" height="68" rx="2" fill="#D4AF37"/><!-- Quarter top-left: red with white stripes --><rect x="23" y="19" width="27" height="33" fill="#C0392B"/><rect x="23" y="24" width="27" height="4" fill="#fff" opacity=".9"/><rect x="23" y="32" width="27" height="4" fill="#fff" opacity=".9"/><rect x="23" y="40" width="27" height="4" fill="#fff" opacity=".9"/><!-- Quarter top-right: blue with gold fleur-de-lis --><rect x="51" y="19" width="27" height="33" fill="#003DA5"/><text x="57" y="46" font-family="serif" font-size="20" fill="#D4AF37">⚜</text><!-- Quarter bottom-left: blue with gold fleur-de-lis --><rect x="23" y="53" width="27" height="32" fill="#003DA5"/><text x="29" y="79" font-family="serif" font-size="20" fill="#D4AF37">⚜</text><!-- Quarter bottom-right: red stripes --><rect x="51" y="53" width="27" height="32" fill="#C0392B"/><rect x="51" y="58" width="27" height="3.5" fill="#fff" opacity=".9"/><rect x="51" y="65" width="27" height="3.5" fill="#fff" opacity=".9"/><rect x="51" y="72" width="27" height="3.5" fill="#fff" opacity=".9"/><!-- Cross --><rect x="47" y="19" width="6" height="66" fill="#D4AF37"/><rect x="23" y="49" width="54" height="6" fill="#D4AF37"/><!-- Shield border --><rect x="22" y="18" width="56" height="68" rx="2" fill="none" stroke="#B8960C" stroke-width="1.5"/></g></svg>`,
+
+  presov_primator:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cpe"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z"/></clipPath></defs><!-- Shield outer: white with red/white stripes (flag feel) --><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#f5f5f5" stroke="#CC3322" stroke-width="2"/><g clip-path="url(#cpe)"><!-- Full white background --><rect x="2" y="2" width="96" height="112" fill="#f5f5f5"/><!-- Red fess 1 (upper) --><rect x="2" y="42" width="96" height="18" fill="#CC3322"/><!-- Red fess 2 (middle) --><rect x="2" y="68" width="96" height="18" fill="#CC3322"/><!-- Red fess 3 (lower, curved bottom of shield) --><rect x="2" y="94" width="96" height="20" fill="#CC3322"/><!-- Three roses in top white band --><!-- Rose left --><circle cx="22" cy="26" r="10" fill="#CC3322"/><circle cx="22" cy="26" r="5" fill="#CC3322"/><circle cx="22" cy="26" r="3" fill="#FFD700"/><path d="M22 16 Q18 20 22 24 Q26 20 22 16Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M12 26 Q16 22 20 26 Q16 30 12 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M22 36 Q26 32 22 28 Q18 32 22 36Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M32 26 Q28 30 24 26 Q28 22 32 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M15 19 Q18 23 22 20 Q20 16 15 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M29 19 Q26 23 22 20 Q24 16 29 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M15 33 Q18 29 22 32 Q20 36 15 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M29 33 Q26 29 22 32 Q24 36 29 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><!-- Green sepals rose left --><path d="M19 36 Q22 40 25 36 Q22 38 19 36Z" fill="#2E7D32"/><!-- Yellow centre --><circle cx="22" cy="26" r="3" fill="#FFD700"/><!-- Rose centre --><circle cx="50" cy="26" r="10" fill="#CC3322"/><path d="M50 16 Q46 20 50 24 Q54 20 50 16Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M40 26 Q44 22 48 26 Q44 30 40 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M50 36 Q54 32 50 28 Q46 32 50 36Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M60 26 Q56 30 52 26 Q56 22 60 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M43 19 Q46 23 50 20 Q48 16 43 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M57 19 Q54 23 50 20 Q52 16 57 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M43 33 Q46 29 50 32 Q48 36 43 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M57 33 Q54 29 50 32 Q52 36 57 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M47 36 Q50 40 53 36 Q50 38 47 36Z" fill="#2E7D32"/><circle cx="50" cy="26" r="3" fill="#FFD700"/><!-- Rose right --><circle cx="78" cy="26" r="10" fill="#CC3322"/><path d="M78 16 Q74 20 78 24 Q82 20 78 16Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M68 26 Q72 22 76 26 Q72 30 68 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M78 36 Q82 32 78 28 Q74 32 78 36Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M88 26 Q84 30 80 26 Q84 22 88 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M71 19 Q74 23 78 20 Q76 16 71 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M85 19 Q82 23 78 20 Q80 16 85 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M71 33 Q74 29 78 32 Q76 36 71 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M85 33 Q82 29 78 32 Q80 36 85 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M75 36 Q78 40 81 36 Q78 38 75 36Z" fill="#2E7D32"/><circle cx="78" cy="26" r="3" fill="#FFD700"/></g></svg>`,
+
+  presov_vuc:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="cpev"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z"/></clipPath></defs><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#f5f5f5" stroke="#CC3322" stroke-width="2"/><g clip-path="url(#cpev)"><rect x="2" y="2" width="96" height="112" fill="#f5f5f5"/><rect x="2" y="42" width="96" height="18" fill="#CC3322"/><rect x="2" y="68" width="96" height="18" fill="#CC3322"/><rect x="2" y="94" width="96" height="20" fill="#CC3322"/><!-- Rose left --><circle cx="22" cy="26" r="10" fill="#CC3322"/><path d="M22 16 Q18 20 22 24 Q26 20 22 16Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M12 26 Q16 22 20 26 Q16 30 12 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M22 36 Q26 32 22 28 Q18 32 22 36Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M32 26 Q28 30 24 26 Q28 22 32 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M15 19 Q18 23 22 20 Q20 16 15 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M29 19 Q26 23 22 20 Q24 16 29 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M15 33 Q18 29 22 32 Q20 36 15 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M29 33 Q26 29 22 32 Q24 36 29 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M19 36 Q22 40 25 36 Q22 38 19 36Z" fill="#2E7D32"/><circle cx="22" cy="26" r="3" fill="#FFD700"/><!-- Rose centre --><circle cx="50" cy="26" r="10" fill="#CC3322"/><path d="M50 16 Q46 20 50 24 Q54 20 50 16Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M40 26 Q44 22 48 26 Q44 30 40 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M50 36 Q54 32 50 28 Q46 32 50 36Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M60 26 Q56 30 52 26 Q56 22 60 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M43 19 Q46 23 50 20 Q48 16 43 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M57 19 Q54 23 50 20 Q52 16 57 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M43 33 Q46 29 50 32 Q48 36 43 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M57 33 Q54 29 50 32 Q52 36 57 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M47 36 Q50 40 53 36 Q50 38 47 36Z" fill="#2E7D32"/><circle cx="50" cy="26" r="3" fill="#FFD700"/><!-- Rose right --><circle cx="78" cy="26" r="10" fill="#CC3322"/><path d="M78 16 Q74 20 78 24 Q82 20 78 16Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M68 26 Q72 22 76 26 Q72 30 68 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M78 36 Q82 32 78 28 Q74 32 78 36Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M88 26 Q84 30 80 26 Q84 22 88 26Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M71 19 Q74 23 78 20 Q76 16 71 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M85 19 Q82 23 78 20 Q80 16 85 19Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M71 33 Q74 29 78 32 Q76 36 71 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M85 33 Q82 29 78 32 Q80 36 85 33Z" fill="#CC3322" stroke="#8B1A0A" stroke-width=".4"/><path d="M75 36 Q78 40 81 36 Q78 38 75 36Z" fill="#2E7D32"/><circle cx="78" cy="26" r="3" fill="#FFD700"/></g></svg>`,
+
+  zilina_primator:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#003580" stroke="#002060" stroke-width="2"/><rect x="15" y="30" width="70" height="8" fill="#FFD700" rx="1"/><rect x="15" y="46" width="70" height="8" fill="#FFD700" rx="1"/><rect x="15" y="62" width="70" height="8" fill="#FFD700" rx="1"/></svg>`,
+  zilina_vuc:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#003580" stroke="#002060" stroke-width="2"/><circle cx="50" cy="58" r="22" fill="none" stroke="#C0C0C0" stroke-width="4"/><circle cx="50" cy="58" r="10" fill="#C0C0C0"/></svg>`,
+  bystrica_primator:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#CC0000" stroke="#900000" stroke-width="2"/><path d="M50 20 L65 55 L35 55 Z" fill="#FFD700"/><path d="M35 58 L65 58 L65 85 L35 85 Z" fill="#FFD700" opacity="0.8"/></svg>`,
+  bystrica_vuc:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#1B5E20" stroke="#0d3b10" stroke-width="2"/><path d="M30 75 L50 25 L70 75 Z" fill="#FFD700"/><circle cx="50" cy="50" r="8" fill="#CC0000"/></svg>`,
+  nitra_primator:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#8B0000" stroke="#600000" stroke-width="2"/><rect x="44" y="18" width="12" height="40" fill="#C0C0C0"/><rect x="28" y="42" width="44" height="10" fill="#C0C0C0"/><rect x="40" y="58" width="20" height="30" fill="#C0C0C0" opacity="0.8"/></svg>`,
+  nitra_vuc:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#8B0000" stroke="#600000" stroke-width="2"/><path d="M20 80 Q50 20 80 80 Z" fill="#FFD700" opacity="0.9"/><rect x="38" y="60" width="24" height="28" fill="#FFD700" opacity="0.7"/></svg>`,
+  trnava_primator:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#CC0000" stroke="#900000" stroke-width="2"/><circle cx="50" cy="45" r="18" fill="none" stroke="#FFD700" stroke-width="5"/><rect x="40" y="63" width="20" height="25" fill="#FFD700" opacity="0.8"/></svg>`,
+  trnava_vuc:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#1A237E" stroke="#0d1757" stroke-width="2"/><path d="M50 20 L80 90 L20 90 Z" fill="#FFD700" opacity="0.85"/></svg>`,
+  trencin_primator:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#003580" stroke="#002060" stroke-width="2"/><rect x="30" y="60" width="40" height="28" fill="#FFD700" opacity="0.8"/><rect x="40" y="35" width="20" height="28" fill="#FFD700" opacity="0.9"/><rect x="36" y="28" width="8" height="12" fill="#FFD700"/><rect x="56" y="28" width="8" height="12" fill="#FFD700"/></svg>`,
+  trencin_vuc:`<svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#4A148C" stroke="#2d0a56" stroke-width="2"/><circle cx="50" cy="50" r="25" fill="none" stroke="#FFD700" stroke-width="4"/><path d="M38 38 L62 62 M62 38 L38 62" stroke="#FFD700" stroke-width="3"/></svg>`,
+};
+
+// ── Competency ──
+window.COMPETENCY = {
+  primator:{title:'Čo môže primátor/starostka skutočne zmeniť?',text:`<strong>Priame právomoci:</strong> Mestský rozpočet a dane, územný plán, stavebné povolenia, mestská polícia, MHD, parkovanie, cyklotrasy, osvetlenie, nájomné byty, škôlky a základné školy, komunitné centrá, transparentnosť zákaziek.<br><br><strong>Čo môže ovplyvniť nepriamo:</strong> Lobovanie za štátne investície, vyjednávanie o eurofondoch, iniciovanie zákonných zmien, medzimestské partnerstvá, integračné programy, LGBTQ+ inklúzia cez mestské granty.`},
+  vuc:{title:'Čo môže župan/predseda VÚC skutočne zmeniť?',text:`<strong>Priame právomoci:</strong> Stredné školy a ich financovanie, krajské nemocnice, domovy sociálnych služieb, výška poplatkov za sociálne zariadenia, krajské cesty, regionálna autobusová doprava, kultúrne inštitúcie, čerpanie eurofondov, územný rozvoj kraja.<br><br><strong>Čo môže ovplyvniť nepriamo:</strong> Tlak na vládu za spravodlivejšie prerozdeľovanie daní, koordinácia s primátormi, programy pre energetickú chudobu, partnerstvá s firmami, integračné programy pre marginalizované skupiny.`}
+};
+
+// ── City display metadata ──
+window.CITY_META = {
+  bratislava:{name:'Bratislava',  primator:'Voľba primátora',    vuc:'Voľba župana BSK',  thP:'t-ba-p',thV:'t-ba-v'},
+  kosice:    {name:'Košice',      primator:'Voľba primátora',    vuc:'Voľba župana KSK',  thP:'t-ke-p',thV:'t-ke-v'},
+  presov:    {name:'Prešov',      primator:'Voľba primátora',    vuc:'Voľba župana PSK',  thP:'t-pe-p',thV:'t-pe-v'},
+  zilina:    {name:'Žilina',      primator:'Voľba primátora',    vuc:'Voľba župana ŽSK',  thP:'t-zi-p',thV:'t-zi-v'},
+  bystrica:  {name:'Banská Bystrica',primator:'Voľba primátora', vuc:'Voľba župana BBSK', thP:'t-bb-p',thV:'t-bb-v'},
+  nitra:     {name:'Nitra',       primator:'Voľba primátora',    vuc:'Voľba župana NSK',  thP:'t-ni-p',thV:'t-ni-v'},
+  trnava:    {name:'Trnava',      primator:'Voľba primátora',    vuc:'Voľba župana TTSK', thP:'t-tt-p',thV:'t-tt-v'},
+  trencin:   {name:'Trenčín',     primator:'Voľba primátora',    vuc:'Voľba župana TSK',  thP:'t-tn-p',thV:'t-tn-v'},
+};
+
+// ── Candidates ──
+// ── Data is inlined below, loadCityData is a no-op ──
+// TO EDIT QUESTIONS: edit the data/data-{city}.js files, then run build.py
+// to regenerate this HTML with updated inline data.
+function loadCityData(city) { return Promise.resolve(); }
+
+// ══ DATA: BRATISLAVA ══
+window.VAA_DATA = window.VAA_DATA || {};
+
+// ── Kandidáti ──
+window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
+window.VAA_DATA.candidates['bratislava_primator'] = [{id:'vallo',name:'Matúš Vallo',party:'Team BA / PS / SaS / Demokrati',color:'#e63946',url:'https://teamba.sk'},{id:'cahoj',name:'Dana Čahojová',party:'Nezávislá',color:'#457b9d',url:''},{id:'winkl',name:'Martin Winkler',party:'Strana Dunaj',color:'#2a9d8f',url:'https://martinwinkler.sk'},{id:'hered',name:'Miro Heredoš',party:'Nezávislý (ex-Republika)',color:'#6d4c41',url:''},{id:'geci',name:'Ľubomír Geci',party:'Nezávislý',color:'#78909c',url:''}];
+window.VAA_DATA.candidates['bratislava_vuc'] = [{id:'droba',name:'Juraj Droba',party:'SaS / PS / Team BA / Demokrati',color:'#0097a7',url:'https://droba.sk'},{id:'krajco',name:'Zuzana Krajčovičová',party:'Právo na pravdu',color:'#2e7d32',url:'https://zupanka.sk'},{id:'smer_ba',name:'Kandidát SMER',party:'SMER-SD',color:'#e63946',url:''},{id:'kdh_ba',name:'Kandidát KDH',party:'KDH',color:'#90caf9',url:''}];
+
+// ── Otázky: Primátor / Primátorka ──
+window.VAA_DATA.questions = window.VAA_DATA.questions || {};
+window.VAA_DATA.questions.bratislava_primator = [
+  {t:'Doprava',        q:'Chceš menej parkovacích miest v centre a viac cyklotrás?',
+   info:'Bratislava dlhodobo rozširuje cykloinfraštruktúru a obmedzuje autá v centre. Toto rozhodnutie priamo ovplyvňuje každodenný život státisícov ľudí — buď uľahčuje pohyb cyklistov a chodcov, alebo komplikuje život tým, ktorí cestujú autom.',
+   a:{vallo:'agree',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+  {t:'Dane',           q:'Vadí ti, že Bratislava zdvojnásobila miestne dane za posledné štyri roky?',
+   info:'Mestské dane vzrástli výrazne, čo vyvolalo vlnu kritiky. Na druhej strane, vyššie príjmy umožnili financovať rekonštrukcie ciest, škôl a parkov — otázka je, či to stálo za to.',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+  {t:'Transparentnosť',q:'Myslíš si, že magistrát je príliš nafúknutý a plný zbytočných úradníkov?',
+   info:'Vinkler navrhuje znížiť počet administratívnych zamestnancov magistrátu o 30 percent a ušetrené peniaze presunúť do mestskej polície a údržby. Ide o klasický spor medzi štíhlou efektívnou správou a robustným verejným sektorom.',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+  {t:'Zadlženie',      q:'Vadí ti, že Bratislava má rekordný dlh a stále si berie nové úvery?',
+   info:'Bratislava patrí k najzadlženejším mestám v regióne. Dlhy financujú rozvoj, ale zaťažujú budúce rozpočty — kedy je pôžička investícia a kedy problém?',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'neutral'}},
+  {t:'Električka',     q:'Považuješ dvojročné meškanie petržalskej električky za zlyhanie vedenia mesta?',
+   info:'Projekt za vyše 300 miliónov eur sa opakovane oneskoroval a predražoval. Primátor hovorí o objektívnych príčinách; oponenti vidia symptóm slabého manažmentu megaprojektov.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'neutral',geci:'agree'}},
+  {t:'Bývanie',        q:'Mal by magistrát stavať vlastné nájomné byty pre mladých a nízkopríjmových ľudí?',
+   info:'Bratislava čelí extrémnej bytovej kríze — priemerná cena bytu je desaťnásobok priemerného platu. Mestské nájomné byty môžu pomôcť, ale vyžadujú obrovské investície a dlhodobý záväzok.',
+   a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+  {t:'Životné prostredie',q:'Súhlasíš so zákazom vjazdu starých dieselových áut do centra Bratislavy?',
+   info:'Nízkoemisné zóny fungujú v desaťkách európskych miest a znižujú znečistenie ovzdušia. Ale pre mnohých Bratislavčanov by to znamenalo povinnosť vymeniť auto — čo si môžu dovoliť len niektorí.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'agree',geci:'neutral'}},
+  {t:'MHD',            q:'Chceš, aby MHD bola zadarmo pre dôchodcov a ľudí so ZŤP bez ohľadu na príjem?',
+   info:'Bezplatná MHD pre zraniteľné skupiny zvyšuje sociálnu dostupnosť mesta. Stojí to peniaze z mestského rozpočtu, ktoré by mohli ísť inam — napríklad na frekvenciu spojov.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+  {t:'Bezpečnosť',     q:'Chceš výrazne viac viditeľných mestských policajtov v uliciach Bratislavy?',
+   info:'Bratislava trpí pocitom neistoty v niektorých štvrtiach, aj keď štatistiky kriminality nie sú dramatické. Viac policajtov znamená vyššie náklady a otázku, kto a ako bude kontrolovať ich prácu.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'neutral',geci:'neutral'}},
+  {t:'Školstvo',       q:'Mal by byť obed na základných školách zadarmo pre každé dieťa bez ohľadu na príjem rodiny?',
+   info:'Bezplatné obedy odstraňujú stigmu aj administratívnu záťaž pri testovaní príjmu. Ročne by to stálo desiatky miliónov eur z mestského rozpočtu, ale garantovalo by výživu pre každé dieťa.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+  {t:'Korupcia',       q:'Chceš, aby boli všetky mestské zákazky a zmluvy povinne zverejnené aj s odôvodnením výberu dodávateľa?',
+   info:'Transparentnosť verejného obstarávania je kľúčová v boji s klientelizmom. Bratislava má povinné zverejňovanie, ale odôvodnenie výberu nie je vždy podrobné — ide o nastavenie kultúry otvorenosti.',
+   a:{vallo:'agree',cahoj:'disagree',winkl:'neutral',hered:'disagree',geci:'neutral'}},
+  {t:'LGBTQ+',         q:'Mal by mestský magistrát aktívne podporovať LGBTQ+ komunitné centrá a projekty z mestských grantov?',
+   info:'Mestá majú vlastné grantové programy, kde môžu podporiť rôznorodé komunity. Toto je otázka hodnotovej orientácie mesta: inkluzivita vs. tradičné chápanie verejného priestoru. Primátor nemôže zákonom garantovať "bezpečné priestory", ale môže financovať ich vznik.',
+   a:{vallo:'agree',cahoj:'neutral',winkl:'neutral',hered:'disagree',geci:'neutral'}},
+  {t:'Rómske komunity',q:'Chceš, aby mesto aktívne riešilo integráciu Rómov z marginalizovaných komunít, aj za cenu kontroverzných opatrení?',
+   info:'V Bratislave žijú tisíce ľudí v extrémnej chudobe bez prístupu k dôstojnému bývaniu. Primátor môže iniciovať terénnu sociálnu prácu, integračné programy a nájomné byty. Ide o citlivú tému s rôznymi pohľadmi naprieč politickým spektrom.',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'disagree',hered:'agree',geci:'neutral'}},
+  {t:'Lokálny patriotizmus',q:'Vadí ti, že Bratislava dostáva neúmerne veľa štátnych investícií v porovnaní s ostatnými regiónmi?',
+   info:'Bratislava ako hlavné mesto prirodzene ťaží z centralizácie. Ale ako primátor musíš lobovať za vlastné mesto — nie za ostatných. Táto otázka testuje, či voliš celoštátne alebo lokálne uvažovanie.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'neutral',geci:'neutral'}},
+  {t:'Energetická chudoba',q:'Mal by magistrát pomáhať domácnostiam s najnižšími príjmami znižovať energetické náklady napríklad cez mestské solárne programy?',
+   info:'Energetická chudoba zasiahla desaťtisíce domácností. Magistrát nemôže priamo regulovať ceny energií, ale môže sprostredkovať skupinový nákup energie, subvenciovať izoláciu budov alebo inštaláciu solárnych panelov na mestské nehnuteľnosti.',
+   a:{vallo:'neutral',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+  {t:'Infraštruktúra',  q:'Má byť oprava existujúcich ciest a chodníkov prioritou pred budovaním nových projektov?',
+   info:'Tisíce kilometers ciest a chodníkov v Bratislave sú v zlom stave. Otázka je, či sa sústrediť na "záplaty" alebo pokračovať vo veľkých infraštruktúrnych projektoch, ktoré menia charakter mesta na desaťročia.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'neutral',geci:'neutral'}},
+  {t:'Zelené mestá',   q:'Chceš, aby Bratislava každoročne vysadila aspoň 5000 nových stromov a vytvorila viac parkov?',
+   info:'Mestská zeleň znižuje tepelné ostrovy, zlepšuje kvalitu ovzdušia a zvyšuje kvalitu života. Výsadba stromov je relatívne lacná, ale ich dlhodobá starostlivosť si vyžaduje systémový prístup a rozpočet.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'disagree',geci:'neutral'}},
+  {t:'Kultúra',        q:'Mal by magistrát zvýšiť granty pre nezávislé kultúrne organizácie a festivaly?',
+   info:'Bratislava má bohatú kultúrnu scénu závislú na mestskej podpore. Otázka je, či uprednostniť zavedené inštitúcie alebo dávať šancu novým, inovatívnym projektom — a kto o tom rozhoduje.',
+   a:{vallo:'neutral',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+  {t:'Participácia',   q:'Chceš, aby ľudia v mestských častiach mohli priamo rozhodovať o časti mestského rozpočtu (participatívny rozpočet)?',
+   info:'Participatívny rozpočet umožňuje občanom navrhovať a hlasovať o projektoch vo svojom okolí. Posilňuje zapojenie, ale vyžaduje administratívnu kapacitu a ochotu politikov vzdať sa časti kontroly.',
+   a:{vallo:'neutral',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+  {t:'Podnikanie',     q:'Mal by magistrát znížiť regulačnú záťaž a poplatky pre malé podniky a reštaurácie?',
+   info:'Podnikatelia v Bratislave dlhodobo kritizujú pomalé povolenia a vysoké poplatky. Menej regulácií zjednodušuje podnikanie, ale môže zhoršiť kontrolu hluku, kvality alebo hygieny v hustej zástavbe.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+  {t:'Doprava',        q:'Mal by magistrát zakázať záber verejného priestoru placenými terasami v úzkych uliciach?',
+   info:'Terasy oživujú mesto, ale v úzkych uliciach blokujú prechod chodcov, vozíčkárov a kočiarov. Ide o spor medzi záujmami gastronomie a verejnou dostupnosťou priestoru.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+  {t:'Digitalizácia',  q:'Chceš, aby magistrát digitalizoval väčšinu agendy — vydávanie povolení, hlásenie problémov, platby — a minimalizoval osobné návštevy úradu?',
+   info:'Digitálna správa mesta znižuje korupčné riziká, urýchľuje procesy a zvyšuje komfort. Nevýhodou je vylúčenie tých, ktorí nemajú prístup k internetu alebo technológiám — najmä seniori.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+  {t:'Sport a voľný čas',q:'Mal by magistrát viac investovať do bezplatných verejných ihrísk a športovísk dostupných pre všetkých?',
+   info:'Platené telocvične a športové zariadenia sú mimo dosahu mnohých rodín. Verejné ihriská a posilňovne v parkoch sú dostupné pre každého, ale vyžadujú investície a pravidelnú údržbu.',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'neutral'}},
+  {t:'Korupcia',       q:'Chceš povinný nezávislý audit všetkých mestských spoločností a fondov každé dva roky?',
+   info:'Mestské spoločnosti spravujú obrovský majetok, ale kontrola ich hospodárenia je nedostatočná. Nezávislý audit odhalí plytanie, no stojí peniaze a môže narážať na odpor vnútri systému.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'disagree',hered:'neutral',geci:'neutral'}},
+  {t:'Vízia',          q:'Je pre teba dôležitejšie, aby primátor Bratislavy riešil dennodenné problémy (cesty, koše, čistota) než veľké vízie a projekty?',
+   info:'Spor medzi "dobrým správcom" a "vizionárom" je klasická politická dilema. Bratislava potrebuje oboje — ale v akom pomere? Táto otázka odhaľuje, čo od vedenia mesta primárne očakávaš.',
+   a:{vallo:'agree',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+,
+
+  {t:'Bývanie',          q:'Mal by magistrát povinne zahrnúť 10 % nájomných bytov do každého veľkého developerského projektu?',
+   info:'Bratislava patrí k najmenej dostupným hlavným mestám v Európe — kúpa bytu stojí priemerne vyše 15 ročných platov. Mesto uzavrelo zmluvy s developermi, podľa ktorých za zmenu územného plánu odovzdajú 5 % bytov mestu. Niektoré mestá v Európe vyžadujú až 10–30 % sociálnych bytov v každom projekte. Otázka je, či by takáto povinnosť nezastavila súkromnú výstavbu celkovo.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},,
+  {t:'PAAS parkovanie',   q:'Je systém plateného parkovania PAAS pre Bratislavu správnou cestou, aj napriek jeho zložitosti?',
+   info:'Systém PAAS bol spustený v januári 2022 a do roku 2026 pokrýva väčšinu vnútorného mesta — pokračuje aj rozšírenie nedieľneho spoplatnenia. Podľa prieskumov je parkovanie pre Bratislavčanov najvnímanejší problém v meste. Odborníci z európskych miest tvrdia, že cena parkovania je najúčinnejší nástroj na reguláciu dopravy a ochranu rezidentov. Kritici namietajú, že systém je príliš komplikovaný — samotní manažéri PAAS ho nazvali najkomplexnejším v Európe.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},,
+  {t:'Bezpečnosť',        q:'Má magistrát zriadiť anonymnú aplikáciu, kde môžu ľudia hlásiť agresívne správanie vo verejnom priestore?',
+   info:'Bratislava navýšila rozpočet mestskej polície na historicky najvyšší objem — 18,8 milióna eur v roku 2026, čo je dvojnásobok oproti roku 2018. Napriek tomu sa pocit bezpečnosti zhoršuje — mesto to čiastočne pripisuje liberalizácii trestných zákonov. Anonymné nahlasovanie existuje v mnohých európskych mestách a zvyšuje participáciu občanov na verejnom poriadku. Otáznou zostáva, či je efektívnejšie investovať do technológií, alebo priamo do počtu hliadok v uliciach.',
+   a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},,
+  {t:'Transparentnosť',   q:'Má magistrát zverejňovať kompletné zápisnice zo všetkých rokovaní mestskej rady do 24 hodín?',
+   info:'Transparentnosť verejnej správy je základným princípom demokracie — občania majú právo vedieť, ako sa rozhoduje o ich meste v reálnom čase. V súčasnosti sa zápisnice zverejňujú s oneskorením a niektoré rokovania prebehajú neverejne. Niektoré mestá v Čechách a Rakúsku zaviedli živé prenosy zo zastupiteľstiev aj povinné online komentáre k zákazkám. Odporcovia namietajú, že úplná transparentnosť môže obmedziť otvorenosť a úprimnosť vnútorných rokovaní.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},,
+  {t:'Klíma',             q:'Má Bratislava zakázať vjazd áut so spaľovacím motorom do historického centra po vzore Viedne a Prahy?',
+   info:'Viedeň, Praha a desiatky ďalších európskych miest zavádzajú nízkoemisné zóny alebo úplné zákazy spaľovacích motorov v centre. Znečistenie ovzdušia je v Bratislave dlhodobý problém, ktorý výrazne zasiahnutý tranzitnou dopravou. Zákaz by zlepšil kvalitu vzduchu a verejný priestor, no mohol by poškodiť obchodníkov v centre a tých, ktorí autom dojazdiť do práce. Bratislava má kompetenciu zaviesť nízkoemisné zóny podľa zákona o cestnej premávke.',
+   a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+];
+
+// ── Otázky: Župan / VÚC ──
+window.VAA_DATA.questions.bratislava_vuc = [
+  {t:'Vzdelávanie',    q:'Mal by kraj zatvárať stredné školy, ktoré majú dlhodobo málo žiakov, aj keby to znamenalo zánik niektorých typov škôl?',
+   info:'Demografický pokles znižuje počty žiakov, no politicky je veľmi ťažké zatvárať školy. Prázdne školy sú finančnou záťažou, ale ich zatvorenie ničí komunity a ruší vzdelávacie tradície.',
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'neutral'}},
+
+  {t:'Zdravotníctvo',  q:'Mal by kraj udržiavať stratové krajské nemocnice otvorené aj bez štátnej pomoci?',
+   info:'Krajské nemocnice sú pre stovky tisíc ľudí jedinou dostupnou zdravotnou starostlivosťou. Ich zatvorenie šetrí peniaze kraja, ale ničí prístup k zdravotnej starostlivosti — špeciálne pre starých a chudobných.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Dane',           q:'Mal by kraj znížiť poplatky za sociálne služby (domovy dôchodcov, denné centrá) pre seniorov s nižšími príjmami?',
+   info:'Poplatky za sociálne zariadenia sú pre mnohých dôchodcov vyššie ako ich dôchodok. Kraj môže nastaviť škálu poplatkov podľa príjmu — ale to znamená menej príjmov a nutnosť hľadať úspory inde.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Doprava',        q:'Chceš, aby Bratislavský kraj investoval viac do vlakových a autobusových spojení medzi obcami namiesto ciest pre autá?',
+   info:'Stovky obcí v BSK sú zle prepojené verejnou dopravou, čo núti ľudí k vlastným autám. Investície do vlakov a autobusov sú dlhodobé, ale vyžadujú koordináciu so štátom a ŽSR.',
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Životné prostredie',q:'Chceš, aby kraj aktívne bránil Malé Karpaty pred zástavbou a komerčným využitím?',
+   info:'Malé Karpaty sú pľúcami Bratislavy, no tlak developerov na ich okraje neustále rastie. Kraj rozhoduje o územnom pláne kraja — môže definitívne zablokovať alebo umožniť zástavbu.',
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree',krajco:'agree'}},
+
+  {t:'Korupcia',       q:'Chceš povinné zverejňovanie všetkých župných zákaziek vrátane odôvodnenia výberu dodávateľa?',
+   info:'Kraj má ročný rozpočet stovky miliónov eur. Transparentnosť zákaziek znižuje korupčné riziká, no politici sa jej niekedy bránia, lebo odhaľuje klientelizmus a stranícke záujmy.',
+   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Sociálne služby',q:'Mal by kraj výrazne rozšíriť kapacity domovov sociálnych služieb pre seniorov v menších mestách?',
+   info:'Domovy dôchodcov v Bratislavskom kraji sú preplnené a čakacie lehoty sú niekoľkoročné. Riešenie vyžaduje obrovské investície — kraj ich môže financovať z eurofondov, ale to trvá roky.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Lokálny patriotizmus',q:'Vadí ti, že vláda posiela oveľa viac eurofondov do iných krajov ako do Bratislavského?',
+   info:'BSK je bohatší kraj a EÚ pravidlá obmedzujú eurofondy pre vyspelé regióny. Niektorí to považujú za spravodlivosť — iní za diskrimináciu bohatšieho regiónu, ktorý taktiež potrebuje investície do infraštruktúry.',
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
+  {t:'Kultúra',        q:'Mal by kraj financovať kultúrne podujatia aj v menších obciach, nielen v Bratislave?',
+   info:'Väčšina krajských kultúrnych výdavkov ide do hlavného mesta, zatiaľ čo vidiecke obce majú minimálnu kultúrnu ponuku. Decentralizácia kultúry posilňuje komunity, ale vyžaduje systém spravodlivého prideľovania.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
+  {t:'Rómske komunity',q:'Mal by kraj investovať do integračných programov pre Rómov — vzdelávanie, bývanie, zamestnávanie — nad rámec minimálnych zákonných povinností?',
+   info:'BSK má menší podiel marginalizovaných Rómov ako východ Slovenska, ale integračné výzvy existujú aj tu. Dobrovoľné programy nad zákonný rámec sú politicky citlivé, ale môžu prelomiť cyklus vylúčenia.',
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
+  {t:'Energetická chudoba',q:'Mal by kraj platiť časť nákladov na zateplenie domov pre ľudí v energetickej chudobe?',
+   info:'Energetická chudoba zasiahla desaťtisíce domácností. Kraj nemôže regulovať ceny energií, ale môže subvenciovať zateplenie alebo sprostredkovávať skupinový nákup energie pre domácnosti s nízkymi príjmami.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
+  {t:'Hodnoty',        q:'Mal by župan verejne hradiť práva LGBTQ+ komunity, alebo sa má zdržať hodnotových vyjadrení a sústrediť sa len na správu kraja?',
+   info:'Župan je politická funkcia s verejnou viditeľnosťou. Niektorí voliči chcú reprezentanta, ktorý stojí za inkluzívnymi hodnotami; iní preferujú pragmatického správcu bez ideologického komentára.',
+   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'disagree',krajco:'agree'}},
+
+  {t:'Infraštruktúra', q:'Chceš, aby kraj prioritizoval opravu existujúcich krajských ciest pred budovaním nových?',
+   info:'Stovky kilometrov krajských ciest sú v zlom stave, ale politicky atraktívnejšie sú pásky pri otváraní nových projektov. Oprava ciest je nudná, ale nevyhnutná pre každodennú bezpečnosť tisícov vodičov.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Digitalizácia',  q:'Mal by kraj zaviesť digitálnu žiackú knižku a plné digitálne hodnotenie na krajských školách?',
+   info:'Digitalizácia škôl urýchľuje komunikáciu s rodičmi a znižuje papierovanie. Vyžaduje však investície do zariadení, preškolenia učiteľov a riešenie digitálnej nerovnosti medzi žiakmi.',
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
+
+  {t:'Zdravotníctvo',  q:'Mal by kraj povinne zverejňovať čakacie doby na jednotlivých špecializovaných oddeleniach krajských nemocníc?',
+   info:'Pacienti dnes čakajú mesiace bez informácie o tom, kde sa čaká kratšie. Zverejňovanie čakacích dôb umožňuje pacientom lepšie sa rozhodovať a vytvára tlak na nemocnice, aby zlepšili efektivitu.',
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Vzdelávanie',    q:'Mal by kraj vytvoriť odborné stredné školy priamo prepojené s miestnymi firmami, kde časť vyučovania prebieha v podnikoch?',
+   info:'Duálny systém vzdelávania funguje úspešne v Nemecku a postupne sa zavádza na Slovensku. Kraj môže aktívne tlačiť firmy k partnerstvám so školami — čo znižuje nezamestnanosť absolventov a zlepšuje ich praxu.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Participácia',   q:'Mal by kraj každoročne alokovať aspoň 5 % svojho rozpočtu na projekty, o ktorých hlasujú priamo občania?',
+   info:'Participatívny krajský rozpočet je inovatívny nástroj, ktorý posilňuje demokraciu zdola. Vyžaduje dôveru v občanov a ochotu politikov vzdať sa časti kontroly nad rozhodovaním.',
+   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'neutral',krajco:'agree'}},
+
+  {t:'Sociálne služby',q:'Mal by kraj vyplácať príspevok rodinným príslušníkom, ktorí sa starajú o odkázaných seniorov doma namiesto ústavu?',
+   info:'Neformálna starostlivosť v rodine je lacnejšia a pre seniora ľudskejšia ako ústav. Jej finančné ocenenie by pomohlo tisíckám rodín — no kraj by musel nájsť zdroje na tento systém.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Mládež',         q:'Mal by kraj poskytovať štipendium najlepším stredoškolákom z chudobných rodín, aby mohli študovať bez finančných bariér?',
+   info:'Sociálne štipendiá sú jedným z najefektívnejších nástrojov na prelomenie chudoby cez vzdelávanie. Kraj vie takýto program financovať z vlastného rozpočtu bez čakania na štátne riešenie.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Doprava',        q:'Chceš, aby kraj spolufinancoval bezplatnú MHD pre stredoškolákov v Bratislavskom kraji?',
+   info:'Stredoškoláci musia každý deň cestovať do školy — čo stojí rodiny tisíce eur ročne. Bezplatná MHD pre žiakov existuje v niektorých krajoch a znižuje tlak na rodinné rozpočty, ale zaťažuje krajskú kasu.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
+  {t:'Vízia',          q:'Je pre teba dôležitejšia schopnosť župana vyjednávať s Bruselom a čerpať eurofondy ako jeho hodnotová orientácia?',
+   info:'Kraj dostáva každé štyri roky stovky miliónov eur z EÚ. Schopnosť tieto peniaze zmysluplne použiť je kľúčová — ale záleží ti tiež na tom, aké hodnoty župan reprezentuje navonok?',
+   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Doprava',           q:'Má BSK dobudovať sieť terminálov integrovanej dopravy (TIOP) na prestup vlak–autobus v celom Bratislavskom kraji?',
+   info:'BSK buduje sieť prestupných terminálov, kde sa stretáva vlak, autobus a mestská doprava — prvý funguje od 2024 vo Vrakuni, ďalší sa plánuje v Ružinove. Terminály prepájajú IDS BK (Integrovaný dopravný systém Bratislavského kraja) s mestskou dopravou a znižujú závislosť od auta. Každý terminál stojí desiatky miliónov eur, z čoho veľkú časť pokrývajú eurofondy. Kľúčová otázka je, kto má terminály dlhodobo financovať — mesto, kraj, štát alebo developeri v okolí.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Zdravotníctvo',     q:'Má BSK zaviesť motivačné schémy pre lekárov, ktorí sa usadia v obciach Bratislavského kraja bez všeobecného lekára?',
+   info:'V mnohých obciach Bratislavského kraja chýba všeobecný lekár — pacienti musia za zdravotnou starostlivosťou cestovať desiatky kilometrov. Kraj má kompetenciu zriaďovať zdravotnícke zariadenia a motivovať lekárov štipendijnými programami alebo garantovanou ordináciou. Prešovský a Trnavský kraj zaviedli podobné schémy s pozitívnymi výsledkami. Systémovým riešením by mohla byť kombinácia krajských stimulov a štátnych platieb za dostupnosť.',
+   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
+
+  {t:'Bývanie',           q:'Má BSK koordinovať územné plány obcí, aby dostupné bývanie vznikalo pri dopravných uzloch a nie na okraji zástavby?',
+   info:'Ceny nehnuteľností v Bratislave ženia záujemcov o bývanie do okolitých obcí — tento trend sa nazýva suburbanizácia a zvyšuje závislosť od auta. BSK má kompetencie územného plánovania na úrovni kraja a môže usmerňovať lokalizáciu novej výstavby. Bývanie pri dopravných uzloch umožňuje ľuďom žiť bez auta, čo znižuje dopravné zaťaženie a emisie. Koordinácia si vyžaduje spoluprácu desiatokvôbcí, čo je politicky a administratívne náročné.',
+   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
+
+  {t:'Životné prostredie', q:'Má BSK zakázať zástavbu poľnohospodárskej pôdy I. triedy v celom Bratislavskom kraji?',
+   info:'Bratislavský kraj stráca každoročne desiatky hektárov najúrodnejšej poľnohospodárskej pôdy kvôli výstavbe logistických centier, obytných štvrtí a priemyselných parkov. Záber pôdy je prakticky nezvratný — pôda I. triedy vzniká tisíce rokov. Kraj Malé Karpaty chráni ako prírodný park, no iným poľnohospodárskym oblastiam venuje menej pozornosti. Niektoré krajiny EÚ zavádzajú striktnejšiu ochranu pôdy na národnej úrovni a kraj môže toto lobovanie iniciálne tlačiť.',
+   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}}
+];
+// ══ DATA: KOSICE ══
+window.VAA_DATA = window.VAA_DATA || {};
+
+// ── Kandidáti ──
+window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
+window.VAA_DATA.candidates['kosice_primator'] = [{id:'polac',name:'Jaroslav Polaček',party:'Nezávislý / KH2030',color:'#0097a7',url:'https://jaropolacek.sk'},{id:'mudrak',name:'Martin Mudrák',party:'Progresívne Slovensko',color:'#64b5f6',url:'https://martinmudrak.sk'},{id:'lorinc',name:'Ladislav Lörinc',party:'Košická strana',color:'#ffd166',url:'https://ladislavlorinc.sk'}];
+window.VAA_DATA.candidates['kosice_vuc'] = [
+  {id:'trnka',  name:'Rastislav Trnka',   party:'Nezávislý (obžalovaný)',  color:'#78909c',url:'https://rastotrnka.sk'},
+  {id:'simko',  name:'Igor Šimko',        party:'Hlas-SD',                 color:'#e63946',url:'https://igorsimko.sk/pocuvam-vas/'},
+  {id:'porvaz', name:'Marián Porvažník',  party:'PS / Za ľudí',            color:'#64b5f6',url:'https://porvaznik.sk'},
+  {id:'gurbal', name:'Lucia Gurbáľová',   party:'KDH',                     color:'#90caf9',url:'https://luciagurbalova.sk'},
+  {id:'hirman', name:'Karel Hirman',      party:'Demokrati',               color:'#7b1fa2',url:'https://karelhirman.sk'},
+];
+
+// ── Otázky: Primátor / Primátorka ──
+window.VAA_DATA.questions = window.VAA_DATA.questions || {};
+window.VAA_DATA.questions.kosice_primator = [
+  {t:'Bývanie',q:'Mal by magistrát Košíc priamo stavať nájomné byty dostupné pre stredné a nižšie príjmové skupiny, aj keby to znamenalo zadlženie mesta?',info:'Košice majú len 1 600 mestských nájomných bytov, čo je 1,6 % bytového fondu. Trhové nájomné za 2-izbový byt dosahuje 650 až 900 € mesačne. Priemerná mzda v Košickom kraji nestačí na pokrytie hypotéky ani trhového nájmu bez výrazného obmedzenia ostatných výdavkov rodiny.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Bývanie',q:'Mal by primátor Košíc presadiť, aby stavebník pri každom väčšom projekte povinne odovzdal mestu časť bytov alebo pozemkov ako podmienku stavebného povolenia?',info:'Povinný príspevok stavebníka za právo stavať vo verejnom záujme funguje vo Viedni, Prahe, Londýne či Amsterdame. Mestu umožňuje získavať nájomné byty bez priameho zadlženia. V Košiciach za uplynulých desať rokov vznikli tisíce súkromných bytov, z ktorých mesto nezískalo nič.',a:{polac:'neutral',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Bývanie',q:'Má magistrát Košíc stavať nájomné byty na vlastných pozemkoch aj vtedy, ak by ich predaj súkromným developerom priniesol mestu viac peňazí na iné investície?',info:'Mesto Košice vlastní desiatky nevyužívaných alebo čiastočne využívaných budov, napríklad bývalé školy, administratívne objekty a správcovské domy. Magistrát v roku 2024 zrekonštruoval šesť mestských bytov pre rodiny v núdzi v spolupráci s organizáciou Úsmev ako dar. Každá takáto rekonštrukcia stojí desiatky tisíc eur, no mestu zostáva majetok a kontrola nad nájmom. Predaj tých istých budov prinesie jednorazový príjem, no mestu zmizne možnosť ovplyvňovať dostupnosť bývania.',a:{polac:'neutral',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Bývanie',q:'Má primátor urýchliť vydávanie stavebných povolení pre väčšie projekty, aj keby to znamenalo menej priestoru pre námietky obyvateľov dotknutých štvrte?',info:'Priemerná doba vybavenia stavebného povolenia v Košiciach trvá 12 až 18 mesiacov, čo je dvojnásobok európskeho priemeru. Zdĺhavý proces predražuje projekty a odrádzal investorov. Na druhej strane, zníženie kontroly môže umožniť výstavbu, ktorá ignoruje záujmy existujúcich obyvateľov a zaťažuje infraštruktúru.',a:{polac:'agree',mudrak:'neutral',lorinc:'agree'}},
+  {t:'Bývanie',q:'Má mesto Košice zaviesť reguláciu krátkodobého prenájmu cez platformy ako Airbnb, aby sa obmedzilo vyťahovanie bytov z trhu dlhodobého nájmu?',info:'Košice sú druhým najväčším trhom krátkodobého prenájmu na Slovensku po Bratislave. V niektorých košických štvrtiach tvorí Airbnb odhadom 5 až 10 % bytového fondu. Reguláciu krátkodobého prenájmu majú Amsterdam, Berlín, Paríž aj Praha. V Košiciach zatiaľ neexistuje, hoci magistrát má nástroje ju zaviesť.',a:{polac:'neutral',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Samospráva',q:'Má primátor Košíc presadiť zlúčenie mestských častí aj napriek odporu ich starostov, ak je za to väčšina v mestskom zastupiteľstve?',info:'Košice sú rozdelené na 22 mestských častí, čo je viac ako Paríž, Barcelona či New York. Samotná prevádzka 22 miestnych úradov, platov starostov a odmien viac ako 300 poslancov stojí mesto 8,7 milióna eur ročne, teda takmer 35 miliónov za volebné obdobie. Starostovia mestských častí sa zlúčeniu dlhodobo bránia, hoci mestské zastupiteľstvo má kompetenciu o tom rozhodnúť. Otázka je, či má primátor použiť politický kapitál na presadenie reformy, alebo hľadať konsenzus, ktorý sa za 30 rokov nenašiel.',a:{polac:'neutral',mudrak:'neutral',lorinc:'agree'}},
+  {t:'Transparentnosť',q:'Chceš povinné zverejňovanie všetkých mestských zákaziek Košíc nad 5 000 € vrátane odôvodnenia výberu dodávateľa ešte pred podpisom zmluvy?',info:'V Košiciach sú zákazky bežne zverejňované až po výbere dodávateľa, bez povinnosti uviesť dôvod, prečo bol vybraný práve on. Občan sa tak nemá šancu ozvať predtým, ako je vec rozhodnutá. Bratislava a Trenčín zverejňujú zámer aj odôvodnenie výberu vopred, dobrovoľne nad rámec zákona. V Košiciach takáto prax chýba.',a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
+  {t:'Financie',q:'Má primátor Košíc prioritizovať splácanie mestského dlhu pred novými investíciami, aj keby to znamenalo spomalenie rozvoja infraštruktúry?',info:'Dlh mesta Košice k roku 2025 presahuje 200 miliónov eur, čo je pri bežných príjmoch mesta okolo 270 miliónov eur takmer 75 % týchto príjmov. Zákon stanovuje pre mestá strop dlhu na 60 % bežných príjmov, pri prekročení hrozí pokuta od ministerstva financií. Košice sa pohybujú nad týmto stropom, čo im reálne obmedzuje priestor na ďalšie úvery. Pri priemernej úrokovej sadzbe okolo 3 % mesto ročne platí zhruba 6 miliónov eur len na úrokoch, bez toho aby za to získalo čokoľvek nové.',a:{polac:'neutral',mudrak:'neutral',lorinc:'agree'}},
+  {t:'Samospráva',q:'Mal by primátor Košíc zmraziť platy poslancov mestského zastupiteľstva a odmeny členov komisií na súčasnej úrovni po celé volebné obdobie?',info:'Košické mestské zastupiteľstvo má 41 poslancov, každý dostáva mesačne okolo 700 eur. K tomu sa pripočítavajú odmeny za zasadnutia komisií. Celkovo mesto ročne vyplatí poslancom viac ako 800 000 eur. Za štyri roky volebného obdobia to predstavuje vyše 3 miliónov eur len na odmeny ľudí, ktorí sú volení zástupcovia, nie zamestnanci mesta.',a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
+  {t:'Korupcia',q:'Chceš, aby mal magistrát Košíc nezávislý útvar pre hlásenie podozrení z korupcie, na ktorý sa môže obrátiť ktokoľvek, zamestnanec aj občan, bez strachu z postihu?',info:'Zákon o ochrane oznamovateľov platí od roku 2022, no jeho reálne uplatňovanie závisí od vôle vedenia každej inštitúcie. V Košiciach neexistuje nezávislý útvar priamo pri primátorovi. Niektoré európske mestá, napríklad Kodaň alebo Zürich, majú dlhodobo fungujúce systémy hlásenia, ktoré preukázateľne znižujú korupciu v obstarávaní.',a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
+  {t:'Infraštruktúra',q:'Sú rozbitné cesty a chodníky v Košiciach pre teba dôležitejší problém ako nové veľké investičné projekty?',info:'Podľa pravidelných prieskumov spokojnosti je stav chodníkov a ciest dlhodobo jednou z top sťažností košických obyvateľov. Odhaduje sa, že výmena len najhoršieho úseku košických chodníkov by si vyžiadala desiatky miliónov eur. Mestský rozpočet nedokáže pokryť zároveň bežnú údržbu aj veľké investičné projekty, čo núti vedenie mesta robiť ťažké výbery priorít.',a:{polac:'neutral',mudrak:'agree',lorinc:'agree'}},
+  {t:'Doprava',q:'Má DPMK fungovať ako nezávislá profesionálna firma s jasnými výkonnostnými zmluvami, bez priamych zásahov primátora do jej riadenia?',info:'DPMK skončil v roku 2024 so stratou takmer 830 000 eur. Dotácia mesta vzrástla za šesť rokov z 19 miliónov na rekordných 37 miliónov eur ročne, pričom kvalita dopravy neklesla, ale ani nerástla. V roku 2023 prepukol ostrý štrajk vodičov, MHD sa takmer zastavila. DPMK zmeškal eurofondový tender na 20 miliónov eur na nové električky. Celá táto kríza sa odohrávala na pozadí rokov trvajúceho verejného konfliktu medzi primátorom a riaditeľom podniku, pričom obaja si navzájom hadzali vinu za zlý stav. Nový primátor zdedí podnik s rastúcimi nákladmi, zastaraným vozovým parkom a bez jasných pravidiel zodpovednosti.',a:{polac:'disagree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Doprava',q:'Má primátor Košíc aktívne tlačiť na výstavbu nových električkových tratí, napríklad na Sídlisko Ťahanovce alebo ku Volvu, a to aj za cenu spolufinancovania z mestského rozpočtu?',info:'Sídlisko Ťahanovce s 22 000 obyvateľmi nemá od zrušenia trate v roku 1965 žiadne elektrické spojenie. Nový závod Volvo pri Valalikoch zamestná v prvej fáze tisíc, neskôr až 8 000 ľudí, no žiadna plánovaná trasa električky k nemu neexistuje. Aktuálna modernizácia trate na Nad jazerom za 77 miliónov eur z eurofondov mení existujúcu trať, nebuduje novú. Košice majú stratégiu rozvoja električiek do roku 2050, no konkrétne financovanie nových tratí chýba.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Doprava',q:'Chceš, aby Košice budovali bezpečné cyklotrasy aj v obytných štvrtiach a na sídliskách, nielen v centre mesta?',info:'Košice majú len asi 40 km evidovaných mestských cyklotrás, pričom väčšina vedie mimo sídlisk. Západ, KVP, Ťahanovce či Dargovských hrdinov sú prakticky bez cyklistickej infraštruktúry. Plány sa opakovane posúvajú, napríklad cyklotrasa na Alpinku plánovaná na rok 2023 sa realizuje až od roku 2026. Skutočne bezpečná cyklotrasa musí mať fyzické oddelenie od automobilovej dopravy, nestačí namaľovať čiaru na vozovku.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Doprava',q:'Mal by primátor Košíc aktívne lobovať za zlepšenie železničného spojenia Košíc s Bratislavou, Prahou, Viedňou, Budapešťou, Miskolcom a Užhorodom a presadiť to ako investičnú prioritu mesta?',info:'Najrýchlejší vlak z Košíc do Bratislavy trvá v roku 2025 takmer 5 hodín, čo je viac než autom. IC vlaky boli od decembra 2024 zrušené. Spojenie s Užhorodom a Miskolcom je pomalé a nepravidelné, hoci Košice sú geograficky logistickým centrom regiónu. Primátor nemá priamu kompetenciu nad železnicami, no má nástroje tlačiť vládu, vyjednávať s ŽSR a spolufinancovať prestupné terminály. Každý rok nečinnosti túto príležitosť zmenšuje.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Rómske komunity',q:'Mal by magistrát Košíc aktívne a cielene ponúkať pracovné miesta na mestských prácach obyvateľom Luníka IX ako súčasť integračnej politiky?',info:'Luník IX je najväčšia rómska komunita v strednej Európe, s odhadovanou populáciou 7 000 až 8 000 ľudí v komplexe pôvodne navrhnutom pre 2 500. Nezamestnanosť tam dosahuje takmer 100 %. Magistrát realizoval projekt zamestnávania obyvateľov Luníka IX v U.S. Steel od roku 2008, v prvej vlne nastúpilo 20 ľudí. Projekt sa každý rok obnovoval, no nikdy nedosiahol rozsah, ktorý by štrukturálne zmenil situáciu. Otázka je, či a čo môže a má spraviť mesto nad rámec toho, čo robí dnes.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Sociálne',q:'Má magistrát Košíc financovať búranie ďalších havarijných panelákov na Luníku IX len vtedy, ak zároveň zabezpečí náhradné bývanie pred samotnou asanáciou?',info:'Mesto búralo havarijné vchody na Luníku IX bez toho, aby vopred zaistilo náhradné bývanie pre rodiny. Výsledkom bolo, že obyvatelia sa presunuli do nelegálnych osídlení v iných častiach mesta a okolia. Okolo Košíc vzniklo viac ako desať nových nelegálnych rómskych osídlení. Búranie bez riešenia bývania nepomáha integrácii, ale rozptyľuje problém do ďalších komunít a zvyšuje konflikty.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Hodnoty',q:'Primátor Košíc má byť hodnotovým lídrom, ktorý verejne obhajuje práva všetkých menšín v meste vrátane rómskej a LGBTQ+ komunity.',info:'Košice sú multietnickým mestom s významnou maďarskou, rómskou, rastúcou ukrajinskою a zahraničnou komunitou. Primátor je najviditeľnejší volený zástupca mesta a jeho slová majú váhu. Niektorí voliči od neho očakávajú hodnotové vedenie a verejné postoje. Iní považujú politické vyjadrenia primátora za rozdeľujúce a uprednostňujú, aby sa sústredil na konkrétne problémy. Táto voľba odráža, čo od komunálneho politika základne očakávaš.',a:{polac:'neutral',mudrak:'agree',lorinc:'disagree'}},
+  {t:'Školstvo',q:'Mal by primátor Košíc zaviesť rozšírené mimoškolské aktivity zadarmo pre deti zo sociálne slabších rodín, aj keby to znamenalo prerozdelenie časti existujúceho kultúrneho alebo športového rozpočtu?',info:'Prístup detí k mimoškolským aktivitám je v Košiciach silne závislý od príjmu rodiny. Magistrát spravuje sieť základných škôl a má kompetenciu financovať rozšírené programy. Niektoré európske mestá, napríklad Viedeň, financujú mimoškolské aktivity centrálne a zadarmo pre všetky deti bez ohľadu na príjem. Otázka je, odkiaľ zobrať financovanie bez navyšovania celkového rozpočtu.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Bezpečnosť',q:'Chceš, aby mestskí policajti v Košiciach pravidelne pešo hliadkovali v konkrétnych štvrtiach, poznali miestnych obyvateľov a zúčastňovali sa komunitných stretnutí, namiesto toho aby len reagovali na tiesňové volania z áut?',info:'Mestská polícia Košíc funguje prevažne reakčne a hliadkuje prevažne v autách. Komunitný model polície znamená, že každý policajt má pridelenú konkrétnu štvrť, v ktorej dlhodobo pôsobí, pozná ľudí a problémy priamo v teréne. V Manchestri sa vďaka tomuto modelu kriminalita znížila o 20 % za päť rokov. V Amsterdame má každá štvrť dedikovaného komunitného policajta. V Košiciach takýto systém neexistuje.',a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
+  {t:'Priemysel',q:'Je príchod Volva a transformácia U.S. Steel pod Nippon Steel pre Košice skôr príležitosťou, ktorú má primátor aktívne rozvíjať dopravnou a bytovou politikou, alebo rizikom jednostrannej závislosti na veľkom priemysle?',info:'Volvo Cars Košice spustilo v roku 2025 nábor prvých tisíc zamestnancov, závod má plne fungovať v roku 2026 s kapacitou až 8 000 pracovných miest. Nippon Steel prebral U.S. Steel a avizoval ďalšie investície. Obe spoločnosti požadujú od mesta bytovú politiku, lepšiu dopravu a cyklotrasy pre zamestnancov. Magistrát doteraz žiadne konkrétne dopravné ani bytové opatrenia priamo spojené s príchodom Volva nerealizoval.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Sovietský pamätník',q:'Má primátor Košíc aktívne presadzovať odstránenie komunistických symbolov z vojenského pamätníka Červenej armády a premenovanie Námestia osloboditeľov?',info:'V centre Košíc stojí pamätník sovietskeho vojaka s kosákmi a kladivami, symbolmi komunistickej strany, ktorej systém zákon č. 125/1996 Z.z. označuje za zločinecký, nemorálny a protiprávny. Tá istá armáda, ktorá v januári 1945 vyhnala fašistov, obsadila Československo a uvrhla ho do 40 rokov totality. Na tomto námestí v auguste 1968 sovietske tanky zabíjali ľudí, ktorí sa bránili vojenskej invázii. Pritom Košice boli v roku 1919 oslobodené legionármi od boľševickej maďarskej armády a námestie sa vtedy premenovalo na Legionárske. V roku 1949 komunisti toto meno vymazali. Pracovná skupina mesta v roku 2025 potvrdila, že zákon legálne odstránenie symbolov neumožňuje. Premenovanie námestia je však priamo v kompetencii mesta a za 35 rokov sa nestalo. V novembri 2024 mesto za 11 100 € nainštalovalo kosáky a kladivá späť.',a:{polac:'agree',mudrak:'agree',lorinc:'agree'}},
+  {t:'Medzinárodná spolupráca',q:'Mal by primátor Košíc aktívne budovať ekonomické a logistické partnerstvá s ukrajinskými mestami v kontexte povojnovej obnovy, aj keď výsledky sa prejavia až za 5 až 10 rokov?',info:'Košice sú najbližšie veľké mesto EÚ k ukrajinskej hranici, vzdialené len 90 km od Užhorodu. Objem povojnovej obnovy Ukrajiny odhaduje EÚ na 500 miliárd eur. Košické firmy zo stavebného, technického a logistického sektora majú reálnu šancu získať zákazky, ak mesto vytvorí inštitucionálne rámce spolupráce. Budapešť, Krakov a Varšava sa o pozíciu centra pre Ukrajinu aktívne uchádzajú od roku 2022. Košice zatiaľ nemajú systematický prístup.',a:{polac:'agree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Spolupráca',q:'Má primátor Košíc ustúpiť v niektorých sporných veciach županovi KSK, aby sa obnovila spolupráca, aj keby to znamenalo kompromisy v záujmoch mesta?',info:'Konflikt medzi vedením mesta a Košickým samosprávnym krajom trvá od roku 2019 a má reálne dôsledky pre obyvateľov. Spoločné projekty v doprave, sociálnych službách a vzdelávaní sú opakovane blokované alebo oneskorované. Napríklad prepojenie dopravných systémov mesta a kraja do jedného integrovaného systému sa nepodarilo napriek tomu, že na to existujú technické aj finančné predpoklady. Každý rok nefunkčnej spolupráce stojí obyvateľov konkrétne peniaze a čas.',a:{polac:'disagree',mudrak:'agree',lorinc:'neutral'}},
+  {t:'Vízia',q:'Primátor Košíc má v najbližšom volebnom období uprednostniť spoľahlivú správu každodenného chodu mesta pred presadzovaním veľkých transformačných projektov.',info:'V Košiciach sa rozbehlo niekoľko zásadných projektov naraz: nájomné bývanie, Volvo, nový územný plán, reforma mestských častí. Niektorí voliči chcú primátora, ktorý tieto projekty dotiahne do konca. Iní chcú niekoho, kto pridá ďalšie veľké vízie. Odpoveď prezradí, čo v tejto chvíli Košice podľa teba viac potrebujú.',a:{polac:'disagree',mudrak:'neutral',lorinc:'agree'}}
+];
+
+// ── Otázky: Župan / VÚC ──
+window.VAA_DATA.questions.kosice_vuc = [
+  {t:'Transparentnosť',q:'Má obžalovaný politik právo kandidovať a zastávať funkciu predsedu samosprávneho kraja počas prebiehajúceho súdneho procesu?',info:'Súčasný predseda kraja čelí obžalobe v dvoch kauzách, predražený nákup sypačov a manipulácia pri obstarávaní právnych služieb. Podľa prokuratúry spôsobili škodu takmer 554 000 eur. Košický kraj je jediným krajom na Slovensku, kde polícia začala trestné stíhanie pre manipulácie pri verejnom obstarávaní, a to hneď sedemkrát. Zvyšných sedem krajov nemá ani jedno.',a:{trnka:'agree',simko:'disagree',porvaz:'disagree',gurbal:'disagree',hirman:'disagree'}},
+  {t:'Transparentnosť',q:'Má kraj zverejňovať všetky zákazky nad 5 000 eur vrátane odôvodnenia výberu dodávateľa ešte pred podpisom zmluvy?',info:'Verejné obstarávanie kraja opakovane vzbudilo záujem vyšetrovateľov. Zákon ukladá zverejňovanie zákaziek, no odôvodnenie výberu konkrétneho dodávateľa vopred nie je povinné. Občan sa tak nemá šancu ozvať predtým, ako je vec rozhodnutá. Niektoré kraje a mestá zverejňujú odôvodnenie dobrovoľne. Košický kraj túto prax doteraz nezaviedol.',a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Transparentnosť',q:'Má nový predseda kraja zadať nezávislú kontrolu zákaziek a tendrov z uplynulých rokov, aby zistil, kde a ako sa míňali verejné peniaze?',info:'Košický kraj má za sebou niekoľko prípadov podozrivých nákupov, ktoré vyšetruje polícia. Bez nezávislej kontroly nie je možné zistiť, či ide o ojedinelé prípady alebo o dlhodobo nastavené postupy. Iné kraje si takéto audity zadali dobrovoľne. Košický kraj to doteraz odmietol.',a:{trnka:'disagree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Správa kraja',q:'Má kraj zriadiť nezávislého kontrolóra, ktorého nemôže odvolať predseda kraja, ale len krajské zastupiteľstvo?',info:'Krajskí poslanci opakovane žiadali vedenie kraja o správu k trestným konaniam týkajúcim sa krajského úradu a jeho organizácií. Tieto žiadosti zostali bez érsnej odpovede. Krajské zastupiteľstvo nemá zákonný nástroj, ktorým by predsedu k informovaniu prinútilo. Nezávislý kontrolór volený zastupiteľstvom by vytvoril trvalý mechanizmus dohľadu, ktorý by neskončil spolu s funkčným obdobím predsedu.',a:{trnka:'disagree',simko:'agree',porvaz:'agree',gurbal:'neutral',hirman:'agree'}},
+  {t:'Správa kraja',q:'Má kraj zaradiť prideľovanie dotácií obciam a organizáciám do rúk nezávislej komisie podľa vopred zverejnených pravidiel, nie do rúk predsedu kraja?',info:'Predseda kraja má dnes veľkú voľnosť pri rozhodovaní, komu a koľko z krajského rozpočtu pridelí v dotáciách. Kritici upozorňujú, že táto voľnosť sa môže využívať na odmieňanie lojálnych starostov a obcí pred voľbami. Jasné pravidlá a nezávislá komisia by znížili priestor pre takéto rozhodovanie a zvýšili dôveru verejnosti.',a:{trnka:'disagree',simko:'agree',porvaz:'agree',gurbal:'neutral',hirman:'agree'}},
+  {t:'Infraštruktúra',q:'Má nový predseda kraja prioritizovať opravu mostov a ciest pred inými investíciami, aj keby to znamenalo odloženie nových projektov?',info:'Za deväť rokov súčasného vedenia kraja vzrástol počet mostov v zlom stave z 68 na 383, teda o viac ako 500 %. Kraj spravuje 575 km ciest II. triedy a 1 377 km ciest III. triedy. Na ročné opravy ide 6 až 10 miliónov eur, čo stačí len na 45 km. NKÚ upozornil, že niektoré mosty sú jediným dopravným spojením obcí s okolím a situácia sa naďalej zhoršuje.',a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Infraštruktúra',q:'Má kraj opravovať cesty aj vtedy, ak na to nemá peniaze a musí sa zadlžiť alebo zaviazať na dlhé roky splácania?',info:'Kraj schválil plán opravy 250 km najhorších ciest za 65 miliónov eur. Namiesto bankového úveru by kraj splácal dodávateľovi z bežného rozpočtu počas desiatich rokov. Kraj tak obchádza zákonný strop dlhu, no dlhodobý záväzok zostáva. Niektorí poslanci tento postup kritizujú ako skryté zadlžovanie, iní ho považujú za jediné realistické riešenie pri obmedzenom rozpočte.',a:{trnka:'agree',simko:'neutral',porvaz:'neutral',gurbal:'neutral',hirman:'neutral'}},
+  {t:'Infraštruktúra',q:'Má predseda kraja urobiť z dobudovania diaľnice D1 az k ukrajinskej hranici svoju hlavnú prioritu a aktívne tlacit na vládu, aby sa výstavba nezdrzovala?',info:'Diaľnica D1 z Košíc smerom na Michalovce a k ukrajinskej hranici je nedokončená. Bez nej zostávajú celé okresy na juhu a východe kraja dopravne odrezané od zvyšku Slovenska. Dobudovanie D1 je predpokladom príchodu investorov, povojnovej obnovy Ukrajiny aj zlepšenia každodenného života státisícov ľudí. Kraj nemá priamu kompetenciu nad diaľnicami, no môže tlačiť na vládu a spolufinancovať prípravné práce.',a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Infraštruktúra',q:'Má kraj aktívne investovať do rozvoja Letiska Košice ako strategickej brány regiónu pre biznis aj cestovný ruch?',info:'Letisko Košice je druhé najväčšie na Slovensku s kapacitou 700 000 cestujúcich ročne, no reálna návštevnosť je dlhodobo výrazne nižšia. Kraj sa podieľa na jeho správe a rozvoji. Pre investorov ako Volvo Cars alebo Nippon Steel je dostupnosť priamych leteckých spojení kľúčovým faktorom pri rozhodovaní o umiestnení závodov. Priame letecké spojenia sú dnes kľúčovým faktorom, ktorý rozhoduje o tom, či zahraničná firma otvorí pobočku vo východnom Slovensku alebo radšej v Bratislave.',a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'neutral',hirman:'agree'}},
+  {t:'Infraštruktúra',q:'Má kraj urýchlene zaviesť spolocný cestovný lístok a jednotný cestovný poriadok pre autobusy kraja aj mestskú hromadnú dopravu Košíc?',info:'Obyvatelia obcí v okolí Košíc dnes nemôžu plynulo prestupovať medzi autobusmi kraja a mestskou dopravou na jeden lístok ani podľa jedného cestovného poriadku. Projekt spoločného dopravného systému bol opakovane odsúvaný, čiastočne aj kvôli napätým vzťahom medzi krajom a magistrátom. Susedné Maďarsko, Česká republika aj Rakúsko majú takéto prepojené systémy vo všetkých regiónoch štandardom.',a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Školstvo',q:'Má kraj pokračovať v zlučovaní stredných škôl v menších mestách za účelom úspory nákladov, aj keby to znamenalo, ze ziaci musia každý den dochádzat ďalej?',info:'Kraj v roku 2025 zlúčil 19 stredných škôl do 10 nových subjektov s plánovanou úsporou 2,3 milióna eur ročne. V okrese Sobrance odchádza na strednú školu do iného okresu uz 41 % deviatakov, a to este pred zlučovaním. Stredná škola v malom meste je casto poslednou verejnou inštitúciou, ktorá drží miestnu komunitu pri zivote. Jej zánik urýchluje odliv rodín a demografický úpadok.',a:{trnka:'agree',simko:'neutral',porvaz:'neutral',gurbal:'disagree',hirman:'neutral'}},
+  {t:'Školstvo',q:'Má kraj presadzovať vzdelávanie priamo u zamestnávateľov, kde firma platí žiaka a kraj zabezpecuje školu, v spolupráci s priemyselnými firmami regiónu?',info:'Systém vzdelávania priamo u zamestnávateľa, kde žiak striedavo chodí do školy a pracuje vo firme, funguje úspešne v Nemecku, Rakúsku aj na Slovensku. Košický kraj má veľkých priemyselných zamestnávateľov, Volvo Cars, Nippon Steel a mnoho strojárskych firiem. Napriek tomu odborné školstvo dlhodobo zaostáva za potrebami trhu práce a firmy hlásia nedostatok kvalifikovaných remeselníkov.',a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Mládez',q:'Má kraj zaviesť aktívne stimuly pre mladých absolventov, ktorí sa rozhodnú zostať alebo vrátiť sa pracovat do kraja, napríklad formou príspevkov na bývanie?',info:'Košický kraj dlhodobo stráca mladých vzdelaných ľudí v prospech Bratislavy a zahraničia. Podľa sčítania obyvateľov klesá počet ľudí v produktívnom veku vo väčšine okresov kraja. Niektoré európske regióny zaviedli úspešné programy návratu, napríklad príspevok na nájom alebo odpustenie časti pôžičky pri zotrvaní v regióne na päť rokov.',a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'neutral',hirman:'agree'}},
+  {t:'Školstvo',q:'Má kraj zachovať gymnáziá aj v malých mestách, aj keby mali menej ako 100 žiakov a stáli kraj viac na žiaka ako väcšie školy v mestách?',info:'Viaceré gymnáziá v menších mestách kraja bojujú s nízkym počtom žiakov a sú ekonomicky neefektívne. Ich zachovanie je nákladnejšie, no ich zánik odradí vzdelanejšie rodiny od zostania v regióne. Gymnázium v malom meste je pre mnohých rodičov rozhodujúcim faktorom pri výbere, kde žiť. Ekonomická logika hovorí inak ako záujem o udržanie komunity.',a:{trnka:'neutral',simko:'neutral',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Demografický pokles',q:'Má kraj aktívne bojovať proti odlivu obyvateľov, alebo má prijať pokles populácie ako realitu a prispôsobiť mu verejné služby?',info:'Viaceré okresy Košického kraja strácajú obyvateľov každý rok. Odliv mladých, starnutie populácie a zatváranie škôl a zariadení sa navzájom posilňujú. Niektoré regióny v Európe, napríklad v Estónsku alebo Poľsku, zaviedli cielené programy na spomalenie demografického úpadku s merateľnými výsledkami. Iné regióny prijali pokles populácie a prispôsobili mu rozmiestnenie škôl, nemocníc aj dopravy.',a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Zdravotníctvo',q:'Má kraj odkúpiť späť regionálne nemocnice od súkromných prevádzkovateľov, aby kraj znovu získal kontrolu nad zdravotnou starostlivosťou?',info:'Košický kraj prenajal regionálne nemocnice súkromným spoločnostiam. NKÚ v roku 2024 skonštatoval, že kraj tak stratil akúkoľvek možnosť ovplyvniť ich chod. Do nemocníc v rokoch 2020 az 2022 kraj neinvestoval ani euro. Trenčiansky kraj za rovnaké obdobie investoval 17,7 milióna eur a Žilinský 6,2 milióna eur. Oba tieto kraje si nemocnice ponechali a podľa NKÚ sú personálne aj investične výrazne lepšie.',a:{trnka:'disagree',simko:'agree',porvaz:'agree',gurbal:'neutral',hirman:'agree'}},
+  {t:'Zdravotníctvo',q:'Má kraj aktívne požadovať od štátu vyššie platby za zdravotnú starostlivosť pre nemocnice, ktoré obsluhjú vzdialené a riedko osídlené časti kraja?',info:'Nemocnica v malom meste musí byť k dispozícii aj pre desiatky obcí v okolí, no zdravotné poisťovne platia za rovnaký výkon rovnako ako nemocnici v Košiciach. Výsledkom je, že vidiecke nemocnice sú systematicky podfinancované pri rovnakých nákladoch na personál a prevádzku. Kraj nemá priamu právomoc nad poisťovňami, no môže tlačiť na ministerstvo zdravotníctva.',a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Seniori',q:'Má kraj výrazne rozšíriť kapacity domovov dôchodcov a zariadení opatrovateľskej služby v celom kraji, kde sú cakacie doby aj niekoko rokov?',info:'Kraj prevádzkuje 13 zariadení sociálnych služieb s kapacitou 1 701 miest pre seniorov a ľudí so zdravotným postihnutím. Čakacia doba na miesto v domove dôchodcov v niektorých častiach kraja presahuje tri roky. Priemerný vek zamestnancov v krajských sociálnych zariadeniach je 51 rokov a polovica zamestnancov má viac ako 50 rokov, čo naznačuje blížiaci sa personálny výpadok v najbližšom desaťročí.',a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Seniori',q:'Má kraj uprednostniť rozvoj opatrovateľskej služby v domácom prostredí pred budovaním nových ústavných zariadení pre seniorov?',info:'Opatrovateľská služba v domácom prostredí umožňuje seniorom zostať doma za nižšie náklady ako v zariadení. V krajinách ako Dánsko pokrýva táto forma starostlivosťi väčšinu potrieb seniorov a ústavná starostlivosť je poslednou možnosťou. Na Slovensku stále dominuje ústavný model, ktorý je drahší a kapacitne obmedzený. Rozvoj terénnej siete opatrovateliek si vyžaduje koordináciu so všetkými obcami kraja.',a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Seniori',q:'Má kraj zrovnať platové podmienky zdravotných sestier v krajských zariadeniach sociálnych služieb s platmi sestier v nemocniciach?',info:'Zdravotná sestra v nemocnici zarába od roku 2025 minimálne 1 430 eur, kým maximálny tarifný plat sestry v krajských zariadeniach sociálnych služieb dosahuje len 1 291 eur. Tento rozdiel 139 eur mesačne spôsobuje odliv personálu zo sociálnych zariadení do nemocníc. Kraj v auguste 2025 pristúpil k čiastočnému navýšeniu platov, no platový rozdiel zostáva a ohrozuje kvalitu starostlivosťi o seniorov.',a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Rozvoj regiónu',q:'Má kraj presmerovať väčší podiel krajského rozpočtu do najchudobnejších okresov, aj keby to znamenalo menej peñazí pre rozvinutejsie časti kraja?',info:'Nerovnosť medzi okresmi Košického kraja patrí k najvyšším na Slovensku. Okresy Sobrance a Gelnica patria medzi najchudobnejšie v celej EÚ, kým okolie Košíc patrí k priemeru. Vyrovnávanie týchto rozdielov je jednou zo základných úloh vyšších územných celkov, no v praxi sú krajské investície naďalej sústredené bližšie k Košiciam.',a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Spolupráca',q:'Má predseda kraja aktívne obnoviť spoluprácu s vedením mesta Košice a presadiť spolocné projekty, aj keby to znamenalo ústupky v sporných otázkach?',info:'Konflikt medzi vedením Košického samosprávneho kraja a magistrátom mesta Košice trvá od roku 2019 a jeho dôsledky znášajú obyvatelia. Spoločný cestovný lístok, koordinácia sociálnych zariadení aj územný rozvoj okolia Košíc sú roky blokované. Každý rok bez spolupráce stojí kraj a mesto konkrétne projekty a peniaze z eurofondov, ktoré si vyžadujú súčinnosť oboch samospráv.',a:{trnka:'neutral',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Rozvoj regiónu',q:'Má kraj investovať krajské peniaze do prípravy priemyselných parkov a infraštruktúry v slabsie rozvinutých častiach kraja, aj keby to znamenalo menej peñazí na iné priority?',info:'Volvo a US Steel priniesli tisíce pracovných miest, no len do okolia Košíc. Okresy Trebišov, Sobrance či Rožňava z tohto rozvoja ťažia minimálne. Príprava priemyselného parku stojí desiatky miliónov eur a výsledok nie je zaručený. Niektoré kraje v Európe takto úspešne pritiahli investorov do zaostalých oblastí, iné roky platili za nevyužité parky. Otázka je, či má kraj riskovať vlastné peniaze alebo šetriť.',a:{trnka:'agree',simko:'neutral',porvaz:'agree',gurbal:'neutral',hirman:'agree'}},
+  {t:'Cestovný ruch',q:'Má kraj výrazne zvýšiť investície do turistickej infraštruktúry v celom kraji, vrátane Slovenského raja, Slovenského krasu, Zemplína a Gemera?',info:'Košický kraj má výnimočný prírodný potenciál, dva národné parky, jaskyne Dobšinská ľadová jaskyňa a Ochtinská aragonitová jaskyňa zapísané na zozname UNESCO, Zemplínsku šíravu aj Spišský hrad. Napriek tomu je turistická infraštruktúra v mnohých lokalitách zastaraná, chýbajú cyklotrasy, ubytovanie a navigácia pre návštevníkov. Tirolsko s podobným prírodným potenciálom generuje z cestovného ruchu desaťnásobne vyšší obrat.',a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'agree',hirman:'agree'}},
+  {t:'Vízia',q:'Má predseda kraja verejne požadovať od vlády osobitný štatút pre Košický kraj ako priemyselnú bránu Slovenska k Ukrajine a juhovýchodnej Európe?',info:'Košický kraj je jediným krajom Slovenska, ktorý susedí s Ukrajinou, Maďarskom aj leží na koridore medzi strednou a východnou Európou. Príchod Volva, povojnová obnova Ukrajiny a rastúci tranzitný obchod z toho robia región s unikátnym strategickým potenciálom. Žiadny doterajší predseda kraja toto postavenie systematicky nevyužil ako vyjednávaciu pozíciu voči Bratislave ani Bruselu.',a:{trnka:'agree',simko:'agree',porvaz:'agree',gurbal:'neutral',hirman:'agree'}}
+];;
+// ══ DATA: PRESOV ══
+window.VAA_DATA = window.VAA_DATA || {};
+
+// ── Kandidáti ──
+window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
+window.VAA_DATA.candidates['presov_primator'] = [{id:'olha',name:'František Oľha',party:'Demokrati (úradujúci primátor)',color:'#4db6ac',url:'https://feroolha.sk'},{id:'mochnacky',name:'Rastislav Mochnacký',party:'KDH',color:'#90caf9',url:''},{id:'hagyari',name:'Pavel Hagyari',party:'Nezávislý',color:'#78909c',url:'https://hagyari.sk'},{id:'estocak',name:'Martin Eštočák',party:'Nezávislý',color:'#43a047',url:'https://martinestocak.sk'}];
+window.VAA_DATA.candidates['presov_vuc'] = [{id:'majersky',name:'Milan Majerský',party:'KDH (úradujúci župan)',color:'#90caf9',url:''},{id:'mazurek',name:'Milan Mazurek',party:'Republika / SMER-SD',color:'#c62828',url:''},{id:'geci',name:'Marián Geci',party:'Nezávislý',color:'#78909c',url:''}];
+
+// ── Otázky: Primátor / Primátorka ──
+window.VAA_DATA.questions = window.VAA_DATA.questions || {};
+window.VAA_DATA.questions.presov_primator = [
+  {t:'Doprava',        q:'Chceš, aby Prešov výrazne rozšíril sieť cyklotrás a tým znížil závislosť ľudí od áut?',
+   info:'Prešov má minimálnu cyklistickú infraštruktúru napriek tomu, že je tretím najväčším mestom. Rozsiahla sieť cyklotrás by zmenila každodenný transport tisícov ľudí, no vyžaduje rozsiahle investície a odber parkovacích miest.',
+   a:{olha:'agree',mochnacky:'disagree',hagyari:'neutral',estocak:'agree'}},
+  {t:'Infraštruktúra', q:'Sú rozbitné chodníky a cesty v Prešove tvojou hlavnou výhradou voči vedeniu mesta?',
+   info:'Prešovské cesty a chodníky sú dlhodobo v zlom stave, čo komplikuje pohyb najmä pre starých a hendikepovaných. Oprava základnej infraštruktúry je menšie politické víťazstvo ako veľké projekty, ale priamejší dopad na život ľudí.',
+   a:{olha:'neutral',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
+  {t:'Dane',           q:'Nesúhlasíš s postupným zvyšovaním miestnych daní v Prešove v posledných rokoch?',
+   info:'Vyššie miestne dane sú spôsobom, ako financovať rozvoj a služby bez zadlžovania — no zaťažujú domácnosti a podnikateľov. Kde je hranica medzi nevyhnutným zdrojom a neprijateľnou záťažou?',
+   a:{olha:'disagree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
+  {t:'Bývanie',        q:'Mal by Prešov stavať vlastné nájomné byty dostupné pre stredné a nižšie príjmové skupiny?',
+   info:'Bytová kríza zasiahla aj Prešov — nájomné rastie rýchlejšie ako mzdy. Mestské nájomné byty riešia symptóm, nie príčinu — ale pre konkrétnych ľudí môžu znamenať stabilitu a dôstojné bývanie.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'neutral',estocak:'neutral'}},
+  {t:'Bezpečnosť',     q:'Potrebuje Prešov viac mestských policajtov pre väčší pocit bezpečia v meste?',
+   info:'Pocit bezpečia v meste závisí od viditeľnosti polície aj od sociálnych podmienok. Viac policajtov je rýchle riešenie, ktoré voliči vnímajú pozitívne — ale bez sociálnych opatrení rieši len symptómy.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
+  {t:'Korupcia',       q:'Chceš povinné zverejňovanie všetkých mestských zákaziek Prešova vrátane odôvodnenia výberu dodávateľa?',
+   info:'Transparentnosť verejného obstarávania je základom dôvery v samosprávu. Prešov — rovnako ako iné slovenské mestá — mal zákazky, ktoré vyvolali otázky o klientelizme. Povinné odôvodnenie by tieto riziká znížilo.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
+  {t:'Školstvo',       q:'Mal by magistrát Prešova zadarmo zabezpečiť obedy pre všetky deti na mestských základných školách?',
+   info:'Bezplatné obedy eliminujú sociálnu stigmu a administratívnu záťaž testovania príjmu. Pre mesto to predstavuje výdavok — ale výskumy ukazujú, že sýte deti sa lepšie učia a menej absentujú.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'neutral',estocak:'agree'}},
+  {t:'LGBTQ+',         q:'Mal by primátor Prešova podporovať LGBTQ+ komunitné programy z mestských grantov?',
+   info:'Prešov je konzervatívne mesto s silnou cirkvou. Primátor môže ovplyvniť kultúru tolerancie cez grantovú politiku — alebo sa môže pridŕžať tradičného hodnotového rámca väčšiny voličov. Táto voľba odráža hlboké hodnotové rozdiely.',
+   a:{olha:'agree',mochnacky:'disagree',hagyari:'disagree',estocak:'disagree'}},
+  {t:'Rómske komunity',q:'Mal by primátor Prešova aktívne presadzovať integračné programy pre Rómov žijúcich na okraji mesta?',
+   info:'Prešov má tisíce Rómov v marginalizovaných komunitách na okraji mesta. Integrácia je dlhodobý, drahý a politicky náročný proces — no bez neho sa problém prehlbuje a mení na trvalý sociálny výdavok.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'neutral'}},
+  {t:'Energetická chudoba',q:'Mal by magistrát pomáhať prešovským domácnostiam v energetickej chudobe cez mestské programy?',
+   info:'Tisíce domácností v Prešove míňajú na energie neúmernú časť príjmu. Magistrát môže sprostredkovať skupinový nákup energií, subvencovať zatepľovanie starých bytov alebo inštalovať solárne panely na mestské budovy.',
+   a:{olha:'neutral',mochnacky:'agree',hagyari:'neutral',estocak:'agree'}},
+  {t:'Lokálny patriotizmus',q:'Vadí ti, že Bratislava a Košice dostávajú oveľa viac pozornosti a investícií ako Prešov?',
+   info:'Prešov je tretie najväčšie mesto, no v investičných zámeroch vlády často figuruje až za Žilinou alebo Nitrou. Primátor, ktorý aktívne lobuje za záujmy mesta, môže zmeniť tento vzorec — no závisí to aj od politických väzieb.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
+  {t:'Životné prostredie',q:'Mal by Prešov zakázať spaľovanie uhlia a tuhých palív v domácnostiach v husto obývaných oblastiach?',
+   info:'Ovzdušie v Prešove je v zimných mesiacoch znečistené starými kotlami. Zákaz je účinný, no sociálne citlivý — rodiny bez prostriedkov na výmenu kotla by trpeli. Riešením môže byť zákaz kombinovaný s dotačným programom.',
+   a:{olha:'neutral',mochnacky:'neutral',hagyari:'neutral',estocak:'neutral'}},
+  {t:'Kultúra',        q:'Mal by magistrát zvýšiť granty pre nezávislé kultúrne organizácie, festivaly a komunitné projekty v Prešove?',
+   info:'Prešov má bohatú kultúrnu scénu, ale podfinancovanú. Kultúrne granty sú nástrojom, ako podporiť miestnu kreativitu a súdržnosť komunity — pričom primátor určuje kritériá ich prideľovania.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},
+  {t:'Participácia',   q:'Chceš, aby prešovskí občania mohli cez digitálne hlasovanie rozhodovať o časti mestského rozpočtu?',
+   info:'Participatívny rozpočet zvyšuje záujem o samosprávu a garantuje, že aspoň časť peňazí ide na projekty, ktoré ľudia skutočne chcú. Vyžaduje dôveru v systém a aktívnu komunikáciu zo strany mesta.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},
+  {t:'Podnikanie',     q:'Mal by Prešov aktívne lákať nových investorov a firmy znížením poplatkov a zrýchlením povolení?',
+   info:'Prešov potrebuje nové pracovné miesta, keďže mnohí mladí odchádzajú. Ústretovosť voči investorom môže lákať firmy — no nesmie to byť na úkor práv existujúcich obyvateľov a životného prostredia.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
+  {t:'MHD',            q:'Chceš, aby mestská autobusová doprava v Prešove bola zadarmo pre dôchodcov a zdravotne znevýhodnených?',
+   info:'Bezplatná MHD pre zraniteľné skupiny je sociálne spravodlivé opatrenie, ktoré zvyšuje mobilitu tých, ktorí si dopravu nemôžu dovoliť. Stojí to peniaze z mestského rozpočtu, no znižuje závislosť od áut.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
+  {t:'Digitalizácia',  q:'Chceš, aby magistrát Prešova digitalizoval vydávanie povolení a minimalizoval potrebu osobných návštev úradu?',
+   info:'Digitálne úrady šetria čas a znižujú korupčné príležitosti. Prešov môže tento proces výrazne urýchliť bez nutnosti meniť zákony — stačí vôľa a investícia do IT systémov magistrátu.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},
+  {t:'Zelené mestá',   q:'Mal by Prešov vytvoriť viac mestských parkov a zelených plôch, aj na úkor parkovacích miest?',
+   info:'Prešov trpí nedostatkom zelene v husto obývaných oblastiach. Parky a stromoradia zlepšujú kvalitu ovzdušia a znižujú tepelné ostrovy — ale každé parkovacie miesto, ktoré zmizne, vytvorí nespokojného voliča.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},
+  {t:'Sport',          q:'Mal by magistrát Prešova viac investovať do bezplatných verejných ihrísk a športovísk dostupných pre všetkých?',
+   info:'Komerčné telocvične a športoviská sú mimo dosahu mnohých rodín. Verejné ihriská a outdoorové posilňovne v parkoch sú dostupné pre každého — od detí po seniorov — a zvyšujú fyzickú aktivitu obyvateľov.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
+  {t:'Korupcia',       q:'Chceš pravidelný nezávislý audit hospodárenia mestského magistrátu a všetkých mestských podnikov?',
+   info:'Audit mestského hospodárenia je štandardom zodpovednej správy. Nezávislý audítor — nie kontrolovaný magistrátom — môže odhaliť plytavosť alebo klientelizmus skôr, než narastú do škandálu.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
+  {t:'Mládež',         q:'Mal by magistrát vytvoriť stáže a pracovné príležitosti pre mladých absolventov priamo na úrade a v mestských podnikoch?',
+   info:'Prešovský region trpí odlevom mladých — mnohí odchádzajú za lepšou prácou. Mestský úrad a podniky môžu byť prvým zamestávateľom absolventov, čím ich udržia v meste a vychujú generáciu správcov.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
+  {t:'Hodnoty',        q:'Je pre teba dôležité, aby primátor Prešova aktívne reprezentoval kresťanské a konzervatívne hodnoty?',
+   info:'Prešov je hlboko veriacim mestom s veľkým vplyvom cirkvi na každodenný život. Pre časť voličov je hodnotová orientácia primátora rovnako dôležitá ako jeho kompetentnosť.',
+   a:{olha:'neutral',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
+  {t:'Transparentnosť',q:'Chceš, aby primátor Prešova každý rok zverejnil detailný účet plnenia volebných sľubov?',
+   info:'Zodpovednosť politikov za ich sľuby je základ demokratickej kultúry. Ročná správa o plnení programu by umožnila voličom porovnávať sľuby s realitou — no vyžaduje odvahu priznat aj neúspechy a oneskorenia.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'agree',estocak:'agree'}},
+  {t:'Vízia',          q:'Je pre teba primátor Prešova predovšetkým dobrý správca každodenných problémov mesta, alebo vizionár budúcnosti?',
+   info:'Prešov potrebuje oboje — no v akom pomere? Dobrý správca opravuje cesty a nezakladá dlhy; vizionár mení charakter mesta na desaťročia. Tvoja odpoveď odhaľuje, aký typ vedenia teraz mestu chýba najviac.',
+   a:{olha:'disagree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
+  {t:'Životné prostredie',q:'Mal by Prešov vytvoriť viac mestských parkov a zelených plôch, aj na úkor parkovacích miest?',
+   info:'Prešov trpí nedostatkom zelene v husto obývaných oblastiach. Parky a stromoradia zlepšujú kvalitu ovzdušia a znižujú tepelné ostrovy — no každé parkovacie miesto, ktoré zmizne, vytvorí nespokojného voliča.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},
+,
+
+  {t:'Most JP II.',        q:'Je 18-mesačná uzávierka mosta Jána Pavla II. adekvátne kompenzovaná mestskými dopravnými opatreniami?',
+   info:'Most Jána Pavla II. je kľúčovým dopravným spojením medzi Sídliskom III., Novosvitom a centrom — jeho rekonštrukcia trvá 18 mesiacov a zásadne zmenila dopravu v meste. Nový most bude bez stredového piliera, odolný voči 100-ročnej povodni a so semaformi preferujúcimi MHD. Primátor Oľha sľúbil dokončenie v jeseni 2026 za vlastné mestské zdroje. Mnohí Prešovčania sa sťažujú na nedostatočné obchádzkové trasy a informovanie verejnosti počas výstavby.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},,
+  {t:'Solivary',           q:'Má primátor zabezpečiť dlhodobý plán riešenia poddolovaného územia v Solivaroch, vrátane prípadného presídlenia?',
+   info:'Primátor Oľha vyhlásil v februári 2026 mimoriadnu situáciu pre poddolované územie v dobývacom priestore Solivar — historická soľná baňa spôsobuje nestabilitu pôdy. Mimoriadna situácia umožňuje samospráve flexibilnejšie a rýchlejšie reagovať na riziko subsidencie. Poddolované územia predstavujú dlhodobé geologické riziko, ktoré sa s časom prehlbuje. Riešenie môže vyžadovať presídlenie časti obyvateľov — to je finančne a sociálne mimoriadne náročné.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},,
+  {t:'Štadión a šport',    q:'Stojí rekonštrukcia futbalového štadióna za vynaložené verejné zdroje, keď Prešov zároveň bojuje s dierami v rozpočte?',
+   info:'Prešov organizoval Majstrovstvá Európy hráčov do 21 rokov, na čo bola nevyhnutná rekonštrukcia štadióna — projekt bol ironicky nazývaný "stavbou storočia" pre svoju zdĺhavosť. Primátor Oľha narazil na komplikácie — trestné oznámenie poslanca a kontroly spomalili projekt. Verejné financovanie štadiónov je v európskych mestách kontroverzné — prinesie príjmy z cestovného ruchu a prestíž, no peniaze mohli smerovať do základnej infraštruktúry. Výsledkom má byť moderné multifunkčné zariadenie aj pre iné podujatia.',
+   a:{olha:'agree',mochnacky:'neutral',hagyari:'neutral',estocak:'agree'}},,
+  {t:'Mestský dlh',        q:'Má primátor Prešova prioritizovať splácanie dlhov pred novými investíciami, aj za cenu zastavenia niektorých projektov?',
+   info:'Prešov plánoval na rok 2026 investície za 45 miliónov eur — 21 miliónov z eurofondov podmieňuje 6 miliónov vlastného spolufinancovania. Štát posiela samosprávam menej peňazí ako zákon predpokladá — primátor preto tvorí finančnú rezervu. Príliš konzervatívny prístup k dlhu môže o nenávratné eurofondy prísť, no príliš odvážny zadlžuje budúce generácie. Väčšina slovenských miest balansuje medzi investičnou aktivitou a fiškálnou zodpovednosťou.',
+   a:{olha:'neutral',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},,
+  {t:'Vojenská nemocnica', q:'Má primátor Prešova aktívne podporovať výstavbu novej vojenskej nemocnice v meste, aj keby si to vyžiadalo zmeny v územnom pláne?',
+   info:'Vláda SR oznámila zámer vybudovať novú vojenskú nemocnicu v Prešove za odhadovaných 550 miliónov eur — prípravné práce sa začali v roku 2025. Prešov je sídlom armádneho výcvikového pluku a má strategickú polohu pri hraniciach s Poľskom a Ukrajinou. Nemocnica by priniesla stovky pracovných miest a zlepšila zdravotnícke kapacity celého regiónu. Kľúčovou otázkou zostáva, či bude nemocnica slúžiť aj civilnému obyvateľstvu, alebo zostane výlučne vojenská.',
+   a:{olha:'agree',mochnacky:'agree',hagyari:'agree',estocak:'agree'}},
+];
+
+// ── Otázky: Župan / VÚC ──
+window.VAA_DATA.questions.presov_vuc = [
+  {t:'Infraštruktúra',q:'Má kraj prioritizovať opravu ciest a mostov pred všetkými ostatnými investíciami, aj keby to znamenalo odloženie nových projektov?',info:'Kraj spravuje 2 484 km ciest II. a III. triedy, čo je druhý najväčší rozsah spomedzi všetkých krajov SR. Stav ciest je dlhodobo kritický. Súvislé opravy stoja ročne okolo 15 miliónov eur, čo stačí len na zlomok siete. Niektoré mosty sú v havarijnom stave roky a kraj odhaduje, že len na najkritickejšie opravy by potreboval desiatky miliónov eur navyše.',a:{majersky:'agree',mazurek:'agree',geci:'agree'}},
+  {t:'Infraštruktúra',q:'Má kraj opravovať cesty aj vtedy, ak na to nemá peniaze a musí sa zaviazať na dlhé roky splácania súkromnému dodávateľovi?',info:'KSK schválil opravu 250 km ciest za 65 miliónov eur formou splátok dodávateľovi počas 10 rokov. PSK čelí rovnakej dileme pri 2 484 km ciest. Konsolidačný balíček vlády pre rok 2025 znížil príjmy krajov, eurofondy na cesty sú neisté a stav sa každým rokom zhoršuje. Čakanie na lepšie časy môže znamenať, že cesty sa dostanú do piateho, najhoršieho stupňa poškodenia, kde je rekonštrukcia dvakrát drahšia.',a:{majersky:'agree',mazurek:'agree',geci:'neutral'}},
+  {t:'Letisko',q:'Má kraj aktívne investovať do rozvoja Letiska Poprad-Tatry ako celoročnej brány regiónu pre biznis aj turizmus?',info:'Letisko Poprad-Tatry je jediné funkčné regionálne letisko v kraji. Funguje prevažne sezónne s obmedzeným počtom pravidelných liniek. Pre investorov a turistov je priame letecké spojenie kľúčovým faktorom, ktorý rozhoduje o tom, či firma alebo návštevník zvolí Prešovský kraj alebo iný región. Letisko Bratislava má niekoľkonásobne hustejšiu sieť destinácií, čo znevýhodňuje celý sever a východ Slovenska pri prilákaní zahraničných firiem aj turistov.',a:{majersky:'agree',mazurek:'neutral',geci:'agree'}},
+  {t:'Tatry',q:'Má kraj riešiť dopravný kolaps vo Vysokých Tatrách obmedzením individuálnej automobilovej dopravy v národnom parku v prospech hromadnej?',info:'Vysoké Tatry ročne navštívia milióny turistov, no Tatranská elektrická železnica prepravuje len okolo 1,5 milióna cestujúcich ročne pri kapacite, ktorá nestačí sezónnemu náporu. Modernizácia a rozšírenie trate k poľskej hranici smerom na Zakopaného je odhadovaná na stovky miliónov eur. Kraj pracuje od marca 2025 na štúdii uskutočniteľnosti projektu Dve krajiny, jedny Tatry za 404 000 eur s Malopoľským vojvodstvom. Mestá ako Zakopané a Zermatt obmedzili autá v národnom parku úspešne, no vyžiadalo si to roky prípravy a jasnú politickú vôľu.',a:{majersky:'agree',mazurek:'neutral',geci:'neutral'}},
+  {t:'Doprava',q:'Má kraj aktívne tlačiť na štát, aby zabezpečil rýchle priame vlakové spojenie Prešova s Bratislavou?',info:'Cesta vlakom z Prešova do Bratislavy trvá dnes viac ako 7 hodín s niekoľkými prestupmi, napriek tomu, že vzdialenosť je 415 km. Prešov je tretie najväčšie mesto Slovenska, no vlaková dostupnosť hlavného mesta je horšia ako z menších miest na západe krajiny. Pre obyvateľov Humenného, Bardejova či Sniny to znamená prakticky celý deň strávený na ceste. Kraj nemá priamu kompetenciu nad železnicou, no môže vytvárať politický tlak a spolupracovať s mestom Prešov a ostatnými samosprávami.',a:{majersky:'agree',mazurek:'agree',geci:'agree'}},
+  {t:'Hospodárstvo',q:'Má kraj investovať vlastné peniaze do prípravy priemyselných parkov v najchudobnejších okresoch, aj keby výsledok nebol zaručený?',info:'Miera nezamestnanosti v PSK dosiahla v roku 2023 hodnotu 10,8 %, čo je dlhodobo najvyššia hodnota spomedzi všetkých ôsmich krajov SR. V okresoch Medzilaborce a Snina presahuje 15 %. Príprava jedného priemyselného parku stojí 5 až 20 miliónov eur a bez investora ide o mŕtvy kapitál. Niektoré európske regióny takto úspešne pritiahli investorov do zaostalých oblastí, iné roky platili za nevyužité parky.',a:{majersky:'agree',mazurek:'agree',geci:'agree'}},
+  {t:'Hospodárstvo',q:'Má kraj aktívne lákať nové fabriky a zamestnávateľov do okresov, kde nezamestnanosť presahuje 15 %?',info:'V okresoch Medzilaborce a Snina je každý šiesty človek bez práce. Prešovský kraj má dlhodobo najvyššiu nezamestnanosť v SR a väčšina ľudí, ktorí odchádzajú, odchádza práve preto, že v kraji nemôžu nájsť prácu. Kraj môže ponúkať investorom zvýhodnené podmienky, pripravené pozemky a spoluprácu so školami. Bez nových zamestnávateľov sa situácia v najslabších okresoch sama od seba nezlepší.',a:{majersky:'agree',mazurek:'agree',geci:'agree'}},
+  {t:'Školstvo',q:'Má kraj presadzovať vzdelávanie priamo u zamestnávateľov, kde firma platí žiaka a kraj zabezpečuje školu, v spolupráci s priemyselnými firmami?',info:'Predseda kraja Majerský vyhlásil tento systém za svoju hlavnú prioritu v školstve po nástupe do funkcie. Kraj má silnú tradíciu strojárstva a remesiel, no firmy dlhodobo hlásia nedostatok kvalifikovaných pracovníkov. V Nemecku a Rakúsku absolvuje takýto systém viac ako 40 % žiakov stredných škôl a miera nezamestnanosti mladých je tam pod 8 %. V PSK je podiel stále nízky napriek rastúcemu záujmu firiem.',a:{majersky:'agree',mazurek:'neutral',geci:'agree'}},
+  {t:'Mládež',q:'Má kraj zaviesť aktívne stimuly pre mladých ľudí, ktorí sa po štúdiu rozhodnú vrátiť a pracovať v kraji?',info:'PSK je najľudnatejší kraj SR s 810 000 obyvateľmi a zároveň krajom s najvyššou pôrodnosťou. Napriek tomu od roku 1996 vykazuje záporné migračné saldo každý rok. V roku 2023 odišlo o 1 455 ľudí viac, ako prišlo. Odchádzajú najmä mladí vzdelaní ľudia za prácou do Bratislavy alebo do zahraničia. Niektoré európske regióny zaviedli úspešné programy, napríklad príspevok na nájom alebo odpustenie časti pôžičky pri zotrvaní v regióne na päť rokov.',a:{majersky:'agree',mazurek:'neutral',geci:'agree'}},
+  {t:'Sociálne',q:'Má kraj pomáhať domácnostiam, ktoré si nemôžu dovoliť zaplatiť účty za energie?',info:'V niektorých oblastiach Prešovského kraja, najmä tam, kde je vysoká nezamestnanosť a chudoba, rodiny vydávajú viac ako 10 % svojho príjmu len na vykurovanie a elektrinu. Starý a nezateplený dom môže stáť rodinu tisíce eur ročne navyše oproti novostavbe. Kraj môže spolufinancovať zatepľovanie domov, prispievať na výmenu starých kotlov a koordinovať pomoc s ministerstvom. Priama pomoc s účtami za energie je v kompetencii štátu, nie kraja.',a:{majersky:'agree',mazurek:'neutral',geci:'agree'}},
+  {t:'Zdravotníctvo',q:'Má kraj zachovať pôrodnicu v Svidníku, aj keby jej prevádzka trvalo vyžadovala príspevok z krajského rozpočtu?',info:'Svidnícka pôrodnica čelila v roku 2025 hrozbe zatvorenia kvôli nedostatku lekárov a klesajúcemu počtu pôrodov. Predseda kraja Majerský označil jej záchranu za svoju prvú prioritu po nástupe do funkcie. Situácia je stabilizovaná na jeden rok, no dlhodobé riešenie chýba. Pre ženy zo Svidníka a okolia by zatvorenie znamenalo cestu do Prešova alebo Bardejova, v niektorých prípadoch viac ako 40 km. V kraji s najvyššou pôrodnosťou v SR je dostupnosť pôrodníc otázkou bezpečnosti.',a:{majersky:'agree',mazurek:'agree',geci:'agree'}},
+  {t:'Zdravotníctvo',q:'Má kraj odkúpiť späť nemocnice od súkromných prevádzkovateľov, aby získal priamu kontrolu nad zdravotnou starostlivosťou?',info:'PSK má dnes len 34-percentný podiel v akciovke Prešovské zdravotníctvo, a.s., do ktorej vložil 42,2 milióna eur. NKÚ v roku 2024 skonštatoval, že PSK stratilo možnosť ovplyvniť chod nemocníc a vzdalo sa majetku určeného pre obyvateľov. Do nemocníc v rokoch 2020 až 2022 kraj neinvestoval ani euro. Trenčiansky kraj za rovnaké obdobie investoval 17,7 milióna eur, ponechal si nemocnice a podľa NKÚ je na tom výrazne lepšie.',a:{majersky:'neutral',mazurek:'neutral',geci:'neutral'}},
+  {t:'Seniori',q:'Má kraj výrazne rozšíriť kapacity zariadení sociálnych služieb pre seniorov v celom kraji?',info:'Čakacia doba na miesto v domove dôchodcov v niektorých okresoch PSK presahuje tri roky. Kraj je demograficky najmladší v SR, podiel detí do 14 rokov (18,3 %) stále prevyšuje podiel seniorov nad 65 rokov (16,5 %). Toto sa však v nasledujúcich 20 rokoch výrazne zmení a dopyt po miestach pre seniorov prudko porastie. Výstavba jedného zariadenia pre 100 klientov stojí 3 až 6 miliónov eur a vyžaduje dlhodobé prevádzkové financovanie.',a:{majersky:'agree',mazurek:'neutral',geci:'neutral'}},
+  {t:'Seniori',q:'Má kraj uprednostniť rozvoj opatrovateľskej služby v domácom prostredí pred budovaním nových ústavných zariadení pre seniorov?',info:'Domáca opatrovateľská služba je o 30 až 50 % lacnejšia ako miesto v zariadení sociálnych služieb. V Dánsku pokrýva terénna starostlivosť väčšinu potrieb seniorov a ústavná starostlivosť je poslednou možnosťou. V PSK dominuje ústavný model. Rozvoj terénnej siete si vyžaduje opatrovateľky vo všetkých 663 obciach kraja a koordináciu s obecnými samosprávami, čo je organizačne náročné najmä v odľahlých oblastiach.',a:{majersky:'agree',mazurek:'neutral',geci:'agree'}},
+  {t:'Sociálne',q:'Má kraj vyrovnať platové podmienky zdravotných sestier v krajských sociálnych zariadeniach s platmi sestier v nemocniciach?',info:'Zdravotná sestra v nemocnici zarába od roku 2025 minimálne 1 430 eur mesačne. Maximálny tarifný plat sestry v krajských zariadeniach sociálnych služieb dosahuje len 1 291 eur, rozdiel je 139 eur mesačne. Tento rozdiel spôsobuje odliv personálu zo sociálnych zariadení do nemocníc. Vyrovnanie platov by pre PSK znamenalo desiatky miliónov eur ročne navyše a muselo by sa premietnuť do krajského rozpočtu.',a:{majersky:'agree',mazurek:'neutral',geci:'agree'}},
+  {t:'Školstvo',q:'Má kraj zachovať stredné školy aj v malých mestách, aj keby žiaci dochádzali ďalej ako dnes?',info:'V okrese Sobrance dochádza na strednú školu do iného okresu až 41 % deviatakov. Stredná škola v malom meste je pre mnohé rodiny posledným dôvodom zostať v regióne. Jej zánik urýchľuje demografický úpadok. Náklady na žiaka v malej škole sú o 30 až 60 % vyššie ako vo veľkej škole v meste. Kraj doplácal v roku 2024 na školstvo viac ako 100 miliónov eur.',a:{majersky:'agree',mazurek:'neutral',geci:'agree'}},
+  {t:'Demografia',q:'Má kraj aktívne bojovať proti odlivu obyvateľov, alebo má prijať pokles populácie a prispôsobiť mu verejné služby?',info:'PSK je najľudnatejší kraj SR, no záporná migrácia ho trápi od roku 1996. Napriek najvyššej pôrodnosti v SR odišlo v roku 2023 o 1 455 ľudí viac, ako prišlo. Niektoré regióny v Estónsku alebo Poľsku investovali do programov návratu obyvateľov s merateľnými výsledkami. Iné prijali pokles a prispôsobili mu infraštruktúru, menej škôl, menšie nemocnice, nižšie náklady. Oba prístupy majú svojich zástancov aj odporcov.',a:{majersky:'agree',mazurek:'agree',geci:'agree'}},
+  {t:'Mládež',q:'Má kraj financovať programy pre mladých, ktorí po škole nie sú zamestnaní ani sa ďalej nevzdelávajú?',info:'Podiel mladých ľudí vo veku 15 až 29 rokov, ktorí nie sú zamestnaní ani sa nevzdelávajú, je v niektorých okresoch PSK dvakrát vyšší ako celoštátny priemer. Kraj realizoval v roku 2024 projekt mapovania týchto potrieb za 347 000 eur. Bez aktívnych centier a programov hrozí, že títo mladí ľudia zostanú dlhodobo mimo trhu práce, čo zaťaží sociálny systém a prehĺbi kriminalitu v postihnutých oblastiach.',a:{majersky:'agree',mazurek:'neutral',geci:'agree'}},
+  {t:'Školstvo',q:'Má kraj opravovať existujúce budovy škôl pred tým, ako začne stavať nové?',info:'Mnohé stredné školy v PSK majú zastarané telocvične, laboratóriá a odborné učebne. Predseda kraja Majerský v roku 2025 spustil výstavbu novej telocvične pre levočské gymnázium za 1,7 milióna eur a modernizáciu zariadenia v Kežmarku za 1,6 milióna eur. Kritici upozorňujú, že pred novými stavbami by mali prísť opravy existujúcich budov, kde strecha tečie alebo kúrenie nefunguje.',a:{majersky:'agree',mazurek:'neutral',geci:'agree'}},
+  {t:'Bezpečnosť',q:'Má kraj aktívne spolufinancovať programy prevencie kriminality v oblastiach s vysokou mierou chudoby a sociálneho vylúčenia?',info:'Niektoré okresy PSK, najmä Prešov, Kežmarok a Vranov nad Topľou, patria k oblastiam s najvyššou mierou majetkovej trestnej činnosti na Slovensku. Kriminalita úzko súvisí s chudobou, nezamestnanosťou a sociálnym vylúčením. Kraj nie je orgánom činným v trestnom konaní, no môže spolufinancovať komunitné centrá, terénnych pracovníkov a preventívne programy. Jedno miesto v komunitnom centre stojí zlomok nákladov oproti miestu vo väznici.',a:{majersky:'agree',mazurek:'disagree',geci:'agree'}},
+  {t:'Morálka',q:'Má právoplatne odsúdený politik právo kandidovať a zastávať funkciu predsedu samosprávneho kraja?',info:'Milan Mazurek, jeden z kandidátov na predsedu Prešovského samosprávneho kraja, bol v roku 2019 právoplatne odsúdený Najvyšším súdom SR za trestný čin hanobenia národa, rasy a presvedčenia. Trest bol 10 000 eur, inak šesť mesiacov väzenia. Dôsledkom rozsudku bol zánik jeho poslaneckého mandátu zo zákona. Mazureka vo voľbách podporuje strana Republika aj Smer-SD, ktorej predseda Robert Fico verejne vyjadril jeho podporu. Zákon nekandidatúru predsedu kraja po zahladenom rozsudku nezakazuje, rozhodnutie zostáva na voličovi.',a:{majersky:'disagree',mazurek:'agree',geci:'disagree'}},
+  {t:'Hodnoty',q:'Má predseda kraja verejne obhajovať práva všetkých menšín žijúcich v kraji?',info:'Prešovský kraj je jedným z najrozmanitejších v SR. Žijú tu Rusíni so stáročnou tradíciou na severovýchode kraja, silná ukrajinská komunita, Poliaci pri hranici, Maďari na juhu a rómske komunity sústredené najmä v okresoch Prešov, Kežmarok, Sabinov a Vranov nad Topľou, kde tvoria odhadom 8 až 12 % obyvateľov. Predseda kraja je najviditeľnejší volený zástupca 810 000 obyvateľov rôzneho pôvodu a jeho postoje ovplyvňujú spoločenskú klímu v celom regióne.',a:{majersky:'neutral',mazurek:'disagree',geci:'neutral'}},
+  {t:'Cestovný ruch',q:'Má kraj zvýšiť výdavky na turistickú infraštruktúru, aj keby to znamenalo menej peňazí na cesty, školstvo alebo sociálne služby?',info:'PSK má štyri lokality UNESCO, Vysoké Tatry s Gerlachovským štítom a desiatky ďalších prírodných a kultúrnych pamiatok. Tirolsko s podobným prírodným potenciálom generuje z cestovného ruchu obrat presahujúci 8 miliárd eur ročne. Kraj v roku 2024 financoval z dotácií turistickú infraštruktúru, no sumy sú zlomkom toho, čo by bolo potrebné. Investícia do turizmu sa môže vrátiť, no výsledok nie je istý a iné potreby kraja sú bezprostredné.',a:{majersky:'neutral',mazurek:'disagree',geci:'neutral'}},
+  {t:'Spolupráca',q:'Má predseda kraja systematicky využívať polohu pri hranici s Poľskom a Ukrajinou ako príležitosť pre rozvoj celého regiónu?',info:'PSK susedí s Poľskom na dĺžke 360 km a s Ukrajinou na dĺžke 38 km. Malopoľské vojvodstvo má 3,4 milióna obyvateľov a silné hospodárstvo. Povojnová obnova Ukrajiny predstavuje investičnú príležitosť v hodnote stoviek miliárd eur. Kraj má logistickú polohu, cezhraničné kontakty aj skúsenosti z programov Interreg. Doteraz žiadny predseda kraja toto strategické postavenie systematicky nevyužil ako vyjednávaciu pozíciu.',a:{majersky:'agree',mazurek:'disagree',geci:'agree'}},
+  {t:'Vízia',q:'Má kraj v nasledujúcom volebnom období uprednostniť stabilné hospodárenie pred novými veľkými projektmi?',info:'PSK vstupuje do volieb v období, keď konsolidačný balíček vlády znižuje príjmy krajov a záväzky v sociálnych zariadeniach, školstve aj infraštruktúre rastú. Niektorí voliči chcú predsedu, ktorý upokojí financie a dotiahne rozrobené projekty. Iní chcú ambiciózneho lídra, ktorý kraj posunie vpred napriek obmedzeniam. Odpoveď prezrádza, aký typ predsedu kraja v tejto chvíli hľadáš.',a:{majersky:'agree',mazurek:'agree',geci:'agree'}}
+];
+// ══ DATA: ZILINA ══
+// ── Kandidáti ──
+window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
+window.VAA_DATA.candidates['zilina_primator'] = [
+  {id:'placeholder_zi_p',name:'Kandidát primátora',party:'(čoskoro)',color:'#90caf9'}
+];
+window.VAA_DATA.candidates['zilina_vuc'] = [
+  {id:'placeholder_zi_v',name:'Kandidát župana',party:'(čoskoro)',color:'#90caf9'}
+];
+
+// ── Otázky ──
+window.VAA_DATA.questions = window.VAA_DATA.questions || {};
+window.VAA_DATA.questions.zilina_primator = [];
+window.VAA_DATA.questions.zilina_vuc = [];
+// ══ DATA: BYSTRICA ══
+// ── Kandidáti ──
+window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
+window.VAA_DATA.candidates['bystrica_primator'] = [
+  {id:'placeholder_bb_p',name:'Kandidát primátora',party:'(čoskoro)',color:'#90caf9'}
+];
+window.VAA_DATA.candidates['bystrica_vuc'] = [
+  {id:'placeholder_bb_v',name:'Kandidát župana',party:'(čoskoro)',color:'#90caf9'}
+];
+
+// ── Otázky ──
+window.VAA_DATA.questions = window.VAA_DATA.questions || {};
+window.VAA_DATA.questions.bystrica_primator = [];
+window.VAA_DATA.questions.bystrica_vuc = [];
+// ══ DATA: NITRA ══
+// ── Kandidáti ──
+window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
+window.VAA_DATA.candidates['nitra_primator'] = [
+  {id:'placeholder_ni_p',name:'Kandidát primátora',party:'(čoskoro)',color:'#90caf9'}
+];
+window.VAA_DATA.candidates['nitra_vuc'] = [
+  {id:'placeholder_ni_v',name:'Kandidát župana',party:'(čoskoro)',color:'#90caf9'}
+];
+
+// ── Otázky ──
+window.VAA_DATA.questions = window.VAA_DATA.questions || {};
+window.VAA_DATA.questions.nitra_primator = [];
+window.VAA_DATA.questions.nitra_vuc = [];
+// ══ DATA: TRNAVA ══
+// ── Kandidáti ──
+window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
+window.VAA_DATA.candidates['trnava_primator'] = [
+  {id:'placeholder_tt_p',name:'Kandidát primátora',party:'(čoskoro)',color:'#90caf9'}
+];
+window.VAA_DATA.candidates['trnava_vuc'] = [
+  {id:'placeholder_tt_v',name:'Kandidát župana',party:'(čoskoro)',color:'#90caf9'}
+];
+
+// ── Otázky ──
+window.VAA_DATA.questions = window.VAA_DATA.questions || {};
+window.VAA_DATA.questions.trnava_primator = [];
+window.VAA_DATA.questions.trnava_vuc = [];
+// ══ DATA: TRENCIN ══
+// ── Kandidáti ──
+window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
+window.VAA_DATA.candidates['trencin_primator'] = [
+  {id:'placeholder_tn_p',name:'Kandidát primátora',party:'(čoskoro)',color:'#90caf9'}
+];
+window.VAA_DATA.candidates['trencin_vuc'] = [
+  {id:'placeholder_tn_v',name:'Kandidát župana',party:'(čoskoro)',color:'#90caf9'}
+];
+
+// ── Otázky ──
+window.VAA_DATA.questions = window.VAA_DATA.questions || {};
+window.VAA_DATA.questions.trencin_primator = [];
+window.VAA_DATA.questions.trencin_vuc = [];
+
+// ═══════════════════ END OF INLINE DATA ═══════════════════
+// ══════════════════════════════════════════════════════════════════
+//  VAA ENGINE, all functions in VAA namespace (no scope errors)
+// ══════════════════════════════════════════════════════════════════
+function makeVAA(){
+
+  // ── State ──
+  let city = null, type = null, Qs = [], userAns = [], qIdx = 0;
+
+  // ── Helpers ──
+  function $(id){ return document.getElementById(id); }
+
+  function _showScreen(id){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    const s = $(id);
+    if(s){ s.classList.add('active'); window.scrollTo(0,0); }
+  }
+
+  function _updateComp(){
+    const box = $('compBox');
+    if(!box) return;
+    const meta = window.CITY_META && window.CITY_META[city];
+    const comp = window.COMPETENCY && window.COMPETENCY[type];
+    if(meta && comp && type){
+      box.innerHTML = `<div class="comp-title">${comp.title}</div><div class="comp-body">${comp.text}</div>`;
+    } else {
+      box.innerHTML = '';
+    }
+  }
+
+  function _updateBtn(){
+    const btn = $('startBtn');
+    if(!btn) return;
+    btn.disabled = !(city && type);
+  }
+
+  function _setTheme(){
+    const meta = window.CITY_META && window.CITY_META[city];
+    if(!meta) return;
+    const th = type === 'primator' ? meta.thP : meta.thV;
+    document.body.className = th || '';
+  }
+
+  function _showQuestion(){
+    const q = Qs[qIdx];
+    if(!q) return;
+    const meta = window.CITY_META[city];
+    const key = `${city}_${type}`;
+    const crest = (window.CRESTS && window.CRESTS[key]) || '';
+
+    $('qCrest').innerHTML = crest;
+    $('qCityName').textContent = meta ? meta.name : '';
+    $('qCityType').textContent = meta ? (type==='primator' ? meta.primator : meta.vuc) : '';
+    $('qNum').textContent = `Otázka ${qIdx+1} z ${Qs.length}`;
+    $('qTopic').textContent = q.t || '';
+    $('qText').textContent = q.q || '';
+
+    // Info panel
+    const infoPanel = $('qInfoPanel');
+    const infoBtn   = $('qInfoBtn');
+    if(infoPanel){
+      infoPanel.innerHTML = q.info ? q.info : '';
+      infoPanel.classList.remove('open');
+    }
+    if(infoBtn) infoBtn.classList.remove('active');
+
+    // Highlight previous answer
+    ['ba','bn','bd'].forEach(id=>{
+      const btn = $(id); if(btn) btn.classList.remove('sel');
+    });
+    const prev = userAns[qIdx];
+    if(prev === 'agree')    { const b=$('ba'); if(b) b.classList.add('sel'); }
+    if(prev === 'neutral')  { const b=$('bn'); if(b) b.classList.add('sel'); }
+    if(prev === 'disagree') { const b=$('bd'); if(b) b.classList.add('sel'); }
+
+    // Progress bar on topBar
+    const fill = $('topFill');
+    if(fill) fill.style.width = ((qIdx / Qs.length)*100) + '%';
+
+    _showScreen('sc-question');
+  }
+
+  function _calcMatch(cid){
+    let score = 0, total = 0;
+    Qs.forEach((q, i)=>{
+      const u = userAns[i];
+      const c = q.a && q.a[cid];
+      if(!u || u === 'skip' || !c) return;
+      total++;
+      if(u === c) score += 2;
+      else if(u !== 'neutral' && c !== 'neutral') score += 0;
+      else score += 1;
+    });
+    return total === 0 ? 0 : Math.round((score / (total * 2)) * 100);
+  }
+
+  function _buildProfile(){
+    // Simple left-right / libertarian-authoritarian profile
+    let econ = 0, social = 0, econN = 0, socialN = 0;
+    const econTopics    = ['Dane','Zadlženie','Podnikanie','Energetická chudoba','Eurofondy','Infraštruktúra'];
+    const socialTopics  = ['LGBTQ+','Rómske komunity','Hodnoty','Participácia','Bývanie','Kultúra'];
+
+    Qs.forEach((q, i)=>{
+      const u = userAns[i]; if(!u || u==='skip') return;
+      const val = u==='agree' ? 1 : u==='disagree' ? -1 : 0;
+      if(econTopics.some(t=>q.t && q.t.includes(t)))  { econ += val;   econN++; }
+      if(socialTopics.some(t=>q.t && q.t.includes(t))){ social += val; socialN++; }
+    });
+
+    const em = econN   > 0 ? econ/econN   : 0;
+    const sm = socialN > 0 ? social/socialN : 0;
+
+    const econLabel = em < -2 ? 'ekonomicky ľavicovo orientovaný/á, preferuješ väčšiu úlohu štátu, prerozdeľovanie a sociálnu ochranu'
+                    : em > 2  ? 'ekonomicky pravicovo orientovaný/á, preferuješ nižšie dane, menej regulácií a väčšiu slobodu podnikania'
+                    : 'ekonomicky stredový/á, hľadáš rovnováhu medzi trhovými riešeniami a sociálnou ochranou';
+
+    const socialLabel = sm < -2 ? 'hodnotovo konzervatívny/a, ceníš si tradičné hodnoty, stabilitu a overené spoločenské normy'
+                      : sm > 2  ? 'hodnotovo progresívny/a, presadzuješ rovnosť, inklúziu, práva menšín a moderné prístupy'
+                      : 'hodnotovo centristický/á, vyvažuješ medzi tradičnými hodnotami a modernými prístupmi';
+
+    const sentence1 = 'Zdá sa, že si ' + econLabel + '.';
+    const sentence2 = 'V oblasti hodnôt si ' + socialLabel + '.';
+
+    return sentence1 + ' ' + sentence2 + ' Pamätaj, že každý hlas sa počíta, nenechaj iných rozhodovať za teba! Choď voliť 🗳';
+  }
+
+
+  // ── Turnout data 2022 ──
+  const TURNOUT_2022 = {
+    bratislava: {
+      primator: { ucast: 36.88, winner: 'Vallo',    winnerPct: 60.2, winnerVotes: 86981,  registered: 407650, color: '#CE1126' },
+      vuc:      { ucast: 38.60, winner: 'Droba',    winnerPct: 63.6, winnerVotes: 99870,  registered: 407650, color: '#0B4EA2' }
+    },
+    kosice: {
+      primator: { ucast: 30.89, winner: 'Polaček',  winnerPct: 36.79, winnerVotes: 20561, registered: 194700, color: '#D4AF37' },
+      vuc:      { ucast: 43.74, winner: 'Trnka',    winnerPct: 51.31, winnerVotes: 43680, registered: 194700, color: '#0B4EA2' }
+    },
+    presov: {
+      primator: { ucast: 42.66, winner: 'Oľha',     winnerPct: 37.26, winnerVotes: 10934, registered: 68600,  color: '#CC3322' },
+      vuc:      { ucast: 43.74, winner: 'Majerský', winnerPct: 41.96, winnerVotes: 12450, registered: 68600,  color: '#0B4EA2' }
+    }
+  };
+  function _showResults(){
+    const cands = (window.VAA_DATA.candidates && window.VAA_DATA.candidates[`${city}_${type}`]) || [];
+    const scores = cands.map(c=>({ ...c, pct: _calcMatch(c.id) }))
+                        .sort((a,b)=>b.pct - a.pct);
+
+    const meta = window.CITY_META[city];
+    const key  = `${city}_${type}`;
+    const crest = (window.CRESTS && window.CRESTS[key]) || '';
+
+    $('resCrest').innerHTML = crest;
+    $('resSub').textContent = meta ? `${meta.name} · ${type==='primator'?meta.primator:meta.vuc}` : '';
+    $('profileText').textContent = _buildProfile();
+
+    // Candidate bars
+    const list = $('resultsList');
+    if(list){
+      list.innerHTML = scores.map((c,i)=>{
+        const medal = i===0 ? '🥇' : i===1 ? '🥈' : i===2 ? '🥉' : '';
+        const nameHtml = c.url
+          ? `<a href="${c.url}" target="_blank" rel="noopener" class="cand-link">${c.name}</a>`
+          : c.name;
+        return `<div class="res-row">
+          <div class="res-name">${medal} ${nameHtml} <span class="res-party">${c.party}</span></div>
+          <div class="res-bar-wrap">
+            <div class="res-bar" data-pct="${c.pct}" style="width:0%;background:${c.color}"></div>
+            <span class="res-pct">${c.pct}%</span>
+          </div>
+        </div>`;
+      }).join('');
+      // Animate bars after DOM is ready
+      requestAnimationFrame(()=>{
+        requestAnimationFrame(()=>{
+          list.querySelectorAll('.res-bar').forEach(b=>{
+            b.style.width = b.dataset.pct + '%';
+          });
+        });
+      });
+    }
+
+    // Detail comparison
+    const detail = $('detailList');
+    if(detail){
+      detail.innerHTML = Qs.map((q,i)=>{
+        const u = userAns[i];
+        if(!u || u==='skip') return '';
+        const label = u==='agree'?'👍 Áno':u==='disagree'?'👎 Nie':'🤷 Záleží';
+        const candRows = scores.map(c=>{
+          const ca = q.a && q.a[c.id];
+          const match = ca === u ? '✓' : (ca && u && ca!=='neutral' && u!=='neutral') ? '✗' : '~';
+          const caLabel = ca==='agree'?'👍':ca==='disagree'?'👎':ca==='neutral'?'🤷':'?';
+          return `<span class="dl-cand" style="border-color:${c.color}">${caLabel} ${c.name.split(' ').slice(-1)[0]}</span>`;
+        }).join(' ');
+        return `<div class="dl-row">
+          <div class="dl-q">${q.t ? `<em>${q.t}:</em> ` : ''}${q.q}</div>
+          <div class="dl-ans">Ty: <strong>${label}</strong> &nbsp;|&nbsp; ${candRows}</div>
+        </div>`;
+      }).filter(Boolean).join('');
+    }
+
+    // Turnout widget
+    const tw = $('turnoutWidget');
+    if(tw) tw.innerHTML = _buildTurnoutWidget(city, type);
+
+    // Share URL with hash for shareability
+    const baseUrl = window.location.href.split('#')[0].split('?')[0];
+    const hashUrl = baseUrl + '#' + city + '/' + type;
+    history.replaceState(null, '', '#' + city + '/' + type);
+    const top = scores[0];
+    const text = `Moja zhoda s ${top ? top.name : 'kandidátom'}: ${top ? top.pct : 0}% | rozhodnisa.sk`;
+    window._vaaShare = { url: hashUrl, text };
+
+    // Top fill → 100%
+    const fill = $('topFill');
+    if(fill) fill.style.width = '100%';
+
+    _showScreen('sc-results');
+  }
+
+  // ── Public API ──
+  function pickCity(c, el){
+    city = c;
+    document.querySelectorAll('.city-card').forEach(b=>b.classList.remove('sel'));
+    if(el) el.classList.add('sel');
+    _updateComp();
+    _updateBtn();
+    // Reveal step 2
+    const ts = document.getElementById('typeSection');
+    const picker = document.querySelector('.picker');
+    if(ts){
+      ts.classList.add('visible');
+      // Smooth scroll to type section after short delay
+      setTimeout(()=>ts.scrollIntoView({behavior:'smooth', block:'nearest'}), 50);
+    }
+    if(picker) picker.classList.add('city-chosen');
+  }
+
+  function pickType(t, el){
+    type = t;
+    document.querySelectorAll('.type-card').forEach(b=>b.classList.remove('sel'));
+    if(el) el.classList.add('sel');
+    _updateComp();
+    _updateBtn();
+  }
+
+  function startQuiz(){
+    const btn = $('startBtn');
+    if(btn){ btn.disabled = true; btn.textContent = 'Načítavam…'; }
+    loadCityData(city).then(()=>{
+      const key = `${city}_${type}`;
+      Qs = (window.VAA_DATA.questions && window.VAA_DATA.questions[key]) || [];
+      if(Qs.length === 0){
+        if(btn){ btn.disabled = false; btn.textContent = 'Spustiť kalkulačku →'; }
+        alert('Otázky pre túto kombináciu ešte nie sú pripravené. Skúste Bratislavu, Košice alebo Prešov.');
+        return;
+      }
+      userAns = new Array(Qs.length).fill(null);
+      qIdx = 0;
+      _setTheme();
+      _showQuestion();
+    }).catch(err=>{
+      console.error('VAA startQuiz error:', err);
+      if(btn){ btn.disabled = false; btn.textContent = 'Spustiť kalkulačku →'; }
+    });
+  }
+
+  function ans(val){
+    userAns[qIdx] = val;
+    if(qIdx < Qs.length - 1){
+      qIdx++;
+      _showQuestion();
+    } else {
+      _showResults();
+    }
+  }
+
+  function goBack(){
+    if(qIdx > 0){
+      qIdx--;
+      _showQuestion();
+    } else {
+      restart();
+    }
+  }
+
+  function toggleDetail(){
+    const el = $('detailList');
+    const arrow = $('toggleArrow');
+    if(!el) return;
+    if(el.classList.contains('detail-collapsed')){
+      el.classList.remove('detail-collapsed');
+      el.classList.add('detail-expanded');
+      if(arrow) arrow.classList.add('open');
+    } else {
+      el.classList.remove('detail-expanded');
+      el.classList.add('detail-collapsed');
+      if(arrow) arrow.classList.remove('open');
+    }
+  }
+
+  function _buildTurnoutWidget(cityKey, typeKey){
+    const d = TURNOUT_2022[cityKey] && TURNOUT_2022[cityKey][typeKey];
+    if(!d) return '';
+    const elected = ((d.ucast / 100) * (d.winnerPct / 100) * 100).toFixed(1);
+    const barW = Math.min(d.ucast, 100).toFixed(1);
+    const typeLabel = typeKey === 'primator' ? 'primátora' : 'župana';
+    const quizTypeLabel = typeKey === 'primator' ? 'Primátor' : 'Župan';
+    return `
+      <div class="turnout-widget">
+        <div class="tw-header">Volebná účasť 2022</div>
+        <div class="tw-cards">
+          <div class="tw-card">
+            <div class="tw-type">${quizTypeLabel}</div>
+            <div class="tw-pct">${d.ucast.toFixed(1)} %</div>
+            <div class="tw-sub">prišlo voliť v roku 2022</div>
+            <div class="tw-bar-wrap">
+              <div class="tw-bar-fill" style="width:${barW}%;background:${d.color}"></div>
+              <div class="tw-bar-goal"></div>
+            </div>
+            <div class="tw-bar-labels">
+              <span>0 %</span>
+              <span class="tw-bar-center">cieľ 50 %</span>
+              <span>100 %</span>
+            </div>
+            <div class="tw-fact" style="border-color:${d.color}">
+              Súčasný ${typeLabel} <strong>${d.winner}</strong> bol zvolený hlasmi iba <strong>${elected} % všetkých voličov</strong>. Malá skupina rozhodla za všetkých.
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function restart(){
+    city = null; type = null; Qs = []; userAns = []; qIdx = 0;
+    document.querySelectorAll('.city-card,.type-card').forEach(b=>b.classList.remove('sel'));
+    const btn = $('startBtn');
+    if(btn){ btn.disabled = true; btn.textContent = 'Spustiť kalkulačku →'; }
+    const fill = $('topFill'); if(fill) fill.style.width = '0%';
+    document.body.className = '';
+    // Collapse step 2
+    const ts = document.getElementById('typeSection');
+    const picker = document.querySelector('.picker');
+    if(ts) ts.classList.remove('visible');
+    if(picker) picker.classList.remove('city-chosen');
+    history.replaceState(null, '', window.location.pathname);
+    _showScreen('sc-welcome');
+  }
+
+  function toggleInfo(){
+    const panel = $('qInfoPanel');
+    const btn   = $('qInfoBtn');
+    if(!panel) return;
+    const open = panel.classList.toggle('open');
+    if(btn) btn.classList.toggle('active', open);
+  }
+
+  function shareFunctions(){
+    const sh = window._vaaShare || {};
+    const url  = (sh.url || window.location.href).replace(/^file:\/\/[^#]*#?.*/, 'https://rozhodnisa.sk' + (sh.url && sh.url.includes('#') ? sh.url.slice(sh.url.indexOf('#')) : ''));
+    const text = sh.text || 'Zisti, s kým sa zhoduješ vo voľbách | rozhodnisa.sk';
+
+    function shareFB(){
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,'_blank');
+    }
+    function shareTW(){
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,'_blank');
+    }
+    function shareLI(){
+      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,'_blank');
+    }
+    function copyURL(){
+      const shareUrl = (window._vaaShare && window._vaaShare.url)
+        ? window._vaaShare.url.replace(/^file:\/\/[^#]*/, 'https://rozhodnisa.sk')
+        : 'https://rozhodnisa.sk';
+      if(navigator.clipboard){
+        navigator.clipboard.writeText(shareUrl).then(()=>{
+          const t=$('toast'); if(t){t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);}
+        });
+      }
+    }
+    return { shareFB, shareTW, shareLI, copyURL };
+  }
+
+  const sf = shareFunctions();
+
+  // ── URL state restore ──
+  (function(){
+    const p = new URLSearchParams(window.location.search);
+    const c = p.get('c'), t = p.get('t');
+    if(c && t){
+      const cb = document.querySelector(`.city-card[onclick*="'${c}'"]`);
+      const tb = document.querySelector(`.type-card[onclick*="'${t}'"]`);
+      if(cb && !cb.classList.contains('locked')) pickCity(c,cb);
+      if(tb) pickType(t,tb);
+    }
+  })();
+
+  return { pickCity, pickType, startQuiz, ans, goBack, restart, toggleInfo, toggleDetail, shareFB: sf.shareFB, shareLI: sf.shareLI, shareTW: sf.shareTW, copyURL: sf.copyURL };
+}
+
+const VAA = makeVAA();
+
+// ── Election countdown ──
+(function(){
+  const ELECTION = new Date('2026-10-24T07:00:00');
+  function tick(){
+    const now = new Date();
+    const diff = ELECTION - now;
+    if(diff <= 0){
+      const el = document.getElementById('countdownBar');
+      if(el) el.innerHTML = '<span class="cd-label">🗳 Dnes sú voľby! Choď voliť.</span>';
+      return;
+    }
+    const days = Math.floor(diff / 864e5);
+    const el = document.getElementById('cdDays');
+    if(el) el.textContent = days;
+  }
+  tick();
+  setInterval(tick, 60000);
+})();
+
+</script>
+
+<!-- Analytics
+     Currently: Umami (cookieless, GDPR-compliant, no cookie banner ne
