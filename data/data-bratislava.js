@@ -6,8 +6,8 @@ window.VAA_DATA = window.VAA_DATA || {};
 
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
-window.VAA_DATA.candidates['bratislava_primator'] = [{id:'vallo',name:'Matúš Vallo',party:'Team BA / PS / SaS / Demokrati',color:'#e63946'},{id:'cahoj',name:'Dana Čahojová',party:'Nezávislá',color:'#457b9d'},{id:'winkl',name:'Martin Winkler',party:'Strana Dunaj',color:'#2a9d8f'},{id:'hered',name:'Miro Heredoš',party:'Nezávislý (ex-Republika)',color:'#6d4c41'},{id:'geci',name:'Ľubomír Geci',party:'Nezávislý',color:'#78909c'}];
-window.VAA_DATA.candidates['bratislava_vuc'] = [{id:'droba',name:'Juraj Droba',party:'SaS / PS / Team BA / Demokrati',color:'#0097a7'},{id:'krajco',name:'Zuzana Krajčovičová',party:'Právo na pravdu',color:'#2e7d32'},{id:'smer_ba',name:'Kandidát SMER',party:'SMER-SD',color:'#e63946'},{id:'kdh_ba',name:'Kandidát KDH',party:'KDH',color:'#90caf9'}];
+window.VAA_DATA.candidates['bratislava_primator'] = [{id:'vallo',name:'Matúš Vallo',party:'Team BA / PS / SaS / Demokrati',color:'#e63946',url:'https://teamba.sk'},{id:'cahoj',name:'Dana Čahojová',party:'Nezávislá',color:'#457b9d',url:''},{id:'winkl',name:'Martin Winkler',party:'Strana Dunaj',color:'#2a9d8f',url:'https://martinwinkler.sk'},{id:'hered',name:'Miro Heredoš',party:'Nezávislý (ex-Republika)',color:'#6d4c41',url:''},{id:'geci',name:'Ľubomír Geci',party:'Nezávislý',color:'#78909c',url:''}];
+window.VAA_DATA.candidates['bratislava_vuc'] = [{id:'droba',name:'Juraj Droba',party:'SaS / PS / Team BA / Demokrati',color:'#0097a7',url:'https://droba.sk'},{id:'krajco',name:'Zuzana Krajčovičová',party:'Právo na pravdu',color:'#2e7d32',url:'https://zupanka.sk'}];
 
 // ── Otázky: Primátor / Primátorka ──
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
@@ -108,103 +108,29 @@ window.VAA_DATA.questions.bratislava_primator = [
 
 // ── Otázky: Župan / VÚC ──
 window.VAA_DATA.questions.bratislava_vuc = [
-  {t:'Vzdelávanie',    q:'Mal by kraj zatvárať stredné školy, ktoré majú dlhodobo málo žiakov, aj keby to znamenalo zánik niektorých typov škôl?',
-   info:'Demografický pokles znižuje počty žiakov, no politicky je veľmi ťažké zatvárať školy. Prázdne školy sú finančnou záťažou, ale ich zatvorenie ničí komunity a ruší vzdelávacie tradície.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'neutral'}},
-
-  {t:'Zdravotníctvo',  q:'Mal by kraj udržiavať stratové krajské nemocnice otvorené aj bez štátnej pomoci?',
-   info:'Krajské nemocnice sú pre stovky tisíc ľudí jedinou dostupnou zdravotnou starostlivosťou. Ich zatvorenie šetrí peniaze kraja, ale ničí prístup k zdravotnej starostlivosti — špeciálne pre starých a chudobných.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Dane',           q:'Mal by kraj znížiť poplatky za sociálne služby (domovy dôchodcov, denné centrá) pre seniorov s nižšími príjmami?',
-   info:'Poplatky za sociálne zariadenia sú pre mnohých dôchodcov vyššie ako ich dôchodok. Kraj môže nastaviť škálu poplatkov podľa príjmu — ale to znamená menej príjmov a nutnosť hľadať úspory inde.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Doprava',        q:'Chceš, aby Bratislavský kraj investoval viac do vlakových a autobusových spojení medzi obcami namiesto ciest pre autá?',
-   info:'Stovky obcí v BSK sú zle prepojené verejnou dopravou, čo núti ľudí k vlastným autám. Investície do vlakov a autobusov sú dlhodobé, ale vyžadujú koordináciu so štátom a ŽSR.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Životné prostredie',q:'Chceš, aby kraj aktívne bránil Malé Karpaty pred zástavbou a komerčným využitím?',
-   info:'Malé Karpaty sú pľúcami Bratislavy, no tlak developerov na ich okraje neustále rastie. Kraj rozhoduje o územnom pláne kraja — môže definitívne zablokovať alebo umožniť zástavbu.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree',krajco:'agree'}},
-
-  {t:'Korupcia',       q:'Chceš povinné zverejňovanie všetkých župných zákaziek vrátane odôvodnenia výberu dodávateľa?',
-   info:'Kraj má ročný rozpočet stovky miliónov eur. Transparentnosť zákaziek znižuje korupčné riziká, no politici sa jej niekedy bránia, lebo odhaľuje klientelizmus a stranícke záujmy.',
-   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Sociálne služby',q:'Mal by kraj výrazne rozšíriť kapacity domovov sociálnych služieb pre seniorov v menších mestách?',
-   info:'Domovy dôchodcov v Bratislavskom kraji sú preplnené a čakacie lehoty sú niekoľkoročné. Riešenie vyžaduje obrovské investície — kraj ich môže financovať z eurofondov, ale to trvá roky.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Lokálny patriotizmus',q:'Vadí ti, že vláda posiela oveľa viac eurofondov do iných krajov ako do Bratislavského?',
-   info:'BSK je bohatší kraj a EÚ pravidlá obmedzujú eurofondy pre vyspelé regióny. Niektorí to považujú za spravodlivosť — iní za diskrimináciu bohatšieho regiónu, ktorý taktiež potrebuje investície do infraštruktúry.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
-
-  {t:'Kultúra',        q:'Mal by kraj financovať kultúrne podujatia aj v menších obciach, nielen v Bratislave?',
-   info:'Väčšina krajských kultúrnych výdavkov ide do hlavného mesta, zatiaľ čo vidiecke obce majú minimálnu kultúrnu ponuku. Decentralizácia kultúry posilňuje komunity, ale vyžaduje systém spravodlivého prideľovania.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
-
-  {t:'Rómske komunity',q:'Mal by kraj investovať do integračných programov pre Rómov — vzdelávanie, bývanie, zamestnávanie — nad rámec minimálnych zákonných povinností?',
-   info:'BSK má menší podiel marginalizovaných Rómov ako východ Slovenska, ale integračné výzvy existujú aj tu. Dobrovoľné programy nad zákonný rámec sú politicky citlivé, ale môžu prelomiť cyklus vylúčenia.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
-
-  {t:'Energetická chudoba',q:'Mal by kraj platiť časť nákladov na zateplenie domov pre ľudí v energetickej chudobe?',
-   info:'Energetická chudoba zasiahla desaťtisíce domácností. Kraj nemôže regulovať ceny energií, ale môže subvenciovať zateplenie alebo sprostredkovávať skupinový nákup energie pre domácnosti s nízkymi príjmami.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
-
-  {t:'Hodnoty',        q:'Mal by župan verejne hradiť práva LGBTQ+ komunity, alebo sa má zdržať hodnotových vyjadrení a sústrediť sa len na správu kraja?',
-   info:'Župan je politická funkcia s verejnou viditeľnosťou. Niektorí voliči chcú reprezentanta, ktorý stojí za inkluzívnymi hodnotami; iní preferujú pragmatického správcu bez ideologického komentára.',
-   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'disagree',krajco:'agree'}},
-
-  {t:'Infraštruktúra', q:'Chceš, aby kraj prioritizoval opravu existujúcich krajských ciest pred budovaním nových?',
-   info:'Stovky kilometrov krajských ciest sú v zlom stave, ale politicky atraktívnejšie sú pásky pri otváraní nových projektov. Oprava ciest je nudná, ale nevyhnutná pre každodennú bezpečnosť tisícov vodičov.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Digitalizácia',  q:'Mal by kraj zaviesť digitálnu žiackú knižku a plné digitálne hodnotenie na krajských školách?',
-   info:'Digitalizácia škôl urýchľuje komunikáciu s rodičmi a znižuje papierovanie. Vyžaduje však investície do zariadení, preškolenia učiteľov a riešenie digitálnej nerovnosti medzi žiakmi.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'neutral',krajco:'agree'}},
-
-  {t:'Zdravotníctvo',  q:'Mal by kraj povinne zverejňovať čakacie doby na jednotlivých špecializovaných oddeleniach krajských nemocníc?',
-   info:'Pacienti dnes čakajú mesiace bez informácie o tom, kde sa čaká kratšie. Zverejňovanie čakacích dôb umožňuje pacientom lepšie sa rozhodovať a vytvára tlak na nemocnice, aby zlepšili efektivitu.',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Vzdelávanie',    q:'Mal by kraj vytvoriť odborné stredné školy priamo prepojené s miestnymi firmami, kde časť vyučovania prebieha v podnikoch?',
-   info:'Duálny systém vzdelávania funguje úspešne v Nemecku a postupne sa zavádza na Slovensku. Kraj môže aktívne tlačiť firmy k partnerstvám so školami — čo znižuje nezamestnanosť absolventov a zlepšuje ich praxu.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Participácia',   q:'Mal by kraj každoročne alokovať aspoň 5 % svojho rozpočtu na projekty, o ktorých hlasujú priamo občania?',
-   info:'Participatívny krajský rozpočet je inovatívny nástroj, ktorý posilňuje demokraciu zdola. Vyžaduje dôveru v občanov a ochotu politikov vzdať sa časti kontroly nad rozhodovaním.',
-   a:{droba:'agree',smer_ba:'disagree',kdh_ba:'neutral',krajco:'agree'}},
-
-  {t:'Sociálne služby',q:'Mal by kraj vyplácať príspevok rodinným príslušníkom, ktorí sa starajú o odkázaných seniorov doma namiesto ústavu?',
-   info:'Neformálna starostlivosť v rodine je lacnejšia a pre seniora ľudskejšia ako ústav. Jej finančné ocenenie by pomohlo tisíckám rodín — no kraj by musel nájsť zdroje na tento systém.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Mládež',         q:'Mal by kraj poskytovať štipendium najlepším stredoškolákom z chudobných rodín, aby mohli študovať bez finančných bariér?',
-   info:'Sociálne štipendiá sú jedným z najefektívnejších nástrojov na prelomenie chudoby cez vzdelávanie. Kraj vie takýto program financovať z vlastného rozpočtu bez čakania na štátne riešenie.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Doprava',        q:'Chceš, aby kraj spolufinancoval bezplatnú MHD pre stredoškolákov v Bratislavskom kraji?',
-   info:'Stredoškoláci musia každý deň cestovať do školy — čo stojí rodiny tisíce eur ročne. Bezplatná MHD pre žiakov existuje v niektorých krajoch a znižuje tlak na rodinné rozpočty, ale zaťažuje krajskú kasu.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
-
-  {t:'Vízia',          q:'Je pre teba dôležitejšia schopnosť župana vyjednávať s Bruselom a čerpať eurofondy ako jeho hodnotová orientácia?',
-   info:'Kraj dostáva každé štyri roky stovky miliónov eur z EÚ. Schopnosť tieto peniaze zmysluplne použiť je kľúčová — ale záleží ti tiež na tom, aké hodnoty župan reprezentuje navonok?',
-   a:{droba:'agree',smer_ba:'neutral',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Doprava',           q:'Má BSK dobudovať sieť terminálov integrovanej dopravy (TIOP) na prestup vlak–autobus v celom Bratislavskom kraji?',
-   info:'BSK buduje sieť prestupných terminálov, kde sa stretáva vlak, autobus a mestská doprava — prvý funguje od 2024 vo Vrakuni, ďalší sa plánuje v Ružinove. Terminály prepájajú IDS BK (Integrovaný dopravný systém Bratislavského kraja) s mestskou dopravou a znižujú závislosť od auta. Každý terminál stojí desiatky miliónov eur, z čoho veľkú časť pokrývajú eurofondy. Kľúčová otázka je, kto má terminály dlhodobo financovať — mesto, kraj, štát alebo developeri v okolí.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Zdravotníctvo',     q:'Má BSK zaviesť motivačné schémy pre lekárov, ktorí sa usadia v obciach Bratislavského kraja bez všeobecného lekára?',
-   info:'V mnohých obciach Bratislavského kraja chýba všeobecný lekár — pacienti musia za zdravotnou starostlivosťou cestovať desiatky kilometrov. Kraj má kompetenciu zriaďovať zdravotnícke zariadenia a motivovať lekárov štipendijnými programami alebo garantovanou ordináciou. Prešovský a Trnavský kraj zaviedli podobné schémy s pozitívnymi výsledkami. Systémovým riešením by mohla byť kombinácia krajských stimulov a štátnych platieb za dostupnosť.',
-   a:{droba:'agree',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}},
-
-  {t:'Bývanie',           q:'Má BSK koordinovať územné plány obcí, aby dostupné bývanie vznikalo pri dopravných uzloch a nie na okraji zástavby?',
-   info:'Ceny nehnuteľností v Bratislave ženia záujemcov o bývanie do okolitých obcí — tento trend sa nazýva suburbanizácia a zvyšuje závislosť od auta. BSK má kompetencie územného plánovania na úrovni kraja a môže usmerňovať lokalizáciu novej výstavby. Bývanie pri dopravných uzloch umožňuje ľuďom žiť bez auta, čo znižuje dopravné zaťaženie a emisie. Koordinácia si vyžaduje spoluprácu desiatokvôbcí, čo je politicky a administratívne náročné.',
-   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'neutral',krajco:'agree'}},
-
-  {t:'Životné prostredie', q:'Má BSK zakázať zástavbu poľnohospodárskej pôdy I. triedy v celom Bratislavskom kraji?',
-   info:'Bratislavský kraj stráca každoročne desiatky hektárov najúrodnejšej poľnohospodárskej pôdy kvôli výstavbe logistických centier, obytných štvrtí a priemyselných parkov. Záber pôdy je prakticky nezvratný — pôda I. triedy vzniká tisíce rokov. Kraj Malé Karpaty chráni ako prírodný park, no iným poľnohospodárskym oblastiam venuje menej pozornosti. Niektoré krajiny EÚ zavádzajú striktnejšiu ochranu pôdy na národnej úrovni a kraj môže toto lobovanie iniciálne tlačiť.',
-   a:{droba:'neutral',smer_ba:'agree',kdh_ba:'agree',krajco:'agree'}}
+  {t:'Školstvo',q:'Má kraj podmieňovať vydanie stanovísk k novým bytovým projektom tým, že developer spolufinancuje školu alebo škôlku v tej istej obci?',w:'BSK rastie o 9 000 až 10 000 obyvateľov ročne, najrýchlejšie spomedzi všetkých krajov SR. V čase vyhlásenia špeciálnej štátnej výzvy chýbalo v kraji 9 000 miest pre školákov a na niektorých školách hrozila dvojzmenná výučba. Developerom sa darí stavať byty, no školy a škôlky nestíhajú rásť. Štát musel vyčleniť 63 miliónov eur len na dobiehanie tohto dlhu.',a:{droba:'neutral',krajco:'agree'}},
+  {t:'Školstvo',q:'Má kraj uprednostniť dobudovanie základných škôl a škôlok v rastúcich obciach pred výstavbou nových veľkých krajských vzdelávacích areálov v Bratislave?',w:'Kraj plánuje vystavať tri rozsiahle vzdelávacie a odborné strediská v Petržalke, Modre a Bernolákove v celkovej hodnote presahujúcej 85 miliónov eur. V tých istých rokoch chýbalo v prímestských obciach BSK tisíce miest v základných školách a deti museli dochádzať ďaleko od domu. Kritici sa pýtajú, či by tieto peniaze nemali ísť skôr do obcí, kde rodiny s deťmi každý deň riešia, kde umiestnia dieťa do školy.',a:{droba:'disagree',krajco:'agree'}},
+  {t:'Školstvo',q:'Má kraj zatvárať stredné školy s dlhodobo nízkym zápisom, aj keby to znamenalo, že žiaci z menších miest musia dochádzať ďalej?',w:'BSK zriaďuje 117 stredných škôl. Niektoré majú dlhodobo nízky zápis a ich náklady na žiaka sú desiatky percent vyššie ako na veľkých školách v Bratislave. Kraj doplácal v roku 2024 na školstvo 147 miliónov eur. Zatváranie škôl šetrí peniaze, no obce strácajú poslednú verejnú inštitúciu a rodiny odchádzajú.',a:{droba:'agree',krajco:'neutral'}},
+  {t:'Školstvo',q:'Má kraj presadzovať vzdelávanie priamo u zamestnávateľov, kde firma platí žiaka a kraj zabezpečuje školu?',w:'BSK má veľkých zamestnávateľov v logistike, technológiách a priemysle, no firmy dlhodobo hlásia nedostatok kvalifikovaných pracovníkov. V Nemecku a Rakúsku takýmto spôsobom študuje viac ako 40 percent žiakov stredných škôl a miera nezamestnanosti mladých je pod 8 percent. V BSK je tento podiel stále nízky, napriek rastúcemu záujmu zo strany firiem.',a:{droba:'agree',krajco:'agree'}},
+  {t:'Doprava',q:'Má kraj obnoviť priame autobusové spojenia do centra Bratislavy pre obce v okolí Pezinka a Modry, aj keby to znamenalo vyššie náklady?',w:'V marci 2026 kraj skrátil dve autobusové linky zo smeru Pezinok a Modra. Autobusy po novom jazdia len na Prievozskú ulicu, odkiaľ musia cestujúci prestupovať na mestskú hromadnú dopravu. Droba rozhodnutie zdôvodnil vyhnutím sa poplatkovi za vstup na autobusovú stanicu Nivy, ktorý stanovil developer HB Reavis. Obyvatelia dotknutých obcí sa sťažujú na predĺženie cesty o 15 až 25 minút.',a:{droba:'disagree',krajco:'agree'}},
+  {t:'Doprava',q:'Má kraj uprednostniť koľajovú dopravu pred rozširovaním siete autobusových liniek?',w:'Droba dlhodobo presadzuje koľajovú dopravu ako budúcnosť mobility v BSK a kraj buduje sieť prestupných terminálov pri železničných staniciach. Vlak prepravuje 25 percent dochádzajúcich z prímestských obcí do Bratislavy. Autobusy sú flexibilnejšie a lacnejšie na zriadenie, no kapacitne a ekologicky menej efektívne pri väčšom objeme cestujúcich.',a:{droba:'agree',krajco:'neutral'}},
+  {t:'Doprava',q:'Má kraj koordinovať územné plány obcí tak, aby nová zástavba vznikala prednostne tam, kde existuje vlakové alebo autobusové spojenie?',w:'Tisíce nových bytov a rodinných domov v obciach BSK vznikli bez primeranej dopravnej obsluhy. Ľudia sú odkázaní na autá, čo denne preťažuje cesty z obcí do Bratislavy. Kraj má kompetenciu stanoviť v záväznej časti územného plánu podmienky, kde je nová zástavba prípustná. Obce to však vnímajú ako zásah do svojej samosprávy.',a:{droba:'agree',krajco:'agree'}},
+  {t:'Doprava',q:'Má kraj dobudovať obchvaty ďalších malokarpatských obcí ako Modra, Svätý Jur a Senec, aj keby to trvalo celé volebné obdobie?',w:'Obchvat obcí v okolí Pezinka bol dokončený v roku 2024. Ďalší plánovaný obchvat Modry je vo fáze projektovej dokumentácie. Cesty II. a III. triedy v BSK dostali v roku 2025 investície 35 miliónov eur a rekonštrukciou prejde 65 kilometrov vozoviek. Tranzitná kamionová doprava cez malé obce poškodzuje cesty a zaťažuje tisíce obyvateľov každý deň.',a:{droba:'agree',krajco:'agree'}},
+  {t:'Doprava',q:'Má kraj spolufinancovať bezplatnú cestovnú kartu pre stredoškolákov v celom BSK?',w:'Stredoškoláci v BSK platia za prímestské autobusy a vlaky, čo rodiny stojí stovky eur ročne. Niektoré kraje na Slovensku bezplatnú dopravu pre stredoškolákov zaviedli. Pre BSK s rozpočtom 320 miliónov eur by to znamenalo desiatky miliónov eur ročne navyše. Kraj by musel dohodnúť podmienky so železnicami a autobusovými dopravcami.',a:{droba:'agree',krajco:'agree'}},
+  {t:'Zdravotníctvo',q:'Má kraj aktívne riešiť nedostatok lekárov v obciach BSK, napríklad príspevkom na nájom ordinácie a jednorazovým bonusom pri usadení sa?',w:'Priemerný vek lekárov v BSK bol v roku 2022 na úrovni 56 rokov. V desiatkaroch obcí kraja chýba všeobecný lekár a pacienti cestujú desiatky kilometrov. Kraj v roku 2023 vyhlásil dotačnú výzvu na modernizáciu ambulancií, no motivačné schémy pre nových lekárov v podhodnotených obciach stále chýbajú. Bez zásahu hrozí, že odchádzajúca generácia lekárov nebude nahradená.',a:{droba:'agree',krajco:'agree'}},
+  {t:'Zdravotníctvo',q:'Má kraj zriadiť nonstop pohotovostné lekárne v Bratislave, Senci, Pezinku a Malackách?',w:'Pohotovostné lekárne v BSK majú obmedzené hodiny a viaceré oblasti kraja sú mimo dosahu nočnej lekárenskej služby. Krajčovičová sľúbila ich 24-hodinovú prevádzku ako jednu zo svojich prvých priorít. Kraj nemá priamu kompetenciu nad súkromnými lekárňami, no môže ich prevádzku spolufinancovať formou dotácií a zabezpečiť priestory.',a:{droba:'neutral',krajco:'agree'}},
+  {t:'Sociálne veci',q:'Má kraj rozšíriť kapacity zariadení sociálnych služieb pre seniorov, kde sú čakacie doby aj niekoľko rokov?',w:'BSK rastie o 9 000 až 10 000 obyvateľov ročne, čo zvyšuje dopyt po sociálnych službách vrátane domovov dôchodcov. Kraj v roku 2025 pripravuje zriadenie špecializovaných zariadení pre ľudí s autizmom a Alzheimerovou chorobou v Rači, Pezinku a Bratislave. Výstavba jedného zariadenia pre 100 klientov stojí 3 až 6 miliónov eur a vyžaduje dlhodobé prevádzkové financovanie.',a:{droba:'agree',krajco:'agree'}},
+  {t:'Životné prostredie',q:'Má kraj aktívne tlačiť na štát, aby urýchlil sanáciu vrakunskej chemickej skládky, ktorá kontaminuje spodnú vodu od roku 1996?',w:'Chemická skládka vo Vrakuni vznikla navážaním odpadu z priemyselných závodov v rokoch 1966 až 1980. Bolo tam uložených viac ako 90 000 m³ odpadu bez nepriepustných tesnení. Od roku 1996 hladina podzemnej vody zasahuje do kontaminovanej zóny. Vláda schválila likvidáciu termickou desorpciou v roku 2024, zodpovednosť za realizáciu a financovanie nesie štát, no kraj môže proces politicky urýchliť.',a:{droba:'agree',krajco:'agree'}},
+  {t:'Životné prostredie',q:'Má kraj zabrániť výstavbe veterných turbín v blízkosti obývaných oblastí BSK, aj keby to obmedzilo rozvoj obnoviteľnej energie?',w:'V okolí Stupavy a ďalších obcí BSK sa plánuje výstavba veterných turbín. Niektorí obyvatelia sa obávajú hluku, tieňa a dopadu na krajinu. Zákon umožňuje výstavbu pri splnení technických noriem. Kraj môže ovplyvniť vydávanie záväzných stanovísk a územnoplánovaciu dokumentáciu. Slovensko sa zároveň zaviazalo zvýšiť podiel obnoviteľných zdrojov energie v súlade s európskymi cieľmi.',a:{droba:'neutral',krajco:'agree'}},
+  {t:'Životné prostredie',q:'Má kraj odmietnuť akékoľvek plány na výstavbu spaľovne komunálneho odpadu na území BSK?',w:'BSK produkuje 567 kg komunálneho odpadu na obyvateľa ročne, čo je o 89 kg viac ako slovenský priemer a najvyššia hodnota spomedzi všetkých krajov. Diskusia o spaľovni v okolí Bratislavy sa objavuje opakovane. Zástancovia hovoria o energetickom zhodnotení odpadu, odporcovia upozorňujú na emisie a zdravotné riziká v hustom sídle. Kraj má kompetenciu vyjadrovať sa v procese posudzovania vplyvov na životné prostredie.',a:{droba:'neutral',krajco:'agree'}},
+  {t:'Životné prostredie',q:'Má kraj zastaviť zástavbu poľnohospodárskej pôdy I. triedy a zakázať jej premenu na stavebné pozemky?',w:'Poľnohospodárska pôda tvorí 46,8 percenta plochy BSK. Kraj každoročne stráca desiatky hektárov najúrodnejšej pôdy v dôsledku tlaku developerov. Raz zastavané územie sa nedá vrátiť. Kraj môže v záväznej časti územného plánu stanoviť prísnejšiu ochranu, ako vyžaduje zákon. Developeri a obce argumentujú potrebou bytovej výstavby.',a:{droba:'neutral',krajco:'agree'}},
+  {t:'Životné prostredie',q:'Má kraj chrániť Malé Karpaty pred komerčnou zástavbou a odmietnuť projekty zasahujúce do ochranného pásma lesa?',w:'Malé Karpaty sú zelenou pľúcou Bratislavy a jediným väčším lesom v dosahu hlavného mesta. Tlak developerov na okraje chráneného územia narastá. Kraj schvaľuje územnoplánovacie podklady a vydáva záväzné stanoviská. Niekoľko projektov rekreačných zariadení a vinárskych rezortov v posledných rokoch vzbudilo odpor miestnych obyvateľov a ochranárov.',a:{droba:'agree',krajco:'agree'}},
+  {t:'Bývanie',q:'Má kraj aktívne podporovať výstavbu dostupných nájomných bytov v spolupráci s obcami, aby zastavil odliv rodín z Bratislavy do predmestí?',w:'Ceny bytov v Bratislave sú pre väčšinu mladých rodín nedostupné. Rodiny odchádzajú do obcí v okolí, kde však chýbajú školy, lekári a verejná doprava. Kraj môže spolufinancovať výstavbu nájomných bytov, poskytnúť pozemky alebo pomôcť obciam s čerpaním štátnych dotácií na nájomné bývanie. Mestská výstavba Bratislavy pod vedením Valla plánuje tisíce nájomných bytov v spolupráci s BSK.',a:{droba:'agree',krajco:'neutral'}},
+  {t:'Transparentnosť',q:'Má kraj povinne zverejňovať všetky zákazky nad 5 000 eur vrátane odôvodnenia výberu dodávateľa ešte pred podpisom zmluvy?',w:'BSK hospodári s ročným rozpočtom 320 miliónov eur. Zákon ukladá zverejňovanie zákaziek, no odôvodnenie výberu konkrétneho dodávateľa vopred nie je povinné. Krajčovičová kritizovala Drobu za nepriehľadné vzťahy s developermi a biznis prepojenia okolo krajského úradu. Proaktívne zverejňovanie znižuje priestor pre korupciu a buduje dôveru verejnosti.',a:{droba:'agree',krajco:'agree'}},
+  {t:'Hodnoty',q:'Má župan BSK verejne podporovať práva LGBTQ+ komunity, alebo sa má sústrediť výlučne na správu kraja?',w:'Droba sa ako župan viackrát verejne vyjadril v prospech LGBTQ+ práv a inklúzie. Krajčovičová zastáva konzervatívnejší postoj. Bratislava hostí jeden z najväčších Pride pochodov v strednej Európe a zároveň má kraj silné konzervatívne voličské spektrum v prímestských obciach. Župan reprezentuje všetkých 728 000 obyvateľov kraja rôzneho presvedčenia.',a:{droba:'agree',krajco:'disagree'}},
+  {t:'Školstvo',q:'Má kraj zabrániť prezentácii LGBTQ+ tematiky na krajských stredných školách?',w:'Diskusia o obsahu výchovy na školách prebieha aj v BSK. Krajčovičová sľúbila, že ideologické spory do školských lavíc nepatria. Droba zastáva inkluzívny prístup a BSK spolupracuje s organizáciami zameranými na prevenciu šikany vrátane LGBTQ+ mládeže. Kraj ako zriaďovateľ 117 stredných škôl vydáva metodické usmernenia pre pedagogický proces.',a:{droba:'disagree',krajco:'agree'}},
+  {t:'Sociálne veci',q:'Má kraj platiť jazykové kurzy a komunitné programy pre cudzincov žijúcich v BSK z peňazí daňových poplatníkov?',w:'V Bratislave žije približne 100 000 cudzincov, čo je takmer pätina obyvateľov krajského mesta. Droba presadzuje, že kraj má pomáhať cudzincom naučiť sa jazyk a zapojiť sa do spoločnosti. Krajčovičová s tým nesúhlasí a tvrdí, že krajský úrad má starať sa predovšetkým o dlhodobých obyvateľov a nie vytvárať cudzincom nadštandardné podmienky na úkor ostatných. Otázka je, či má byť integrácia cudzincov financovaná z krajského rozpočtu.',a:{droba:'agree',krajco:'disagree'}},
+  {t:'Participácia',q:'Má kraj každoročne vyčleniť časť rozpočtu na projekty, o ktorých rozhodujú priamo občania hlasovaním?',w:'Participatívny rozpočet umožňuje obyvateľom navrhovať a hlasovať o konkrétnych projektoch ako cyklotrasa, park alebo komunitné centrum. Bratislava aj niektoré iné samosprávy ho zaviedli. Pre BSK s rozpočtom 320 miliónov eur by aj jedno percento znamenalo 3,2 milióna eur ročne pre projekty vybrané občanmi. Kritici namietajú, že hlasovanie favorizuje mestských obyvateľov pred vidieckymi.',a:{droba:'agree',krajco:'neutral'}},
+  {t:'Eurofondy',q:'Má kraj aktívne lobovať za zmenu európskych pravidiel, aby BSK ako bohatší región získal prístup k vyššiemu objemu eurofondov?',w:'BSK je najbohatší kraj Slovenska a podľa európskych pravidiel dostáva menej eurofondov ako chudobnejšie regióny. Krajský rozpočet 320 miliónov eur nestačí na všetky potreby pri raste o 10 000 obyvateľov ročne. Zmena pravidiel by si vyžiadala lobovanie v Bruseli a podporu ostatných bohatých regiónov EÚ, čo Droba aktívne robí.',a:{droba:'agree',krajco:'agree'}},
+  {t:'Vízia',q:'Má kraj v nasledujúcom volebnom období uprednostniť stabilné hospodárenie a dokončenie rozrobených projektov pred spúšťaním nových veľkých investícií?',w:'BSK vstupuje do volieb s rekordným rozpočtom 320 miliónov eur a viacerými rozrobenými projektmi v hodnote stoviek miliónov eur. Zároveň konsolidačný balíček vlády znižuje príjmy krajov. Niektorí voliči chcú župana, ktorý dotiahne rozrobené projekty. Iní chcú pokračovanie investičného tempa. Odpoveď prezrádza, aký typ lídra od župana v tejto chvíli hľadáš.',a:{droba:'disagree',krajco:'agree'}}
 ];
