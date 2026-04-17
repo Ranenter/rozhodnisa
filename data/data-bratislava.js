@@ -12,98 +12,157 @@ window.VAA_DATA.candidates['bratislava_vuc'] = [{id:'droba',name:'Juraj Droba',p
 // ── Otázky: Primátor / Primátorka ──
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 window.VAA_DATA.questions.bratislava_primator = [
-  {t:'Doprava',        q:'Chceš menej parkovacích miest v centre a viac cyklotrás?',
-   info:'Bratislava dlhodobo rozširuje cykloinfraštruktúru a obmedzuje autá v centre. Toto rozhodnutie priamo ovplyvňuje každodenný život státisícov ľudí — buď uľahčuje pohyb cyklistov a chodcov, alebo komplikuje život tým, ktorí cestujú autom.',
-   a:{vallo:'agree',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
-  {t:'Dane',           q:'Vadí ti, že Bratislava zdvojnásobila miestne dane za posledné štyri roky?',
-   info:'Mestské dane vzrástli výrazne, čo vyvolalo vlnu kritiky. Na druhej strane, vyššie príjmy umožnili financovať rekonštrukcie ciest, škôl a parkov — otázka je, či to stálo za to.',
-   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
-  {t:'Transparentnosť',q:'Myslíš si, že magistrát je príliš nafúknutý a plný zbytočných úradníkov?',
-   info:'Vinkler navrhuje znížiť počet administratívnych zamestnancov magistrátu o 30 percent a ušetrené peniaze presunúť do mestskej polície a údržby. Ide o klasický spor medzi štíhlou efektívnou správou a robustným verejným sektorom.',
-   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
-  {t:'Zadlženie',      q:'Vadí ti, že Bratislava má rekordný dlh a stále si berie nové úvery?',
-   info:'Bratislava patrí k najzadlženejším mestám v regióne. Dlhy financujú rozvoj, ale zaťažujú budúce rozpočty — kedy je pôžička investícia a kedy problém?',
-   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'neutral'}},
-  {t:'Električka',     q:'Považuješ dvojročné meškanie petržalskej električky za zlyhanie vedenia mesta?',
-   info:'Projekt za vyše 300 miliónov eur sa opakovane oneskoroval a predražoval. Primátor hovorí o objektívnych príčinách; oponenti vidia symptóm slabého manažmentu megaprojektov.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'neutral',geci:'agree'}},
-  {t:'Bývanie',        q:'Mal by magistrát stavať vlastné nájomné byty pre mladých a nízkopríjmových ľudí?',
-   info:'Bratislava čelí extrémnej bytovej kríze — priemerná cena bytu je desaťnásobok priemerného platu. Mestské nájomné byty môžu pomôcť, ale vyžadujú obrovské investície a dlhodobý záväzok.',
-   a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},
-  {t:'Životné prostredie',q:'Súhlasíš so zákazom vjazdu starých dieselových áut do centra Bratislavy?',
-   info:'Nízkoemisné zóny fungujú v desaťkách európskych miest a znižujú znečistenie ovzdušia. Ale pre mnohých Bratislavčanov by to znamenalo povinnosť vymeniť auto — čo si môžu dovoliť len niektorí.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'agree',geci:'neutral'}},
-  {t:'MHD',            q:'Chceš, aby MHD bola zadarmo pre dôchodcov a ľudí so ZŤP bez ohľadu na príjem?',
-   info:'Bezplatná MHD pre zraniteľné skupiny zvyšuje sociálnu dostupnosť mesta. Stojí to peniaze z mestského rozpočtu, ktoré by mohli ísť inam — napríklad na frekvenciu spojov.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
-  {t:'Bezpečnosť',     q:'Chceš výrazne viac viditeľných mestských policajtov v uliciach Bratislavy?',
-   info:'Bratislava trpí pocitom neistoty v niektorých štvrtiach, aj keď štatistiky kriminality nie sú dramatické. Viac policajtov znamená vyššie náklady a otázku, kto a ako bude kontrolovať ich prácu.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'neutral',geci:'neutral'}},
-  {t:'Školstvo',       q:'Mal by byť obed na základných školách zadarmo pre každé dieťa bez ohľadu na príjem rodiny?',
-   info:'Bezplatné obedy odstraňujú stigmu aj administratívnu záťaž pri testovaní príjmu. Ročne by to stálo desiatky miliónov eur z mestského rozpočtu, ale garantovalo by výživu pre každé dieťa.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
-  {t:'Korupcia',       q:'Chceš, aby boli všetky mestské zákazky a zmluvy povinne zverejnené aj s odôvodnením výberu dodávateľa?',
-   info:'Transparentnosť verejného obstarávania je kľúčová v boji s klientelizmom. Bratislava má povinné zverejňovanie, ale odôvodnenie výberu nie je vždy podrobné — ide o nastavenie kultúry otvorenosti.',
-   a:{vallo:'agree',cahoj:'disagree',winkl:'neutral',hered:'disagree',geci:'neutral'}},
-  {t:'LGBTQ+',         q:'Mal by mestský magistrát aktívne podporovať LGBTQ+ komunitné centrá a projekty z mestských grantov?',
-   info:'Mestá majú vlastné grantové programy, kde môžu podporiť rôznorodé komunity. Toto je otázka hodnotovej orientácie mesta: inkluzivita vs. tradičné chápanie verejného priestoru. Primátor nemôže zákonom garantovať "bezpečné priestory", ale môže financovať ich vznik.',
-   a:{vallo:'agree',cahoj:'neutral',winkl:'neutral',hered:'disagree',geci:'neutral'}},
-  {t:'Rómske komunity',q:'Chceš, aby mesto aktívne riešilo integráciu Rómov z marginalizovaných komunít, aj za cenu kontroverzných opatrení?',
-   info:'V Bratislave žijú tisíce ľudí v extrémnej chudobe bez prístupu k dôstojnému bývaniu. Primátor môže iniciovať terénnu sociálnu prácu, integračné programy a nájomné byty. Ide o citlivú tému s rôznymi pohľadmi naprieč politickým spektrom.',
-   a:{vallo:'disagree',cahoj:'agree',winkl:'disagree',hered:'agree',geci:'neutral'}},
-  {t:'Lokálny patriotizmus',q:'Vadí ti, že Bratislava dostáva neúmerne veľa štátnych investícií v porovnaní s ostatnými regiónmi?',
-   info:'Bratislava ako hlavné mesto prirodzene ťaží z centralizácie. Ale ako primátor musíš lobovať za vlastné mesto — nie za ostatných. Táto otázka testuje, či voliš celoštátne alebo lokálne uvažovanie.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'neutral',geci:'neutral'}},
-  {t:'Energetická chudoba',q:'Mal by magistrát pomáhať domácnostiam s najnižšími príjmami znižovať energetické náklady napríklad cez mestské solárne programy?',
-   info:'Energetická chudoba zasiahla desaťtisíce domácností. Magistrát nemôže priamo regulovať ceny energií, ale môže sprostredkovať skupinový nákup energie, subvenciovať izoláciu budov alebo inštaláciu solárnych panelov na mestské nehnuteľnosti.',
-   a:{vallo:'neutral',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
-  {t:'Infraštruktúra',  q:'Má byť oprava existujúcich ciest a chodníkov prioritou pred budovaním nových projektov?',
-   info:'Tisíce kilometers ciest a chodníkov v Bratislave sú v zlom stave. Otázka je, či sa sústrediť na "záplaty" alebo pokračovať vo veľkých infraštruktúrnych projektoch, ktoré menia charakter mesta na desaťročia.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'neutral',geci:'neutral'}},
-  {t:'Zelené mestá',   q:'Chceš, aby Bratislava každoročne vysadila aspoň 5000 nových stromov a vytvorila viac parkov?',
-   info:'Mestská zeleň znižuje tepelné ostrovy, zlepšuje kvalitu ovzdušia a zvyšuje kvalitu života. Výsadba stromov je relatívne lacná, ale ich dlhodobá starostlivosť si vyžaduje systémový prístup a rozpočet.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'disagree',geci:'neutral'}},
-  {t:'Kultúra',        q:'Mal by magistrát zvýšiť granty pre nezávislé kultúrne organizácie a festivaly?',
-   info:'Bratislava má bohatú kultúrnu scénu závislú na mestskej podpore. Otázka je, či uprednostniť zavedené inštitúcie alebo dávať šancu novým, inovatívnym projektom — a kto o tom rozhoduje.',
-   a:{vallo:'neutral',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
-  {t:'Participácia',   q:'Chceš, aby ľudia v mestských častiach mohli priamo rozhodovať o časti mestského rozpočtu (participatívny rozpočet)?',
-   info:'Participatívny rozpočet umožňuje občanom navrhovať a hlasovať o projektoch vo svojom okolí. Posilňuje zapojenie, ale vyžaduje administratívnu kapacitu a ochotu politikov vzdať sa časti kontroly.',
-   a:{vallo:'neutral',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},
-  {t:'Podnikanie',     q:'Mal by magistrát znížiť regulačnú záťaž a poplatky pre malé podniky a reštaurácie?',
-   info:'Podnikatelia v Bratislave dlhodobo kritizujú pomalé povolenia a vysoké poplatky. Menej regulácií zjednodušuje podnikanie, ale môže zhoršiť kontrolu hluku, kvality alebo hygieny v hustej zástavbe.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
-  {t:'Doprava',        q:'Mal by magistrát zakázať záber verejného priestoru placenými terasami v úzkych uliciach?',
-   info:'Terasy oživujú mesto, ale v úzkych uliciach blokujú prechod chodcov, vozíčkárov a kočiarov. Ide o spor medzi záujmami gastronomie a verejnou dostupnosťou priestoru.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
-  {t:'Digitalizácia',  q:'Chceš, aby magistrát digitalizoval väčšinu agendy — vydávanie povolení, hlásenie problémov, platby — a minimalizoval osobné návštevy úradu?',
-   info:'Digitálna správa mesta znižuje korupčné riziká, urýchľuje procesy a zvyšuje komfort. Nevýhodou je vylúčenie tých, ktorí nemajú prístup k internetu alebo technológiám — najmä seniori.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
-  {t:'Sport a voľný čas',q:'Mal by magistrát viac investovať do bezplatných verejných ihrísk a športovísk dostupných pre všetkých?',
-   info:'Platené telocvične a športové zariadenia sú mimo dosahu mnohých rodín. Verejné ihriská a posilňovne v parkoch sú dostupné pre každého, ale vyžadujú investície a pravidelnú údržbu.',
-   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'neutral'}},
-  {t:'Korupcia',       q:'Chceš povinný nezávislý audit všetkých mestských spoločností a fondov každé dva roky?',
-   info:'Mestské spoločnosti spravujú obrovský majetok, ale kontrola ich hospodárenia je nedostatočná. Nezávislý audit odhalí plytanie, no stojí peniaze a môže narážať na odpor vnútri systému.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'disagree',hered:'neutral',geci:'neutral'}},
-  {t:'Vízia',          q:'Je pre teba dôležitejšie, aby primátor Bratislavy riešil dennodenné problémy (cesty, koše, čistota) než veľké vízie a projekty?',
-   info:'Spor medzi "dobrým správcom" a "vizionárom" je klasická politická dilema. Bratislava potrebuje oboje — ale v akom pomere? Táto otázka odhaľuje, čo od vedenia mesta primárne očakávaš.',
-   a:{vallo:'agree',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
-,
 
-  {t:'Bývanie',          q:'Mal by magistrát povinne zahrnúť 10 % nájomných bytov do každého veľkého developerského projektu?',
-   info:'Bratislava patrí k najmenej dostupným hlavným mestám v Európe — kúpa bytu stojí priemerne vyše 15 ročných platov. Mesto uzavrelo zmluvy s developermi, podľa ktorých za zmenu územného plánu odovzdajú 5 % bytov mestu. Niektoré mestá v Európe vyžadujú až 10–30 % sociálnych bytov v každom projekte. Otázka je, či by takáto povinnosť nezastavila súkromnú výstavbu celkovo.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},,
-  {t:'PAAS parkovanie',   q:'Je systém plateného parkovania PAAS pre Bratislavu správnou cestou, aj napriek jeho zložitosti?',
-   info:'Systém PAAS bol spustený v januári 2022 a do roku 2026 pokrýva väčšinu vnútorného mesta — pokračuje aj rozšírenie nedieľneho spoplatnenia. Podľa prieskumov je parkovanie pre Bratislavčanov najvnímanejší problém v meste. Odborníci z európskych miest tvrdia, že cena parkovania je najúčinnejší nástroj na reguláciu dopravy a ochranu rezidentov. Kritici namietajú, že systém je príliš komplikovaný — samotní manažéri PAAS ho nazvali najkomplexnejším v Európe.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},,
-  {t:'Bezpečnosť',        q:'Má magistrát zriadiť anonymnú aplikáciu, kde môžu ľudia hlásiť agresívne správanie vo verejnom priestore?',
-   info:'Bratislava navýšila rozpočet mestskej polície na historicky najvyšší objem — 18,8 milióna eur v roku 2026, čo je dvojnásobok oproti roku 2018. Napriek tomu sa pocit bezpečnosti zhoršuje — mesto to čiastočne pripisuje liberalizácii trestných zákonov. Anonymné nahlasovanie existuje v mnohých európskych mestách a zvyšuje participáciu občanov na verejnom poriadku. Otáznou zostáva, či je efektívnejšie investovať do technológií, alebo priamo do počtu hliadok v uliciach.',
-   a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},,
-  {t:'Transparentnosť',   q:'Má magistrát zverejňovať kompletné zápisnice zo všetkých rokovaní mestskej rady do 24 hodín?',
-   info:'Transparentnosť verejnej správy je základným princípom demokracie — občania majú právo vedieť, ako sa rozhoduje o ich meste v reálnom čase. V súčasnosti sa zápisnice zverejňujú s oneskorením a niektoré rokovania prebehajú neverejne. Niektoré mestá v Čechách a Rakúsku zaviedli živé prenosy zo zastupiteľstiev aj povinné online komentáre k zákazkám. Odporcovia namietajú, že úplná transparentnosť môže obmedziť otvorenosť a úprimnosť vnútorných rokovaní.',
-   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},,
-  {t:'Klíma',             q:'Má Bratislava zakázať vjazd áut so spaľovacím motorom do historického centra po vzore Viedne a Prahy?',
-   info:'Viedeň, Praha a desiatky ďalších európskych miest zavádzajú nízkoemisné zóny alebo úplné zákazy spaľovacích motorov v centre. Znečistenie ovzdušia je v Bratislave dlhodobý problém, ktorý výrazne zasiahnutý tranzitnou dopravou. Zákaz by zlepšil kvalitu vzduchu a verejný priestor, no mohol by poškodiť obchodníkov v centre a tých, ktorí autom dojazdiť do práce. Bratislava má kompetenciu zaviesť nízkoemisné zóny podľa zákona o cestnej premávke.',
+  // Q1
+  {t:'Doprava',
+   q:'Chceš menej parkovacích miest v centre a viac cyklotrás?',
+   info:'Bratislava vybudovala 62 km cyklotrás od roku 2018 a plánuje ďalších 35 km za odhadovaných 40 mil. €. V rovnakom období pribudlo 4 000 nových parkovacích miest cez PAAS, no 8 000 miest v centre zaniklo. Každý deň prichádza do centra autom 220 000 ľudí.',
+   a:{vallo:'agree',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+
+  // Q2
+  {t:'Dane',
+   q:'Vadí ti, že Bratislava zdvojnásobila miestne dane za posledné štyri roky?',
+   info:'Daň z nehnuteľností sa v rokoch 2022–2024 zvýšila priemerne o 35 %. Pre byt 70 m² to znamená nárast ročnej dane z cca 80 € na 108 €. Mestu to prinieslo 19 mil. € navyše ročne a celkový rozpočet narástol zo 430 mil. € (2018) na 760 mil. € (2026). Na druhej strane, vyššie príjmy umožnili financovať rekonštrukcie ciest, škôl a parkov — otázka je, či to stálo za to.',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+
+  // Q3
+  {t:'Hospodárenie',
+   q:'Myslíš si, že magistrát je príliš nafúknutý a plný zbytočných úradníkov?',
+   info:'Magistrát zamestnáva dnes 3 200 ľudí — o 600 viac ako v roku 2018, teda +23 %. Mzdové náklady narástli o 47 mil. € ročne. Niektorí kandidáti navrhujú znížiť počet úradníkov o 30 %, čo by ušetrilo odhadom 14 mil. € ročne. Iní argumentujú, že rast reflektuje nové kompetencie a projekty mesta.',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+
+  // Q4
+  {t:'Zadlženie',
+   q:'Vadí ti, že Bratislava má rekordný dlh a stále si berie nové úvery?',
+   info:'Celkový dlh Bratislavy dosiahol v roku 2026 vyše 245 mil. €, čo je dvojnásobok oproti roku 2018. Pomer dlhu k príjmom klesol z 52 % na 44 % — vedenie mesta to označuje za historický úspech. Kritici upozorňujú, že absolútna suma dlhu rastie a každý Bratislavčan dnes nesie záväzok cca 430 €.',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'neutral'}},
+
+  // Q5 (pôvodné Q6, prepísané)
+  {t:'Bývanie',
+   q:'Mal by magistrát výrazne zrýchliť výstavbu mestských nájomných bytov — napríklad na 5 000 bytov do roku 2030 — aj za cenu vyššieho zadlženia?',
+   info:'Priemerná cena bytu v Bratislave je 4 500 €/m² — pre byt 60 m² to znamená 270 000 €, teda 17-násobok priemerného ročného platu. Mesto schválilo výstavbu 1 000 nájomných bytov do roku 2030 za odhadovaných 180 mil. €. Kritici hovoria, že 1 000 bytov je kvapka v mori — v meste žije 500 000 ľudí a na nájomné bývanie čaká niekoľko tisíc domácností.',
+   a:{vallo:'neutral',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+
+  // Q6 (pôvodné Q7)
+  {t:'Životné prostredie',
+   q:'Súhlasíš so zákazom vjazdu starých dieselových áut do centra Bratislavy?',
+   info:'V Bratislave spôsobuje doprava 68 % celkových emisií PM2.5. Priemernú hodnotu oxidu dusičitého na Obchodnej ulici prekračujú limity EÚ 180 dní v roku. V Bratislave jazdí odhadom 60 000 dieselových áut starších ako 10 rokov. Výmena auta stojí priemerne 15 000–25 000 €.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'agree',geci:'neutral'}},
+
+  // Q7 (pôvodné Q9)
+  {t:'Bezpečnosť',
+   q:'Chceš výrazne viac viditeľných mestských policajtov v uliciach Bratislavy?',
+   info:'Bratislava má 1 200 mestských policajtov — na 1 000 obyvateľov to je 2,1, čo je pod priemerom porovnateľných európskych miest (3,2). Rozpočet mestskej polície narástol na 18,8 mil. € v roku 2026 — dvojnásobok oproti roku 2018. Počet trestných činov vzrástol o 12 % od roku 2021. Jeden policajt stojí mesto vrátane vybavenia cca 25 000 € ročne.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'neutral',geci:'neutral'}},
+
+  // Q8 (pôvodné Q11)
+  {t:'Korupcia',
+   q:'Chceš, aby boli všetky mestské zákazky a zmluvy povinne zverejnené aj s odôvodnením výberu dodávateľa?',
+   info:'Bratislava uzatvára ročne zákazky v hodnote cca 300 mil. €. Zákon ukladá zverejňovanie zmlúv, ale odôvodnenie výberu dodávateľa nie je povinné. V rokoch 2020–2024 podalo NKÚ alebo iné orgány námietky voči zákazkám mesta v celkovej hodnote 48 mil. €. Transparentné odôvodnenie výberu je štandardom v 14 z 27 krajín EÚ.',
+   a:{vallo:'agree',cahoj:'disagree',winkl:'neutral',hered:'disagree',geci:'neutral'}},
+
+  // Q9 (pôvodné Q12)
+  {t:'LGBTQ+',
+   q:'Mal by mestský magistrát aktívne podporovať LGBTQ+ komunitné centrá a projekty z mestských grantov?',
+   info:'Bratislava vyčleňuje ročne cca 2 mil. € na komunitné granty. Duhový Pride prilákal v roku 2024 vyše 15 000 účastníkov. Grantová podpora LGBTQ+ komunity z mestského rozpočtu dnes nepresahuje 50 000 € ročne. Primátor nemôže zákonom garantovať bezpečné priestory, ale môže financovať ich vznik.',
+   a:{vallo:'agree',cahoj:'neutral',winkl:'neutral',hered:'disagree',geci:'neutral'}},
+
+  // Q10 (pôvodné Q13)
+  {t:'Rómske komunity',
+   q:'Chceš, aby mesto aktívne riešilo integráciu Rómov z marginalizovaných komunít, aj za cenu kontroverzných opatrení?',
+   info:'V Bratislave žije odhadom 8 000–12 000 ľudí v podmienkach sociálneho vylúčenia, z toho veľká časť v osadách Devínska Nová Ves a Petržalka. Mesto vyčlenilo v roku 2025 na sociálne bývanie 3,2 mil. €. Terénna sociálna práca stojí cca 800 € mesačne na jedného pracovníka — mesto zamestnáva 45 terénnych pracovníkov.',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'disagree',hered:'agree',geci:'neutral'}},
+
+  // Q11 (nová — nahrádza energetickú chudobu)
+  {t:'Bývanie',
+   q:'Mal by magistrát obmedziť krátkodobé prenájmy cez Airbnb a podobné platformy, aby ochránil dostupnosť bytov pre dlhodobých nájomníkov?',
+   info:'V Bratislave je registrovaných vyše 4 200 bytov na krátkodobý prenájom (Airbnb a Booking.com), čo zodpovedá 3 % celkového bytového fondu v centre mesta. Priemerný mesačný príjem z Airbnb bytu je 1 100 €, čo je dvojnásobok bežného nájmu — majitelia preto uprednostňujú turistov pred dlhodobými nájomníkmi. Viaceré európske mestá — Viedeň, Amsterdam, Barcelona — zaviedli prísne limity: napríklad max. 90 dní prenájmu ročne.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'disagree',hered:'neutral',geci:'neutral'}},
+
+  // Q12 (pôvodné Q16)
+  {t:'Infraštruktúra',
+   q:'Má byť oprava existujúcich ciest a chodníkov prioritou pred budovaním nových projektov?',
+   info:'Bratislava spravuje 900 km ciest a 1 200 km chodníkov. Podľa auditu z roku 2024 je 38 % chodníkov v zlom alebo havarijnom stave. Magistrát investuje do opráv ciest 28 mil. € ročne, no technická potreba je odhadnutá na 60 mil. € ročne — rozdiel je 32 mil. €.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'neutral',geci:'neutral'}},
+
+  // Q13 (pôvodné Q17)
+  {t:'Zelené mestá',
+   q:'Chceš, aby Bratislava každoročne vysadila aspoň 5 000 nových stromov a vytvorila viac parkov?',
+   info:'Bratislava vysadí ročne cca 1 500 stromov, no zároveň každoročne vyrúbe 800–1 200 stromov kvôli stavbám alebo zdravotnému stavu. Jeden strom stojí 200–800 € vrátane výsadby a dvojročnej starostlivosti. Plán 5 000 stromov ročne by stál odhadom 2–4 mil. € navyše. V lete 2024 bola teplota v parkoch s korunami stromov o 6–8 °C nižšia ako na asfaltovom povrchu.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'disagree',geci:'neutral'}},
+
+  // Q14 (pôvodné Q19, prepísané)
+  {t:'Participácia',
+   q:'Má magistrát každoročne vyčleniť 1 % rozpočtu — cca 7 mil. € — na projekty, o ktorých hlasujú priamo obyvatelia?',
+   info:'Participatívny rozpočet zaviedlo vyše 3 000 miest na svete. V Bratislave funguje od roku 2021 v pilotnej forme — v roku 2024 rozdelil magistrát takto 500 000 €. Parížania hlasujú o 5 % mestského rozpočtu ročne. Pre Bratislavu by 1 % znamenalo 7,6 mil. € — priemerne 600 000 € pre každú z 17 mestských častí.',
    a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+
+  // Q15 (nová — mestský majetok)
+  {t:'Hospodárenie',
+   q:'Má magistrát predať nevyužívaný mestský majetok, aby splatil dlh — namiesto zvyšovania daní?',
+   info:'Bratislava vlastní nehnuteľnosti odhadované na vyše 2 mld. €, z toho niekoľko desiatok budov je nevyužívaných alebo prenajatých pod trhovou cenou — napríklad Stará tržnica za symbolický 1 € ročne namiesto odhadovaných 500 000 €. Predaj časti majetku by mohol priniesť jednorazovo 50–150 mil. € a znížiť dlh pod 40 % príjmov. Odporcovia upozorňujú, že mestský majetok je strategická rezerva, ktorú nie je možné získať späť.',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'neutral'}},
+
+  // Q16 (nová — Vajanského nábrežie)
+  {t:'Doprava',
+   q:'Má magistrát zrušiť cyklotrasy na Vajanského nábreží a obnoviť štyri jazdné pruhy pre autá?',
+   info:'Vajanského nábrežie prišlo v roku 2024 o dva jazdné pruhy, ktoré nahradila cyklotrasa. Mesto investovalo 1,2 mil. € do nových obrubníkov. Denný tok áut klesol z 28 000 na 19 000 vozidiel; tok cyklistov vzrástol z 800 na 2 400 denne. Winkler sľubuje obnovenie pruhov ako jednu z prvých zmien po nástupe do funkcie.',
+   a:{vallo:'disagree',cahoj:'disagree',winkl:'agree',hered:'neutral',geci:'neutral'}},
+
+  // Q17 (pôvodné Q22, prepísané)
+  {t:'Digitalizácia',
+   q:'Má magistrát úplne zrušiť papierové podanie žiadostí a prejsť výlučne na digitálnu agendu do roku 2028?',
+   info:'Magistrát spracuje ročne 85 000 žiadostí a podaní, z toho 38 % stále papierovo. Plná digitalizácia by ušetrila odhadom 4 mil. € ročne a skrátila priemerný čas vybavenia z 14 na 5 pracovných dní. Zároveň 22 % Bratislavčanov nad 65 rokov uviedlo, že nemá prístup k internetu alebo nevie pracovať s digitálnymi službami — pre tých 110 000 ľudí by bola potrebná alternatívna asistencia.',
+   a:{vallo:'agree',cahoj:'neutral',winkl:'agree',hered:'disagree',geci:'neutral'}},
+
+  // Q18 (pôvodné Q23)
+  {t:'Šport a voľný čas',
+   q:'Mal by magistrát viac investovať do bezplatných verejných ihrísk a športovísk dostupných pre všetkých?',
+   info:'Bratislava prevádzkuje 180 verejných ihrísk a 12 vonkajších fitness zón. Ročný rozpočet na ich údržbu je 1,8 mil. €. Priemerné ročné členstvo v súkromnej telocvični stojí 480–720 €. Mesto Viedeň investuje do verejnej športovej infraštruktúry 28 € na obyvateľa ročne — Bratislava 3,2 €.',
+   a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'neutral'}},
+
+  // Q19 (pôvodné Q24)
+  {t:'Korupcia',
+   q:'Chceš povinný nezávislý audit všetkých mestských spoločností a fondov každé dva roky?',
+   info:'Bratislava vlastní 32 mestských spoločností a fondov s celkovými aktívami vyše 1,2 mld. €. Interný audit pokrýva len časť z nich. Nezávislý externý audit jednej spoločnosti stojí 30 000–80 000 €. NKÚ v rokoch 2020–2024 odhalil v mestských spoločnostiach nehospodárnosť za viac ako 22 mil. €.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'disagree',hered:'neutral',geci:'neutral'}},
+
+  // Q20 (pôvodné Q25)
+  {t:'Vízia',
+   q:'Je pre teba dôležitejšie, aby primátor Bratislavy riešil dennodenné problémy (cesty, koše, čistota) než veľké vízie a projekty?',
+   info:'Vallo investoval 18 mil. € do projektu Plató Staromestská — park nad štvorprúdovou cestou — ktorý ešte nezačal. Kritici tvrdia, že za rovnaké peniaze by sa opravilo 90 km chodníkov. Ide o klasickú politickú dilemu: dobrý správca verzus vizionár — a v akom pomere Bratislava tieto roly potrebuje.',
+   a:{vallo:'agree',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+
+  // Q21 (pôvodné Q26)
+  {t:'Bývanie',
+   q:'Mal by magistrát povinne zahrnúť 10 % nájomných bytov do každého veľkého developerského projektu?',
+   info:'Bratislava patrí k najmenej dostupným hlavným mestám v Európe — kúpa bytu stojí priemerne vyše 15 ročných platov. Mesto uzavrelo zmluvy s developermi, podľa ktorých za zmenu územného plánu odovzdajú 5 % bytov mestu. Niektoré mestá v Európe vyžadujú až 10–30 % sociálnych bytov v každom projekte. Otázka je, či by takáto povinnosť nezastavila súkromnú výstavbu celkovo.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+
+  // Q22 (pôvodné Q27 — opravené odpovede)
+  {t:'PAAS parkovanie',
+   q:'Je systém plateného parkovania PAAS pre Bratislavu správnou cestou, aj napriek jeho zložitosti?',
+   info:'PAAS pokrýva od roku 2026 väčšinu vnútorného mesta. Ročná rezidentská karta stojí 39 €, návštevnícke parkovanie 1,50–3 €/hod. Systém vybral v roku 2025 vyše 22 mil. €. Bratislava ho označuje za najkomplexnejší v Európe — má 42 kategórií kariet a 6 typov zón. Kritici namietajú, že pokuty a komplikovanosť systému zaťažujú bežných rezidentov.',
+   a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'agree',geci:'agree'}},
+
+  // Q23 (pôvodné Q28)
+  {t:'Bezpečnosť',
+   q:'Má magistrát zriadiť anonymnú aplikáciu, kde môžu ľudia hlásiť agresívne správanie vo verejnom priestore?',
+   info:'V roku 2024 prijala mestská polícia 48 000 oznámení od obyvateľov. Aplikácia podobného typu v Prahe vygenerovala 22 000 nahlásení za rok, z toho 34 % viedlo k zásahu. Vývoj a prevádzka aplikácie by stála odhadom 200 000 € prvý rok. Bratislava navýšila rozpočet mestskej polície na historicky najvyšší objem — 18,8 mil. € v roku 2026.',
+   a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+
+  // Q24 (pôvodné Q29)
+  {t:'Transparentnosť',
+   q:'Má magistrát zverejňovať kompletné zápisnice zo všetkých rokovaní mestskej rady do 24 hodín?',
+   info:'Transparentnosť verejnej správy je základným princípom demokracie — občania majú právo vedieť, ako sa rozhoduje o ich meste v reálnom čase. V súčasnosti sa zápisnice zverejňujú s oneskorením a niektoré rokovania prebehajú neverejne. Niektoré mestá v Čechách a Rakúsku zaviedli živé prenosy zo zastupiteľstiev aj povinné online komentáre k zákazkám.',
+   a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
+
+  // Q25 (pôvodné Q30)
+  {t:'Klíma',
+   q:'Má Bratislava zakázať vjazd áut so spaľovacím motorom do historického centra po vzore Viedne a Prahy?',
+   info:'Historickým centrom Bratislavy prechádza denne 45 000 áut, z toho 30 % tranzitne. Bratislava prekračuje limity NO₂ na 6 meracích staniciach z 8. Praha zaviedla nízkoemisné zóny v roku 2023 a zaznamenala 18 % pokles emisií v centre za prvý rok. Zákaz by sa týkal odhadom 35 000 vozidiel registrovaných v Bratislave.',
+   a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},
+
 ];
 
 // ── Otázky: Župan / VÚC ──
