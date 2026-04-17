@@ -614,6 +614,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 }
 .toggle-arrow.open{transform:rotate(90deg)}
 .detail-collapsed{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.detail-collapsed.open{max-height:9000px}
 .detail-expanded{max-height:9999px;transition:max-height .6s ease}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
@@ -1093,7 +1094,10 @@ const VAA = (function(){
     document.getElementById('qNum').textContent = `Ot\u00e1zka ${qIdx+1} z ${total}`;
     document.getElementById('qTopic').textContent = q.t;
     document.getElementById('qText').textContent = q.q;
-    document.getElementById('qWhy').textContent = q.w || q.info || '';
+    const infoPanel = document.getElementById('qInfoPanel');
+    if(infoPanel) { infoPanel.textContent = q.w || q.info || ''; infoPanel.classList.remove('open'); }
+    const infoBtn = document.getElementById('qInfoBtn');
+    if(infoBtn) infoBtn.classList.remove('active');
 
     ['ba','bn','bd'].forEach(id=>document.getElementById(id).className='ans-btn');
     const prev = answers[qIdx];
@@ -1217,7 +1221,7 @@ const VAA = (function(){
     const top = results[0];
     const shareText = `Moje v\u00fdsledky vo Volebnej kalkula\u010dke 2026 (${meta.name} \u2013 ${typeLbl}): najlep\u0161ia zhoda ${top.pct}% s ${top.name}. Zisti aj ty!`;
     const shareURL = window.location.href.split('?')[0]+'?city='+city+'&type='+type;
-    document.getElementById('shareURL').textContent = shareURL;
+    document.getElementById('shareURL') && (document.getElementById('shareURL').textContent = shareURL);
     window._vaaShare = { text: shareText, url: shareURL };
 
     // detail
@@ -1288,13 +1292,17 @@ const VAA = (function(){
 
 
   function toggleInfo(){
-    const box = document.getElementById('infoBox');
-    if(box) box.classList.toggle('show');
+    const panel = document.getElementById('qInfoPanel');
+    const btn = document.getElementById('qInfoBtn');
+    if(panel) panel.classList.toggle('open');
+    if(btn) btn.classList.toggle('active');
   }
 
   function toggleDetail(){
-    const dl = document.getElementById('detailWrap');
+    const dl = document.getElementById('detailList');
+    const arrow = document.getElementById('toggleArrow');
     if(dl) dl.classList.toggle('open');
+    if(arrow) arrow.style.transform = dl && dl.classList.contains('open') ? 'rotate(90deg)' : '';
   }
 
   return { pickCity, pickLocation, pickType, startQuiz, ans, goBack, restart, shareFB, shareLI, shareTW, copyURL, toggleInfo, toggleDetail };
