@@ -991,13 +991,17 @@ window.CITY_META = {
 const _loadedCities = {};
 function loadCityData(city) {
   if (_loadedCities[city]) return Promise.resolve();
-  return new Promise((resolve, reject) => {
-    const s = document.createElement('script');
-    s.src = 'data/data-' + city.split('_')[0] + '.js';
-    s.onload = () => { _loadedCities[city] = true; resolve(); };
-    s.onerror = () => reject(new Error('Failed to load data for ' + city));
-    document.head.appendChild(s);
-  });
+  const cityName = city.split('_')[0];
+  const url = 'data/data-' + cityName + '.js';
+  return fetch(url)
+    .then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status + ' \u2013 ' + url);
+      return r.text();
+    })
+    .then(function(code) {
+      (new Function(code))();
+      _loadedCities[city] = true;
+    });
 }
 
 const VAA = (function(){
@@ -1071,7 +1075,7 @@ const VAA = (function(){
       _showQuestion();
       _showScreen('sc-question');
       document.getElementById('topBar').classList.add('show');
-    }).catch(()=>{ alert('Nepodarilo sa načítať dáta. Skúste obnoviť stránku.'); });
+    }).catch((e)=>{ alert('Nepodarilo sa načítať dáta. Skúste obnoviť stránku.\n\n' + (e && e.message ? e.message : '')); });
   }
 
   function _showQuestion(){
