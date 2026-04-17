@@ -8,11 +8,11 @@
 
 ## Prečo sme to vytvorili
 
-Sme Občania štátu máme len jeden cieľ: priviesť ťa k volebnej urne.
+Sme **Občania štátu** máme len jeden cieľ: priviesť ťa k volebnej urne.
 
-Sme apolitickí a nezávislí. Nevznikli sme na objednávku žiadnej strany, kandidáta ani sponzora. Nikto z nás za túto prácu nedostáva odmenu. Odmeníte nás, keď pôjdete voliť.
+Frustruje nás, že niektorí kandidáti otvorene klamú a voliči nemajú nástroj, ako ich názory na kritické témy porovnať. Táto kalkulačka dáva každému transparentnosť, ktorú naša demokracia potrebuje.
 
-Frustruje nás, že niektorí kandidáti otvorene klamú a voliči nemajú nástroj, ako kandidátov porovnať. Táto kalkulačka dáva každému transparentnosť, ktorú naša demokracia potrebuje.
+Sme apolitickí a nezávislí. Nevznikli sme na objednávku žiadnej strany, kandidáta ani sponzora a nikto z nás za túto prácu nedostáva odmenu. Odmeníte nás, keď pôjdete voliť.
 
 ---
 
@@ -40,7 +40,7 @@ Bez cookies. Bez reklám. Bez sledovania. Tvoje odpovede zostávajú iba v tvojo
 ```
 index.html       # Celá aplikácia v jednom súbore
 data/            # Otázky a odpovede kandidátov pre každé mesto
-build.py         # Spoj dátové súbory do index.html
+build.py         # Spojí dátové súbory do index.html
 ```
 
 ---
