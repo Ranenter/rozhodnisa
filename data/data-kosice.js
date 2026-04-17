@@ -13,7 +13,7 @@ window.VAA_DATA.candidates['kosice_vuc'] = [
   {id:'porvaz', name:'Marián Porvažník',  party:'PS / Za ľudí',            color:'#64b5f6',url:'https://porvaznik.sk'},
   {id:'gurbal', name:'Lucia Gurbáľová',   party:'KDH',                     color:'#90caf9',url:'https://luciagurbalova.sk'},
   {id:'hirman', name:'Karel Hirman',      party:'Demokrati',               color:'#7b1fa2',url:'https://karelhirman.sk'},
-  {id:'kodraz', name:'Džemal Kodrazi',    party:'Nezávislý',               color:'#ff8f00',url:''},
+  {id:'kodraz', name:'Džemal Kodrazi',    party:'Nezávislý',               color:'#ff8f00',url:'https://www.dzemalkodrazi.sk'},
 ];
 
 // ── Otázky: Primátor / Primátorka ──
