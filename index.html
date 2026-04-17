@@ -130,7 +130,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 
 /* Screens */
 .screen{display:none;min-height:100vh;flex-direction:column}
-.screen.active{display:flex;animation:fadeUp .3s ease}
+.screen.active{display:flex;flex-direction:column;animation:fadeUp .3s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── WELCOME ── */
@@ -289,41 +289,66 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
   width: 160px; height: 190px; opacity: .05; pointer-events: none;
 }
 
-/* Force dark bg on quiz and results screens regardless of welcome-screen overrides */
+/* ── Quiz & Results: light theme matching welcome ── */
 #sc-question {
-  background: #0a1628;
-  color: #e8eef8;
-  --bg: #0a1628;
-  --surface: #132040;
-  --surface2: #1a2d54;
-  --border: #223a6a;
-  --text: #e8eef8;
-  --muted: #6a8ab0;
-  --green: #28c76f;
-  --yellow: #f0b429;
-  --purple: #7b5ea7;
+  background: #ffffff;
+  color: #1a2540;
+  --bg: #ffffff;
+  --surface: #f0f4fa;
+  --surface2: #e4eaf5;
+  --border: #c5d0e8;
+  --text: #1a2540;
+  --muted: #5a6e8c;
+  --green: #1e8a4a;
+  --yellow: #c8860a;
+  --purple: #5a3d8a;
 }
 #sc-results {
-  background: #0a1628;
-  color: #e8eef8;
-  --bg: #0a1628;
-  --surface: #132040;
-  --surface2: #1a2d54;
-  --border: #223a6a;
-  --text: #e8eef8;
-  --muted: #6a8ab0;
-  --green: #28c76f;
-  --yellow: #f0b429;
-  --purple: #7b5ea7;
+  background: #ffffff;
+  color: #1a2540;
+  --bg: #ffffff;
+  --surface: #f0f4fa;
+  --surface2: #e4eaf5;
+  --border: #c5d0e8;
+  --text: #1a2540;
+  --muted: #5a6e8c;
+  --green: #1e8a4a;
+  --yellow: #c8860a;
+  --purple: #5a3d8a;
 }
-#sc-question .q-header { background: #0a1628; border-color: #223a6a; }
-#sc-question .q-text { color: #ffffff; }
-#sc-question .q-info-panel { color: #6a8ab0; border-left-color: #223a6a; }
-#sc-question .ans-btn { background: #132040; border-color: #223a6a; color: #e8eef8; }
-#sc-question .ans-btn:hover { border-color: #0B4EA2; }
-#sc-question .q-back { background: #132040; border-color: #223a6a; color: #6a8ab0; }
-#sc-question .skip-btn { color: #6a8ab0; }
-#sc-question .q-num { color: #e8eef8; }
+#sc-question .q-header { background: #ffffff; border-color: #c5d0e8; }
+#sc-question .q-text { color: #1a2540; }
+#sc-question .q-info-panel { color: #5a6e8c; border-left-color: #c5d0e8; }
+#sc-question .ans-btn { background: #f0f4fa; border-color: #c5d0e8; color: #1a2540; }
+#sc-question .ans-btn:hover { border-color: var(--sk-blue); }
+#sc-question .q-back { background: #f0f4fa; border-color: #c5d0e8; color: #5a6e8c; }
+#sc-question .skip-btn { color: #5a6e8c; }
+#sc-question .q-num { color: #1a2540; }
+#sc-question .q-topic { color: var(--ca); border-color: var(--ca); background: rgba(11,78,162,.04); }
+#sc-question .q-info-btn { background: rgba(0,0,0,.04); border-color: #c5d0e8; color: #5a6e8c; }
+#sc-question .q-info-btn:hover { background: rgba(0,0,0,.07); color: #1a2540; }
+#sc-question .q-info-btn.active { border-color: var(--ca); color: var(--ca); }
+#sc-question .q-banner { background: linear-gradient(135deg, var(--cglow) 0%, rgba(255,255,255,0) 100%); border-bottom: 1px solid #c5d0e8; }
+#sc-question .city-name { color: #1a2540; }
+#sc-question .city-type-label { color: #5a6e8c; }
+.res-hero { background: linear-gradient(160deg, #f2f6ff, #eaf0ff); border-color: #c5d0e8; }
+.res-hero::before { background: radial-gradient(ellipse at 50% 0%, var(--cglow) 0%, transparent 65%); }
+.res-hero h2 { color: #1a2540; }
+.res-hero .sub { color: #5a6e8c; }
+.r-card { background: #f0f4fa; border-color: #c5d0e8; }
+.r-card.top { border-color: #1e8a4a; background: rgba(30,138,74,.04); }
+.r-name { color: #1a2540; }
+.r-pct { color: #1a2540; }
+.profile-card { background: linear-gradient(135deg, rgba(90,61,138,.08), rgba(11,78,162,.06)); border-color: rgba(90,61,138,.2); }
+.profile-card p { color: #1a2540; }
+.share-section { background: #f0f4fa; border-color: #c5d0e8; }
+.share-section h4 { color: #1a2540; }
+.sh-cp { background: #ffffff; border-color: #c5d0e8; color: #1a2540; }
+.detail-toggle { border-color: #c5d0e8; color: var(--sk-blue); }
+.toggle-arrow { color: #5a6e8c; }
+.d-item { background: #f0f4fa; }
+.ghost-btn { border-color: #c5d0e8; color: #5a6e8c; }
+.ghost-btn:hover { border-color: #1a2540; color: #1a2540; }
 
 /* ── SITE FOOTER ── */
 .site-footer{background:#0a0f1a;color:#a0aec0;font-size:.82rem;line-height:1.6;padding:2.5rem 1rem 1.5rem;margin-top:0}
@@ -614,8 +639,8 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 }
 .toggle-arrow.open{transform:rotate(90deg)}
 .detail-collapsed{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.detail-collapsed.open{max-height:9000px}
 .detail-expanded{max-height:9999px;transition:max-height .6s ease}
+
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
 </head>
@@ -1241,10 +1266,59 @@ const VAA = (function(){
       dl.appendChild(item);
     });
 
-    _showScreen('sc-results');
+    _renderTurnout(city, type);
+  _showScreen('sc-results');
   }
 
-  // \u2500\u2500 Social \u2500\u2500
+  // Turnout widget
+  const TURNOUT = {
+    bratislava_primator: {pct:36.9,voters:150477,eligible:408000,label:'Bratislava \u2013 prim\u00e1tor 2022'},
+    bratislava_vuc:      {pct:38.6,voters:157000,eligible:407000,label:'BSK \u2013 \u017eupan 2022'},
+    kosice_primator:     {pct:30.9,voters:55900, eligible:181000,label:'Ko\u0161ice \u2013 prim\u00e1tor 2022'},
+    kosice_vuc:          {pct:39.7,voters:215000,eligible:541000,label:'KSK \u2013 \u017eupan 2022'},
+    presov_primator:     {pct:42.7,voters:29300, eligible:68600, label:'Pre\u0161ov \u2013 prim\u00e1tor 2022'},
+    presov_vuc:          {pct:47.5,voters:265000,eligible:558000,label:'PSK \u2013 \u017eupan 2022'},
+    zilina_primator:     {pct:46.2,voters:25300, eligible:54800, label:'\u017dilina \u2013 prim\u00e1tor 2022'},
+    zilina_vuc:          {pct:48.7,voters:260000,eligible:534000,label:'\u017dSK \u2013 \u017eupan 2022'},
+    bystrica_primator:   {pct:44.8,voters:24400, eligible:54500, label:'B.Bystrica \u2013 prim\u00e1tor 2022'},
+    bystrica_vuc:        {pct:45.1,voters:222000,eligible:492000,label:'BBSK \u2013 \u017eupan 2022'},
+    nitra_primator:      {pct:44.3,voters:18500, eligible:41800, label:'Nitra \u2013 prim\u00e1tor 2022'},
+    nitra_vuc:           {pct:43.2,voters:215000,eligible:498000,label:'NSK \u2013 \u017eupan 2022'},
+    trnava_primator:     {pct:47.1,voters:21600, eligible:45900, label:'Trnava \u2013 prim\u00e1tor 2022'},
+    trnava_vuc:          {pct:44.8,voters:195000,eligible:435000,label:'TTSK \u2013 \u017eupan 2022'},
+    trencin_primator:    {pct:46.8,voters:16400, eligible:35000, label:'Tren\u010d\u00edn \u2013 prim\u00e1tor 2022'},
+    trencin_vuc:         {pct:45.6,voters:190000,eligible:417000,label:'TSK \u2013 \u017eupan 2022'},
+  };
+  function _renderTurnout(c,t){
+    const el=document.getElementById('turnoutWidget');
+    if(!el)return;
+    const d=TURNOUT[c+'_'+t];
+    if(!d){el.innerHTML='';return;}
+    const pct=d.pct;
+    const stayed=(100-pct).toFixed(1);
+    const votersF=d.voters.toLocaleString('sk-SK');
+    const eligF=d.eligible.toLocaleString('sk-SK');
+    const winnerShare=Math.round(pct/2);
+    el.innerHTML='<div style="background:#0C1525;border:1px solid #192A42;border-radius:16px;padding:1.3rem 1.4rem;margin:1.3rem 0">'
+      +'<div style="font-size:.67rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#556880;margin-bottom:1rem">Volebn\u00e1 \u00fa\u010das\u0165 \u2014 '+d.label+'</div>'
+      +'<div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">'
+      +'<span style="font-family:'Syne',sans-serif;font-size:3rem;font-weight:900;color:#CC3333;line-height:1">'+pct+'%</span>'
+      +'<span style="font-family:'Syne',sans-serif;font-size:1.2rem;color:#CC3333">voli\u010dov</span></div>'
+      +'<div style="font-size:.82rem;color:#556880;margin-bottom:1.2rem">pri\u0161lo voli\u0165 v roku 2022</div>'
+      +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.1rem">'
+      +'<div style="background:#06090F;border:1px solid #192A42;border-radius:10px;padding:.85rem 1rem">'
+      +'<div style="font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;color:#2ECC71">'+votersF+'</div>'
+      +'<div style="font-size:.72rem;color:#556880;margin-top:3px">\u013eud\u00ed volilo</div></div>'
+      +'<div style="background:#06090F;border:1px solid #192A42;border-radius:10px;padding:.85rem 1rem">'
+      +'<div style="font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;color:#CC4444">'+stayed+'\u00a0%</div>'
+      +'<div style="font-size:.72rem;color:#556880;margin-top:3px">zostalo doma</div></div></div>'
+      +'<div style="font-size:.82rem;color:#6A8099;line-height:1.7;padding:.9rem 1rem;border-left:2px solid #2ECC71;border-radius:0 8px 8px 0;background:rgba(46,204,113,.04);font-style:italic">'
+      +'V\u00edt\u0159az bol zvolen\u00fd hlasmi len <strong style="color:#E8F0F8;font-style:normal">~'+winnerShare+'\u00a0%</strong> v\u0161etk\u00fdch opr\u00e1vnen\u00fdch voli\u010dov. Ka\u017ed\u00fd hlas m\u00e1 v\u00e4\u010d\u0161iu v\u00e1hu, ako sa zd\u00e1.</div>'
+      +'<div style="font-size:.67rem;color:#2A3A4E;margin-top:.85rem;line-height:1.5">'
+      +'Zdroj: \u0160tatistick\u00fd \u00farad SR, volby.sme.sk \u00b7 Opr\u00e1vnen\u00ed voli\u010di: '+eligF+' \u00b7 Vo\u013eby 29.\u00a010.\u00a02022</div></div>';
+  }
+
+  // \\u2500\\u2500 Social \\u2500\\u2500
   function shareFB(){ window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window._vaaShare.url),'_blank','width=620,height=440'); }
   function shareLI(){ window.open('https://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(window._vaaShare.url)+'&summary='+encodeURIComponent(window._vaaShare.text),'_blank','width=620,height=520'); }
   function shareTW(){ window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(window._vaaShare.text+' '+window._vaaShare.url),'_blank','width=620,height=440'); }
@@ -1308,7 +1382,14 @@ const VAA = (function(){
   return { pickCity, pickLocation, pickType, startQuiz, ans, goBack, restart, shareFB, shareLI, shareTW, copyURL, toggleInfo, toggleDetail };
 })();
 
-</script>
 
-<!-- Analytics
-     Currently: Umami (cookieless, GDPR-compliant, no cookie banner ne
+// ── Election countdown ──
+(function(){
+  var el = document.getElementById('cdDays');
+  if(!el) return;
+  var target = new Date('2026-10-24T07:00:00');
+  var now = new Date();
+  var diff = Math.ceil((target - now) / 86400000);
+  el.textContent = diff > 0 ? diff : '0';
+})();
+</script>
