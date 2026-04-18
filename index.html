@@ -686,6 +686,25 @@ body{
 .start-btn:not(:disabled){animation:btnPulse 2.5s ease-in-out infinite}
 @keyframes btnPulse{0%,100%{box-shadow:0 4px 16px rgba(30,78,157,.3)}50%{box-shadow:0 4px 24px rgba(30,78,157,.55)}}
 .start-btn:not(:disabled):hover{animation:none}
+/* ── Candidate website link in result card ── */
+.cand-url{
+  display:inline-block;margin-top:.3rem;
+  font-size:.72rem;color:var(--sk-blue);
+  text-decoration:none;opacity:.75;
+  word-break:break-all;
+  transition:opacity .15s;
+}
+.cand-url:hover{opacity:1;text-decoration:underline;text-underline-offset:2px}
+.r-card.top .cand-url{color:var(--green)}
+
+/* ── Mobile sticky-hover fix ── */
+@media (hover: none) {
+  #ba:hover,#bn:hover,#bd:hover{
+    background:#fff!important;
+    box-shadow:0 1px 6px rgba(0,0,0,.05),0 0 0 1px rgba(0,0,0,.06)!important;
+  }
+}
+
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
 </head>
@@ -895,7 +914,7 @@ body{
       </div>
       <ul class="voting-box__list">
         <li><strong>Občiansky preukaz alebo pas</strong> <span>na overenie totožnosti</span></li>
-        <li><strong>Hlasovací preukaz</strong> <span>ak voliš mimo trvalého bydliska, potrebujes oň vopred požiadať elektronicky</span></li>
+        <li><strong>Hlasovací preukaz</strong> <span>ak voliš mimo trvalého bydliska, potrebuješ oň vopred požiadať elektronicky</span></li>
       </ul>
     </div>
   </div>
@@ -915,7 +934,7 @@ body{
         <span class="faq-arrow">›</span>
       </button>
       <div class="faq-a">
-        <p>rSme občiansky projekt skupiny Občania štátu. Nikto z nás za to nedostáva zaplatené. Robíme to, lebo komunálna a krajská politika má na váš každodenný život väčší vplyv ako národná, a napriek tomu ju väčšina voličov podceňuje.</p>
+        <p>Sme občiansky projekt skupiny Občania štátu. Nikto z nás za to nedostáva zaplatené. Robíme to, lebo komunálna a krajská politika má na váš každodenný život väčší vplyv ako národná, a napriek tomu ju väčšina voličov podceňuje.</p>
         <p>Zdrojový kód je verejný na GitHube. Projekt nevznikol na objednávku žiadnej strany, kandidáta ani sponzora. Ak nájdete chybu alebo máte návrh, napíšte nám.</p>
       </div>
     </div>
@@ -960,7 +979,7 @@ body{
       </button>
       <div class="faq-a">
         <p>Nie nutne. Kalkulačka je iba pomôcka, nie návod. Výsledok ukazuje, kto myslí podobne ako vy na základe týchto 25 otázok , no voľba závisí aj od toho, nakoľko kandidátovi dôverujete, čo sľuboval v minulosti a či svoje sľuby plnil.</p>
-        <p>Ak vás výsledok prekvapil, pozrite si detail odpovedí: uvidíte, v ktorých témach sa líšite. Možno zistíte, že na niektoré otázky vám záleží viac ako na iné, a to kalkulačka nevie. Hlavný cieľ je ísť informovane voliť.</p>
+        <p>Ak vás výsledok prekvapil, pozrite si detail odpovedí: uvidíte, v ktorých témach sa líšite. Možno zistíte, že na niektoré otázky vám záleží viac ako na iné, a to kalkulačka nevie. Hlavný cieľ je ísť voliť, informovane.</p>
       </div>
     </div>
 
@@ -987,7 +1006,7 @@ body{
 
       <div class="footer-col">
         <div class="footer-col__title">Ochrana dát</div>
-        <p>Táto stránka <strong>nepoužíva cookies</strong>, nesleduje používateľov ani neodosiela žiadne osobné údaje na server. Tvoje odpovede zostávajú výhradne v tvojom prehliadači a po zatvorení okna zmiznú.</p>
+        <p>Táto stránka <strong>nepoužíva cookies</strong>, nesleduje používateľov ani neodosiela žiadne osobné údaje na server. Tvoje odpovede zostávajú výhradne v tvojom prehliadači a po zatvorení záložky zmiznú.</p>
         <p>Zbierame <strong>anonymné štatistiky návštevnosti</strong> (počet návštev, výber mesta) bez identifikácie jednotlivcov prostredníctvom nástroja Umami Analytics, bez cookies, v súlade s GDPR.</p>
       </div>
 
@@ -1044,8 +1063,8 @@ window.CRESTS = {
 
 // ── Competency ──
 window.COMPETENCY = {
-  primator:{title:'Čo môže primátor/starostka skutočne zmeniť?',text:`<strong>Priame právomoci:</strong> Mestský rozpočet a dane, územný plán, stavebné povolenia, mestská polícia, MHD, parkovanie, cyklotrasy, osvetlenie, nájomné byty, škôlky a základné školy, komunitné centrá, transparentnosť zákaziek.<br><br><strong>Čo môže ovplyvniť nepriamo:</strong> Lobovanie za štátne investície, vyjednávanie o eurofondoch, iniciovanie zákonných zmien, medzimestské partnerstvá, integračné programy, inklúzia cez mestské granty.`},
-  vuc:{title:'Čo môže župan/predseda VÚC skutočne zmeniť?',text:`<strong>Priame právomoci:</strong> Stredné školy a ich financovanie, krajské nemocnice, domovy sociálnych služieb, výška poplatkov za sociálne zariadenia, krajské cesty, regionálna autobusová doprava, kultúrne inštitúcie, čerpanie eurofondov, územný rozvoj kraja.<br><br><strong>Čo môže ovplyvniť nepriamo:</strong> Tlak na vládu SR za spravodlivejšie prerozdeľovanie daní, koordinácia s primátormi, programy pre energetickú chudobu, partnerstvá s firmami, integračné programy pre marginalizované skupiny.`}
+  primator:{title:'Čo môže primátor/starostka skutočne zmeniť?',text:`<strong>Priame právomoci:</strong> Mestský rozpočet a dane, územný plán, stavebné povolenia, mestská polícia, MHD, parkovanie, cyklotrasy, osvetlenie, nájomné byty, škôlky a základné školy, komunitné centrá, transparentnosť zákaziek.<br><br><strong>Čo môže ovplyvniť nepriamo:</strong> Lobovanie za štátne investície, vyjednávanie o eurofondoch, iniciovanie zákonných zmien, medzimestské partnerstvá, integračné programy, LGBTQ+ inklúzia cez mestské granty.`},
+  vuc:{title:'Čo môže župan/predseda VÚC skutočne zmeniť?',text:`<strong>Priame právomoci:</strong> Stredné školy a ich financovanie, krajské nemocnice, domovy sociálnych služieb, výška poplatkov za sociálne zariadenia, krajské cesty, regionálna autobusová doprava, kultúrne inštitúcie, čerpanie eurofondov, územný rozvoj kraja.<br><br><strong>Čo môže ovplyvniť nepriamo:</strong> Tlak na vládu za spravodlivejšie prerozdeľovanie daní, koordinácia s primátormi, programy pre energetickú chudobu, partnerstvá s firmami, integračné programy pre marginalizované skupiny.`}
 };
 
 // ── City display metadata ──
@@ -1172,7 +1191,7 @@ const VAA = (function(){
     const infoBtn = document.getElementById('qInfoBtn');
     if(infoBtn) infoBtn.classList.remove('active');
 
-    ['ba','bn','bd'].forEach(id=>document.getElementById(id).className='ans-btn');
+    ['ba','bn','bd'].forEach(id=>{const el=document.getElementById(id);el.className='ans-btn';el.blur();});
     const prev = answers[qIdx];
     if(prev==='agree')   document.getElementById('ba').classList.add('sa');
     if(prev==='neutral') document.getElementById('bn').classList.add('sn');
@@ -1283,7 +1302,8 @@ const VAA = (function(){
     results.forEach((r,idx)=>{
       const card = document.createElement('div');
       card.className = 'r-card' + (idx===0?' top':'');
-      card.innerHTML = `<div class="r-row"><div class="r-dot" style="background:${r.color}"></div><div style="flex:1"><div class="r-name">${r.name}${idx===0?'<span class="top-badge">Najlep\u0161\u00ed match</span>':''}</div><span class="r-party">${r.party}</span></div><div class="r-pct" style="color:${r.color}">${r.pct}%</div></div><div class="r-bar"><div class="r-fill" style="background:${r.color}" data-w="${r.pct}%"></div></div>`;
+      const urlLink = r.url ? `<a href="${r.url}" target="_blank" rel="noopener" class="cand-url" title="Web kandidáta">${r.url.replace(/^https?:\/\//,'').replace(/\/$/,'')}</a>` : '';
+      card.innerHTML = `<div class="r-row"><div class="r-dot" style="background:${r.color}"></div><div style="flex:1"><div class="r-name">${r.name}${idx===0?'<span class="top-badge">Najlepší match</span>':''}</div><span class="r-party">${r.party}</span>${urlLink}</div><div class="r-pct" style="color:${r.color}">${r.pct}%</div></div><div class="r-bar"><div class="r-fill" style="background:${r.color}" data-w="${r.pct}%"></div></div>`;
       rl.appendChild(card);
     });
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
