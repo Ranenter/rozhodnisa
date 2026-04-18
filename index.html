@@ -667,6 +667,7 @@ body{
 .cand-link:hover{text-decoration-color:currentColor}
 
 /* ── Turnout widget ── */
+#turnoutWidget{max-width:640px;margin:0 auto;padding:0 1.2rem}
 .turnout-widget-inner{background:var(--surface);border:none;border-top:3px solid var(--sk-red);border-radius:14px;box-shadow:0 1px 8px rgba(0,0,0,.06),0 0 0 1px rgba(0,0,0,.05);padding:1.2rem 1.3rem;margin:1.2rem 0}
 
 /* ── Stats / other ── */
@@ -820,35 +821,6 @@ main{display:block}
   letter-spacing:0;text-transform:none;
 }
 
-/* ── City finance facts strip (results screen) ── */
-.finance-strip{
-  background:var(--surface);border-radius:14px;
-  padding:1.1rem 1.2rem 1rem;margin:1.2rem 0 0;
-  box-shadow:0 1px 8px rgba(0,0,0,.05),0 0 0 1px rgba(0,0,0,.04);
-}
-.finance-strip__title{
-  font-family:'Barlow Condensed','Arial Narrow',sans-serif;
-  font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;
-  color:var(--muted);margin-bottom:.85rem;
-}
-.finance-strip__nums{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;
-}
-.finance-num{text-align:center}
-.finance-num__val{
-  font-family:'Barlow Condensed','Arial Narrow',sans-serif;
-  font-size:1.55rem;font-weight:800;color:var(--sk-blue);line-height:1;
-  display:block;
-}
-.finance-num__lbl{
-  font-size:.68rem;color:var(--muted);line-height:1.3;
-  display:block;margin-top:.25rem;
-}
-.finance-strip__note{
-  font-size:.63rem;color:var(--muted);margin-top:.75rem;
-  border-top:1px solid rgba(0,0,0,.06);padding-top:.55rem;
-  line-height:1.4;opacity:.8;
-}
 
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
@@ -1075,24 +1047,6 @@ main{display:block}
   </div>
 
 
-  <div class="finance-strip" id="financeStrip" style="display:none">
-    <div class="finance-strip__title">Vedel/a si? Financie tvojho mesta / kraja</div>
-    <div class="finance-strip__nums">
-      <div class="finance-num">
-        <span class="finance-num__val" id="finRozpocet">—</span>
-        <span class="finance-num__lbl">ročný rozpočet<br>(mil. €)</span>
-      </div>
-      <div class="finance-num">
-        <span class="finance-num__val" id="finNaOb">—</span>
-        <span class="finance-num__lbl">€ na obyvateľa<br>za rok</span>
-      </div>
-      <div class="finance-num">
-        <span class="finance-num__val" id="finDlh">—</span>
-        <span class="finance-num__lbl">miera<br>zadlženia (%)</span>
-      </div>
-    </div>
-    <p class="finance-strip__note" id="finZdroj"></p>
-  </div>
 
     <div class="restart-row"><button class="ghost-btn" onclick="VAA.restart()">&#8592; Začať odznova</button></div>
   <div class="sk-stripe"></div>
@@ -1565,7 +1519,6 @@ const VAA = (function(){
 
     _renderTurnout(city, type);
   _showScreen('sc-results');
-    _showFinance();
   }
 
   // Turnout widget
@@ -1587,6 +1540,16 @@ const VAA = (function(){
     trencin_primator:    {pct:46.8,voters:16400, eligible:35000, label:'Tren\u010d\u00edn \u2013 prim\u00e1tor 2022'},
     trencin_vuc:         {pct:45.6,voters:190000,eligible:417000,label:'TSK \u2013 \u017eupan 2022'},
   };
+
+  function _financeSection(city, type){
+    const fin = window.CITY_FINANCE && window.CITY_FINANCE[city+'_'+type];
+    if(!fin) return '';
+    const label = type==='primator' ? 'Financie tvojho mesta' : 'Financie tvojho kraja';
+    const dlhTxt = fin.dlh != null ? fin.dlh+'\u00a0%' : 'N/A';
+    const dlhColor = fin.dlh != null ? 'var(--sk-blue)' : 'var(--muted)';
+    return '<div style="margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(0,0,0,.07)">'      +'<div style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.85rem">'+label+'</div>'      +'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;text-align:center">'      +'<div><span style="font-family:\'Barlow Condensed\',\'Arial Narrow\',sans-serif;font-size:1.45rem;font-weight:800;color:var(--sk-blue);line-height:1;display:block">'+fin.rozpocet.toLocaleString('sk-SK')+'</span>'      +'<span style="font-size:.66rem;color:var(--muted);display:block;margin-top:.2rem;line-height:1.3">ročný rozpočet<br>(mil. \u20ac)</span></div>'      +'<div><span style="font-family:\'Barlow Condensed\',\'Arial Narrow\',sans-serif;font-size:1.45rem;font-weight:800;color:var(--sk-blue);line-height:1;display:block">'+fin.rozNa.toLocaleString('sk-SK')+'</span>'      +'<span style="font-size:.66rem;color:var(--muted);display:block;margin-top:.2rem;line-height:1.3">\u20ac na obyvateľa<br>za rok</span></div>'      +'<div><span style="font-family:\'Barlow Condensed\',\'Arial Narrow\',sans-serif;font-size:1.45rem;font-weight:800;color:'+dlhColor+';line-height:1;display:block">'+dlhTxt+'</span>'      +'<span style="font-size:.66rem;color:var(--muted);display:block;margin-top:.2rem;line-height:1.3">miera<br>zadlženia</span></div>'      +'</div>'      +'<div style="font-size:.62rem;color:var(--muted);opacity:.75;margin-top:.75rem;line-height:1.4">'+fin.zdroj+' · Informatívne údaje</div>'      +'</div>';
+  }
+
   function _renderTurnout(c,t){
     const el=document.getElementById('turnoutWidget');
     if(!el)return;
@@ -1613,7 +1576,7 @@ const VAA = (function(){
       +'<div style="font-size:.83rem;color:var(--muted);line-height:1.7;padding:.85rem 1rem;border-left:3px solid var(--green);border-radius:0 10px 10px 0;background:var(--surface);font-style:italic">'
       +'V\u00edt\u0159az bol zvolen\u00fd hlasmi len <strong style="color:var(--text);font-style:normal">~'+winnerShare+'\u00a0%</strong> v\u0161etk\u00fdch opr\u00e1vnen\u00fdch voli\u010dov. Ka\u017ed\u00fd hlas m\u00e1 v\u00e4\u010d\u0161iu v\u00e1hu, ako sa zd\u00e1.</div>'
       +'<div style="font-size:.67rem;color:var(--muted);opacity:.7;margin-top:.8rem;line-height:1.5">'
-      +'Zdroj: \u0160tatistick\u00fd \u00farad SR, volby.sme.sk \u00b7 Opr\u00e1vnen\u00ed voli\u010di: '+eligF+' \u00b7 Vo\u013eby 29.\u00a010.\u00a02022</div></div>';
+      +'Zdroj: \u0160tatistick\u00fd \u00farad SR, volby.sme.sk \u00b7 Opr\u00e1vnen\u00ed voli\u010di: '+eligF+' \u00b7 Vo\u013eby 29.\u00a010.\u00a02022</div>'+_financeSection(c,t)+'</div>';
   }
 
   // \\u2500\\u2500 Social \\u2500\\u2500
@@ -1681,18 +1644,7 @@ const VAA = (function(){
 
 
   function _showFinance(){
-    const strip = document.getElementById('financeStrip');
-    if(!strip) return;
-    const fin = window.CITY_FINANCE && window.CITY_FINANCE[key];
-    if(!fin){ strip.style.display='none'; return; }
-    strip.style.display='block';
-    document.getElementById('finRozpocet').textContent = fin.rozpocet ? fin.rozpocet.toLocaleString('sk-SK') : '—';
-    document.getElementById('finNaOb').textContent = fin.rozNa ? fin.rozNa.toLocaleString('sk-SK') : '—';
-    const dlhEl = document.getElementById('finDlh');
-    dlhEl.textContent = fin.dlh != null ? fin.dlh + ' %' : 'N/A';
-    if(fin.dlh == null) dlhEl.style.color = 'var(--muted)';
-    const note = document.getElementById('finZdroj');
-    note.textContent = 'Zdroj: ' + (fin.zdroj || '') + '. Údaje sú informatívne a môžu zahŕňať odhad.';
+    // Finance is appended inside the turnout card by _renderTurnout, so nothing here
   }
 
   return { pickCity, pickLocation, pickType, startQuiz, ans, goBack, restart, shareFB, shareLI, shareTW, copyURL, toggleInfo, toggleDetail };
