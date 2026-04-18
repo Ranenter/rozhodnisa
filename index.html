@@ -820,6 +820,36 @@ main{display:block}
   letter-spacing:0;text-transform:none;
 }
 
+/* ── City finance facts strip (results screen) ── */
+.finance-strip{
+  background:var(--surface);border-radius:14px;
+  padding:1.1rem 1.2rem 1rem;margin:1.2rem 0 0;
+  box-shadow:0 1px 8px rgba(0,0,0,.05),0 0 0 1px rgba(0,0,0,.04);
+}
+.finance-strip__title{
+  font-family:'Barlow Condensed','Arial Narrow',sans-serif;
+  font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;
+  color:var(--muted);margin-bottom:.85rem;
+}
+.finance-strip__nums{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;
+}
+.finance-num{text-align:center}
+.finance-num__val{
+  font-family:'Barlow Condensed','Arial Narrow',sans-serif;
+  font-size:1.55rem;font-weight:800;color:var(--sk-blue);line-height:1;
+  display:block;
+}
+.finance-num__lbl{
+  font-size:.68rem;color:var(--muted);line-height:1.3;
+  display:block;margin-top:.25rem;
+}
+.finance-strip__note{
+  font-size:.63rem;color:var(--muted);margin-top:.75rem;
+  border-top:1px solid rgba(0,0,0,.06);padding-top:.55rem;
+  line-height:1.4;opacity:.8;
+}
+
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
 </head>
@@ -911,14 +941,17 @@ main{display:block}
           <div class="card-crest"></div>
           <span class="cn">Prešov</span><span class="cs">Metropola Šariša</span><span class="cpop">88 000 obyvateľov</span>
         </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Žilina</span><span class="cs">Centrum Severu - čoskoro</span><span class="cpop">84 000 obyvateľov</span>
+        <button class="city-card" style="--c1:#003580;--c2:#FFD700" onclick="VAA.pickLocation('zilina',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Žilina</span><span class="cs">Centrum Severu</span><span class="cpop">84 000 obyvateľov</span>
         </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Banská Bystrica</span><span class="cs">Mesto pod Urpínom - čoskoro</span><span class="cpop">74 000 obyvateľov</span>
+        <button class="city-card" style="--c1:#CC0000;--c2:#FFD700" onclick="VAA.pickLocation('bystrica',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Banská Bystrica</span><span class="cs">Mesto pod Urpínom</span><span class="cpop">74 000 obyvateľov</span>
         </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Nitra</span><span class="cs">Mesto pod Zoborom - čoskoro</span><span class="cpop">67 000 obyvateľov</span>
+        <button class="city-card" style="--c1:#8B0000;--c2:#C0C0C0" onclick="VAA.pickLocation('nitra',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Nitra</span><span class="cs">Mesto pod Zoborom</span><span class="cpop">67 000 obyvateľov</span>
         </button>
         <button class="city-card locked" tabindex="-1" aria-disabled="true">
           <span class="cn">Trnava</span><span class="cs">Malý Rím - čoskoro</span><span class="cpop">66 000 obyvateľov</span>
@@ -931,30 +964,33 @@ main{display:block}
       <div class="city-grid" id="krajGrid" style="display:none">
         <button class="city-card" style="--c1:#CC3333;--c2:#f0f0f0" onclick="VAA.pickLocation('presov',this)">
           <div class="card-crest"></div>
-          <span class="cn">Prešovský kraj</span><span class="cs">PSK</span><span class="cpop">810 000 obyvateľov</span>
+          <span class="cn">Prešovský</span><span class="cs">PSK</span><span class="cpop">810 000 obyvateľov</span>
         </button>
         <button class="city-card" style="--c1:#D4AF37;--c2:#003DA5" onclick="VAA.pickLocation('kosice',this)">
           <div class="card-crest"></div>
-          <span class="cn">Košický kraj</span><span class="cs">KSK</span><span class="cpop">779 000 obyvateľov</span>
+          <span class="cn">Košický</span><span class="cs">KSK</span><span class="cpop">779 000 obyvateľov</span>
         </button>
         <button class="city-card" style="--c1:#CE1126;--c2:#f5f5f5" onclick="VAA.pickLocation('bratislava',this)">
           <div class="card-crest"></div>
-          <span class="cn">Bratislavský kraj</span><span class="cs">BSK</span><span class="cpop">736 000 obyvateľov</span>
+          <span class="cn">Bratislavský</span><span class="cs">BSK</span><span class="cpop">736 000 obyvateľov</span>
+        </button>
+        <button class="city-card" style="--c1:#003580;--c2:#FFD700" onclick="VAA.pickLocation('zilina',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Žilinský</span><span class="cs">ŽSK</span><span class="cpop">695 000 obyvateľov</span>
+        </button>
+        <button class="city-card" style="--c1:#8B0000;--c2:#C0C0C0" onclick="VAA.pickLocation('nitra',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Nitriansky</span><span class="cs">NSK</span><span class="cpop">674 000 obyvateľov</span>
+        </button>
+        <button class="city-card" style="--c1:#CC0000;--c2:#FFD700" onclick="VAA.pickLocation('bystrica',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Banskobystrický</span><span class="cs">BBSK</span><span class="cpop">644 000 obyvateľov</span>
         </button>
         <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Žilinský kraj</span><span class="cs">čoskoro · ŽSK</span><span class="cpop">695 000 obyvateľov</span>
+          <span class="cn">Trnavský</span><span class="cs">čoskoro · TTSK</span><span class="cpop">622 000 obyvateľov</span>
         </button>
         <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Nitriansky kraj</span><span class="cs">čoskoro · NSK</span><span class="cpop">674 000 obyvateľov</span>
-        </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Banskobystrický kraj</span><span class="cs">čoskoro · BBSK</span><span class="cpop">644 000 obyvateľov</span>
-        </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Trnavský kraj</span><span class="cs">čoskoro · TTSK</span><span class="cpop">622 000 obyvateľov</span>
-        </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Trenčiansky kraj</span><span class="cs">čoskoro · TSK</span><span class="cpop">566 000 obyvateľov</span>
+          <span class="cn">Trenčiansky</span><span class="cs">čoskoro · TSK</span><span class="cpop">566 000 obyvateľov</span>
         </button>
       </div>
 
@@ -1033,9 +1069,29 @@ main{display:block}
       </div>
       <ul class="voting-box__list">
         <li><strong>Občiansky preukaz alebo pas</strong> <span>na overenie totožnosti</span></li>
-        <li><strong>Hlasovací preukaz</strong> <span>ak voliš mimo trvalého bydliska, potrebuješ oň vopred požiadať elektronicky</span></li>
       </ul>
+      <p class="voting-box__text" style="margin-top:.75rem;margin-bottom:0;border-left:3px solid var(--sk-red);padding-left:.65rem;"><strong>Dôležité:</strong> Voliť môžeš <strong>výhradne v mieste trvalého bydliska</strong>. V komunálnych voľbách hlasovací preukaz neexistuje.</p>
     </div>
+  </div>
+
+
+  <div class="finance-strip" id="financeStrip" style="display:none">
+    <div class="finance-strip__title">Vedel/a si? Financie tvojho mesta / kraja</div>
+    <div class="finance-strip__nums">
+      <div class="finance-num">
+        <span class="finance-num__val" id="finRozpocet">—</span>
+        <span class="finance-num__lbl">ročný rozpočet<br>(mil. €)</span>
+      </div>
+      <div class="finance-num">
+        <span class="finance-num__val" id="finNaOb">—</span>
+        <span class="finance-num__lbl">€ na obyvateľa<br>za rok</span>
+      </div>
+      <div class="finance-num">
+        <span class="finance-num__val" id="finDlh">—</span>
+        <span class="finance-num__lbl">miera<br>zadlženia (%)</span>
+      </div>
+    </div>
+    <p class="finance-strip__note" id="finZdroj"></p>
   </div>
 
     <div class="restart-row"><button class="ghost-btn" onclick="VAA.restart()">&#8592; Začať odznova</button></div>
@@ -1185,6 +1241,59 @@ window.CRESTS = {
 window.COMPETENCY = {
   primator:{title:'Čo môže primátor/starostka skutočne zmeniť?',text:`<strong>Priame právomoci:</strong> Mestský rozpočet a dane, územný plán, stavebné povolenia, mestská polícia, MHD, parkovanie, cyklotrasy, osvetlenie, nájomné byty, škôlky a základné školy, komunitné centrá, transparentnosť zákaziek.<br><br><strong>Čo môže ovplyvniť nepriamo:</strong> Lobovanie za štátne investície, vyjednávanie o eurofondoch, iniciovanie zákonných zmien, medzimestské partnerstvá, integračné programy, LGBTQ+ inklúzia cez mestské granty.`},
   vuc:{title:'Čo môže župan/predseda VÚC skutočne zmeniť?',text:`<strong>Priame právomoci:</strong> Stredné školy a ich financovanie, krajské nemocnice, domovy sociálnych služieb, výška poplatkov za sociálne zariadenia, krajské cesty, regionálna autobusová doprava, kultúrne inštitúcie, čerpanie eurofondov, územný rozvoj kraja.<br><br><strong>Čo môže ovplyvniť nepriamo:</strong> Tlak na vládu za spravodlivejšie prerozdeľovanie daní, koordinácia s primátormi, programy pre energetickú chudobu, partnerstvá s firmami, integračné programy pre marginalizované skupiny.`}
+};
+
+
+// ── City & VÚC financial data (2025/2026 budgets, estimated where marked) ──
+window.CITY_FINANCE = {
+  bratislava_primator: {
+    rozpocet: 761, rozNa: 1601, dlh: 44,
+    zdroj: 'Schválený rozpočet HM SR Bratislavy 2026'
+  },
+  bratislava_vuc: {
+    rozpocet: 720, rozNa: 978, dlh: null,
+    zdroj: 'BSK rozpočet 2025, odhad pre 2026'
+  },
+  kosice_primator: {
+    rozpocet: 438, rozNa: 1921, dlh: 35,
+    zdroj: 'Schválený rozpočet mesta Košice 2026'
+  },
+  kosice_vuc: {
+    rozpocet: 390, rozNa: 500, dlh: null,
+    zdroj: 'KSK rozpočet 2025, odhad'
+  },
+  presov_primator: {
+    rozpocet: 155, rozNa: 1761, dlh: 39,
+    zdroj: 'Schválený rozpočet mesta Prešov 2025'
+  },
+  presov_vuc: {
+    rozpocet: 553, rozNa: 683, dlh: null,
+    zdroj: 'Schválený rozpočet PSK 2026'
+  },
+  zilina_primator: {
+    rozpocet: 165, rozNa: 1964, dlh: 28,
+    zdroj: 'Záverečný účet mesta Žilina 2024, odhad pre 2025'
+  },
+  zilina_vuc: {
+    rozpocet: 375, rozNa: 540, dlh: null,
+    zdroj: 'ŽSK rozpočet 2025, odhad'
+  },
+  bystrica_primator: {
+    rozpocet: 130, rozNa: 1757, dlh: 32,
+    zdroj: 'Záverečný účet mesta Banská Bystrica 2024, odhad pre 2025'
+  },
+  bystrica_vuc: {
+    rozpocet: 340, rozNa: 528, dlh: null,
+    zdroj: 'BBSK rozpočet 2025, odhad'
+  },
+  nitra_primator: {
+    rozpocet: 115, rozNa: 1716, dlh: 25,
+    zdroj: 'Záverečný účet mesta Nitra 2024, odhad pre 2025'
+  },
+  nitra_vuc: {
+    rozpocet: 302, rozNa: 448, dlh: null,
+    zdroj: 'Schválený rozpočet NSK 2025'
+  },
 };
 
 // ── City display metadata ──
@@ -1456,6 +1565,7 @@ const VAA = (function(){
 
     _renderTurnout(city, type);
   _showScreen('sc-results');
+    _showFinance();
   }
 
   // Turnout widget
@@ -1567,6 +1677,22 @@ const VAA = (function(){
     if(dl) dl.classList.toggle('open');
     if(arrow) arrow.style.transform = dl && dl.classList.contains('open') ? 'rotate(90deg)' : '';
     if(btn) btn.setAttribute('aria-expanded', dl && dl.classList.contains('open') ? 'true' : 'false');
+  }
+
+
+  function _showFinance(){
+    const strip = document.getElementById('financeStrip');
+    if(!strip) return;
+    const fin = window.CITY_FINANCE && window.CITY_FINANCE[key];
+    if(!fin){ strip.style.display='none'; return; }
+    strip.style.display='block';
+    document.getElementById('finRozpocet').textContent = fin.rozpocet ? fin.rozpocet.toLocaleString('sk-SK') : '—';
+    document.getElementById('finNaOb').textContent = fin.rozNa ? fin.rozNa.toLocaleString('sk-SK') : '—';
+    const dlhEl = document.getElementById('finDlh');
+    dlhEl.textContent = fin.dlh != null ? fin.dlh + ' %' : 'N/A';
+    if(fin.dlh == null) dlhEl.style.color = 'var(--muted)';
+    const note = document.getElementById('finZdroj');
+    note.textContent = 'Zdroj: ' + (fin.zdroj || '') + '. Údaje sú informatívne a môžu zahŕňať odhad.';
   }
 
   return { pickCity, pickLocation, pickType, startQuiz, ans, goBack, restart, shareFB, shareLI, shareTW, copyURL, toggleInfo, toggleDetail };
