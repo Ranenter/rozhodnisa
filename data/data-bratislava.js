@@ -6,7 +6,7 @@ window.VAA_DATA = window.VAA_DATA || {};
 
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
-window.VAA_DATA.candidates['bratislava_primator'] = [{id:'vallo',name:'Matúš Vallo',party:'Team BA / PS / SaS / Demokrati',color:'#e63946',url:'https://teamba.sk'},{id:'cahoj',name:'Dana Čahojová',party:'Nezávislá',color:'#457b9d',url:''},{id:'winkl',name:'Martin Winkler',party:'Strana Dunaj',color:'#2a9d8f',url:'https://martinwinkler.sk'},{id:'hered',name:'Miro Heredoš',party:'Nezávislý (ex-Republika)',color:'#6d4c41',url:''},{id:'geci',name:'Ľubomír Geci',party:'Nezávislý',color:'#78909c',url:''}];
+window.VAA_DATA.candidates['bratislava_primator'] = [{id:'vallo',name:'Matúš Vallo',party:'Team BA / PS / SaS / Demokrati',color:'#e63946',url:'https://teamba.sk'},{id:'cahoj',name:'Dana Čahojová',party:'Nezávislá',color:'#457b9d',url:''},{id:'winkl',name:'Martin Winkler',party:'Strana Dunaj',color:'#2a9d8f',url:'https://martinwinkler.sk'},{id:'hered',name:'Miro Heredoš',party:'Nezávislý (ex-Republika)',color:'#6d4c41',url:'https://www.miroslavheredos.com'},{id:'geci',name:'Ľubomír Geci',party:'Nezávislý',color:'#78909c',url:'https://www.lubomirgeci.sk'}];
 window.VAA_DATA.candidates['bratislava_vuc'] = [{id:'droba',name:'Juraj Droba',party:'SaS / PS / Team BA / Demokrati',color:'#0097a7',url:'https://droba.sk'},{id:'krajco',name:'Zuzana Krajčovičová',party:'Právo na pravdu',color:'#2e7d32',url:'https://zupanka.sk'}];
 
 // ── Otázky: Primátor / Primátorka ──
