@@ -1,5 +1,4 @@
 // ── Volebná kalkulačka 2026 — ŽILINA + ŽILINSKÝ KRAJ ──
-// Jediný dátový súbor v štýle rozhodnisa.sk pre mesto Žilina a Žilinský samosprávny kraj.
 // Obsahuje voľby: primátor/primátorka Žiliny a predseda/predsedníčka ŽSK.
 // Štruktúra otázky: {t:'Téma', q:'Text otázky?', w:'Vysvetlenie.', a:{id1:'agree'|'neutral'|'disagree', ...}}
 
@@ -16,7 +15,7 @@ window.VAA_DATA.candidates['zilina_primator'] = [
 // ── Kandidáti: Predseda / Predsedníčka ŽSK ──
 window.VAA_DATA.candidates['zilina_vuc'] = [
   {id:'janckulik',name:'Igor Janckulík',party:'KDH',color:'#1E4FA1',url:'https://igorjanckulik.sk/'},
-  {id:'jurinova',name:'Erika Jurinová',party:'nezávislá / kandidatúru zvažuje',color:'#7A2E8A',url:'https://jurinova.sk/'}
+  {id:'jurinova',name:'Erika Jurinová',party:'nezávislá',color:'#7A2E8A',url:'https://jurinova.sk/'}
 ];
 
 // ── Otázky: Primátor / Primátorka Žiliny ──
@@ -24,8 +23,8 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q1
   {t:'Parkovanie',
-   q:'Má Žilina ďalej rozširovať regulované parkovanie aj za cenu, že časť vodičov príde o bezplatné státie pri byte?',
-   w:'Parkovacia politika patrí medzi najviditeľnejšie komunálne témy v Žiline. Mesto postupne rozširuje regulované zóny, pričom cieľom je znížiť chaos, zvýšiť obrátkovosť miest a zvýhodniť rezidentov. Kritici hovoria o strate komfortu a vyšších nákladoch pre domácnosti, podporovatelia o potrebe zaviesť pravidlá v preplnených štvrtiach.',
+   q:'Má Žilina ďalej rozširovať platené parkovanie aj za cenu, že časť vodičov príde o bezplatné státie pri svojom byte/dome?',
+   w:'Parkovacia politika patrí medzi najviditeľnejšie komunálne témy v Žiline. Mesto postupne rozširuje regulované zóny, pričom cieľom je znížiť chaos, zvýšiť dostupnosť miest a zvýhodniť rezidentov. Kritici hovoria o strate komfortu a vyšších nákladoch pre domácnosti, podporovatelia o potrebe zaviesť pravidlá v preplnených štvrtiach.',
    a:{fiabane:'agree',cibulka:'disagree'}},
 
   // Q2
@@ -36,14 +35,14 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q3
   {t:'Bývanie',
-   q:'Má Žilina aktívne stavať mestské nájomné byty aj v partnerstve so súkromným sektorom, aj keď mesto vloží do projektu svoje pozemky?',
+   q:'Má Žilina aktívne stavať mestské nájomné byty aj v partnerstve so súkromnými investormi?',
    w:'Žilina v roku 2026 rozbehla tému nájomného bývania ako odpoveď na drahé hypotéky a odchod mladých rodín. Sporné je najmä to, či má mesto do výstavby vstupovať cez developerskú spoločnosť a majetkové vklady, alebo radšej ponechať bytovú výstavbu trhu. Zástancovia hovoria o jedinom realistickom spôsobe, ako zvýšiť ponuku dostupných bytov, kritici o riziku nevýhodného nakladania s mestským majetkom.',
    a:{fiabane:'agree',cibulka:'disagree'}},
 
   // Q4
   {t:'Majetok mesta',
-   q:'Má mesto prestať vkladať atraktívne pozemky do spoločných projektov a radšej ich prenajímať alebo predať za trhových podmienok?',
-   w:'V Žiline sa ostro diskutuje o tom, ako narábať s mestskými pozemkami, najmä pri väčších developmentoch. Jedna línia tvrdí, že majetok mesta má zostať pod silnou verejnou kontrolou a prinášať stabilný výnos, druhá, že bez aktívneho vstupu mesta do projektov sa nájomné bývanie a ďalšie strategické investície nikdy nepohnú.',
+   q:'Má mesto prestať vkladať atraktívne pozemky do spoločných projektov a radšej ich prenajímať alebo predať za trhovú cenu?',
+   w:'V Žiline sa ostro diskutuje o tom, ako narábať s mestskými pozemkami, najmä pri väčších projektoch. Jedna línia tvrdí, že majetok mesta má zostať pod silnou verejnou kontrolou a prinášať stabilný výnos, druhá, že bez aktívneho vstupu mesta do projektov sa nájomné bývanie a ďalšie strategické investície nikdy nepohnú.',
    a:{fiabane:'disagree',cibulka:'agree'}},
 
   // Q5
@@ -66,7 +65,7 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q8
   {t:'Cyklodoprava',
-   q:'Má Žilina systematicky budovať oddelené cyklotrasy aj za cenu rušenia časti parkovacích miest alebo jazdných pruhov?',
+   q:'Má Žilina budovať oddelené cyklotrasy aj za cenu rušenia časti parkovacích miest alebo jazdných pruhov?',
    w:'Cyklodoprava v Žiline rastie, ale sieť trás je stále neúplná a miestami nesúvislá. Ak má byť bicykel reálnou alternatívou, často to znamená ubrať priestor autám. Ide o hodnotový spor medzi komfortom individuálnej automobilovej dopravy a bezpečnosťou aktívnej mobility.',
    a:{fiabane:'agree',cibulka:'disagree'}},
 
@@ -84,7 +83,7 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q11
   {t:'Šport a voľný čas',
-   q:'Má mesto viac investovať do verejne dostupných športovísk, detských ihrísk a rekreačných zón aj na sídliskách mimo centra?',
+   q:'Má mesto viac investovať do verejne dostupných športovísk, detských ihrísk a rekreačných zón aj na sídliskách?',
    w:'Kvalita života v meste nezávisí len od dopravy a bývania, ale aj od toho, či majú ľudia dostupný verejný priestor pre šport, oddych a deti. Takéto projekty sú populárne a viditeľné, no zároveň konkurujú iným investičným prioritám, ktoré nemusia byť na prvý pohľad také atraktívne.',
    a:{fiabane:'agree',cibulka:'agree'}},
 
@@ -96,13 +95,13 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q13
   {t:'Developeri',
-   q:'Má mesto tvrdšie vyžadovať od developerov, aby pri veľkých projektoch spolufinancovali škôlky, cesty alebo verejné priestory?',
+   q:'Má mesto tvrdšie vyžadovať od investorov, aby pri veľkých projektoch spolufinancovali škôlky, cesty alebo verejné priestory?',
    w:'Nová výstavba prináša mestu dane aj nových obyvateľov, ale zároveň tlak na školy, parkovanie, dopravu a služby. Niektoré mestá sa snažia od developerov pýtať väčší podiel na verejnej infraštruktúre. Otázka je, či to prinesie férovejší rozvoj, alebo iba spomalí bytovú výstavbu a zvýši ceny.',
    a:{fiabane:'agree',cibulka:'agree'}},
 
   // Q14
   {t:'Digitalizácia',
-   q:'Má mesto výrazne zrýchliť digitalizáciu úradu a čo najviac podaní vybavovať online, aj keby sa časť služieb obmedzila osobne?',
+   q:'Má mesto výrazne zrýchliť digitalizáciu úradu a čo najviac podaní vybavovať online, aj keby sa časť osobných služieb obmedzila?',
    w:'Digitalizácia môže ušetriť čas občanom aj úradníkom, zvýšiť kontrolovateľnosť procesov a znížiť priestor na nejasnosti. Zároveň však časť obyvateľov stále preferuje osobný kontakt alebo nemá dostatočné digitálne zručnosti. Dôležité je, či má mesto ísť rýchlo dopredu, alebo voliť opatrnejší prechod.',
    a:{fiabane:'agree',cibulka:'neutral'}},
 
@@ -114,13 +113,13 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q16
   {t:'Bezpečnosť',
-   q:'Potrebuje Žilina viac viditeľných mestských policajtov v uliciach a na sídliskách?',
+   q:'Potrebuje Žilina viac viditeľných mestských policajtov v uliciach?',
    w:'Pocit bezpečia patrí medzi najčastejšie očakávania od mesta, najmä vo večerných hodinách, pri stanici, v podchodoch alebo na sídliskách. Posilnenie mestskej polície však znamená vyššie personálne a prevádzkové náklady a vyvoláva aj otázku, či je problém skôr v prevencii alebo v represii.',
    a:{fiabane:'neutral',cibulka:'agree'}},
 
   // Q17
   {t:'Stanica a centrum',
-   q:'Má primátor urobiť z okolia železničnej a autobusovej stanice absolútnu prioritu mesta, aj keby to odsunulo investície do iných častí Žiliny?',
+   q:'Má mesto urobiť z okolia železničnej a autobusovej stanice absolútnu prioritu mesta, aj keby to odsunulo investície do iných častí Žiliny?',
    w:'Stanica je pre mnohých prvý dojem z mesta a zároveň miesto, kde sa koncentrujú dopravné aj sociálne problémy. Investície do tejto zóny môžu mať veľký symbolický aj praktický efekt, no vždy znamenajú, že inde sa bude čakať dlhšie.',
    a:{fiabane:'agree',cibulka:'agree'}},
 
@@ -186,7 +185,7 @@ window.VAA_DATA.questions.zilina_vuc = [
    a:{janckulik:'agree',jurinova:'agree'}},
 
   {t:'Verejná doprava',
-   q:'Má kraj zachovať autobusové spojenia aj v menej vyťažených oblastiach, aj keď sú ekonomicky stratové?',
+   q:'Má kraj zachovať autobusové spojenia aj v menej vyťažených oblastiach, aj keď sú stratové?',
    w:'Riedko osídlené časti Oravy, Kysúc, Turca či Liptova sú odkázané na verejnú dopravu viac než veľké mestá. Ekonomicky nevýhodné linky však zaťažujú rozpočet. Rozhoduje sa medzi dostupnosťou služieb pre všetkých a efektívnym využitím verejných peňazí.',
    a:{janckulik:'agree',jurinova:'agree'}},
 
@@ -226,7 +225,7 @@ window.VAA_DATA.questions.zilina_vuc = [
    a:{janckulik:'agree',jurinova:'neutral'}},
 
   {t:'Stredné školy',
-   q:'Má kraj prioritne investovať do modernizácie stredných škôl a dielní tak, aby lepšie reagovali na potreby trhu práce?',
+   q:'Má kraj prioritne investovať do modernizácie stredných škôl, aby lepšie reagovali na potreby trhu práce?',
    w:'ŽSK je zriaďovateľom stredných škôl a nesie zodpovednosť za to, či absolventi nájdu uplatnenie. Modernizácia odborného vzdelávania môže pomôcť firmám aj mladým ľuďom, no vyžaduje vysoké investície a spoluprácu so zamestnávateľmi.',
    a:{janckulik:'agree',jurinova:'agree'}},
 
@@ -240,14 +239,14 @@ window.VAA_DATA.questions.zilina_vuc = [
    w:'Žilinský kraj patrí medzi priemyselne najsilnejšie regióny Slovenska, no firmy zároveň upozorňujú na nedostatok pripravených absolventov. Väčšie prepojenie škôl s praxou môže zvýšiť zamestnateľnosť, no zároveň vyvoláva obavy, aby školy nestratili širšiu vzdelávaciu funkciu.',
    a:{janckulik:'agree',jurinova:'agree'}},
 
-  {t:'Ovdušie',
+  {t:'Ovzdušie',
    q:'Má kraj viac investovať do znižovania znečistenia ovzdušia v regiónoch ako Kysuce, Orava a Turiec, aj keď to nie je jeho najviditeľnejšia kompetencia?',
    w:'Pretrvávajúce problémy s prachovými časticami a benzo[a]pyrénom sú spojené najmä s vykurovaním domácností tuhými palivami. Kraj nemá v rukách všetky nástroje, no môže koordinovať projekty, podporovať osvetu, energetické riešenia a tlak na systémové opatrenia.',
    a:{janckulik:'neutral',jurinova:'agree'}},
 
   {t:'Energetika',
    q:'Má kraj urýchliť zatepľovanie a energetické úspory vo svojich budovách, aj keď sa investície vrátia až o niekoľko rokov?',
-   w:'Župa spravuje veľké množstvo budov — školy, nemocnice, kultúrne inštitúcie či zariadenia sociálnych služieb. Energetické úspory znižujú budúce náklady, no vyžadujú značné vstupné investície.',
+   w:'Župa spravuje veľké množstvo budov napr. školy, nemocnice, kultúrne inštitúcie či zariadenia sociálnych služieb. Energetické úspory znižujú budúce náklady, no vyžadujú značné vstupné investície.',
    a:{janckulik:'agree',jurinova:'agree'}},
 
   {t:'Energetika',
@@ -267,7 +266,7 @@ window.VAA_DATA.questions.zilina_vuc = [
 
   {t:'Regionálna rovnováha',
    q:'Má vedenie kraja garantovať vyrovnanejšie zastúpenie regiónov vo vedení župy a pri veľkých investíciách?',
-   w:'Žilinský kraj má silné regionálne identity — Kysuce, Orava, Turiec, Liptov aj Horné Považie často sledujú, či nie sú pri investíciách prehliadané. Otázka smeruje k tomu, či má byť regionálna vyváženosť explicitnou politickou zásadou.',
+   w:'Žilinský kraj má silné regionálne identity ako Kysuce, Orava, Turiec, Liptov aj Horné Považie často sledujú, či nie sú pri investíciách prehliadané. Otázka smeruje k tomu, či má byť regionálna vyváženosť explicitnou politickou zásadou.',
    a:{janckulik:'agree',jurinova:'neutral'}},
 
   {t:'Cestovný ruch',
