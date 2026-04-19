@@ -27,7 +27,7 @@ window.VAA_DATA.questions.bratislava_primator = [
 
   // Q3
   {t:'Hospodárenie',
-   q:'Myslíš si, že magistrát je príliš nafúknutý a plný zbytočných úradníkov?',
+   q:'Myslíš si, že je magistrát mesta príliš nafúknutý a plný zbytočných úradníkov?',
    info:'Magistrát zamestnáva dnes 3 200 ľudí — o 600 viac ako v roku 2018, teda +23 %. Mzdové náklady narástli o 47 mil. € ročne. Niektorí kandidáti navrhujú znížiť počet úradníkov o 30 %, čo by ušetrilo odhadom 14 mil. € ročne. Iní argumentujú, že rast reflektuje nové kompetencie a projekty mesta.',
    a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
 
@@ -39,7 +39,7 @@ window.VAA_DATA.questions.bratislava_primator = [
 
   // Q5 (pôvodné Q6, prepísané)
   {t:'Bývanie',
-   q:'Mal by magistrát výrazne zrýchliť výstavbu mestských nájomných bytov — napríklad na 5 000 bytov do roku 2030 — aj za cenu vyššieho zadlženia?',
+   q:'Malo by mesto výrazne zrýchliť výstavbu mestských nájomných bytov - napríklad na 5 000 bytov do roku 2030, aj za cenu vyššieho zadlženia?',
    info:'Priemerná cena bytu v Bratislave je 4 500 €/m² — pre byt 60 m² to znamená 270 000 €, teda 17-násobok priemerného ročného platu. Mesto schválilo výstavbu 1 000 nájomných bytov do roku 2030 za odhadovaných 180 mil. €. Kritici hovoria, že 1 000 bytov je kvapka v mori — v meste žije 500 000 ľudí a na nájomné bývanie čaká niekoľko tisíc domácností.',
    a:{vallo:'neutral',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
 
@@ -51,7 +51,7 @@ window.VAA_DATA.questions.bratislava_primator = [
 
   // Q7 (pôvodné Q9)
   {t:'Bezpečnosť',
-   q:'Chceš výrazne viac viditeľných mestských policajtov v uliciach Bratislavy?',
+   q:'Chceš viac viditeľných mestských policajtov v uliciach Bratislavy?',
    info:'Bratislava má 1 200 mestských policajtov — na 1 000 obyvateľov to je 2,1, čo je pod priemerom porovnateľných európskych miest (3,2). Rozpočet mestskej polície narástol na 18,8 mil. € v roku 2026 — dvojnásobok oproti roku 2018. Počet trestných činov vzrástol o 12 % od roku 2021. Jeden policajt stojí mesto vrátane vybavenia cca 25 000 € ročne.',
    a:{vallo:'agree',cahoj:'agree',winkl:'neutral',hered:'neutral',geci:'neutral'}},
 
@@ -63,14 +63,14 @@ window.VAA_DATA.questions.bratislava_primator = [
 
   // Q9 (pôvodné Q12)
   {t:'LGBTQ+',
-   q:'Mal by mestský magistrát aktívne podporovať LGBTQ+ komunitné centrá a projekty z mestských grantov?',
+   q:'Malo by mesto aktívne podporovať LGBTQ+ komunitné centrá a projekty z mestských grantov?',
    info:'Bratislava vyčleňuje ročne cca 2 mil. € na komunitné granty. Duhový Pride prilákal v roku 2024 vyše 15 000 účastníkov. Grantová podpora LGBTQ+ komunity z mestského rozpočtu dnes nepresahuje 50 000 € ročne. Primátor nemôže zákonom garantovať bezpečné priestory, ale môže financovať ich vznik.',
    a:{vallo:'agree',cahoj:'neutral',winkl:'neutral',hered:'disagree',geci:'neutral'}},
 
   // Q10 (pôvodné Q13)
   {t:'Rómske komunity',
    q:'Chceš, aby mesto aktívne riešilo integráciu Rómov z marginalizovaných komunít, aj za cenu kontroverzných opatrení?',
-   info:'V Bratislave žije odhadom 8 000–12 000 ľudí v podmienkach sociálneho vylúčenia, z toho veľká časť v osadách Devínska Nová Ves a Petržalka. Mesto vyčlenilo v roku 2025 na sociálne bývanie 3,2 mil. €. Terénna sociálna práca stojí cca 800 € mesačne na jedného pracovníka — mesto zamestnáva 45 terénnych pracovníkov.',
+   info:'V Bratislave žije odhadom 8 000-12 000 ľudí v podmienkach sociálneho vylúčenia, z toho veľká časť v osadách Devínska Nová Ves a Petržalka. Mesto vyčlenilo v roku 2025 na sociálne bývanie 3,2 mil. €. Terénna sociálna práca stojí cca 800 € mesačne na jedného pracovníka — mesto zamestnáva 45 terénnych pracovníkov.',
    a:{vallo:'disagree',cahoj:'agree',winkl:'disagree',hered:'agree',geci:'neutral'}},
 
   // Q11 (nová — nahrádza energetickú chudobu)
@@ -93,13 +93,13 @@ window.VAA_DATA.questions.bratislava_primator = [
 
   // Q14 (pôvodné Q19, prepísané)
   {t:'Participácia',
-   q:'Má magistrát každoročne vyčleniť 1 % rozpočtu — cca 7 mil. € — na projekty, o ktorých hlasujú priamo obyvatelia?',
+   q:'Má magistrát každoročne vyčleniť 1 % rozpočtu (cca 7 mil. €) na projekty, o ktorých hlasujú priamo obyvatelia?',
    info:'Participatívny rozpočet zaviedlo vyše 3 000 miest na svete. V Bratislave funguje od roku 2021 v pilotnej forme — v roku 2024 rozdelil magistrát takto 500 000 €. Parížania hlasujú o 5 % mestského rozpočtu ročne. Pre Bratislavu by 1 % znamenalo 7,6 mil. € — priemerne 600 000 € pre každú z 17 mestských častí.',
    a:{vallo:'agree',cahoj:'neutral',winkl:'disagree',hered:'disagree',geci:'neutral'}},
 
   // Q15 (nová — mestský majetok)
   {t:'Hospodárenie',
-   q:'Má magistrát predať nevyužívaný mestský majetok, aby splatil dlh — namiesto zvyšovania daní?',
+   q:'Má magistrát predať nevyužívaný mestský majetok, aby splatil dlh, namiesto zvyšovania daní?',
    info:'Bratislava vlastní nehnuteľnosti odhadované na vyše 2 mld. €, z toho niekoľko desiatok budov je nevyužívaných alebo prenajatých pod trhovou cenou — napríklad Stará tržnica za symbolický 1 € ročne namiesto odhadovaných 500 000 €. Predaj časti majetku by mohol priniesť jednorazovo 50–150 mil. € a znížiť dlh pod 40 % príjmov. Odporcovia upozorňujú, že mestský majetok je strategická rezerva, ktorú nie je možné získať späť.',
    a:{vallo:'disagree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'neutral'}},
 
@@ -130,13 +130,13 @@ window.VAA_DATA.questions.bratislava_primator = [
   // Q20 (pôvodné Q25)
   {t:'Vízia',
    q:'Je pre teba dôležitejšie, aby primátor Bratislavy riešil dennodenné problémy (cesty, koše, čistota) než veľké vízie a projekty?',
-   info:'Vallo investoval 18 mil. € do projektu Plató Staromestská — park nad štvorprúdovou cestou — ktorý ešte nezačal. Kritici tvrdia, že za rovnaké peniaze by sa opravilo 90 km chodníkov. Ide o klasickú politickú dilemu: dobrý správca verzus vizionár — a v akom pomere Bratislava tieto roly potrebuje.',
+   info:'Vallo investoval 18 mil. € do projektu Plató Staromestská - park nad štvorprúdovou cestou — ktorý ešte nezačal. Kritici tvrdia, že za rovnaké peniaze by sa opravilo 90 km chodníkov. Ide o klasickú politickú dilemu: dobrý správca verzus vizionár — a v akom pomere Bratislava tieto roly potrebuje.',
    a:{vallo:'agree',cahoj:'disagree',winkl:'disagree',hered:'disagree',geci:'neutral'}},
 
   // Q21 (pôvodné Q26)
   {t:'Bývanie',
-   q:'Mal by magistrát povinne zahrnúť 10 % nájomných bytov do každého veľkého developerského projektu?',
-   info:'Bratislava patrí k najmenej dostupným hlavným mestám v Európe — kúpa bytu stojí priemerne vyše 15 ročných platov. Mesto uzavrelo zmluvy s developermi, podľa ktorých za zmenu územného plánu odovzdajú 5 % bytov mestu. Niektoré mestá v Európe vyžadujú až 10–30 % sociálnych bytov v každom projekte. Otázka je, či by takáto povinnosť nezastavila súkromnú výstavbu celkovo.',
+   q:'Mala by Bratislava povinne zahrnúť 10 % nájomných bytov do každého veľkého developerského projektu?',
+   info:'Bývanie v Bratislave patrí k najmenej dostupným hlavným mestám v Európe a kúpa bytu stojí priemerne vyše 15 ročných platov. Mesto uzavrelo zmluvy s investormi, podľa ktorých za zmenu územného plánu odovzdajú 5 % bytov mestu. Niektoré mestá v Európe vyžadujú až 10–30 % sociálnych bytov v každom projekte. Otázka je, či by takáto povinnosť nezastavila súkromnú výstavbu celkovo.',
    a:{vallo:'agree',cahoj:'agree',winkl:'agree',hered:'agree',geci:'agree'}},
 
   // Q22 (pôvodné Q27 — opravené odpovede)
@@ -167,7 +167,7 @@ window.VAA_DATA.questions.bratislava_primator = [
 
 // ── Otázky: Župan / VÚC ──
 window.VAA_DATA.questions.bratislava_vuc = [
-  {t:'Školstvo',q:'Má kraj podmieňovať vydanie stanovísk k novým bytovým projektom tým, že developer spolufinancuje školu alebo škôlku v tej istej obci?',w:'BSK rastie o 9 000 až 10 000 obyvateľov ročne, najrýchlejšie spomedzi všetkých krajov SR. V čase vyhlásenia špeciálnej štátnej výzvy chýbalo v kraji 9 000 miest pre školákov a na niektorých školách hrozila dvojzmenná výučba. Developerom sa darí stavať byty, no školy a škôlky nestíhajú rásť. Štát musel vyčleniť 63 miliónov eur len na dobiehanie tohto dlhu.',a:{droba:'neutral',krajco:'agree'}},
+  {t:'Školstvo',q:'Má kraj podmieňovať vydanie stanovísk k novým bytovým projektom tým, že investor spolufinancuje školu alebo škôlku v tej istej obci?',w:'BSK rastie o 9 000 až 10 000 obyvateľov ročne, najrýchlejšie spomedzi všetkých krajov SR. V čase vyhlásenia špeciálnej štátnej výzvy chýbalo v kraji 9 000 miest pre školákov a na niektorých školách hrozila dvojzmenná výučba. Developerom sa darí stavať byty, no školy a škôlky nestíhajú rásť. Štát musel vyčleniť 63 miliónov eur len na dobiehanie tohto dlhu.',a:{droba:'neutral',krajco:'agree'}},
   {t:'Školstvo',q:'Má kraj uprednostniť dobudovanie základných škôl a škôlok v rastúcich obciach pred výstavbou nových veľkých krajských vzdelávacích areálov v Bratislave?',w:'Kraj plánuje vystavať tri rozsiahle vzdelávacie a odborné strediská v Petržalke, Modre a Bernolákove v celkovej hodnote presahujúcej 85 miliónov eur. V tých istých rokoch chýbalo v prímestských obciach BSK tisíce miest v základných školách a deti museli dochádzať ďaleko od domu. Kritici sa pýtajú, či by tieto peniaze nemali ísť skôr do obcí, kde rodiny s deťmi každý deň riešia, kde umiestnia dieťa do školy.',a:{droba:'disagree',krajco:'agree'}},
   {t:'Školstvo',q:'Má kraj zatvárať stredné školy s dlhodobo nízkym zápisom, aj keby to znamenalo, že žiaci z menších miest musia dochádzať ďalej?',w:'BSK zriaďuje 117 stredných škôl. Niektoré majú dlhodobo nízky zápis a ich náklady na žiaka sú desiatky percent vyššie ako na veľkých školách v Bratislave. Kraj doplácal v roku 2024 na školstvo 147 miliónov eur. Zatváranie škôl šetrí peniaze, no obce strácajú poslednú verejnú inštitúciu a rodiny odchádzajú.',a:{droba:'agree',krajco:'neutral'}},
   {t:'Školstvo',q:'Má kraj presadzovať vzdelávanie priamo u zamestnávateľov, kde firma platí žiaka a kraj zabezpečuje školu?',w:'BSK má veľkých zamestnávateľov v logistike, technológiách a priemysle, no firmy dlhodobo hlásia nedostatok kvalifikovaných pracovníkov. V Nemecku a Rakúsku takýmto spôsobom študuje viac ako 40 percent žiakov stredných škôl a miera nezamestnanosti mladých je pod 8 percent. V BSK je tento podiel stále nízky, napriek rastúcemu záujmu zo strany firiem.',a:{droba:'agree',krajco:'agree'}},
