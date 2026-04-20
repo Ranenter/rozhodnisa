@@ -1,5 +1,4 @@
 // ── Volebná kalkulačka 2026 — NITRA + NITRIANSKY KRAJ ──
-// Jediný dátový súbor v štýle rozhodnisa.sk pre mesto Nitra a Nitriansky samosprávny kraj.
 // Obsahuje voľby: primátor/primátorka Nitry a predseda/predsedníčka NSK.
 // Štruktúra otázky: {t:'Téma', q:'Text otázky?', w:'Vysvetlenie.', a:{id1:'agree'|'neutral'|'disagree', ...}}
 
@@ -22,7 +21,7 @@ window.VAA_DATA.candidates['nitra_vuc'] = [
 // ── Otázky: Primátor / Primátorka Nitry ──
 window.VAA_DATA.questions.nitra_primator = [
   {t:'Parkovanie',
-   q:'Má Nitra ďalej rozširovať regulované rezidentské parkovanie aj do ďalších sídlisk, ak to mesto vyhodnotí ako potrebné?',
+   q:'Má Nitra ďalej rozširovať regulované rezidentské parkovanie aj do ďalších sídlisk?',
    w:'Parkovacia politika patrí medzi najviditeľnejšie komunálne témy v Nitre. Mesto v roku 2025 a 2026 rozširovalo pravidlá parkovania a v rozpočte ráta s významnými príjmami z parkovného. Pre časť obyvateľov je to potrebný poriadok, pre iných ďalšia finančná a organizačná záťaž.',
    a:{hattas:'agree',uhrikova:'neutral'}},
 
@@ -62,7 +61,7 @@ window.VAA_DATA.questions.nitra_primator = [
    a:{hattas:'agree',uhrikova:'neutral'}},
 
   {t:'Developeri',
-   q:'Má mesto od developerov tvrdšie vyžadovať príspevky na školy, cesty a verejný priestor pri väčších projektoch?',
+   q:'Má mesto od investorov tvrdšie vyžadovať príspevky na školy, cesty a verejný priestor pri väčších projektoch?',
    w:'Nová výstavba zvyšuje tlak na infraštruktúru a služby. Mesto môže od investorov požadovať väčšiu spoluúčasť, no tým zároveň riskuje drahšiu alebo pomalšiu výstavbu.',
    a:{hattas:'agree',uhrikova:'agree'}},
 
