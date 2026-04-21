@@ -393,6 +393,59 @@ body{
 #sc-welcome .w-hero .tagline{color:var(--muted)}
 
 /* ═══════════════════════════════
+   PRIORITY SCREEN
+   ═══════════════════════════════ */
+#sc-priority{
+  background:#fff;color:var(--text);
+  --bg:#fff;--surface:#F5F7FA;--surface2:#EEF1F6;
+  --border:#D8DCE6;--text:#0D1B2A;--muted:#5A6270;
+}
+.priority-body{padding:1.6rem 1.2rem 2rem;flex:1;max-width:640px;margin:0 auto;width:100%}
+.priority-title{
+  font-family:'Barlow Condensed','Arial Narrow',sans-serif;
+  font-size:clamp(1.5rem,5vw,2rem);
+  font-weight:800;text-transform:uppercase;letter-spacing:.02em;
+  color:var(--sk-blue);margin-bottom:.6rem;
+}
+.priority-explain{font-size:.9rem;line-height:1.6;color:var(--muted);margin-bottom:1.4rem}
+.priority-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.priority-chip{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:#fff;color:var(--text);
+  border:1.5px solid var(--border);border-radius:99px;
+  padding:.5rem .9rem;
+  font-family:inherit;font-size:.85rem;font-weight:600;
+  cursor:pointer;transition:all .15s;
+}
+.priority-chip:hover{border-color:var(--sk-blue);color:var(--sk-blue)}
+.priority-chip .chip-check{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:16px;height:16px;border-radius:50%;
+  background:var(--border);color:#fff;
+  font-size:.65rem;font-weight:700;flex-shrink:0;
+  transition:all .15s;
+}
+.priority-chip .chip-label{letter-spacing:.01em}
+.priority-chip .chip-count{font-size:.72rem;opacity:.6;font-weight:500}
+.priority-chip.sel{
+  background:var(--sk-blue);color:#fff;border-color:var(--sk-blue);
+}
+.priority-chip.sel .chip-check{background:#fff;color:var(--sk-blue)}
+.priority-chip.sel .chip-count{opacity:.85;color:#fff}
+.priority-chip.muted{opacity:.4}
+.priority-chip.muted:hover{opacity:.7}
+.priority-counter{
+  font-family:'Barlow Condensed','Arial Narrow',sans-serif;
+  font-size:.95rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--sk-red);margin-bottom:1rem;
+}
+.priority-counter.ready{color:var(--sk-blue)}
+.priority-note{
+  font-size:.78rem;line-height:1.5;color:var(--muted);
+  margin-top:.9rem;text-align:center;
+}
+
+/* ═══════════════════════════════
    QUIZ SCREEN — light, institutional
    ═══════════════════════════════ */
 #sc-question{
@@ -590,6 +643,33 @@ body{
 .cn2{background:rgba(176,122,10,.1);color:var(--yellow)}
 .cd{background:rgba(195,17,43,.1);color:var(--sk-red)}
 .cy{background:rgba(30,78,157,.1);color:var(--sk-blue)}
+
+/* ── Priority feature on results ── */
+.res-priorities{margin-bottom:1rem;padding:.85rem 1rem;background:#EEF5FF;border-radius:12px}
+.res-priorities-label{
+  font-family:'Barlow Condensed','Arial Narrow',sans-serif;
+  font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--sk-blue);display:block;margin-bottom:.45rem;
+}
+.res-priorities-pills{display:flex;flex-wrap:wrap;gap:.35rem}
+.res-priority-pill{
+  display:inline-block;background:var(--sk-blue);color:#fff;
+  border-radius:99px;padding:.2rem .7rem;
+  font-size:.74rem;font-weight:600;letter-spacing:.01em;
+}
+.mismatch-warning{
+  margin-top:.7rem;padding:.5rem .7rem;
+  background:rgba(180,83,9,.08);border-left:3px solid #B45309;
+  border-radius:0 6px 6px 0;
+  color:#B45309;font-size:.76rem;font-weight:600;line-height:1.4;
+}
+.priority-badge{
+  display:inline-block;background:var(--sk-blue);color:#fff;
+  font-family:'Barlow Condensed','Arial Narrow',sans-serif;
+  font-size:.62rem;font-weight:700;letter-spacing:.03em;
+  padding:.1rem .35rem;border-radius:3px;
+  margin-right:.35rem;vertical-align:middle;
+}
 
 .restart-row{padding:1rem 1.2rem 3rem;max-width:640px;margin:0 auto;width:100%}
 .ghost-btn{display:block;width:100%;padding:.9rem;border-radius:12px;background:transparent;border:1px solid var(--border);color:var(--muted);font-family:'Calibri','Trebuchet MS',system-ui,sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;transition:all .12s}
@@ -972,6 +1052,27 @@ main{display:block}
   <div class="sk-stripe"></div>
 </div>
 
+<!-- PRIORITIES -->
+<div class="screen" id="sc-priority" role="region" aria-label="Výber priorít">
+  <div class="q-header">
+    <div class="q-banner">
+      <div class="city-crest" id="prCrest"></div>
+      <div><span class="city-name" id="prCityName"></span><span class="city-type-label" id="prCityType"></span></div>
+    </div>
+    <div class="q-nav-row">
+      <div class="q-num">Krok 1 z 2 · Tvoje priority</div>
+    </div>
+  </div>
+  <div class="priority-body">
+    <h2 class="priority-title">Tvoje priority</h2>
+    <p class="priority-explain" id="priorityExplain"></p>
+    <div class="priority-chips" id="priorityChips"></div>
+    <div class="priority-counter" id="priorityCounter">Vybrané: 0 / 3</div>
+    <button class="start-btn" id="priorityBtn" onclick="VAA.confirmPriorities()" disabled>Pokračovať →</button>
+    <p class="priority-note">Otázky z vybraných tém budú mať dvojnásobnú váhu vo výslednom skóre.</p>
+  </div>
+</div>
+
 <!-- QUESTION -->
 <div class="screen" id="sc-question" role="region" aria-label="Otázka kvízu">
   <div class="q-header">
@@ -1082,12 +1183,23 @@ main{display:block}
 
     <div class="faq-item">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',this.parentElement.classList.contains('open'))"  aria-expanded="false">
+        <span>Čo znamenajú priority v kalkulačke?</span>
+        <span class="faq-arrow">›</span>
+      </button>
+      <div class="faq-a">
+        <p>Na začiatku si vyberieš <strong>3 témy</strong>, ktoré sú pre teba najdôležitejšie — napríklad dopravu, bývanie alebo životné prostredie. Otázky z týchto tém potom majú vo výslednom skóre <strong>dvojnásobnú váhu</strong>.</p>
+        <p>Vďaka tomu kalkulačka lepšie zachytí, čo skutočne rozhoduje pre tvoj výber. Ak napríklad kandidát má s tebou celkovo dobrý match, no v tvojich prioritných témach sa výrazne líši, upozorníme ťa na to priamo v jeho karte výsledkov.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',this.parentElement.classList.contains('open'))"  aria-expanded="false">
         <span>Ako sa počíta percentuálna zhoda?</span>
         <span class="faq-arrow">›</span>
       </button>
       <div class="faq-a">
         <p>Za každú otázku porovnávame vašu odpoveď s odpoveďou kandidáta. Ak sa zhodujete (obaja <em>súhlasíte</em> alebo obaja <em>nesúhlasíte</em>), dostanete plný bod. Ak jeden z vás odpovedal <em>neviem</em>, dostanete polovičný bod. Ak ste na opačných póloch, nedostanete nič.</p>
-        <p>Výsledok je podiel získaných bodov z maximálneho možného počtu, vyjadrený v percentách. Otázky, ktoré preskočíte, sa do výpočtu nezapočítajú. Všetky otázky majú rovnakú váhu.</p>
+        <p>Výsledok je podiel získaných bodov z maximálneho možného počtu, vyjadrený v percentách. Otázky, ktoré preskočíte, sa do výpočtu nezapočítajú. <strong>Otázky z tvojich 3 prioritných tém sa rátajú dvojnásobne.</strong></p>
       </div>
     </div>
 
@@ -1281,7 +1393,7 @@ function loadCityData(city) {
 }
 
 const VAA = (function(){
-  let city='', type='', key='', questions=[], answers=[], qIdx=0;
+  let city='', type='', key='', questions=[], answers=[], qIdx=0, priorities=[];
 
   function pickLocation(c, el){
     city = c;
@@ -1347,10 +1459,10 @@ const VAA = (function(){
       if(!questions.length){ alert('Dáta pre túto kombináciu ešte nie sú dostupné.'); return; }
       answers = new Array(questions.length).fill(null);
       qIdx = 0;
+      priorities = [];
       _setTheme();
-      _showQuestion();
-      _showScreen('sc-question');
-      document.getElementById('topBar').classList.add('show');
+      _buildPriorityScreen();
+      _showScreen('sc-priority');
     }).catch((e)=>{ alert('Nepodarilo sa načítať dáta. Skúste obnoviť stránku.\n\n' + (e && e.message ? e.message : '')); });
   }
 
@@ -1394,7 +1506,11 @@ const VAA = (function(){
 
   function goBack(){
     if(qIdx > 0){ qIdx--; _showQuestion(); }
-    else { _showScreen('sc-welcome'); document.getElementById('topBar').classList.remove('show'); }
+    else {
+      _buildPriorityScreen();
+      _showScreen('sc-priority');
+      document.getElementById('topBar').classList.remove('show');
+    }
   }
 
   // \u2500\u2500 Scoring \u2500\u2500
@@ -1404,16 +1520,33 @@ const VAA = (function(){
     questions.forEach((q,i)=>{
       const ua = answers[i];
       if(!ua || ua==='skip') return;
+      const mult = priorities.includes(q.t) ? 2 : 1;
       sc.forEach(c=>{
         const ca = q.a[c.id] || 'neutral';
-        c.max += 2;
-        if(ua===ca) c.pts += 2;
-        else if(ua==='neutral' || ca==='neutral') c.pts += 1;
+        c.max += 2 * mult;
+        if(ua===ca) c.pts += 2 * mult;
+        else if(ua==='neutral' || ca==='neutral') c.pts += 1 * mult;
       });
     });
     sc.forEach(c=>{ c.pct = c.max>0 ? Math.round((c.pts/c.max)*100) : 50; });
     sc.sort((a,b)=>b.pct-a.pct);
     return sc;
+  }
+
+  // Priority-only score per candidate (for mismatch warning on results)
+  function _calcPriorityScore(candId){
+    if(!priorities.length) return null;
+    let pts = 0, max = 0;
+    questions.forEach((q,i)=>{
+      if(!priorities.includes(q.t)) return;
+      const ua = answers[i];
+      if(!ua || ua==='skip') return;
+      const ca = q.a[candId] || 'neutral';
+      max += 2;
+      if(ua===ca) pts += 2;
+      else if(ua==='neutral' || ca==='neutral') pts += 1;
+    });
+    return max>0 ? Math.round((pts/max)*100) : null;
   }
 
   // \u2500\u2500 Voter profile \u2500\u2500
@@ -1482,11 +1615,28 @@ const VAA = (function(){
     // result cards
     const rl = document.getElementById('resultsList');
     rl.innerHTML = '';
+
+    // priority pills
+    if(priorities.length){
+      const pw = document.createElement('div');
+      pw.className = 'res-priorities';
+      pw.innerHTML = `<span class="res-priorities-label">Tvoje priority</span><div class="res-priorities-pills">${priorities.map(p=>`<span class="res-priority-pill">${p}</span>`).join('')}</div>`;
+      rl.appendChild(pw);
+    }
+
     results.forEach((r,idx)=>{
       const card = document.createElement('div');
       card.className = 'r-card' + (idx===0?' top':'');
       const urlLink = r.url ? `<a href="${r.url}" target="_blank" rel="noopener" class="cand-url" title="Web kandidáta">${r.url.replace(/^https?:\/\//,'').replace(/\/$/,'')}</a>` : '';
-      card.innerHTML = `<div class="r-row"><div class="r-dot" style="background:${r.color}"></div><div style="flex:1"><div class="r-name">${r.name}${idx===0?'<span class="top-badge">Najlepší match</span>':''}</div><span class="r-party">${r.party}</span>${urlLink}</div><div class="r-pct" style="color:${r.color}">${r.pct}%</div></div><div class="r-bar"><div class="r-fill" style="background:${r.color}" data-w="${r.pct}%"></div></div>`;
+      // mismatch warning: priority-only score ≥15pp below overall
+      let warning = '';
+      if(priorities.length){
+        const pscore = _calcPriorityScore(r.id);
+        if(pscore !== null && (r.pct - pscore) >= 15){
+          warning = `<div class="mismatch-warning">Nízka zhoda v tvojich prioritách (${pscore}% v prioritných témach)</div>`;
+        }
+      }
+      card.innerHTML = `<div class="r-row"><div class="r-dot" style="background:${r.color}"></div><div style="flex:1"><div class="r-name">${r.name}${idx===0?'<span class="top-badge">Najlepší match</span>':''}</div><span class="r-party">${r.party}</span>${urlLink}</div><div class="r-pct" style="color:${r.color}">${r.pct}%</div></div><div class="r-bar"><div class="r-fill" style="background:${r.color}" data-w="${r.pct}%"></div></div>${warning}`;
       rl.appendChild(card);
     });
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
@@ -1513,7 +1663,8 @@ const VAA = (function(){
       item.className = 'd-item' + (allOk?' match':anyMismatch?' mismatch':'');
       const uaLabel = {agree:'\ud83d\udc4d \u00c1no',neutral:'\ud83e\udd37 Z\u00e1le\u017e\u00ed',disagree:'\ud83d\udc4e Nie'}[ua]||'';
       const chips = cands.map(c=>{ const ca=q.a[c.id]||'neutral'; const cl={agree:'ca',neutral:'cn2',disagree:'cd'}[ca]; const lb={agree:'\u00c1no',neutral:'Z\u00e1le\u017e\u00ed',disagree:'Nie'}[ca]; return `<span class="chip ${cl}">${c.name.split(' ').pop()}: ${lb}</span>`; }).join('');
-      item.innerHTML = `<div class="d-q">${q.q} <span class="chip cy">${uaLabel}</span></div><div class="d-chips">${chips}</div>`;
+      const priorityBadge = priorities.includes(q.t) ? '<span class="priority-badge" title="Priorita · dvojnásobná váha">2×</span>' : '';
+      item.innerHTML = `<div class="d-q">${priorityBadge}${q.q} <span class="chip cy">${uaLabel}</span></div><div class="d-chips">${chips}</div>`;
       dl.appendChild(item);
     });
 
@@ -1596,7 +1747,7 @@ const VAA = (function(){
   }
 
   function restart(){
-    city=''; type=''; key='';
+    city=''; type=''; key=''; priorities=[];
     document.body.className='';
     document.querySelectorAll('.city-card').forEach(b=>b.classList.remove('sel'));
     document.querySelectorAll('.type-card').forEach(b=>b.classList.remove('sel'));
@@ -1626,6 +1777,74 @@ const VAA = (function(){
   })();
 
 
+  // ── Priority topics ──
+  function _buildPriorityScreen(){
+    const meta = CITY_META[city] || {};
+    const typeLbl = type==='primator' ? meta.primator : meta.vuc;
+    const crestKey = `${city}_${type}`;
+    const crestEl = document.getElementById('prCrest');
+    if(crestEl) crestEl.innerHTML = CRESTS[crestKey] || '';
+    document.getElementById('prCityName').textContent = meta.name || city;
+    document.getElementById('prCityType').textContent = typeLbl || '';
+    const explain = type==='primator'
+      ? 'Predtým ako začneš, vyber 3 témy, ktoré sú pre teba v tvojom meste najdôležitejšie. Otázky z týchto tém budú mať dvojnásobnú váhu vo výslednom skóre.'
+      : 'Predtým ako začneš, vyber 3 témy, ktoré sú pre teba v tvojom kraji najdôležitejšie. Otázky z týchto tém budú mať dvojnásobnú váhu vo výslednom skóre.';
+    document.getElementById('priorityExplain').textContent = explain;
+
+    // Count topics
+    const topicMap = {};
+    questions.forEach(q=>{ topicMap[q.t] = (topicMap[q.t]||0) + 1; });
+    const topics = Object.keys(topicMap).sort((a,b)=>topicMap[b]-topicMap[a] || a.localeCompare(b,'sk'));
+
+    const chipsEl = document.getElementById('priorityChips');
+    chipsEl.innerHTML = '';
+    topics.forEach(t=>{
+      const b = document.createElement('button');
+      b.className = 'priority-chip';
+      b.type = 'button';
+      b.dataset.topic = t;
+      if(priorities.includes(t)) b.classList.add('sel');
+      b.innerHTML = `<span class="chip-check" aria-hidden="true">✓</span><span class="chip-label">${t}</span><span class="chip-count">(${topicMap[t]})</span>`;
+      b.onclick = function(){ pickPriority(t, b); };
+      chipsEl.appendChild(b);
+    });
+
+    _updatePriorityUI();
+  }
+
+  function pickPriority(topic, el){
+    const idx = priorities.indexOf(topic);
+    if(idx >= 0){
+      priorities.splice(idx, 1);
+      el.classList.remove('sel');
+    } else {
+      if(priorities.length >= 3) return;
+      priorities.push(topic);
+      el.classList.add('sel');
+    }
+    _updatePriorityUI();
+  }
+
+  function _updatePriorityUI(){
+    const n = priorities.length;
+    const counter = document.getElementById('priorityCounter');
+    counter.textContent = `Vybrané: ${n} / 3`;
+    counter.classList.toggle('ready', n === 3);
+    document.getElementById('priorityBtn').disabled = n !== 3;
+    // mute non-selected chips when 3 selected
+    document.querySelectorAll('.priority-chip').forEach(c=>{
+      if(n >= 3 && !c.classList.contains('sel')) c.classList.add('muted');
+      else c.classList.remove('muted');
+    });
+  }
+
+  function confirmPriorities(){
+    if(priorities.length !== 3) return;
+    _showQuestion();
+    _showScreen('sc-question');
+    document.getElementById('topBar').classList.add('show');
+  }
+
   function toggleInfo(){
     const panel = document.getElementById('qInfoPanel');
     const btn = document.getElementById('qInfoBtn');
@@ -1647,7 +1866,7 @@ const VAA = (function(){
     // Finance is appended inside the turnout card by _renderTurnout, so nothing here
   }
 
-  return { pickCity, pickLocation, pickType, startQuiz, ans, goBack, restart, shareFB, shareLI, shareTW, copyURL, toggleInfo, toggleDetail };
+  return { pickCity, pickLocation, pickType, startQuiz, ans, goBack, restart, shareFB, shareLI, shareTW, copyURL, toggleInfo, toggleDetail, pickPriority, confirmPriorities };
 })();
 
 
