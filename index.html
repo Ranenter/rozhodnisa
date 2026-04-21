@@ -525,9 +525,12 @@ body{
   border-radius:12px;
   box-shadow:0 1px 6px rgba(0,0,0,.05),0 0 0 1px rgba(0,0,0,.06);
 }
-#ba:hover{background:#F0FBF4;box-shadow:0 4px 14px rgba(26,122,66,.12),0 0 0 1.5px var(--green)}
-#bn:hover{background:#FBF8EE;box-shadow:0 4px 14px rgba(176,122,10,.1),0 0 0 1.5px var(--yellow)}
-#bd:hover{background:#FEF0F0;box-shadow:0 4px 14px rgba(195,17,43,.1),0 0 0 1.5px var(--sk-red)}
+@media (hover: hover) and (pointer: fine){
+  #ba:hover{background:#F0FBF4;box-shadow:0 4px 14px rgba(26,122,66,.12),0 0 0 1.5px var(--green)}
+  #bn:hover{background:#FBF8EE;box-shadow:0 4px 14px rgba(176,122,10,.1),0 0 0 1.5px var(--yellow)}
+  #bd:hover{background:#FEF0F0;box-shadow:0 4px 14px rgba(195,17,43,.1),0 0 0 1.5px var(--sk-red)}
+  .ans-btn:hover .ans-code{border-color:currentColor}
+}
 .ans-code{
   font-family:'Barlow Condensed','Arial Narrow',sans-serif;
   font-size:1.1rem;font-weight:700;
@@ -537,7 +540,7 @@ body{
   color:var(--muted);transition:all .15s;
   background:var(--surface);
 }
-.ans-btn:hover .ans-code{border-color:currentColor}
+.ans-btn:active{background:#eef5ff}
 .ans-btn.sa{background:#F0FBF4!important;color:var(--green)!important;box-shadow:0 0 0 2px var(--green)!important}
 .ans-btn.sa .ans-code{border-color:var(--green)!important;color:var(--green)!important}
 .ans-btn.sn{background:#FBF8EE!important;color:var(--yellow)!important;box-shadow:0 0 0 2px var(--yellow)!important}
@@ -1495,13 +1498,23 @@ const VAA = (function(){
 
   function ans(val){
     answers[qIdx] = val;
-    if(qIdx < questions.length-1){
-      qIdx++;
-      _showQuestion();
-    } else {
-      document.getElementById('topFill').style.width='100%';
-      setTimeout(_showResults, 320);
+    // Visual feedback — flash the selected state briefly so mobile users see it
+    if(val !== 'skip'){
+      const btnId = val==='agree' ? 'ba' : val==='neutral' ? 'bn' : 'bd';
+      const cls   = val==='agree' ? 'sa' : val==='neutral' ? 'sn' : 'sd';
+      const btn = document.getElementById(btnId);
+      if(btn){ btn.classList.add(cls); btn.blur(); }
     }
+    const advance = ()=>{
+      if(qIdx < questions.length-1){
+        qIdx++;
+        _showQuestion();
+      } else {
+        document.getElementById('topFill').style.width='100%';
+        _showResults();
+      }
+    };
+    setTimeout(advance, val==='skip' ? 0 : 220);
   }
 
   function goBack(){
@@ -1636,7 +1649,7 @@ const VAA = (function(){
           warning = `<div class="mismatch-warning">Nízka zhoda v tvojich prioritách (${pscore}% v prioritných témach)</div>`;
         }
       }
-      card.innerHTML = `<div class="r-row"><div class="r-dot" style="background:${r.color}"></div><div style="flex:1"><div class="r-name">${r.name}${idx===0?'<span class="top-badge">Najlepší match</span>':''}</div><span class="r-party">${r.party}</span>${urlLink}</div><div class="r-pct" style="color:${r.color}">${r.pct}%</div></div><div class="r-bar"><div class="r-fill" style="background:${r.color}" data-w="${r.pct}%"></div></div>${warning}`;
+      card.innerHTML = `<div class="r-row"><div class="r-dot" style="background:${r.color}"></div><div style="flex:1"><div class="r-name">${r.name}${idx===0?'<span class="top-badge">Najlepšia zhoda</span>':''}</div><span class="r-party">${r.party}</span>${urlLink}</div><div class="r-pct" style="color:${r.color}">${r.pct}%</div></div><div class="r-bar"><div class="r-fill" style="background:${r.color}" data-w="${r.pct}%"></div></div>${warning}`;
       rl.appendChild(card);
     });
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
