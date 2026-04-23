@@ -35,7 +35,7 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q3
   {t:'Bývanie',
-   q:'Má Žilina aktívne stavať mestské nájomné byty aj v partnerstve so súkromnými investormi?',
+   q:'Má Žilina aktívne stavať mestské nájomné byty v partnerstve so súkromnými investormi?',
    w:'Žilina v roku 2026 rozbehla tému nájomného bývania ako odpoveď na drahé hypotéky a odchod mladých rodín. Sporné je najmä to, či má mesto do výstavby vstupovať cez developerskú spoločnosť a majetkové vklady, alebo radšej ponechať bytovú výstavbu trhu. Zástancovia hovoria o jedinom realistickom spôsobe, ako zvýšiť ponuku dostupných bytov, kritici o riziku nevýhodného nakladania s mestským majetkom.',
    a:{fiabane:'agree',cibulka:'disagree'}},
 
@@ -107,7 +107,7 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q15
   {t:'Sociálna politika',
-   q:'Má mesto cielene investovať do pomoci ľuďom v bytovej a energetickej núdzi, aj keď to neprináša politicky viditeľné výsledky hneď?',
+   q:'Má mesto cielene investovať do pomoci ľuďom v bytovej a energetickej núdzi, aj keď to neprináša politicky hneď viditeľné výsledky?',
    w:'Komunálna politika neznamená len cesty a parky, ale aj podporu ľudí, ktorí sa bez zásahu mesta môžu prepadnúť do hlbšej chudoby. Takéto opatrenia sú finančne náročné a menej „fotogenické“, no môžu znižovať dlhodobé sociálne problémy a tlak na ďalšie verejné služby.',
    a:{fiabane:'agree',cibulka:'disagree'}},
 
@@ -185,7 +185,7 @@ window.VAA_DATA.questions.zilina_vuc = [
    a:{janckulik:'agree',jurinova:'agree'}},
 
   {t:'Verejná doprava',
-   q:'Má kraj zachovať autobusové spojenia aj v menej vyťažených oblastiach, aj keď sú stratové?',
+   q:'Má kraj zachovať autobusové spojenia aj v menej obývaných oblastiach, aj keď sú stratové?',
    w:'Riedko osídlené časti Oravy, Kysúc, Turca či Liptova sú odkázané na verejnú dopravu viac než veľké mestá. Ekonomicky nevýhodné linky však zaťažujú rozpočet. Rozhoduje sa medzi dostupnosťou služieb pre všetkých a efektívnym využitím verejných peňazí.',
    a:{janckulik:'agree',jurinova:'agree'}},
 
@@ -255,7 +255,7 @@ window.VAA_DATA.questions.zilina_vuc = [
    a:{janckulik:'agree',jurinova:'neutral'}},
 
   {t:'Rozpočet',
-   q:'Má kraj v neistých časoch hospodáriť opatrnejšie a obmedziť nové ambiciózne projekty, ak by hrozilo vyššie zadlženie?',
+   q:'Má kraj v neistých časoch hospodáriť opatrnejšie a obmedziť nové ambiciózne projekty?',
    w:'Kraj hospodári s rozpočtom v stovkách miliónov eur a musí vyvažovať investície, prevádzku aj financovanie služieb. Opatrnosť znižuje riziko budúcich problémov, ale môže spomaliť rozvoj a čerpanie vonkajších zdrojov.',
    a:{janckulik:'agree',jurinova:'disagree'}},
 
@@ -270,12 +270,12 @@ window.VAA_DATA.questions.zilina_vuc = [
    a:{janckulik:'agree',jurinova:'neutral'}},
 
   {t:'Cestovný ruch',
-   q:'Má kraj viac investovať do cestovného ruchu a značky regiónu, aj keď výsledky takých projektov sa prejavia až neskôr?',
+   q:'Má kraj viac investovať do cestovného ruchu, aj keď výsledky takých projektov sa prejavia až neskôr?',
    w:'Liptov, Orava, Malá Fatra či Kysuce majú silný turistický potenciál. Cielená podpora cestovného ruchu môže priniesť pracovné miesta a príjmy, no nie vždy je jasné, či investície prinášajú férový úžitok pre celý kraj.',
    a:{janckulik:'agree',jurinova:'agree'}},
 
   {t:'Životné prostredie',
-   q:'Má kraj viac podporovať nízkouhlíkové projekty, cyklotrasy a ekologickú dopravu aj za cenu, že časť voličov to nepovažuje za prioritu?',
+   q:'Má kraj viac podporovať cyklotrasy a ekologickú dopravu aj za cenu, že časť voličov to nepovažuje za prioritu?',
    w:'Kraj má v rukách najmä plánovanie, koordináciu a vlastné investície, nie všetky ekologické politiky. Napriek tomu môže ovplyvniť, či bude mobilita a verejné budovy šetrnejšie k životnému prostrediu. Ide o spor medzi dlhodobou udržateľnosťou a bezprostrednými každodennými problémami.',
    a:{janckulik:'neutral',jurinova:'agree'}},
 
