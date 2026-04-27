@@ -626,15 +626,24 @@ body{
 .url-box,.share-url-input{display:none}
 
 .detail-toggle{
-  display:flex;align-items:center;justify-content:space-between;
-  width:100%;padding:.9rem 0;background:none;border:none;
-  border-top:1px solid var(--border);
-  color:var(--sk-blue);font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:.9rem;
-  font-weight:700;cursor:pointer;text-align:left;margin-top:1rem;
-  text-transform:uppercase;letter-spacing:.05em;transition:opacity .12s;
+  display:flex;align-items:center;justify-content:space-between;gap:.75rem;
+  width:100%;padding:1rem 1.1rem;
+  background:#F4F6F8;border:1px solid var(--border);
+  border-radius:12px;
+  color:var(--sk-blue);font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:.92rem;
+  font-weight:700;cursor:pointer;text-align:left;margin-top:1.4rem;
+  text-transform:uppercase;letter-spacing:.05em;
+  transition:background .15s,border-color .15s,box-shadow .15s,transform .12s;
+  box-shadow:0 1px 3px rgba(30,78,157,.05);
 }
-.detail-toggle:hover{opacity:.8}
-.toggle-arrow{font-size:1.3rem;color:var(--muted);transition:transform .25s ease;display:inline-block}
+.detail-toggle:hover{background:#EEF5FF;border-color:var(--sk-blue);box-shadow:0 4px 12px rgba(30,78,157,.1)}
+.detail-toggle:active{transform:translateY(1px)}
+.detail-toggle[aria-expanded="true"]{background:#EEF5FF;border-color:var(--sk-blue)}
+.toggle-arrow{
+  font-size:1rem;color:var(--sk-blue);transition:transform .25s ease;display:inline-block;
+  flex-shrink:0;font-weight:700;
+}
+.detail-toggle[aria-expanded="true"] .toggle-arrow{transform:rotate(180deg)}
 .detail-collapsed{max-height:0;overflow:hidden;transition:max-height .4s ease}
 .detail-collapsed.open{max-height:9000px}
 .detail-expanded{max-height:9999px;transition:max-height .6s ease}
@@ -1130,8 +1139,8 @@ main{display:block}
     <div id="turnoutWidget"></div>
 
     <button class="detail-toggle" id="detailToggle" onclick="VAA.toggleDetail()" aria-expanded="false" aria-controls="detailList">
-      <span>Porovnanie tvojich odpovedí s kandidátmi</span>
-      <span class="toggle-arrow" id="toggleArrow">›</span>
+      <span>Zobraziť porovnanie tvojich odpovedí s kandidátmi</span>
+      <span class="toggle-arrow" id="toggleArrow">▼</span>
     </button>
     <div id="detailList" class="detail-collapsed"></div>
   </div>
@@ -1871,10 +1880,8 @@ const VAA = (function(){
 
   function toggleDetail(){
     const dl = document.getElementById('detailList');
-    const arrow = document.getElementById('toggleArrow');
     const btn = document.getElementById('detailToggle');
     if(dl) dl.classList.toggle('open');
-    if(arrow) arrow.style.transform = dl && dl.classList.contains('open') ? 'rotate(90deg)' : '';
     if(btn) btn.setAttribute('aria-expanded', dl && dl.classList.contains('open') ? 'true' : 'false');
   }
 
