@@ -6,8 +6,8 @@ window.VAA_DATA = window.VAA_DATA || {};
 
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
-window.VAA_DATA.candidates['presov_primator'] = [{id:'olha',name:'František Oľha',party:'Demokrati (úradujúci primátor)',color:'#4db6ac',url:'https://feroolha.sk'},{id:'mochnacky',name:'Rastislav Mochnacký',party:'KDH',color:'#90caf9',url:''},{id:'hagyari',name:'Pavel Hagyari',party:'Nezávislý',color:'#78909c',url:'https://hagyari.sk'},{id:'estocak',name:'Martin Eštočák',party:'Nezávislý',color:'#43a047',url:'https://martinestocak.sk'}];
-window.VAA_DATA.candidates['presov_vuc'] = [{id:'majersky',name:'Milan Majerský',party:'KDH (úradujúci župan)',color:'#90caf9',url:''},{id:'mazurek',name:'Milan Mazurek',party:'Republika / SMER-SD',color:'#c62828',url:''},{id:'geci',name:'Marián Geci',party:'Nezávislý',color:'#78909c',url:''}];
+window.VAA_DATA.candidates['presov_primator'] = [{id:'olha',name:'František Oľha',party:'Demokrati / PS / SaS (úradujúci primátor)',color:'#4db6ac',url:'https://feroolha.sk'},{id:'mochnacky',name:'Rastislav Mochnacký',party:'KDH',color:'#90caf9',url:''},{id:'hagyari',name:'Pavel Hagyari',party:'Nezávislý',color:'#78909c',url:'https://hagyari.sk'},{id:'estocak',name:'Martin Eštočák',party:'Nezávislý',color:'#43a047',url:'https://martinestocak.sk'}];
+window.VAA_DATA.candidates['presov_vuc'] = [{id:'majersky',name:'Milan Majerský',party:'KDH / SaS (úradujúci župan)',color:'#90caf9',url:''},{id:'mazurek',name:'Milan Mazurek',party:'Republika / SMER-SD / Hlas',color:'#c62828',url:''},{id:'geci',name:'Marián Geci',party:'Nezávislý',color:'#78909c',url:''}];
 
 // ── Otázky: Primátor / Primátorka ──
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
