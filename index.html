@@ -6,7 +6,7 @@
 
 <!-- Primary SEO -->
 <title>Volebná kalkulačka 2026 – komunálne a krajské voľby | rozhodnisa.sk</title>
-<meta name="description" content="Zisti, s ktorým kandidátom sa zhoduješ. 25 otázok o primátoroch a županov v Bratislave, Košiciach, Prešove, Žiline, Banskej Bystrici a Nitre. Komunálne a krajské voľby 24. októbra 2026. Bez cookies.">
+<meta name="description" content="Zisti, s ktorým kandidátom sa zhoduješ. 25 otázok o primátoroch a predsedoch krajov v Bratislave, Košiciach, Prešove, Žiline, Banskej Bystrici a Nitre. Komunálne a krajské voľby 24. októbra 2026. Anonymné odpovede a bez cookies.">
 <meta name="keywords" content="volebná kalkulačka, komunálne voľby 2026, krajské voľby 2026, župné voľby 2026, voľby do VÚC 2026, koho voliť 2026, primátor, starosta, župan, Bratislava, Košice, Prešov, Žilina, Banská Bystrica, Nitra, BSK, KSK, PSK, ŽSK, BBSK, NSK, voľby primátora 2026, voľby župana 2026, voľby starostu 2026">
 <meta name="author" content="Občania štátu">
 <link rel="canonical" href="https://rozhodnisa.sk/">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rozhodnisa.sk/">
 <meta property="og:title" content="Volebná kalkulačka 2026 – komunálne a krajské voľby | rozhodnisa.sk">
-<meta property="og:description" content="Zisti, s ktorým kandidátom sa zhoduješ. 25 otázok o primátoroch a županov v Bratislave, Košiciach, Prešove, Žiline, Banskej Bystrici a Nitre. Komunálne a krajské voľby 24. októbra 2026. Bez cookies.">
+<meta property="og:description" content="Zisti, s ktorým kandidátom sa zhoduješ. 25 otázok o primátoroch a predsedoch krajov v Bratislave, Košiciach, Prešove, Žiline, Banskej Bystrici a Nitre. Komunálne a krajské voľby 24. októbra 2026. Anonymné odpovede a bez cookies.">
 <meta property="og:image" content="https://rozhodnisa.sk/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -25,7 +25,7 @@
 
 <!-- Twitter / X card -->
 <meta name="twitter:title" content="Volebná kalkulačka 2026 – komunálne a krajské voľby | rozhodnisa.sk">
-<meta name="twitter:description" content="Zisti, s ktorým kandidátom sa zhoduješ. 25 otázok o primátoroch a županov v Bratislave, Košiciach, Prešove, Žiline, Banskej Bystrici a Nitre. Komunálne a krajské voľby 24. októbra 2026. Bez cookies.">
+<meta name="twitter:description" content="Zisti, s ktorým kandidátom sa zhoduješ. 25 otázok o primátoroch a predsedoch krajov v Bratislave, Košiciach, Prešove, Žiline, Banskej Bystrici a Nitre. Komunálne a krajské voľby 24. októbra 2026. Anonymné odpovede a bez cookies.">
 <meta name="twitter:site" content="@rozhodnisa">
 <meta name="twitter:image" content="https://rozhodnisa.sk/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -1633,7 +1633,7 @@ const VAA = (function(){
   }
 
   // ── Verified candidates (answered the questionnaire directly) ──
-  const VERIFIED_CANDIDATES = new Set(['mochnacky']);
+  const VERIFIED_CANDIDATES = new Set(['mochnacky', 'lorinc']);
 
   function _showResults(){
     const results = _score();
@@ -1675,7 +1675,7 @@ const VAA = (function(){
       }
       const isVerified = VERIFIED_CANDIDATES.has(r.id);
       const verifiedPill = isVerified ? `<span class="v-pill"><i class="ti ti-circle-check" aria-hidden="true"></i> Overené</span>` : '';
-      const verifiedBanner = isVerified ? `<div class="v-banner"><i class="ti ti-circle-check" aria-hidden="true"></i> Kandidát vyplnil formulár — odpovede sú overené</div>` : '';
+      const verifiedBanner = isVerified ? `<div class="v-banner"><i class="ti ti-circle-check" aria-hidden="true"></i> Kandidát vyplnil formulár a odpovede sú overené</div>` : '';
       card.innerHTML = `<div class="r-row"><div class="r-dot" style="background:${r.color}"></div><div style="flex:1"><div class="r-name">${r.name}${idx===0?'<span class="top-badge">Najlepšia zhoda</span>':''}${verifiedPill}</div><span class="r-party">${r.party}</span>${urlLink}</div><div class="r-pct" style="color:${r.color}">${r.pct}%</div></div><div class="r-bar"><div class="r-fill" style="background:${r.color}" data-w="${r.pct}%"></div></div>${warning}${verifiedBanner}`;
       rl.appendChild(card);
     });
