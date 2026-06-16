@@ -16,3 +16,8 @@
   from = "/ako-volit"
   to = "/ako-volit.html"
   status = 200
+
+[[redirects]]
+  from = "/kandidati"
+  to = "/kandidati.html"
+  status = 200
