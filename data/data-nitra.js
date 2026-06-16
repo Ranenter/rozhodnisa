@@ -8,13 +8,13 @@ window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 
 // ── Kandidáti: Primátor / Primátorka Nitry ──
 window.VAA_DATA.candidates['nitra_primator'] = [
-  {id:'hattas',name:'Marek Hattas',party:'Tím Kraj Nitra / Tím Hattas (úradujúci primátor)',color:'#146B4D',url:'https://hattasprimatorom.sk'},
+  {id:'hattas',name:'Marek Hattas',party:'PS / SaS / KDH / Demokrati / Hnutie Slovensko / Tím Hattas (úradujúci primátor)',color:'#146B4D',url:'https://hattasprimatorom.sk'},
   {id:'uhrikova',name:'Zuzana Uhríková',party:'Republika / Hlas-SD / Smer-SD',color:'#8A2332',url:'https://www.facebook.com/ing.zuzana.uhrikova/'}
 ];
 
 // ── Kandidáti: Predseda / Predsedníčka NSK ──
 window.VAA_DATA.candidates['nitra_vuc'] = [
-  {id:'varga',name:'Henrich Varga',party:'SaS / Tím Kraj Nitra / Maďarské fórum / OKS',color:'#2A5CAA',url:'https://www.facebook.com/varga.henrich/'},
+  {id:'varga',name:'Henrich Varga',party:'SaS / KDH / Demokrati / Hnutie Slovensko / Tím Kraj Nitra / Magyar Fórum / OKS',color:'#2A5CAA',url:'https://www.facebook.com/varga.henrich/'},
   {id:'becik',name:'Branislav Becík',party:'Hlas-SD / Smer-SD / Republika (úradujúci predseda)',color:'#C23A2B',url:'https://branislavbecik.sk/'}
 ];
 
