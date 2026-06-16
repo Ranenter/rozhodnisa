@@ -25,12 +25,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap"></noscript>
-  <script src="/data-bratislava.js"></script>
-  <script src="/data-kosice.js"></script>
-  <script src="/data-presov.js"></script>
-  <script src="/data-zilina.js"></script>
-  <script src="/data-bb.js"></script>
-  <script src="/data-nitra.js"></script>
+  <script src="/data-bratislava.js" onerror="console.warn('data-bratislava.js not found')"></script>
+  <script src="/data-kosice.js" onerror="console.warn('data-kosice.js not found')"></script>
+  <script src="/data-presov.js" onerror="console.warn('data-presov.js not found')"></script>
+  <script src="/data-zilina.js" onerror="console.warn('data-zilina.js not found')"></script>
+  <script src="/data-bb.js" onerror="console.warn('data-bb.js not found')"></script>
+  <script src="/data-nitra.js" onerror="console.warn('data-nitra.js not found')"></script>
   <style>
   /* ── Exact tokens from index.html ── */
   :root {
@@ -417,7 +417,10 @@ function buildSection(cityId){
   const el = document.getElementById('city-'+cityId);
   if(!el) return;
   const data = window.VAA_DATA && window.VAA_DATA.candidates;
-  if(!data){el.innerHTML='<p style="color:var(--muted);font-size:.9rem;padding:1.5rem 0">Dáta sa nepodarilo načítať.</p>';return}
+  if(!data){
+    el.innerHTML='<p style="color:var(--muted);font-size:.9rem;padding:1.5rem 0">Dáta kandidátov sa nepodarilo načítať. Uistite sa, že súbory data-{mesto}.js sú dostupné na serveri.</p>';
+    return;
+  }
   let html='';
   ['primator','vuc'].forEach(type=>{
     const key=cityId+'_'+type;
@@ -428,7 +431,7 @@ function buildSection(cityId){
     cands.forEach(c=>{html+=buildCard(c,cityId,type)});
     html+='</div>';
   });
-  if(!html) html='<p style="color:var(--muted);font-size:.9rem;padding:1.5rem 0">Pre toto mesto zatiaľ nie sú dostupné dáta.</p>';
+  if(!html) html='<p style="color:var(--muted);font-size:.9rem;padding:1.5rem 0">Pre toto mesto zatiaľ nie sú zverejnení kandidáti. Sledujte stránku — doplníme ich čoskoro.</p>';
   el.innerHTML=html;
   el.querySelectorAll('[id^="av-"]').forEach(av=>{
     const id=av.id.replace('av-','');
