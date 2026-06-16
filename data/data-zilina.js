@@ -14,8 +14,7 @@ window.VAA_DATA.candidates['zilina_primator'] = [
 
 // ── Kandidáti: Predseda / Predsedníčka ŽSK ──
 window.VAA_DATA.candidates['zilina_vuc'] = [
-  {id:'janckulik',name:'Igor Janckulík',party:'KDH',color:'#1E4FA1',url:'https://igorjanckulik.sk/'},
-  {id:'jurinova',name:'Erika Jurinová',party:'nezávislá',color:'#7A2E8A',url:'https://jurinova.sk/'}
+  {id:'jurinova',name:'Erika Jurinová',party:'Nezávislá',color:'#7A2E8A',url:'https://jurinova.sk/'}
 ];
 
 // ── Otázky: Primátor / Primátorka Žiliny ──
@@ -177,126 +176,126 @@ window.VAA_DATA.questions.zilina_vuc = [
   {t:'Cesty a mosty',
    q:'Má Žilinský kraj dať v najbližších rokoch absolútnu prioritu rekonštrukcii ciest II. a III. triedy, aj keby to spomalilo iné investície?',
    w:'Správa ciest patrí medzi najviditeľnejšie kompetencie kraja. V Žilinskom kraji je téma stavu ciest a mostov mimoriadne citlivá pre horský terén, tranzit aj regionálne rozdiely. Otázka je, či má kraj sústrediť čo najviac peňazí práve sem, alebo udržať širšie investičné priority.',
-   a:{janckulik:'agree',jurinova:'neutral'}},
+   a:{jurinova:'neutral'}},
 
   {t:'Cesty a mosty',
    q:'Má kraj presúvať viac peňazí na havarijný stav mostov a rizikových úsekov aj za cenu obmedzenia nových projektov?',
    w:'V horských regiónoch kraja sú mosty a zosuvné úseky kľúčovou podmienkou bezpečnej dopravy. Opravy týchto miest bývajú technicky aj finančne veľmi náročné, no ich odklad zvyšuje bezpečnostné aj ekonomické riziká.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Verejná doprava',
    q:'Má kraj zachovať autobusové spojenia aj v menej obývaných oblastiach, aj keď sú stratové?',
    w:'Riedko osídlené časti Oravy, Kysúc, Turca či Liptova sú odkázané na verejnú dopravu viac než veľké mestá. Ekonomicky nevýhodné linky však zaťažujú rozpočet. Rozhoduje sa medzi dostupnosťou služieb pre všetkých a efektívnym využitím verejných peňazí.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Verejná doprava',
    q:'Má kraj ďalej rozširovať integrovanú dopravu a jednotný cestovný lístok aj vtedy, ak si to vyžiada vyššie dotácie?',
    w:'Integrovaná doprava má zjednodušiť cestovanie medzi vlakmi, autobusmi a mestskou dopravou. Prínosom je väčší komfort pre cestujúcich a lepšie prepojenie regiónov, nevýhodou sú vyššie nároky na organizáciu a financovanie systému.',
-   a:{janckulik:'neutral',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Vyľudňovanie regiónov',
    q:'Má kraj cielene posilňovať služby v odľahlejších regiónoch, aj keď je to drahšie než sústrediť ich do väčších centier?',
    w:'Jednou z najväčších výziev ŽSK je rozdiel medzi centrami a perifériami. Posilňovanie služieb v menších mestách a obciach môže zlepšiť kvalitu života aj udržať obyvateľov v regióne, no je finančne náročnejšie než centralizácia.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Nemocnice',
    q:'Má kraj pokračovať v dotovaní svojich nemocníc a stabilizačných programov pre zdravotníkov, aj keď nemocnice vykazujú stratu?',
    w:'Nemocnice v pôsobnosti ŽSK čelia finančným problémom, ale zároveň patria medzi najdôležitejšie verejné služby v kraji. Kraj môže straty vnímať ako signál na tvrdšiu racionalizáciu alebo ako cenu za udržanie dostupnej zdravotnej starostlivosti v regiónoch.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Nemocnice',
    q:'Ak by si to vyžadovala finančná situácia, mal by kraj pristúpiť aj k nepopulárnym zmenám v riadení svojich nemocníc?',
    w:'Straty nemocníc vytvárajú tlak na vedenie kraja, aby nehľadalo len dodatočné peniaze, ale aj hlbšie manažérske opatrenia. Takéto kroky môžu byť nevyhnutné, no zároveň politicky aj sociálne citlivé.',
-   a:{janckulik:'agree',jurinova:'neutral'}},
+   a:{jurinova:'neutral'}},
 
   {t:'Zdravotníci',
    q:'Má kraj ponúkať silnejšie motivačné programy pre sestry, lekárov a ďalší personál, aby ich udržal vo svojich zariadeniach?',
    w:'Nedostatok zdravotníckeho personálu neohrozuje len kvalitu, ale aj samotnú dostupnosť zdravotnej starostlivosti. Motivačné programy stoja peniaze, no bez nich môže kraj strácať ľudí do väčších nemocníc či do zahraničia.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Sociálne služby',
    q:'Má kraj viac investovať do zariadení sociálnych služieb a starostlivosti o seniorov aj za cenu menšieho priestoru pre iné oblasti?',
    w:'Starnutie populácie zvyšuje tlak na domovy sociálnych služieb, opatrovateľské kapacity aj modernizáciu zariadení. Ide o jednu z najnáročnejších oblastí verejnej politiky, kde dopyt rastie rýchlejšie než rozpočtové možnosti.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Sociálne služby',
    q:'Má kraj podporovať skôr rozširovanie vlastných zariadení než financovanie služieb u neverejných poskytovateľov?',
    w:'Pri raste dopytu po sociálnych službách stojí kraj pred voľbou, či má viac budovať vlastné kapacity, alebo sa opierať aj o súkromných a cirkevných poskytovateľov. Obe cesty majú svoje náklady, limity aj ideové východiská.',
-   a:{janckulik:'agree',jurinova:'neutral'}},
+   a:{jurinova:'neutral'}},
 
   {t:'Stredné školy',
    q:'Má kraj prioritne investovať do modernizácie stredných škôl, aby lepšie reagovali na potreby trhu práce?',
    w:'ŽSK je zriaďovateľom stredných škôl a nesie zodpovednosť za to, či absolventi nájdu uplatnenie. Modernizácia odborného vzdelávania môže pomôcť firmám aj mladým ľuďom, no vyžaduje vysoké investície a spoluprácu so zamestnávateľmi.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Stredné školy',
    q:'Má kraj zachovať aj menšie stredné školy v slabších regiónoch, aj keď sú dlhodobo menej efektívne?',
    w:'Menšie školy môžu byť pre región dôležité sociálne aj dopravne, no pri nízkom počte študentov bývajú drahšie na prevádzku. Spor je medzi regionálnou dostupnosťou vzdelania a racionalizáciou siete škôl.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Trh práce',
    q:'Má kraj užšie prepájať odborné školy s veľkými firmami a priemyselnými klastrami, aj keby sa tým časť odborov viac podriadila potrebám trhu?',
    w:'Žilinský kraj patrí medzi priemyselne najsilnejšie regióny Slovenska, no firmy zároveň upozorňujú na nedostatok pripravených absolventov. Väčšie prepojenie škôl s praxou môže zvýšiť zamestnateľnosť, no zároveň vyvoláva obavy, aby školy nestratili širšiu vzdelávaciu funkciu.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Ovzdušie',
    q:'Má kraj viac investovať do znižovania znečistenia ovzdušia v regiónoch ako Kysuce, Orava a Turiec, aj keď to nie je jeho najviditeľnejšia kompetencia?',
    w:'Pretrvávajúce problémy s prachovými časticami a benzo[a]pyrénom sú spojené najmä s vykurovaním domácností tuhými palivami. Kraj nemá v rukách všetky nástroje, no môže koordinovať projekty, podporovať osvetu, energetické riešenia a tlak na systémové opatrenia.',
-   a:{janckulik:'neutral',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Energetika',
    q:'Má kraj urýchliť zatepľovanie a energetické úspory vo svojich budovách, aj keď sa investície vrátia až o niekoľko rokov?',
    w:'Župa spravuje veľké množstvo budov napr. školy, nemocnice, kultúrne inštitúcie či zariadenia sociálnych služieb. Energetické úspory znižujú budúce náklady, no vyžadujú značné vstupné investície.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Energetika',
    q:'Má kraj pri modernizácii svojich budov uprednostniť čo najrýchlejšie zníženie prevádzkových nákladov pred reprezentatívnymi rekonštrukciami?',
    w:'Po energetickej kríze sa ukázalo, že mnohé krajské budovy sú drahé na prevádzku. Otázka preto znie, či má byť hlavným cieľom úspora energií a funkčnosť, alebo širšie, vizuálne a architektonicky ambicióznejšie obnovy.',
-   a:{janckulik:'agree',jurinova:'neutral'}},
+   a:{jurinova:'neutral'}},
 
   {t:'Rozpočet',
    q:'Má kraj v neistých časoch hospodáriť opatrnejšie a obmedziť nové ambiciózne projekty?',
    w:'Kraj hospodári s rozpočtom v stovkách miliónov eur a musí vyvažovať investície, prevádzku aj financovanie služieb. Opatrnosť znižuje riziko budúcich problémov, ale môže spomaliť rozvoj a čerpanie vonkajších zdrojov.',
-   a:{janckulik:'agree',jurinova:'disagree'}},
+   a:{jurinova:'disagree'}},
 
   {t:'Eurofondy',
    q:'Má byť pre kraj prioritou pripraviť čo najviac projektov na eurofondy, aj keď si to vyžiada vyššie spolufinancovanie z vlastného rozpočtu?',
    w:'Externé zdroje vedia výrazne posunúť školy, nemocnice, cesty či kultúru. No aj eurofondový projekt niečo stojí a vyžaduje schopný aparát, prípravu a spoluúčasť. Otázka je, či má kraj hrať aktívne a vo veľkom, alebo opatrnejšie.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Regionálna rovnováha',
    q:'Má vedenie kraja garantovať vyrovnanejšie zastúpenie regiónov vo vedení župy a pri veľkých investíciách?',
    w:'Žilinský kraj má silné regionálne identity ako Kysuce, Orava, Turiec, Liptov aj Horné Považie často sledujú, či nie sú pri investíciách prehliadané. Otázka smeruje k tomu, či má byť regionálna vyváženosť explicitnou politickou zásadou.',
-   a:{janckulik:'agree',jurinova:'neutral'}},
+   a:{jurinova:'neutral'}},
 
   {t:'Cestovný ruch',
    q:'Má kraj viac investovať do cestovného ruchu, aj keď výsledky takých projektov sa prejavia až neskôr?',
    w:'Liptov, Orava, Malá Fatra či Kysuce majú silný turistický potenciál. Cielená podpora cestovného ruchu môže priniesť pracovné miesta a príjmy, no nie vždy je jasné, či investície prinášajú férový úžitok pre celý kraj.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Životné prostredie',
    q:'Má kraj viac podporovať cyklotrasy a ekologickú dopravu aj za cenu, že časť voličov to nepovažuje za prioritu?',
    w:'Kraj má v rukách najmä plánovanie, koordináciu a vlastné investície, nie všetky ekologické politiky. Napriek tomu môže ovplyvniť, či bude mobilita a verejné budovy šetrnejšie k životnému prostrediu. Ide o spor medzi dlhodobou udržateľnosťou a bezprostrednými každodennými problémami.',
-   a:{janckulik:'neutral',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Transparentnosť',
    q:'Má kraj zverejňovať zrozumiteľné odôvodnenia veľkých zmlúv a investičných rozhodnutí ešte pred ich schválením?',
    w:'Formálne zverejnenie dokumentov často nestačí na to, aby sa v nich občania vyznali. Lepšia transparentnosť by mohla zvýšiť dôveru a verejnú kontrolu, no zároveň predĺžiť procesy a zvýšiť administratívnu záťaž úradu.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Participácia',
    q:'Má kraj viac zapájať starostov, primátorov a verejnosť do tvorby priorít, aj keby bolo rozhodovanie pomalšie?',
    w:'Vyššia participácia môže zvýšiť legitimitu rozhodnutí a pomôcť lepšie zachytiť potreby územia. Zároveň však môže spomaliť prijímanie rozhodnutí a oslabiť schopnosť vedenia konať rýchlo a strategicky.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Kontrola výkonu',
    q:'Má predseda kraja pravidelne zverejňovať prehľad splnených a nesplnených sľubov a merateľných výsledkov župy?',
    w:'Krajská politika býva pre mnohých voličov menej čitateľná než komunálna či národná. Verejný účet sľubov by mohol zvýšiť kontrolu a tlak na výsledky, no zároveň by vystavil vedenie kraja priebežnej verejnej kritike.',
-   a:{janckulik:'agree',jurinova:'agree'}},
+   a:{jurinova:'agree'}},
 
   {t:'Investičná filozofia',
    q:'Má byť župan skôr tvrdý správca rozpočtu a služieb než politický líder veľkých vízií?',
    w:'Aj pri krajskej politike ide často o stret dvoch štýlov. Jeden stavia na opatrnom hospodárení, detailnom manažmente a stabilite služieb. Druhý na väčších rozvojových projektoch, aktívnejšom získavaní zdrojov a ambícii meniť smerovanie kraja výraznejšie.',
-   a:{janckulik:'agree',jurinova:'disagree'}}
+   a:{jurinova:'disagree'}}
 ];
 
