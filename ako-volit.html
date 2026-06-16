@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ako voliť v komunálnych a krajských voľbách 2026 | rozhodnisa.sk</title>
+  <meta name="description" content="Praktický sprievodca voľbami 24. októbra 2026: kedy a kde voliť, koho volíte, čo si priniesť a ako sa rozhodnúť. Bez zbytočných slov." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rozhodnisa.sk/ako-volit" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Ako voliť v komunálnych a krajských voľbách 2026 | rozhodnisa.sk" />
+  <meta property="og:description" content="Praktický sprievodca voľbami 24. októbra 2026: kedy a kde voliť, koho volíte, čo si priniesť a ako sa rozhodnúť." />
+  <meta property="og:url" content="https://rozhodnisa.sk/ako-volit" />
+  <meta property="og:site_name" content="rozhodnisa.sk" />
+  <meta property="og:locale" content="sk_SK" />
+  <meta name="theme-color" content="#0B4EA2" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ako voliť v komunálnych a krajských voľbách 2026 | rozhodnisa.sk" />
+  <meta name="twitter:description" content="Praktický sprievodca voľbami 24. októbra 2026: kedy a kde voliť, koho volíte, čo si priniesť a ako sa rozhodnúť." />
+  <meta name="twitter:site" content="@rozhodnisa" />
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Môžem voliť, ak nemám trvalý pobyt v meste, kde žijem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nie. Pre komunálne a krajské voľby je rozhodujúci trvalý pobyt, nie faktické bydlisko. Voliť môžeš len v obci, kde máš trvalý pobyt zapísaný v evidencii obyvateľov."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Čo ak som sa presťahoval/a a nestihol/a som zmeniť trvalý pobyt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "V takom prípade voliš ešte v pôvodnom mieste trvalého pobytu. Zmenu trvalého pobytu vybavíš na miestnom úrade - po zmene môžeš voliť v novom meste."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Môžem odovzdať prázdnu obálku?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, účasť vo voľbách je dobrovoľná. Môžeš prísť a odovzdať prázdnu obálku - stále sa počítaš do volebnej účasti."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kde zistím, kto kandiduje v mojom meste?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zoznamy kandidátov zverejňuje Štatistický úrad SR na volby.statistics.sk a tvoja miestna samospráva na svojej webstránke."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ako sa stanem členom volebnej komisie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Do volebnej komisie ťa môže delegovať politická strana alebo koalícia kandidujúca vo voľbách. Podmienky: 18 rokov, trvalý pobyt na Slovensku, spôsobilosť na právne úkony. Prihlás sa priamo cez vybranú stranu alebo cez iniciatívu Férové voľby na ferovevolby.sk."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "rozhodnisa.sk", "item": "https://rozhodnisa.sk" },
+      { "@type": "ListItem", "position": 2, "name": "Ako voliť", "item": "https://rozhodnisa.sk/ako-volit" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── Tokens - light theme, rozhodnisa.sk palette ─────────────── */
+    :root {
+      --blue:       #0B4EA2;
+      --blue-dark:  #083d80;
+      --blue-light: #e8f0fb;
+      --red:        #D62839;
+      --red-light:  #fdf0f1;
+      --text:       #1a1a2e;
+      --muted:      #4a5568;
+      --border:     #d1dbe8;
+      --bg:         #f5f7fa;
+      --surface:    #ffffff;
+      --radius:     8px;
+      --radius-lg:  14px;
+      --max:        760px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ─────────────────────────────────────────────────────── */
+    nav {
+      background: var(--blue);
+      padding: 0 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(11,78,162,.18);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+    }
+
+    .nav-logo {
+      font-weight: 800;
+      font-size: 15px;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-logo span { color: #fff; }
+
+    .nav-sep { color: rgba(255,255,255,.35); font-size: 18px; margin: 0 2px; user-select: none; }
+
+    .nav-current { font-size: 14px; color: rgba(255,255,255,.75); }
+
+    .nav-links { display: flex; gap: 4px; align-items: center; margin-left: auto; }
+
+    .nav-link {
+      font-size: 13px;
+      color: rgba(255,255,255,.85);
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 6px;
+      transition: background .15s;
+    }
+
+    .nav-link:hover { background: rgba(255,255,255,.15); color: #fff; }
+
+    .nav-cta {
+      background: var(--red);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .15s;
+    }
+
+    .nav-cta:hover { background: #b91c2c; }
+
+    /* ── Layout ──────────────────────────────────────────────────── */
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── Hero ────────────────────────────────────────────────────── */
+    .hero { margin-bottom: 40px; }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: clamp(22px, 5vw, 34px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -.5px;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .hero-lead {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 640px;
+      line-height: 1.65;
+    }
+
+    /* ── Date banner ─────────────────────────────────────────────── */
+    .date-banner {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--blue);
+      border-radius: var(--radius-lg);
+      padding: 18px 24px;
+      margin-bottom: 48px;
+      color: #fff;
+    }
+
+    .date-num {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1;
+      white-space: nowrap;
+      color: #fff;
+    }
+
+    .date-label strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .date-label span { font-size: 14px; color: rgba(255,255,255,.8); }
+
+    /* ── Sections ────────────────────────────────────────────────── */
+    .section { margin-bottom: 52px; }
+
+    .section h2 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--blue-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 .h2-icon {
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: var(--red);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .section p { color: var(--muted); margin-bottom: 14px; }
+    .section p:last-child { margin-bottom: 0; }
+
+    .section a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+    .section a:hover { color: var(--blue-dark); }
+
+    .strong-text { color: var(--text); font-weight: 600; }
+
+    /* ── Alert boxes ─────────────────────────────────────────────── */
+    .alert {
+      display: flex;
+      gap: 12px;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    .alert-icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .alert-warning .alert-icon {
+      background: var(--red);
+      color: #fff;
+      content: '!';
+    }
+
+    .alert-info .alert-icon {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .alert p { margin: 0; line-height: 1.55; }
+
+    .alert-warning {
+      background: var(--red-light);
+      border: 1px solid rgba(214,40,57,.2);
+    }
+
+    .alert-warning p { color: #7b1a23; }
+    .alert-warning a { color: var(--red); }
+
+    .alert-info {
+      background: var(--blue-light);
+      border: 1px solid rgba(11,78,162,.2);
+    }
+
+    .alert-info p { color: #083d80; }
+    .alert-info a { color: var(--blue-dark); }
+
+    /* ── Ballot table ────────────────────────────────────────────── */
+    .ballot-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 14px;
+      font-size: 15px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    }
+
+    .ballot-table thead th {
+      text-align: left;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--blue);
+      padding: 10px 14px;
+      background: var(--blue-light);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ballot-table tbody tr { border-bottom: 1px solid var(--border); }
+    .ballot-table tbody tr:last-child { border-bottom: none; }
+
+    .ballot-table tbody td {
+      padding: 12px 14px;
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    .ballot-table tbody td:first-child { color: var(--text); font-weight: 500; }
+
+    .ballot-note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 6px; }
+
+    /* ── Steps ───────────────────────────────────────────────────── */
+    .steps {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-text { font-size: 15px; color: var(--muted); padding-top: 3px; }
+    .step-text strong { color: var(--text); }
+
+    /* ── Commission box ──────────────────────────────────────────── */
+    .commission-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .commission-header {
+      background: var(--blue-light);
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .commission-header h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin-bottom: 4px;
+    }
+
+    .commission-header p {
+      font-size: 13px;
+      color: var(--blue);
+      margin: 0;
+    }
+
+    .commission-body { padding: 20px; }
+
+    .commission-body p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .commission-conditions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .condition-item {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--muted);
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+    }
+
+    .condition-icon { color: var(--blue); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+    .commission-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .commission-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .commission-step-num {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .commission-step strong { color: var(--text); }
+
+    .reward-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      color: #166534;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-top: 14px;
+    }
+
+    .commission-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .commission-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background .15s;
+    }
+
+    .commission-link:hover { background: #d0e3f8; color: var(--blue-dark); }
+
+    /* ── CTA block ───────────────────────────────────────────────── */
+    .cta-block {
+      background: var(--blue);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      margin-top: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .cta-block p { color: rgba(255,255,255,.85); font-size: 15px; margin: 0; line-height: 1.6; }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      width: fit-content;
+      transition: background .15s;
+    }
+
+    .cta-btn:hover { background: #b91c2c; }
+
+    /* ── FAQ ─────────────────────────────────────────────────────── */
+    .faq-list { display: flex; flex-direction: column; gap: 4px; margin-top: 16px; }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 15px 18px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      transition: background .15s;
+    }
+
+    summary:hover { background: var(--bg); }
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--blue);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+
+    details[open] summary { border-bottom: 1px solid var(--border); }
+    details[open] summary::after { transform: rotate(45deg); }
+
+    .faq-answer {
+      padding: 14px 18px 16px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .faq-answer a { color: var(--blue); }
+
+    /* ── Sources ─────────────────────────────────────────────────── */
+    .sources-list { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+
+    .source-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+    }
+
+    .source-icon {
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--blue);
+      margin-top: 7px;
+    }
+
+    .source-item a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+    .source-item a:hover { color: var(--blue-dark); }
+
+    .source-note { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    /* ── Footer ──────────────────────────────────────────────────── */
+    footer {
+      background: var(--text);
+      padding: 24px 20px;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 16px;
+    }
+
+    .footer-inner a { color: rgba(255,255,255,.55); text-decoration: none; }
+    .footer-inner a:hover { color: rgba(255,255,255,.9); }
+
+    /* ── Responsive ──────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      main { padding: 28px 16px 60px; }
+      .date-banner { flex-direction: column; gap: 8px; align-items: flex-start; }
+      .commission-conditions { grid-template-columns: 1fr; }
+
+      .ballot-table thead { display: none; }
+      .ballot-table tbody td { display: block; padding: 6px 12px; }
+      .ballot-table tbody td:first-child { padding-top: 12px; font-weight: 600; }
+      .ballot-table tbody td:last-child { padding-bottom: 12px; color: var(--muted); }
+      .ballot-table tbody tr { border-bottom: 1px solid var(--border); }
+
+      .nav-current, .nav-link { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">rozhodní<span>sa</span>.sk</a>
+      <span class="nav-sep">/</span>
+      <span class="nav-current">Ako voliť</span>
+      <div class="nav-links">
+        <a href="/kandidati" class="nav-link">Kandidáti</a>
+        <a href="/" class="nav-cta">Spustiť kalkulačku →</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <div class="hero">
+      <span class="hero-eyebrow">Sprievodca voľbami 2026</span>
+      <h1>Ako voliť v komunálnych a krajských voľbách 2026</h1>
+      <p class="hero-lead">Spojené samosprávne voľby sa konajú v sobotu 24. októbra 2026 od 7:00 do 22:00. Voliči si v nich zvolia primátora alebo starostu, poslancov mestského zastupiteľstva, župana aj poslancov krajského zastupiteľstva - všetko naraz, v jednej volebnej miestnosti.</p>
+    </div>
+
+    <!-- Date banner -->
+    <div class="date-banner">
+      <div class="date-num">24. 10.</div>
+      <div class="date-label">
+        <strong>Sobota, 24. október 2026</strong>
+        <span>Volebné miestnosti otvorené od 7:00 do 22:00</span>
+      </div>
+    </div>
+
+    <!-- 1. Kedy a kde voliť -->
+    <div class="section">
+      <h2><span class="h2-icon"></span>Kedy a kde voliť</h2>
+      <p>Voliť môžeš <span class="strong-text">iba v mieste trvalého bydliska</span> - v tej volebnej miestnosti, ktorá je priradená k tvojej adrese. Svoju volebnú miestnosť nájdeš na ozname, ktorý ti doručia do schránky, alebo priamo na stránke <a href="https://www.minv.sk/?volby-samosprava26" target="_blank" rel="noopener">Ministerstva vnútra SR</a>.</p>
+      <div class="alert alert-warning">
+        <span class="alert-icon">!</span>
+        <p>Pre komunálne a krajské voľby <strong>neexistuje hlasovací preukaz</strong> - voliť môžeš výhradne v obci trvalého pobytu. Potvrdzuje to aj <a href="https://www.minv.sk/?tlacove-spravy&sprava=v-spojenych-regionalnych-volbach-je-mozne-volit-len-v-obci-trvaleho-pobytu" target="_blank" rel="noopener">tlačová správa Ministerstva vnútra SR z júna 2026</a>.</p>
+      </div>
+    </div>
+
+    <!-- 2. Koho volíš -->
+    <div class="section">
+      <h2><span class="h2-icon"></span>Koho volíš</h2>
+      <p>V jeden deň odovzdávaš až štyri hlasovacie lístky:</p>
+      <table class="ballot-table">
+        <thead>
+          <tr>
+            <th>Voľby</th>
+            <th>Koho volíš</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Komunálne - obecná/mestská úroveň</td>
+            <td>Primátor alebo starosta</td>
+          </tr>
+          <tr>
+            <td>Komunálne - obecná/mestská úroveň</td>
+            <td>Poslanci mestského / obecného zastupiteľstva</td>
+          </tr>
+          <tr>
+            <td>Krajské (župné) - VÚC</td>
+            <td>Župan (predseda samosprávneho kraja)</td>
+          </tr>
+          <tr>
+            <td>Krajské (župné) - VÚC</td>
+            <td>Poslanci krajského zastupiteľstva</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="ballot-note">Bratislava a Košice majú navyše voľby starostov mestských častí a poslancov miestnych zastupiteľstiev - teda až šesť hlasovacích lístkov naraz.</p>
+      <p style="margin-top:14px">Zoznamy všetkých kandidátov vo tvojom meste a kraji nájdeš na stránke <a href="https://volby.statistics.sk/" target="_blank" rel="noopener">Štatistického úradu SR</a>.</p>
+    </div>
+
+    <!-- 3. Čo si priniesť -->
+    <div class="section">
+      <h2><span class="h2-icon"></span>Čo si priniesť</h2>
+      <p>Stačí <span class="strong-text">občiansky preukaz alebo cestovný pas</span>. Nič iné nepotrebuješ - hlasovacie lístky a obálky dostaneš priamo vo volebnej miestnosti.</p>
+    </div>
+
+    <!-- 4. Ako správne hlasovať -->
+    <div class="section">
+      <h2><span class="h2-icon"></span>Ako správne hlasovať</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">1</span>
+          <span class="step-text">Vo volebnej miestnosti dostaneš <strong>obálku a sadu hlasovacích lístkov</strong>.</span>
+        </li>
+        <li class="step">
+          <span class="step-num">2</span>
+          <span class="step-text">Za plentou vložíš do obálky <strong>jeden hlasovací lístok za každé voľby</strong>.</span>
+        </li>
+        <li class="step">
+          <span class="step-num">3</span>
+          <span class="step-text">Na lístku pre <strong>primátora/starostu a župana</strong> zakrúžkuješ číslo jedného kandidáta.</span>
+        </li>
+        <li class="step">
+          <span class="step-num">4</span>
+          <span class="step-text">Na lístku pre <strong>poslancov</strong> môžeš zakrúžkovať viacerých kandidátov - maximálny počet je uvedený priamo na lístku.</span>
+        </li>
+        <li class="step">
+          <span class="step-num">5</span>
+          <span class="step-text">Obálku vhodíš do <strong>urny</strong>.</span>
+        </li>
+      </ol>
+      <div class="alert alert-warning" style="margin-top:12px">
+        <span class="alert-icon">!</span>
+        <p>Lístok, na ktorom zakrúžkuješ viac kandidátov než je povolené, je <strong>neplatný</strong>. Viac o postupe hlasovania nájdeš na portáli <a href="https://www.slovensko.sk/sk/zivotne-situacie/zivotna-situacia/_volby-v-slovenskej-republike" target="_blank" rel="noopener">slovensko.sk</a>.</p>
+      </div>
+    </div>
+
+    <!-- 5. Ako sa rozhodnúť -->
+    <div class="section">
+      <h2><span class="h2-icon"></span>Ako sa rozhodnúť</h2>
+      <div class="cta-block">
+        <p>Mená na lístku ti nič nepovedia, ak kandidátov nepoznáš. Preto existuje volebná kalkulačka. Odpovedz na 25 otázok o živote vo svojom meste a kraji - o doprave, bývaní, školstve, životnom prostredí a zdravotníctve. Kalkulačka ti ukáže, s ktorými kandidátmi sa zhoduješ najviac, a kde sa vaše názory líšia. Nezávislá, bez cookies a bez reklám.</p>
+        <a href="/" class="cta-btn">Spustiť volebnú kalkulačku →</a>
+      </div>
+    </div>
+
+    <!-- 6. Člen volebnej komisie -->
+    <div class="section">
+      <h2><span class="h2-icon"></span>Chceš byť členom volebnej komisie?</h2>
+      <p>Volebné komisie potrebujú dobrovoľníkov. Bez dostatočného počtu členov ich dopĺňa starosta, čo znižuje nezávislosť procesu. Ak chceš aktívne prispieť k férovému priebehu volieb, môžeš sa zapojiť.</p>
+
+      <div class="commission-box">
+        <div class="commission-header">
+          <h3>Okrsková volebná komisia</h3>
+          <p>Zabezpečuje priebeh hlasovania, sčítava hlasy a vyhotovuje zápisnicu o výsledkoch vo volebnom okrsku.</p>
+        </div>
+        <div class="commission-body">
+
+          <p><strong style="color: var(--text)">Podmienky členstva:</strong></p>
+          <div class="commission-conditions">
+            <div class="condition-item"><span class="condition-icon">✓</span>Minimálne 18 rokov v deň volieb</div>
+            <div class="condition-item"><span class="condition-icon">✓</span>Trvalý pobyt na Slovensku</div>
+            <div class="condition-item"><span class="condition-icon">✓</span>Spôsobilosť na právne úkony</div>
+            <div class="condition-item"><span class="condition-icon">✗</span>Nesmieš byť zároveň kandidát</div>
+          </div>
+
+          <p style="margin-top: 16px"><strong style="color: var(--text)">Ako sa zapojiť:</strong></p>
+          <div class="commission-steps">
+            <div class="commission-step">
+              <span class="commission-step-num">1</span>
+              <span>Do komisie ťa musí <strong>delegovať politická strana alebo koalícia</strong> kandidujúca vo voľbách. Nemusíš byť členom strany. Posledný termín delegovania je <strong>60 dní pred voľbami</strong> - teda okolo 25. augusta 2026.</span>
+            </div>
+            <div class="commission-step">
+              <span class="commission-step-num">2</span>
+              <span><strong>Kontaktuj vybranú stranu</strong> priamo - viaceré majú online formulár alebo kontaktný email pre záujemcov o komisiu (pozri tabuľku nižšie). Ak neuspieš, skús <a href="https://ferovevolby.sk" target="_blank" rel="noopener">Férové voľby</a>, ktoré sprostredkujú delegovanie bez straníckeho členstva.</span>
+            </div>
+            <div class="commission-step">
+              <span class="commission-step-num">3</span>
+              <span>Pred voľbami absolvuješ <strong>školenie</strong> zorganizované mestom alebo obcou a podpíšeš sľub nestrannosti.</span>
+            </div>
+          </div>
+
+          <p style="margin-top: 20px"><strong style="color: var(--text)">Kde sa prihlásiť - prehľad strán:</strong></p>
+          <table class="ballot-table" style="margin-top: 10px">
+            <thead>
+              <tr>
+                <th>Strana</th>
+                <th>Kontakt / prihláška</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Progresívne Slovensko (PS)</td>
+                <td><a href="https://progresivne.sk/okrskova-komisia/" target="_blank" rel="noopener">Online formulár na progresivne.sk</a> alebo email <a href="mailto:okrskari@progresivne.sk">okrskari@progresivne.sk</a></td>
+              </tr>
+              <tr>
+                <td>Sloboda a Solidarita (SaS)</td>
+                <td><a href="https://www.sas.sk/okrskar" target="_blank" rel="noopener">Online formulár na sas.sk/okrskar</a> - registrácia otvorenad pred každými voľbami</td>
+              </tr>
+              <tr>
+                <td>KDH</td>
+                <td>Bez verejného formulára. Kontaktuj <a href="https://kdh.sk/kontakt/" target="_blank" rel="noopener">krajskú alebo okresnú kanceláriu KDH</a> priamo.</td>
+              </tr>
+              <tr>
+                <td>Hlas - sociálna demokracia</td>
+                <td>Bez verejného formulára. Kontaktuj stranu cez <a href="https://strana-hlas.sk/kontakty/" target="_blank" rel="noopener">kontaktný formulár na strana-hlas.sk</a>.</td>
+              </tr>
+              <tr>
+                <td>Smer - sociálna demokracia</td>
+                <td>Bez verejného formulára. Kontaktuj <a href="https://www.strana-smer.sk/" target="_blank" rel="noopener">miestnu organizáciu Smer</a> vo svojej obci alebo meste.</td>
+              </tr>
+              <tr>
+                <td>Férové voľby (non-partnersky)</td>
+                <td><a href="https://ferovevolby.sk" target="_blank" rel="noopener">ferovevolby.sk</a> - sprostredkuje delegovanie pre záujemcov bez straníckeho zázemia</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="reward-badge" style="margin-top: 16px">
+            Odmena za deň volieb: člen cca 56 € a viac (77 % priemernej dennej mzdy), predseda komisie +30 %, zapisovateľ +25 %. Vypláca obec, bez dane.
+          </div>
+
+          <div class="alert alert-info" style="margin-top: 14px">
+            <span class="alert-icon">i</span>
+            <p>Komisia musí mať minimálne 5 členov. Predsedu a podpredsedu si komisári určia žrebom na prvom zasadaní. Komisie fungujú nielen v deň volieb, ale schádzajú sa aj na prípravných zasadaniach pred voľbami.</p>
+          </div>
+
+          <div class="commission-links">
+            <a href="https://www.minv.sk/?volby-samosprava26" target="_blank" rel="noopener" class="commission-link">MV SR - volebné komisie</a>
+            <a href="https://ferovevolby.sk" target="_blank" rel="noopener" class="commission-link">Férové voľby - prihláška</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <h2><span class="h2-icon"></span>Časté otázky</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Môžem voliť, ak nemám trvalý pobyt v meste, kde žijem?</summary>
+          <div class="faq-answer">Nie. Pre komunálne a krajské voľby je rozhodujúci trvalý pobyt, nie faktické bydlisko. Voliť môžeš len v obci, kde máš trvalý pobyt zapísaný v evidencii obyvateľov.</div>
+        </details>
+        <details>
+          <summary>Čo ak som sa presťahoval/a a nestihol/a som zmeniť trvalý pobyt?</summary>
+          <div class="faq-answer">V takom prípade voliš ešte v pôvodnom mieste trvalého pobytu. Zmenu trvalého pobytu vybavíš na miestnom úrade - po zmene môžeš voliť v novom meste.</div>
+        </details>
+        <details>
+          <summary>Môžem odovzdať prázdnu obálku?</summary>
+          <div class="faq-answer">Áno, účasť vo voľbách je dobrovoľná. Môžeš prísť a odovzdať prázdnu obálku - stále sa počítaš do volebnej účasti.</div>
+        </details>
+        <details>
+          <summary>Kde zistím, kto kandiduje v mojom meste?</summary>
+          <div class="faq-answer">Zoznamy kandidátov zverejňuje <a href="https://volby.statistics.sk/" target="_blank" rel="noopener">Štatistický úrad SR</a> a tvoja miestna samospráva na svojej webstránke.</div>
+        </details>
+        <details>
+          <summary>Musím byť v strane, aby som mohol/a byť v komisii?</summary>
+          <div class="faq-answer">Nie. Do komisie ťa môže delegovať strana, aj keď nie si jej členom. Stačí záujem a splnenie základných podmienok (18 rokov, trvalý pobyt, spôsobilosť). Možnosť bez stranníckej príslušnosti ponúka napríklad iniciatíva <a href="https://ferovevolby.sk" target="_blank" rel="noopener">Férové voľby</a>.</div>
+        </details>
+        <details>
+          <summary>Koľko času mi zaberie práca v komisii?</summary>
+          <div class="faq-answer">Okrem volebného dňa (zvyčajne 6:30 do ~24:00 vrátane sčítania) sa zúčastníš niekoľkých zasadaní komisie pred voľbami a školenia. Celkovo počítaj s 2–3 polovičnými dňami navyše okrem samotného dňa volieb.</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- Zdroje -->
+    <div class="section">
+      <h2><span class="h2-icon"></span>Úradné informácie a zdroje</h2>
+      <div class="sources-list">
+        <div class="source-item">
+          <span class="source-icon"></span>
+          <div>
+            <a href="https://www.minv.sk/?volby-samosprava26" target="_blank" rel="noopener">Ministerstvo vnútra SR - voľby 2026</a>
+            <span class="source-note">Termíny, kandidátne listiny, volebné komisie</span>
+          </div>
+        </div>
+        <div class="source-item">
+          <span class="source-icon"></span>
+          <div>
+            <a href="https://volby.statistics.sk/" target="_blank" rel="noopener">Štatistický úrad SR - volby.statistics.sk</a>
+            <span class="source-note">Kandidáti, výsledky</span>
+          </div>
+        </div>
+        <div class="source-item">
+          <span class="source-icon"></span>
+          <div>
+            <a href="https://www.slovensko.sk/sk/zivotne-situacie/zivotna-situacia/_volby-v-slovenskej-republike" target="_blank" rel="noopener">Slovensko.sk - ako voliť</a>
+            <span class="source-note">Postup hlasovania a životné situácie</span>
+          </div>
+        </div>
+        <div class="source-item">
+          <span class="source-icon"></span>
+          <div>
+            <a href="https://www.minv.sk/?tlacove-spravy&sprava=v-spojenych-regionalnych-volbach-je-mozne-volit-len-v-obci-trvaleho-pobytu" target="_blank" rel="noopener">MV SR: Voliť môžeš len v obci trvalého pobytu</a>
+            <span class="source-note">Tlačová správa, jún 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 rozhodnisa.sk · Občania štátu</span>
+      <span>·</span>
+      <a href="/">Volebná kalkulačka</a>
+      <span>·</span>
+      <a href="/kandidati">Prehľad kandidátov</a>
+      <span>·</span>
+      <a href="/ako-volit">Ako voliť</a>
+      <span>·</span>
+      <a href="https://github.com/Ranenter/rozhodnisa" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+</body>
+</html>
