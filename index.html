@@ -756,6 +756,7 @@ body{
 .footer-contact a{color:rgba(255,255,255,.8);text-decoration:none}
 .footer-contact a:hover{text-decoration:underline}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:1rem;display:flex;flex-wrap:wrap;gap:.4rem .7rem;align-items:center;color:rgba(255,255,255,.35);font-size:.75rem}
+.footer-netlify{text-align:center;margin-top:1.2rem;padding-bottom:.25rem;opacity:.7}
 .footer-dot{color:rgba(255,255,255,.18)}
 
 /* ── Misc ── */
@@ -850,6 +851,8 @@ body{
   .footer-grid{grid-template-columns:1fr}
   .site-footer{padding:2rem .9rem 1.2rem}
   .footer-bottom{flex-direction:column;align-items:flex-start}
+  .site-nav{top:8px;right:8px}
+  .burger-btn{min-width:44px;min-height:44px;padding:10px}
 }
 
 @supports(padding-bottom:env(safe-area-inset-bottom)){
@@ -931,10 +934,87 @@ main{display:block}
 }
 
 
+
+.burger-btn{background:#fff;border:1px solid var(--border);cursor:pointer;padding:.45rem .5rem;display:flex;flex-direction:column;gap:5px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.1);transition:box-shadow .15s}
+.burger-btn:hover{box-shadow:0 3px 12px rgba(0,0,0,.15)}
+.burger-btn span{display:block;width:20px;height:2px;background:var(--sk-blue);border-radius:2px;transition:transform .2s,opacity .2s}
+.burger-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger-btn.open span:nth-child(2){opacity:0}
+.burger-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-dropdown{display:none;position:absolute;top:calc(100% + .5rem);right:0;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.1),0 0 0 1px rgba(0,0,0,.05);min-width:220px;overflow:hidden}
+.nav-dropdown.open{display:block;animation:fadeUp .18s ease}
+.nav-dropdown__label{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:.7rem 1rem .35rem;display:block;border-bottom:1px solid var(--border)}
+.nav-link{display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;font-size:.87rem;font-weight:600;color:var(--text);text-decoration:none;transition:background .12s}
+.nav-link:hover{background:var(--surface);color:var(--sk-blue)}
+.nav-divider{height:1px;background:var(--border)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+
+/* ── Burger nav ── */
+.site-nav{position:fixed;top:10px;right:12px;z-index:9999}
+.burger-btn{
+  background:#fff;border:1px solid rgba(0,0,0,.1);cursor:pointer;
+  padding:10px 11px;display:flex;flex-direction:column;justify-content:center;gap:5px;
+  border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.12);
+  -webkit-tap-highlight-color:transparent;
+  min-width:44px;min-height:44px;/* touch target */
+}
+.burger-btn span{display:block;width:20px;height:2px;background:var(--sk-blue);border-radius:2px;transition:transform .22s ease,opacity .18s ease;pointer-events:none}
+.burger-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger-btn.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-dropdown{
+  display:none;position:absolute;top:calc(100% + 6px);right:0;
+  background:#fff;border:1px solid var(--border);
+  border-radius:14px;box-shadow:0 10px 32px rgba(0,0,0,.13),0 0 0 1px rgba(0,0,0,.04);
+  min-width:210px;overflow:hidden;
+}
+.nav-dropdown.open{display:block;animation:navIn .18s ease}
+@keyframes navIn{from{opacity:0;transform:translateY(4px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.nav-dropdown__label{
+  font-family:'Barlow Condensed','Arial Narrow',sans-serif;
+  font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--muted);padding:10px 14px 6px;display:block;
+  border-bottom:1px solid var(--border);
+}
+.nav-link{
+  display:flex;align-items:center;gap:10px;
+  padding:13px 14px;font-size:.9rem;font-weight:600;
+  color:var(--text);text-decoration:none;
+  transition:background .1s;
+  min-height:48px;/* touch target */
+}
+.nav-link:hover,.nav-link:focus{background:var(--surface);color:var(--sk-blue);outline:none}
+.nav-link[aria-current="page"]{color:var(--sk-blue)}
+.nav-link__icon{width:17px;height:17px;flex-shrink:0;opacity:.55}
+.nav-divider{height:1px;background:var(--border);margin:0}
+
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
 </head>
 <body>
+
+<nav class="site-nav" aria-label="Navigácia stránkou">
+  <button class="burger-btn" id="burgerBtn" aria-expanded="false" aria-controls="navDropdown" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-dropdown" id="navDropdown" role="menu">
+    <span class="nav-dropdown__label">rozhodnisa.sk</span>
+    <a href="/" class="nav-link" role="menuitem" aria-current="page">
+      <svg class="nav-link__icon" viewBox="0 0 17 17" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M6 9l2 2 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volebná kalkulačka
+    </a>
+    <a href="/kandidati" class="nav-link" role="menuitem">
+      <svg class="nav-link__icon" viewBox="0 0 17 17" fill="none" aria-hidden="true"><rect x="2.5" y="3.5" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 7.5h6M5.5 10h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      Prehľad kandidátov
+    </a>
+    <div class="nav-divider"></div>
+    <a href="/ako-volit" class="nav-link" role="menuitem">
+      <svg class="nav-link__icon" viewBox="0 0 17 17" fill="none" aria-hidden="true"><path d="M3.5 8.5h10M10 5.5l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Ako voliť 2026
+    </a>
+  </div>
+</nav>
 <a class="skip-link" href="#main-content">Preskočiť na obsah</a>
 <div id="topBar"><div id="topFill"></div></div>
 <div class="toast" id="toast">✓ Odkaz skopírovaný!</div>
@@ -1263,31 +1343,26 @@ main{display:block}
 
       <div class="footer-col">
         <div class="footer-col__title">O projekte</div>
-        <p>Volebná kalkulačka 2026 je nezávislý občiansky projekt skupiny <strong>Občania štátu</strong>. Nevznikla na objednávku žiadnej strany, kandidáta ani sponzora. Nikto z nás za túto prácu nedostáva odmenu.</p>
-        <p>Naším cieľom je pomôcť voličom zorientovať sa pred komunálnymi a krajskými voľbami v októbri 2026, nie povedať im, koho voliť.</p>
+        <p>Nezávislý občiansky projekt skupiny <strong>Občania štátu</strong>. Nevznikol na objednávku žiadnej strany ani sponzora. Cieľom je pomôcť voličom zorientovať sa, nie povedať im, koho voliť.</p>
       </div>
 
       <div class="footer-col">
         <div class="footer-col__title">Transparentnosť</div>
-        <p>Všetky pozície kandidátov sú odvodené z verejne dostupných volebných programov, rozhovorov a hlasovaní. Každé priradenie je overiteľné.</p>
-        <p>Zdrojový kód kalkulačky je verejne dostupný na GitHub-e, kde si ktokoľvek môže skontrolovať, ako funguje porovnávanie a skórovanie.</p>
+        <p>Pozície kandidátov vychádzajú z verejných volebných programov, rozhovorov a hlasovaní. Každé priradenie je overiteľné. Bez cookies, bez reklamy, bez zberu dát.</p>
         <a class="footer-link" href="https://github.com/Ranenter/rozhodnisa" target="_blank" rel="noopener">→ GitHub repozitár</a>
       </div>
 
       <div class="footer-col">
-        <div class="footer-col__title">Ochrana dát</div>
-        <p>Táto stránka <strong>nepoužíva cookies</strong>, nesleduje používateľov ani neodosiela žiadne osobné údaje na server. Tvoje odpovede zostávajú výhradne v tvojom prehliadači a po zatvorení záložky zmiznú.</p>
-        <p>Zbierame <strong>anonymné štatistiky návštevnosti</strong> (počet návštev, výber mesta) bez identifikácie jednotlivcov prostredníctvom nástroja Umami Analytics, bez cookies, v súlade s GDPR.</p>
+        <div class="footer-col__title">Sprievodcovia</div>
+        <a class="footer-link" href="/ako-volit">Ako voliť 2026</a>
+        <a class="footer-link" href="/kandidati">Prehľad kandidátov</a>
       </div>
 
       <div class="footer-col">
-        <div class="footer-col__title">Sprievodcovia</div>
-        <a class="footer-link" href="/ako-volit">Ako voliť</a>
-        <a class="footer-link" href="/kandidati">Prehľad kandidátov</a>
-        <div class="footer-col__title" style="margin-top:1.2rem">Podpora</div>
-        <p>Robíme to radi a zadarmo, ale ak sa ti páči čo robíme, nepodporuj nás ale pomôž radšej zvieratkám:</p>
+        <div class="footer-col__title">Podpora</div>
+        <p>Robíme to zadarmo. Ak sa ti páči čo robíme, pomôž zvieratkám:</p>
         <a class="footer-donate" href="https://www.uvp.sk/ako-pomoct/" target="_blank" rel="noopener">Darovať útulku</a>
-        <p class="footer-contact"><a href="#" onclick="this.href='mail'+('to:ranenter7@'+'proton.me');return true;" style="color:#63b3ed">Napíšte nám</a></p>
+        <p class="footer-contact"><a href="#" onclick="this.href='mail'+('to:ranenter7@'+'proton.me');return true;">Napíšte nám</a></p>
       </div>
 
     </div>
@@ -1295,23 +1370,21 @@ main{display:block}
     <div class="footer-bottom">
       <span>© 2026 Občania štátu</span>
       <span class="footer-dot">·</span>
-      <span>Erby miest: <a href="https://commons.wikimedia.org" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55)">Wikimedia Commons</a>, CC BY-SA 4.0</span>
-      <span class="footer-dot">·</span>
-      <span>Nezávislý občiansky projekt</span>
+      <span>Erby miest: <a href="https://commons.wikimedia.org" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5)">Wikimedia Commons</a> CC BY-SA 4.0</span>
       <span class="footer-dot">·</span>
       <span>Anonymné odpovede · Žiadne cookies · Žiadna reklama</span>
       <span class="footer-dot">·</span>
-      <a href="/ako-volit" style="color:rgba(255,255,255,.55)">Ako voliť</a>
+      <a href="https://github.com/Ranenter/rozhodnisa/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5)">Code of Conduct</a>
       <span class="footer-dot">·</span>
-      <a href="https://github.com/Ranenter/rozhodnisa/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener" style="color:#63b3ed">Code of Conduct</a>
-      <span class="footer-dot">·</span>
-      <a href="https://github.com/Ranenter/rozhodnisa/blob/main/LICENSE" target="_blank" rel="noopener" style="color:#63b3ed">MIT License</a>
+      <a href="https://github.com/Ranenter/rozhodnisa/blob/main/LICENSE" target="_blank" rel="noopener" style="color:rgba(255,255,255,.5)">MIT License</a>
     </div>
-    <div style="text-align:center;margin-top:1rem;padding-bottom:0.5rem">
-      <a href="https://www.netlify.com" target="_blank" rel="noopener">
-        <img src="https://www.netlify.com/assets/badges/netlify-badge-color-accent.svg" alt="Deploys by Netlify" width="114" height="34" loading="lazy" style="height:34px;width:auto">
+
+    <div class="footer-netlify">
+      <a href="https://www.netlify.com" target="_blank" rel="noopener" aria-label="Deploys by Netlify">
+        <img src="https://www.netlify.com/assets/badges/netlify-badge-color-accent.svg" alt="Deploys by Netlify" width="114" height="34" loading="lazy">
       </a>
     </div>
+
   </div>
 </footer>
 
@@ -1949,5 +2022,31 @@ const VAA = (function(){
   // update at midnight
   var ms = new Date(); ms.setHours(24,0,0,0);
   setTimeout(function(){updateCD();setInterval(updateCD,86400000);}, ms - new Date());
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('burgerBtn');
+  var dd=document.getElementById('navDropdown');
+  if(!btn||!dd)return;
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var open=dd.classList.toggle('open');
+    btn.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',String(open));
+  });
+  document.addEventListener('click',function(){
+    dd.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){
+      dd.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      btn.focus();
+    }
+  });
 })();
 </script>
