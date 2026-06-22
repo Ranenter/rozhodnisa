@@ -6,19 +6,17 @@
 
 ---
 
-## Prečo sme to vytvorili
+## Prečo to robíme
 
-Frustruje nás, že niektorí kandidáti otvorene klamú a voliči nemajú nástroj, ako ich názory na kritické témy porovnať. Táto kalkulačka dáva každému transparentnosť, ktorú naša demokracia potrebuje.
+Frustruje nás, že niektorí kandidáti a kandidátky otvorene zavádzajjú a klamú a voliči tak nemajú možnosť, ako ich názory a program kriticky porovnať. Táto kalkulačka dáva každému prehľad, ktorý naša demokracia potrebuje.
 
-Sme **Občania štátu** a máme len jeden cieľ: priviesť ťa k volebnej urne. Sme apolitickí a nezávislí a nevznikli sme na objednávku žiadnej strany, kandidáta ani sponzora a nikto z nás za túto prácu nedostáva odmenu. Odmeníte nás, keď pôjdete voliť.
+Sme **Občania štátu** a máme len jeden cieľ: priviesť ťa k volebnej urne. Sme apolitickí, nezávislí a nevznikli sme na objednávku žiadnej strany, kandidáta ani sponzora a nikto z nás za túto prácu nedostáva odmenu. Odmeníš nás, keď pôjdeš voliť.
 
 ---
 
 ## Ako to funguje
 
-Odpovedz na 25 otázok a zisti, s ktorým kandidátom sa najviac zhoduješ. Odpovede kandidátov sú buď priamo overené (kandidát vyplnil formulár), alebo odvodené z verejných zdrojov: volebný program, hlasovanie v zastupiteľstve, stranícka príslušnosť alebo ich vyjadrenia v médiách. Overené odpovede sú v kalkulačke viditeľne označené.
-
-Bez cookies. Bez reklám. Bez sledovania. Tvoje odpovede zostávajú iba v tvojom prehliadači.
+Odpovedz na 25 otázok a zisti, s ktorým kandidátom sa najviac zhoduješ. Odpovede kandidátov sú buď priamo overené (kandidát/ka vyplnil/a formulár), alebo odvodené z verejných zdrojov: volebný program, hlasovanie v zastupiteľstve, stranícka príslušnosť alebo ich vyjadrenia v médiách. Overené odpovede sú v kalkulačke viditeľne označené. Bez reklám, sledovania alebo cookies. Tvoje odpovede zostávajú iba v tvojom prehliadači.
 
 ---
 
