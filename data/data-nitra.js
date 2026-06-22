@@ -15,7 +15,8 @@ window.VAA_DATA.candidates['nitra_primator'] = [
 // ── Kandidáti: Predseda / Predsedníčka NSK ──
 window.VAA_DATA.candidates['nitra_vuc'] = [
   {id:'varga',name:'Henrich Varga',party:'SaS / KDH / Demokrati / Hnutie Slovensko / Tím Kraj Nitra / Magyar Fórum / OKS',color:'#2A5CAA',url:'https://www.facebook.com/varga.henrich/'},
-  {id:'becik',name:'Branislav Becík',party:'Hlas-SD / Smer-SD / Republika (úradujúci predseda)',color:'#C23A2B',url:'https://branislavbecik.sk/'}
+  {id:'becik',name:'Branislav Becík',party:'Hlas-SD / Smer-SD / Republika (úradujúci predseda)',color:'#C23A2B',url:'https://branislavbecik.sk/'},
+  {id:'csenger',name:'Tibor Csenger',party:'Maďarská aliancia',color:'#1A6B8A',url:''}
 ];
 
 // ── Otázky: Primátor / Primátorka Nitry ──

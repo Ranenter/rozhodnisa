@@ -7,7 +7,8 @@ window.VAA_DATA.candidates['trnava_primator'] = [
   {id:'placeholder_tt_p',name:'Kandidát primátora',party:'(čoskoro)',color:'#90caf9'}
 ];
 window.VAA_DATA.candidates['trnava_vuc'] = [
-  {id:'placeholder_tt_v',name:'Kandidát župana',party:'(čoskoro)',color:'#90caf9'}
+  {id:'viskupic',name:'Jozef Viskupič',party:'PS / SaS / KDH / Demokrati / Hnutie Slovensko / OKS / Magyar Fórum (úradujúci predseda)',color:'#0057A8',url:'https://trnavskyzupan.sk'},
+  {id:'bereny',name:'József Berényi',party:'Maďarská aliancia',color:'#1A6B8A',url:'https://bereny.sk'}
 ];
 
 // ── Otázky ──
