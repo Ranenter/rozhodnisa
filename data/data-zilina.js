@@ -22,7 +22,7 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q1
   {t:'Parkovanie',
-   q:'Má Žilina ďalej rozširovať platené parkovanie aj za cenu, že časť vodičov príde o bezplatné státie pri svojom byte/dome?',
+   q:'Je potrebné rozširovať platené parkovanie aj za cenu, že časť vodičov príde o bezplatné státie pri svojom byte/dome.',
    w:'Parkovacia politika patrí medzi najviditeľnejšie komunálne témy v Žiline. Mesto postupne rozširuje regulované zóny, pričom cieľom je znížiť chaos, zvýšiť dostupnosť miest a zvýhodniť rezidentov. Kritici hovoria o strate komfortu a vyšších nákladoch pre domácnosti, podporovatelia o potrebe zaviesť pravidlá v preplnených štvrtiach.',
    a:{fiabane:'agree',cibulka:'disagree'}},
 
@@ -34,7 +34,7 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q3
   {t:'Bývanie',
-   q:'Má Žilina aktívne stavať mestské nájomné byty v partnerstve so súkromnými investormi?',
+   q:'Má Žilina stavať mestské nájomné byty v partnerstve so súkromnými investormi?',
    w:'Žilina v roku 2026 rozbehla tému nájomného bývania ako odpoveď na drahé hypotéky a odchod mladých rodín. Sporné je najmä to, či má mesto do výstavby vstupovať cez developerskú spoločnosť a majetkové vklady, alebo radšej ponechať bytovú výstavbu trhu. Zástancovia hovoria o jedinom realistickom spôsobe, ako zvýšiť ponuku dostupných bytov, kritici o riziku nevýhodného nakladania s mestským majetkom.',
    a:{fiabane:'agree',cibulka:'disagree'}},
 
@@ -46,7 +46,7 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q5
   {t:'Transparentnosť',
-   q:'Má mesto povinne zverejňovať všetky zmluvy, dodatky a odôvodnenia výberu dodávateľov pri zákazkách nad 5 000 eur ešte pred podpisom?',
+   q:'Má mesto povinne zverejňovať všetky zmluvy, dodatky a odôvodnenia výberu dodávateľov pri zákazkách nad 5 000 eur?',
    w:'Transparentnosť verejných zákaziek je dlhodobo silná téma vo všetkých väčších mestách. Zákon vyžaduje zverejňovanie zmlúv, no nie vždy detailné zdôvodnenie výberu víťaza v zrozumiteľnej podobe. Takéto pravidlo by zvýšilo kontrolu verejnosti, ale zároveň predĺžilo niektoré procesy a zvýšilo administratívu.',
    a:{fiabane:'agree',cibulka:'agree'}},
 
@@ -58,19 +58,19 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q7
   {t:'MHD',
-   q:'Mala by byť mestská hromadná doprava v Žiline lacnejšia alebo úplne bezplatná pre vybrané skupiny, aj keby si to vyžiadalo vyššiu dotáciu z rozpočtu?',
+   q:'Mestská hromadná doprava v Žiline by mala byť lacnejšia alebo bezplatná pre vybrané skupiny, aj keby si to vyžiadalo vyššiu dotáciu z rozpočtu',
    w:'Lacnejšia MHD môže pomôcť znížiť počet áut v meste a zlepšiť dostupnosť dopravy pre študentov, seniorov či pracujúcich s nižšími príjmami. Na druhej strane, každé zníženie cestovného znamená vyššiu záťaž pre mestský rozpočet alebo menší priestor na investície inde.',
    a:{fiabane:'agree',cibulka:'agree'}},
 
   // Q8
   {t:'Cyklodoprava',
-   q:'Má Žilina budovať oddelené cyklotrasy aj za cenu rušenia časti parkovacích miest alebo jazdných pruhov?',
+   q:'Chceš oddelené cyklotrasy aj za cenu rušenia časti parkovacích miest alebo jazdných pruhov?',
    w:'Cyklodoprava v Žiline rastie, ale sieť trás je stále neúplná a miestami nesúvislá. Ak má byť bicykel reálnou alternatívou, často to znamená ubrať priestor autám. Ide o hodnotový spor medzi komfortom individuálnej automobilovej dopravy a bezpečnosťou aktívnej mobility.',
    a:{fiabane:'agree',cibulka:'disagree'}},
 
   // Q9
   {t:'Chodníky a cesty',
-   q:'Má byť oprava existujúcich chodníkov, ciest a podjazdov hlavnou investičnou prioritou mesta pred novými vizionárskymi projektmi?',
+   q:'Má byť oprava chodníkov, ciest a podjazdov hlavnou investičnou prioritou mesta pred novými vizionárskymi projektmi?',
    w:'Mnohí obyvatelia hodnotia samosprávu podľa stavu ulíc, chodníkov, priechodov a verejného priestoru vo svojom okolí. Zároveň však mesto potrebuje myslieť aj na väčšie systémové investície. Táto otázka oddeľuje „dobrého správcu“ od „mestského vizionára“ — a hľadá správny pomer medzi nimi.',
    a:{fiabane:'neutral',cibulka:'agree'}},
 
@@ -82,7 +82,7 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q11
   {t:'Šport a voľný čas',
-   q:'Má mesto viac investovať do verejne dostupných športovísk, detských ihrísk a rekreačných zón aj na sídliskách?',
+   q:'Mesto má investovať do verejne dostupných športovísk, detských ihrísk a rekreačných zón aj na sídliskách.',
    w:'Kvalita života v meste nezávisí len od dopravy a bývania, ale aj od toho, či majú ľudia dostupný verejný priestor pre šport, oddych a deti. Takéto projekty sú populárne a viditeľné, no zároveň konkurujú iným investičným prioritám, ktoré nemusia byť na prvý pohľad také atraktívne.',
    a:{fiabane:'agree',cibulka:'agree'}},
 
@@ -100,7 +100,7 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q14
   {t:'Digitalizácia',
-   q:'Má mesto výrazne zrýchliť digitalizáciu úradu a čo najviac podaní vybavovať online, aj keby sa časť osobných služieb obmedzila?',
+   q:'Mesto by malo zrýchliť digitalizáciu úradu a čo najviac podaní vybavovať online.',
    w:'Digitalizácia môže ušetriť čas občanom aj úradníkom, zvýšiť kontrolovateľnosť procesov a znížiť priestor na nejasnosti. Zároveň však časť obyvateľov stále preferuje osobný kontakt alebo nemá dostatočné digitálne zručnosti. Dôležité je, či má mesto ísť rýchlo dopredu, alebo voliť opatrnejší prechod.',
    a:{fiabane:'agree',cibulka:'neutral'}},
 
@@ -112,13 +112,13 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q16
   {t:'Bezpečnosť',
-   q:'Potrebuje Žilina viac viditeľných mestských policajtov v uliciach?',
+   q:'Potrebuje Žilina viac mestských policajtov v uliciach?',
    w:'Pocit bezpečia patrí medzi najčastejšie očakávania od mesta, najmä vo večerných hodinách, pri stanici, v podchodoch alebo na sídliskách. Posilnenie mestskej polície však znamená vyššie personálne a prevádzkové náklady a vyvoláva aj otázku, či je problém skôr v prevencii alebo v represii.',
    a:{fiabane:'neutral',cibulka:'agree'}},
 
   // Q17
   {t:'Stanica a centrum',
-   q:'Má mesto urobiť z okolia železničnej a autobusovej stanice absolútnu prioritu mesta, aj keby to odsunulo investície do iných častí Žiliny?',
+   q:'Má mesto urobiť z okolia železničnej a autobusovej stanice prioritu mesta, aj keby to odsunulo investície do iných častí Žiliny?',
    w:'Stanica je pre mnohých prvý dojem z mesta a zároveň miesto, kde sa koncentrujú dopravné aj sociálne problémy. Investície do tejto zóny môžu mať veľký symbolický aj praktický efekt, no vždy znamenajú, že inde sa bude čakať dlhšie.',
    a:{fiabane:'agree',cibulka:'agree'}},
 
@@ -136,7 +136,7 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q20
   {t:'Kultúra',
-   q:'Má mesto pokračovať v podpore nezávislej kultúry, festivalov a komunitných podujatí aj v čase rozpočtového tlaku?',
+   q:'Chceš aby mesto podporovalo nezávislú kultúru a festivaly aj v čase rozpočtového tlaku?',
    w:'Kultúra formuje identitu mesta, priťahuje návštevníkov a zvyšuje kvalitu života. Zároveň však býva medzi prvými oblasťami, kde sa šetrí, keď sú financie napäté. Otázka je, či je kultúra luxus navyše, alebo základná súčasť modernej mestskej politiky.',
    a:{fiabane:'agree',cibulka:'neutral'}},
 
@@ -148,19 +148,19 @@ window.VAA_DATA.questions.zilina_primator = [
 
   // Q22
   {t:'Školy a škôlky',
-   q:'Má mesto prioritne investovať do rozširovania kapacít škôlok a základných škôl v rastúcich štvrtiach pred reprezentatívnymi projektmi v centre?',
+   q:'Mesto má investovať do rozširovania kapacít škôlok a základných škôl v rastúcich štvrtiach pred reprezentatívnymi projektmi v centre.',
    w:'Pre mladé rodiny je dostupnosť škôlok a škôl jednou z kľúčových tém pri rozhodovaní, či v meste zostať. Tieto investície sú menej viditeľné ako námestia či veľké stavby, ale majú silný dopad na každodenný život a dlhodobú atraktivitu mesta.',
    a:{fiabane:'agree',cibulka:'agree'}},
 
   // Q23
   {t:'Verejný priestor',
-   q:'Má mesto prísnejšie regulovať vizuálny smog, reklamné plochy a chaotické úpravy verejného priestoru?',
+   q:'Je potrebné prísnejšie regulovať vizuálny smog, reklamné plochy a chaotické úpravy verejného priestoru.',
    w:'Reklamné nosiče, nejednotný mobiliár a zanedbané priestory znižujú kvalitu mestského prostredia, aj keď nejde vždy o najhlasnejšiu politickú tému. Prísnejšia regulácia môže zlepšiť vzhľad mesta, no naráža na záujmy podnikateľov a vlastníkov plôch.',
    a:{fiabane:'agree',cibulka:'neutral'}},
 
   // Q24
   {t:'Komunikácia mesta',
-   q:'Má primátor pravidelne zverejňovať zrozumiteľný účet splnených a nesplnených sľubov, aby si obyvatelia vedeli skontrolovať výsledky?',
+   q:'Má primátor pravidelne zverejňovať zrozumiteľný účet splnených a nesplnených sľubov, aby si obyvatelia vedeli skontrolovať jeho výsledky?',
    w:'Dôvera v komunálnu politiku často stojí na tom, či ľudia rozumejú, čo sa podarilo, čo sa nepodarilo a prečo. Verejný účet sľubov môže zvýšiť tlak na zodpovednosť, ale aj odhaliť zlyhania, ktoré politici radšej vysvetľujú priebežne a menej formálne.',
    a:{fiabane:'agree',cibulka:'agree'}},
 
@@ -174,42 +174,22 @@ window.VAA_DATA.questions.zilina_primator = [
 // ── Otázky: Predseda / Predsedníčka ŽSK ──
 window.VAA_DATA.questions.zilina_vuc = [
   {t:'Cesty a mosty',
-   q:'Má Žilinský kraj dať v najbližších rokoch absolútnu prioritu rekonštrukcii ciest II. a III. triedy, aj keby to spomalilo iné investície?',
+   q:'Má Žilinský kraj dať absolútnu prioritu rekonštrukcii ciest II. a III. triedy, aj keby to spomalilo iné investície?',
    w:'Správa ciest patrí medzi najviditeľnejšie kompetencie kraja. V Žilinskom kraji je téma stavu ciest a mostov mimoriadne citlivá pre horský terén, tranzit aj regionálne rozdiely. Otázka je, či má kraj sústrediť čo najviac peňazí práve sem, alebo udržať širšie investičné priority.',
    a:{jurinova:'neutral'}},
 
-  {t:'Cesty a mosty',
-   q:'Má kraj presúvať viac peňazí na havarijný stav mostov a rizikových úsekov aj za cenu obmedzenia nových projektov?',
-   w:'V horských regiónoch kraja sú mosty a zosuvné úseky kľúčovou podmienkou bezpečnej dopravy. Opravy týchto miest bývajú technicky aj finančne veľmi náročné, no ich odklad zvyšuje bezpečnostné aj ekonomické riziká.',
-   a:{jurinova:'agree'}},
-
   {t:'Verejná doprava',
-   q:'Má kraj zachovať autobusové spojenia aj v menej obývaných oblastiach, aj keď sú stratové?',
+   q:'Je potrebné zachovať autobusové spojenia aj v menej obývaných oblastiach, aj keď sú stratové.',
    w:'Riedko osídlené časti Oravy, Kysúc, Turca či Liptova sú odkázané na verejnú dopravu viac než veľké mestá. Ekonomicky nevýhodné linky však zaťažujú rozpočet. Rozhoduje sa medzi dostupnosťou služieb pre všetkých a efektívnym využitím verejných peňazí.',
    a:{jurinova:'agree'}},
 
-  {t:'Verejná doprava',
-   q:'Má kraj ďalej rozširovať integrovanú dopravu a jednotný cestovný lístok aj vtedy, ak si to vyžiada vyššie dotácie?',
-   w:'Integrovaná doprava má zjednodušiť cestovanie medzi vlakmi, autobusmi a mestskou dopravou. Prínosom je väčší komfort pre cestujúcich a lepšie prepojenie regiónov, nevýhodou sú vyššie nároky na organizáciu a financovanie systému.',
-   a:{jurinova:'agree'}},
-
-  {t:'Vyľudňovanie regiónov',
-   q:'Má kraj cielene posilňovať služby v odľahlejších regiónoch, aj keď je to drahšie než sústrediť ich do väčších centier?',
-   w:'Jednou z najväčších výziev ŽSK je rozdiel medzi centrami a perifériami. Posilňovanie služieb v menších mestách a obciach môže zlepšiť kvalitu života aj udržať obyvateľov v regióne, no je finančne náročnejšie než centralizácia.',
-   a:{jurinova:'agree'}},
-
   {t:'Nemocnice',
-   q:'Má kraj pokračovať v dotovaní svojich nemocníc a stabilizačných programov pre zdravotníkov, aj keď nemocnice vykazujú stratu?',
+   q:'Je správne dotovať svoje nemocnice a stabilizačné programy pre zdravotníkov, aj keď roky vykazujú stratu.',
    w:'Nemocnice v pôsobnosti ŽSK čelia finančným problémom, ale zároveň patria medzi najdôležitejšie verejné služby v kraji. Kraj môže straty vnímať ako signál na tvrdšiu racionalizáciu alebo ako cenu za udržanie dostupnej zdravotnej starostlivosti v regiónoch.',
    a:{jurinova:'agree'}},
 
-  {t:'Nemocnice',
-   q:'Ak by si to vyžadovala finančná situácia, mal by kraj pristúpiť aj k nepopulárnym zmenám v riadení svojich nemocníc?',
-   w:'Straty nemocníc vytvárajú tlak na vedenie kraja, aby nehľadalo len dodatočné peniaze, ale aj hlbšie manažérske opatrenia. Takéto kroky môžu byť nevyhnutné, no zároveň politicky aj sociálne citlivé.',
-   a:{jurinova:'neutral'}},
-
   {t:'Zdravotníci',
-   q:'Má kraj ponúkať silnejšie motivačné programy pre sestry, lekárov a ďalší personál, aby ich udržal vo svojich zariadeniach?',
+   q:'Má kraj ponúkať motivačné programy pre sestry, lekárov a ďalší personál, aby ich udržal vo svojich zariadeniach?',
    w:'Nedostatok zdravotníckeho personálu neohrozuje len kvalitu, ale aj samotnú dostupnosť zdravotnej starostlivosti. Motivačné programy stoja peniaze, no bez nich môže kraj strácať ľudí do väčších nemocníc či do zahraničia.',
    a:{jurinova:'agree'}},
 
@@ -248,6 +228,11 @@ window.VAA_DATA.questions.zilina_vuc = [
    w:'Župa spravuje veľké množstvo budov napr. školy, nemocnice, kultúrne inštitúcie či zariadenia sociálnych služieb. Energetické úspory znižujú budúce náklady, no vyžadujú značné vstupné investície.',
    a:{jurinova:'agree'}},
 
+ {t:'Nemocnice',
+   q:'Ak by si to vyžadovala finančná situácia, mal by kraj pristúpiť aj k nepopulárnym zmenám v riadení svojich nemocníc?',
+   w:'Straty nemocníc vytvárajú tlak na vedenie kraja, aby nehľadalo len dodatočné peniaze, ale aj hlbšie manažérske opatrenia. Takéto kroky môžu byť nevyhnutné, no zároveň politicky aj sociálne citlivé.',
+   a:{jurinova:'neutral'}},
+
   {t:'Energetika',
    q:'Má kraj pri modernizácii svojich budov uprednostniť čo najrýchlejšie zníženie prevádzkových nákladov pred reprezentatívnymi rekonštrukciami?',
    w:'Po energetickej kríze sa ukázalo, že mnohé krajské budovy sú drahé na prevádzku. Otázka preto znie, či má byť hlavným cieľom úspora energií a funkčnosť, alebo širšie, vizuálne a architektonicky ambicióznejšie obnovy.',
@@ -258,9 +243,19 @@ window.VAA_DATA.questions.zilina_vuc = [
    w:'Kraj hospodári s rozpočtom v stovkách miliónov eur a musí vyvažovať investície, prevádzku aj financovanie služieb. Opatrnosť znižuje riziko budúcich problémov, ale môže spomaliť rozvoj a čerpanie vonkajších zdrojov.',
    a:{jurinova:'disagree'}},
 
+ {t:'Cesty a mosty',
+   q:'Má kraj presúvať viac peňazí na havarijný stav mostov a rizikových úsekov aj za cenu obmedzenia nových projektov?',
+   w:'V horských regiónoch kraja sú mosty a zosuvné úseky kľúčovou podmienkou bezpečnej dopravy. Opravy týchto miest bývajú technicky aj finančne veľmi náročné, no ich odklad zvyšuje bezpečnostné aj ekonomické riziká.',
+   a:{jurinova:'agree'}},
+
   {t:'Eurofondy',
    q:'Má byť pre kraj prioritou pripraviť čo najviac projektov na eurofondy, aj keď si to vyžiada vyššie spolufinancovanie z vlastného rozpočtu?',
    w:'Externé zdroje vedia výrazne posunúť školy, nemocnice, cesty či kultúru. No aj eurofondový projekt niečo stojí a vyžaduje schopný aparát, prípravu a spoluúčasť. Otázka je, či má kraj hrať aktívne a vo veľkom, alebo opatrnejšie.',
+   a:{jurinova:'agree'}},
+
+  {t:'Vyľudňovanie regiónov',
+   q:'Má kraj cielene posilňovať služby v odľahlejších regiónoch, aj keď je to drahšie než sústrediť ich do väčších centier?',
+   w:'Jednou z najväčších výziev ŽSK je rozdiel medzi centrami a perifériami. Posilňovanie služieb v menších mestách a obciach môže zlepšiť kvalitu života aj udržať obyvateľov v regióne, no je finančne náročnejšie než centralizácia.',
    a:{jurinova:'agree'}},
 
   {t:'Regionálna rovnováha',
@@ -281,6 +276,11 @@ window.VAA_DATA.questions.zilina_vuc = [
   {t:'Transparentnosť',
    q:'Má kraj zverejňovať zrozumiteľné odôvodnenia veľkých zmlúv a investičných rozhodnutí ešte pred ich schválením?',
    w:'Formálne zverejnenie dokumentov často nestačí na to, aby sa v nich občania vyznali. Lepšia transparentnosť by mohla zvýšiť dôveru a verejnú kontrolu, no zároveň predĺžiť procesy a zvýšiť administratívnu záťaž úradu.',
+   a:{jurinova:'agree'}},
+
+  {t:'Verejná doprava',
+   q:'Má kraj ďalej rozširovať integrovanú dopravu a jednotný cestovný lístok aj vtedy, ak si to vyžiada vyššie dotácie?',
+   w:'Integrovaná doprava má zjednodušiť cestovanie medzi vlakmi, autobusmi a mestskou dopravou. Prínosom je väčší komfort pre cestujúcich a lepšie prepojenie regiónov, nevýhodou sú vyššie nároky na organizáciu a financovanie systému.',
    a:{jurinova:'agree'}},
 
   {t:'Participácia',
