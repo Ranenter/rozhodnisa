@@ -57,7 +57,8 @@
   .page-hero .tagline{color:var(--muted);font-size:.9rem;max-width:420px;margin:0 auto .4rem;line-height:1.65}
   .badge-date{display:inline-flex;align-items:center;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--sk-blue);border-radius:2px;padding:.35rem .9rem;font-size:.78rem;font-weight:600;color:var(--sk-blue);margin-top:.8rem}
 
-  .quiz-strip{background:var(--sk-blue);padding:.9rem 1.4rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;border-bottom:1px solid rgba(0,0,0,.08)}
+  .quiz-strip{background:var(--sk-blue);padding:.9rem 1.4rem;border-bottom:1px solid rgba(0,0,0,.08)}
+  .quiz-strip__inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
   .quiz-strip__text{color:rgba(255,255,255,.88);font-size:.85rem;flex:1;min-width:180px;line-height:1.5}
   .quiz-strip__text strong{color:#fff}
   .quiz-strip__btn{background:var(--sk-red);color:#fff;font-family:var(--font-display);font-size:.85rem;font-weight:700;padding:.5rem 1.1rem;border-radius:8px;text-decoration:none;white-space:nowrap;text-transform:uppercase;letter-spacing:.04em;flex-shrink:0;transition:background .15s}
@@ -94,8 +95,9 @@
   .cand-card__bio{padding:.1rem 1.1rem .85rem;font-size:.82rem;color:var(--muted);line-height:1.65;flex:1}
   .cand-card__bio.empty{font-style:italic;color:var(--border)}
   .cand-card__actions{padding:.8rem 1.1rem .9rem;border-top:1px solid var(--border);background:var(--surface);display:flex;flex-direction:column;gap:6px}
-  .cand-card__quiz{display:block;text-align:center;background:var(--sk-blue);color:#fff;font-family:var(--font-display);font-size:.8rem;font-weight:700;padding:.5rem 1rem;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:.04em;box-shadow:0 2px 8px rgba(30,78,157,.22);transition:background .15s}
-  .cand-card__quiz:hover{background:#163D82}
+  .city-cta{text-align:center;margin:2rem 0 .5rem}
+  .city-cta__btn,.city-cta__btn:link,.city-cta__btn:visited,.city-cta__btn:hover,.city-cta__btn:active{display:inline-block;background:var(--sk-red);color:#fff!important;font-family:var(--font-display);font-size:.9rem;font-weight:700;padding:.7rem 1.6rem;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:.04em;box-shadow:0 2px 10px rgba(195,17,43,.25);transition:background .15s}
+  .city-cta__btn:hover{background:#A00E22!important}
   .cand-card__web{display:block;text-align:center;font-size:.76rem;color:var(--sk-blue);text-decoration:none;opacity:.7;transition:opacity .12s;padding:.15rem 0}
   .cand-card__web:hover{opacity:1;text-decoration:underline;text-underline-offset:2px}
 
@@ -144,7 +146,8 @@
     .page-body{padding:0 .9rem 3rem}
     .tabs-inner{padding:0 .9rem}
     .cand-grid{grid-template-columns:1fr;justify-content:stretch}
-    .quiz-strip{flex-direction:column;gap:.7rem;padding:.9rem}
+    .quiz-strip{padding:.9rem}
+    .quiz-strip__inner{flex-direction:column;gap:.7rem}
     .footer-grid{grid-template-columns:1fr}
     .site-footer{padding:2rem .9rem 1.2rem}
     .footer-bottom{flex-direction:column;align-items:flex-start}
@@ -187,8 +190,10 @@
 </div>
 
 <div class="quiz-strip">
+<div class="quiz-strip__inner">
   <p class="quiz-strip__text"><strong>Nevieš, koho voliť?</strong> Odpovedz na 25 otázok a zisti, s ktorým kandidátom sa najviac zhoduješ. Anonymné, bez cookies, bez reklám.</p>
   <a href="/" class="quiz-strip__btn">Spustiť volebnú kalkulačku</a>
+</div>
 </div>
 
 <div class="tabs-outer">
@@ -383,7 +388,7 @@ const CANDIDATES = {
 };
 
 // ── Verified candidates ────────────────────────────────────────────────────
-const VERIFIED = new Set(['mochnacky','lorinc','geci','porvaz']);
+const VERIFIED = new Set(['mochnacky','lorinc','geci','porvaz','mudrak']);
 
 // ── Short bios ─────────────────────────────────────────────────────────────
 const BIOS = {
@@ -408,41 +413,41 @@ const BIOS = {
   varga:     'Presadzuje modernizáciu regionálnej dopravy, zdravotníctvo a efektívne využívanie európskych fondov. Má podporu širokej koalície od SaS a KDH po Magyar Fórum a OKS.',
   becik:     'Úradujúci predseda NSK. Obhajuje kontinuitu, stabilitu krajskej samosprávy a investície do cestnej infraštruktúry.',
   // PSK
-  golias:     'Stavebný majster z Torysej. Prioritizuje transparentné nakladanie s krajským rozpočtom a zriadenie župnej obchodnej spoločnosti na správu krajského majetku. Strana sa hlási k pro-ruskej orientácii.',
+  golias:     'Stavebný majster z Torysej. Prioritizuje transparentný krajský rozpočet a župnú spoločnosť na správu majetku. Strana sa hlási k pro-ruskej orientácii.',
   // BSK
   staruch:    'Zakladajúci člen SaS a bývalý poslanec Ružinova. Chce nadviazať na prácu Drobu a priniesť nový impulz v zdravotníctve, doprave a regionálnom rozvoji BSK.',
   raz:       'Minister dopravy a podnikateľ v gastronómii, hotelierstve a zdravotníctve. Prioritizuje dopravu, výstavbu nájomných bytov a posilnenie mestskej polície.',
   // Bratislava primátor
   vallo:     'Architekt a hudobník, primátor Bratislavy od roku 2018. Presadzuje rozvoj verejnej dopravy, cyklodopravy a obnovu verejných priestranstiev.',
   cahoj:     'Starostka Karlovej Vsi, kandiduje ako nezávislá. Zameriava sa na transparentnosť mestského hospodárenia a dostupnosť bývania.',
-  winkl:     'Podnikateľ a aktivista, líder Strany Dunaj. Presadzuje ochranu Dunaja a trvalo udržateľný rozvoj mesta.',
-  hered:     'Nezávislý kandidát s dlhoročnou skúsenosťou v samospráve. Sústreďuje sa na bezpečnosť a rozvoj miestnych komunít.',
+  winkl:     'Mestský a krajský poslanec, spoluzakladateľ aplikácie HOPIN. Presadzuje manažérske riadenie mesta, rozhodovanie na základe dát a finančnú disciplínu.',
+  hered:     'Dlhoročný komunálny politik so skúsenosťou v samospráve. Sústreďuje sa na bezpečnosť a rozvoj miestnych komunít.',
   geci:      'Dlhodobo sa zaujíma o rozvoj miest, infraštruktúru a verejné projekty. Presadzuje systematické, efektívne riadenie mesta s dôrazom na výsledok.',
   subova:    'Predsedníčka Pirátskej strany a dlhoročná digitálna aktivistka. Presadzuje otvorenú správu mesta, digitalizáciu úradov a participatívny rozpočet.',
   // Bratislava BSK
   droba:     'Predseda BSK od roku 2017, líder koalície stredopravých strán. Zameriava sa na rozvoj dopravnej infraštruktúry a zdravotnej starostlivosti v kraji.',
-  krajco:    'Presadzuje väčšiu transparentnosť krajského úradu a priamu podporu miestnych samospráv v BSK.',
+  krajco:    'Líderka strany Právo na pravdu. Presadzuje transparentnosť krajského úradu, podporu samospráv a zameriava sa na rodiny, seniorov a ochranu prírody.',
   // Košice primátor
   polac:     'Úradujúci primátor Košíc od roku 2018. Presadzuje rozvoj kultúrneho priemyslu a modernizáciu mestskej infraštruktúry.',
-  mudrak:    'Riaditeľ Business Košice a hlavný vyjednávač príchodu Volva do regiónu. Presadzuje spoluprácu mesta s krajom, modernú dopravu, dostupné bývanie a funkčné verejné priestory.',
-  lorinc:    'Líder Košickej strany, podnikateľ a občiansky aktivista. Presadzuje radikálnu transparentnosť samosprávy a podporu malých podnikov.',
+  mudrak:    'Riaditeľ Business Košice a hlavný vyjednávač príchodu Volva do regiónu. Presadzuje spoluprácu mesta s krajom, modernú dopravu a dostupné bývanie.',
+  lorinc:    'Starosta mestskej časti KVP a líder Košickej strany. Presadzuje transparentnosť samosprávy a podporu malých podnikov.',
   // Košice KSK
-  trnka:     'Úradujúci predseda KSK, v súčasnosti obžalovaný. Obhajuje mandát napriek pretrvávajúcemu trestnému stíhaniu.',
-  simko:     'Poslanec parlamentu a od mája 2026 aj splnomocnenec vlády pre rozvoj východného Slovenska, čo je funkcia, ktorá sa prekrýva s tým, o čo sa uchádza ako predseda KSK. Zameriava sa na cestnú infraštruktúru a dostupnosť zdravotnej starostlivosti.',
-  porvaz:    'Presadzuje rozvoj zdravotníctva, stredného školstva a cestnej infraštruktúry v KSK. Má overené odpovede z dotazníka.',
-  kodraz:    'Podnikateľ, autor a motivátor. Opakovane kandiduje bez straníckeho zázemia. Prioritizuje seniorov, zastavenie odlivu mladých a riešenie situácie v rómskych osadách.',
+  trnka:     'Úradujúci predseda KSK od roku 2017, v súčasnosti obžalovaný. Obhajuje mandát napriek trestnému stíhaniu, stavia na oprave ciest a regionálnych investíciách.',
+  simko:     'Poslanec NR SR a splnomocnenec vlády pre rozvoj východného Slovenska, čo je funkcia, ktorá sa prekrýva s úradom, o ktorý sa uchádza. Zameriava sa na cesty a zdravotníctvo.',
+  porvaz:    'Právnik a podnikateľ z technologického prostredia. Presadzuje ekonomický rozvoj, integrovanú dopravu a užšie prepojenie Košíc s Prešovom.',
+  kodraz:    'Podnikateľ, autor a motivátor. Prioritizuje seniorov, zastavenie odlivu mladých a riešenie situácie v rómskych osadách.',
   bereny:    'Poslanec NR SR a dlhoročný politik reprezentujúci záujmy maďarskej menšiny. Usiluje sa o predsedu TTSK s dôrazom na cezhraničnú spoluprácu a južné okresy kraja.',
   viskupic:  'Predseda TTSK od roku 2017, kandiduje na tretie funkčné obdobie. Za deväť rokov znížil zadlženie kraja z 47 na 25 percent, rozvinul eurofondové projekty v školstve, sociálnych službách a cestnej infraštruktúre.',
   // Prešov primátor
   olha:      'Úradujúci primátor Prešova. Presadzuje rozvoj kultúry, obnovu historického centra a spoluprácu s demokratickými stranami.',
   mochnacky: 'Dlhoročný poslanec mestského zastupiteľstva Prešova. Presadzuje konzervatívne hodnoty, sociálnu politiku a medziobecnú spoluprácu.',
-  hagyari:   'Advokát a dvojnásobný primátor Prešova (2006-2014), opakovane kandiduje. Chce vrátiť mestu každodennú komunikáciu s obyvateľmi, európske štandardy a poriadok v parkovacej politike.',
+  hagyari:   'Advokát a dvojnásobný primátor Prešova (2006-2014). Chce vrátiť mestu každodennú komunikáciu s obyvateľmi a poriadok v parkovacej politike.',
   estocak:   'Právnik a nezávislý poslanec MsZ za Sekčov, zakladateľ hnutia Prešovské hlavičky. Počas dvoch rokov chodí po meste výhradne peši. Presadzuje transparentnosť, protikorupčné opatrenia a efektívnejšie mestské zákazky.',
   // Prešov PSK
-  majersky:  'Úradujúci predseda PSK a predseda KDH. Zameriava sa na cestnú infraštruktúru a stredné školstvo v kraji.',
-  mazurek:   'Odsúdený a vylúčený poslanec NR SR, aktuálne poslanec Európskeho parlamentu. Republika zastáva pro-ruskú zahranično-politickú líniu, Mazurek presadzuje ochranu tradičných hodnôt a kultúrnej identity.',
-  geci2:     'Nezávislý kandidát, presadzuje reštart regionálnej politiky v PSK.',
-  migal:     'Bývalý televízny moderátor a minister MIRRI, ktorého rezort čelí obvineniam z netransparentných zákaziek. Chce zastaviť vyľudňovanie PSK cez investorov, dostupné bývanie a opravu ciest.'
+  majersky:  'Úradujúci predseda PSK, predseda KDH a bývalý primátor Levoče. Zameriava sa na cestnú infraštruktúru a stredné školstvo v kraji.',
+  mazurek:   'Europoslanec, o miesto poslanca NR SR prišiel po odsúdení za protirómske výroky. Známy aj protižidovskými vyjadreniami a kritikou EÚ. Republika zastáva pro-ruskú zahraničnú líniu.',
+  geci2:     'Finančný poradca a podnikateľ. Presadzuje dopravné prepojenie regiónov, zastavenie odlivu mladých a transparentné hospodárenie kraja.',
+  migal:     'Bývalý televízny moderátor a súčasný minister MIRRI. Stavia na trojuholníku práca, bývanie a infraštruktúra; jeho ministerstvo pritom čelí obvineniam z netransparentných zákaziek.'
 };
 
 const ROLE_LABELS = {
@@ -481,8 +486,7 @@ function buildCard(c, city, type){
     + '</div>'
     + '<p class="cand-card__bio'+(bio?'':' empty')+'">'+(bio || 'Bio bude doplnené.')+'</p>'
     + '<div class="cand-card__actions">'
-    +   '<a href="/?city='+city+'&type='+type+'" class="cand-card__quiz">Porovnať sa s kandidátom</a>'
-    +   (c.url ? '<a href="'+c.url+'" class="cand-card__web" target="_blank" rel="noopener">Web kandidáta</a>' : '')
+    +   (c.url ? '<a href="'+c.url+'" class="cand-card__web" target="_blank" rel="noopener">Stránka kandidáta</a>' : '<span class="cand-card__web" style="opacity:.4">Stránka zatiaľ nie je známa</span>')
     + '</div>'
     + '</article>';
 }
@@ -516,6 +520,11 @@ function buildSection(cityId){
 
   if(cityId === 'trnava') {
     html += '<p style="font-size:.78rem;color:var(--muted);margin-top:10px;font-style:italic">Ďalší kandidáti pre TTSK zatiaľ nie sú známi. Uzávierka registrácie kandidátov je v auguste 2026.</p>';
+  }
+
+  const CITY_LOCATIVE = {bratislava:'v Bratislave', kosice:'v Košiciach', presov:'v Prešove', nitra:'v Nitre', zilina:'v Žiline', bb:'v Banskej Bystrici', trnava:'v Trnave'};
+  if(CITY_LOCATIVE[cityId]){
+    html += '<div class="city-cta"><a href="/" class="city-cta__btn">Porovnaj sa s kandidátmi '+CITY_LOCATIVE[cityId]+'</a></div>';
   }
   el.innerHTML = html;
 

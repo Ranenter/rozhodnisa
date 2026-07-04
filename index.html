@@ -1832,7 +1832,7 @@ const VAA = (function(){
     results.forEach((r,idx)=>{
       const card = document.createElement('div');
       card.className = 'r-card' + (idx===0?' top':'');
-      const urlLink = r.url ? `<a href="${r.url}" target="_blank" rel="noopener" class="cand-url" title="Web kandidáta">${r.url.replace(/^https?:\/\//,'').replace(/\/$/,'')}</a>` : '';
+      const urlLink = r.url ? `<a href="${r.url}" target="_blank" rel="noopener" class="cand-url" title="Stránka kandidáta">${r.url.replace(/^https?:\/\//,'').replace(/\/$/,'')}</a>` : '';
       // mismatch warning: priority-only score ≥15pp below overall
       let warning = '';
       if(priorities.length){
