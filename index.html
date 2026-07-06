@@ -1146,7 +1146,7 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
     <div class="badge-vote">Nenechaj iných rozhodovať o tvojom meste a kraji. Choď voliť.</div>
     <div class="hero-crest-bg"><svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#0B4EA2"/></svg></div>
     <p class="tagline">Odpovedz na 25 otázok o tvojom meste alebo kraji a zisti, ktorý kandidát/ka myslí podobne ako ty.</p>
-    <p class="hero-cities">Bratislava · Košice · Prešov · Žilina · Banská Bystrica · Nitra · Trnava</p>
+    <p class="hero-cities">Bratislava · Košice · Prešov · Žilina · Banská Bystrica · Nitra · Trnava · Poprad · Michalovce</p>
   </div>
 
   <div class="stats-strip">
@@ -1225,6 +1225,14 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
         <button class="city-card" style="--c1:#8B0000;--c2:#C0C0C0" onclick="VAA.pickLocation('nitra',this)">
           <div class="card-crest"></div>
           <span class="cn">Nitra</span><span class="cs">Mesto pod Zoborom</span><span class="cpop">67 000 obyvateľov</span>
+        </button>
+        <button class="city-card" style="--c1:#B8860B;--c2:#003366" onclick="VAA.pickLocation('poprad',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Poprad</span><span class="cs">Brána do Tatier</span><span class="cpop">50 000 obyvateľov</span>
+        </button>
+        <button class="city-card" style="--c1:#0F52BA;--c2:#F5F5F5" onclick="VAA.pickLocation('michalovce',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Michalovce</span><span class="cs">Srdce Zemplína</span><span class="cpop">36 000 obyvateľov</span>
         </button>
         <button class="city-card locked" tabindex="-1" aria-disabled="true">
           <span class="cn">Trnava</span><span class="cs">Malý Rím - čoskoro</span><span class="cpop">66 000 obyvateľov</span>
@@ -1530,6 +1538,8 @@ window.CRESTS = {
   zilina_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_%C5%BDilina.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"zilina_primator\" loading=\"lazy\">`,
   bystrica_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Bansk%C3%A1_Bystrica.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"bystrica_primator\" loading=\"lazy\">`,
   nitra_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Nitra.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"nitra_primator\" loading=\"lazy\">`,
+  michalovce_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Michalovce.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"michalovce_primator\" loading=\"lazy\">`,
+  poprad_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_arms_of_Poprad.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"poprad_primator\" loading=\"lazy\">`,
   trnava_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Trnava.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"trnava_primator\" loading=\"lazy\">`,
   trencin_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Tren%C4%8D%C3%ADn.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"trencin_primator\" loading=\"lazy\">`,
   bratislava_vuc:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Bratislava_Region.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"bratislava_vuc\" loading=\"lazy\">`,
@@ -1598,6 +1608,14 @@ window.CITY_FINANCE = {
   nitra_vuc: {
     rozpocet: 302, rozNa: 448, dlh: 6,
     zdroj: 'Schválený rozpočet NSK 2025'
+  },
+  michalovce_primator: {
+    rozpocet: 47, rozNa: 1300, dlh: 20,
+    zdroj: 'Rozpočet mesta Michalovce 2025'
+  },
+  poprad_primator: {
+    rozpocet: 76, rozNa: 1520, dlh: 8,
+    zdroj: 'Rozpočet mesta Poprad 2025'
   },
 };
 
@@ -1929,22 +1947,24 @@ const VAA = (function(){
 
   // Turnout widget
   const TURNOUT = {
-    bratislava_primator: {pct:36.9,voters:150477,eligible:408000,label:'Bratislava \u2013 prim\u00e1tor 2022'},
-    bratislava_vuc:      {pct:38.6,voters:157000,eligible:407000,label:'BSK \u2013 \u017eupan 2022'},
-    kosice_primator:     {pct:30.9,voters:55900, eligible:181000,label:'Ko\u0161ice \u2013 prim\u00e1tor 2022'},
-    kosice_vuc:          {pct:39.7,voters:215000,eligible:541000,label:'KSK \u2013 \u017eupan 2022'},
-    presov_primator:     {pct:42.7,voters:29300, eligible:68600, label:'Pre\u0161ov \u2013 prim\u00e1tor 2022'},
-    presov_vuc:          {pct:47.5,voters:265000,eligible:558000,label:'PSK \u2013 \u017eupan 2022'},
-    zilina_primator:     {pct:46.2,voters:25300, eligible:54800, label:'\u017dilina \u2013 prim\u00e1tor 2022'},
-    zilina_vuc:          {pct:48.7,voters:260000,eligible:534000,label:'\u017dSK \u2013 \u017eupan 2022'},
-    bystrica_primator:   {pct:44.8,voters:24400, eligible:54500, label:'B.Bystrica \u2013 prim\u00e1tor 2022'},
-    bystrica_vuc:        {pct:45.1,voters:222000,eligible:492000,label:'BBSK \u2013 \u017eupan 2022'},
-    nitra_primator:      {pct:44.3,voters:18500, eligible:41800, label:'Nitra \u2013 prim\u00e1tor 2022'},
-    nitra_vuc:           {pct:43.2,voters:215000,eligible:498000,label:'NSK \u2013 \u017eupan 2022'},
-    trnava_primator:     {pct:47.1,voters:21600, eligible:45900, label:'Trnava \u2013 prim\u00e1tor 2022'},
-    trnava_vuc:          {pct:44.8,voters:195000,eligible:435000,label:'TTSK \u2013 \u017eupan 2022'},
+    bratislava_primator: {pct:36.9,voters:150477,eligible:408000,label:'Bratislava \u2013 prim\u00e1tor 2022', winnerPct:22.2},
+    bratislava_vuc:      {pct:38.6,voters:157000,eligible:407000,label:'BSK \u2013 \u017eupan 2022', winnerPct:24.5},
+    kosice_primator:     {pct:30.9,voters:55900, eligible:181000,label:'Ko\u0161ice \u2013 prim\u00e1tor 2022', winnerPct:11.4},
+    kosice_vuc:          {pct:39.7,voters:215000,eligible:541000,label:'KSK \u2013 \u017eupan 2022', winnerPct:20.4},
+    presov_primator:     {pct:42.7,voters:29300, eligible:68600, label:'Pre\u0161ov \u2013 prim\u00e1tor 2022', winnerPct:15.9},
+    presov_vuc:          {pct:47.5,voters:265000,eligible:558000,label:'PSK \u2013 \u017eupan 2022', winnerPct:19.9},
+    zilina_primator:     {pct:46.2,voters:25300, eligible:54800, label:'\u017dilina \u2013 prim\u00e1tor 2022', winnerPct:21.0},
+    zilina_vuc:          {pct:48.7,voters:260000,eligible:534000,label:'\u017dSK \u2013 \u017eupan 2022', winnerPct:15.6},
+    bystrica_primator:   {pct:44.8,voters:24400, eligible:54500, label:'B.Bystrica \u2013 prim\u00e1tor 2022', winnerPct:27.8},
+    bystrica_vuc:        {pct:45.1,voters:222000,eligible:492000,label:'BBSK \u2013 \u017eupan 2022', winnerPct:21.4},
+    nitra_primator:      {pct:44.3,voters:18500, eligible:41800, label:'Nitra \u2013 prim\u00e1tor 2022', winnerPct:12.3},
+    nitra_vuc:           {pct:43.2,voters:215000,eligible:498000,label:'NSK \u2013 \u017eupan 2022', winnerPct:11.9},
+    trnava_primator:     {pct:47.1,voters:21600, eligible:45900, label:'Trnava \u2013 prim\u00e1tor 2022', winnerPct:22.0},
+    trnava_vuc:          {pct:44.8,voters:195000,eligible:435000,label:'TTSK \u2013 \u017eupan 2022', winnerPct:16.5},
     trencin_primator:    {pct:46.8,voters:16400, eligible:35000, label:'Tren\u010d\u00edn \u2013 prim\u00e1tor 2022'},
     trencin_vuc:         {pct:45.6,voters:190000,eligible:417000,label:'TSK \u2013 \u017eupan 2022'},
+      michalovce_primator: {pct:38.2,voters:11655,eligible:30500,label:'Michalovce \u2013 prim\u00e1tor 2022', winnerPct:16.6},
+    poprad_primator:     {pct:38.1,voters:15724,eligible:41250,label:'Poprad \u2013 prim\u00e1tor 2022', winnerPct:23.3},
   };
 
   function _financeSection(city, type){
@@ -1963,7 +1983,9 @@ const VAA = (function(){
     if(!d){el.innerHTML='';return;}
     const pct = d.pct;
     const stayedPct = +(100 - pct).toFixed(1);
-    const winnerPct = Math.round(pct / 2);   // approx
+    const winnerPct = (typeof d.winnerPct === 'number') ? d.winnerPct : Math.round(pct / 2);
+    const isEstimate = typeof d.winnerPct !== 'number';
+    const wprefix = isEstimate ? '~' : '';
     const otherPct  = +(pct - winnerPct).toFixed(1);
     const eligible  = d.eligible;
     const voters    = d.voters;
@@ -1997,7 +2019,7 @@ const VAA = (function(){
       +   '<div class="tu-leg"><span class="tu-leg__dot" style="background:#4A6FA5"></span><span class="tu-leg__lbl">Ostatn\u00ed voli\u010di</span><div class="tu-leg__num">'+otherPct+'\u00a0%</div><div class="tu-leg__sub">'+fmt(otherN)+' \u013eud\u00ed</div></div>'
       +   '<div class="tu-leg"><span class="tu-leg__dot" style="background:#B4B8C0"></span><span class="tu-leg__lbl">Zostali doma</span><div class="tu-leg__num">'+stayedPct+'\u00a0%</div><div class="tu-leg__sub">'+fmt(stayedN)+' \u013eud\u00ed</div></div>'
       + '</div>'
-      + '<div class="tu-punch">V\u00ed\u0165az z\u00edskal mand\u00e1t od pribli\u017ene <strong>'+winnerPct+'\u00a0%</strong> opr\u00e1vnen\u00fdch voli\u010dov. O smerovan\u00ed mesta rozhoduje ov\u013ea men\u0161ia skupina, ne\u017e sa zd\u00e1.</div>'
+      + '<div class="tu-punch">V\u00ed\u0165az z\u00edskal mand\u00e1t od pribli\u017ene <strong>'+wprefix+winnerPct+'\u00a0%</strong> opr\u00e1vnen\u00fdch voli\u010dov. O smerovan\u00ed mesta rozhoduje ove\u013ea men\u0161ia skupina, ne\u017e sa zd\u00e1.</div>'
       + '<div class="tu-source">Zdroj: \u0160tatistick\u00fd \u00farad SR, volby.sme.sk \u00b7 Vo\u013eby 29.\u00a010.\u00a02022</div>'
       + _financeSection(c, t)
       + '</div>';
