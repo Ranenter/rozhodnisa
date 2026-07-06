@@ -801,6 +801,29 @@ body{
 #turnoutWidget{max-width:640px;margin:0 auto;padding:0 1.2rem}
 .turnout-widget-inner{background:var(--surface);border:none;border-top:3px solid var(--sk-red);border-radius:14px;box-shadow:0 1px 8px rgba(0,0,0,.06),0 0 0 1px rgba(0,0,0,.05);padding:1.2rem 1.3rem;margin:1.2rem 0}
 
+/* ── Turnout electorate bar ── */
+.tu-header{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:1.1rem}
+.tu-caption{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--muted);margin-bottom:.5rem}
+.tu-bar{display:flex;width:100%;height:44px;border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.06);background:#fff;margin-bottom:.75rem}
+.tu-seg{display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;color:#fff;line-height:1;min-width:2%;transition:filter .15s}
+.tu-seg--winner{background:var(--sk-red)}
+.tu-seg--other{background:#4A6FA5}
+.tu-seg--stayed{background:#B4B8C0;color:var(--text)}
+.tu-legend{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.55rem;margin-bottom:.9rem}
+.tu-leg{padding:.5rem .6rem;background:#fff;border-radius:8px;box-shadow:0 0 0 1px rgba(0,0,0,.05)}
+.tu-leg__dot{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:middle;margin-right:.4rem}
+.tu-leg__lbl{font-size:.7rem;color:var(--muted);font-weight:600;line-height:1.35;display:inline-block;vertical-align:middle}
+.tu-leg__num{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text);margin-top:.3rem;line-height:1.1}
+.tu-leg__sub{font-size:.66rem;color:var(--muted);margin-top:.15rem}
+.tu-punch{font-size:.86rem;color:var(--text);line-height:1.55;padding:.75rem .9rem;border-left:3px solid var(--sk-red);border-radius:0 10px 10px 0;background:#fff;margin-bottom:.9rem}
+.tu-punch strong{color:var(--sk-red)}
+.tu-source{font-size:.67rem;color:var(--muted);opacity:.7;margin-top:.6rem;line-height:1.5}
+@media(max-width:520px){
+  .tu-legend{grid-template-columns:1fr;gap:.35rem}
+  .tu-seg{font-size:.85rem}
+  .tu-bar{height:38px}
+}
+
 /* ── Stats / other ── */
 .stats-strip{display:flex;align-items:center;justify-content:center;gap:0;margin:0 auto 1.4rem;max-width:360px;background:#fff;border:none;border-radius:99px;overflow:hidden;box-shadow:0 2px 14px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.06)}
 
@@ -1066,7 +1089,7 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
 
 
 /* ── Feedback widget ── */
-.feedback-widget{margin:2rem 0 1.5rem;padding:1.4rem 1rem;background:var(--surface);border-radius:12px;text-align:center}
+.feedback-widget{margin:2rem 0 1.5rem;padding:.5rem 0;text-align:center}
 .fb-q{font-family:var(--font-display);font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:1rem}
 .fb-btns{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
 .fb-btn{background:#fff;border:1.5px solid transparent;cursor:pointer;padding:.6rem 1.4rem;border-radius:99px;font-family:var(--font-display);font-size:.9rem;font-weight:700;letter-spacing:.02em;transition:transform .12s,box-shadow .12s,background .15s;min-width:96px;min-height:44px;-webkit-tap-highlight-color:transparent}
@@ -1938,28 +1961,46 @@ const VAA = (function(){
     if(!el)return;
     const d=TURNOUT[c+'_'+t];
     if(!d){el.innerHTML='';return;}
-    const pct=d.pct;
-    const stayed=(100-pct).toFixed(1);
-    const votersF=d.voters.toLocaleString('sk-SK');
-    const eligF=d.eligible.toLocaleString('sk-SK');
-    const winnerShare=Math.round(pct/2);
-    el.innerHTML='<div class="turnout-widget-inner">'
-      +'<div style="font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.9rem">Volebn\u00e1 \u00fa\u010das\u0165 \u2014 '+d.label+'</div>'
-      +'<div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">'
-      +'<span style="font-family:\'Barlow Condensed\',sans-serif;font-size:3rem;font-weight:900;color:var(--sk-red);line-height:1">'+pct+'%</span>'
-      +'<span style="font-family:\'Barlow Condensed\',sans-serif;font-size:1.1rem;color:var(--sk-red)">voli\u010dov</span></div>'
-      +'<div style="font-size:.82rem;color:var(--muted);margin-bottom:1.1rem">pri\u0161lo voli\u0165 v roku 2022</div>'
-      +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1rem">'
-      +'<div style="background:var(--surface);border-radius:10px;padding:.8rem 1rem;box-shadow:0 0 0 1px rgba(0,0,0,.05)">'
-      +'<div style="font-family:\'Barlow Condensed\',sans-serif;font-size:1.25rem;font-weight:700;color:var(--green)">'+votersF+'</div>'
-      +'<div style="font-size:.72rem;color:var(--muted);margin-top:3px">\u013eud\u00ed volilo</div></div>'
-      +'<div style="background:var(--surface);border-radius:10px;padding:.8rem 1rem;box-shadow:0 0 0 1px rgba(0,0,0,.05)">'
-      +'<div style="font-family:\'Barlow Condensed\',sans-serif;font-size:1.25rem;font-weight:700;color:var(--sk-red)">'+stayed+'\u00a0%</div>'
-      +'<div style="font-size:.72rem;color:var(--muted);margin-top:3px">zostalo doma</div></div></div>'
-      +'<div style="font-size:.83rem;color:var(--muted);line-height:1.7;padding:.85rem 1rem;border-left:3px solid var(--green);border-radius:0 10px 10px 0;background:var(--surface);font-style:italic">'
-      +'V\u00edt\u0159az bol zvolen\u00fd hlasmi len <strong style="color:var(--text);font-style:normal">~'+winnerShare+'\u00a0%</strong> v\u0161etk\u00fdch opr\u00e1vnen\u00fdch voli\u010dov. Ka\u017ed\u00fd hlas m\u00e1 v\u00e4\u010d\u0161iu v\u00e1hu, ako sa zd\u00e1.</div>'
-      +'<div style="font-size:.67rem;color:var(--muted);opacity:.7;margin-top:.8rem;line-height:1.5">'
-      +'Zdroj: \u0160tatistick\u00fd \u00farad SR, volby.sme.sk \u00b7 Opr\u00e1vnen\u00ed voli\u010di: '+eligF+' \u00b7 Vo\u013eby 29.\u00a010.\u00a02022</div>'+_financeSection(c,t)+'</div>';
+    const pct = d.pct;
+    const stayedPct = +(100 - pct).toFixed(1);
+    const winnerPct = Math.round(pct / 2);   // approx
+    const otherPct  = +(pct - winnerPct).toFixed(1);
+    const eligible  = d.eligible;
+    const voters    = d.voters;
+    const stayedN   = eligible - voters;
+    const winnerN   = Math.round(eligible * winnerPct / 100);
+    const otherN    = voters - winnerN;
+    const fmt = n => n.toLocaleString('sk-SK');
+
+    // Ensure a minimum visible width so small segments don't disappear
+    const minShown = 6;
+    const wWinner = Math.max(winnerPct, minShown);
+    const wStayed = Math.max(stayedPct, minShown);
+    const wOther  = Math.max(100 - wWinner - wStayed, minShown);
+    // Normalize so total = 100
+    const wTotal = wWinner + wOther + wStayed;
+    const w1 = (wWinner / wTotal * 100).toFixed(2);
+    const w2 = (wOther  / wTotal * 100).toFixed(2);
+    const w3 = (wStayed / wTotal * 100).toFixed(2);
+
+    el.innerHTML =
+      '<div class="turnout-widget-inner">'
+      + '<div class="tu-header">Volebn\u00e1 \u00fa\u010das\u0165 \u2014 ' + d.label + '</div>'
+      + '<div class="tu-caption">Z ' + fmt(eligible) + ' opr\u00e1vnen\u00fdch voli\u010dov v tvojom meste</div>'
+      + '<div class="tu-bar" role="img" aria-label="Rozloženie voličov: '+winnerPct+' % zvolilo víťaza, '+otherPct+' % ostatných voličov, '+stayedPct+' % zostalo doma">'
+      +   '<div class="tu-seg tu-seg--winner" style="width:'+w1+'%">~'+winnerPct+'\u00a0%</div>'
+      +   '<div class="tu-seg tu-seg--other"  style="width:'+w2+'%">'+otherPct+'\u00a0%</div>'
+      +   '<div class="tu-seg tu-seg--stayed" style="width:'+w3+'%">'+stayedPct+'\u00a0%</div>'
+      + '</div>'
+      + '<div class="tu-legend">'
+      +   '<div class="tu-leg"><span class="tu-leg__dot" style="background:var(--sk-red)"></span><span class="tu-leg__lbl">Zvolili v\u00ed\u0165aza</span><div class="tu-leg__num">~'+winnerPct+'\u00a0%</div><div class="tu-leg__sub">pribli\u017ene '+fmt(winnerN)+' \u013eud\u00ed</div></div>'
+      +   '<div class="tu-leg"><span class="tu-leg__dot" style="background:#4A6FA5"></span><span class="tu-leg__lbl">Ostatn\u00ed voli\u010di</span><div class="tu-leg__num">'+otherPct+'\u00a0%</div><div class="tu-leg__sub">'+fmt(otherN)+' \u013eud\u00ed</div></div>'
+      +   '<div class="tu-leg"><span class="tu-leg__dot" style="background:#B4B8C0"></span><span class="tu-leg__lbl">Zostali doma</span><div class="tu-leg__num">'+stayedPct+'\u00a0%</div><div class="tu-leg__sub">'+fmt(stayedN)+' \u013eud\u00ed</div></div>'
+      + '</div>'
+      + '<div class="tu-punch">V\u00ed\u0165az z\u00edskal mand\u00e1t od pribli\u017ene <strong>'+winnerPct+'\u00a0%</strong> opr\u00e1vnen\u00fdch voli\u010dov. O smerovan\u00ed mesta rozhoduje ov\u013ea men\u0161ia skupina, ne\u017e sa zd\u00e1.</div>'
+      + '<div class="tu-source">Zdroj: \u0160tatistick\u00fd \u00farad SR, volby.sme.sk \u00b7 Vo\u013eby 29.\u00a010.\u00a02022</div>'
+      + _financeSection(c, t)
+      + '</div>';
   }
 
   // \\u2500\\u2500 Social \\u2500\\u2500
