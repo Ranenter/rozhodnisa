@@ -17,8 +17,8 @@ window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 window.VAA_DATA.questions.michalovce_primator = [
   {
     t:'Doprava',
-    q:'Má primátor tlačiť na vládu, aby čo najskôr postavila diaľnicu D1 na Zemplín, aj keď jej výstavba nie je v rukách mesta?',
-    w:'Úsek diaľnice D1 smerom na Michalovce a k ukrajinskej hranici má asi 72 km. Záväzný termín výstavby neexistuje a hovorí sa o roku 2030, no ani to nie je isté. Bez diaľnice zostáva región dopravne izolovaný a firmy radšej mierite inam. Primátor túto cestu nepostaví sám, ale môže robiť verejný tlak na vládu.',
+    q:'Má primátor tlačiť na vládu, aby čo najskôr postavila diaľnicu D1 na Zemplín, aj keď jej výstavba nie je priamo v rukách mesta?',
+    w:'Úsek diaľnice D1 smerom na Michalovce a k ukrajinskej hranici má asi 72 km. Záväzný termín výstavby neexistuje a hovorí sa o roku 2030, no ani to nie je isté. Bez diaľnice zostáva región dopravne izolovaný a firmy radšej mieria inam. Primátor túto cestu nepostaví sám, ale môže robiť verejný tlak na vládu.',
     a:{dufinec:'agree', sibal:'agree', vidovenec:'agree'}
   },
   {
@@ -29,7 +29,7 @@ window.VAA_DATA.questions.michalovce_primator = [
   },
   {
     t:'Bývanie',
-    q:'Má mesto postaviť lacné nájomné byty pre mladých lekárov, učiteľov a sestry, aj keby sa muselo zadlžiť?',
+    q:'Má mesto postaviť nájomné byty pre mladých lekárov, učiteľov a sestry, aj keby sa muselo zadlžiť?',
     w:'Za 20 rokov odišlo z Michaloviec vyše 4 500 ľudí. Jedným z dôvodov je bývanie: prenájom dvojizbového bytu stojí v meste 480 až 900 eur mesačne, kým mzdy na východe Slovenska sú výrazne nižšie ako priemer SR. Mesto dnes nemá žiadny systém zvýhodnených bytov pre ľudí v kľúčových povolaniach.',
     a:{dufinec:'agree', sibal:'agree', vidovenec:'agree'}
   },
@@ -41,7 +41,7 @@ window.VAA_DATA.questions.michalovce_primator = [
   },
   {
     t:'Hospodárstvo',
-    q:'Má sa primátor sústrediť predovšetkým na pomoc existujúcim firmám a živnostníkom v meste, nie na lákanie nových investorov zvonku?',
+    q:'Má sa primátor sústrediť predovšetkým na pomoc existujúcim firmám a živnostníkom v meste, nie na lákanie nových investorov?',
     w:'Mesto môže míňať čas a peniaze dvoma smermi: zlepšovať podmienky pre firmy a živnostníkov, ktoré tu už sú a platia dane, alebo aktívne lákať väčších investorov zvonku s prísľubmi pozemkov a infraštruktúry. Len málokedy sa dá robiť oboje naraz rovnako dobre.',
     a:{dufinec:'disagree', sibal:'agree', vidovenec:'agree'}
   },
@@ -53,19 +53,19 @@ window.VAA_DATA.questions.michalovce_primator = [
   },
   {
     t:'Doprava',
-    q:'Má primátor dať opravu ciest a chodníkov pred väčšími investičnými projektmi, aj keby to rozvoj mesta spomalilo?',
+    q:'Má primátor dať opravu ciest a chodníkov pred väčšími investičnými projektmi, aj keby to spomalilo rozvoj mesta ?',
     w:'Stav chodníkov a ciest patrí dlhodobo medzi najčastejšie sťažnosti ľudí v Michalovciach. Mestský rozpočet nestačí na oboje naraz, preto musí vedenie mesta vyberať.',
     a:{dufinec:'neutral', sibal:'agree', vidovenec:'neutral'}
   },
   {
     t:'Transparentnosť',
-    q:'Má mesto vyberať stavebné firmy aj podľa ich kvality a referencií, nielen podľa najnižšej ceny?',
+    q:'Má mesto vyberať firmy aj podľa ich kvality a referencií, nielen podľa najnižšej ceny?',
     w:'Zákon umožňuje mestám vyberať dodávateľa podľa najnižšej ceny alebo podľa kombinácie ceny, kvality a referencií. Väčšina miest volí najnižšiu cenu, lebo je to najjednoduchšie. Výsledkom bývajú meškajúce opravy a nekvalitné práce, za ktoré mesto zaplatí viac.',
     a:{dufinec:'neutral', sibal:'agree', vidovenec:'agree'}
   },
   {
     t:'Životné prostredie',
-    q:'Má primátor urobiť všetko preto, aby sa pri Michalovciach nepostavilo 45 obrovských veterných turbín, vrátane zmeny územného plánu?',
+    q:'Má primátor urobiť všetko preto, aby sa pri Michalovciach nepostavilo 45 obrovských veterných turbín?',
     w:'Štátna firma JESS plánuje v okrese Michalovce postaviť až 45 veterných turbín vysokých do 266 metrov. Viac ako 90 percent ľudí v mestskej ankete je proti. Zastupiteľstvo vyjadrilo nesúhlas. Primátor nemôže výstavbu priamo zakázať, ale územný plán mesta môže rozhodovanie výrazne ovplyvniť.',
     a:{dufinec:'agree', sibal:'agree', vidovenec:'agree'}
   },
