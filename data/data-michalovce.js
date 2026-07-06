@@ -137,7 +137,7 @@ window.VAA_DATA.questions.michalovce_primator = [
   },
   {
     t:'Doprava',
-    q:'Má primátor stavať cyklotrasy fyzicky oddelené od áut aj na sídliskách, aj keby to znamenalo menej parkovacích miest?',
+    q:'Má primátor stavať cyklotrasy aj na sídliskách, aj keby to znamenalo menej parkovacích miest?',
     w:'Všetci kandidáti sľubujú cyklotrasy, no kľúčový rozdiel je v tom, či pôjde o fyzicky oddelenú trasu bezpečnú aj pre deti a seniorov, alebo len o namaľovanú čiaru na vozovke. Fyzicky oddelené trasy potrebujú odobrať priestor autám, čo je nepopulárne, ale v praxi výrazne zvyšuje počet cyklistov.',
     a:{dufinec:'neutral', sibal:'agree', vidovenec:'agree'}
   },
@@ -161,7 +161,7 @@ window.VAA_DATA.questions.michalovce_primator = [
   },
   {
     t:'Hodnoty',
-    q:'Má primátor aktívne nadväzovať spoluprácu s ukrajinskými mestami ako napríklad Užhorod, aj keď výsledky sa prejavia až o niekoľko rokov?',
+    q:'Má primátor nadväzovať spoluprácu s ukrajinskými mestami ako napríklad Užhorod, aj keď výsledky sa prejavia až o niekoľko rokov?',
     w:'Michalovce ležia asi 60 km od Užhorodu. Geografická blízkosť a obnova Ukrajiny po vojne predstavujú príležitosť pre miestne firmy, školy aj kultúru. Nadviazanie skutočnej spolupráce si ale vyžaduje čas a politickú vôľu a výsledky nie sú viditeľné ihneď.',
     a:{dufinec:'neutral', sibal:'agree', vidovenec:'agree'}
   }
