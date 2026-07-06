@@ -1064,6 +1064,20 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
   .agent-view{padding:1.2rem .9rem 3rem}
 }
 
+
+/* ── Feedback widget ── */
+.feedback-widget{margin:2rem 0 1.5rem;padding:1.4rem 1rem;background:var(--surface);border-radius:12px;text-align:center}
+.fb-q{font-family:var(--font-display);font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:1rem}
+.fb-btns{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.fb-btn{background:#fff;border:1.5px solid transparent;cursor:pointer;padding:.6rem 1.4rem;border-radius:99px;font-family:var(--font-display);font-size:.9rem;font-weight:700;letter-spacing:.02em;transition:transform .12s,box-shadow .12s,background .15s;min-width:96px;min-height:44px;-webkit-tap-highlight-color:transparent}
+.fb-btn:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.fb-btn:disabled{cursor:default;opacity:.55;transform:none;box-shadow:none}
+.fb-yes{background:#E8F5EC;border-color:#B7DFC3;color:#1A6B2E}
+.fb-partly{background:#FFF8DB;border-color:#F0DFA3;color:#8A6D0F}
+.fb-no{background:#FDECEE;border-color:#F1BAC1;color:#8B1F2E}
+.fb-btn.fb-selected{outline:2px solid currentColor;outline-offset:2px}
+.fb-thanks{margin-top:.9rem;font-size:.85rem;color:var(--muted);font-weight:600}
+
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
 </head>
@@ -1303,6 +1317,16 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
         <button class="sh-btn sh-cp" onclick="VAA.copyURL()" aria-label="Kopírovať odkaz">Kopírovať</button>
       </div>
 
+    </div>
+
+    <div class="feedback-widget" id="feedbackWidget">
+      <p class="fb-q">Pomohla ti kalkulačka?</p>
+      <div class="fb-btns" role="group" aria-label="Spätná väzba">
+        <button class="fb-btn fb-yes" data-val="ano" aria-label="Áno, pomohla">Áno</button>
+        <button class="fb-btn fb-partly" data-val="ciastocne" aria-label="Čiastočne">Čiastočne</button>
+        <button class="fb-btn fb-no" data-val="nie" aria-label="Nie, nepomohla">Nie</button>
+      </div>
+      <p class="fb-thanks" hidden>Ďakujeme za spätnú väzbu.</p>
     </div>
     <div id="turnoutWidget"></div>
 
@@ -3495,6 +3519,78 @@ const VAA = (function(){
   }
   try{if(localStorage.getItem(KEY)==='1')setMode(true);}catch(e){}
   btn.addEventListener('click',function(){setMode(!document.body.classList.contains('agent-on'));});
+})();
+</script>
+
+<script>
+(function(){
+  var widget = document.getElementById('feedbackWidget');
+  if(!widget) return;
+  var thanksEl = widget.querySelector('.fb-thanks');
+  var buttons  = widget.querySelectorAll('.fb-btn');
+
+  function keyFor(){
+    // Prefer live in-app state; fall back to URL params
+    var c, t;
+    try { c = (typeof city !== 'undefined') ? city : null; } catch(e){}
+    try { t = (typeof type !== 'undefined') ? type : null; } catch(e){}
+    if(!c || !t){
+      var u = new URLSearchParams(location.search);
+      c = c || u.get('city') || 'unknown';
+      t = t || u.get('type') || 'unknown';
+    }
+    return { city: c, type: t, storage: 'rzdn_fb_' + c + '_' + t };
+  }
+
+  function markVoted(k, value){
+    try { localStorage.setItem(k.storage, value); } catch(e){}
+    buttons.forEach(function(b){
+      b.disabled = true;
+      if(b.dataset.val === value) b.classList.add('fb-selected');
+    });
+    thanksEl.hidden = false;
+  }
+
+  function restoreIfVoted(){
+    var k = keyFor();
+    try {
+      var prev = localStorage.getItem(k.storage);
+      if(prev){
+        buttons.forEach(function(b){
+          b.disabled = true;
+          if(b.dataset.val === prev) b.classList.add('fb-selected');
+        });
+        thanksEl.hidden = false;
+      } else {
+        buttons.forEach(function(b){ b.disabled = false; b.classList.remove('fb-selected'); });
+        thanksEl.hidden = true;
+      }
+    } catch(e){}
+  }
+
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var k = keyFor();
+      var val = btn.dataset.val;
+      // Umami custom event with city + type + response
+      try {
+        if(window.umami && typeof window.umami.track === 'function'){
+          window.umami.track('feedback', { odpoved: val, mesto: k.city, typ: k.type });
+        }
+      } catch(e){}
+      markVoted(k, val);
+    });
+  });
+
+  // Re-check state whenever the results screen becomes visible
+  var results = document.getElementById('sc-results');
+  if(results){
+    var obs = new MutationObserver(function(){
+      if(results.classList.contains('active')) restoreIfVoted();
+    });
+    obs.observe(results, { attributes: true, attributeFilter: ['class'] });
+  }
+  restoreIfVoted();
 })();
 </script>
 
