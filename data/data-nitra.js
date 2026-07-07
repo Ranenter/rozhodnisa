@@ -9,7 +9,10 @@ window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 // ── Kandidáti: Primátor / Primátorka Nitry ──
 window.VAA_DATA.candidates['nitra_primator'] = [
   {id:'hattas',name:'Marek Hattas',party:'PS / SaS / KDH / Demokrati / Hnutie Slovensko / Tím Hattas (úradujúci primátor)',color:'#146B4D',url:'https://hattasprimatorom.sk'},
-  {id:'uhrikova',name:'Zuzana Uhríková',party:'Republika / Hlas-SD / Smer-SD',color:'#8A2332',url:'https://www.facebook.com/ing.zuzana.uhrikova/'}
+  {id:'uhrikova',name:'Zuzana Uhríková',party:'Republika / Hlas-SD / Smer-SD',color:'#8A2332',url:'https://www.facebook.com/ing.zuzana.uhrikova/'},
+  // POZN: Kršiak a Illéš – postoje sú ODHADNUTÉ (verified:false pre data.json)
+  {id:'krsiak',name:'Igor Kršiak',party:'Nezávislý',color:'#2F6F8F',url:'https://igorkrsiak.sk/'},
+  {id:'illes',name:'Marek Illéš',party:'Smer-SD / Hlas-SD',color:'#B23A2E',url:''}
 ];
 
 // ── Kandidáti: Predseda / Predsedníčka NSK ──
@@ -24,127 +27,127 @@ window.VAA_DATA.questions.nitra_primator = [
   {t:'Parkovanie',
    q:'Má Nitra ďalej rozširovať regulované rezidentské parkovanie aj do ďalších sídlisk?',
    w:'Parkovacia politika patrí medzi najviditeľnejšie komunálne témy v Nitre. Mesto v roku 2025 a 2026 rozširovalo pravidlá parkovania a v rozpočte ráta s významnými príjmami z parkovného. Pre časť obyvateľov je to potrebný poriadok, pre iných ďalšia finančná a organizačná záťaž.',
-   a:{hattas:'agree',uhrikova:'neutral'}},
+   a:{hattas:'agree',uhrikova:'neutral',krsiak:'neutral',illes:'neutral'}},
 
   {t:'Parkovanie',
    q:'Má mesto dávať pri riešení parkovania prednosť výstavbe nových parkovísk pred ďalším sprísňovaním pravidiel?',
    w:'Nitra rieši parkovanie kombináciou regulácie a budovania nových kapacít. Spor sa vedie o to, či má byť hlavným riešením viac pravidiel, alebo viac miest na státie v obytných štvrtiach.',
-   a:{hattas:'neutral',uhrikova:'agree'}},
+   a:{hattas:'neutral',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Cesty a chodníky',
    q:'Má byť oprava miestnych ciest, chodníkov a schodísk hlavnou investičnou prioritou mesta na najbližšie roky?',
    w:'Mesto v roku 2026 plánuje výrazné investície do ciest a verejných plôch, no popri tom rieši aj školy, škôlky, zeleň a ďalšie projekty. Táto otázka oddeľuje voličov, ktorí chcú sústrediť väčšinu peňazí na každodennú údržbu, od tých, ktorí podporujú širší investičný záber.',
-   a:{hattas:'neutral',uhrikova:'agree'}},
+   a:{hattas:'neutral',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Doprava',
    q:'Má mesto uprednostniť plynulosť automobilovej dopravy pred budovaním nových cyklotrás a zásahmi do organizácie dopravy?',
    w:'V Nitre sa stretáva tlak vodičov na plynulejší prejazd mestom s požiadavkou na bezpečnejšiu a modernejšiu mobilitu. Ide o klasickú dilemu medzi pohodlím pre autá a podporou alternatívnej dopravy.',
-   a:{hattas:'disagree',uhrikova:'agree'}},
+   a:{hattas:'disagree',uhrikova:'agree',krsiak:'neutral',illes:'agree'}},
 
   {t:'Cyklodoprava',
    q:'Má Nitra pokračovať v budovaní súvislých cyklotrás aj tam, kde si to vyžiada zmenu zaužívaného priestoru pre autá?',
    w:'Ak má bicykel fungovať ako reálna súčasť dopravy, trasy musia byť bezpečné a prepojené. V praxi to však niekedy znamená menší komfort pre autá alebo úpravu parkovania a jazdných pruhov.',
-   a:{hattas:'agree',uhrikova:'neutral'}},
+   a:{hattas:'agree',uhrikova:'neutral',krsiak:'neutral',illes:'disagree'}},
 
   {t:'Rozpočet',
    q:'Má Nitra v nasledujúcich rokoch postupovať pri nových investíciách opatrnejšie, keďže mesto si na rok 2026 schválilo aj úver?',
    w:'Mesto schválilo na rok 2026 historicky vysoký rozpočet a zároveň aj viac než 12-miliónový úver. Pre jedných je to spôsob, ako udržať rozvoj, pre iných signál, že by samospráva mala brzdiť tempo nových projektov.',
-   a:{hattas:'disagree',uhrikova:'agree'}},
+   a:{hattas:'disagree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Školy a škôlky',
    q:'Majú mať školy, škôlky a detské ihriská prednosť pred reprezentatívnymi projektmi v centre mesta?',
    w:'Najväčšou výdavkovou položkou Nitry ostáva školstvo. Táto otázka preveruje, či má byť mestská politika zameraná najmä na každodenné potreby rodín, alebo aj na viditeľné projekty v centre a na hlavných ťahoch.',
-   a:{hattas:'agree',uhrikova:'agree'}},
+   a:{hattas:'agree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Bývanie',
    q:'Má mesto aktívnejšie podporovať dostupné nájomné bývanie, aj keby to znamenalo väčší vstup samosprávy do bytovej politiky?',
    w:'Drahé bývanie zvyšuje tlak na mestá, aby nehľadali riešenie len cez územné plánovanie. Silnejší vstup mesta môže pomôcť mladým rodinám a profesiám, ktoré mesto potrebuje, no zároveň prináša vyššie finančné a organizačné nároky.',
-   a:{hattas:'agree',uhrikova:'neutral'}},
+   a:{hattas:'agree',uhrikova:'neutral',krsiak:'neutral',illes:'agree'}},
 
   {t:'Developeri',
    q:'Má mesto od investorov tvrdšie vyžadovať príspevky na školy, cesty a verejný priestor pri väčších projektoch?',
    w:'Nová výstavba zvyšuje tlak na infraštruktúru a služby. Mesto môže od investorov požadovať väčšiu spoluúčasť, no tým zároveň riskuje drahšiu alebo pomalšiu výstavbu.',
-   a:{hattas:'agree',uhrikova:'agree'}},
+   a:{hattas:'agree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Transparentnosť',
    q:'Má mesto zverejňovať zrozumiteľné odôvodnenia veľkých investícií a zákaziek ešte pred ich schválením?',
    w:'Samotné zverejnenie materiálov často nestačí na to, aby sa v nich obyvatelia vyznali. Lepšia transparentnosť môže zvýšiť dôveru, ale zároveň spomaliť časť rozhodovania.',
-   a:{hattas:'agree',uhrikova:'agree'}},
+   a:{hattas:'agree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'MHD',
    q:'Má mesto zlepšovať verejnú dopravu aj za cenu, že niektoré opatrenia znížia komfort individuálnej automobilovej dopravy?',
    w:'Ak má byť MHD atraktívnejšia, mesto často musí zasahovať do organizácie dopravy, preferencie autobusov či priestoru v uliciach. Ide o rozhodovanie medzi individuálnym pohodlím a systémovým riešením mobility.',
-   a:{hattas:'agree',uhrikova:'neutral'}},
+   a:{hattas:'agree',uhrikova:'neutral',krsiak:'neutral',illes:'neutral'}},
 
   {t:'Verejný priestor',
    q:'Má Nitra dôslednejšie chrániť mestskú zeleň a stromy aj vtedy, ak to skomplikuje niektoré investície alebo parkovanie?',
    w:'Stromy a zeleň znižujú prehrievanie mesta a zvyšujú kvalitu života. V praxi však ich ochrana často naráža na dopravné stavby, parkoviská a nové projekty.',
-   a:{hattas:'agree',uhrikova:'neutral'}},
+   a:{hattas:'agree',uhrikova:'neutral',krsiak:'neutral',illes:'neutral'}},
 
   {t:'Údržba mesta',
    q:'Má mesto posilniť výdavky na čistenie ulíc, údržbu verejných priestranstiev a odstraňovanie vrakov aj na úkor niektorých rozvojových projektov?',
    w:'Rozpočet Nitry zahŕňa aj výdavky na čistenie ciest, verejné priestranstvá, odťah nepojazdných vozidiel a ďalšie komunálne služby. Pre časť voličov sú práve tieto každodenné služby najlepším ukazovateľom kvality vedenia mesta.',
-   a:{hattas:'neutral',uhrikova:'agree'}},
+   a:{hattas:'neutral',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Bezpečnosť',
    q:'Potrebuje Nitra viac viditeľnej mestskej polície vo verejnom priestore a pri dopravnom poriadku?',
    w:'Otázka bezpečnosti sa v komunálnej politike často spája s poriadkom v uliciach, parkovaním aj vymáhaním pravidiel. Jedni preferujú viac prevencie a sociálnej práce, iní dôraz na viditeľnú kontrolu a rýchly zásah.',
-   a:{hattas:'neutral',uhrikova:'agree'}},
+   a:{hattas:'neutral',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Participácia',
    q:'Má mesto viac zapájať obyvateľov do rozhodovania o menších investíciách, aj keby to procesy spomalilo?',
    w:'Participácia môže zvýšiť dôveru a lepšie prispôsobiť menšie projekty miestnym potrebám. Zároveň však môže brzdiť rozhodovanie a znižovať akcieschopnosť vedenia mesta.',
-   a:{hattas:'agree',uhrikova:'neutral'}},
+   a:{hattas:'agree',uhrikova:'neutral',krsiak:'neutral',illes:'neutral'}},
 
   {t:'Kultúra a komunita',
    q:'Má mesto pokračovať v podpore kultúrnych a komunitných projektov aj v čase rozpočtového tlaku?',
    w:'Kultúra a komunitné aktivity nebývajú prvou prioritou pri napätom rozpočte, no formujú identitu mesta a kvalitu života. Otázka ukazuje, či ich volič vníma ako nadštandard, alebo súčasť základnej funkcie mesta.',
-   a:{hattas:'agree',uhrikova:'neutral'}},
+   a:{hattas:'agree',uhrikova:'neutral',krsiak:'agree',illes:'neutral'}},
 
   {t:'Mestský majetok',
    q:'Má mesto pri nakladaní s majetkom postupovať opatrnejšie a menej vstupovať do spoločných projektov so súkromným sektorom?',
    w:'Partnerstvá so súkromným sektorom môžu urýchliť rozvoj, ale prinášajú aj reputačné a finančné riziká. Opatrnejší prístup chráni majetok mesta, no môže spomaliť niektoré projekty.',
-   a:{hattas:'neutral',uhrikova:'agree'}},
+   a:{hattas:'neutral',uhrikova:'agree',krsiak:'agree',illes:'neutral'}},
 
   {t:'Digitalizácia',
    q:'Má Nitra rýchlejšie digitalizovať mestský úrad a čo najviac služieb presunúť online?',
    w:'Digitalizácia môže znížiť byrokraciu a ušetriť čas občanom aj úradníkom. Nie všetci obyvatelia však preferujú online kontakt a časť služieb si vyžaduje osobné vybavenie.',
-   a:{hattas:'agree',uhrikova:'neutral'}},
+   a:{hattas:'agree',uhrikova:'neutral',krsiak:'agree',illes:'agree'}},
 
   {t:'Komunikácia mesta',
    q:'Má primátor pravidelne zverejňovať prehľad splnených a nesplnených sľubov, aby boli výsledky vedenia ľahšie kontrolovateľné?',
    w:'Obyvatelia sa v komunálnej politike lepšie orientujú, keď vedia porovnať sľuby s výsledkami. Takýto účet zvyšuje zodpovednosť, ale aj tlak na vedenie mesta.',
-   a:{hattas:'agree',uhrikova:'agree'}},
+   a:{hattas:'agree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Poradie priorít',
    q:'Má byť hlavnou úlohou vedenia Nitry najprv urobiť poriadok v parkovaní, cestách a údržbe, až potom otvárať ďalšie veľké témy?',
    w:'Parkovanie, cesty a čistota patria medzi najčastejšie verejne diskutované problémy mesta. Táto otázka testuje, či má samospráva riešiť najskôr základný servis mesta, alebo súbežne tlačiť aj širšie rozvojové témy.',
-   a:{hattas:'neutral',uhrikova:'agree'}},
+   a:{hattas:'neutral',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Štýl vedenia',
    q:'Je pre teba dôležitejšie, aby primátor Nitry bol skôr dobrý manažér každodenných problémov než ambiciózny vizionár väčších projektov?',
    w:'Komunálna politika sa často láme medzi dôrazom na každodenný servis mesta a dôrazom na väčšie rozvojové projekty. Väčšina voličov chce kombináciu oboch, no kandidáti bývajú vnímaní viac jedným alebo druhým smerom.',
-   a:{hattas:'neutral',uhrikova:'agree'}},
+   a:{hattas:'neutral',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Hodnotenie rozvoja',
    q:'Má mesto pri nových projektoch viac hodnotiť ich priamy úžitok pre obyvateľov než ich symbolický alebo reprezentatívny význam?',
    w:'Nie každý projekt, ktorý dobre vyzerá navonok, prináša rovnaký úžitok v každodennom živote obyvateľov. Táto otázka oddeľuje praktickejší a reprezentatívnejší pohľad na rozvoj mesta.',
-   a:{hattas:'neutral',uhrikova:'agree'}},
+   a:{hattas:'neutral',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Sociálna citlivosť',
    q:'Má mesto cielene pomáhať ľuďom v bytovej a sociálnej núdzi aj vtedy, keď také opatrenia neprinášajú rýchly politický efekt?',
    w:'Takéto opatrenia nebývajú veľmi viditeľné, no môžu znižovať dlhodobé sociálne problémy a tlak na ďalšie verejné služby. Otázka ukazuje, akú váhu má mať sociálny rozmer v mestskej politike.',
-   a:{hattas:'agree',uhrikova:'neutral'}},
+   a:{hattas:'agree',uhrikova:'neutral',krsiak:'agree',illes:'agree'}},
 
   {t:'Stabilita rozpočtu',
    q:'Má mesto po roku 2026 skôr znižovať tlak na úvery a zadlženie než hľadať ďalšie zdroje na rýchlejšie investície?',
    w:'Po schválení vysokého rozpočtu a úveru sa otvára otázka, či má ďalším cieľom mesta byť finančné ukľudnenie, alebo pokračovanie vo vysokom investičnom tempe. Ide o rozdiel medzi opatrnosťou a ambíciou.',
-   a:{hattas:'disagree',uhrikova:'agree'}},
+   a:{hattas:'disagree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Celkový smer',
    q:'Má sa Nitra v najbližších rokoch sústrediť skôr na zlepšenie každodennej funkčnosti mesta než na výraznú zmenu jeho imidžu a smerovania?',
    w:'Za mnohými komunálnymi konfliktmi stojí otázka, či má mesto prioritne fungovať lepšie v bežných veciach, alebo sa zároveň silnejšie profilovať navonok cez väčšie zmeny a ambície.',
-   a:{hattas:'neutral',uhrikova:'agree'}}
+   a:{hattas:'neutral',uhrikova:'agree',krsiak:'agree',illes:'agree'}}
 ];
 
 // ── Otázky: Predseda / Predsedníčka Nitrianskeho kraja ──
