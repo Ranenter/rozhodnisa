@@ -4,7 +4,7 @@ window.VAA_DATA = window.VAA_DATA || {};
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
 window.VAA_DATA.candidates['trnava_primator'] = [
-  {id:'nemcovska', name:'Eva Nemčovská',  party:'Lepšia Trnava (viceprimátorka, nástupkyňa Petra Bročku)', color:'#4caf50', url:''},
+  {id:'nemcovska', name:'Eva Nemčovská',  party:'Nezávislá / Lepšia Trnava', color:'#4caf50', url:'https://evanemcovska.sk/'},
   {id:'baros',     name:'Branislav Baroš', party:'Trnava pre každého / KDH',                                  color:'#2196F3', url:'https://trnavaprekazdeho.sk/brano-baros-trnava/'},
   {id:'horvathova',name:'Ľubica Horváthová',party:'Demokrati',                                                 color:'#fbc02d', url:'https://lubicahorvathova.sk/'},
   {id:'cajkova',   name:'Andrea Čajková',  party:'Trnava+',                                                     color:'#e91e63', url:'https://www.trnavaplus.sk/andrea-cajkova'}
