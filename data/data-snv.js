@@ -10,8 +10,8 @@ window.VAA_DATA.candidates['snv_primator'] = [
   {id:'ilasova',  name:'Judita Iľašová',  party:'Progresívne Slovensko / SaS',                         color:'#3a86ff', url:'https://progresivne.sk'},
   {id:'demecko',  name:'Dávid Demečko',   party:'Hlas-SD / Smer-SD / Sme rodina / Republika',               color:'#e63946', url:'https://strana-hlas.sk'},
   {id:'akram',    name:'Adnan Akram',     party:'Nezávislý',                                            color:'#06d6a0', url:'https://addyakram.sk'},
-  {id:'godus',    name:'Lukáš Goduš',    party:'Nezávislý',                                            color:'#f4a261', url:''},
-  {id:'uhrin',    name:'Miroslav Uhrin',  party:'Nezávislý',                                            color:'#8338ec', url:''}
+  {id:'godus',    name:'Lukáš Goduš',    party:'Nezávislý',                                            color:'#f4a261', url:'https://www.lukasgodus.sk/'},
+  {id:'uhrin',    name:'Miroslav Uhrin',  party:'Nezávislý',                                            color:'#8338ec', url:'https://www.facebook.com/miroslav.uhrin.snv/'}
 ];
 
 // ── Otázky: Primátor / Primátorka ──
