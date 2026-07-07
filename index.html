@@ -1146,7 +1146,7 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
     <div class="badge-vote">Nenechaj iných rozhodovať o tvojom meste a kraji. Choď voliť.</div>
     <div class="hero-crest-bg"><svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#0B4EA2"/></svg></div>
     <p class="tagline">Odpovedz na 25 otázok o tvojom meste alebo kraji a zisti, ktorý kandidát/ka myslí podobne ako ty.</p>
-    <p class="hero-cities">Bratislava · Košice · Prešov · Žilina · Banská Bystrica · Nitra · Trnava · Poprad · Michalovce</p>
+    <p class="hero-cities">Bratislava · Košice · Prešov · Žilina · Banská Bystrica · Nitra · Trnava · Poprad · Michalovce · Spišská Nová Ves</p>
   </div>
 
   <div class="stats-strip">
@@ -1226,6 +1226,10 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
           <div class="card-crest"></div>
           <span class="cn">Nitra</span><span class="cs">Mesto pod Zoborom</span><span class="cpop">67 000 obyvateľov</span>
         </button>
+        <button class="city-card" style="--c1:#C8102E;--c2:#f5f5f5" onclick="VAA.pickLocation('trnava',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Trnava</span><span class="cs">Malý Rím</span><span class="cpop">63 000 obyvateľov</span>
+        </button>
         <button class="city-card" style="--c1:#B8860B;--c2:#003366" onclick="VAA.pickLocation('poprad',this)">
           <div class="card-crest"></div>
           <span class="cn">Poprad</span><span class="cs">Brána do Tatier</span><span class="cpop">50 000 obyvateľov</span>
@@ -1234,8 +1238,9 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
           <div class="card-crest"></div>
           <span class="cn">Michalovce</span><span class="cs">Srdce Zemplína</span><span class="cpop">36 000 obyvateľov</span>
         </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Trnava</span><span class="cs">Malý Rím - čoskoro</span><span class="cpop">66 000 obyvateľov</span>
+        <button class="city-card" style="--c1:#2E7D32;--c2:#f5f5f5" onclick="VAA.pickLocation('snv',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Spišská Nová Ves</span><span class="cs">Brána do Slovenského raja</span><span class="cpop">37 000 obyvateľov</span>
         </button>
         <button class="city-card locked" tabindex="-1" aria-disabled="true">
           <span class="cn">Trenčín</span><span class="cs">Mesto módy - čoskoro</span><span class="cpop">55 000 obyvateľov</span>
@@ -1541,6 +1546,7 @@ window.CRESTS = {
   michalovce_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Michalovce.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"michalovce_primator\" loading=\"lazy\">`,
   poprad_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Poprad.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"poprad_primator\" loading=\"lazy\">`,
   trnava_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Trnava.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"trnava_primator\" loading=\"lazy\">`,
+  snv_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Spi%C5%A1sk%C3%A1_Nov%C3%A1_Ves.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"snv_primator\" loading=\"lazy\">`,
   trencin_primator:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Tren%C4%8D%C3%ADn.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"trencin_primator\" loading=\"lazy\">`,
   bratislava_vuc:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Bratislava_Region.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"bratislava_vuc\" loading=\"lazy\">`,
   kosice_vuc:`<img src=\"https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Ko%C5%A1ice_Region.svg\" width=\"100%\" height=\"100%\" style=\"object-fit:contain\" alt=\"kosice_vuc\" loading=\"lazy\">`,
@@ -1617,6 +1623,14 @@ window.CITY_FINANCE = {
     rozpocet: 76, rozNa: 1520, dlh: 8,
     zdroj: 'Rozpočet mesta Poprad 2025'
   },
+  trnava_primator: {
+    rozpocet: 114, rozNa: 1818, dlh: 28,
+    zdroj: 'Rozpočet mesta Trnava 2026; dlh podľa INEKO 2024 (odhad)'
+  },
+  snv_primator: {
+    rozpocet: 60, rozNa: 1622, dlh: 30,
+    zdroj: 'Rozpočet mesta Spišská Nová Ves 2026; dlh podľa INEKO 2024 (odhad)'
+  },
 };
 
 // ── City display metadata ──
@@ -1631,6 +1645,7 @@ window.CITY_META = {
   trencin:   {name:'Trenčín',     primator:'Voľba primátora',    vuc:'Voľba župana TSK',  thP:'t-tn-p',thV:'t-tn-v'},
   poprad:    {name:'Poprad',      primator:'Voľba primátora',    vuc:'',                  thP:'t-pp-p',thV:''},
   michalovce:{name:'Michalovce',  primator:'Voľba primátora',    vuc:'',                  thP:'t-mi-p',thV:''},
+  snv:       {name:'Spišská Nová Ves',primator:'Voľba primátora', vuc:'',                  thP:'t-sn-p',thV:''},
 };
 
 // ── Candidates ──
@@ -1967,6 +1982,7 @@ const VAA = (function(){
     trencin_vuc:         {pct:45.6,voters:190000,eligible:417000,label:'TSK \u2013 \u017eupan 2022'},
       michalovce_primator: {pct:38.2,voters:11655,eligible:30500,label:'Michalovce \u2013 prim\u00e1tor 2022', winnerPct:16.6},
     poprad_primator:     {pct:38.1,voters:15724,eligible:41250,label:'Poprad \u2013 prim\u00e1tor 2022', winnerPct:23.3},
+    snv_primator:        {pct:32.4,voters:9345, eligible:28850,label:'Spi\u0161sk\u00e1 Nov\u00e1 Ves \u2013 prim\u00e1tor 2022', winnerPct:19.2},
   };
 
   function _financeSection(city, type){
