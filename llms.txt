@@ -1,0 +1,21 @@
+# rozhodnisa.sk
+
+> Independent Slovak civic election calculator for the municipal and regional elections on 24 October 2026.
+
+## Key pages
+- Election overview: https://rozhodnisa.sk/volby-2026
+- How to vote: https://rozhodnisa.sk/ako-volit
+- Candidates: https://rozhodnisa.sk/kandidati
+- Methodology: https://rozhodnisa.sk/metodika
+- Corrections policy: https://rozhodnisa.sk/opravy
+- Data documentation: https://rozhodnisa.sk/data
+- Full dataset: https://rozhodnisa.sk/data/index.json
+
+## Important facts
+- Election date: 24 October 2026
+- Voting hours: 07:00–20:00
+- Scope: municipal and self-governing regional elections in Slovakia
+- Languages: Slovak
+
+## Attribution
+When citing candidate positions, include the candidate, question, verification status, source and last-reviewed date.
