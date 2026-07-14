@@ -59,14 +59,11 @@ window.VAA_DATA.candidates['trnava_vuc'] = [
     name: "József Berényi",
     party: "Maďarská aliancia",
     color: "#1A6B8A",
-    url: ""
+    url: "https://madarska-aliancia.sk/jozsef-berenyi"
   }
 ];
 
 // ── Otázky: Primátor Trnavy ──
-// POZN: Pri štyroch preformulovaných otázkach boli pôvodné odpovede kandidátov
-// dočasne zachované. Pred publikovaním ich treba opätovne overiť, pretože nové znenie
-// predstavuje konkrétnejší alebo odlišný politický záväzok.
 window.VAA_DATA.questions.trnava_primator = [
   {
     t: "Smerovanie mesta",
