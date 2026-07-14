@@ -29,7 +29,7 @@ window.VAA_DATA.questions.nitra_primator = [
    a:{hattas:'disagree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Cesty a chodníky',
-   q:'Má byť oprava miestnych ciest a chodníko hlavnou investičnou prioritou mesta na najbližšie roky?',
+   q:'Má byť oprava miestnych ciest a chodníkov hlavnou investičnou prioritou Nitry na najbližšie roky?',
    w:'Mesto v roku 2026 plánuje výrazné investície do ciest a verejných plôch, no popri tom rieši aj školy, škôlky, zeleň a ďalšie projekty. Táto otázka oddeľuje voličov, ktorí chcú sústrediť väčšinu peňazí na každodennú údržbu, od tých, ktorí podporujú širší investičný záber.',
    a:{hattas:'neutral',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
@@ -152,7 +152,7 @@ window.VAA_DATA.questions.nitra_primator = [
 // ── Otázky: Predseda / Predsedníčka Nitrianskeho kraja ──
 window.VAA_DATA.questions.nitra_vuc = [
   {t:'Cesty a mosty',
-   q:'Má Nitriansky kraj dať v najbližších rokoch absolútnu prioritu opravám ciest II. a III. triedy, aj keby to spomalilo iné investície?',
+   q:'Má Nitriansky kraj dať v najbližších rokoch prioritu opravám ciest II. a III. triedy, aj keby to spomalilo iné investície?',
    w:'Regionálne cesty patria medzi najviditeľnejšie kompetencie kraja. Opravy ciest sú preto pre veľa voličov základným meradlom výkonu župy, no zároveň konkurujú investíciám do škôl, sociálnych služieb a zdravotníctva.',
    a:{varga:'agree',becik:'agree',csenger:'agree'}},
 
@@ -192,7 +192,7 @@ window.VAA_DATA.questions.nitra_vuc = [
    a:{varga:'agree',becik:'agree',csenger:'agree'}},
 
   {t:'Vidiek a regióny',
-   q:'Má kraj cielene podporovať služby a projekty v menších mestách a na vidieku, aby brzdil odchod mladých ľudí?',
+   q:'Má kraj cielene podporovať služby a projekty v menších mestách a na vidieku, aby tak brzdil odchod mladých ľudí?',
    w:'Vyľudňovanie a slabšia perspektíva v menších sídlach patria medzi dlhodobé regionálne výzvy. Podpora vidieka býva drahšia a menej efektívna než sústredenie investícií do silnejších centier, no môže mať zásadný sociálny význam.',
    a:{varga:'agree',becik:'agree',csenger:'agree'}},
 
