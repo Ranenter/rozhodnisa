@@ -1277,8 +1277,9 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
           <div class="card-crest"></div>
           <span class="cn">Banskobystrický</span><span class="cs">BBSK</span><span class="cpop">644 000 obyvateľov</span>
         </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Trnavský</span><span class="cs">čoskoro · TTSK</span><span class="cpop">622 000 obyvateľov</span>
+        <button class="city-card" style="--c1:#1A237E;--c2:#FFD700" onclick="VAA.pickLocation('trnava',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Trnavský</span><span class="cs">TTSK</span><span class="cpop">622 000 obyvateľov</span>
         </button>
         <button class="city-card locked" tabindex="-1" aria-disabled="true">
           <span class="cn">Trenčiansky</span><span class="cs">čoskoro · TSK</span><span class="cpop">566 000 obyvateľov</span>
@@ -1632,6 +1633,10 @@ window.CITY_FINANCE = {
   trnava_primator: {
     rozpocet: 114, rozNa: 1818, dlh: 28,
     zdroj: 'Rozpočet mesta Trnava 2026; dlh podľa INEKO 2024 (odhad)'
+  },
+  trnava_vuc: {
+    rozpocet: 320, rozNa: 514, dlh: 30,
+    zdroj: 'Schválený rozpočet TTSK 2026 (vrátane fin. operácií); zadlženosť k 31. 12. 2025'
   },
   snv_primator: {
     rozpocet: 60, rozNa: 1622, dlh: 30,
