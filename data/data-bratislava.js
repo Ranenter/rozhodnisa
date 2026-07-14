@@ -1,7 +1,3 @@
-// AKTUALIZÁCIA (júl 2026): postoje D. Čahojovej v bratislava_primator nahradené odpoveďami
-// z vyplneného dotazníka (primárny zdroj, 25/25 jednoznačne označených, bez komentárov).
-// POZN Q21: dotazník mal širšiu formuláciu (povinných 20 % v každom veľkom projekte) než web
-// (podmienka pri zmene územného plánu) — jej súhlas prenesený, pri spore platí dotazník.
 // ── Volebná kalkulačka 2026 — BRATISLAVA ──
 // Upravujte len tento súbor pre otázky a kandidátov mesta BRATISLAVA.
 // Štruktúra otázky: {t:'Téma', q:'Text otázky?', w:'Vysvetlenie.', a:{id1:'agree'|'neutral'|'disagree', ...}}
