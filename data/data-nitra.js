@@ -1,4 +1,6 @@
 // ── Volebná kalkulačka 2026 — NITRA + NITRIANSKY KRAJ ──
+// REVÍZIA (júl 2026): 5 konsenzuálnych otázok primátorskej sady nahradených polarizačnými
+// (pozri METODIKA-polarizacia.md). Postoje označené ODHADNUTÉ pred publikovaním overiť.
 // Obsahuje voľby: primátor/primátorka Nitry a predseda/predsedníčka NSK.
 // Štruktúra otázky: {t:'Téma', q:'Text otázky?', w:'Vysvetlenie.', a:{id1:'agree'|'neutral'|'disagree', ...}}
 
@@ -24,10 +26,12 @@ window.VAA_DATA.candidates['nitra_vuc'] = [
 
 // ── Otázky: Primátor / Primátorka Nitry ──
 window.VAA_DATA.questions.nitra_primator = [
+  // [NAHRADENÉ] polarizačná otázka — referendum o vlajkovej téme úradujúceho primátora
+  // POZN: postoje uhrikova/krsiak/illes ODHADNUTÉ z verejných vyjadrení (verified:false pre data.json)
   {t:'Parkovanie',
-   q:'Má Nitra ďalej rozširovať regulované rezidentské parkovanie aj do ďalších sídlisk?',
-   w:'Parkovacia politika patrí medzi najviditeľnejšie komunálne témy v Nitre. Mesto v roku 2025 a 2026 rozširovalo pravidlá parkovania a v rozpočte ráta s významnými príjmami z parkovného. Pre časť obyvateľov je to potrebný poriadok, pre iných ďalšia finančná a organizačná záťaž.',
-   a:{hattas:'agree',uhrikova:'neutral',krsiak:'neutral',illes:'neutral'}},
+   q:'Malo by nové vedenie mesta súčasnú parkovaciu politiku zásadne prepracovať?',
+   w:'Regulované parkovanie zavedené v rokoch 2025 – 2026 je najviditeľnejším rozhodnutím súčasného vedenia. Vyzývatelia ho kritizujú ako záťaž alebo ako nedokončený systém, radnica ho obhajuje dátami o obsadenosti a od júla 2026 pravidlá upravila. Otázkou je, či systém patrí k tomu, čo treba zachovať a ladiť, alebo k tomu, čo treba po voľbách zásadne zmeniť.',
+   a:{hattas:'disagree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Parkovanie',
    q:'Má mesto dávať pri riešení parkovania prednosť výstavbe nových parkovísk pred ďalším sprísňovaním pravidiel?',
@@ -54,25 +58,31 @@ window.VAA_DATA.questions.nitra_primator = [
    w:'Mesto schválilo na rok 2026 historicky vysoký rozpočet a zároveň aj viac než 12-miliónový úver. Pre jedných je to spôsob, ako udržať rozvoj, pre iných signál, že by samospráva mala brzdiť tempo nových projektov.',
    a:{hattas:'disagree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
-  {t:'Školy a škôlky',
-   q:'Majú mať školy, škôlky a detské ihriská prednosť pred reprezentatívnymi projektmi v centre mesta?',
-   w:'Najväčšou výdavkovou položkou Nitry ostáva školstvo. Táto otázka preveruje, či má byť mestská politika zameraná najmä na každodenné potreby rodín, alebo aj na viditeľné projekty v centre a na hlavných ťahoch.',
-   a:{hattas:'agree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
+  // [NAHRADENÉ] polarizačná otázka — konkrétny sporný projekt so sumou
+  // POZN: postoje uhrikova/krsiak/illes ODHADNUTÉ (verified:false pre data.json)
+  {t:'Veľké projekty',
+   q:'Bolo kreatívne centrum za približne 15,5 milióna eur dobrou investíciou, ktorú má mesto dokončiť a prevádzkovať aj z vlastného rozpočtu?',
+   w:'Kreatívne centrum prešlo zastupiteľstvom po dlhých sporoch. Podporovatelia ho vnímajú ako investíciu do kultúry a využitie eurofondov, kritici ako drahý projekt s trvalými prevádzkovými nákladmi, ktoré ponesie mesto — a ako symbol uprednostňovania veľkých projektov pred základnou údržbou.',
+   a:{hattas:'agree',uhrikova:'disagree',krsiak:'disagree',illes:'disagree'}},
 
   {t:'Bývanie',
    q:'Má mesto aktívnejšie podporovať dostupné nájomné bývanie, aj keby to znamenalo väčší vstup samosprávy do bytovej politiky?',
    w:'Drahé bývanie zvyšuje tlak na mestá, aby nehľadali riešenie len cez územné plánovanie. Silnejší vstup mesta môže pomôcť mladým rodinám a profesiám, ktoré mesto potrebuje, no zároveň prináša vyššie finančné a organizačné nároky.',
    a:{hattas:'agree',uhrikova:'neutral',krsiak:'neutral',illes:'agree'}},
 
-  {t:'Developeri',
-   q:'Má mesto od investorov tvrdšie vyžadovať príspevky na školy, cesty a verejný priestor pri väčších projektoch?',
-   w:'Nová výstavba zvyšuje tlak na infraštruktúru a služby. Mesto môže od investorov požadovať väčšiu spoluúčasť, no tým zároveň riskuje drahšiu alebo pomalšiu výstavbu.',
-   a:{hattas:'agree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
+  // [NAHRADENÉ] polarizačná otázka — trade-off vyslovený natvrdo
+  // POZN: postoje uhrikova/krsiak/illes ODHADNUTÉ (verified:false pre data.json)
+  {t:'Doprava',
+   q:'Má mesto pri rekonštrukciách ulíc uberať jazdné pruhy a parkovacie miesta v prospech cyklopruhov, MHD a zelene?',
+   w:'Priestor ulice je obmedzený — pri každej väčšej rekonštrukcii ho niekomu treba vziať. Súčasné vedenie presadzuje preferenciu udržateľnej dopravy vrátane zón 30, časť kandidátov žiada prioritne plynulosť áut, vjazdy do mesta a zachovanie parkovacích miest.',
+   a:{hattas:'agree',uhrikova:'disagree',krsiak:'neutral',illes:'disagree'}},
 
-  {t:'Transparentnosť',
-   q:'Má mesto zverejňovať zrozumiteľné odôvodnenia veľkých investícií a zákaziek ešte pred ich schválením?',
-   w:'Samotné zverejnenie materiálov často nestačí na to, aby sa v nich obyvatelia vyznali. Lepšia transparentnosť môže zvýšiť dôveru, ale zároveň spomaliť časť rozhodovania.',
-   a:{hattas:'agree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
+  // [NAHRADENÉ] polarizačná otázka — hodnotová os vyjadrená lokálnym sporom („progresívne fantázie" vs. základná funkčnosť)
+  // POZN: postoje uhrikova/krsiak/illes ODHADNUTÉ z rámcovania ich kampaní (verified:false pre data.json)
+  {t:'Priority mesta',
+   q:'Sú projekty ako revitalizácie námestí, participatívny rozpočet či klimatické opatrenia luxusom, ktorý má ísť bokom, kým mesto nevyrieši cesty, chodníky a parkovanie?',
+   w:'Toto je hlavný spor tejto kampane: vyzývatelia hovoria o „progresívnych fantáziách", experimentoch a zanedbaných základoch, radnica obhajuje verejné priestory a mäkké projekty ako súčasť kvality života. Otázka meria, či má mesto tieto agendy utlmiť v prospech základnej infraštruktúry.',
+   a:{hattas:'disagree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'MHD',
    q:'Má mesto zlepšovať verejnú dopravu aj za cenu, že niektoré opatrenia znížia komfort individuálnej automobilovej dopravy?',
@@ -114,10 +124,12 @@ window.VAA_DATA.questions.nitra_primator = [
    w:'Digitalizácia môže znížiť byrokraciu a ušetriť čas občanom aj úradníkom. Nie všetci obyvatelia však preferujú online kontakt a časť služieb si vyžaduje osobné vybavenie.',
    a:{hattas:'agree',uhrikova:'neutral',krsiak:'agree',illes:'agree'}},
 
-  {t:'Komunikácia mesta',
-   q:'Má primátor pravidelne zverejňovať prehľad splnených a nesplnených sľubov, aby boli výsledky vedenia ľahšie kontrolovateľné?',
-   w:'Obyvatelia sa v komunálnej politike lepšie orientujú, keď vedia porovnať sľuby s výsledkami. Takýto účet zvyšuje zodpovednosť, ale aj tlak na vedenie mesta.',
-   a:{hattas:'agree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
+  // [NAHRADENÉ] polarizačná otázka — politická os; zrkadlí najpolarizujúcejšiu otázku VÚC sady
+  // POZN: postoje ODHADNUTÉ zo straníckeho zázemia; krsiak kandiduje ako nezávislý, v 2022 za koalíciu okolo Hlas-SD (verified:false pre data.json)
+  {t:'Vzťah k vláde',
+   q:'Je pre Nitru výhodné, ak má primátor blízke politické väzby na súčasnú vládnu koalíciu?',
+   w:'Časť kandidátov kandiduje s podporou vládnych strán a argumentuje lepším prístupom k štátnym zdrojom a investíciám, iní stavajú na nezávislosti mesta od centrálnej politiky. Ide o čitateľný a overiteľný rozdiel medzi kandidátmi.',
+   a:{hattas:'disagree',uhrikova:'agree',krsiak:'neutral',illes:'agree'}},
 
   {t:'Poradie priorít',
    q:'Má byť hlavnou úlohou vedenia Nitry najprv urobiť poriadok v parkovaní, cestách a údržbe, až potom otvárať ďalšie veľké témy?',
