@@ -38,7 +38,6 @@ window.VAA_DATA.candidates['trnava_primator'] = [
 ];
 
 // ── Kandidáti: Župan / VÚC Trnavský kraj ──
-// POZN: Viskupič, Berényi, Lančarič – postoje sú ODHADNUTÉ (verified:false pre data.json)
 window.VAA_DATA.candidates['trnava_vuc'] = [
   {
     id: "viskupic",
@@ -343,10 +342,6 @@ window.VAA_DATA.questions.trnava_primator = [
 ];
 
 // ── Otázky: Župan / VÚC Trnavský kraj ──
-// POZOR: postoje Viskupič/Lančarič/Berényi sú ODHADY (verified:false).
-// Sada bola 14. 7. 2026 prepísaná na pozičné otázky podľa METODIKA-polarizacia.md
-// (gate: 21/25 rozdeľujúcich, 0 jednomyseľných, 4 bez disagree).
-// Pred publikovaním overiť dotazníkom u kandidátov.
 window.VAA_DATA.questions.trnava_vuc = [
   {
     t: "Smerovanie kraja",
@@ -357,7 +352,7 @@ window.VAA_DATA.questions.trnava_vuc = [
   {
     t: "Obchvaty",
     q: "Má kraj platiť z vlastného rozpočtu projektovú prípravu a výkup pozemkov pre obchvaty, ktoré má stavať štát?",
-    w: "Obchvaty a cesty I. triedy patria štátu, ich príprava však roky viazne — napríklad pri Trnave. Kraj môže z vlastných peňazí zaplatiť projektovú dokumentáciu a výkup pozemkov, aby sa stavba pohla dopredu. Znamená to však, že kraj platí za úlohu štátu a menej mu zostane na cesty II. a III. triedy, ktoré sám vlastní.",
+    w: "Obchvaty a cesty I. triedy patria štátu, ich príprava však roky viazne, napríklad pri Trnave. Kraj môže z vlastných peňazí zaplatiť projektovú dokumentáciu a výkup pozemkov, aby sa stavba pohla dopredu. Znamená to však, že kraj platí za úlohu štátu a menej mu zostane na cesty II. a III. triedy, ktoré sám vlastní.",
     a: { viskupic: "disagree", lancaric: "agree", berenyi: "neutral" }
   },
   {
@@ -459,7 +454,7 @@ window.VAA_DATA.questions.trnava_vuc = [
   {
     t: "Dochádzanie do Bratislavy",
     q: "Má kraj prednostne platiť za integráciu s bratislavským dopravným systémom (jeden lístok na vlak, autobus a MHD v Bratislave), aj keď to znamená menej peňazí na spoje vnútri kraja?",
-    w: "Veľká časť kraja dochádza za prácou a školou do Bratislavy. Systém, ktorý to pokrýva, je bratislavský (IDS BK) — objednáva ho štát, Bratislavský kraj a mesto Bratislava — a už dnes doň patria napríklad Kúty, Sládkovičovo, Pusté Úľany či Galanta. Rozšírenie na celý Trnavský kraj by dochádzajúcim dalo jeden lístok na vlak, prímestský autobus aj MHD, kraj by však musel prispievať do systému, ktorý neriadi, a menej by zostalo na spojenia medzi okresmi.",
+    w: "Veľká časť kraja dochádza za prácou a školou do Bratislavy. Systém, ktorý to pokrýva, je bratislavský (IDS BK) a objednáva ho štát, Bratislavský kraj a mesto Bratislava a už dnes doň patria napríklad Kúty, Sládkovičovo, Pusté Úľany či Galanta. Rozšírenie na celý Trnavský kraj by dochádzajúcim dalo jeden lístok na vlak, prímestský autobus aj MHD, kraj by však musel prispievať do systému, ktorý neriadi, a menej by zostalo na spojenia medzi okresmi.",
     a: { viskupic: "agree", lancaric: "neutral", berenyi: "disagree" }
   },
   {
@@ -482,7 +477,7 @@ window.VAA_DATA.questions.trnava_vuc = [
   },
   {
     t: "Investičný portál",
-    q: "Má kraj zverejniť verejný portál so všetkými projektmi — rozpočtami, termínmi, dodatkami a meškaniami?",
+    q: "Má kraj zverejniť verejný portál so všetkými projektmi, rozpočtami, termínmi, dodatkami a meškaniami?",
     w: "Kraj investuje desiatky miliónov eur ročne do ciest, škôl, sociálnych zariadení a kultúry. Verejný prehľad by uľahčil kontrolu a porovnávanie projektov, zároveň by však zvýšil tlak na úrad a dodávateľov pri každom meškaní či zmene ceny.",
     a: { viskupic: "neutral", lancaric: "agree", berenyi: "agree" }
   },
@@ -494,7 +489,7 @@ window.VAA_DATA.questions.trnava_vuc = [
   },
   {
     t: "Vzťah k vláde",
-    q: "Má župan verejne konfrontovať vládu, keď jej rozhodnutia poškodzujú kraj — aj keď hrozí, že kraj príde o štátne peniaze?",
+    q: "Má predseda kraja verejne konfrontovať vládu, keď jej rozhodnutia poškodzujú kraj a keď hrozí, že kraj príde o štátne a európske peniaze?",
     w: "Kraj závisí od podielových daní a od štátnych rozhodnutí v doprave, školstve, zdravotníctve aj energetike. Ostrý verejný spor môže obhájiť záujmy kraja, ale aj skomplikovať prístup k dotáciám a spoluprácu na spoločných projektoch. Otázka je, či má župan tlačiť verejne, alebo vyjednávať potichu.",
     a: { viskupic: "agree", lancaric: "disagree", berenyi: "neutral" }
   }
