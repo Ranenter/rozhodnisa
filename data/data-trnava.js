@@ -343,255 +343,159 @@ window.VAA_DATA.questions.trnava_primator = [
 ];
 
 // ── Otázky: Župan / VÚC Trnavský kraj ──
+// POZOR: postoje Viskupič/Lančarič/Berényi sú ODHADY (verified:false).
+// Sada bola 14. 7. 2026 prepísaná na pozičné otázky podľa METODIKA-polarizacia.md
+// (gate: 21/25 rozdeľujúcich, 0 jednomyseľných, 4 bez disagree).
+// Pred publikovaním overiť dotazníkom u kandidátov.
 window.VAA_DATA.questions.trnava_vuc = [
   {
-    t: "Cesty a mosty",
-    q: "Má kraj stopnúť menej dôležité projekty, aby dal viac peňazí do ciest a mostov?",
-    w: "Rozpočet Trnavského kraja na rok 2026 má príjmy aj výdavky približne 320 miliónov eur. Kapitálové výdavky sú približne 84 miliónov eur a na opravu ciest a mostov má ísť 31 miliónov eur. Otázka je, či má kraj obmedziť menej nutné investície a sústrediť peniaze na dopravnú infraštruktúru, ktorú ľudia používajú každý deň.",
-    a: {
-      viskupic: "agree",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
+    t: "Smerovanie kraja",
+    q: "Má kraj pokračovať v rozbehnutom investičnom smere (zdravotnícke centrá, nová župná knižnica, cyklotrasy) namiesto toho, aby priority prestavil na cesty, mosty a školy?",
+    w: "Rozpočet kraja na rok 2026 má príjmy aj výdavky 320 miliónov eur, z toho 84 miliónov eur tvoria kapitálové výdavky. Kraj ich smeruje najmä do zdravotníckych a sociálnych zariadení, novej knižnice v Galante a cyklotrás. Kritici tvrdia, že prednosť majú mať opravy ciest, mostov a stredných škôl. Voľby rozhodnú aj o tom, či sa doterajší smer udrží, alebo sa priority výrazne prestavia.",
+    a: { viskupic: "agree", lancaric: "disagree", berenyi: "disagree" }
   },
   {
-    t: "Audit kraja",
-    q: "Má nový župan zadať nezávislý audit veľkých projektov súčasného vedenia kraja?",
-    w: "Trnavský kraj hospodári s rozpočtom približne 320 miliónov eur a kapitálovými výdavkami približne 84 miliónov eur. Pri takom objeme investícií do ciest, mostov, škôl, sociálnych služieb a kultúry je dôležité vedieť, ktoré projekty meškajú, predražujú sa alebo neprinášajú očakávaný efekt. Audit by zvýšil kontrolu, ale môže byť vnímaný aj ako politický útok na súčasné vedenie.",
-    a: {
-      viskupic: "disagree",
-      lancaric: "agree",
-      berenyi: "neutral"
-    }
+    t: "Obchvaty",
+    q: "Má kraj platiť z vlastného rozpočtu projektovú prípravu a výkup pozemkov pre obchvaty, ktoré má stavať štát?",
+    w: "Obchvaty a cesty I. triedy patria štátu, ich príprava však roky viazne — napríklad pri Trnave. Kraj môže z vlastných peňazí zaplatiť projektovú dokumentáciu a výkup pozemkov, aby sa stavba pohla dopredu. Znamená to však, že kraj platí za úlohu štátu a menej mu zostane na cesty II. a III. triedy, ktoré sám vlastní.",
+    a: { viskupic: "disagree", lancaric: "agree", berenyi: "neutral" }
   },
   {
-    t: "Verejná doprava",
-    q: "Má kraj garantovať dopravnú obslužnosť každej obce aj vtedy, keď budú niektoré spoje dlhodobo stratové?",
-    w: "Regionálne autobusy sú dôležité najmä pre ľudí bez auta, študentov a seniorov. V niektorých obciach je spojenie slabé mimo špičky, večer alebo cez víkendy. Garantované minimum spojov by pomohlo ľuďom bez auta, ale zvýšilo by náklady kraja na dopravnú obslužnosť.",
-    a: {
-      viskupic: "agree",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
+    t: "Zdravotnícky kampus",
+    q: "Má kraj dokončiť zdravotnícky kampus v Trnave, aj keď sa tým odložia zdravotnícke centrá a ambulancie v okresoch?",
+    w: "Kraj pripravuje zdravotnícky kampus v Trnave a súčasne nové zdravotnícke centrum v Hlohovci. Kapitálové výdavky rozpočtu 2026 sú 84 miliónov eur a nedajú sa minúť dvakrát. Otázka je, či má prednosť veľký projekt v krajskom meste, alebo rozdrobenie peňazí do menších okresov, kde chýbajú lekári.",
+    a: { viskupic: "agree", lancaric: "disagree", berenyi: "disagree" }
   },
   {
     t: "Veterné parky",
-    q: "Má kraj blokovať veterné parky aj vtedy, keď štát tvrdí, že ich potrebuje pre energetickú bezpečnosť?",
-    w: "Pilotná zóna pre rozvoj veternej energie – Západ počíta s výstavbou samostatných veterných elektrární s maximálnym počtom 69 kusov a výkonom približne 430 MW. Zástancovia hovoria o čistej elektrine a energetickej bezpečnosti, odporcovia o zásahu do krajiny, hluku a tlaku na obce. Otázka je, či má kraj stáť najmä za dotknutými obcami, alebo hľadať kompromis so štátom.",
-    a: {
-      viskupic: "agree",
-      lancaric: "neutral",
-      berenyi: "agree"
-    }
+    q: "Má kraj podporiť veterné parky v štátom vytypovaných akceleračných zónach, ak s tým dotknuté obce súhlasia?",
+    w: "Ministerstvo hospodárstva vytypovalo osem akceleračných zón pre veternú energiu, štyri z nich ležia v Trnavskom kraji: Prietržka – Sobotište, Gbely – Štefanov, Vrakúň – Dolný Štál a Okoč – Zemianska Olča. Vedenie kraja kritizovalo spôsob ich určenia a poukázalo na možný zásah do zdroja pitnej vody a chránených území. Zástancovia hovoria o čistej elektrine, energetickej bezpečnosti a príjmoch pre obce, odporcovia o zásahu do krajiny a tlaku na obyvateľov.",
+    a: { viskupic: "neutral", lancaric: "agree", berenyi: "disagree" }
   },
   {
-    t: "Školy verzus cesty",
-    q: "Má kraj odložiť časť opráv ciest, aby dal viac peňazí do škôl a internátov?",
-    w: "Rozpočet kraja na rok 2026 počíta s 31 miliónmi eur na opravy ciest a mostov. Kraj zároveň plánuje investície do vzdelávania, internátov a obnovy škôl. Otázka je, či majú mať školy prednosť aj vtedy, keď to spomalí opravy dopravnej infraštruktúry.",
-    a: {
-      viskupic: "agree",
-      lancaric: "neutral",
-      berenyi: "neutral"
-    }
+    t: "Sieť stredných škôl",
+    q: "Má kraj rušiť odbory a triedy s dlhodobo nízkym záujmom, aj keď to zúži ponuku vzdelávania v menších mestách?",
+    w: "Kraj je zriaďovateľom 44 stredných škôl, do ktorých chodí viac než 16-tisíc študentov. Počet žiakov klesá, prevádzka poloprázdnych tried však beží ďalej a berie peniaze z rovnakého balíka ako opravy školských budov a internátov. Zúženie siete znižuje náklady, ale v menších mestách obmedzuje výber školy blízko domova.",
+    a: { viskupic: "agree", lancaric: "neutral", berenyi: "disagree" }
   },
   {
-    t: "Župné organizácie",
-    q: "Má nový župan vymeniť vedenia župných organizácií, ak neplnia jasné výsledky?",
-    w: "Kraj riadi školy, kultúrne inštitúcie, sociálne zariadenia a ďalšie organizácie. Výmena vedenia môže priniesť nový výkon a zodpovednosť, ale aj politizáciu úradov a stratu skúseností. Otázka je, či má župan robiť tvrdšie personálne zmeny alebo chrániť stabilitu systému.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "agree",
-      berenyi: "disagree"
-    }
-  },
-  {
-    t: "Veľkí investori",
-    q: "Má kraj odmietnuť investora, ktorý neprispeje na dopravu, školy alebo bývanie?",
-    w: "Veľkí investori prinášajú pracovné miesta, ale zároveň zvyšujú tlak na cesty, autobusy, školy, bývanie a služby. Tvrdé podmienky môžu ochrániť obyvateľov pred nákladmi, ktoré by inak niesli obce a kraj. Na druhej strane môžu investora odradiť a pracovné miesta môžu vzniknúť inde.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
-  },
-  {
-    t: "Mosty",
-    q: "Má kraj najprv opraviť mosty v horšom stave, aj keď sa tým odložia opravy ciest?",
-    w: "Mosty patria medzi priority rozpočtu Trnavského kraja. Zlý stav mosta môže obmedziť alebo úplne prerušiť spojenie obcí, zatiaľ čo opravy ciest vníma širší počet vodičov každý deň. Kraj preto musí rozhodovať, či najprv riešiť najrizikovejšie mostné objekty alebo viac kilometrov bežných ciest.",
-    a: {
-      viskupic: "agree",
-      lancaric: "neutral",
-      berenyi: "agree"
-    }
-  },
-  {
-    t: "Zlučovanie škôl",
-    q: "Má kraj zrušiť alebo zlúčiť slabšie stredné školy, aj keď to poškodí menšie mestá?",
-    w: "Zlučovanie škôl môže znížiť náklady a umožniť lepšie vybavenie odborných učební. Pre menšie mestá však strata školy znamená horšiu dostupnosť, slabší verejný život a väčšie dochádzanie žiakov. Otázka je, či má kraj uprednostniť efektívnejšiu sieť škôl alebo dostupnosť v regiónoch.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "disagree",
-      berenyi: "disagree"
-    }
-  },
-  {
-    t: "Integrovaná doprava",
-    q: "Má kraj rozšíriť jeden lístok pre autobusy, vlaky a mestskú dopravu aj mimo Trnavy?",
-    w: "Integrovaná doprava umožňuje cestovať jednoduchšie medzi mestom, obcami, autobusmi, vlakmi a MHD. Pre cestujúcich je výhodou jeden systém a lepšie prestupy. Pre kraj to však znamená náročnejšiu koordináciu s mestami, dopravcami a železnicou.",
-    a: {
-      viskupic: "agree",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
-  },
-  {
-    t: "Trnava verzus okresy",
-    q: "Má kraj dokončiť veľké projekty v Trnave, aj keď sa tým odložia opravy ciest a škôl v menších okresoch?",
-    w: "Trnavský kraj rozhoduje o investíciách do ciest II. a III. triedy, mostov a krajských stredných škôl vo všetkých siedmich okresoch. Veľké projekty v krajskom meste môžu slúžiť obyvateľom celého regiónu, ich dokončenie však môže odsunúť opravy ciest a škôl v okresoch Dunajská Streda, Galanta, Hlohovec, Piešťany, Senica a Skalica. Otázka je, či má kraj chrániť rozbehnuté veľké projekty v Trnave, alebo dať prednosť každodenným potrebám menších okresov.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "disagree",
-      berenyi: "disagree"
-    }
-  },
-  {
-    t: "Sociálne služby",
-    q: "Má kraj uprednostniť domácu opatrovateľskú starostlivosť pred výstavbou ďalších veľkých zariadení pre seniorov?",
-    w: "Domáca starostlivosť umožňuje seniorom zostať vo vlastnom prostredí a môže byť lacnejšia než pobytové zariadenie. Na druhej strane, nie každú situáciu možno riešiť doma a rodiny často žiadajú nové kapacity domovov sociálnych služieb.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
-  },
-  {
-    t: "Poľnohospodárska pôda",
-    q: "Má kraj odmietať logistické a priemyselné projekty na kvalitnej poľnohospodárskej pôde?",
-    w: "Poľnohospodárska pôda tvorí približne 69,3 % rozlohy Trnavského kraja a stupeň zornenia je najvyšší zo všetkých krajov SR. Priemyselné parky a logistika môžu priniesť prácu a dane, ale zaberajú kvalitnú pôdu, ktorá sa po zastavaní ťažko vracia späť do poľnohospodárstva.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
-  },
-  {
-    t: "Financie",
-    q: "Má kraj odložiť časť nových projektov, ak by ich financovanie znamenalo rast dlhodobých záväzkov?",
-    w: "Rozpočet kraja na rok 2026 je prezentovaný ako vyrovnaný. Veľké opravy škôl, mostov a sociálnych zariadení sa však nedajú urobiť naraz. Úver alebo iné dlhodobé záväzky by zrýchlili opravy, ale znížili rozpočtový priestor v ďalších rokoch.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
-  },
-  {
-    t: "Zdravotníctvo",
-    q: "Má kraj zvýhodniť okresy s nedostatkom lekárov aj za cenu, že menej peňazí pôjde do silnejších centier?",
-    w: "Nie všetky okresy kraja majú rovnakú dostupnosť ambulancií a špecialistov. Cielená podpora slabších okresov by mohla znížiť regionálne rozdiely, ale zároveň by znamenala menší priestor na rozvoj tam, kde je zdravotná sieť už silnejšia.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
-  },
-  {
-    t: "Cyklodoprava",
-    q: "Má kraj míňať viac peňazí na cyklotrasy, keď sú v zlom stave cesty a mosty?",
-    w: "Kraj má v roku 2026 vyčlenených približne 31 miliónov eur na opravu ciest a mostov. Regionálne cyklotrasy môžu pomôcť dochádzaniu aj cestovnému ruchu, ale časť voličov ich vníma ako menej naliehavé než rozbité cesty, mosty alebo autobusová doprava.",
-    a: {
-      viskupic: "agree",
-      lancaric: "neutral",
-      berenyi: "neutral"
-    }
-  },
-  {
-    t: "Nemocnice mimo Trnavy",
-    q: "Má kraj kritizovať štát aj vlastných politických partnerov, ak ohrozia nemocnice v menších okresoch?",
-    w: "V kraji sú ústavné zdravotnícke zariadenia aj mimo Trnavy, napríklad v Dunajskej Strede, Galante, Piešťanoch, Hlohovci, Skalici či Senici. Pre obyvateľov menších okresov je dostupnosť nemocnice otázkou času dojazdu. Otázka je, či má župan otvorene tlačiť aj na politicky nepríjemných partnerov, ak ide o zdravotnú dostupnosť.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
-  },
-  {
-    t: "Noví investori",
-    q: "Má kraj aktívne lákať ďalších veľkých investorov, aj keď región už naráža na dopravu, bývanie a služby?",
-    w: "Trnava a okolie patria medzi silné priemyselné centrá. Veľkí investori prinášajú pracovné miesta, ale zároveň zvyšujú tlak na cesty, autobusy, školy, bývanie a zdravotníctvo. Kraj môže pomáhať najmä cez dopravu, stredné školy a územnú koordináciu, ale ďalší rast môže zhoršiť každodenný život v najviac zaťažených lokalitách.",
-    a: {
-      viskupic: "agree",
-      lancaric: "neutral",
-      berenyi: "neutral"
-    }
-  },
-  {
-    t: "Školy v menších mestách",
-    q: "Má kraj zachovať stredné školy v menších mestách aj pri nižšom počte žiakov?",
-    w: "Stredná škola v menšom meste často drží mladých ľudí v regióne a podporuje miestnu ekonomiku. Na druhej strane, menšie školy môžu byť drahšie na prevádzku a nemusia vedieť ponúknuť rovnaké vybavenie ako väčšie školy. Rozhodnutie je konflikt medzi dostupnosťou a efektivitou.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
-  },
-  {
-    t: "Granty a podujatia",
-    q: "Má kraj obmedziť menšie granty a podujatia, aby zostalo viac peňazí na cesty a mosty?",
-    w: "Kraj podporuje menšie projekty, podujatia, kultúru, šport a komunitné aktivity. Tieto peniaze sú viditeľné v obciach, ale pri rozbitých cestách a mostoch môže časť voličov očakávať tvrdšie sústredenie rozpočtu na základnú infraštruktúru. Otázka je, či má kraj škrtať menšie podpory v prospech veľkých opráv.",
-    a: {
-      viskupic: "disagree",
-      lancaric: "neutral",
-      berenyi: "disagree"
-    }
+    t: "Záchytné parkoviská",
+    q: "Má kraj z vlastných peňazí stavať a prevádzkovať bezplatné záchytné parkoviská v Trnave a okresných mestách?",
+    w: "V kampani zaznel sľub tisícky nových bezplatných parkovacích miest v Trnave a stoviek v každom okresnom meste. Záchytné parkoviská pomáhajú dochádzajúcim prestúpiť na vlak či autobus, ich výstavba a prevádzka by však išla z krajského rozpočtu — hoci pozemky a parkovaciu politiku majú v rukách mestá.",
+    a: { viskupic: "disagree", lancaric: "agree", berenyi: "neutral" }
   },
   {
     t: "Žitný ostrov",
-    q: "Má kraj sprísniť pravidlá pre výstavbu a hospodárenie na Žitnom ostrove aj za cenu obmedzenia niektorých investorov a farmárov?",
-    w: "Žitný ostrov patrí medzi najdôležitejšie zásoby podzemnej vody na Slovensku. Prísnejšia ochrana vody by znížila environmentálne riziká, no mohla by obmedziť časť podnikateľských a poľnohospodárskych zámerov v území.",
-    a: {
-      viskupic: "agree",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
+    q: "Má kraj v územnom pláne zablokovať nové priemyselné a logistické areály nad Žitným ostrovom, aj keď obce prídu o dane a pracovné miesta?",
+    w: "Žitný ostrov je najväčšou zásobárňou podzemnej pitnej vody na Slovensku a leží celý v Trnavskom kraji. Záväzná časť územného plánu VÚC je nástroj, ktorým môže kraj takúto výstavbu obmedziť. Obce v okrese Dunajská Streda však o priemyselné zóny stoja pre dane a pracovné miesta.",
+    a: { viskupic: "agree", lancaric: "neutral", berenyi: "disagree" }
   },
   {
-    t: "Jadrová energetika",
-    q: "Má kraj podporiť plán vlády postaviť nový jadrový blok v Jaslovských Bohuniciach?",
-    w: "Areál Atómových elektrární Bohunice sa nachádza v Trnavskom kraji a jeho existujúce bloky dodávajú približne štvrtinu spotreby elektriny na Slovensku. Vláda pripravuje výstavbu nového bloku s výkonom viac než 1000 MW s odhadovanými nákladmi približne 15 miliárd eur. Zástancovia hovoria o energetickej bezpečnosti, regionálnych pracovných miestach a znížení emisií, odporcovia o cene, jadrovom odpade a dopade na podzemné vody.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "neutral",
-      berenyi: "agree"
-    }
+    t: "Doprava pre študentov",
+    q: "Má kraj zaviesť bezplatné prímestské autobusy pre študentov stredných škôl?",
+    w: "Kraj objednáva prímestskú autobusovú dopravu a v rozpočte 2026 na ňu vyčlenil 28,3 milióna eur. Bezplatné cestovanie pre stredoškolákov by odbremenilo rodiny a podporilo dochádzanie do župných škôl, znamenalo by však ďalšie milióny eur ročne navyše — pri vyrovnanom rozpočte na úkor niečoho iného.",
+    a: { viskupic: "neutral", lancaric: "agree", berenyi: "disagree" }
   },
   {
-    t: "Transparentnosť",
-    q: "Má kraj zverejňovať konečné ceny, meškania a dodatky pri veľkých projektoch v prehľadnej verejnej tabuľke?",
-    w: "Kraj investuje desiatky miliónov eur do ciest, škôl, sociálnych zariadení a kultúry. Verejný prehľad by uľahčil kontrolu projektov, ale zvýšil by tlak na úrad a dodávateľov pri každom meškaní alebo zmene ceny.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "agree",
-      berenyi: "agree"
-    }
+    t: "Tlmočnícke služby",
+    q: "Má kraj zvýšiť platby za tlmočnícke služby pre nepočujúcich, aj keď už dnes financuje najväčší rozsah zo všetkých krajov?",
+    w: "Kraj si v roku 2025 objednal viac než 14-tisíc hodín tlmočenia pre nepočujúcich, čo je najviac spomedzi všetkých krajov; 87 % z toho zabezpečuje asociácia TASPO. Tá koncom roka 2025 protestovala proti výške financovania, kraj odpovedal, že platí najväčší rozsah v najvyššej sadzbe a ponúkol rokovanie. Otázka je, či má kraj pridať ďalšie peniaze, alebo trvať na súčasnom rozsahu.",
+    a: { viskupic: "disagree", lancaric: "agree", berenyi: "agree" }
   },
   {
-    t: "Kultúra",
-    q: "Má kraj chrániť menšie regionálne kultúrne inštitúcie aj vtedy, keď sú drahšie na prevádzku než väčšie centrá?",
-    w: "Menšie galérie, knižnice, osvetové strediská a kultúrne zariadenia držia verejný život aj mimo krajského mesta. Ich prevádzka však býva drahšia na jedného návštevníka než vo väčších centrách.",
-    a: {
-      viskupic: "agree",
-      lancaric: "neutral",
-      berenyi: "agree"
-    }
+    t: "Letisko Piešťany",
+    q: "Má kraj naďalej dotovať Letisko Piešťany a investovať doň krajské peniaze?",
+    w: "Kraj je najväčším akcionárom Letiska Piešťany, ktoré má za sebou roky strát a v minulosti mu hrozila likvidácia. V rozpočte na rok 2026 kraj počíta aj s výstavbou integrovaného parkoviska pri letisku. Zástancovia hovoria o regionálnom rozvoji a cestovnom ruchu, odporcovia o dotovaní prevádzky, ktorú využíva zlomok obyvateľov.",
+    a: { viskupic: "agree", lancaric: "disagree", berenyi: "neutral" }
   },
   {
-    t: "Samosprávy",
-    q: "Má kraj viac viazať dotácie pre obce a mestá na jasné merateľné výsledky?",
-    w: "Kraj podporuje rôzne miestne projekty v doprave, kultúre, školstve aj komunitnom živote. Prísnejšie podmienky by mohli zvýšiť efektivitu, ale menšie samosprávy by mohli mať problém splniť všetky požiadavky.",
-    a: {
-      viskupic: "neutral",
-      lancaric: "agree",
-      berenyi: "neutral"
-    }
+    t: "Okresné nemocnice",
+    q: "Má kraj prevziať a dofinancovať okresnú nemocnicu, ak by jej prevádzkovateľ obmedzil akútnu starostlivosť?",
+    w: "Nemocnice v Dunajskej Strede, Galante, Skalici, Senici či Piešťanoch neprevádzkuje kraj, ale štát alebo súkromní prevádzkovatelia. Pre obyvateľov južných a záhorských okresov je dostupnosť nemocnice otázkou času dojazdu. Prevzatie nemocnice by kraju prinieslo trvalý náklad v desiatkach miliónov eur — a zodpovednosť, ktorú dnes nemá.",
+    a: { viskupic: "neutral", lancaric: "disagree", berenyi: "agree" }
+  },
+  {
+    t: "Cyklotrasy",
+    q: "Má kraj pokračovať v investíciách do cyklomagistrály a cyklotrás, aj keď tie isté peniaze chýbajú na opravy ciest III. triedy?",
+    w: "Kraj stavia úsek Vážskej cyklomagistrály Siladice – Šulekovo a pokračuje v projekte Danube Bike. Do cestnej siete a cyklodopravy má v roku 2026 ísť spolu takmer 30,5 milióna eur. Cyklotrasy pomáhajú dochádzaniu aj turizmu, časť voličov ich však považuje za menej naliehavé než rozbité cesty tretej triedy.",
+    a: { viskupic: "agree", lancaric: "neutral", berenyi: "disagree" }
+  },
+  {
+    t: "Skládka v Seredi",
+    q: "Má kraj cez svoj územný plán zablokovať nové odpadové a priemyselné prevádzky v okolí Serede a Dolnej Stredy, kým sa nezačne sanácia skládky lúženca?",
+    w: "Po Niklovej hute Sereď (výroba 1963 – 1994) zostala medzi Sereďou a Dolnou Stredou skládka lúženca — približne 6 miliónov ton odpadu s ťažkými kovmi, miestami vysoká desiatky metrov. Sanácia je vecou štátu a súkromného vlastníka a roky sa nepohla; obyvatelia žiadali riešenie aj petíciou. Kraj skládku sanovať nemôže, má však v rukách záväznú časť územného plánu — môže v okolí obmedziť ďalšie odpadové a priemyselné prevádzky, čím by však zablokoval aj investície a pracovné miesta.",
+    a: { viskupic: "neutral", lancaric: "agree", berenyi: "disagree" }
+  },
+  {
+    t: "Jazyk menšín",
+    q: "Majú župné školy, sociálne zariadenia a úrad kraja povinne poskytovať služby a dokumenty aj v maďarčine v okresoch s maďarskou menšinou?",
+    w: "V okresoch Dunajská Streda a Galanta žije početná maďarská menšina a kraj je zriaďovateľom tamojších stredných škôl, domovov sociálnych služieb aj kultúrnych inštitúcií. Povinná dvojjazyčnosť by uľahčila prístup k službám, znamenala by však náklady na preklady, tlmočenie a personál — a časť voličov ju vníma ako zbytočnú alebo politickú tému.",
+    a: { viskupic: "neutral", lancaric: "disagree", berenyi: "agree" }
+  },
+  {
+    t: "Daň z vozidiel",
+    q: "Má kraj znížiť daň z motorových vozidiel pre dopravcov a firmy, aj keď tým príde o príjmy na opravy ciest?",
+    w: "Daň z motorových vozidiel je vlastnou daňou samosprávneho kraja a jej sadzby schvaľuje krajské zastupiteľstvo. Nižšia daň by pomohla dopravcom a firmám v regióne, ktorý je silne priemyselný a logistický. Kraj má však v roku 2026 na opravy ciest a mostov 31 miliónov eur a výpadok príjmu by musel niečím nahradiť.",
+    a: { viskupic: "disagree", lancaric: "neutral", berenyi: "agree" }
+  },
+  {
+    t: "Jadro v Bohuniciach",
+    q: "Má sa kraj postaviť za výstavbu nového jadrového bloku v Jaslovských Bohuniciach?",
+    w: "Areál atómových elektrární v Jaslovských Bohuniciach leží v Trnavskom kraji. Vláda pripravuje výstavbu nového bloku s výkonom nad 1000 MW a odhadovanými nákladmi okolo 15 miliárd eur. Zástancovia hovoria o energetickej bezpečnosti a pracovných miestach v regióne, odporcovia o cene, jadrovom odpade a dopade na podzemné vody.",
+    a: { viskupic: "neutral", lancaric: "agree", berenyi: "agree" }
+  },
+  {
+    t: "Stratové spoje",
+    q: "Má kraj zrušiť trvalo prázdne autobusové spoje a peniaze presunúť na posilnenie vyťažených liniek?",
+    w: "Kraj objednáva prímestskú autobusovú dopravu za 28,3 milióna eur ročne. Časť spojov vozí denne len jednotky cestujúcich, inde autobusy v špičke nestíhajú. Zrušenie prázdnych spojov uvoľní peniaze, ale obce, ktoré o ne prídu, zostanú bez spojenia.",
+    a: { viskupic: "agree", lancaric: "neutral", berenyi: "neutral" }
+  },
+  {
+    t: "Školské športoviská",
+    q: "Má kraj otvoriť športoviská pri stredných školách verejnosti a platiť ich prevádzku aj mimo vyučovania?",
+    w: "Kraj vlastní telocvične a ihriská pri 44 stredných školách, ktoré sú popoludní a cez víkendy väčšinou zatvorené. Otvorenie verejnosti by dalo deťom a komunitám priestor na šport bez novej výstavby, znamenalo by však náklady na správcov, energie a údržbu a zodpovednosť za škody.",
+    a: { viskupic: "agree", lancaric: "agree", berenyi: "neutral" }
+  },
+  {
+    t: "Dochádzanie do Bratislavy",
+    q: "Má kraj prednostne platiť za integráciu s bratislavským dopravným systémom (jeden lístok na vlak, autobus a MHD v Bratislave), aj keď to znamená menej peňazí na spoje vnútri kraja?",
+    w: "Veľká časť kraja dochádza za prácou a školou do Bratislavy. Systém, ktorý to pokrýva, je bratislavský (IDS BK) — objednáva ho štát, Bratislavský kraj a mesto Bratislava — a už dnes doň patria napríklad Kúty, Sládkovičovo, Pusté Úľany či Galanta. Rozšírenie na celý Trnavský kraj by dochádzajúcim dalo jeden lístok na vlak, prímestský autobus aj MHD, kraj by však musel prispievať do systému, ktorý neriadi, a menej by zostalo na spojenia medzi okresmi.",
+    a: { viskupic: "agree", lancaric: "neutral", berenyi: "disagree" }
+  },
+  {
+    t: "Úver a dlh",
+    q: "Má kraj zobrať ďalší úver na zrýchlenie opráv mostov a škôl, keď je jeho zadlženosť už okolo 30 %?",
+    w: "Zadlženosť kraja sa ku koncu roka 2025 očakávala na úrovni 29,8 %. Schodok kapitálového rozpočtu 2026 je krytý aj úverovými zdrojmi a peňažnými fondmi. Ďalší úver by zrýchlil opravy mostov, škôl a sociálnych zariadení, ale zúžil by priestor rozpočtu v ďalších rokoch.",
+    a: { viskupic: "agree", lancaric: "neutral", berenyi: "disagree" }
+  },
+  {
+    t: "Dotácie a granty",
+    q: "Má kraj zrušiť dotačné schémy a participatívny rozpočet a tieto peniaze presunúť na cesty a mosty?",
+    w: "Kraj rozdeľuje peniaze cez dotačné schémy pre obce, kultúru a šport a cez participatívny rozpočet Tvoríme kraj, o ktorom hlasujú obyvatelia. Tieto výdavky sú v obciach viditeľné, tvoria však zlomok rozpočtu popri 31 miliónoch eur na cesty a mosty. Otázka je, či ich v úsporných časoch škrtnúť, alebo brániť.",
+    a: { viskupic: "disagree", lancaric: "disagree", berenyi: "agree" }
+  },
+  {
+    t: "Trnava verzus okresy",
+    q: "Má kraj rozdeľovať investície do ciest a škôl podľa počtu obyvateľov okresov, aj keď to spomalí veľké projekty v krajskom meste?",
+    w: "Kraj tvorí sedem okresov: Trnava, Dunajská Streda, Galanta, Hlohovec, Piešťany, Senica a Skalica. Veľké projekty v Trnave môžu slúžiť celému regiónu, ale ich financovanie odsúva opravy ciest a škôl inde. Pevný kľúč podľa počtu obyvateľov by rozdelenie spravil predvídateľným, zároveň by však znemožnil sústrediť peniaze na jednu veľkú investíciu.",
+    a: { viskupic: "disagree", lancaric: "agree", berenyi: "agree" }
+  },
+  {
+    t: "Investičný portál",
+    q: "Má kraj zverejniť verejný portál so všetkými projektmi — rozpočtami, termínmi, dodatkami a meškaniami?",
+    w: "Kraj investuje desiatky miliónov eur ročne do ciest, škôl, sociálnych zariadení a kultúry. Verejný prehľad by uľahčil kontrolu a porovnávanie projektov, zároveň by však zvýšil tlak na úrad a dodávateľov pri každom meškaní či zmene ceny.",
+    a: { viskupic: "neutral", lancaric: "agree", berenyi: "agree" }
+  },
+  {
+    t: "Vedenie župných organizácií",
+    q: "Majú sa riaditelia župných škôl, sociálnych zariadení a kultúrnych inštitúcií vyberať výlučne otvoreným výberovým konaním s verejným vypočutím, bez straníckych nominácií?",
+    w: "Kraj obsadzuje vedenie desiatok stredných škôl, domovov sociálnych služieb, galérií, knižníc a krajských podnikov. Otvorené výberové konania s verejným vypočutím by obmedzili politické nominácie, znížili by však možnosť župana rýchlo vymeniť ľudí, ktorí neplnia výsledky.",
+    a: { viskupic: "disagree", lancaric: "agree", berenyi: "neutral" }
+  },
+  {
+    t: "Vzťah k vláde",
+    q: "Má župan verejne konfrontovať vládu, keď jej rozhodnutia poškodzujú kraj — aj keď hrozí, že kraj príde o štátne peniaze?",
+    w: "Kraj závisí od podielových daní a od štátnych rozhodnutí v doprave, školstve, zdravotníctve aj energetike. Ostrý verejný spor môže obhájiť záujmy kraja, ale aj skomplikovať prístup k dotáciám a spoluprácu na spoločných projektoch. Otázka je, či má župan tlačiť verejne, alebo vyjednávať potichu.",
+    a: { viskupic: "agree", lancaric: "disagree", berenyi: "neutral" }
   }
 ];
