@@ -220,6 +220,7 @@ body.t-pe-v{--ca:#CC3322;--cb:#f5f5f5;--cc:#8B1A0A;--cglow:rgba(204,51,34,.08)}
 .t-tt-v{--ca:#1A237E;--cb:#FFD700;--cc:#CC0000;--cglow:rgba(26,35,126,.08)}
 .t-tn-p{--ca:#003580;--cb:#FFD700;--cc:#C0C0C0;--cglow:rgba(0,53,128,.08)}
 .t-tn-v{--ca:#4A148C;--cb:#FFD700;--cc:#003580;--cglow:rgba(74,20,140,.08)}
+.t-ma-p{--ca:#C1121F;--cb:#E8E8E8;--cc:#8B0000;--cglow:rgba(193,18,31,.08)}
 
 /* ── Reset ── */
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -1234,21 +1235,21 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
           <div class="card-crest"></div>
           <span class="cn">Poprad</span><span class="cs">Brána do Tatier</span><span class="cpop">50 000 obyvateľov</span>
         </button>
-        <button class="city-card" style="--c1:#0F52BA;--c2:#F5F5F5" onclick="VAA.pickLocation('michalovce',this)">
+        <button class="city-card" style="--c1:#C1121F;--c2:#E8E8E8" onclick="VAA.pickLocation('martin',this)">
           <div class="card-crest"></div>
-          <span class="cn">Michalovce</span><span class="cs">Srdce Zemplína</span><span class="cpop">36 000 obyvateľov</span>
+          <span class="cn">Martin</span><span class="cs">Mesto Matice slovenskej</span><span class="cpop">49 997 obyvateľov</span>
         </button>
         <button class="city-card" style="--c1:#2E7D32;--c2:#f5f5f5" onclick="VAA.pickLocation('snv',this)">
           <div class="card-crest"></div>
           <span class="cn">Spišská Nová Ves</span><span class="cs">Brána do Slovenského raja</span><span class="cpop">37 000 obyvateľov</span>
         </button>
+        <button class="city-card" style="--c1:#0F52BA;--c2:#F5F5F5" onclick="VAA.pickLocation('michalovce',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Michalovce</span><span class="cs">Srdce Zemplína</span><span class="cpop">36 000 obyvateľov</span>
+        </button>
         <button class="city-card locked" tabindex="-1" aria-disabled="true">
           <div class="card-crest"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Tren%C4%8D%C3%ADn.svg" width="100%" height="100%" style="object-fit:contain" alt="Trenčín" loading="lazy"></div>
           <span class="cn">Trenčín</span><span class="cs">Mesto módy - čoskoro</span><span class="cpop">55 000 obyvateľov</span>
-        </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <div class="card-crest"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Martin.svg" width="100%" height="100%" style="object-fit:contain" alt="Martin" loading="lazy"></div>
-          <span class="cn">Martin</span><span class="cs">Mesto Matice slovenskej - čoskoro</span><span class="cpop">52 000 obyvateľov</span>
         </button>
       </div>
 
@@ -1642,6 +1643,10 @@ window.CITY_FINANCE = {
     rozpocet: 60, rozNa: 1622, dlh: 30,
     zdroj: 'Rozpočet mesta Spišská Nová Ves 2026; dlh podľa INEKO 2024 (odhad)'
   },
+  martin_primator: {
+    rozpocet: 72, rozNa: 1440, dlh: 35,
+    zdroj: 'Odhad 2026 (rozpočet mesta Martin 2024 = 68,9 mil. €, rastúci trend); prepočet na 49 997 obyv.; dlh podľa INEKO (odhad)'
+  },
 };
 
 // ── City display metadata ──
@@ -1657,6 +1662,7 @@ window.CITY_META = {
   poprad:    {name:'Poprad',      primator:'Voľba primátora',    vuc:'',                  thP:'t-pp-p',thV:''},
   michalovce:{name:'Michalovce',  primator:'Voľba primátora',    vuc:'',                  thP:'t-mi-p',thV:''},
   snv:       {name:'Spišská Nová Ves',primator:'Voľba primátora', vuc:'',                  thP:'t-sn-p',thV:''},
+  martin:    {name:'Martin',       primator:'Voľba primátora',    vuc:'',                  thP:'t-ma-p',thV:''},
 };
 
 // ── Candidates ──
@@ -2003,6 +2009,7 @@ const VAA = (function(){
       michalovce_primator: {pct:38.2,voters:11655,eligible:30500,label:'Michalovce \u2013 prim\u00e1tor 2022', winnerPct:16.6},
     poprad_primator:     {pct:38.1,voters:15724,eligible:41250,label:'Poprad \u2013 prim\u00e1tor 2022', winnerPct:23.3},
     snv_primator:        {pct:32.4,voters:9345, eligible:28850,label:'Spi\u0161sk\u00e1 Nov\u00e1 Ves \u2013 prim\u00e1tor 2022', winnerPct:19.2},
+    martin_primator:     {pct:38.2,voters:16543,eligible:43340,label:'Martin \u2013 prim\u00e1tor 2022', winnerPct:25.8},
   };
 
   function _financeSection(city, type){
