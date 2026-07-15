@@ -5,11 +5,11 @@ window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 
 // ── Kandidáti: Primátor Martina ──
 window.VAA_DATA.candidates['martin_primator'] = [
-  {id:'uhercik', name:'Ing. Michal Uherčík', party:'SaS / PS / KDH / Hnutie Slovensko / Demokrati / OKS', color:'#2196F3', url:'https://www.aktuality.sk/clanok/kQaY7Y2/volby-2026-v-martine-ohlasili-prveho-kandidata-na-primatora-stavila-nanho-cela-opozicia/'},
+  {id:'uhercik', name:'Michal Uherčík', party:'SaS / PS / KDH / Hnutie Slovensko / Demokrati / OKS', color:'#2196F3', url:'http://www.uhercik.sk'},
   {id:'danko', name:'Ján Danko', party:'Nezávislý', color:'#4caf50', url:'https://www.martin.sk/jan-danko/o-1240'},
   {id:'turzo', name:'Matej Turzo', party:'Nezávislý', color:'#ff9800', url:'https://www.matejturzo.sk/'},
-  {id:'ftorek', name:'Milan Ftorek', party:'Reštart Martina / nezávislý', color:'#9c27b0', url:'https://www.restartmartina.sk/'},
-  {id:'hubacek', name:'Igor Hubáček', party:'Republika / nezávislý', color:'#795548', url:''}
+  {id:'ftorek', name:'Milan Ftorek', party:'Nezávislý / Reštart Martina', color:'#9c27b0', url:'https://www.restartmartina.sk/'},
+  {id:'hubacek', name:'Igor Hubáček', party:'Nezávislý / Republika', color:'#795548', url:'https://igorhubacek.sk/'}
 ];
 
 // ── Otázky: Primátor Martina ──
