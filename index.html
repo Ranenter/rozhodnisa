@@ -1231,6 +1231,10 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
           <div class="card-crest"></div>
           <span class="cn">Trnava</span><span class="cs">Malý Rím</span><span class="cpop">63 000 obyvateľov</span>
         </button>
+        <button class="city-card" style="--c1:#003580;--c2:#FFD700" onclick="VAA.pickLocation('trencin',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Trenčín</span><span class="cs">Mesto módy</span><span class="cpop">55 000 obyvateľov</span>
+        </button>
         <button class="city-card" style="--c1:#B8860B;--c2:#003366" onclick="VAA.pickLocation('poprad',this)">
           <div class="card-crest"></div>
           <span class="cn">Poprad</span><span class="cs">Brána do Tatier</span><span class="cpop">50 000 obyvateľov</span>
@@ -1246,10 +1250,6 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
         <button class="city-card" style="--c1:#0F52BA;--c2:#F5F5F5" onclick="VAA.pickLocation('michalovce',this)">
           <div class="card-crest"></div>
           <span class="cn">Michalovce</span><span class="cs">Srdce Zemplína</span><span class="cpop">36 000 obyvateľov</span>
-        </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <div class="card-crest"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_Arms_of_Tren%C4%8D%C3%ADn.svg" width="100%" height="100%" style="object-fit:contain" alt="Trenčín" loading="lazy"></div>
-          <span class="cn">Trenčín</span><span class="cs">Mesto módy - čoskoro</span><span class="cpop">55 000 obyvateľov</span>
         </button>
       </div>
 
@@ -1282,8 +1282,9 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
           <div class="card-crest"></div>
           <span class="cn">Trnavský</span><span class="cs">TTSK</span><span class="cpop">622 000 obyvateľov</span>
         </button>
-        <button class="city-card locked" tabindex="-1" aria-disabled="true">
-          <span class="cn">Trenčiansky</span><span class="cs">čoskoro · TSK</span><span class="cpop">566 000 obyvateľov</span>
+        <button class="city-card" style="--c1:#4A148C;--c2:#FFD700" onclick="VAA.pickLocation('trencin',this)">
+          <div class="card-crest"></div>
+          <span class="cn">Trenčiansky</span><span class="cs">TSK</span><span class="cpop">566 000 obyvateľov</span>
         </button>
       </div>
 
@@ -1646,6 +1647,14 @@ window.CITY_FINANCE = {
   martin_primator: {
     rozpocet: 72, rozNa: 1440, dlh: 35,
     zdroj: 'Odhad 2026 (rozpočet mesta Martin 2024 = 68,9 mil. €, rastúci trend); prepočet na 49 997 obyv.; dlh podľa INEKO (odhad)'
+  },
+  trencin_primator: {
+    rozpocet: 58, rozNa: 1055, dlh: 30,
+    zdroj: 'ODHAD – nahradiť oficiálnym rozpočtom mesta Trenčín; dlh podľa INEKO (odhad)'
+  },
+  trencin_vuc: {
+    rozpocet: 290, rozNa: 512, dlh: 30,
+    zdroj: 'ODHAD – nahradiť oficiálnym rozpočtom TSK; zadlženosť (odhad)'
   },
 };
 
