@@ -30,7 +30,13 @@ Odpovedz na 25 otázok a zisti, s ktorým kandidátom sa najviac zhoduješ. Odpo
 | Žilina | ✅ | ✅ |
 | Banská Bystrica | ✅ | ✅ |
 | Nitra | ✅ | ✅ |
-| Trnava, Trenčín | čoskoro | čoskoro |
+| Trnava | ✅ | ✅ | 
+| Trenčín | ✅ | ✅ |
+| Poprad | ✅ | ✅ |
+| Martin | ✅ | ✅ |
+| Trenčín | ✅ | ✅ | 
+| Spišská Nová Ves | ✅ | ✅ |
+| Michalovce | ✅ | ✅ |
 
 ---
 
