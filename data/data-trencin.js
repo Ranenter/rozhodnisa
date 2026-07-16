@@ -1,324 +1,322 @@
 // ══ DATA: TRENČÍN ══
+// Postoje kandidátov sú NAŠTUDOVANÉ (nie odhady). Otázky prešli readability passom 16.7.2026.
+// 2 kandidáti/rasa (pole ešte nie je finálne — očakáva sa tretí kandidát na primátora).
+// Pozn.: pri 2 kandidátoch a poctivých postojoch nemusí sada dosiahnuť 60% rozdeľujúcich;
+// VUC otázky Q11 (integrovaná doprava), Q18 (úver) a Q20 (vietor) kandidátov nerozlišujú.
 window.VAA_DATA = window.VAA_DATA || {};
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 
 // ── Kandidáti: Primátor Trenčína ──
 window.VAA_DATA.candidates['trencin_primator'] = [
-  {id:'forgac', name:'Ján Forgáč', party:'Nezávislý', color:'#1976d2', url:'https://janforgac.sk/'},
-  {id:'micega', name:'Miloš Mičega', party:'Nezávislý', color:'#9c27b0', url:'https://www.micega.sk/'}
+  {"id":"forgac","name":"Ján Forgáč","party":"Nezávislý","color":"#1976d2","url":"https://janforgac.sk/"},
+  {"id":"micega","name":"Miloš Mičega","party":"Nezávislý","color":"#9c27b0","url":"https://www.micega.sk/"}
 ];
 
-// ── Kandidáti: Predseda Trenčianskeho kraja ──
-window.VAA_DATA.candidates['trenciansky_vuc'] = [
-  {id:'baska', name:'Jaroslav Baška', party:'Smer-SD / Hlas-SD / SNS / Republika', color:'#c62828', url:'https://www.vaszupan.sk/'},
-  {id:'svitkova', name:'Natália Svítková', party:'Demokrati / PS / SaS / KDH / Hnutie Slovensko / OKS', color:'#1976d2', url:'https://nataliasvitkova.sk/'}
+// ── Kandidáti: Predseda TSK ──
+window.VAA_DATA.candidates['trencin_vuc'] = [
+  {"id":"baska","name":"Jaroslav Baška","party":"Smer-SD / Hlas-SD / SNS / Republika","color":"#c62828","url":"https://www.vaszupan.sk/"},
+  {"id":"svitkova","name":"Natália Svítková","party":"Demokrati / PS / SaS / KDH / Hnutie Slovensko / OKS","color":"#1976d2","url":"https://nataliasvitkova.sk/"}
 ];
 
 // ── Otázky: Primátor Trenčína ──
 window.VAA_DATA.questions.trencin_primator = [
   {
-    t:'Mosty a doprava',
-    q:'Má mať príprava nového cestného mosta cez Váh prednosť pred inými veľkými mestskými projektmi?',
-    w:'Trenčín dlhodobo rieši dopravné zaťaženie a kapacitu prepojenia cez Váh. Nový most by mohol zlepšiť dopravu v meste, ale znamenal by, že časť peňazí, prípravy a politickej energie nepôjde na iné veľké projekty.',
-    a:{forgac:'neutral', micega:'agree'}
+    t: "Kontinuita po Rybníčkovi",
+    q: "Má Trenčín po odchode Richarda Rybníčka pokračovať v podobnom štýle vedenia, alebo výrazne zmeniť priority?",
+    w: "Rybníček viedol mesto vyše desať rokov. Otvára sa spor, či zachovať kontinuitu projektov, alebo využiť zmenu na obrat priorít.",
+    a: {"forgac":"agree","micega":"disagree"}
   },
   {
-    t:'Mosty a doprava',
-    q:'Má Trenčín najprv investovať do starého mosta a základnej dopravnej infraštruktúry, aj keby sa odložili nové reprezentatívne projekty?',
-    w:'Mesto stojí pred voľbou medzi údržbou kľúčovej infraštruktúry a novými projektmi, ktoré menia vzhľad a image Trenčína. Opravy mosta a dopravy sú menej viditeľné, no pre fungovanie mesta môžu byť naliehavejšie.',
-    a:{forgac:'neutral', micega:'agree'}
+    t: "Parkovanie",
+    q: "Má Trenčín rozšíriť platené parkovacie zóny, aby zvládol tlak áut v centre a na sídliskách?",
+    w: "Regulácia uvoľní miesta pre rezidentov, no prináša viac poplatkov a pravidiel pre domácnosti, návštevy aj firmy.",
+    a: {"forgac":"agree","micega":"disagree"}
   },
   {
-    t:'Parkovanie',
-    q:'Má Trenčín rozšíriť regulované parkovanie a platené zóny, ak bez toho nevie zvládnuť tlak áut v centre a na sídliskách?',
-    w:'Regulované parkovanie môže uvoľniť miesta pre rezidentov a zlepšiť poriadok v preťažených uliciach. Zároveň však znamená viac poplatkov a pravidiel pre domácnosti, návštevy aj podnikateľov.',
-    a:{forgac:'agree', micega:'disagree'}
+    t: "EHMK 2026",
+    q: "Má mesto aj po roku 2026 dávať na kultúru aspoň 5 % bežných výdavkov, aj na úkor ciest a sídlisk?",
+    w: "Rok Európskeho hlavného mesta kultúry priniesol nové priestory a záväzky. Pevných 5 % dá kultúre istotu, no menej zostane na cesty, parkovanie a sídliská.",
+    a: {"forgac":"agree","micega":"disagree"}
   },
   {
-    t:'Parkovanie',
-    q:'Má ísť väčšina výnosov z parkovania priamo späť do dopravy, ciest a parkovacích kapacít?',
-    w:'Ak mesto vyberá peniaze za parkovanie, časť obyvateľov očakáva, že ich má viditeľne vracať do dopravných riešení. Druhý pohľad je, že príjmy mesta majú byť čo najvoľnejšie použiteľné podľa aktuálnych potrieb.',
-    a:{forgac:'agree', micega:'agree'}
+    t: "Bývanie",
+    q: "Má Trenčín stavať mestské nájomné byty aj za cenu vyššieho zadlženia?",
+    w: "Nájomné byty pomôžu mladým rodinám a ľuďom bez šance na komerčné bývanie. Vyžadujú však veľké investície a dlh alebo presun z iných priorít.",
+    a: {"forgac":"agree","micega":"neutral"}
   },
   {
-    t:'Doprava a verejný priestor',
-    q:'Má mať v Trenčíne prednosť plynulosť áut pred pešími zónami, cyklotrasami a zmenšovaním priestoru pre autá?',
-    w:'Každé dopravné rozhodnutie zvýhodní jednu skupinu na úkor druhej. Viac priestoru pre autá zvyšuje plynulosť dopravy, no oslabuje pešie trasy, bezpečnosť a kvalitu verejného priestoru.',
-    a:{forgac:'disagree', micega:'agree'}
+    t: "Mosty a doprava",
+    q: "Má mesto sústrediť peniaze a prípravu na nové cestné prepojenie cez Váh, aj keď sa tým odložia projekty na sídliskách?",
+    w: "Nový most cez Váh by odľahčil dopravu. Príprava, pozemky a kapacita úradu však potom chýbajú pri menších investíciách v mestských častiach.",
+    a: {"forgac":"neutral","micega":"agree"}
   },
   {
-    t:'Cyklodoprava',
-    q:'Má mesto ďalej budovať cyklotrasy aj na úkor časti parkovania alebo priestoru pre autá?',
-    w:'Cyklotrasy môžu pomôcť bezpečnosti a ponúknuť inú možnosť dopravy než auto. V uliciach s obmedzeným priestorom však často znamenajú konflikt s parkovaním alebo s dopravou áut.',
-    a:{forgac:'agree', micega:'disagree'}
+    t: "Výstavba a developeri",
+    q: "Má mesto obmedziť novú výstavbu tam, kde developer nezabezpečí cesty, parkovanie či miesta v školách?",
+    w: "Nové byty pomáhajú rastu, ale zaťažujú cesty, parkovanie a školy. Prísnejšie podmienky chránia obyvateľov, no môžu spomaliť výstavbu a zdražiť bývanie.",
+    a: {"forgac":"neutral","micega":"agree"}
   },
   {
-    t:'EHMK 2026',
-    q:'Má Trenčín po roku Európskeho hlavného mesta kultúry ďalej držať vysoké výdavky na kultúru, aj keď ľudia chcú viac peňazí na cesty a sídliská?',
-    w:'Európske hlavné mesto kultúry môže mestu priniesť značku, turistov aj dlhodobé kultúrne projekty. Po roku 2026 však príde otázka, či v tom pokračovať aj za cenu menšieho priestoru pre bežné mestské služby.',
-    a:{forgac:'agree', micega:'disagree'}
+    t: "Sídliská vs. centrum",
+    q: "Má ísť viac investícií z centra do sídlisk a okrajových častí Trenčína?",
+    w: "Jedni chcú silné centrum a veľké projekty, druhí viac peňazí na chodníky, vnútrobloky a ihriská v obytných štvrtiach. Spor imidžu a každodenného života.",
+    a: {"forgac":"neutral","micega":"agree"}
   },
   {
-    t:'Sídliská vs. centrum',
-    q:'Má ísť viac investícií z centra a reprezentatívnych projektov do sídlisk a okrajových častí Trenčína?',
-    w:'Časť obyvateľov chce silné centrum a veľké mestské projekty, iní očakávajú viac peňazí na chodníky, vnútrobloky, parkovanie a ihriská v obytných štvrtiach. Je to spor medzi imidžom mesta a každodennou kvalitou života.',
-    a:{forgac:'neutral', micega:'agree'}
+    t: "Cyklodoprava",
+    q: "Má mesto stavať oddelené cyklotrasy aj tam, kde ubudnú parkovacie miesta alebo jazdný pruh?",
+    w: "Oddelené cyklotrasy zvyšujú bezpečnosť a ponúkajú alternatívu k autu. V úzkych uliciach však znamenajú menej parkovania alebo kapacity pre autá.",
+    a: {"forgac":"agree","micega":"disagree"}
   },
   {
-    t:'Bývanie',
-    q:'Má Trenčín stavať mestské nájomné byty aj za cenu vyššieho zadlženia?',
-    w:'Mestské nájomné bývanie môže pomôcť mladým rodinám, pracovníkom služieb aj ľuďom, ktorí si nevedia dovoliť komerčné bývanie. Vyžaduje však veľké investície a dlhodobé zadlženie alebo presun peňazí z iných priorít.',
-    a:{forgac:'agree', micega:'neutral'}
+    t: "Dane a poplatky",
+    q: "Má Trenčín zvýšiť miestne dane a poplatky, ak inak nezaplatí základné služby a údržbu?",
+    w: "Bez vyšších príjmov je ťažšie financovať opravy a služby. Zvýšenie daní je však nepopulárne a zdvíha náklady domácnostiam aj firmám.",
+    a: {"forgac":"neutral","micega":"disagree"}
   },
   {
-    t:'Výstavba a developeri',
-    q:'Má mesto stopnúť alebo obmedziť projekty developerov tam, kde príliš zaťažujú dopravu a školy, aj keby to znamenalo menej nových bytov?',
-    w:'Nová výstavba prináša byty a rast mesta, ale zároveň zvyšuje tlak na infraštruktúru. Mesto si musí vybrať medzi rýchlejšou výstavbou a prísnejšou ochranou kvality života v už zastavaných častiach.',
-    a:{forgac:'neutral', micega:'agree'}
+    t: "Šport",
+    q: "Má mesto uprednostniť mládežnícky šport a menšie ihriská pred veľkými drahými športovými projektmi?",
+    w: "Veľké projekty prinášajú prestíž, no väčšina ľudí využíva bežné ihriská a haly v mestských častiach. Spor reprezentácie a každodenného športu.",
+    a: {"forgac":"neutral","micega":"agree"}
   },
   {
-    t:'Šport',
-    q:'Má mesto uprednostniť mládežnícky šport a menšie športoviská pred drahými veľkými športovými projektmi?',
-    w:'Veľké športové projekty prinášajú prestíž a viditeľnosť, no veľká časť obyvateľov využíva skôr bežné ihriská, haly a športoviská v mestských častiach. Ide o konflikt medzi reprezentáciou mesta a každodenným športom pre deti a rodiny.',
-    a:{forgac:'neutral', micega:'agree'}
+    t: "Zeleň a klíma",
+    q: "Majú mať pri obnove ulíc a námestí prednosť stromy a zeleň pred počtom parkovacích miest?",
+    w: "Stromy a tieň pomáhajú proti prehrievaniu mesta. V hustých uliciach to však často znamená menej parkovacích miest.",
+    a: {"forgac":"agree","micega":"neutral"}
   },
   {
-    t:'Zeleň a klíma',
-    q:'Majú mať pri rekonštrukciách ulíc a námestí prednosť stromy a zeleň pred počtom parkovacích miest?',
-    w:'Viac stromov a tieňa pomáha prehrievaniu mesta aj kvalite verejného priestoru. V hustejších uliciach to však často znamená menej parkovacích miest alebo zložitejšie dopravné riešenia.',
-    a:{forgac:'agree', micega:'neutral'}
+    t: "Mestská polícia",
+    q: "Má Trenčín výrazne zvýšiť počet mestských policajtov a kamier aj za cenu vyšších výdavkov?",
+    w: "Silnejší dohľad zvýši pocit bezpečia a poriadok. Ide však o trvalé výdavky, ktoré potom chýbajú inde.",
+    a: {"forgac":"neutral","micega":"agree"}
   },
   {
-    t:'Bezpečnosť',
-    q:'Má Trenčín rozšíriť zóny 30, vyvýšené priechody a spomaľovacie prvky v obytných zónach?',
-    w:'Takéto opatrenia zvyšujú bezpečnosť chodcov, detí a seniorov. Časť vodičov ich však vníma ako zhoršenie plynulosti dopravy, vyšší hluk a menej komfortu.',
-    a:{forgac:'agree', micega:'neutral'}
+    t: "Mestský majetok",
+    q: "Má mesto prenajímať obchodné priestory miestnym prevádzkam pod trhovú cenu, aj keď tým príde o príjmy?",
+    w: "Zvýhodnené nájmy udržia lokálne obchody v centre. Mesto však získa menej peňazí a musí jasne určiť, kto má na podporu nárok.",
+    a: {"forgac":"neutral","micega":"agree"}
   },
   {
-    t:'Transparentnosť',
-    q:'Má mesto zverejňovať konečné ceny, dodatky a meškania veľkých projektov v jednej verejnej tabuľke?',
-    w:'Takýto prehľad by verejnosti uľahčil kontrolu hospodárenia. Zároveň by vytváral vyšší tlak na vedenie mesta pri každom posune termínu alebo navýšení ceny.',
-    a:{forgac:'agree', micega:'agree'}
+    t: "Participatívny rozpočet",
+    q: "Má Trenčín vyčleniť pevnú časť rozpočtu, o ktorej priamo rozhodnú obyvatelia hlasovaním?",
+    w: "Participatívny rozpočet zvýši zapojenie ľudí. Kritici sa boja, že odborné priority ustúpia menším, ale populárnym témam.",
+    a: {"forgac":"agree","micega":"neutral"}
   },
   {
-    t:'Mestský majetok',
-    q:'Má Trenčín zverejniť jasné pravidlá prenájmu mestských priestorov a majetku?',
-    w:'Mestské priestory môžu slúžiť podnikaniu, službám aj komunitám. Jasné pravidlá by znížili priestor pre nejasné rozhodovanie, no zároveň by obmedzili politickú flexibilitu pri jednotlivých prípadoch.',
-    a:{forgac:'agree', micega:'agree'}
+    t: "Sociálne služby",
+    q: "Má Trenčín posilniť terénne služby a podporu seniorov aj za cenu menších investícií do verejného priestoru?",
+    w: "Starnutie zvyšuje tlak na opatrovanie a služby pre seniorov. Ich posilnenie však uberie peniaze iným mestským prioritám.",
+    a: {"forgac":"agree","micega":"neutral"}
   },
   {
-    t:'Mestská polícia',
-    q:'Má Trenčín posilniť mestskú políciu a dohľad vo verejnom priestore aj za cenu vyšších bežných výdavkov?',
-    w:'Silnejší dohľad môže zvýšiť pocit bezpečia a pomôcť riešiť poriadok, dopravu a vandalizmus. Na druhej strane ide o pravidelné výdavky, ktoré potom chýbajú inde.',
-    a:{forgac:'neutral', micega:'agree'}
+    t: "Bezpečnosť",
+    q: "Má Trenčín rozšíriť zóny 30, vyvýšené priechody a spomaľovače v obytných zónach?",
+    w: "Zvyšujú bezpečnosť chodcov, detí a seniorov. Časť vodičov ich vníma ako zdržanie, hluk a menší komfort.",
+    a: {"forgac":"agree","micega":"neutral"}
   },
   {
-    t:'Podnikanie',
-    q:'Má mesto viac zvýhodniť malé miestne prevádzky pred veľkými developermi a reťazcami?',
-    w:'Malé prevádzky držia život v meste a podporujú lokálnu ekonomiku. Veľké reťazce a veľké projekty však môžu priniesť vyšší objem investícií, pracovných miest a daní.',
-    a:{forgac:'neutral', micega:'agree'}
+    t: "Veľkí zamestnávatelia",
+    q: "Má mesto odmietnuť veľkú investíciu, ak investor odmietne prispieť na dopravu a služby, aj za cenu straty pracovných miest?",
+    w: "Investor prinesie prácu a dane, no zaťaží cesty, MHD a bývanie. Tvrdá podmienka chráni rozpočet, ale investor môže odísť inam.",
+    a: {"forgac":"neutral","micega":"agree"}
   },
   {
-    t:'Participácia',
-    q:'Má vedenie mesta robiť pravidelné verejné stretnutia v mestských častiach a zverejňovať, čo z podnetov reálne splnilo?',
-    w:'Silnejšia komunikácia môže zvýšiť dôveru a tlak na riešenie lokálnych problémov. Zároveň zvyšuje administratívu a núti vedenie mesta verejne vysvetľovať aj nepopulárne rozhodnutia.',
-    a:{forgac:'agree', micega:'agree'}
+    t: "Participácia",
+    q: "Má mesto zastaviť veľký projekt v mestskej časti, ak ho v miestnom hlasovaní odmietne väčšina zúčastnených?",
+    w: "Miestne hlasovanie dá ľuďom väčší vplyv na okolie. Môže však zastaviť projekt schválený zastupiteľstvom, aj keď hlasuje len menšina obyvateľov.",
+    a: {"forgac":"disagree","micega":"agree"}
   },
   {
-    t:'Participatívny rozpočet',
-    q:'Má Trenčín vyčleniť časť peňazí na participatívny rozpočet, o ktorom budú priamo hlasovať obyvatelia?',
-    w:'Participatívny rozpočet môže zvýšiť zapojenie obyvateľov do rozhodovania. Kritici však upozorňujú, že odborné priority mesta sa tým môžu podriadiť hlasovaniu o menších, ale populárnych témach.',
-    a:{forgac:'agree', micega:'neutral'}
+    t: "Moc a kontrola",
+    q: "Má nový primátor po voľbách vymeniť časť vedenia mestských firiem spätého s doterajším vedením?",
+    w: "Výmena môže priniesť nový výkon a kontrolu. Nesie však riziko politizácie a prerušenia rozbehnutých projektov.",
+    a: {"forgac":"disagree","micega":"agree"}
   },
   {
-    t:'Dane a poplatky',
-    q:'Má Trenčín zvýšiť miestne dane a poplatky, ak bez toho nevie financovať základné služby a údržbu?',
-    w:'Bez vyšších príjmov môže byť ťažšie financovať opravy, údržbu a služby mesta. Zvyšovanie daní a poplatkov je však pre domácnosti aj firmy nepopulárne a zvyšuje životné náklady.',
-    a:{forgac:'neutral', micega:'disagree'}
+    t: "EHMK 2026",
+    q: "Má mesto platiť plnú prevádzku a rozvoj Fiesta mosta aj po roku 2026, aj na úkor chodníkov a ciest?",
+    w: "Fiesta most zo starého železničného mosta slúži kultúre a podujatiam. Jeho prevádzka bude stáť peniaze aj po skončení roka kultúry.",
+    a: {"forgac":"agree","micega":"disagree"}
   },
   {
-    t:'Veľkí zamestnávatelia',
-    q:'Majú veľkí zamestnávatelia viac prispievať na dopravu, bývanie a služby, ktoré ich zamestnanci zaťažujú?',
-    w:'Veľké firmy profitujú z mestských ciest, parkovania a služieb, no zároveň ich aj zaťažujú. Prísnejšie požiadavky môžu byť spravodlivé, ale časť investorov by mohli odrádzať.',
-    a:{forgac:'agree', micega:'neutral'}
+    t: "Transparentnosť",
+    q: "Má zastupiteľstvo znovu schváliť každé zdraženie veľkého projektu o viac než 10 %?",
+    w: "Nové hlasovanie nad hranicou 10 % zvýši kontrolu nad dodatkami. Môže však spomaliť projekty a reakciu na nečakané technické problémy.",
+    a: {"forgac":"neutral","micega":"agree"}
   },
   {
-    t:'Sociálne služby',
-    q:'Má Trenčín posilniť sociálne služby a podporu seniorov aj za cenu menších investícií inde?',
-    w:'Starnutie obyvateľstva zvyšuje tlak na opatrovanie, terénne služby a zariadenia pre seniorov. Posilnenie tejto oblasti však znamená menej peňazí pre iné mestské priority.',
-    a:{forgac:'agree', micega:'neutral'}
+    t: "Parkovanie",
+    q: "Má mesto dať väčšinu príjmov z parkovania na nové parkovacie domy, aj na úkor MHD a chodníkov?",
+    w: "Parkovacie domy pomôžu vodičom, ale sú drahé. Tie isté peniaze môžu chýbať verejnej doprave a bezpečnejším uliciam.",
+    a: {"forgac":"neutral","micega":"agree"}
   },
   {
-    t:'Železničná stanica a terminál',
-    q:'Má mesto dotiahnuť modernizáciu dopravného uzla pri stanici aj za cenu zložitejšej dopravy počas výstavby?',
-    w:'Moderný prestupný uzol môže zlepšiť fungovanie verejnej dopravy a vlakových prestupov. Počas prípravy a výstavby však môže mesto čeliť dočasnému dopravnému chaosu a kritike obyvateľov.',
-    a:{forgac:'agree', micega:'neutral'}
+    t: "Železničná stanica a terminál",
+    q: "Má mesto vložiť vlastné peniaze do prestupného terminálu pri stanici, hoci časť infraštruktúry patrí štátu?",
+    w: "Moderný terminál zlepší prestup medzi vlakmi, autobusmi a MHD. Mesto však zaplatí aj za to, čo nevlastní, a menej zostane na cesty.",
+    a: {"forgac":"agree","micega":"neutral"}
   },
   {
-    t:'Kontinuita po Rybníčkovi',
-    q:'Má Trenčín po skončení Richarda Rybníčka pokračovať v podobnom štýle vedenia mesta, alebo potrebuje výraznejšiu zmenu?',
-    w:'Po dlhých rokoch jedného primátora sa v Trenčíne otvára spor o to, či treba zachovať kontinuitu v projektoch a štýle riadenia, alebo využiť zmenu vedenia na výraznejší obrat priorít.',
-    a:{forgac:'agree', micega:'disagree'}
+    t: "Mestský majetok",
+    q: "Má Trenčín predať nepotrebný majetok najvyššej ponuke, aj keď ho miestne združenie chce na komunitné účely?",
+    w: "Predaj najvyššej ponuke prinesie viac peňazí a jasné pravidlo. Komunitné využitie má dlhodobú hodnotu, ale nižší výnos.",
+    a: {"forgac":"agree","micega":"disagree"}
   },
   {
-    t:'Moc a kontrola',
-    q:'Má nový primátor po voľbách cielene vymeniť časť vedenia mestských organizácií, ak ich spája s doterajším vedením mesta?',
-    w:'Výmena vedenia môže priniesť nový výkon a väčšiu kontrolu nad organizáciami mesta. Zároveň však nesie riziko politizácie a oslabenia kontinuity rozbehnutých projektov.',
-    a:{forgac:'disagree', micega:'agree'}
+    t: "Mestské služby",
+    q: "Má mesto zaviesť kartu Trenčana so zľavami na šport a kultúru len pre ľudí s trvalým pobytom?",
+    w: "Karta odmení tých, čo platia mestu podielové dane. Znevýhodní však študentov a nájomníkov, ktorí tu žijú bez trvalého pobytu.",
+    a: {"forgac":"neutral","micega":"agree"}
   }
 ];
 
-// ── Otázky: Predseda Trenčianskeho kraja ──
-window.VAA_DATA.questions.trenciansky_vuc = [
+// ── Otázky: Predseda TSK ──
+window.VAA_DATA.questions.trencin_vuc = [
   {
-    t:'Školstvo a personálne nominácie',
-    q:'Má župan rešpektovať výsledok konkurzu na riaditeľa školy aj vtedy, keď s víťazom politicky nesúhlasí?',
-    w:'Trenčiansky kraj zriaďuje stredné školy a predseda kraja má silný vplyv na ich vedenie. Ak víťaz konkurzu splní odborné podmienky a získa podporu rady školy, spor vzniká v tom, či má rozhodnúť výsledok výberu, alebo aj politická dôvera zriaďovateľa.',
-    a:{baska:'disagree', svitkova:'agree'}
+    t: "Horná Nitra",
+    q: "Má kraj presunúť viac investícií do Hornej Nitry, aj keď spomalí projekty v okresoch Trenčín, Nové Mesto a Považská Bystrica?",
+    w: "Prievidza a Partizánske sa po útlme baníctva prispôsobujú a potrebujú prácu, dopravu a vzdelávanie. Presun peňazí ta však spomalí silnejšie okresy.",
+    a: {"baska":"neutral","svitkova":"agree"}
   },
   {
-    t:'Moc a funkcie',
-    q:'Má byť predseda kraja zároveň aj poslancom parlamentu, ak tvrdí, že obe funkcie zvláda?',
-    w:'Spájanie dvoch významných verejných funkcií môže zvyšovať politický vplyv a priniesť krajskej samospráve lepší prístup k štátnej moci. Kritici však tvrdia, že kraj potrebuje plnohodnotného predsedu, nie politika na dve stoličky.',
-    a:{baska:'agree', svitkova:'disagree'}
+    t: "Cesty a mosty",
+    q: "Má kraj obmedziť granty na kultúru, šport a podujatia, aby zrýchlil opravy ciest a mostov?",
+    w: "Granty držia miestny šport a kultúru v obciach. Ich obmedzenie uvoľní peniaze na cesty, ale zasiahne veľa malých projektov.",
+    a: {"baska":"disagree","svitkova":"neutral"}
   },
   {
-    t:'Cesty a mosty',
-    q:'Má kraj stopnúť časť menších grantov, športových podpôr a podujatí, aby dal viac peňazí do ciest a mostov?',
-    w:'Rozbité cesty a mosty zasahujú každodenný život obyvateľov celého kraja. Menšie granty a podujatia sú viditeľné v obciach, no časť voličov očakáva tvrdšie sústredenie peňazí na základnú infraštruktúru.',
-    a:{baska:'neutral', svitkova:'agree'}
+    t: "Nemocnice",
+    q: "Má kraj zveriť svoje nemocnice jednému súkromnému prevádzkovateľovi, ak ich oddlží a zmodernizuje?",
+    w: "Nemocnice v Bojniciach, Považskej Bystrici a Myjave potrebujú investície. Súkromník prinesie kapitál, no kraj stratí časť priamej kontroly.",
+    a: {"baska":"agree","svitkova":"disagree"}
   },
   {
-    t:'Autobusová doprava',
-    q:'Má kraj ďalej platiť aj dlhodobo stratové autobusové spoje do menších obcí, aj keď to znižuje peniaze na iné priority?',
-    w:'Menšie obce sú závislé od autobusov pri dochádzaní do škôl, práce a za lekármi. Udržať aj slabšie spoje znamená vyššie náklady, ale bez nich môže časť regiónu ostať dopravne odkázaná len na auto.',
-    a:{baska:'agree', svitkova:'agree'}
+    t: "Stredné školy",
+    q: "Má kraj zlúčiť strednú školu s málo žiakmi, ak ušetrené peniaze dá na lepšie vybavenie škôl v tom istom okrese?",
+    w: "Zlúčenie zníži náklady a zlepší vybavenie zvyšných škôl. Menšie mesto však príde o školu, prácu a dostupnosť vzdelávania.",
+    a: {"baska":"neutral","svitkova":"disagree"}
   },
   {
-    t:'Horná Nitra',
-    q:'Má kraj presunúť viac investícií do hornej Nitry aj za cenu, že sa spomalia projekty v silnejších okresoch?',
-    w:'Región hornej Nitry čelí po útlme uhlia silnej transformácii a potrebuje nové investície. Presun peňazí tam však znamená menej priestoru pre okresy, ktoré už dnes tvoria silnejšiu časť kraja.',
-    a:{baska:'neutral', svitkova:'agree'}
+    t: "Autobusová doprava",
+    q: "Má kraj udržať málo využívané spoje do malých obcí Hornej Nitry, aj za cenu menej spojov medzi väčšími mestami?",
+    w: "Priame spoje sú dôležité pre ľudí bez auta, najmä seniorov a študentov. Uberajú však kapacitu na frekventovaných trasách medzi mestami.",
+    a: {"baska":"neutral","svitkova":"agree"}
   },
   {
-    t:'Nemocnice a zdravotníctvo',
-    q:'Má kraj silnejšie tlačiť na štát, aby zrýchlil dofinancovanie a rozvoj nemocníc v regióne, aj keby to znamenalo otvorený konflikt s vládou?',
-    w:'Dostupnosť nemocníc a zdravotníckych služieb je jednou z kľúčových tém v kraji. Otázka je, či má predseda kraja radšej hľadať dohodu s vládou, alebo ísť aj do verejného konfliktu, ak región podľa neho nedostáva dosť.',
-    a:{baska:'disagree', svitkova:'agree'}
+    t: "Moc a funkcie",
+    q: "Má byť predseda kraja zároveň poslancom parlamentu, ak tvrdí, že obe funkcie zvláda?",
+    w: "Dve funkcie môžu zvýšiť vplyv a prístup kraja k štátu. Kritici tvrdia, že kraj potrebuje plnohodnotného predsedu, nie politika na dve stoličky.",
+    a: {"baska":"agree","svitkova":"disagree"}
   },
   {
-    t:'Lekári v okresoch',
-    q:'Má kraj zvýhodniť okresy s nedostatkom lekárov dotáciami a priestormi aj vtedy, keď menej peňazí ostane na školy alebo cesty?',
-    w:'Nie všetky okresy kraja majú rovnakú dostupnosť ambulancií a špecialistov. Cielená podpora slabších okresov môže znížiť regionálne rozdiely, no zoberie časť peňazí z iných oblastí.',
-    a:{baska:'neutral', svitkova:'agree'}
+    t: "Školstvo a personálne nominácie",
+    q: "Má župan rešpektovať víťaza konkurzu na riaditeľa školy aj vtedy, keď s ním politicky nesúhlasí?",
+    w: "Kraj je zriaďovateľom stredných škôl. Spor je, či má rozhodnúť výsledok odborného výberu, alebo aj politická dôvera zriaďovateľa.",
+    a: {"baska":"disagree","svitkova":"agree"}
   },
   {
-    t:'Stredné školy',
-    q:'Má kraj rušiť alebo zlúčiť stredné školy s nízkym počtom žiakov, aj keď to poškodí menšie mestá?',
-    w:'Zlučovanie škôl môže znížiť náklady a sústrediť vybavenie do silnejších centier. Menšie mestá by však mohli prísť o dostupnosť školy, mladých ľudí a časť miestneho života.',
-    a:{baska:'neutral', svitkova:'disagree'}
+    t: "Nemocnice a štát",
+    q: "Má župan verejne odmietnuť rozhodnutie vlády, ktoré obmedzí krajskú nemocnicu, aj keď vládu tvoria jeho partneri?",
+    w: "Rozhodnutia štátu ovplyvnia oddelenia a dostupnosť starostlivosti. Otvorený odpor zvýši tlak, no môže zhoršiť spoluprácu pri financovaní.",
+    a: {"baska":"disagree","svitkova":"agree"}
   },
   {
-    t:'Odborné školstvo',
-    q:'Má kraj prispôsobiť odborné stredné školy viac potrebám firiem v automobilovom a strojárskom priemysle?',
-    w:'Silnejšia väzba škôl na priemysel môže pomôcť absolventom nájsť prácu v kraji. Kritici upozorňujú, že príliš úzka orientácia na dnešné potreby firiem môže obmedziť širšie vzdelanie a flexibilitu mladých ľudí.',
-    a:{baska:'agree', svitkova:'neutral'}
+    t: "Lekári v okresoch",
+    q: "Má kraj dávať lekárom náborové príspevky a lacnejšie priestory v okresoch s málo ambulanciami?",
+    w: "Niektoré okresy majú málo lekárov. Príspevky a lacné priestory prilákajú ambulancie, ale sú dlhodobým výdavkom kraja.",
+    a: {"baska":"neutral","svitkova":"agree"}
   },
   {
-    t:'Integrovaná doprava',
-    q:'Má kraj rozšíriť jeden lístok na autobusy a vlaky aj mimo hlavnej osi Trenčín – Nové Mesto – Považie?',
-    w:'Integrovaná doprava zlepšuje prestupy a robí cestovanie jednoduchším. Jej rozšírenie do menej hustých častí kraja je však finančne aj organizačne náročné.',
-    a:{baska:'agree', svitkova:'agree'}
+    t: "Odborné školstvo",
+    q: "Má kraj viac prispôsobiť odborné školy potrebám firiem v automobilovom a strojárskom priemysle?",
+    w: "Väzba na priemysel pomôže absolventom nájsť prácu v kraji. Príliš úzke zameranie však môže obmedziť širšie vzdelanie a flexibilitu mladých.",
+    a: {"baska":"agree","svitkova":"neutral"}
   },
   {
-    t:'Krajské organizácie',
-    q:'Má nový predseda kraja vymeniť vedenia krajských organizácií, ak neprinášajú jasné výsledky, aj za cenu politického konfliktu?',
-    w:'Tvrdšie personálne zásahy môžu priniesť nový výkon a zodpovednosť. Zároveň však nesú riziko, že sa z krajských inštitúcií stane korisť novej politickej moci.',
-    a:{baska:'disagree', svitkova:'agree'}
+    t: "Integrovaná doprava",
+    q: "Má kraj dotovať jeden spoločný lístok na autobusy a vlaky aj tam, kde bude na jedného cestujúceho drahší?",
+    w: "Spoločný lístok zjednoduší prestupy v celom kraji. V riedko osídlených oblastiach ho však využije málo ľudí a prevádzka bude drahšia.",
+    a: {"baska":"agree","svitkova":"agree"}
   },
   {
-    t:'Sociálne služby',
-    q:'Má kraj dať viac peňazí do domovov seniorov aj za cenu menších investícií do ciest a školstva?',
-    w:'Starnutie obyvateľstva zvyšuje tlak na sociálne služby a kapacity zariadení pre seniorov. Každé posilnenie tejto oblasti však obmedzuje priestor pre iné veľké výdavky.',
-    a:{baska:'agree', svitkova:'agree'}
+    t: "Krajské organizácie",
+    q: "Má nový predseda vymeniť vedenie krajských organizácií, ktoré nemajú výsledky, aj za cenu nestability?",
+    w: "Tvrdšie zásahy môžu priniesť výkon a zodpovednosť. Hrozí však, že sa z krajských inštitúcií stane korisť novej moci.",
+    a: {"baska":"disagree","svitkova":"agree"}
   },
   {
-    t:'Domáca starostlivosť',
-    q:'Má kraj obmedziť výstavbu nových domovov seniorov a radšej platiť opatrovanie doma?',
-    w:'Domáca starostlivosť umožňuje ľuďom zostať vo vlastnom prostredí a býva lacnejšia. Na druhej strane nie všetky zdravotné a sociálne situácie sa dajú zvládnuť bez pobytového zariadenia.',
-    a:{baska:'neutral', svitkova:'agree'}
+    t: "Sociálne služby",
+    q: "Má kraj presunúť peniaze z veľkých pobytových zariadení do domácej starostlivosti a malých komunitných zariadení pre seniorov?",
+    w: "Domáca a komunitná starostlivosť sa viac podobá bežnému životu a môže byť lacnejšia. Nie každý však môže zostať doma a menej pobytových miest predĺži čakanie.",
+    a: {"baska":"neutral","svitkova":"agree"}
   },
   {
-    t:'Investori a pôda',
-    q:'Má kraj odmietnuť priemyselný alebo logistický projekt, ak zaberá kvalitnú poľnohospodársku pôdu, aj keď prinesie pracovné miesta?',
-    w:'Nové investície prinášajú pracovné miesta a dane, ale po zastavaní kvalitnej pôdy sa územie len ťažko vracia späť do poľnohospodárstva. Je to konflikt medzi hospodárskym rastom a dlhodobou ochranou krajiny.',
-    a:{baska:'disagree', svitkova:'agree'}
+    t: "Investori a pôda",
+    q: "Má kraj v územnom pláne odmietať priemysel a logistiku na kvalitnej poľnohospodárskej pôde, aj keď prinesú prácu?",
+    w: "Projekty prinesú prácu a príjmy, no zastavaná úrodná pôda sa ťažko vracia. Kraj cez územný plán ovplyvňuje, kde sa stavia.",
+    a: {"baska":"disagree","svitkova":"agree"}
   },
   {
-    t:'Veľkí investori',
-    q:'Má kraj odmietnuť investora, ktorý neprispeje na dopravu, bývanie alebo školy, ktoré jeho projekt zaťaží?',
-    w:'Veľké investície môžu priniesť pracovné miesta, ale zároveň zaťažujú cesty, autobusy, školy a bývanie. Tvrdšie podmienky chránia verejné záujmy, no časť investorov môžu odradiť.',
-    a:{baska:'neutral', svitkova:'agree'}
+    t: "Veľkí investori",
+    q: "Má kraj podmieniť podporu veľkého investora tým, že prispeje na dopravu či odborné školy, ktoré využije?",
+    w: "Investor vytvorí prácu, no zaťaží cesty, autobusy a školy. Podmienka chráni rozpočet, ale môže oslabiť konkurencieschopnosť kraja.",
+    a: {"baska":"neutral","svitkova":"agree"}
   },
   {
-    t:'Školy v menších mestách',
-    q:'Má kraj zachovať stredné školy v menších mestách aj pri nižšom počte žiakov?',
-    w:'Stredná škola v menšom meste drží mladých ľudí v regióne a podporuje miestny život. Jej prevádzka však môže byť drahšia a menej efektívna než vo väčších centrách.',
-    a:{baska:'neutral', svitkova:'agree'}
+    t: "Transparentnosť",
+    q: "Má krajské zastupiteľstvo znovu schváliť každý veľký projekt, ktorý zdražie o viac než 10 %?",
+    w: "Nové hlasovanie nad 10 % zvýši kontrolu poslancov. Môže však spomaliť výstavbu a riešenie havarijných situácií.",
+    a: {"baska":"disagree","svitkova":"agree"}
   },
   {
-    t:'Granty a podujatia',
-    q:'Má kraj obmedziť malé granty a podujatia, aby zostalo viac peňazí na cesty a mosty?',
-    w:'Menšie granty a podujatia sú často viditeľné v obciach a podporujú komunitný život. Pri zlom stave ciest a mostov však časť voličov očakáva presun peňazí do tvrdšej infraštruktúry.',
-    a:{baska:'disagree', svitkova:'agree'}
+    t: "Audit kraja",
+    q: "Má nový župan dať nezávislý audit veľkých projektov a zmlúv súčasného vedenia kraja?",
+    w: "Kraj spravuje veľký majetok a investície. Audit posilní dôveru a kontrolu, no môže pôsobiť ako politická vojna proti predchodcovi.",
+    a: {"baska":"disagree","svitkova":"agree"}
   },
   {
-    t:'Kultúra verzus cesty',
-    q:'Má kraj stopnúť alebo zmenšiť veľké kultúrne projekty, ak ľudia žiadajú skôr opravy ciest?',
-    w:'Kultúrne projekty zlepšujú kvalitu života a identitu regiónu. Pre časť obyvateľov však nie sú tak naliehavé ako rozbité cesty, mosty a dopravné spojenia.',
-    a:{baska:'disagree', svitkova:'agree'}
+    t: "Zadlženie a investície",
+    q: "Má si kraj vziať nový úver, ak inak nestihne opraviť najhoršie cesty, mosty a školy?",
+    w: "Úver zrýchli obnovu a zníži investičný dlh. Zároveň zvýši splátky a zúži rozpočet v ďalších rokoch.",
+    a: {"baska":"neutral","svitkova":"neutral"}
   },
   {
-    t:'Transparentnosť',
-    q:'Má kraj zverejňovať konečné ceny, dodatky a meškania veľkých projektov v jednej verejnej tabuľke?',
-    w:'Jednoduchý verejný prehľad by zlepšil kontrolu veľkých investícií. Zároveň by zvýšil tlak na kraj pri každom navýšení ceny alebo meškaní.',
-    a:{baska:'neutral', svitkova:'agree'}
+    t: "Regionálne rozdiely",
+    q: "Má kraj presunúť časť investícií z okolia Trenčína do vzdialenejších okresov, aj keď tam žije menej ľudí?",
+    w: "Trenčín priťahuje školy, úrady a služby, no kraj spravuje celé územie. Spor efektivity vo väčších centrách a regionálnej spravodlivosti.",
+    a: {"baska":"neutral","svitkova":"agree"}
   },
   {
-    t:'Audit kraja',
-    q:'Má nový župan zadať nezávislý audit veľkých projektov a zmlúv súčasného vedenia kraja?',
-    w:'Kraj spravuje veľký majetok a rozsiahle investície. Audit môže posilniť dôveru a kontrolu, ale môže byť vnímaný aj ako politická vojna proti predchádzajúcemu vedeniu.',
-    a:{baska:'disagree', svitkova:'agree'}
+    t: "Energetika a krajina",
+    q: "Má kraj vo svojich stanoviskách odmietať veľké veterné projekty, ak s nimi nesúhlasia dotknuté obce?",
+    w: "Veterné projekty prinášajú čistú energiu a investície, ale zasahujú krajinu a obce. Kraj môže podporiť štát alebo sa postaviť za obce.",
+    a: {"baska":"neutral","svitkova":"neutral"}
   },
   {
-    t:'Zadlženie a investície',
-    q:'Má si kraj zobrať nový úver, ak bez neho nestihne opraviť najhoršie cesty, mosty a školy?',
-    w:'Úver môže zrýchliť obnovu infraštruktúry a znížiť investičný dlh. Zároveň však zvyšuje splátky a obmedzuje rozpočtový priestor v ďalších rokoch.',
-    a:{baska:'agree', svitkova:'neutral'}
+    t: "Transformácia Hornej Nitry",
+    q: "Má kraj obmedziť podporu tradičných priemyselných odborov na Hornej Nitre a presunúť peniaze do IT, energetiky a zdravotníctva?",
+    w: "Región sa po baníctve prispôsobuje. Nové odbory dajú mladým perspektívu, no rýchly odklon od strojárstva môže oslabiť odvetvia, čo tam stále zamestnávajú.",
+    a: {"baska":"disagree","svitkova":"agree"}
   },
   {
-    t:'Regionálne rozdiely',
-    q:'Má kraj presunúť časť investícií z okolia Trenčína do vzdialenejších okresov, aj keď tam žije menej ľudí?',
-    w:'Trenčín prirodzene priťahuje školy, úrady a služby, no kraj spravuje celé územie vrátane slabších okresov. Je to konflikt medzi efektivitou investícií vo väčších centrách a regionálnou spravodlivosťou.',
-    a:{baska:'neutral', svitkova:'agree'}
+    t: "Cyklodoprava",
+    q: "Má kraj pokračovať v rozširovaní Vážskej cyklomagistrály, aj keď sú v zlom stave cesty a mosty II. a III. triedy?",
+    w: "Cyklomagistrála podporuje bezpečnú cyklodopravu a turizmus. Časť ľudí však považuje opravy ciest a mostov za naliehavejšie.",
+    a: {"baska":"agree","svitkova":"neutral"}
   },
   {
-    t:'Energetika a krajina',
-    q:'Má kraj blokovať veterné a iné veľké energetické projekty, ak s nimi nesúhlasia dotknuté obce?',
-    w:'Energetické projekty môžu pomôcť energetickej bezpečnosti a novým investíciám. Ak však miestne obce nesúhlasia, vzniká spor medzi nadradeným verejným záujmom a právom komunity brániť svoje územie.',
-    a:{baska:'neutral', svitkova:'agree'}
+    t: "Kultúra v regiónoch",
+    q: "Má kraj presunúť viac kultúrnych dotácií z Trenčína do menších okresov, aj keď tam príde menej divákov?",
+    w: "Peniaze v menších okresoch zlepšia dostupnosť kultúry. Sústredenie v centrách však prinesie vyššiu návštevnosť a lepšie zázemie.",
+    a: {"baska":"neutral","svitkova":"agree"}
   },
   {
-    t:'Podpora obcí',
-    q:'Má kraj viazať dotácie pre obce a mestá viac na merateľné výsledky a jasné podmienky?',
-    w:'Prísnejšie pravidlá môžu zvýšiť efektívnosť a kontrolu peňazí. Menšie obce však môžu mať problém splniť všetky podmienky a môžu byť pri žiadostiach znevýhodnené.',
-    a:{baska:'neutral', svitkova:'agree'}
-  },
-  {
-    t:'Kontinuita vs. zmena',
-    q:'Potrebuje Trenčiansky kraj po troch volebných obdobiach Jaroslava Bašku skôr kontinuitu, alebo výraznú zmenu vedenia?',
-    w:'Baška obhajuje kontinuitu aj výsledkami a rastom majetku kraja. Opozícia tvrdí, že po dlhých rokoch jednej moci potrebuje kraj nový štýl riadenia, viac kontroly a menej zotrvačnosti.',
-    a:{baska:'agree', svitkova:'disagree'}
+    t: "Kontinuita vs. zmena",
+    q: "Potrebuje Trenčiansky kraj po troch obdobiach Jaroslava Bašku skôr kontinuitu, alebo výraznú zmenu vedenia?",
+    w: "Baška obhajuje kontinuitu výsledkami a rastom majetku kraja. Opozícia tvrdí, že po dlhých rokoch jednej moci treba nový štýl a viac kontroly.",
+    a: {"baska":"agree","svitkova":"disagree"}
   }
 ];
