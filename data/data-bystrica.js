@@ -1,5 +1,4 @@
 // ── Volebná kalkulačka 2026 — BANSKÁ BYSTRICA + BANSKOBYSTRICKÝ KRAJ ──
-// Moderovaná verzia bez Daniela Karasa: potvrdení a verejne zdokumentovaní kandidáti.
 // Obsahuje voľby: primátor/primátorka Banskej Bystrice a predseda/predsedníčka BBSK.
 
 window.VAA_DATA = window.VAA_DATA || {};
@@ -7,13 +6,13 @@ window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 
 window.VAA_DATA.candidates['bystrica_primator'] = [
-  {id:'sobota',name:'Tomáš Sobota',party:'Nezávislý / podpora KDH a KÚ',color:'#275C9A',url:'https://tsobota.sk/'},
+  {id:'sobota',name:'Tomáš Sobota',party:'Nezávislý / KDH a KÚ',color:'#275C9A',url:'https://tsobota.sk/'},
   {id:'javorcikova',name:'Diana Javorčíková',party:'Bystrica sa spája / PS / SaS / Demokrati / Banskobystrická alternatíva',color:'#A12C55',url:'https://dianajavorcikova.sk/'}
 ];
 
 window.VAA_DATA.candidates['bystrica_vuc'] = [
-  {id:'lunter',name:'Ondrej Lunter',party:'nezávislý / úradujúci predseda',color:'#2E8B57',url:'https://ondrejlunter.sk'},
-  {id:'polonyi',name:'Adrian Polónyi',party:'podpora Smer-SD',color:'#B03A2E',url:''}
+  {id:'lunter',name:'Ondrej Lunter',party:'Nezávislý / úradujúci predseda',color:'#2E8B57',url:'https://ondrejlunter.sk'},
+  {id:'polonyi',name:'Adrian Polóny',party:'podpora Smer-SD',color:'#B03A2E',url:''}
 ];
 
 window.VAA_DATA.questions.bystrica_primator = [
@@ -265,7 +264,7 @@ window.VAA_DATA.questions.bystrica_vuc = [
    a:{lunter:'agree',polonyi:'agree'}},
 
   {t:'Celkové smerovanie',
-   q:'Má sa Banskobystrický kraj v najbližších rokoch sústrediť skôr na stabilitu a základné služby než na výraznejšie nové rozvojové ambície?',
+   q:'Má sa kraj v najbližších rokoch sústrediť skôr na stabilitu a základné služby než na výraznejšie nové rozvojové ambície?',
    w:'Za regionálnou politikou často stojí otázka, či má kraj najprv upevniť fungovanie základných služieb, alebo súbežne tlačiť aj širšie zmeny a väčšie ambície. Väčšina voličov chce kombináciu oboch, no kandidáti zvyknú zdôrazňovať inú rovnováhu.',
    a:{lunter:'neutral',polonyi:'agree'}}
 ];
