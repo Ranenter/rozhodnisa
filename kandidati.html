@@ -654,6 +654,124 @@ try{
 }catch(e){/* civic strip is progressive enhancement; fail silently */}
 })();
 </script>
+<!-- ==== AGENT READABLE ==== -->
+<style>
+.agent-view{display:none}
+body.agent-on .agent-view{display:block;position:fixed;inset:0;z-index:9990;overflow-y:auto;background:#fff;padding:1.6rem 1.1rem 5rem;-webkit-overflow-scrolling:touch}
+.agent-view__inner{max-width:900px;margin:0 auto}
+.ag-header{border-bottom:2px solid var(--border);padding-bottom:1rem;margin-bottom:1.4rem}
+.ag-title{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:1.5rem;font-weight:800;text-transform:uppercase;margin:0 0 .35rem;color:var(--sk-blue)}
+.ag-header p{font-size:.9rem;color:var(--muted);line-height:1.5;margin:0}
+.ag-meta-row{display:flex;flex-wrap:wrap;gap:.35rem 1.2rem;font-size:.8rem;color:var(--muted);margin-top:.6rem}
+.ag-city{margin:0 0 2rem}
+.ag-city-name{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;background:var(--sk-blue);color:#fff;padding:.55rem .95rem;border-radius:6px;margin:0 0 1rem}
+.ag-role-label{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--sk-red);margin:1.2rem 0 .6rem}
+.ag-note{font-size:.8rem;color:var(--muted);background:#EEF5FF;border-left:3px solid var(--sk-blue);padding:.5rem .75rem;border-radius:4px;margin:0 0 .8rem;line-height:1.5}
+.ag-cand-flat{border:1px solid var(--border);border-radius:8px;padding:.75rem .95rem;margin:0 0 .65rem;background:var(--surface)}
+.ag-cand-head{display:flex;flex-wrap:wrap;gap:.25rem .7rem;align-items:baseline}
+.ag-cand-name{font-weight:700;font-size:1rem}
+.ag-cand-party{font-size:.82rem;color:var(--muted)}
+.ag-cand-status{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin:.4rem 0 .1rem;padding:.12rem .55rem;border-radius:99px}
+.ag-status--ok{background:#DCF3E4;color:#1A7A42}
+.ag-status--est{background:#EDEFF3;color:#5b6472}
+.ag-bio{font-size:.9rem;line-height:1.6;margin:.4rem 0 .3rem}
+.ag-meta{margin:.25rem 0 0;font-size:.82rem}
+.ag-meta dt{font-weight:700;color:var(--muted);display:inline}
+.ag-meta dd{display:inline;margin:0 0 0 .35rem}
+.ag-meta a{color:var(--sk-blue);word-break:break-all}
+.agent-toggle{position:fixed;bottom:1.2rem;right:1.2rem;z-index:9998;display:flex;align-items:center;gap:.55rem;background:#fff;color:var(--muted);border:1px solid rgba(0,0,0,.1);font-family:'Courier New',monospace;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.5rem .85rem;border-radius:99px;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.14);min-height:44px;-webkit-tap-highlight-color:transparent}
+.agent-toggle:hover{box-shadow:0 4px 18px rgba(0,0,0,.2)}
+.agent-toggle__track{width:36px;height:20px;border-radius:99px;background:#D8DCE6;position:relative;transition:background .2s;flex-shrink:0}
+.agent-toggle__thumb{position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:#8a92a0;transition:transform .2s,background .2s}
+body.agent-on .agent-toggle{color:#1A7A42}
+body.agent-on .agent-toggle__track{background:#BFE8CE}
+body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42}
+@media(max-width:520px){.agent-toggle{bottom:.9rem;right:.9rem;font-size:.65rem}}
+</style>
+
+<button class="agent-toggle" id="agentToggle" aria-pressed="false" title="Prepnúť agentom čitateľný prehľad">
+  AGENT READABLE
+  <span class="agent-toggle__track"><span class="agent-toggle__thumb"></span></span>
+</button>
+<div class="agent-view" id="agentView" role="region" aria-label="Agent readable view"></div>
+
+<script>
+(function(){
+  // Agent-readable overlay for the candidate directory.
+  // Built by reading the candidate cards already in the DOM, so it is always
+  // complete and in sync with the page — no separate data source, nothing invented.
+  var btn = document.getElementById('agentToggle');
+  var view = document.getElementById('agentView');
+  var KEY = 'rzdn_agent';
+  var built = false;
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]; }); }
+  function txt(el, sel){ var n = el.querySelector(sel); return n ? n.textContent.trim() : ''; }
+
+  function renderCard(card){
+    var name = txt(card, '.cand-card__name');
+    var party = txt(card, '.cand-card__party');
+    var bio = txt(card, '.cand-card__bio');
+    var a = card.querySelector('a.cand-card__web');
+    var web = a ? a.getAttribute('href') : '';
+    var verified = !!card.querySelector('.cand-card__verified');
+    var status = verified ? 'Overené odpovede' : 'Odhad, kandidát neodpovedal';
+    var cls = verified ? 'ag-status--ok' : 'ag-status--est';
+    var h = '<div class="ag-cand-flat">'
+      + '<div class="ag-cand-head"><span class="ag-cand-name">'+esc(name)+'</span>'
+      + '<span class="ag-cand-party">'+esc(party)+'</span></div>'
+      + '<div class="ag-cand-status '+cls+'">'+esc(status)+'</div>';
+    if(bio) h += '<p class="ag-bio">'+esc(bio)+'</p>';
+    if(web) h += '<dl class="ag-meta"><dt>Web</dt><dd><a href="'+esc(web)+'" target="_blank" rel="noopener">'+esc(web)+'</a></dd></dl>';
+    return h + '</div>';
+  }
+
+  function build(){
+    if(built) return;
+    var sections = document.querySelectorAll('section.city-section');
+    if(!sections.length) return;
+    var cities = [], body = '';
+    Array.prototype.forEach.call(sections, function(sec){
+      var cityName = sec.getAttribute('aria-label') || '';
+      cities.push(cityName);
+      var inner = '';
+      Array.prototype.forEach.call(sec.children, function(child){
+        if(!child.classList) return;
+        if(child.classList.contains('role-divider')){
+          var lab = child.querySelector('.role-divider__label');
+          inner += '<h3 class="ag-role-label">'+esc(lab ? lab.textContent.trim() : '')+'</h3>';
+        } else if(child.tagName === 'P'){                       // kraj-note + trailing italic notes
+          inner += '<p class="ag-note">'+esc(child.textContent.trim())+'</p>';
+        } else if(child.classList.contains('cand-grid')){
+          Array.prototype.forEach.call(child.querySelectorAll('.cand-card'), function(c){ inner += renderCard(c); });
+        }
+      });
+      body += '<div class="ag-city"><h2 class="ag-city-name">'+esc(cityName)+'</h2>'+inner+'</div>';
+    });
+    var header = '<div class="ag-header">'
+      + '<h2 class="ag-title">rozhodnisa.sk &mdash; Kandidáti 2026</h2>'
+      + '<p>Štruktúrovaný prehľad kandidátov na primátora a predsedu samosprávneho kraja. Komunálne a krajské voľby, 24. október 2026.</p>'
+      + '<div class="ag-meta-row">'
+      + '<span><strong>Voľby:</strong> Komunálne a krajské</span>'
+      + '<span><strong>Dátum:</strong> 24. október 2026</span>'
+      + '<span><strong>Mestá:</strong> '+esc(cities.join(', '))+'</span>'
+      + '</div></div>';
+    view.innerHTML = '<div class="agent-view__inner">'+header+body+'</div>';
+    built = true;
+  }
+
+  function setMode(on){
+    if(on) { try{ build(); }catch(e){} }
+    document.body.classList.toggle('agent-on', on);
+    btn.setAttribute('aria-pressed', String(on));
+    try{ localStorage.setItem(KEY, on ? '1' : '0'); }catch(e){}
+  }
+
+  try{ if(localStorage.getItem(KEY) === '1') setMode(true); }catch(e){}
+  btn.addEventListener('click', function(){ setMode(!document.body.classList.contains('agent-on')); });
+})();
+</script>
+
 </body>
 
 </html>
