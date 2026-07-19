@@ -16,16 +16,16 @@ window.VAA_DATA.candidates['nitra_primator'] = [
 
 // ── Kandidáti: Predseda / Predsedníčka NSK ──
 window.VAA_DATA.candidates['nitra_vuc'] = [
-  {id:'varga',name:'Henrich Varga',party:'SaS / KDH / Demokrati / Hnutie Slovensko / Tím Kraj Nitra / Magyar Fórum / OKS',color:'#2A5CAA',url:'https://www.facebook.com/varga.henrich/'},
+  {id:'varga',name:'Henrich Varga',party:'Tím Kraj Nitra / SaS / KDH / Demokrati / Hnutie Slovensko / Magyar Fórum / OKS',color:'#2A5CAA',url:'https://www.facebook.com/varga.henrich/'},
   {id:'becik',name:'Branislav Becík',party:'Hlas-SD / Smer-SD / Republika (úradujúci predseda)',color:'#C23A2B',url:'https://branislavbecik.sk/'},
-  {id:'csenger',name:'Tibor Csenger',party:'Maďarská aliancia',color:'#1A6B8A',url:''}
+  {id:'csenger',name:'Tibor Csenger',party:'Maďarská aliancia',color:'#1A6B8A',url:'https://madarska-aliancia.sk/tibor-csenger'}
 ];
 
 // ── Otázky: Primátor / Primátorka Nitry ──
 window.VAA_DATA.questions.nitra_primator = [
   {t:'Parkovanie',
    q:'Malo by vedenie mesta zásadne prepracovať súčasnú parkovaciu politiku?',
-   w:'Regulované parkovanie zavedené v rokoch 2025 – 2026 je najviditeľnejším rozhodnutím súčasného vedenia. Vyzývatelia ho kritizujú ako záťaž alebo ako nedokončený systém, radnica ho obhajuje dátami o obsadenosti a od júla 2026 pravidlá upravila. Otázkou je, či systém patrí k tomu, čo treba zachovať a ladiť, alebo k tomu, čo treba po voľbách zásadne zmeniť.',
+   w:'Regulované parkovanie zavedené v rokoch 2025-2026 je najviditeľnejším rozhodnutím súčasného vedenia. Vyzývatelia ho kritizujú ako záťaž alebo ako nedokončený systém, radnica ho obhajuje dátami o obsadenosti a od júla 2026 pravidlá upravila. Otázkou je, či systém patrí k tomu, čo treba zachovať a ladiť, alebo k tomu, čo treba po voľbách zásadne zmeniť.',
    a:{hattas:'disagree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Cesty a chodníky',
@@ -55,7 +55,7 @@ window.VAA_DATA.questions.nitra_primator = [
 
   {t:'Priority mesta',
    q:'Sú projekty ako revitalizácie námestí, participatívny rozpočet či klimatické opatrenia luxusom, ktorý má ísť bokom, kým mesto nevyrieši cesty, chodníky a parkovanie?',
-   w:'Toto je hlavný spor tejto kampane: vyzývatelia hovoria o „progresívnych fantáziách", experimentoch a zanedbaných základoch, radnica obhajuje verejné priestory a mäkké projekty ako súčasť kvality života. Otázka meria, či má mesto tieto agendy utlmiť v prospech základnej infraštruktúry.',
+   w:'Toto je hlavný spor tejto kampane: vyzývatelia hovoria o „fantáziách", experimentoch a zanedbaných základoch, radnica obhajuje verejné priestory a mäkké projekty ako súčasť kvality života. Otázka meria, či má mesto tieto agendy utlmiť v prospech základnej infraštruktúry.',
    a:{hattas:'disagree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
   {t:'Údržba mesta',
