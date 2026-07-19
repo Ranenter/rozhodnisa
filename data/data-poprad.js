@@ -7,8 +7,8 @@ window.VAA_DATA = window.VAA_DATA || {};
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
 window.VAA_DATA.candidates['poprad_primator'] = [
-  {id:'danko',  name:'Anton Danko',  party:'Nezávislý, úradujúci primátor',          color:'#e63946', url:'https://www.sdankom.sk/'},
-  {id:'kralik', name:'Jozef Králik', party:'Nezávislý kandidát (podporovaný PSK)',   color:'#2196F3', url:'https://jozefkralik.sk/'}
+  {id:'danko',  name:'Anton Danko',  party:'Nezávislý, SNS / Smer-SD / Hlas-SD (úradujúci primátor)',          color:'#e63946', url:'https://www.sdankom.sk/'},
+  {id:'kralik', name:'Jozef Králik', party:'Nezávislý',   color:'#2196F3', url:'https://jozefkralik.sk/'}
 ];
 
 // ── Otázky: Primátor Popradu ──
@@ -35,13 +35,13 @@ window.VAA_DATA.questions.poprad_primator = [
   },
   {
     t:'Cestovný ruch',
-    q:'Má primátor uprednostniť potreby trvalých obyvateľov Popradu pred záujmami turistov, keď sú v konflikte?',
+    q:'Má primátor uprednostniť potreby obyvateľov Popradu pred záujmami turistov, aj keď sú v konflikte?',
     w:'Poprad je vstupnou bránou do Tatier. Turizmus prináša peniaze, ale zvyšuje ceny bývania, hluk aj nápor na dopravu. Rozhodnutia primátora ukážu, či dáva prednosť záujmom turistov alebo obyvateľov, ktorí v meste žijú celý rok.',
     a:{danko:'disagree', kralik:'agree'}
   },
   {
     t:'Transparentnosť',
-    q:'Poprad výrazne klesol v rebríčku transparentnosti slovenských miest. Má primátor do dvoch rokov dostať mesto späť medzi 20 najtransparentnejších samospráv?',
+    q:'Poprad výrazne klesol v rebríčku transparentnosti slovenských miest. Má nový primátor do dvoch rokov dostať mesto späť medzi 20 najtransparentnejších samospráv?',
     w:'Rebríček transparentnosti hodnotí otvorenosť mesta pri zverejňovaní zmlúv, tendrov, grantov či majetku. Poprad kedysi patril medzi lepšie samosprávy, no za posledné roky výrazne klesol. Cieľ vrátiť sa do prvej dvadsiatky je merateľný a kontrolovateľný.',
     a:{danko:'disagree', kralik:'agree'}
   },
@@ -65,7 +65,7 @@ window.VAA_DATA.questions.poprad_primator = [
   },
   {
     t:'Transparentnosť',
-    q:'Popradský mesačník platia daňovníci. Má chváliť primátora takmer vo všetkom, alebo písať aj o tom, čo sa mestu nedarí?',
+    q:'Popradský mesačník platia daňoví poplatníci. Má teda chváliť primátora takmer vo všetkom, alebo písať aj o tom, čo sa mestu nedarí?',
     w:'Mestské noviny a web sú financované z rozpočtu mesta. Kritici tvrdia, že dnes slúžia hlavne na prezentáciu primátora a jeho tímu. Otázkou je, či majú mestské médiá informovať nezávisle o dianí v meste, aj keď to znamená kritiku vedenia.',
     a:{danko:'disagree', kralik:'agree'}
   },
@@ -107,7 +107,7 @@ window.VAA_DATA.questions.poprad_primator = [
   },
   {
     t:'Bezpečnosť',
-    q:'Má primátor obmedziť počet herní a stávkových kancelárií v meste, aj keď to zníži príjmy z daní?',
+    q:'Má primátor obmedziť počet herní a stávkových kancelárií v meste, aj keď to zníži jeho príjmy z daní?',
     w:'Hazardné hry prinášajú mestu dane z prevádzky, ale zároveň zvyšujú riziko závislostí. Mnohé mestá na Slovensku prijali pravidlá, ktoré herne výrazne obmedzili. Poprad by mohol ísť rovnakou cestou.',
     a:{danko:'neutral', kralik:'agree'}
   },
