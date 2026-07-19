@@ -8,7 +8,7 @@ window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 
 // ── Kandidáti: Primátor / Primátorka Nitry ──
 window.VAA_DATA.candidates['nitra_primator'] = [
-  {id:'hattas',name:'Marek Hattas',party:'PS / SaS / KDH / Demokrati / Hnutie Slovensko / Tím Hattas (úradujúci primátor)',color:'#146B4D',url:'https://hattasprimatorom.sk'},
+  {id:'hattas',name:'Marek Hattas',party:'Tím kraj Nitra / PS / SaS / KDH / Demokrati / Hnutie Slovensko (úradujúci primátor)',color:'#146B4D',url:'https://hattasprimatorom.sk'},
   {id:'uhrikova',name:'Zuzana Uhríková',party:'Republika / Hlas-SD / Smer-SD',color:'#8A2332',url:'https://www.facebook.com/ing.zuzana.uhrikova/'},
   {id:'krsiak',name:'Igor Kršiak',party:'Nezávislý',color:'#2F6F8F',url:'https://igorkrsiak.sk/'},
   {id:'illes',name:'Marek Illéš',party:'Smer-SD / Hlas-SD',color:'#B23A2E',url:'https://www.marekilles.sk'}
