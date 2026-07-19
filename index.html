@@ -532,6 +532,12 @@ body{
 }
 .q-info-btn:hover{border-color:var(--sk-blue);color:var(--sk-blue)}
 .q-info-btn.active{border-color:var(--ca);color:var(--ca)}
+.q-info-btn .q-info-chevron{
+  width:14px;height:14px;margin-left:.1rem;
+  fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;
+  transition:transform .25s ease;
+}
+.q-info-btn[aria-expanded="true"] .q-info-chevron{transform:rotate(180deg)}
 .q-info-panel{
   max-height:0;overflow:hidden;
   transition:max-height .3s ease,opacity .25s ease,margin .25s ease;
@@ -1330,7 +1336,7 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
   <div class="q-body">
     <div class="q-topic" id="qTopic"></div>
     <div class="q-text" id="qText"></div>
-    <button class="q-info-btn" id="qInfoBtn" onclick="VAA.toggleInfo()" aria-label="Zobraziť kontext k otázke">ⓘ Kontext</button>
+    <button class="q-info-btn" id="qInfoBtn" onclick="VAA.toggleInfo()" aria-expanded="false" aria-controls="qInfoPanel" aria-label="Zobraziť kontext k otázke"><span class="q-info-ic" aria-hidden="true">ⓘ</span><span class="q-info-label">Kontext k otázke</span><svg class="q-info-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="q-info-panel" id="qInfoPanel"></div>
     <div class="ans-stack">
       <button class="ans-btn" id="ba" onclick="VAA.ans('agree')"><span class="ans-code">A</span><span>Áno, súhlasím</span></button>
@@ -1782,9 +1788,14 @@ const VAA = (function(){
     document.getElementById('qTopic').textContent = q.t;
     document.getElementById('qText').textContent = q.q;
     const infoPanel = document.getElementById('qInfoPanel');
-    if(infoPanel) { infoPanel.textContent = q.w || q.info || ''; infoPanel.classList.remove('open'); }
+    const infoCtx = q.w || q.info || '';
+    if(infoPanel) { infoPanel.textContent = infoCtx; infoPanel.classList.remove('open'); }
     const infoBtn = document.getElementById('qInfoBtn');
-    if(infoBtn) infoBtn.classList.remove('active');
+    if(infoBtn){
+      infoBtn.classList.remove('active');
+      infoBtn.setAttribute('aria-expanded','false');
+      infoBtn.style.display = infoCtx ? '' : 'none';   // don't offer an accordion that expands to nothing
+    }
 
     ['ba','bn','bd'].forEach(id=>{const el=document.getElementById(id);el.className='ans-btn';el.blur();});
     const prev = answers[qIdx];
@@ -2127,6 +2138,21 @@ const VAA = (function(){
 
 
   // ── Priority topics ──
+  // Polarization of a single question = population variance of candidate stances
+  // mapped agree=+1 / neutral=0 / disagree=-1.  0 = full consensus, 1 = maximally split.
+  // Same idea the methodology gate uses; keep the two definitions in sync if the gate changes.
+  function _questionPolarization(q, cands){
+    if(!cands || cands.length < 2) return 0;
+    const val = {agree:1, neutral:0, disagree:-1};
+    let sum=0, n=0;
+    cands.forEach(c=>{ sum += val[(q.a && q.a[c.id]) || 'neutral']; n++; });
+    if(!n) return 0;
+    const mean = sum/n;
+    let v=0;
+    cands.forEach(c=>{ const x = val[(q.a && q.a[c.id]) || 'neutral']; v += (x-mean)*(x-mean); });
+    return v/n;
+  }
+
   function _buildPriorityScreen(){
     const meta = CITY_META[city] || {};
     const typeLbl = type==='primator' ? meta.primator : meta.vuc;
@@ -2140,10 +2166,25 @@ const VAA = (function(){
       : 'Predtým ako začneš, vyber 3 témy, ktoré sú pre teba v tvojom kraji najdôležitejšie. Otázky z týchto tém budú mať dvojnásobnú váhu vo výslednom skóre.';
     document.getElementById('priorityExplain').textContent = explain;
 
-    // Count topics
-    const topicMap = {};
-    questions.forEach(q=>{ topicMap[q.t] = (topicMap[q.t]||0) + 1; });
-    const topics = Object.keys(topicMap).sort((a,b)=>topicMap[b]-topicMap[a] || a.localeCompare(b,'sk'));
+    // Count topics + rank by how much candidates disagree (polarization), then keep
+    // only the 8 most polarizing topics for THIS race. This shortens the list and leaves
+    // the themes that actually distinguish candidates — consensus topics add no signal.
+    // Selection is derived from the data, not hand-picked, so it stays neutral.
+    const cands = (window.VAA_DATA.candidates && window.VAA_DATA.candidates[key]) || [];
+    const topicMap = {};   // topic -> number of questions
+    const polarSum = {};   // topic -> summed polarization across its questions
+    questions.forEach(q=>{
+      topicMap[q.t] = (topicMap[q.t]||0) + 1;
+      polarSum[q.t] = (polarSum[q.t]||0) + _questionPolarization(q, cands);
+    });
+    const MAX_PRIORITY_TOPICS = 8;
+    let topics = Object.keys(topicMap).sort((a,b)=>
+      ((polarSum[b]/topicMap[b]) - (polarSum[a]/topicMap[a])) ||  // most polarizing first
+      (topicMap[b]-topicMap[a]) ||                                // then more questions
+      a.localeCompare(b,'sk')                                     // then alphabetical
+    ).slice(0, MAX_PRIORITY_TOPICS);
+    // Display the surviving topics alphabetically so the order implies no ranking of importance.
+    topics.sort((a,b)=>a.localeCompare(b,'sk'));
 
     const chipsEl = document.getElementById('priorityChips');
     chipsEl.innerHTML = '';
@@ -2197,8 +2238,9 @@ const VAA = (function(){
   function toggleInfo(){
     const panel = document.getElementById('qInfoPanel');
     const btn = document.getElementById('qInfoBtn');
+    const willOpen = panel ? !panel.classList.contains('open') : false;
     if(panel) panel.classList.toggle('open');
-    if(btn) btn.classList.toggle('active');
+    if(btn){ btn.classList.toggle('active'); btn.setAttribute('aria-expanded', String(willOpen)); }
   }
 
   function toggleDetail(){
@@ -3632,10 +3674,107 @@ const VAA = (function(){
   function setMode(on){
     document.body.classList.toggle('agent-on',on);
     btn.setAttribute('aria-pressed',String(on));
+    if(on && window._buildAgentView) window._buildAgentView();
     try{localStorage.setItem(KEY,on?'1':'0');}catch(e){}
   }
   try{if(localStorage.getItem(KEY)==='1')setMode(true);}catch(e){}
   btn.addEventListener('click',function(){setMode(!document.body.classList.contains('agent-on'));});
+})();
+</script>
+
+<script>
+(function(){
+  // Agent-readable view: build the FULL set of races (all 12 cities + 8 regions) from the
+  // same VAA_DATA the calculator uses, so it can never drift out of sync with the data files.
+  // Positions are only ever rendered from the loaded data — never invented. If a data file is
+  // missing at runtime, that race is simply skipped and the static HTML fallback is kept.
+  var CITY_ORDER = ['bratislava','kosice','presov','zilina','bystrica','nitra','trnava','trencin','poprad','michalovce','snv','martin'];
+  var CITY_DESC = {
+    bratislava:'Hlavné mesto SR', kosice:'Druhé najväčšie mesto',
+    presov:'Krajské mesto', zilina:'Krajské mesto', bystrica:'Krajské mesto',
+    nitra:'Krajské mesto', trnava:'Krajské mesto', trencin:'Krajské mesto',
+    poprad:'Okresné mesto', michalovce:'Okresné mesto', snv:'Okresné mesto', martin:'Okresné mesto'
+  };
+  var built = false;
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m];}); }
+  function stance(v){
+    if(v==='agree')    return ['ag-stance--agree','Súhlasí'];
+    if(v==='disagree') return ['ag-stance--disagree','Nesúhlasí'];
+    return ['ag-stance--neutral','Neutrálne'];
+  }
+
+  function renderRace(cityKey, type){
+    var D = window.VAA_DATA || {};
+    var key = cityKey + '_' + type;
+    var qs = (D.questions && D.questions[key]) || [];
+    var cands = (D.candidates && D.candidates[key]) || [];
+    if(!qs.length || !cands.length) return '';                 // no data -> skip, never fabricate
+    var meta = (window.CITY_META && window.CITY_META[cityKey]) || {};
+    var role = type==='primator'
+      ? 'Primátor / Primátorka'
+      : 'Predseda ' + String(meta.vuc||'').replace(/^Voľba župana\s*/,'').trim();
+    var h = '<div class="ag-role"><h3 class="ag-role-label">'+esc(role)+'</h3>';
+    cands.forEach(function(c){
+      h += '<details class="ag-cand"><summary class="ag-cand-summary">'
+        +  '<span class="ag-cand-name">'+esc(c.name)+'</span>'
+        +  '<span class="ag-cand-party">'+esc(c.party||'')+'</span></summary>'
+        +  '<div class="ag-cand-body">';
+      if(c.bio) h += '<p class="ag-bio">'+esc(c.bio)+'</p>';
+      if(c.url) h += '<dl class="ag-meta"><dt>Web</dt><dd><a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.url)+'</a></dd></dl>';
+      h += '<table class="ag-table"><thead><tr><th>Téma</th><th>Otázka</th><th>Postoj</th></tr></thead><tbody>';
+      qs.forEach(function(q){
+        var st = stance(q.a && q.a[c.id]);
+        h += '<tr><td class="ag-topic">'+esc(q.t)+'</td><td>'+esc(q.q)+'</td><td class="ag-stance '+st[0]+'">'+st[1]+'</td></tr>';
+      });
+      h += '</tbody></table></div></details>';
+    });
+    return h + '</div>';
+  }
+
+  function build(){
+    var body = '', cities = [];
+    CITY_ORDER.forEach(function(ck){
+      var meta = (window.CITY_META && window.CITY_META[ck]) || {};
+      if(!meta.name) return;
+      var block = renderRace(ck,'primator');
+      if(meta.vuc) block += renderRace(ck,'vuc');
+      if(!block) return;                                       // city with no data at all -> skip
+      cities.push(meta.name);
+      var desc = CITY_DESC[ck] || '';
+      body += '<div class="ag-city"><h2 class="ag-city-name">'+esc(meta.name)
+           +  (desc?' <span class="ag-city-desc">'+esc(desc)+'</span>':'')
+           +  '</h2>'+block+'</div>';
+    });
+    if(!body) return false;                                    // nothing loaded -> keep static fallback
+
+    var view = document.getElementById('agentView');
+    if(!view) return false;
+    var header = '<div class="ag-header">'
+      + '<h2 class="ag-title">rozhodnisa.sk &mdash; Kandidáti a postoje 2026</h2>'
+      + '<p>Štruktúrovaný prehľad kandidátov a ich postojov ku 25 politickým otázkam. Komunálne a krajské voľby, 24. október 2026.</p>'
+      + '<div class="ag-meta-row">'
+      + '<span><strong>Voľby:</strong> Komunálne a krajské</span>'
+      + '<span><strong>Dátum:</strong> 24. október 2026</span>'
+      + '<span><strong>Mestá:</strong> '+esc(cities.join(', '))+'</span>'
+      + '<span><a href="https://github.com/Ranenter/rozhodnisa">GitHub repozitár</a></span>'
+      + '</div></div>';
+    view.innerHTML = header + body;
+    return true;
+  }
+
+  function ensureBuilt(){
+    if(built) return;
+    var jobs = CITY_ORDER.map(function(ck){
+      try { return loadCityData(ck+'_primator'); } catch(e){ return Promise.resolve(); }
+    });
+    Promise.all(jobs.map(function(p){ return (p && p.catch) ? p.catch(function(){}) : Promise.resolve(); }))
+      .then(function(){ try{ if(build()) built = true; }catch(e){} });
+  }
+
+  window._buildAgentView = ensureBuilt;
+  // If the page loaded already in agent mode (restored from localStorage), build now.
+  if(document.body.classList.contains('agent-on')) ensureBuilt();
 })();
 </script>
 
