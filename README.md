@@ -8,9 +8,10 @@
 
 ## Prečo to robíme
 
-Frustruje nás, že niektorí kandidáti a kandidátky otvorene zavádzajjú a klamú a voliči tak nemajú možnosť, ako ich názory a program kriticky porovnať. Táto kalkulačka dáva každému prehľad, ktorý naša demokracia potrebuje.
+Tieto voľby rozhodujú nielen o veľkých verejných peniazoch ale aj o budúcnosti miest a regiónov, v ktorých žijeme. Informácie o kandidátoch, ich názoroch a volebných programoch sú však často skryté, neprehľadné a niektorí z nich sa na túto nejasnosť dokonca spoliehajú.
+Naša volebná kalkulačka to mení a dáva každému prehľad, ktorý naša demokracia potrebuje. Pomôže ti jednoducho porovnať kandidátov, ich postoje a sľuby, aby si sa mohol/mohla rozhodnúť na základe faktov.
 
-Sme **Občania štátu** a máme len jeden cieľ: priviesť ťa k volebnej urne. Sme apolitickí, nezávislí a nevznikli sme na objednávku žiadnej strany, kandidáta ani sponzora a nikto z nás za túto prácu nedostáva odmenu. Odmeníš nás, keď pôjdeš voliť.
+Sme **Občania štátu** , apolitickí, nezávislí a robíme to bez odmeny. Nepracujeme pre žiadnu politickú stranu, kandidáta ani sponzora. Odmeníš nás, keď pôjdeš voliť.
 
 ---
 
@@ -50,6 +51,12 @@ data-presov.js       # Otázky a odpovede kandidátov — Prešov + PSK
 data-zilina.js       # Otázky a odpovede kandidátov — Žilina + ŽSK
 data-bb.js           # Otázky a odpovede kandidátov — Banská Bystrica + BBSK
 data-nitra.js        # Otázky a odpovede kandidátov — Nitra + NSK
+data-michalovce.js   # Otázky a odpovede kandidátov — Michalovce 
+data-poprad.js       # Otázky a odpovede kandidátov — Poprad
+data-snv.js          # Otázky a odpovede kandidátov — Spisska Nova Ves
+data-trnava.js       # Otázky a odpovede kandidátov — Trnava + TTSK
+data-trencin.js      # Otázky a odpovede kandidátov — Trencin + TSK
+data-martin.js       # Otázky a odpovede kandidátov — Martin
 ```
 
 ---
