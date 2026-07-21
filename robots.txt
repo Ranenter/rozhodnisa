@@ -1,20 +1,36 @@
+# rozhodnisa.sk — public civic data for the 24 October 2026 elections.
+# Reuse encouraged with attribution. See /llms.txt for context.
+
 User-agent: *
 Allow: /
 
-# AI crawlers — explicitly welcome
+# LLM training / knowledge crawlers — explicitly welcome
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Googlebot
+User-agent: CCBot
 Allow: /
 
-User-agent: bingbot
+User-agent: Bytespider
 Allow: /
+
+# Machine-readable surfaces
+# /llms.txt — site overview for LLM agents
+# /data/index.json — canonical dataset (CC BY 4.0)
 
 Sitemap: https://rozhodnisa.sk/sitemap.xml
