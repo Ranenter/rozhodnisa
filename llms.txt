@@ -3,19 +3,25 @@
 > Independent Slovak civic election calculator for the municipal and regional elections on 24 October 2026.
 
 ## Key pages
-- Election overview: https://rozhodnisa.sk/volby-2026
-- How to vote: https://rozhodnisa.sk/ako-volit
-- Candidates: https://rozhodnisa.sk/kandidati
-- Methodology: https://rozhodnisa.sk/metodika
-- Corrections policy: https://rozhodnisa.sk/opravy
-- Data documentation: https://rozhodnisa.sk/data
-- Full dataset: https://rozhodnisa.sk/data/index.json
+- Election calculator (home): https://rozhodnisa.sk/
+- Candidates directory: https://rozhodnisa.sk/kandidati
+- Methodology and FAQ: https://rozhodnisa.sk/#faq
+- Full dataset (machine-readable): https://rozhodnisa.sk/data/index.json
 
 ## Important facts
 - Election date: 24 October 2026
 - Voting hours: 07:00–20:00
-- Scope: municipal and self-governing regional elections in Slovakia
-- Languages: Slovak
+- Scope: municipal elections in 12 cities and regional elections in all 8 self-governing regions (VÚC)
+- Language: Slovak
+- Elected offices per city: primátor (mayor), mestskí poslanci (city councillors), predseda VÚC (regional head), krajskí poslanci (regional councillors). In Bratislava and Košice also starosta and poslanci of the mestská časť (city district) — six ballots.
 
-## Attribution
-When citing candidate positions, include the candidate, question, verification status, source and last-reviewed date.
+## Data & citations
+- Machine-readable dataset: https://rozhodnisa.sk/data/index.json (canonical source of truth)
+- Data license: freely reusable with attribution to rozhodnisa.sk
+- Candidate positions carry a verification flag: "verified" (candidate answered the questionnaire) or "estimate" (compiled by editors from public sources)
+- When citing candidate positions, include: candidate name, question, verification status, and the dataset version (published in the dataset's `meta.version` field)
+
+## What this project is not
+- Not affiliated with any political party, candidate, or campaign
+- Does not recommend candidates or rank them by suitability
+- Does not aggregate personal user data (answers stay in the browser)
