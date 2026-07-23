@@ -92,17 +92,17 @@
       {
         "@type": "HowToStep",
         "name": "Prevezmi obálky a hlasovacie lístky",
-        "text": "Od komisie dostaneš dve farebne odlíšené obálky a sadu hlasovacích lístkov. Biela obálka je pre komunálne voľby, žltá pre krajské."
+        "text": "Od komisie dostaneš dve farebne odlíšené obálky a sadu hlasovacích lístkov. Biela obálka je pre komunálne voľby, modrá pre krajské."
       },
       {
         "@type": "HowToStep",
         "name": "Za plentou vlož lístky do správnych obálok",
-        "text": "Do bielej obálky vlož lístok primátora/starostu a lístok poslancov. Do žltej obálky vlož lístok župana a krajských poslancov. Na každom lístku zakrúžkuješ kandidáta, na primátora/župana jedného, na poslancov najviac toľko, koľko je uvedené na lístku."
+        "text": "Do bielej obálky vlož lístok primátora/starostu a lístok poslancov. Do modrej obálky vlož lístok župana a krajských poslancov. Na každom lístku zakrúžkuješ kandidáta, na primátora/župana jedného, na poslancov najviac toľko, koľko je uvedené na lístku."
       },
       {
         "@type": "HowToStep",
         "name": "Zalepené obálky vhoď do správnych urn",
-        "text": "Bielu obálku do komunálnej urny, žltú do krajskej. Zamenenie je najčastejšia chyba a nedá sa napraviť, skontroluj farbu obálky pred každým vhodením."
+        "text": "Bielu obálku do bielej urny, modrú do modrej. Zamenenie je najčastejšia chyba a nedá sa napraviť, skontroluj farbu obálky pred každým vhodením."
       }
     ]
   }
@@ -302,7 +302,24 @@
     .quiz-strip{flex-direction:column;gap:.7rem;padding:.9rem}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important}}
-  </style>
+  
+.ai-strip{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:.7rem .9rem;margin:0 0 1.6rem}
+.ai-strip__label{font-size:.82rem;color:var(--muted);margin:0;flex:1;min-width:200px;line-height:1.5}
+.ai-strip__btns{display:flex;gap:.4rem;flex-wrap:wrap}
+.ai-btn,.ai-btn:link,.ai-btn:visited{display:inline-flex;align-items:center;gap:.35rem;font-size:.78rem;font-weight:600;color:var(--text)!important;background:#fff;border:1px solid var(--border);border-radius:7px;padding:.35rem .6rem;text-decoration:none!important}
+.ai-btn:hover{border-color:var(--sk-blue);color:var(--sk-blue)!important}
+.ai-strip__note{flex-basis:100%;font-size:.72rem;color:var(--muted);margin:.1rem 0 0;opacity:.85}
+.daygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.7rem;margin:1rem 0 0}
+.daycard{background:#fff;border:1px solid var(--border);border-radius:11px;padding:.85rem .95rem;box-shadow:0 1px 2px rgba(13,27,42,.04)}
+.daycard__k{font-family:var(--font-display);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--sk-blue);margin:0 0 .3rem}
+.daycard__v{font-size:.92rem;font-weight:700;color:var(--text);margin:0 0 .2rem;line-height:1.35}
+.daycard__d{font-size:.79rem;color:var(--muted);margin:0;line-height:1.5}
+.statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.7rem;margin:1rem 0}
+.statbox{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:.85rem;text-align:center}
+.statbox__n{font-family:var(--font-display);font-size:1.75rem;font-weight:800;color:var(--sk-red);line-height:1;margin:0 0 .25rem}
+.statbox__l{font-size:.76rem;color:var(--muted);margin:0;line-height:1.45}
+.why-lead{font-size:1rem!important;color:var(--text)!important;font-weight:600;line-height:1.6!important}
+</style>
 </head>
 <body>
 
@@ -336,21 +353,88 @@
   <p class="hero-eyebrow">Sprievodca voľbami</p>
   <h1>Ako voliť v <span>komunálnych a krajských</span> voľbách 2026</h1>
   <div class="tricolor-bar"></div>
-  <p class="tagline">Spojené samosprávne voľby sa konajú v sobotu 24. októbra 2026 od 7:00 do 22:00. Zvolíš primátora alebo starostu, poslancov mestského zastupiteľstva, župana aj poslancov krajského zastupiteľstva - všetko naraz, v jednej volebnej miestnosti.</p>
-  <div class="badge-date">Sobota, 24. október 2026 · 7:00 - 22:00</div>
+  <p class="tagline">Spojené samosprávne voľby sa konajú v sobotu 24. októbra 2026 od 7:00 do 20:00. Zvolíš primátora alebo starostu, poslancov mestského zastupiteľstva, župana aj poslancov krajského zastupiteľstva - všetko naraz, v jednej volebnej miestnosti.</p>
+  <div class="badge-date">Sobota, 24. október 2026 · 7:00 - 20:00</div>
 </div>
 
 <!-- Quiz strip -->
 <div class="quiz-strip">
-  <p class="quiz-strip__text"><strong>Nevieš, koho voliť?</strong> Vyskúšaj <a href="/" style="color:#fff;text-decoration:underline;text-underline-offset:3px">volebnú kalkulačku pre voľby 2026</a> a zisti, s ktorým kandidátom sa najviac zhoduješ. Anonymné, bez cookies, bez reklám.</p>
+  <p class="quiz-strip__text"><strong>Nevieš, koho voliť?</strong> Volebná kalkulačka pre voľby 2026 ti ukáže, s ktorým kandidátom sa najviac zhoduješ. Anonymné, bez cookies, bez reklám.</p>
   <a href="/" class="quiz-strip__btn">Spustiť volebnú kalkulačku</a>
 </div>
 
 <div class="page-body">
 
-  <!-- 1. Kedy a kde voliť -->
+<div class="ai-strip">
+  <p class="ai-strip__label"><strong style="color:var(--text)">Chceš zhrnutie od AI?</strong> Otvor túto stránku v AI asistentovi a nechaj si postup vysvetliť vlastnými slovami.</p>
+  <div class="ai-strip__btns">
+    <a class="ai-btn" href="https://chatgpt.com/?q=Zhr%C5%88%20mi%20str%C3%A1nku%20https%3A%2F%2Frozhodnisa.sk%2Fako-volit%20-%20ako%2C%20kedy%20a%20kde%20voli%C5%A5%20v%20slovensk%C3%BDch%20komun%C3%A1lnych%20a%20krajsk%C3%BDch%20vo%C4%BEb%C3%A1ch%2024.%20okt%C3%B3bra%202026.%20Vych%C3%A1dzaj%20iba%20z%20obsahu%20tejto%20str%C3%A1nky%20a%20nedop%C4%BA%C5%88aj%20vlastn%C3%A9%20inform%C3%A1cie." target="_blank" rel="noopener nofollow">ChatGPT</a>
+    <a class="ai-btn" href="https://claude.ai/new?q=Zhr%C5%88%20mi%20str%C3%A1nku%20https%3A%2F%2Frozhodnisa.sk%2Fako-volit%20-%20ako%2C%20kedy%20a%20kde%20voli%C5%A5%20v%20slovensk%C3%BDch%20komun%C3%A1lnych%20a%20krajsk%C3%BDch%20vo%C4%BEb%C3%A1ch%2024.%20okt%C3%B3bra%202026.%20Vych%C3%A1dzaj%20iba%20z%20obsahu%20tejto%20str%C3%A1nky%20a%20nedop%C4%BA%C5%88aj%20vlastn%C3%A9%20inform%C3%A1cie." target="_blank" rel="noopener nofollow">Claude</a>
+    <a class="ai-btn" href="https://www.perplexity.ai/search?q=Zhr%C5%88%20mi%20str%C3%A1nku%20https%3A%2F%2Frozhodnisa.sk%2Fako-volit%20-%20ako%2C%20kedy%20a%20kde%20voli%C5%A5%20v%20slovensk%C3%BDch%20komun%C3%A1lnych%20a%20krajsk%C3%BDch%20vo%C4%BEb%C3%A1ch%2024.%20okt%C3%B3bra%202026.%20Vych%C3%A1dzaj%20iba%20z%20obsahu%20tejto%20str%C3%A1nky%20a%20nedop%C4%BA%C5%88aj%20vlastn%C3%A9%20inform%C3%A1cie." target="_blank" rel="noopener nofollow">Perplexity</a>
+  </div>
+  <p class="ai-strip__note">Zhrnutie generuje tretia strana. Nie je overené redakciou rozhodnisa.sk - záväzné sú vždy oficiálne zdroje MV SR.</p>
+</div>
+
+  <!-- 0. Deň volieb v skratke -->
   <div class="section">
-    <h2><span class="h2-icon"></span>Kedy a kde voliť, termín a volebná miestnosť</h2>
+    <h2><span class="h2-icon"></span>Deň volieb v skratke</h2>
+    <p>Ak si chceš prečítať len jednu vec, je to táto štvorica.</p>
+    <div class="daygrid">
+      <div class="daycard">
+        <p class="daycard__k">Kedy</p>
+        <p class="daycard__v">Sobota 24. októbra 2026</p>
+        <p class="daycard__d">Volebné miestnosti sú otvorené od 7:00 do 20:00. Pozor, je to o dve hodiny skôr než pri parlamentných voľbách.</p>
+      </div>
+      <div class="daycard">
+        <p class="daycard__k">Kde</p>
+        <p class="daycard__v">V mieste trvalého pobytu</p>
+        <p class="daycard__d">Iba vo svojej volebnej miestnosti podľa adresy. Nájdeš ju na ozname zo schránky. Hlasovací preukaz neexistuje.</p>
+      </div>
+      <div class="daycard">
+        <p class="daycard__k">Čo si vziať</p>
+        <p class="daycard__v">Občiansky preukaz</p>
+        <p class="daycard__d">Alebo cestovný pas. Nič iné. Lístky aj obálky dostaneš na mieste.</p>
+      </div>
+      <div class="daycard">
+        <p class="daycard__k">Ako dlho to trvá</p>
+        <p class="daycard__v">Pár minút</p>
+        <p class="daycard__d">Dostaneš dve obálky a štyri lístky, v Bratislave a Košiciach šesť. Bielu do bielej urny, modrú do modrej.</p>
+      </div>
+    </div>
+    <p style="font-size:.82rem;margin-top:.8rem">Zdroj: <a href="https://www.minv.sk/?samosprava26-info10" target="_blank" rel="noopener">Ministerstvo vnútra SR - informácie pre voliča</a></p>
+  </div>
+
+  <!-- 1. Prečo je to dôležité -->
+  <div class="section">
+    <h2><span class="h2-icon"></span>Prečo je to dôležité</h2>
+    <p class="why-lead">Toto sú voľby, ktoré najviac vidno z okna. Rozhodujú o tom, ako vyzerá ulica, v ktorej bývaš, a koľko stojí lístok na autobus.</p>
+    <p>A zároveň sú to voľby, na ktoré chodí najmenej ľudí. O vedení miest a krajov tak dlhodobo rozhoduje menšina oprávnených voličov.</p>
+    <div class="statrow">
+      <div class="statbox"><p class="statbox__n">46,19 %</p><p class="statbox__l">účasť v komunálnych voľbách 2022</p></div>
+      <div class="statbox"><p class="statbox__n">43,74 %</p><p class="statbox__l">účasť v krajských voľbách 2022</p></div>
+      <div class="statbox"><p class="statbox__n">29,75 %</p><p class="statbox__l">účasť v župných voľbách 2017</p></div>
+    </div>
+    <p style="font-size:.82rem">Zdroj: <a href="https://domov.sme.sk/c/23047827/oficialne-vysledky-komunalnych-a-vuc-volieb-2022.html" target="_blank" rel="noopener">oficiálne výsledky, SME</a> a Štátna komisia pre voľby.</p>
+    <p>V samospráve má pritom jeden hlas najväčšiu váhu zo všetkých volieb. O starostovi rozhodujú stovky hlasov, o poslancovi neraz desiatky. Nerozhoduje sa o abstraktnej politike, ale o veciach, ktoré cítiš každý deň:</p>
+    <div class="commission-conditions" style="margin:.7rem 0 1rem">
+      <div class="condition-item"><span class="condition-icon">🚌</span>Rozvrh a ceny mestskej hromadnej dopravy</div>
+      <div class="condition-item"><span class="condition-icon">🏫</span>Počet tried, stav škôl a škôlok</div>
+      <div class="condition-item"><span class="condition-icon">🏥</span>Nemocnice, pohotovosti a zariadenia pre seniorov</div>
+      <div class="condition-item"><span class="condition-icon">🛣️</span>Stav ciest, chodníkov a mostov</div>
+      <div class="condition-item"><span class="condition-icon">🌳</span>Parky, ihriská, verejné priestranstvá</div>
+      <div class="condition-item"><span class="condition-icon">🅿️</span>Parkovacia politika a poplatky</div>
+      <div class="condition-item"><span class="condition-icon">🗑️</span>Odvoz odpadu a miestne dane</div>
+      <div class="condition-item"><span class="condition-icon">💶</span>Rozpočty v stovkách miliónov eur ročne</div>
+    </div>
+    <div class="alert alert-info">
+      <span class="alert-icon">i</span>
+      <p>Ľudia, ktorých volíš 24. októbra, budú o týchto veciach rozhodovať <strong>štyri roky</strong>. Každé krajské mesto a každý samosprávny kraj pritom hospodári s rozpočtom v stovkách miliónov eur ročne.</p>
+    </div>
+  </div>
+
+  <!-- 2. Kedy a kde voliť -->
+  <div class="section">
+    <h2><span class="h2-icon"></span>Kedy a kde voliť, podrobne</h2>
     <p>Voliť môžeš <span class="strong-text">iba v mieste trvalého bydliska</span> - v tej volebnej miestnosti, ktorá je priradená k tvojej adrese. Svoju volebnú miestnosť nájdeš na ozname, ktorý ti doručia do schránky, alebo priamo na stránke <a href="https://www.minv.sk/?volby-samosprava26" target="_blank" rel="noopener">Ministerstva vnútra SR</a>.</p>
     <div class="alert alert-warning">
       <span class="alert-icon">!</span>
@@ -358,26 +442,7 @@
     </div>
   </div>
 
-  <!-- Prečo voliť -->
-  <div class="section">
-    <h2><span class="h2-icon"></span>Prečo voliť, účasť rozhoduje</h2>
-    <p>V komunálnych voľbách 2022 prišla menej ako polovica oprávnených voličov: <strong style="color:var(--text)">46,19 %</strong>. V krajských voľbách to bolo <strong style="color:var(--text)">43,74 %</strong>. Na župné voľby 2017 prišla len každá tretia osoba: <strong style="color:var(--text)">29,75 %</strong>. <a href="https://domov.sme.sk/c/23047827/oficialne-vysledky-komunalnych-a-vuc-volieb-2022.html" target="_blank" rel="noopener" style="font-size:.82rem">(zdroj: SME)</a></p>
-    <p>O vedení tvojho mesta alebo kraja rozhoduje menšina. Pritom ide o veci, ktoré cítiš každý deň:</p>
-    <div class="commission-conditions" style="margin:.7rem 0 1rem">
-      <div class="condition-item"><span class="condition-icon">🚌</span>Rozvrh a ceny mestskej hromadnej dopravy</div>
-      <div class="condition-item"><span class="condition-icon">🏫</span>Počet tried, stav škôl a škôlok</div>
-      <div class="condition-item"><span class="condition-icon">🏥</span>Nemocnice, pohotovosti a zariadenia pre seniorov</div>
-      <div class="condition-item"><span class="condition-icon">🛣️</span>Stav ciest, chodníkov a mostov</div>
-      <div class="condition-item"><span class="condition-icon">🌳</span>Parky, ihriská, verejné priestranstvá</div>
-      <div class="condition-item"><span class="condition-icon">💶</span>Rozpočty v stovkách miliónov eur ročne</div>
-    </div>
-    <div class="alert alert-info">
-      <span class="alert-icon">i</span>
-      <p>Každé krajské mesto a každý samosprávny kraj hospodári s rozpočtom v stovkách miliónov eur ročne. Tieto peniaze idú na školy, nemocnice, cesty a sociálne služby. Kto ich míňa, rozhodujú voľby.</p>
-    </div>
-  </div>
-
-  <!-- 2. Koho volíš -->
+  <!-- 3. Koho volíš -->
   <div class="section">
     <h2><span class="h2-icon"></span>Koho volíš, primátor, župan, poslanci</h2>
     <p>V jeden deň odovzdávaš až štyri hlasovacie lístky:</p>
@@ -394,26 +459,26 @@
     <p style="margin-top:.85rem">Zoznamy všetkých kandidátov vo tvojom meste a kraji nájdeš na stránke <a href="https://volby.statistics.sk/" target="_blank" rel="noopener">Štatistického úradu SR</a> alebo v našom <a href="/kandidati">prehľade kandidátov na primátorov a županov 2026</a>.</p>
   </div>
 
-  <!-- 3. Čo si priniesť -->
+  <!-- 4. Čo si priniesť -->
   <div class="section">
     <h2><span class="h2-icon"></span>Čo si priniesť do volebnej miestnosti</h2>
     <p>Stačí <span class="strong-text">občiansky preukaz alebo cestovný pas</span>. Nič iné nepotrebuješ, hlasovacie lístky a obálky dostaneš priamo vo volebnej miestnosti.</p>
   </div>
 
-  <!-- 4. Ako správne hlasovať -->
+  <!-- 5. Ako správne hlasovať -->
   <div class="section">
     <h2><span class="h2-icon"></span>Ako správne hlasovať, dve urny, dve obálky</h2>
     <p>V miestnosti sú <strong style="color:var(--text)">dve urny</strong> - jedna pre komunálne voľby, druhá pre krajské voľby. Každá urna má inú farbu obálky, aby sa lístky nemiešali.</p>
     <ol class="steps">
-      <li class="step"><span class="step-num">1</span><span class="step-text">Pri stole komisie dostaneš <strong>dve farebne odlíšené obálky</strong> a celú sadu hlasovacích lístkov. Biela obálka je pre komunálne voľby, žltá (béžová) pre krajské.</span></li>
-      <li class="step"><span class="step-num">2</span><span class="step-text">Za plentou zoraď lístky podľa volieb. Do <strong>bielej obálky</strong> vlož lístok primátora/starostu a poslancov mestského zastupiteľstva. Do <strong>žltej obálky</strong> vlož lístok župana a poslancov krajského zastupiteľstva.</span></li>
+      <li class="step"><span class="step-num">1</span><span class="step-text">Pri stole komisie dostaneš <strong>dve farebne odlíšené obálky</strong> a celú sadu hlasovacích lístkov. <strong>Biela obálka</strong> je pre komunálne voľby, <strong>modrá obálka</strong> pre krajské. Lístky pre krajské voľby spoznáš podľa modrých pruhov po okrajoch.</span></li>
+      <li class="step"><span class="step-num">2</span><span class="step-text">Za plentou zoraď lístky podľa volieb. Do <strong>bielej obálky</strong> vlož lístok primátora/starostu a poslancov mestského zastupiteľstva. Do <strong>modrej obálky</strong> vlož lístok župana a poslancov krajského zastupiteľstva.</span></li>
       <li class="step"><span class="step-num">3</span><span class="step-text">Na lístku pre <strong>primátora, starostu alebo župana</strong> zakrúžkuješ číslo práve jedného kandidáta.</span></li>
       <li class="step"><span class="step-num">4</span><span class="step-text">Na lístku pre <strong>poslancov</strong> môžeš zakrúžkovať viacerých kandidátov, maximálny povolený počet je uvedený priamo na lístku.</span></li>
-      <li class="step"><span class="step-num">5</span><span class="step-text">Zalepené obálky vhoď do <strong>správnych urn</strong> - bielu do komunálnej, žltú do krajskej.</span></li>
+      <li class="step"><span class="step-num">5</span><span class="step-text">Zalepené obálky vhoď do <strong>správnych urn</strong> - bielu obálku do bielej urny, modrú do modrej.</span></li>
     </ol>
     <div class="alert alert-warning">
       <span class="alert-icon">!</span>
-      <p>Lístok vhodený do nesprávnej urny je <strong>neplatný</strong> a nedá sa opraviť. Skontroluj farbu obálky pred každým vhodením.</p>
+      <p>Ak vložíš lístok do <strong>nesprávnej obálky</strong>, hlas je neplatný a nedá sa opraviť. Farba lístka sa musí zhodovať s farbou obálky. Skontroluj to za plentou, pred vhodením.</p>
     </div>
     <div class="alert alert-info">
       <span class="alert-icon">i</span>
@@ -421,7 +486,7 @@
     </div>
   </div>
 
-  <!-- 5. Ako sa rozhodnúť -->
+  <!-- 6. Ako sa rozhodnúť -->
   <div class="section">
     <h2><span class="h2-icon"></span>Nevieš, koho voliť?</h2>
     <div class="cta-block">
@@ -430,7 +495,7 @@
     </div>
   </div>
 
-  <!-- 6. Člen volebnej komisie -->
+  <!-- 7. Člen volebnej komisie -->
   <div class="section">
     <h2><span class="h2-icon"></span>Chceš byť členom volebnej komisie?</h2>
     <p>Volebné komisie potrebujú dobrovoľníkov. Bez dostatočného počtu členov ich dopĺňa starosta, čo znižuje nezávislosť procesu. Ak chceš aktívne prispieť k férovému priebehu volieb, môžeš sa zapojiť.</p>
@@ -461,8 +526,13 @@
         <div class="party-accordion">
 
           <details class="party-item">
-            <summary class="party-summary"><span class="party-name">Progresívne Slovensko (PS)</span><span class="party-tag party-tag--form">Má formulár</span></summary>
-            <div class="party-body"><a href="https://progresivne.sk/okrskova-komisia/" target="_blank" rel="noopener">Online formulár</a> alebo email <a href="mailto:okrskari@progresivne.sk">okrskari@progresivne.sk</a></div>
+            <summary class="party-summary"><span class="party-name">Volt Slovensko</span><span class="party-tag party-tag--form">Má formulár</span></summary>
+            <div class="party-body"><a href="https://voltslovensko.org/komunalne-volby-2026" target="_blank" rel="noopener">Stránka kampane Volt 2026</a> s informáciami a kontaktom</div>
+          </details>
+
+          <details class="party-item">
+            <summary class="party-summary"><span class="party-name">Hnutie Slovensko</span><span class="party-tag party-tag--form">Má formulár</span></summary>
+            <div class="party-body"><a href="https://www.obycajniludia.sk/volby-do-organov-samospravy/okrskova-volebna-komisia/" target="_blank" rel="noopener">Online formulár pre okrskovú volebnú komisiu</a> alebo email <a href="mailto:kontakt@hnutieslovensko.sk">kontakt@hnutieslovensko.sk</a></div>
           </details>
 
           <details class="party-item">
@@ -471,28 +541,13 @@
           </details>
 
           <details class="party-item">
-            <summary class="party-summary"><span class="party-name">Volt Slovensko</span><span class="party-tag party-tag--form">Má formulár</span></summary>
-            <div class="party-body"><a href="https://voltslovensko.org/komunalne-volby-2026" target="_blank" rel="noopener">Stránka kampane Volt 2026</a> s informáciami a kontaktom</div>
-          </details>
-
-          <details class="party-item">
             <summary class="party-summary"><span class="party-name">Férové voľby (nezávislé)</span><span class="party-tag party-tag--form">Má formulár</span></summary>
             <div class="party-body"><a href="https://ferovevolby.sk" target="_blank" rel="noopener">ferovevolby.sk</a> sprostredkuje delegovanie aj bez straníckeho zázemia</div>
           </details>
 
           <details class="party-item">
-            <summary class="party-summary"><span class="party-name">KDH</span><span class="party-tag party-tag--contact">Kontakt</span></summary>
-            <div class="party-body">Kontaktuj <a href="https://kdh.sk/kontakt/" target="_blank" rel="noopener">krajskú alebo okresnú kanceláriu KDH</a> priamo</div>
-          </details>
-
-          <details class="party-item">
-            <summary class="party-summary"><span class="party-name">Hlas - SD</span><span class="party-tag party-tag--contact">Kontakt</span></summary>
-            <div class="party-body">Kontaktuj stranu cez <a href="https://strana-hlas.sk/kontakty/" target="_blank" rel="noopener">kontaktný formulár na strane-hlas.sk</a></div>
-          </details>
-
-          <details class="party-item">
-            <summary class="party-summary"><span class="party-name">Hnutie Slovensko</span><span class="party-tag party-tag--contact">Kontakt</span></summary>
-            <div class="party-body">Kontaktuj stranu na <a href="mailto:kontakt@hnutieslovensko.sk">kontakt@hnutieslovensko.sk</a></div>
+            <summary class="party-summary"><span class="party-name">Progresívne Slovensko (PS)</span><span class="party-tag party-tag--form">Má formulár</span></summary>
+            <div class="party-body"><a href="https://progresivne.sk/okrskova-komisia/" target="_blank" rel="noopener">Online formulár</a> alebo email <a href="mailto:okrskari@progresivne.sk">okrskari@progresivne.sk</a></div>
           </details>
 
           <details class="party-item">
@@ -501,8 +556,18 @@
           </details>
 
           <details class="party-item">
+            <summary class="party-summary"><span class="party-name">Hlas - SD</span><span class="party-tag party-tag--contact">Kontakt</span></summary>
+            <div class="party-body">Kontaktuj stranu cez <a href="https://strana-hlas.sk/kontakty/" target="_blank" rel="noopener">kontaktný formulár na strane-hlas.sk</a></div>
+          </details>
+
+          <details class="party-item">
             <summary class="party-summary"><span class="party-name">Demokrati</span><span class="party-tag party-tag--contact">Kontakt</span></summary>
             <div class="party-body">Kontaktuj stranu cez <a href="https://www.smedemokrati.sk/" target="_blank" rel="noopener">smedemokrati.sk</a></div>
+          </details>
+
+          <details class="party-item">
+            <summary class="party-summary"><span class="party-name">KDH</span><span class="party-tag party-tag--contact">Kontakt</span></summary>
+            <div class="party-body">Kontaktuj <a href="https://kdh.sk/kontakt/" target="_blank" rel="noopener">krajskú alebo okresnú kanceláriu KDH</a> priamo</div>
           </details>
 
         </div>
@@ -568,7 +633,7 @@
       </details>
       <details>
         <summary>Kedy sa dozviem výsledky volieb?</summary>
-        <div class="faq-answer">Hlasovanie končí o 22:00. Sčítavanie prebieha v noci a predbežné výsledky zverejňuje Štatistický úrad SR na <a href="https://volby.statistics.sk" target="_blank" rel="noopener">volby.statistics.sk</a>, zvyčajne v noci alebo skoro ráno v nedeľu 25. októbra 2026.</div>
+        <div class="faq-answer">Hlasovanie končí o 20:00. Sčítavanie prebieha v noci a predbežné výsledky zverejňuje Štatistický úrad SR na <a href="https://volby.statistics.sk" target="_blank" rel="noopener">volby.statistics.sk</a>, zvyčajne v noci alebo skoro ráno v nedeľu 25. októbra 2026.</div>
       </details>
     </div>
   </div>
@@ -638,6 +703,187 @@
     btn.classList.remove('open'); 
     btn.setAttribute('aria-expanded','false'); 
   });
+})();
+</script>
+<style>
+.agent-view{display:none}
+body.agent-on .agent-view{display:block;position:fixed;inset:0;z-index:9990;overflow-y:auto;background:#fff;padding:1.6rem 1.1rem 5rem;-webkit-overflow-scrolling:touch}
+.agent-view__inner{max-width:900px;margin:0 auto}
+.ag-header{border-bottom:2px solid var(--border);padding-bottom:1rem;margin-bottom:1.4rem}
+.ag-title{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:1.5rem;font-weight:800;text-transform:uppercase;margin:0 0 .35rem;color:var(--sk-blue)}
+.ag-header p{font-size:.9rem;color:var(--muted);line-height:1.5;margin:0}
+.ag-meta-row{display:flex;flex-wrap:wrap;gap:.35rem 1.2rem;font-size:.8rem;color:var(--muted);margin-top:.6rem}
+.ag-sec{margin:0 0 1.8rem}
+.ag-sec-name{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;background:var(--sk-blue);color:#fff;padding:.55rem .95rem;border-radius:6px;margin:0 0 .9rem}
+.ag-p{font-size:.9rem;line-height:1.6;margin:0 0 .6rem;color:var(--text)}
+.ag-note{font-size:.82rem;color:var(--muted);background:#EEF5FF;border-left:3px solid var(--sk-blue);padding:.5rem .75rem;border-radius:4px;margin:0 0 .7rem;line-height:1.55}
+.ag-note--warn{background:#FDEEEF;border-left-color:var(--sk-red)}
+.ag-list{margin:0 0 .8rem;padding-left:1.15rem}
+.ag-list li{font-size:.88rem;line-height:1.55;margin:0 0 .3rem}
+.ag-kv{border:1px solid var(--border);border-radius:8px;padding:.6rem .85rem;margin:0 0 .5rem;background:var(--surface)}
+.ag-kv dt{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--sk-red);margin:0 0 .15rem}
+.ag-kv dd{margin:0;font-size:.88rem;line-height:1.55}
+.ag-qa{border:1px solid var(--border);border-radius:8px;padding:.65rem .85rem;margin:0 0 .5rem;background:var(--surface)}
+.ag-q{font-weight:700;font-size:.9rem;margin:0 0 .25rem}
+.ag-a{font-size:.86rem;line-height:1.6;margin:0;color:var(--muted)}
+.ag-link{font-size:.82rem;margin:0 0 .35rem;word-break:break-all}
+.ag-link a{color:var(--sk-blue)}
+.agent-toggle{position:fixed;bottom:1.2rem;right:1.2rem;z-index:9998;display:flex;align-items:center;gap:.55rem;background:#fff;color:var(--muted);border:1px solid rgba(0,0,0,.1);font-family:'Courier New',monospace;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.5rem .85rem;border-radius:99px;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.14);min-height:44px;-webkit-tap-highlight-color:transparent}
+.agent-toggle:hover{box-shadow:0 4px 18px rgba(0,0,0,.2)}
+.agent-toggle__track{width:36px;height:20px;border-radius:99px;background:#D8DCE6;position:relative;transition:background .2s;flex-shrink:0}
+.agent-toggle__thumb{position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;background:#8a92a0;transition:transform .2s,background .2s}
+body.agent-on .agent-toggle{color:#1A7A42}
+body.agent-on .agent-toggle__track{background:#BFE8CE}
+body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42}
+@media(max-width:520px){.agent-toggle{bottom:.9rem;right:.9rem;font-size:.65rem}}
+</style>
+
+<button class="agent-toggle" id="agentToggle" aria-pressed="false" title="Prepnúť agentom čitateľný prehľad">
+  AGENT READABLE
+  <span class="agent-toggle__track"><span class="agent-toggle__thumb"></span></span>
+</button>
+<div class="agent-view" id="agentView" role="region" aria-label="Agent readable view"></div>
+
+<script>
+(function(){
+  // Agent-readable overlay for the voting guide.
+  // Built by walking the .section blocks already in the DOM, so it stays in sync
+  // with the visible page — no separate data source, nothing invented.
+  var btn = document.getElementById('agentToggle');
+  var view = document.getElementById('agentView');
+  var KEY = 'rzdn_agent';
+  var built = false;
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]; }); }
+  function clean(s){ return (s||'').replace(/\s+/g,' ').trim(); }
+
+  function renderChildren(root){
+    var out = '';
+    Array.prototype.forEach.call(root.children, function(el){
+      if(!el.classList || el.tagName === 'H2') return;
+      if(el.tagName === 'A' && el.getAttribute('href')){
+        out += '<p class="ag-link">'+esc(clean(el.textContent))+': <a href="'+esc(el.getAttribute('href'))+'" target="_blank" rel="noopener">'+esc(el.getAttribute('href'))+'</a></p>';
+        return;
+      }
+      if(el.tagName === 'H3'){ out += '<p class="ag-q">'+esc(clean(el.textContent))+'</p>'; return; }
+      if(el.tagName === 'P'){
+        var t = clean(el.textContent);
+        if(t) out += '<p class="ag-p">'+esc(t)+'</p>';
+      } else if(el.classList.contains('alert')){
+        var warn = el.classList.contains('alert-warning');
+        out += '<p class="ag-note'+(warn?' ag-note--warn':'')+'">'+(warn?'UPOZORNENIE: ':'POZNÁMKA: ')+esc(clean(el.textContent).replace(/^[!i]\s*/,''))+'</p>';
+      } else if(el.classList.contains('daygrid')){
+        Array.prototype.forEach.call(el.querySelectorAll('.daycard'), function(c){
+          var k = clean((c.querySelector('.daycard__k')||{}).textContent);
+          var v = clean((c.querySelector('.daycard__v')||{}).textContent);
+          var d = clean((c.querySelector('.daycard__d')||{}).textContent);
+          out += '<dl class="ag-kv"><dt>'+esc(k)+'</dt><dd><strong>'+esc(v)+'</strong> — '+esc(d)+'</dd></dl>';
+        });
+      } else if(el.classList.contains('statrow')){
+        out += '<ul class="ag-list">';
+        Array.prototype.forEach.call(el.querySelectorAll('.statbox'), function(b){
+          out += '<li>'+esc(clean((b.querySelector('.statbox__n')||{}).textContent))+' — '+esc(clean((b.querySelector('.statbox__l')||{}).textContent))+'</li>';
+        });
+        out += '</ul>';
+      } else if(el.classList.contains('steps')){
+        out += '<ol class="ag-list">';
+        Array.prototype.forEach.call(el.querySelectorAll('.step'), function(s){
+          out += '<li>'+esc(clean((s.querySelector('.step-text')||{}).textContent))+'</li>';
+        });
+        out += '</ol>';
+      } else if(el.classList.contains('commission-conditions')){
+        out += '<ul class="ag-list">';
+        Array.prototype.forEach.call(el.querySelectorAll('.condition-item'), function(c){
+          var ic = c.querySelector('.condition-icon');
+          var t = clean(c.textContent);
+          if(ic){ var iv = clean(ic.textContent); if(iv && t.indexOf(iv) === 0) t = iv + ' ' + clean(t.slice(iv.length)); }
+          out += '<li>'+esc(t)+'</li>';
+        });
+        out += '</ul>';
+      } else if(el.classList.contains('faq-list')){
+        Array.prototype.forEach.call(el.querySelectorAll('details'), function(d){
+          var q = clean((d.querySelector('summary')||{}).textContent);
+          var a = clean((d.querySelector('.faq-answer')||{}).textContent);
+          out += '<div class="ag-qa"><p class="ag-q">'+esc(q)+'</p><p class="ag-a">'+esc(a)+'</p></div>';
+        });
+      } else if(el.classList.contains('cta-block') || el.classList.contains('ai-strip')){
+        return;                                            // interaktívne prvky nemajú v textovom prehľade zmysel
+      } else if(el.tagName === 'TABLE' || el.querySelector('table')){
+        var tbl = el.tagName === 'TABLE' ? el : el.querySelector('table');
+        out += '<ul class="ag-list">';
+        Array.prototype.forEach.call(tbl.querySelectorAll('tr'), function(tr){
+          var cells = [];
+          Array.prototype.forEach.call(tr.children, function(td){ var v = clean(td.textContent); if(v) cells.push(v); });
+          if(cells.length) out += '<li>'+esc(cells.join(' — '))+'</li>';
+        });
+        out += '</ul>';
+      } else if(el.children && el.children.length){
+        out += renderChildren(el);                         // rekurzia: zachová štruktúru vnorených blokov
+      } else {
+        var t2 = clean(el.textContent);
+        if(t2) out += '<p class="ag-p">'+esc(t2)+'</p>';
+      }
+    });
+    return out;
+  }
+
+  function renderSection(sec){
+    var h2 = sec.querySelector('h2');
+    var title = h2 ? clean(h2.textContent) : '';
+    var out = renderChildren(sec);
+    if(!out) return '';                                   // sekcie bez textového obsahu (len CTA) preskoč
+    return '<div class="ag-sec"><h2 class="ag-sec-name">'+esc(title)+'</h2>'+out+'</div>';
+  }
+
+  function build(){
+    if(built) return;
+    var secs = document.querySelectorAll('.page-body .section');
+    if(!secs.length) return;
+    var body = '';
+    Array.prototype.forEach.call(secs, function(s){ body += renderSection(s); });
+    var header = '<div class="ag-header">'
+      + '<h2 class="ag-title">rozhodnisa.sk &mdash; Ako voliť 2026</h2>'
+      + '<p>Štruktúrovaný návod, ako, kedy a kde hlasovať v spojených komunálnych a krajských voľbách na Slovensku.</p>'
+      + '<div class="ag-meta-row">'
+      + '<span><strong>Voľby:</strong> Komunálne a krajské (samosprávne)</span>'
+      + '<span><strong>Dátum:</strong> sobota 24. október 2026</span>'
+      + '<span><strong>Čas:</strong> 7:00 - 20:00</span>'
+      + '<span><strong>Zdroj:</strong> minv.sk</span>'
+      + '</div></div>';
+    view.innerHTML = '<div class="agent-view__inner">'+header+body+'</div>';
+    built = true;
+  }
+
+  function setMode(on){
+    if(on) { try{ build(); }catch(e){} }
+    document.body.classList.toggle('agent-on', on);
+    btn.setAttribute('aria-pressed', String(on));
+    try{ localStorage.setItem(KEY, on ? '1' : '0'); }catch(e){}
+  }
+
+  try{ if(localStorage.getItem(KEY) === '1') setMode(true); }catch(e){}
+  btn.addEventListener('click', function(){ setMode(!document.body.classList.contains('agent-on')); });
+})();
+</script>
+
+<script>
+(function(){
+  // Poradie strán v zozname "Kde sa prihlásiť" miešame pri každom načítaní (Fisher-Yates),
+  // aby zoznam nezvýhodňoval žiadnu stranu. Strany s online formulárom zostávajú hore,
+  // pretože pre používateľa predstavujú rýchlejšiu cestu — v rámci skupiny je poradie náhodné.
+  var acc = document.querySelector('.party-accordion');
+  if(!acc) return;
+  var items = Array.prototype.slice.call(acc.querySelectorAll('.party-item'));
+  if(items.length < 2) return;
+  function shuffle(a){
+    for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; }
+    return a;
+  }
+  var withForm = shuffle(items.filter(function(el){ return el.querySelector('.party-tag--form'); }));
+  var contact  = shuffle(items.filter(function(el){ return !el.querySelector('.party-tag--form'); }));
+  var frag = document.createDocumentFragment();
+  withForm.concat(contact).forEach(function(el){ frag.appendChild(el); });
+  acc.appendChild(frag);
 })();
 </script>
 </body>
