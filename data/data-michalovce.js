@@ -1,168 +1,168 @@
 // ── Volebná kalkulačka 2026 — MICHALOVCE ──
 // Upravujte len tento súbor pre otázky a kandidátov mesta MICHALOVCE.
 // Štruktúra otázky: {t:'Téma', q:'Text otázky?', w:'Vysvetlenie.', a:{id1:'agree'|'neutral'|'disagree', ...}}
+// Odpovede sú pracovné odhady z verejných zdrojov. Kandidátom treba umožniť ich potvrdiť alebo opraviť.
 
 window.VAA_DATA = window.VAA_DATA || {};
-
-// ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
+window.VAA_DATA.questions = window.VAA_DATA.questions || {};
+
 window.VAA_DATA.candidates['michalovce_primator'] = [
-  {id:'dufinec',   name:'Miroslav Dufinec',   party:'Smer-SD / Hlas-SD (úradujúci primátor)',              color:'#e63946', url:'https://www.dufinec.sk'},
-  {id:'sibal',     name:'Erik Sibal',          party:'Nezávislý kandidát',                                  color:'#2196F3', url:''},
-  {id:'vidovenec', name:'Miroslav Vidovenec',  party:'PS / Demokrati / SaS / KDH / Hnutie Slovensko',      color:'#4caf50', url:''}
+  {id:'dufinec',   name:'Miroslav Dufinec',   party:'Smer-SD / Hlas-SD / Sme rodina / SNS / SMS (úradujúci primátor)',         color:'#e63946', url:'https://www.dufinec.sk'},
+  {id:'sibal',     name:'Erik Sibal',          party:'Nezávislý kandidát',                             color:'#2196F3', url:''},
+  {id:'vidovenec', name:'Miroslav Vidovenec',  party:'PS / Demokrati / SaS / KDH / Hnutie Slovensko', color:'#4caf50', url:''},
+  {id:'carny',     name:'Juraj Čarný',         party:'Nezávislý kandidát',                   color:'#ff9800', url:''}
 ];
 
-// ── Otázky: Primátor ──
-window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 window.VAA_DATA.questions.michalovce_primator = [
   {
     t:'Doprava',
-    q:'Má byť diaľnica D1 na Zemplín jednou z hlavných priorít primátora pri rokovaniach so štátom?',
-    w:'Úsek D1 Bidovce – štátna hranica SK/UA má približne 72 km a odhadované náklady 1,4 až 1,8 miliardy eur. Pre šetrenie v štátnom rozpočte sa výstavba na Zemplíne posúva na mnoho rokov a mesto diaľnicu nepostaví samo. Otázka je, koľko energie má primátor venovať tlaku na štát oproti veciam, ktoré vie mesto riešiť priamo.',
-    a:{dufinec:'agree', sibal:'agree', vidovenec:'agree'}
+    q:'Má primátor verejne kritizovať vládu, ak do roka neposkytne záväzný termín výstavby D1 na Zemplín?',
+    w:'Diaľnicu D1 na Zemplín pripravuje a financuje štát, nie mesto. Primátor však môže verejne tlačiť na vládu aj vtedy, keď ju tvoria jeho politickí partneri. Spor je medzi straníckou spoluprácou a otvoreným tlakom za záujmy regiónu.',
+    a:{dufinec:'disagree', sibal:'agree', vidovenec:'agree', carny:'agree'}
   },
   {
     t:'Doprava',
     q:'Majú mať opravy ciest a chodníkov prednosť pred veľkými novými projektmi?',
-    w:'Stav ciest a chodníkov patrí medzi časté sťažnosti obyvateľov. Keďže rozpočet mesta nestačí na všetko naraz, vedenie musí vyberať medzi každodennou infraštruktúrou a väčšími viditeľnými investíciami.',
-    a:{dufinec:'neutral', sibal:'agree', vidovenec:'neutral'}
+    w:'Stav ciest a chodníkov patrí medzi časté sťažnosti obyvateľov. Rozpočet nestačí na všetko naraz, preto musí vedenie vyberať medzi každodennou infraštruktúrou a väčšími viditeľnými investíciami.',
+    a:{dufinec:'neutral', sibal:'agree', vidovenec:'neutral', carny:'agree'}
   },
   {
     t:'Parkovanie',
-    q:'Má mesto zaviesť regulované parkovanie v centre, aj keby to skomplikovalo krátke návštevy obchodov a úradov?',
-    w:'Michalovce zaviedli bezplatné parkovanie na mestských parkoviskách v centre od roku 2014. Ak by bolo spoplatnených napríklad 300 miest za 1 €/hod., pri 8 hodinách denne, 250 pracovných dňoch a 50 % obsadenosti by hrubý príjem bol asi 300 000 eur ročne. Pri 200 až 500 miestach ide orientačne o 160 000 až 600 000 eur ročne pred nákladmi na systém a kontrolu.',
-    a:{dufinec:'neutral', sibal:'agree', vidovenec:'neutral'}
+    q:'Má mesto zaviesť platené parkovanie v centre, aj keby to skomplikovalo krátke návštevy obchodov a úradov?',
+    w:'Na mestských parkoviskách v centre sa dnes parkuje bezplatne. Spoplatnenie môže zlepšiť dostupnosť miest a priniesť príjem do rozpočtu, ale zvýši náklady návštevníkom centra.',
+    a:{dufinec:'agree', sibal:'agree', vidovenec:'neutral', carny:'neutral'}
   },
   {
     t:'Cyklodoprava',
-    q:'Má mesto budovať bezpečné cyklotrasy aj vtedy, keď ubudne časť parkovacích miest?',
-    w:'V rozpočtových materiáloch mesta sa uvádza cyklistický chodník Hollého – Okružná – Štefánikova za približne 309 092 eur. Bezpečné cyklotrasy často potrebujú vlastný priestor, nielen namaľovanú čiaru na ceste, čo môže znamenať menej miesta pre autá alebo parkovanie.',
-    a:{dufinec:'neutral', sibal:'agree', vidovenec:'agree'}
+    q:'Má mesto budovať bezpečné cyklotrasy aj vtedy, keď tým ubudne časť parkovacích miest?',
+    w:'Mesto pripravuje cyklistické prepojenia vrátane trasy Hollého – Okružná – Štefánikova. Oddelené cyklotrasy zvyšujú bezpečnosť, no v uliciach často zaberú priestor autám alebo parkovaniu.',
+    a:{dufinec:'agree', sibal:'neutral', vidovenec:'neutral', carny:'neutral'}
   },
   {
     t:'MHD',
     q:'Má mesto viac podporiť MHD, aj keď to bude vyžadovať vyššiu dotáciu z rozpočtu?',
-    w:'Mesto počíta s projektom bezemisnej mestskej autobusovej dopravy vrátane nákupu 10 elektrobusov, úprav zastávok a súvisiacej infraštruktúry s podporou približne 6,8 milióna eur. Otázka je, či má mesto ďalej zvyšovať kvalitu MHD aj cez vlastné výdavky.',
-    a:{dufinec:'agree', sibal:'neutral', vidovenec:'agree'}
+    w:'Mesto pripravuje bezemisnú autobusovú dopravu, nové vozidlá a úpravy zastávok. Vyššia kvalita MHD môže znížiť závislosť od áut, ale zvýši pravidelné výdavky mesta.',
+    a:{dufinec:'agree', sibal:'neutral', vidovenec:'neutral', carny:'neutral'}
   },
   {
     t:'Bezpečnosť',
-    q:'Má mesto posilniť mestskú políciu a kamery, aj keď to zvýši trvalé výdavky?',
-    w:'Viac hliadok a kamier môže zvýšiť pocit bezpečia v centre, parkoch aj na sídliskách. Zároveň ide o dlhodobé náklady na ľudí, techniku, údržbu a prevádzku.',
-    a:{dufinec:'neutral', sibal:'neutral', vidovenec:'agree'}
-  },
-  {
-    t:'Bezpečnosť',
-    q:'Majú mestskí policajti viac chodiť pešo po štvrtiach, aj keď to bude drahšie?',
-    w:'Pešie hliadky môžu lepšie poznať miestnych ľudí a opakujúce sa problémy. Sú však časovo náročnejšie ako hliadkovanie autom a môžu vyžadovať viac policajtov.',
-    a:{dufinec:'neutral', sibal:'neutral', vidovenec:'agree'}
+    q:'Má mesto zvýšiť počet peších hliadok, aj keby muselo prijať ďalších mestských policajtov?',
+    w:'Pešie hliadky môžu lepšie poznať problémy v centre a na sídliskách. Vyžadujú však viac policajtov a trvalo vyššie náklady na mzdy, výstroj a prevádzku.',
+    a:{dufinec:'agree', sibal:'neutral', vidovenec:'agree', carny:'agree'}
   },
   {
     t:'Životné prostredie',
-    q:'Má mesto brániť veľkému veternému parku pri Michalovciach, aj keď môže priniesť čistú energiu a príjmy?',
-    w:'Pri Michalovciach sa diskutuje zámer výstavby veľkého veterného parku s približne 45 turbínami. Podporovatelia hovoria o čistej energii, odporcovia o zásahu do krajiny, hluku a dopade na obce.',
-    a:{dufinec:'agree', sibal:'agree', vidovenec:'agree'}
+    q:'Má mesto odmietnuť veterný park pri Michalovciach, aj keby investor ponúkol obciam pravidelné finančné kompenzácie?',
+    w:'Pri Michalovciach sa diskutuje o veľkom veternom parku. Môže priniesť čistú energiu a príjmy, no obyvatelia sa obávajú zásahu do krajiny, hluku a vplyvu na okolité obce. Konečné povoľovanie nie je iba v rukách mesta.',
+    a:{dufinec:'agree', sibal:'agree', vidovenec:'neutral', carny:'neutral'}
   },
   {
     t:'Bývanie',
-    q:'Má mesto vyčleniť nájomné byty pre lekárov, učiteľov a sestry, aj keď ubudnú byty pre iných žiadateľov?',
-    w:'Nemocnica, školy a sociálne služby potrebujú stabilných pracovníkov. Zvýhodnené bývanie môže pomôcť udržať kľúčové profesie v meste, ale zároveň vytvorí prednosť pre jednu skupinu obyvateľov.',
-    a:{dufinec:'agree', sibal:'agree', vidovenec:'agree'}
+    q:'Má mesto vyhradiť štvrtinu nových nájomných bytov pre lekárov, sestry a učiteľov?',
+    w:'Zvýhodnené bývanie môže pomôcť udržať profesie, ktoré mesto potrebuje. Vyhradenie 25 % bytov by však predĺžilo čakanie ostatných žiadateľov o mestské bývanie.',
+    a:{dufinec:'agree', sibal:'neutral', vidovenec:'agree', carny:'neutral'}
   },
   {
     t:'Mladé rodiny',
-    q:'Má mesto podporiť mladé rodiny službami a bývaním, aj keď to bude stáť viac než jednorazové príspevky?',
-    w:'Michalovce mali k 1. januáru 2026 34 680 obyvateľov. Ak má mesto spomaliť odchod mladých, potrebuje riešiť bývanie, škôlky, prácu a služby, nielen symbolické jednorazové príspevky.',
-    a:{dufinec:'agree', sibal:'neutral', vidovenec:'agree'}
+    q:'Má mesto uprednostniť štartovacie nájomné byty pre mladé rodiny pred jednorazovými príspevkami?',
+    w:'Michalovce strácajú mladých obyvateľov. Štartovacie byty riešia bývanie dlhodobo, ale stoja viac a pomôžu menšiemu počtu rodín než lacnejšie jednorazové príspevky.',
+    a:{dufinec:'agree', sibal:'neutral', vidovenec:'agree', carny:'neutral'}
   },
   {
     t:'Seniori',
-    q:'Má mesto viac rozšíriť domácu opatrovateľskú službu namiesto výstavby nového zariadenia pre dôchodcov?',
-    w:'Michalovce mali k 1. januáru 2026 34 680 obyvateľov a tlak na služby pre seniorov bude rásť. Domáca opatrovateľská služba umožní ľuďom zostať doma, ale nové zariadenie pre dôchodcov vie pomôcť tým, ktorí potrebujú celodennú starostlivosť.',
-    a:{dufinec:'disagree', sibal:'neutral', vidovenec:'agree'}
+    q:'Má mať na terénnu opatrovateľskú službu nárok každý senior, ktorý o ňu požiada, aj keď to zvýši trvalé mzdové výdavky mesta?',
+    w:'Michalovce majú starnúcu populáciu a rastúci dopyt po opatrovateľských službách. Nárok pre každého žiadateľa by pomohol seniorom zostať doma, no znamenal by trvalý nárast počtu opatrovateliek a mzdových výdavkov, ktoré mesto platí každý rok.',
+    a:{dufinec:'agree', sibal:'neutral', vidovenec:'neutral', carny:'agree'}
   },
   {
     t:'Bambusky',
-    q:'Má mesto viac podporovať vzdelávanie a prácu s rodinami v Bambuskách, aj keď časť obyvateľov žiada hlavne viac kontrol a hliadok?',
-    w:'Bambusky patria medzi najcitlivejšie sociálne témy v Michalovciach. Podpora detí, škôlok, školy a komunitnej práce môže riešiť príčiny problémov. Viac kontrol a hliadok reaguje rýchlejšie na sťažnosti obyvateľov, ale nerieši dlhodobé príčiny.',
-    a:{dufinec:'neutral', sibal:'neutral', vidovenec:'agree'}
+    q:'Má mesto v Bambuskách investovať viac do vzdelávania a komunitnej práce než do ďalších hliadok?',
+    w:'V Bambuskách sa stretávajú problémy bývania, školskej dochádzky a bezpečnosti. Komunitná práca rieši príčiny dlhodobo, kým viac hliadok dokáže rýchlejšie reagovať na porušovanie pravidiel.',
+    a:{dufinec:'neutral', sibal:'neutral', vidovenec:'agree', carny:'neutral'}
   },
   {
     t:'Hospodárstvo',
-    q:'Má mesto uprednostniť pomoc miestnym firmám pred lákaním veľkých investorov zvonka?',
-    w:'Miestne firmy a živnostníci už v meste pôsobia, zamestnávajú ľudí a platia dane. Veľkí investori môžu priniesť nové pracovné miesta, ale často vyžadujú infraštruktúru, pozemky alebo úľavy.',
-    a:{dufinec:'disagree', sibal:'agree', vidovenec:'agree'}
+    q:'Má mesto poskytnúť svoje pozemky, úľavy a podporu skôr miestnym firmám než veľkým investorom?',
+    w:'Miestne firmy už v meste pôsobia a zamestnávajú obyvateľov. Veľkí investori môžu vytvoriť viac pracovných miest, no často žiadajú pozemky, infraštruktúru alebo inú podporu mesta.',
+    a:{dufinec:'disagree', sibal:'agree', vidovenec:'agree', carny:'agree'}
   },
   {
     t:'Hospodárstvo',
-    q:'Má mesto lákať najmä firmy s lepšie platenými pracovnými miestami, aj keď ich bude menej?',
-    w:'Niektorí investori prinesú veľa pracovných miest, ale s nižšími mzdami. Iní vytvoria menej pracovných miest, no s vyššími platmi a väčšou šancou udržať mladých ľudí v regióne.',
-    a:{dufinec:'agree', sibal:'neutral', vidovenec:'agree'}
+    q:'Má mesto odmietnuť podporu investora s nízkymi mzdami, aj keby vytvoril stovky pracovných miest?',
+    w:'Veľký investor môže rýchlo vytvoriť veľa pracovných miest, no nízke mzdy nemusia udržať mladých ľudí v regióne. Odmietnutie podpory môže znamenať, že pracovné miesta vzniknú inde.',
+    a:{dufinec:'disagree', sibal:'neutral', vidovenec:'neutral', carny:'neutral'}
   },
   {
     t:'Mestský majetok',
     q:'Má mesto radšej predať nevyužitý majetok než si brať nový úver?',
-    w:'Predaj budov alebo pozemkov môže financovať opravy bez ďalšieho zadlženia. Na druhej strane, mesto stratí majetok, ktorý môže mať v budúcnosti vyššiu hodnotu alebo nové využitie.',
-    a:{dufinec:'neutral', sibal:'agree', vidovenec:'neutral'}
+    w:'Predaj budov alebo pozemkov môže financovať opravy bez ďalšieho dlhu. Mesto však príde o majetok, ktorý môže mať v budúcnosti vyššiu hodnotu alebo nové využitie.',
+    a:{dufinec:'neutral', sibal:'disagree', vidovenec:'neutral', carny:'neutral'}
   },
   {
-    t:'Transparentnosť',
+    t:'Verejné zákazky',
     q:'Má mesto pri zákazkách uprednostniť kvalitu pred najnižšou cenou, aj keď budú projekty drahšie?',
-    w:'Najnižšia cena nemusí znamenať najlepšie riešenie. Pri cestách, školách alebo verejných priestoroch môže byť dôležitá aj životnosť, servis a kvalita prevedenia.',
-    a:{dufinec:'neutral', sibal:'agree', vidovenec:'agree'}
+    w:'Najnižšia cena nemusí znamenať najlepšie riešenie. Pri cestách, školách alebo verejných priestoroch môže byť dôležitá životnosť, bezpečnosť, servis a budúce prevádzkové náklady.',
+    a:{dufinec:'neutral', sibal:'agree', vidovenec:'agree', carny:'agree'}
   },
   {
     t:'Transparentnosť',
-    q:'Má mesto zverejňovať konečné ceny a meškania projektov, aj keď to môže byť politicky nepríjemné?',
-    w:'Obyvatelia by mali vidieť pôvodný rozpočet, konečnú cenu, termín dokončenia a dôvody zmien. Takáto kontrola zvyšuje dôveru, ale môže odhaliť chyby v príprave alebo riadení projektov.',
-    a:{dufinec:'neutral', sibal:'agree', vidovenec:'agree'}
+    q:'Má zastupiteľstvo znovu schválovať projekt, ak sa predraží a jeho cena sa zvýši o viac než 10 %?',
+    w:'Nové hlasovanie zvyšuje kontrolu poslancov nad predražením. Môže však spomaliť práce a predĺžiť rozhodovanie aj v prípadoch, keď má navýšenie objektívne dôvody.',
+    a:{dufinec:'neutral', sibal:'agree', vidovenec:'agree', carny:'agree'}
   },
   {
     t:'Kultúra a šport',
-    q:'Má mesto dať viac peňazí do kultúry a mládeže, aj keď ubudne na športovú infraštruktúru?',
-    w:'Šport je v Michalovciach silná téma, najmä hokej a futbal. Kultúra, kluby a priestory pre mladých však tiež ovplyvňujú kvalitu života a to, či mladí v meste zostanú.',
-    a:{dufinec:'disagree', sibal:'neutral', vidovenec:'agree'}
+    q:'Má mesto dať viac peňazí do kultúry a aktivít pre mladých, aj keď ubudne z financií na športovú infraštruktúru?',
+    w:'Hokej a futbal majú v Michalovciach silné postavenie. Kultúra, kluby a priestory pre mladých však tiež ovplyvňujú kvalitu života a rozhodnutie mladých zostať v meste.',
+    a:{dufinec:'disagree', sibal:'neutral', vidovenec:'agree', carny:'neutral'}
   },
   {
     t:'Šport',
     q:'Má mesto uprednostniť druhú ľadovú plochu pred menšími športoviskami na sídliskách?',
-    w:'Druhá ľadová plocha by pomohla hokeju a reprezentácii mesta. Menšie športoviská na sídliskách by zas slúžili širšiemu okruhu obyvateľov každý deň.',
-    a:{dufinec:'agree', sibal:'neutral', vidovenec:'disagree'}
+    w:'Druhá ľadová plocha by pomohla hokeju a športovým klubom. Menšie športoviská na sídliskách by každý deň využíval širší okruh detí, rodín a rekreačných športovcov.',
+    a:{dufinec:'agree', sibal:'neutral', vidovenec:'disagree', carny:'neutral'}
   },
   {
     t:'Energia',
     q:'Má mesto zatepliť školy a mestské budovy, aj keď sa úspory vrátia až po rokoch?',
-    w:'Mesto má v rozpočte na rok 2026 energetické opatrenia na školách a mestských budovách. Pri ZŠ P. Horova sa uvádza obnova dvoch budov s celkovým objemom približne 1,8 milióna eur a očakávanou úsporou viac ako 60 % primárnych zdrojov. Takéto investície šetria peniaze až postupne.',
-    a:{dufinec:'neutral', sibal:'agree', vidovenec:'neutral'}
+    w:'Mesto pripravuje energetické opatrenia na školách a mestských budovách. Vyššia počiatočná investícia môže postupne znížiť spotrebu energie a prevádzkové výdavky.',
+    a:{dufinec:'agree', sibal:'agree', vidovenec:'neutral', carny:'agree'}
   },
   {
     t:'Cestovný ruch',
     q:'Má mesto investovať do turizmu okolo Zemplínskej Šíravy, aj keď samotná Šírava neleží v meste?',
-    w:'Zemplínska Šírava je významná rekreačná oblasť v okrese Michalovce; turistické zdroje uvádzajú plochu približne 33 km², dĺžku 11 km a šírku 3,5 km. Turizmus môže pomôcť hotelom, reštauráciám a službám v meste, ale časť obyvateľov môže chcieť peniaze radšej na problémy priamo v uliciach Michaloviec.',
-    a:{dufinec:'agree', sibal:'neutral', vidovenec:'disagree'}
+    w:'Návštevníci Šíravy využívajú obchody, hotely, dopravu a služby v Michalovciach. Spoločná propagácia a projekty s okolitými obcami však znamenajú menej peňazí na potreby priamo v uliciach mesta.',
+    a:{dufinec:'neutral', sibal:'agree', vidovenec:'neutral', carny:'neutral'}
   },
   {
     t:'Územný rozvoj',
     q:'Má mať mesto hlavného architekta, aj keď to znamená ďalší platený odborný post?',
-    w:'Hlavný architekt môže pomôcť, aby nové stavby, ulice a verejné priestory dávali zmysel ako celok. Znamená to však ďalší odborný post a jeho vplyv závisí od toho, či ho bude vedenie mesta rešpektovať.',
-    a:{dufinec:'neutral', sibal:'neutral', vidovenec:'agree'}
-  },
-  {
-    t:'Sociálne vylúčenie',
-    q:'Má mesto posilniť terénnu sociálnu prácu, aj keď výsledky budú viditeľné až po rokoch?',
-    w:'Michalovce sú zapojené do projektu terénnej sociálnej práce a komunitných centier na obdobie august 2023 – január 2029. Cieľom je pomoc ľuďom ohrozeným chudobou a sociálnym vylúčením. Takáto práca môže znížiť problémy dlhodobo, ale voliči často očakávajú rýchlejšie a viditeľnejšie riešenia, napríklad viac hliadok alebo kontrol.',
-    a:{dufinec:'disagree', sibal:'neutral', vidovenec:'agree'}
+    w:'Hlavný architekt môže koordinovať nové stavby, ulice a verejné priestory. Znamená však ďalší platený post a jeho prínos závisí od toho, aký vplyv mu vedenie mesta dá.',
+    a:{dufinec:'neutral', sibal:'neutral', vidovenec:'agree', carny:'neutral'}
   },
   {
     t:'Spolupráca s Ukrajinou',
-    q:'Má mesto viac spolupracovať s ukrajinskými mestami, aj keď výsledky neprídu hneď?',
-    w:'Michalovce ležia približne 60 km od Užhorodu. Blízkosť Ukrajiny môže byť príležitosťou pre firmy, školy, kultúru aj cezhraničné projekty, no výsledky takejto spolupráce sa prejavia až po rokoch.',
-    a:{dufinec:'neutral', sibal:'agree', vidovenec:'agree'}
+    q:'Má mesto vytvoriť spoločné podnikateľské a vzdelávacie centrum s Užhorodom aj z vlastných peňazí?',
+    w:'Michalovce ležia blízko Užhorodu. Spoločné centrum môže podporiť firmy, školy a cezhraničné projekty, no vyžadovalo by vlastné peniaze mesta a výsledky by sa nemuseli prejaviť rýchlo.',
+    a:{dufinec:'neutral', sibal:'neutral', vidovenec:'neutral', carny:'agree'}
   },
   {
     t:'Financie',
-    q:'Má si mesto vziať úver na rýchlejšie opravy, aj keď bude dlh splácať ďalšie roky?',
-    w:'K 31.12.2025 malo mesto dlh z komerčných a dodávateľských úverov približne 10,78 milióna eur, čo predstavovalo 22,17 % bežných príjmov predchádzajúceho roka. Ročné splátky boli približne 1,99 milióna eur, teda 8,90 % upravených bežných príjmov. Zákonný limit dlhu je 60 % a mesto ho spĺňalo, ale kontrolórka odporúčala sledovať vývoj tak, aby dlh nepresiahol 50 %. Nový úver by mohol urýchliť opravy, ale zvýšil by záväzky na ďalšie roky.',
-    a:{dufinec:'neutral', sibal:'neutral', vidovenec:'neutral'}
+    q:'Má sa mesto zaviazať, že počas funkčného obdobia neprekročí súčasnú úroveň zadlženia (cca 22 % ročných príjmov), aj keby to spomalilo opravy a rozvoj?',
+    w:'Ku koncu roka 2025 malo mesto úverový dlh približne 10,8 milióna eur, teda okolo 22 % ročných bežných príjmov — hlboko pod zákonným limitom 60 %. Záväzok neprekročiť túto úroveň by chránil rozpočet pred ďalším zaťažením, no obmedzil by možnosť financovať veľké opravy či investície úverom (napríklad kúpu Chemkostav arény).',
+    a:{dufinec:'disagree', sibal:'agree', vidovenec:'neutral', carny:'neutral'}
+  },
+  {
+    t:'Výstavba',
+    q:'Má mesto odmietnuť veľký developerský projekt, ak investor neprispeje na cesty, parkovanie alebo školy?',
+    w:'Nová výstavba môže priniesť byty a pracovné miesta, ale zvýši tlak na dopravu a verejné služby. Tvrdá podmienka chráni mestský rozpočet, no môže investora odradiť.',
+    a:{dufinec:'neutral', sibal:'agree', vidovenec:'agree', carny:'agree'}
+  },
+  {
+    t:'Športový majetok',
+    q:'Má mesto odkúpiť Chemkostav arénu za 3,6 milióna eur, aj keby muselo obmedziť iné investície?',
+    w:'Mesto rokuje o odkúpení Chemkostav arény, ktorá poskytuje zázemie pre Iuventu a európske súťaže. Kúpna cena je 3,6 milióna eur a mesto by zároveň prevzalo budúce náklady na prevádzku a údržbu.',
+    a:{dufinec:'agree', sibal:'neutral', vidovenec:'neutral', carny:'neutral'}
   }
 ];
