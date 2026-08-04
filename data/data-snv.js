@@ -7,11 +7,12 @@ window.VAA_DATA = window.VAA_DATA || {};
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
 window.VAA_DATA.candidates['snv_primator'] = [
-  {id:'ilasova',  name:'Judita Iľašová',  party:'Progresívne Slovensko / SaS',                         color:'#3a86ff', url:'https://progresivne.sk'},
-  {id:'demecko',  name:'Dávid Demečko',   party:'Hlas-SD / Smer-SD / Sme rodina / Republika',               color:'#e63946', url:'https://strana-hlas.sk'},
-  {id:'akram',    name:'Adnan Akram',     party:'Nezávislý',                                            color:'#06d6a0', url:'https://addyakram.sk'},
-  {id:'godus',    name:'Lukáš Goduš',    party:'Nezávislý',                                            color:'#f4a261', url:'https://www.lukasgodus.sk/'},
-  {id:'uhrin',    name:'Miroslav Uhrin',  party:'Nezávislý',                                            color:'#8338ec', url:'https://miroslavuhrin.sk/'}
+  {id:'ilasova',   name:'Judita Iľašová',   party:'Progresívne Slovensko / SaS',                            color:'#3a86ff', url:'https://progresivne.sk'},
+  {id:'demecko',   name:'Dávid Demečko',    party:'Hlas-SD / Smer-SD / Sme rodina / Republika',             color:'#e63946', url:'https://strana-hlas.sk'},
+  {id:'akram',     name:'Adnan Akram',      party:'Nezávislý',                                               color:'#06d6a0', url:'https://addyakram.sk'},
+  {id:'godus',     name:'Lukáš Goduš',      party:'Nezávislý',                                               color:'#f4a261', url:'https://www.lukasgodus.sk/'},
+  {id:'uhrin',     name:'Miroslav Uhrin',   party:'Nezávislý',                                               color:'#8338ec', url:'https://miroslavuhrin.sk/'},
+  {id:'bednarova', name:'Ľubica Bednárová', party:'Nezávislá kandidátka',                                    color:'#ff8f00', url:''}
 ];
 
 // ── Otázky: Primátor / Primátorka ──
@@ -19,152 +20,152 @@ window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 window.VAA_DATA.questions.snv_primator = [
   {
     t:'Infraštruktúra',
-    q:'Majú mať opravy ciest a chodníkov prednosť pred veľkými novými projektmi?',
-    w:'Rozpočet mesta na rok 2026 je takmer 60 miliónov eur, z toho kapitálové výdavky sú približne 10,3 milióna eur. Každé väčšie rozhodnutie preto znamená výber medzi opravou bežnej infraštruktúry a novými investíciami.',
-    a:{ilasova:'agree', demecko:'agree', akram:'agree', godus:'agree', uhrin:'agree'}
+    q:'Má sa mesto zaviazať, že na opravy ciest a chodníkov vyčlení každý rok pevne stanovený podiel z rozpočtu, aj keď sa tým obmedzí financovanie iných oblastí?',
+    w:'Pevný podiel z rozpočtu by mestu každý rok zaručil peniaze na cesty a chodníky a uľahčil plánovanie opráv. Zároveň by však ubral peniaze z iných oblastí, napríklad zo škôl, športu či sociálnych služieb.',
+    a:{ilasova:'neutral', demecko:'agree', akram:'agree', godus:'disagree', uhrin:'neutral', bednarova:'agree'}
   },
   {
     t:'Infraštruktúra',
     q:'Má mesto každý rok zverejniť plán opráv ciest po jednotlivých uliciach?',
-    w:'Verejný plán by ukázal, ktoré ulice sa majú opravovať, kedy a za koľko. Na konci roka by sa dalo jednoducho porovnať, čo mesto sľúbilo a čo skutočne opravilo.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'agree'}
+    w:'Verejný plán by ukázal, ktoré ulice sa majú opravovať, kedy a za koľko. Na konci roka by obyvatelia mohli porovnať plán so skutočne vykonanými opravami.',
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
   },
   {
     t:'Železnica',
-    q:'Má primátor tlačiť na vládu, aby určila jasný termín modernizácie trate pri SNV?',
-    w:'Modernizácia železničnej trate pri Spišskej Novej Vsi je jedna z najväčších dopravných tém regiónu. Ak sa termíny posúvajú, mesto môže prísť o kvalitné spojenie na roky. Primátor síce trať neriadi, ale môže vytvárať verejný tlak na vládu, ŽSR a dopravcov.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral'}
-  },
-  {
-    t:'Železnica',
-    q:'Má mesto žiadať náhradné vlakové riešenia počas veľkých výluk?',
-    w:'Pri dlhých železničných výlukách môžu obyvatelia prísť o rýchle spojenie do Košíc, Popradu alebo Bratislavy. Náhradné autobusy pomáhajú, ale často sú pomalšie. Mesto nemá priamu kompetenciu nad vlakmi, no môže žiadať lepšie dočasné riešenia.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral'}
+    q:'Má primátor verejne vystúpiť proti vláde, ak štát opäť odloží modernizáciu trate pri Spišskej Novej Vsi?',
+    w:'Modernizáciu trate riadi štát a ŽSR, nie mesto. Primátor môže rokovať bez verejného konfliktu alebo proti ďalšiemu odkladu otvorene vystúpiť.',
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Práca a poriadok',
-    q:'Má mesto pri dlhodobo nezamestnaných uprednostniť prácu pred pokutami?',
-    w:'Pracovné programy môžu pomôcť ľuďom mimo trhu práce a zároveň zlepšiť údržbu mesta. Pokuty a kontroly sú rýchlejšie viditeľné, ale samy osebe neriešia nezamestnanosť ani chudobu.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'neutral', uhrin:'disagree'}
-  },
-  {
-    t:'Práca a poriadok',
-    q:'Má mesto vytvoriť pracovné tímy z dlhodobo nezamestnaných?',
-    w:'Takéto tímy by mohli pomáhať s čistením, zeleňou a drobnou údržbou. Mesto by však muselo zabezpečiť vedenie, financovanie, pracovné návyky a kontrolu kvality.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'neutral', uhrin:'neutral'}
+    q:'Má mesto vytvoriť platené pracovné tímy pre dlhodobo nezamestnaných, aj keď budú drahšie než zákazka pre súkromnú firmu?',
+    w:'Mestské pracovné tímy by mohli pomáhať s čistením, zeleňou a drobnou údržbou. Mesto by však muselo zabezpečiť vedenie, vybavenie a kontrolu kvality.',
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'neutral', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Sociálna pomoc',
-    q:'Má mesto dávať prednosť pomoci všetkým chudobným pred projektmi pre konkrétne skupiny?',
-    w:'Niektoré projekty cielia na konkrétne komunity, iné pomáhajú všetkým ľuďom v núdzi bez rozdielu. Univerzálna pomoc môže byť menej stigmatizujúca, cielené projekty zase vedia riešiť špecifické problémy.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'neutral', uhrin:'disagree'}
+    q:'Má mesto presunúť časť peňazí z projektov určených rómskej menšine do pomoci všetkým nízkopríjmovým domácnostiam?',
+    w:'Projekty pre rómsku menšinu môžu cielene riešiť bývanie, vzdelávanie, zamestnanosť a problémy v konkrétnych lokalitách. Pomoc podľa príjmu by bola dostupná všetkým chudobným domácnostiam, ale menej by sa sústredila na špecifické príčiny sociálneho vylúčenia.',
+    a:{ilasova:'disagree', demecko:'agree', akram:'disagree', godus:'neutral', uhrin:'agree', bednarova:'neutral'}
   },
   {
     t:'Bezpečnosť',
-    q:'Má mesto posilniť mestskú políciu a kamerový systém?',
-    w:'Viac hliadok a kamier môže zvýšiť pocit bezpečia v centre, parkoch aj na sídliskách. Zároveň ide o trvalé výdavky na ľudí, techniku, údržbu a prevádzku.',
-    a:{ilasova:'neutral', demecko:'agree', akram:'neutral', godus:'neutral', uhrin:'agree'}
-  },
-  {
-    t:'Bezpečnosť',
-    q:'Má mesto posilniť hliadky v lokalitách s opakovanými problémami?',
-    w:'Cielené hliadky môžu pomôcť tam, kde sa problémy opakujú. Na druhej strane môžu zvyšovať napätie, ak budú obyvatelia niektorých ulíc cítiť, že mesto ich označuje za problém.',
-    a:{ilasova:'neutral', demecko:'agree', akram:'neutral', godus:'neutral', uhrin:'agree'}
+    q:'Má mesto prijať ďalších mestských policajtov a posilniť pešie hliadky, aj keby menej peňazí zostalo na sociálnu a komunitnú prácu?',
+    w:'Viac policajtov môže rýchlejšie reagovať na porušovanie poriadku v centre, parkoch a problémových lokalitách. Sociálna a komunitná práca rieši príčiny problémov, ale výsledky bývajú pomalšie.',
+    a:{ilasova:'agree', demecko:'agree', akram:'neutral', godus:'neutral', uhrin:'agree', bednarova:'neutral'}
   },
   {
     t:'Parkovanie',
-    q:'Má mesto upraviť parkovanie v centre tak, aby sa tam ľahšie parkovalo rezidentom?',
-    w:'Regulácia môže pomôcť ľuďom, ktorí v centre bývajú, a znížiť dlhodobé státie áut. Zároveň môže skomplikovať krátke návštevy úradov, obchodov a služieb, čo je v menšom meste citlivý kompromis.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'neutral'}
+    q:'Má mesto zaviesť rezidentské parkovanie, pri ktorom bude prvé auto domácnosti lacné, ale za druhé a tretie sa bude platiť výrazne viac?',
+    w:'Takýto systém zvýhodňuje domácnosti s jedným autom a obmedzuje dlhodobé obsadzovanie ulíc viacerými vozidlami jednej domácnosti. Vyššie poplatky však môžu zasiahnuť rodiny, ktoré viac áut potrebujú.',
+    a:{ilasova:'neutral', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'neutral'}
   },
   {
-    t:'Doprava',
-    q:'Má mesto uprednostniť peších a cyklistov pred autami v centre?',
-    w:'Viac priestoru pre peších a cyklistov môže zlepšiť bezpečnosť a kvalitu centra. Zároveň to môže spomaliť prejazd autom a znížiť počet parkovacích miest.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'neutral'}
+    t:'Doprava a verejný priestor',
+    q:'Má mesto v centre zrušiť časť parkovacích miest, aby vytvorilo širšie chodníky, cyklotrasy a viac zelene?',
+    w:'Verejný priestor v centre je obmedzený. Viac priestoru pre peších, bicykle a stromy môže zvýšiť bezpečnosť a kvalitu centra, ale zníži počet miest pre autá.',
+    a:{ilasova:'agree', demecko:'disagree', akram:'neutral', godus:'neutral', uhrin:'disagree', bednarova:'neutral'}
   },
   {
     t:'Transparentnosť',
     q:'Má mesto pri zákazkách uprednostniť kvalitu pred najnižšou cenou?',
-    w:'Pri rozpočte takmer 60 miliónov eur a kapitálových výdavkoch nad 10 miliónov eur je dôležité, aby zákazky neboli hodnotené len podľa najnižšej ceny. Kvalita však môže znamenať vyššie počiatočné náklady.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral'}
+    w:'Najlacnejšia ponuka nemusí mať najdlhšiu životnosť ani najnižšie náklady na údržbu. Vyššia váha kvality však môže znamenať vyššiu počiatočnú cenu.',
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
   },
   {
     t:'Transparentnosť',
     q:'Má mesto zverejňovať ceny a meškania veľkých projektov?',
-    w:'Pri kapitálových výdavkoch približne 10,3 milióna eur by obyvatelia mali vidieť pôvodný rozpočet, konečnú cenu, termín dokončenia a dôvody zmien. Takáto kontrola zvyšuje dôveru, ale môže byť politicky nepríjemná.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral'}
+    w:'Obyvatelia by videli pôvodný rozpočet, konečnú cenu, plánovaný termín a dôvody zmien. Zverejňovanie zvyšuje kontrolu, ale môže odhaliť chyby v príprave alebo riadení projektu.',
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
   },
   {
     t:'Participácia',
-    q:'Majú obyvatelia rozhodovať o časti mestského rozpočtu?',
-    w:'Aj 1 % z rozpočtu mesta na rok 2026 by bolo približne 600 000 eur. Participatívny rozpočet dáva ľuďom priamy vplyv na menšie projekty, no môže zvýhodniť populárne nápady pred menej viditeľnými opravami.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'neutral'}
+    q:'Majú obyvatelia rozhodovať o 1 % mestského rozpočtu?',
+    w:'Jedno percento z rozpočtu približne 60 miliónov eur predstavuje okolo 600 000 eur. Obyvatelia by hlasovali o menších projektoch, no populárne nápady môžu dostať prednosť pred odbornými alebo menej viditeľnými potrebami.',
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
   },
   {
     t:'Participácia',
     q:'Má mesto konzultovať veľké plány s obyvateľmi ešte pred schválením?',
-    w:'Skoré konzultácie môžu odhaliť problémy skôr, než je projekt hotový. Zároveň môžu rozhodovanie spomaliť a priniesť konflikt medzi odborným návrhom, politikmi a verejnosťou.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral'}
-  },
-  {
-    t:'Kúpalisko',
-    q:'Má kúpalisko zaviesť prísnejšie pravidlá a kapacitné limity?',
-    w:'Letné kúpalisko je súčasťou mestského športového areálu STEZ, ktorý zahŕňa aj krytú plaváreň, športovú halu, saunu a ďalšie prevádzky. Prísnejšie pravidlá môžu zlepšiť poriadok a hygienu, ale obmedzia časť návštevníkov.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'agree'}
+    w:'Skoré konzultácie môžu odhaliť problémy pred schválením projektu. Zároveň môžu rozhodovanie spomaliť a vytvoriť konflikt medzi odborným návrhom, poslancami a verejnosťou.',
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
   },
   {
     t:'Kultúra',
-    q:'Má mesto viac investovať do kultúry aj na úkor opráv?',
-    w:'Kultúrne podujatia robia centrum živším a podporujú komunitný život. Ak však mesto zvýši výdavky na kultúru, môže mať menej peňazí na cesty, chodníky, sídliská alebo športoviská.',
-    a:{ilasova:'disagree', demecko:'agree', akram:'agree', godus:'disagree', uhrin:'neutral'}
+    q:'Má mesto garantovať kultúre najmenej 2 % bežných výdavkov, teda približne 965 000 eur ročne, aj keby menej peňazí zostalo na cesty a športoviská?',
+    w:'Dve percentá bežných výdavkov mesta predstavujú podľa rozpočtu na rok 2026 približne 965 000 eur. Garantované minimum by uľahčilo plánovanie kultúrnych organizácií a podujatí, ale znížilo by flexibilitu pri naliehavých opravách.',
+    a:{ilasova:'agree', demecko:'neutral', akram:'neutral', godus:'disagree', uhrin:'neutral', bednarova:'neutral'}
   },
   {
     t:'Turizmus',
-    q:'Má mesto viac investovať do turizmu a Slovenského raja?',
-    w:'Spišská Nová Ves sa prezentuje ako vstupná brána do Slovenského raja. Turizmus môže priniesť návštevníkov a príjmy pre služby, no časť obyvateľov môže uprednostniť peniaze na každodenné problémy v meste.',
-    a:{ilasova:'disagree', demecko:'agree', akram:'neutral', godus:'disagree', uhrin:'neutral'}
+    q:'Má mesto financovať pravidelnú turistickú dopravu zo stanice do Slovenského raja, aj keď bude časť spojov stratová?',
+    w:'Spišská Nová Ves sa prezentuje ako vstupná brána do Slovenského raja. Priame spojenie by mohlo pomôcť návštevníkom, hotelom a reštauráciám, ale mesto by muselo doplácať aj na slabo využívané spoje.',
+    a:{ilasova:'agree', demecko:'agree', akram:'neutral', godus:'disagree', uhrin:'neutral', bednarova:'agree'}
   },
   {
-    t:'ZOO a rodiny',
-    q:'Má mesto viac investovať do ZOO a rodinného turizmu?',
-    w:'ZOO, kúpalisko a športové areály sú viditeľné mestské atrakcie pre rodiny aj návštevníkov. Investície do nich môžu podporiť cestovný ruch, ale súťažia o peniaze s cestami, školami a sídliskami.',
-    a:{ilasova:'neutral', demecko:'agree', akram:'neutral', godus:'neutral', uhrin:'neutral'}
+    t:'ZOO',
+    q:'Má mesto obmedziť ďalší rozvoj ZOO a presunúť viac peňazí do služieb, ktoré obyvatelia využívajú každý deň?',
+    w:'Spišskonovoveská ZOO je mestská atrakcia pre rodiny a návštevníkov. Ďalšie investície a nové chovné zariadenia však súťažia o peniaze s cestami, školami, športoviskami a sídliskami.',
+    a:{ilasova:'neutral', demecko:'disagree', akram:'neutral', godus:'agree', uhrin:'neutral', bednarova:'neutral'}
   },
   {
     t:'Ekonomika',
-    q:'Má mesto viac lákať investorov s vyššou pridanou hodnotou?',
-    w:'Takíto investori môžu priniesť lepšie platené pracovné miesta a udržať mladých ľudí v regióne. Zároveň nemusia ponúkať dosť práce pre ľudí s nižšou kvalifikáciou alebo dlhodobo nezamestnaných.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral'}
-  },
-  {
-    t:'Sociálne',
-    q:'Má mesto dať viac peňazí na pracovné programy pre ľudí bez práce?',
-    w:'Pracovné programy môžu pomôcť ľuďom získať návyky a príjem, zároveň môžu zlepšiť údržbu mesta. Vyžadujú však pravidelné financovanie a výsledky sa nemusia ukázať hneď.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'disagree'}
+    q:'Má mesto lákať skôr firmy s lepšie platenými miestami, aj keď ponúknu menej práce pre ľudí s nižšou kvalifikáciou?',
+    w:'Lepšie platené miesta môžu v meste udržať vzdelaných mladých ľudí. Takéto firmy však väčšinou vytvoria menej pracovných miest a menej práce pre ľudí s nižšou kvalifikáciou, ktorých je v regióne veľa.',
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'neutral'}
   },
   {
     t:'Sídliská',
-    q:'Má ísť viac investícií do sídlisk ako do centra?',
-    w:'Centrum prináša viditeľné mestské projekty a reprezentuje mesto navonok. Sídliská však riešia každodenné problémy s chodníkmi, parkovaním, zeleňou a ihriskami. Otázka je, kam má ísť väčšia časť nových investícií.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral'}
+    q:'Má mesto presunúť väčšiu časť nových investícií z centra do chodníkov, parkovania, zelene a ihrísk na sídliskách?',
+    w:'Projekty v centre reprezentujú mesto a podporujú služby a návštevnosť. Väčšina obyvateľov však každodenne rieši stav chodníkov, parkovania, vnútroblokov a ihrísk na sídliskách.',
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
   },
   {
     t:'Financie',
-    q:'Má sa mesto zadlžiť, aby rýchlejšie opravilo cesty a spustilo projekty?',
-    w:'Rozpočet na rok 2026 počíta s celkovým objemom takmer 60 miliónov eur a kapitálovými výdavkami okolo 10,3 milióna eur. Úver môže urýchliť opravy a projekty, ale zvýši záväzky mesta na ďalšie roky.',
-    a:{ilasova:'neutral', demecko:'agree', akram:'neutral', godus:'disagree', uhrin:'disagree'}
+    q:'Má si mesto vziať nový úver na rýchlejšie opravy ciest a chodníkov, aj keď tým obmedzí rozpočty v ďalších rokoch?',
+    w:'Úver umožní urobiť viac opráv skôr, ale mesto bude v ďalších rokoch platiť istinu a úroky. Nové zadlženie preto zrýchli dnešné investície na úkor časti budúcich rozpočtov.',
+    a:{ilasova:'neutral', demecko:'agree', akram:'neutral', godus:'disagree', uhrin:'disagree', bednarova:'neutral'}
   },
   {
-    t:'Financie',
-    q:'Má mesto znížiť poplatok za odpad pre seniorov a nízkopríjmové rodiny?',
-    w:'Znížený poplatok môže pomôcť ľuďom s nižšími príjmami, najmä seniorom a rodinám. Pre mesto by to však znamenalo nižšie príjmy alebo potrebu presunúť náklady na iných obyvateľov.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'neutral'}
+    t:'Odpady',
+    q:'Má mesto znížiť poplatok za odpad seniorom a nízkopríjmovým rodinám, aj keby ho ostatným obyvateľom muselo mierne zvýšiť?',
+    w:'Úľava by pomohla domácnostiam s nižšími príjmami. Náklady na odpad však musia byť zaplatené, takže výpadok by pokryl rozpočet mesta alebo ostatní poplatníci.',
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
   },
   {
     t:'Mestský podnik',
-    q:'Má mesto viac využívať MEPOS namiesto súkromných firiem?',
-    w:'Mestský podnik môže lepšie reagovať na lokálne potreby a dávať mestu väčšiu kontrolu nad údržbou. Súkromné firmy môžu byť rýchlejšie alebo lacnejšie, ale mesto má nad nimi menšiu priamu kontrolu.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'neutral'}
+    q:'Má mesto zadávať údržbu ciest, zelene a verejných priestorov prednostne MEPOS-u, aj keď súkromná firma ponúkne nižšiu cenu?',
+    w:'MEPOS je sociálny podnik v stopercentnom vlastníctve mesta. Mesto nad ním má priamu kontrolu a podnik vytvára aj sociálne pracovné miesta. Súkromná firma však môže ponúknuť nižšiu cenu alebo špecializovanejšiu službu.',
+    a:{ilasova:'agree', demecko:'agree', akram:'agree', godus:'neutral', uhrin:'agree', bednarova:'agree'}
+  },
+  {
+    t:'Bývanie',
+    q:'Má mesto stavať nové nájomné byty aj za cenu ďalšieho zadlženia?',
+    w:'Mestské byty môžu pomôcť mladým rodinám, pracovníkom škôl a služieb aj ľuďom, ktorí nedosiahnu na komerčné bývanie. Výstavba však vyžaduje úver, mestské pozemky alebo presun peňazí z iných investícií.',
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'agree'}
+  },
+  {
+    t:'Školy',
+    q:'Majú mať rekonštrukcie škôl prednosť pred veľkými investíciami do športu a turizmu?',
+    w:'Mesto financuje školské budovy aj športové a turistické zariadenia. Pri obmedzenom rozpočte musí rozhodnúť, či majú mať každodenné potreby škôl prednosť pred viditeľnejšími projektmi.',
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'agree'}
+  },
+  {
+    t:'Šport',
+    q:'Má mesto uprednostniť menšie športoviská na sídliskách pred jedným veľkým športovým projektom?',
+    w:'Menšie ihriská a športoviská využívajú obyvatelia jednotlivých štvrtí každý deň. Veľký projekt môže priniesť významné podujatia a reprezentovať mesto, ale sústredí peniaze do jedného zariadenia.',
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
+  },
+  {
+    t:'Mestský majetok',
+    q:'Má mesto predať nepotrebný majetok najvyššej ponuke, aj keď ho miestne združenie chce využívať na komunitné účely?',
+    w:'Najvyššia ponuka prinesie mestu okamžitý príjem a znižuje riziko zvýhodňovania. Komunitné využitie môže mať dlhodobý verejný prínos, aj keď mestu prinesie menej peňazí.',
+    a:{ilasova:'disagree', demecko:'agree', akram:'disagree', godus:'neutral', uhrin:'neutral', bednarova:'disagree'}
+  },
+  {
+    t:'Parkovanie',
+    q:'Má mesto postaviť parkovací dom aj za cenu nového úveru a plateného parkovania v jeho okolí?',
+    w:'Parkovací dom môže uvoľniť ulice a zvýšiť počet miest bez ďalšieho zaberania verejného priestoru. Je však drahý a bez plateného parkovania v okolí môže zostať málo využívaný.',
+    a:{ilasova:'neutral', demecko:'agree', akram:'neutral', godus:'neutral', uhrin:'agree', bednarova:'neutral'}
   }
 ];
