@@ -12,7 +12,7 @@ window.VAA_DATA.candidates['snv_primator'] = [
   {id:'akram',     name:'Adnan Akram',      party:'Nezávislý',                                               color:'#06d6a0', url:'https://addyakram.sk'},
   {id:'godus',     name:'Lukáš Goduš',      party:'Nezávislý',                                               color:'#f4a261', url:'https://www.lukasgodus.sk/'},
   {id:'uhrin',     name:'Miroslav Uhrin',   party:'Nezávislý',                                               color:'#8338ec', url:'https://miroslavuhrin.sk/'},
-  {id:'bednarova', name:'Ľubica Bednárová', party:'Nezávislá kandidátka',                                    color:'#ff8f00', url:''}
+  {id:'bednarova', name:'Ľubica Bednárová', party:'Nezávislá',                                    color:'#ff8f00', url:''}
 ];
 
 // ── Otázky: Primátor / Primátorka ──
@@ -86,13 +86,13 @@ window.VAA_DATA.questions.snv_primator = [
   },
   {
     t:'Participácia',
-    q:'Má mesto konzultovať veľké plány s obyvateľmi ešte pred schválením?',
+    q:'Má mesto konzultovať veľké plány s obyvateľmi ešte pred ich schválením?',
     w:'Skoré konzultácie môžu odhaliť problémy pred schválením projektu. Zároveň môžu rozhodovanie spomaliť a vytvoriť konflikt medzi odborným návrhom, poslancami a verejnosťou.',
     a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
   },
   {
     t:'Kultúra',
-    q:'Má mesto garantovať kultúre najmenej 2 % bežných výdavkov, teda približne 965 000 eur ročne, aj keby menej peňazí zostalo na cesty a športoviská?',
+    q:'Má mesto garantovať kultúre najmenej 2 % bežných výdavkov, teda približne 965 000 eur ročne, aj keby zostalo menej peňazí na cesty a športoviská?',
     w:'Dve percentá bežných výdavkov mesta predstavujú podľa rozpočtu na rok 2026 približne 965 000 eur. Garantované minimum by uľahčilo plánovanie kultúrnych organizácií a podujatí, ale znížilo by flexibilitu pri naliehavých opravách.',
     a:{ilasova:'agree', demecko:'neutral', akram:'neutral', godus:'disagree', uhrin:'neutral', bednarova:'neutral'}
   },
@@ -134,7 +134,7 @@ window.VAA_DATA.questions.snv_primator = [
   },
   {
     t:'Mestský podnik',
-    q:'Má mesto zadávať údržbu ciest, zelene a verejných priestorov prednostne MEPOS-u, aj keď súkromná firma ponúkne nižšiu cenu?',
+    q:'Má mesto zadávať údržbu ciest, zelene a verejných priestorov prednostne mestskému MEPOS-u, aj keď súkromná firma ponúkne nižšiu cenu?',
     w:'MEPOS je sociálny podnik v stopercentnom vlastníctve mesta. Mesto nad ním má priamu kontrolu a podnik vytvára aj sociálne pracovné miesta. Súkromná firma však môže ponúknuť nižšiu cenu alebo špecializovanejšiu službu.',
     a:{ilasova:'agree', demecko:'agree', akram:'agree', godus:'neutral', uhrin:'agree', bednarova:'agree'}
   },
