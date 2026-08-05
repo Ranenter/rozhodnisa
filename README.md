@@ -8,7 +8,7 @@
 
 ## Prečo to robíme
 
-Tieto voľby rozhodujú nielen o veľkých verejných peniazoch ale aj o budúcnosti miest a regiónov, v ktorých žijeme. Informácie o kandidátoch, ich názoroch a volebných programoch sú však často skryté, neprehľadné a niektorí z nich sa na túto nejasnosť dokonca spoliehajú.
+Tieto voľby rozhodujú nielen o veľkých verejných peniazoch ale aj o budúcnosti miest a regiónov, v ktorých žijeme. Informácie o kandidátoch, ich názoroch a volebných programoch sú však často skryté, neprehľadné a niektorí kandidáti sa na túto nejasnosť dokonca spoliehajú.
 Naša volebná kalkulačka to mení a dáva každému prehľad, ktorý naša demokracia potrebuje. Pomôže ti jednoducho porovnať kandidátov, ich postoje a sľuby, aby si sa mohol/mohla rozhodnúť na základe faktov.
 
 Sme **Občania štátu** , apolitickí, nezávislí a robíme to bez odmeny. Nepracujeme pre žiadnu politickú stranu, kandidáta ani sponzora. Odmeníš nás, keď pôjdeš voliť.
