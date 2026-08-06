@@ -7,164 +7,162 @@ window.VAA_DATA = window.VAA_DATA || {};
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
 window.VAA_DATA.candidates['poprad_primator'] = [
-  {id:'danko',  name:'Anton Danko',  party:'Nezávislý, SNS / Smer-SD / Hlas-SD (úradujúci primátor)',          color:'#e63946', url:'https://www.sdankom.sk/'},
-  {id:'kralik', name:'Jozef Králik', party:'Nezávislý',   color:'#2196F3', url:'https://jozefkralik.sk/'},
-  {id:'bobak',  name:'Mikuláš Bobák', party:'Nezávislý',   color:'#2E7D32', url:''}
+  {id:'danko',  name:'Anton Danko',   party:'Nezávislý, SNS / Smer-SD / Hlas-SD (úradujúci primátor)', color:'#e63946', url:'https://www.sdankom.sk/'},
+  {id:'kralik', name:'Jozef Králik',  party:'Nezávislý',                                                color:'#2196F3', url:'https://jozefkralik.sk/'},
+  {id:'bobak',  name:'Mikuláš Bobák', party:'Nezávislý',                                                color:'#2E7D32', url:''}
 ];
 
 // ── Otázky: Primátor Popradu ──
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 window.VAA_DATA.questions.poprad_primator = [
-
   {
     t:'Doprava',
-    q:'Má primátor urobiť z riešenia dopravných zápch v centre Popradu svoju hlavnú prioritu, aj keď to bude znamenať roky dopravných obmedzení?',
-    w:'Rekonštrukcia mosta na Štefánikovej ulici a hlavných ciest I/18 a I/66 od roku 2025 spôsobila v Poprade veľké dopravné zápchy. Uzávierky majú trvať až do roku 2026. Ide o problém, ktorý sa dotýka prakticky každého vodiča aj cestujúceho vlakom.',
-    a:{danko:'agree', kralik:'agree', bobak:'neutral'}
+    q:'Má mesto odložiť ďalšie veľké stavebné projekty v centre, kým sa neskončí rekonštrukcia námestia a hlavných dopravných ťahov?',
+    w:'Súbežné veľké stavby zvyšujú dopravné obmedzenia a komplikujú prístup do centra. Odklad ďalších projektov by znížil tlak na dopravu, ale mohol by oddialiť pripravené investície a čerpanie externých zdrojov.',
+    a:{danko:'disagree', kralik:'agree', bobak:'neutral'}
   },
   {
     t:'Mestský majetok',
-    q:'Aqua City bolo kedysi mestské kúpalisko. Po predaji súkromníkovi je vstupné drahé. Má primátor rokovať o zvýhodnenej cene pre Popradčanov alebo o spätnom odkúpení podielu mesta?',
-    w:'Predaj mestského kúpaliska súkromnému prevádzkovateľovi viedol k výraznému zdraženiu vstupného. Mnohí Popradčania si dnes návštevu Aqua City nemôžu dovoliť. Mesto môže žiadať zľavy pre trvalých obyvateľov alebo skúmať možnosti návratu k spoluvlastníctvu.',
-    a:{danko:'disagree', kralik:'agree', bobak:'neutral'}
+    q:'Má mesto finančne prispievať na zľavnené vstupné do AquaCity pre Popradčanov, aj keby to stálo stovky tisíc eur ročne?',
+    w:'AquaCity je súkromná prevádzka. Mesto môže rokovať o rezidentskej zľave alebo ju spolufinancovať, no rovnaké peniaze by potom chýbali na iné mestské služby.',
+    a:{danko:'disagree', kralik:'disagree', bobak:'neutral'}
   },
   {
     t:'Bývanie',
-    q:'Má primátor regulovať krátkodobé prenájmy bytov (napríklad cez Airbnb) v obytných domoch, aby chránil trvalých nájomníkov pred rastúcimi cenami?',
-    w:'Poprad je turistické mesto a časť bytov slúži na krátkodobé prenájmy pre návštevníkov Tatier. To znižuje počet bytov dostupných pre ľudí, ktorí chcú v meste bývať dlhodobo, a tlačí ceny nájmov nahor. Regulácia by mohla časť týchto bytov vrátiť na bežný trh.',
+    q:'Má mesto zvýšiť miestnu daň a kontroly pri bytoch využívaných na krátkodobé turistické prenájmy?',
+    w:'Krátkodobé prenájmy prinášajú príjem vlastníkom a rozširujú ponuku pre turistov. Vyššia daň a kontroly môžu chrániť susedov a zvýšiť príjem mesta, ale zároveň zdražia túto formu ubytovania.',
+    a:{danko:'disagree', kralik:'neutral', bobak:'neutral'}
+  },
+  {
+    t:'Cestovný ruch',
+    q:'Má mesto použiť väčšiu časť príjmov z cestovného ruchu na služby pre obyvateľov než na ďalšiu propagáciu Popradu?',
+    w:'Turizmus prináša mestu príjmy, ale zároveň zvyšuje tlak na dopravu, čistotu a verejný priestor. Presun peňazí do služieb pre obyvateľov by obmedzil zdroje na ďalšiu propagáciu mesta.',
     a:{danko:'disagree', kralik:'agree', bobak:'neutral'}
   },
   {
-    t:'Cestovný ruch',
-    q:'Má primátor uprednostniť potreby obyvateľov Popradu pred záujmami turistov, aj keď sú v konflikte?',
-    w:'Poprad je vstupnou bránou do Tatier. Turizmus prináša peniaze, ale zvyšuje ceny bývania, hluk aj nápor na dopravu. Rozhodnutia primátora ukážu, či dáva prednosť záujmom turistov alebo obyvateľov, ktorí v meste žijú celý rok.',
-    a:{danko:'disagree', kralik:'agree', bobak:'disagree'}
-  },
-  {
     t:'Transparentnosť',
-    q:'Poprad výrazne klesol v rebríčku transparentnosti slovenských miest. Má nový primátor do dvoch rokov dostať mesto späť medzi 20 najtransparentnejších samospráv?',
-    w:'Rebríček transparentnosti hodnotí otvorenosť mesta pri zverejňovaní zmlúv, tendrov, grantov či majetku. Poprad kedysi patril medzi lepšie samosprávy, no za posledné roky výrazne klesol. Cieľ vrátiť sa do prvej dvadsiatky je merateľný a kontrolovateľný.',
+    q:'Má zastupiteľstvo znovu schváliť každý veľký projekt, ktorého cena sa zvýši o viac než 10 %?',
+    w:'Nové hlasovanie by zvýšilo politickú kontrolu nad predražením projektu. Zároveň môže zdržať práce, dodatky k zmluvám alebo čerpanie externých zdrojov.',
     a:{danko:'disagree', kralik:'agree', bobak:'agree'}
   },
   {
-    t:'Doprava',
-    q:'Má primátor pokračovať v budovaní cyklotrás, aj keď to obmedzí parkovacie miesta alebo jazdné pruhy pre autá?',
-    w:'Poprad v posledných rokoch buduje nové cyklotrasy, napríklad smerom do Svitu. Každá nová trasa však potrebuje priestor, ktorý sa často berie autám alebo parkovacím miestam. Rozhodnutie ukáže, či mesto dáva prednosť autám alebo ľuďom.',
+    t:'Cyklodoprava',
+    q:'Má mesto budovať oddelené cyklotrasy aj tam, kde sa zrušia parkovacie miesta alebo jazdný pruh?',
+    w:'Oddelené cyklotrasy sú bezpečnejšie než jazda v premávke, ale v zastavaných uliciach často zaberú priestor používaný autami alebo parkovaním.',
     a:{danko:'neutral', kralik:'agree', bobak:'neutral'}
   },
   {
-    t:'Verejný priestor',
-    q:'Má mesto dokončiť veľkú prestavbu námestia svätého Egídia za asi 14 miliónov eur, aj keď mestský príspevok jeden milión eur zaťaží rozpočet?',
-    w:'Rekonštrukcia centrálneho námestia je najväčšou investíciou posledných rokov. Projekt má podporiť turizmus aj kvalitu verejného priestoru, no časť obyvateľov si myslí, že peniaze mali ísť skôr do škôl alebo bývania.',
-    a:{danko:'agree', kralik:'disagree', bobak:'agree'}
+    t:'Námestie sv. Egídia',
+    q:'Má mesto zachovať projekt Námestia sv. Egídia bez väčších zmien, aj keď obyvatelia žiadajú viac zelene a iné usporiadanie priestoru?',
+    w:'Rekonštrukcia námestia už prebieha. Zmeny počas výstavby môžu zvýšiť cenu alebo ohroziť termíny, no kritici žiadajú viac zelene a lepšie prispôsobenie priestoru každodennému životu mesta.',
+    a:{danko:'agree', kralik:'disagree', bobak:'neutral'}
   },
   {
     t:'Bývanie',
-    q:'Má mesto postaviť štartovacie nájomné byty pre mladé rodiny, aj keby sa muselo zadlžiť?',
-    w:'Ceny bytov v Poprade patria medzi najvyššie v regióne. Mladé rodiny si často nemôžu dovoliť vlastné bývanie a odchádzajú do iných miest. Mestské štartovacie byty by mohli pomôcť, ale vyžadujú si úver alebo presun peňazí z iných projektov.',
-    a:{danko:'agree', kralik:'agree', bobak:'agree'}
+    q:'Má mesto postaviť najmenej 100 štartovacích nájomných bytov pre mladých, aj keby si na ne muselo vziať nový úver?',
+    w:'Štartovacie byty môžu pomôcť mladým ľuďom zostať v Poprade. Výstavba najmenej 100 bytov by však vyžadovala mestské pozemky, úver alebo presun peňazí z iných investícií.',
+    a:{danko:'agree', kralik:'neutral', bobak:'neutral'}
   },
   {
-    t:'Transparentnosť',
-    q:'Popradský mesačník platia daňoví poplatníci. Má teda chváliť primátora takmer vo všetkom, alebo písať aj o tom, čo sa mestu nedarí?',
-    w:'Mestské noviny a web sú financované z rozpočtu mesta. Kritici tvrdia, že dnes slúžia hlavne na prezentáciu primátora a jeho tímu. Otázkou je, či majú mestské médiá informovať nezávisle o dianí v meste, aj keď to znamená kritiku vedenia.',
-    a:{danko:'disagree', kralik:'agree', bobak:'agree'}
+    t:'Mestské médiá',
+    q:'Má mesto zveriť tvorbu Mesačníka Poprad redakcii vybranej vo verejnej súťaži namiesto zamestnancov mestského úradu?',
+    w:'Externá redakcia vybraná v súťaži môže zvýšiť nezávislosť mestského média. Mesto by však malo menšiu priamu kontrolu nad obsahom a muselo by pravidelne obstarávať túto službu.',
+    a:{danko:'disagree', kralik:'agree', bobak:'neutral'}
   },
   {
-    t:'Doprava',
-    q:'Má primátor zlepšiť mestskú hromadnú dopravu tak, aby bola reálnou alternatívou k autu, aj keby to zvýšilo dotácie z rozpočtu?',
-    w:'MHD v Poprade prepája sídliská a centrum, no spoje a intervaly často ľuďom nevyhovujú. Lepšia MHD znamená vyššie náklady, ale môže znížiť počet áut v meste.',
+    t:'MHD',
+    q:'Má mesto zaviesť 15-minútový interval MHD na hlavných trasách počas pracovných dní, aj keby muselo výrazne zvýšiť dotáciu dopravcovi?',
+    w:'Poprad poskytuje obyvateľom takmer bezplatnú / zvýhodnenú MHD za ročný poplatok, no jej využiteľnosť závisí aj od intervalov a nadväznosti spojov. Pätnásťminútový interval by vyžadoval viac vozidiel, vodičov a vyššiu mestskú dotáciu.',
     a:{danko:'neutral', kralik:'agree', bobak:'neutral'}
   },
   {
-    t:'Doprava',
-    q:'Má primátor postaviť parkovacie domy na sídliskách, aj keď to bude stáť milióny eur?',
-    w:'Sídliská Juh, Západ a centrum trpia dlhodobo nedostatkom parkovacích miest. Primátor Danko už skôr hovoril o potrebe parkovacích domov. Ich výstavba by však výrazne zaťažila mestský rozpočet.',
-    a:{danko:'agree', kralik:'agree', bobak:'agree'}
+    t:'Parkovanie',
+    q:'Má mesto postaviť parkovacie domy na sídliskách aj za cenu plateného parkovania v okolitých uliciach?',
+    w:'Parkovací dom stojí milióny eur. Bez regulácie okolitých ulíc môžu vodiči naďalej parkovať zadarmo a drahý objekt zostať slabo využívaný.',
+    a:{danko:'agree', kralik:'neutral', bobak:'neutral'}
   },
   {
-    t:'Cestovný ruch',
-    q:'Má primátor aktívne lobovať za nové letecké linky z letiska Poprad-Tatry, aj keď letisko nevlastní mesto?',
-    w:'Letisko Poprad-Tatry zaznamenalo v posledných rokoch rekordný počet cestujúcich a nové linky. Letisko patrí Prešovskému kraju, nie mestu. Aj tak môže primátor rokovať s leteckými spoločnosťami a krajom o nových spojoch, ktoré privedú turistov do Popradu.',
-    a:{danko:'agree', kralik:'neutral', bobak:'agree'}
+    t:'Letisko',
+    q:'Má mesto finančne prispievať leteckým spoločnostiam na nové linky z Popradu, aj keď nie je isté, že budú dlhodobo využívané?',
+    w:'Nové linky môžu priniesť turistov a zlepšiť dostupnosť regiónu. Verejná podpora však môže skončiť pri spojoch, ktoré po skončení dotácie zaniknú alebo ich využije málo cestujúcich.',
+    a:{danko:'agree', kralik:'neutral', bobak:'neutral'}
   },
   {
     t:'Školy',
-    q:'Má primátor dať opravu a modernizáciu škôl a škôlok pred ďalšími veľkými prestížnymi projektmi?',
-    w:'Budovy škôl v Poprade sú na mnohých miestach zastarané. Niekoľko kandidátov v minulosti hovorilo, že školy by mali mať prednosť pred reprezentatívnymi projektmi, ktoré sú viditeľné pre turistov.',
+    q:'Majú mať rekonštrukcie škôl a škôlok prednosť pred ďalšími investíciami do centra, športových hál a turistických atrakcií?',
+    w:'Mesto financuje školské budovy aj verejný priestor, šport a cestovný ruch. Uprednostnenie škôl by urýchlilo ich obnovu, ale oddialilo iné viditeľné mestské projekty.',
     a:{danko:'neutral', kralik:'agree', bobak:'neutral'}
   },
   {
-    t:'Životné prostredie',
-    q:'Poprad má málo stromov a zelene. Má primátor každý rok záväzne vysadiť aspoň o 5 percent viac stromov a zelene ako rok predtým?',
-    w:'Poprad má v porovnaní s inými mestami podobnej veľkosti relatívne málo parkov a stromov. Nový mestský park vznikol aj vďaka eurofondom, ale bez jasných cieľov môže zeleň opäť zaostávať.',
-    a:{danko:'neutral', kralik:'agree', bobak:'neutral'}
-  },
-  {
-    t:'Cestovný ruch',
-    q:'Poprad žije turisticky hlavne v zime a v lete. Má primátor podporovať podujatia a služby, ktoré privedú turistov do mesta aj na jar a jeseň?',
-    w:'Veľká časť turistov prichádza do Tatier v zime na lyžovanie a v lete na túry. Mimo sezóny je mesto aj okolité strediská často poloprázdne. Celoročný turizmus môže priniesť viac peňazí pre miestne firmy, ale vyžaduje investície do programov a služieb.',
+    t:'Zeleň',
+    q:'Má mesto pri každej väčšej rekonštrukcii ulice vyčleniť najmenej 10 % rozpočtu na stromy, zeleň a opatrenia proti prehrievaniu?',
+    w:'Pevný podiel by zabezpečil, že zeleň nebude z projektu vypustená pri šetrení. Zároveň môže znížiť sumu na povrchy, parkovanie, osvetlenie alebo iné časti rekonštrukcie.',
     a:{danko:'neutral', kralik:'agree', bobak:'agree'}
   },
   {
-    t:'Bezpečnosť',
-    q:'Má primátor obmedziť počet herní a stávkových kancelárií v meste, aj keď to zníži jeho príjmy z daní?',
-    w:'Hazardné hry prinášajú mestu dane z prevádzky, ale zároveň zvyšujú riziko závislostí. Mnohé mestá na Slovensku prijali pravidlá, ktoré herne výrazne obmedzili. Poprad by mohol ísť rovnakou cestou.',
-    a:{danko:'neutral', kralik:'agree', bobak:'neutral'}
-  },
-  {
-    t:'Životné prostredie',
-    q:'Má primátor trvať na prísnej kontrole emisií z priemyselných firiem v Poprade, aj keď to môže odradiť nových investorov?',
-    w:'Obyvatelia niektorých častí mesta dlhodobo poukazujú na znečistené ovzdušie a hluk z priemyselných prevádzok. Prísnejšie kontroly a limity môžu zlepšiť zdravie ľudí, ale môžu zneistiť firmy, ktoré by chceli do mesta prísť.',
-    a:{danko:'neutral', kralik:'agree', bobak:'disagree'}
-  },
-  {
-    t:'Financie',
-    q:'Má primátor pri veľkých projektoch radšej čerpať eurofondy, aj keď to znamená prísnu externú kontrolu každého projektu?',
-    w:'Poprad postavil nový park za približne 14 miliónov eur, z veľkej časti z európskych peňazí. Primátor Danko často hovorí aj o projektoch bez eurofondov. Eurofondy prinášajú viac kontroly a papierovačiek, ale šetria peniaze z mestského rozpočtu.',
-    a:{danko:'disagree', kralik:'agree', bobak:'agree'}
-  },
-  {
-    t:'Energia',
-    q:'Má primátor inštalovať solárne panely na mestské budovy a školy, aj keď sa investícia vráti až o niekoľko rokov?',
-    w:'Solárne panely môžu znížiť účty mesta za elektrinu, ale ich inštalácia je drahá. Návratnosť investície je dlhá. Pre mesto, ktoré dlhodobo šetrí, ide o rozhodnutie medzi krátkodobou úsporou a dlhodobým ziskom.',
-    a:{danko:'neutral', kralik:'agree', bobak:'neutral'}
-  },
-  {
-    t:'Sociálne',
-    q:'Má primátor budovať komunitné centrá pre seniorov v každej časti mesta, aj keď to prinesie trvalé náklady na ich prevádzku?',
-    w:'Populácia v Poprade starne. Centrum pre seniorov v jednej časti mesta nemusí stačiť. Sieť menších komunitných centier by umožnila stretávanie a aktivity aj starším ľuďom na sídliskách, ale mesto by muselo platiť ich prevádzku.',
+    t:'Cestovný ruch',
+    q:'Má mesto každoročne vyčleniť najmenej 500 000 € na mimosezónne podujatia a propagáciu Popradu?',
+    w:'Podujatia na jar a jeseň môžu predĺžiť turistickú sezónu a podporiť hotely, reštaurácie a služby. Pevná suma však znižuje priestor na cesty, školy alebo služby pre obyvateľov.',
     a:{danko:'agree', kralik:'neutral', bobak:'neutral'}
   },
   {
-    t:'Školy',
-    q:'Má primátor sprístupniť školské ihriská a areály verejnosti aj po vyučovaní a cez víkendy, aj keď to zvýši náklady na údržbu?',
-    w:'Mesto v posledných rokoch vybudovalo nové športové areály pri školách, napríklad pri ZŠ Komenského. Ak budú otvorené aj mimo vyučovania, poslúžia deťom z celého sídliska, ale bude treba platiť za ich údržbu a dohľad.',
-    a:{danko:'agree', kralik:'agree', bobak:'agree'}
+    t:'Hazard',
+    q:'Má Poprad zakázať nové herne a po skončení licencií postupne ukončiť prevádzku existujúcich?',
+    w:'Hazard prináša mestu daňové príjmy, ale môže zvyšovať závislosti a sociálne problémy. Postupný zákaz by znamenal nižšie príjmy aj zánik legálnych prevádzok.',
+    a:{danko:'neutral', kralik:'agree', bobak:'neutral'}
   },
   {
-    t:'Bezpečnosť',
-    q:'Má primátor rozšíriť kamerový systém a posilniť mestskú políciu, aj keď to zaťaží rozpočet mesta?',
-    w:'V turistickom meste sa denne pohybuje veľa ľudí. Viac kamier a silnejšia mestská polícia môžu pomôcť pri prevencii kriminality, ale stoja peniaze. Otázkou je, či Poprad potrebuje viac dohľadu, alebo skôr komunitný prístup.',
-    a:{danko:'agree', kralik:'neutral', bobak:'neutral'}
-  },
-  {
-    t:'Samospráva',
-    q:'Má primátor dať obyvateľom každej časti mesta priamo do rúk 5 percent mestského rozpočtu, o ktorých použití rozhodnú hlasovaním?',
-    w:'Participatívny rozpočet umožňuje ľuďom priamo rozhodovať o časti mestských peňazí. Pri rozpočte Popradu by 5 percent mohlo znamenať približne 2 milióny eur ročne. Mesto by tak muselo rešpektovať rozhodnutia obyvateľov, aj keď s nimi vedenie nesúhlasí.',
+    t:'Priemysel',
+    q:'Má mesto odmietnuť podporu rozšírenia priemyselnej prevádzky, ak zvýši dopravu, hluk alebo emisie v susednej obytnej časti?',
+    w:'Rozšírenie prevádzky môže priniesť pracovné miesta a dane. Mesto však môže vo svojich stanoviskách a územnom plánovaní uprednostniť ochranu susedných obytných častí.',
     a:{danko:'disagree', kralik:'agree', bobak:'neutral'}
   },
   {
-    t:'Samospráva',
-    q:'Má primátor každý rok verejne zhodnotiť, čo z predvolebného programu splnil a čo nie, s konkrétnymi číslami a termínmi?',
-    w:'Anton Danko vedie Poprad s krátkou prestávkou takmer dve desaťročia. Bez pravidelného vyhodnocovania programových sľubov obyvatelia nevedia, čo sa podarilo a čo ostalo len na papieri. Ročné hodnotenie by zlepšilo kontrolu nad vedením mesta.',
+    t:'Eurofondy',
+    q:'Má mesto prispôsobiť svoje investičné priority eurofondovým výzvam, aj keď by bez nich realizovalo iné projekty?',
+    w:'Eurofondy umožnia mestu uskutočniť drahšie projekty s nízkym spolufinancovaním. Podmienky výziev však môžu určovať, čo a kedy sa postaví, namiesto pôvodných priorít mesta.',
+    a:{danko:'agree', kralik:'neutral', bobak:'agree'}
+  },
+  {
+    t:'Energia',
+    q:'Má si mesto vziať úver na solárne panely na školách, ak sa má investícia splatiť z úspor energie?',
+    w:'Solárne panely môžu znížiť účty škôl za elektrinu. Úspory však závisia od cien energie, technického riešenia a budúcej výroby, zatiaľ čo úver treba splácať pravidelne.',
+    a:{danko:'neutral', kralik:'agree', bobak:'neutral'}
+  },
+  {
+    t:'Seniori',
+    q:'Má mesto otvoriť menšie denné centrá pre seniorov na každom veľkom sídlisku, aj keby muselo obmedziť podporu veľkých kultúrnych a športových podujatí?',
+    w:'Denné centrá by priniesli aktivity a služby bližšie k seniorom. Viac prevádzok však znamená trvalé náklady na priestory, personál a program.',
+    a:{danko:'agree', kralik:'neutral', bobak:'neutral'}
+  },
+  {
+    t:'Šport',
+    q:'Má mesto uprednostniť bezplatne otvorené školské ihriská pred výstavbou ďalšieho veľkého športového zariadenia?',
+    w:'Školské areály môžu po vyučovaní slúžiť celým sídliskám, ale vyžadujú správcu, osvetlenie a opravy. Veľké športové zariadenie môže priniesť podujatia, no sústredí peniaze do jedného projektu.',
+    a:{danko:'neutral', kralik:'agree', bobak:'neutral'}
+  },
+  {
+    t:'Bezpečnosť',
+    q:'Má mesto prijať viac mestských policajtov a rozšíriť kamerový systém, aj keby zostalo menej peňazí na prevenciu a prácu s problémovými skupinami?',
+    w:'Viac policajtov a kamier môže priniesť rýchlejšie zásahy a väčší dohľad. Prevencia a terénna práca riešia príčiny problémov, ale ich výsledky sa prejavujú pomalšie.',
+    a:{danko:'agree', kralik:'neutral', bobak:'neutral'}
+  },
+  {
+    t:'Participácia',
+    q:'Majú obyvatelia priamo rozhodovať o 1 % bežných výdavkov mesta prostredníctvom participatívneho rozpočtu?',
+    w:'Poprad už participatívny rozpočet používa. Vyčlenenie 1 % bežných výdavkov by výrazne rozšírilo sumu, o ktorej rozhodujú obyvatelia, ale obmedzilo by voľnosť vedenia a zastupiteľstva pri rozdeľovaní rozpočtu.',
+    a:{danko:'neutral', kralik:'agree', bobak:'agree'}
+  },
+  {
+    t:'Zodpovednosť',
+    q:'Má primátor zverejniť pri každom nesplnenom sľube dôvod, nový termín a sumu, ktorá už bola použitá?',
+    w:'Pravidelné vyhodnotenie by ukázalo, ktoré sľuby sa plnia a koľko už stáli. Zároveň môže zvýrazniť oneskorenia spôsobené okolnosťami, ktoré mesto nevie úplne ovplyvniť.',
     a:{danko:'disagree', kralik:'agree', bobak:'agree'}
   },
   {
-    t:'Samospráva',
-    q:'Má primátor aktívne lobovať za záujmy Popradu v Prešovskom samosprávnom kraji, aj keď to môže zhoršiť vzťahy s krajskými politikmi?',
-    w:'Poprad patrí pod Prešovský kraj, ktorý rozhoduje o cestách, letisku aj stredných školách. Primátor môže na kraj vyvíjať tlak a žiadať viac peňazí pre svoje mesto, no tým si môže zhoršiť vzťahy s krajským vedením.',
-    a:{danko:'agree', kralik:'agree', bobak:'agree'}
+    t:'Vzťahy s krajom',
+    q:'Má primátor verejne vystúpiť proti vedeniu Prešovského kraja, ak kraj nebude investovať do rozvoja letiska Poprad-Tatry?',
+    w:'Letisko je dôležité pre dopravu aj cestovný ruch v Poprade. Verejný konflikt môže zvýšiť tlak na kraj, ale zároveň zhoršiť spoluprácu pri ďalších regionálnych projektoch.',
+    a:{danko:'neutral', kralik:'agree', bobak:'disagree'}
   }
-
 ];
