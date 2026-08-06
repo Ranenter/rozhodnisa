@@ -60,7 +60,6 @@ window.VAA_DATA.candidates['trnava_vuc'] = [
     color: "#1A6B8A",
     url: "https://madarska-aliancia.sk/jozsef-berenyi"
   },
-  // POZN: Dohál a Hambálek – postoje sú ODHADNUTÉ (verified:false)
   {
     id: "dohal",
     name: "Robert Dohál",
@@ -360,7 +359,7 @@ window.VAA_DATA.questions.trnava_primator = [
 window.VAA_DATA.questions.trnava_vuc = [
   {
     t: "Smerovanie kraja",
-    q: "Má kraj pokračovať v rozbehnutom investičnom smere (zdravotnícke centrá, nová župná knižnica, cyklotrasy) namiesto toho, aby priority prestavil na cesty, mosty a školy?",
+    q: "Má kraj pokračovať v rozbehnutom investičnom programe (zdravotnícke centrá, nová knižnica, cyklotrasy) namiesto toho, aby priority prestavil na cesty, mosty a školy?",
     w: "Rozpočet kraja na rok 2026 má príjmy aj výdavky 320 miliónov eur, z toho 84 miliónov eur tvoria kapitálové výdavky. Kraj ich smeruje najmä do zdravotníckych a sociálnych zariadení, novej knižnice v Galante a cyklotrás. Kritici tvrdia, že prednosť majú mať opravy ciest, mostov a stredných škôl. Voľby rozhodnú aj o tom, či sa doterajší smer udrží, alebo sa priority výrazne prestavia.",
     a: { viskupic: "agree", lancaric: "disagree", berenyi: "disagree", dohal: "neutral", hambalek: "disagree" }
   },
@@ -371,7 +370,7 @@ window.VAA_DATA.questions.trnava_vuc = [
     a: { viskupic: "disagree", lancaric: "agree", berenyi: "neutral", dohal: "disagree", hambalek: "agree" }
   },
   {
-    t: "Zdravotnícky kampus",
+    t: "Zdravotníctvo",
     q: "Má kraj dokončiť zdravotnícky kampus v Trnave, aj keď sa tým odložia zdravotnícke centrá a ambulancie v okresoch?",
     w: "Kraj pripravuje zdravotnícky kampus v Trnave a súčasne nové zdravotnícke centrum v Hlohovci. Kapitálové výdavky rozpočtu 2026 sú 84 miliónov eur a nedajú sa minúť dvakrát. Otázka je, či má prednosť veľký projekt v krajskom meste, alebo rozdrobenie peňazí do menších okresov, kde chýbajú lekári.",
     a: { viskupic: "agree", lancaric: "disagree", berenyi: "disagree", dohal: "disagree", hambalek: "disagree" }
@@ -408,7 +407,7 @@ window.VAA_DATA.questions.trnava_vuc = [
   },
   {
     t: "Tlmočnícke služby",
-    q: "Má kraj zvýšiť platby za tlmočnícke služby pre nepočujúcich, aj keď už dnes financuje najväčší rozsah zo všetkých krajov?",
+    q: "Má kraj zvýšiť platby za tlmočnícke služby pre nepočujúcich, aj keď už dnes financuje najväčší rozsah pomoci zo všetkých krajov?",
     w: "Kraj si v roku 2025 objednal viac než 14-tisíc hodín tlmočenia pre nepočujúcich, čo je najviac spomedzi všetkých krajov; 87 % z toho zabezpečuje asociácia TASPO. Tá koncom roka 2025 protestovala proti výške financovania, kraj odpovedal, že platí najväčší rozsah v najvyššej sadzbe a ponúkol rokovanie. Otázka je, či má kraj pridať ďalšie peniaze, alebo trvať na súčasnom rozsahu.",
     a: { viskupic: "disagree", lancaric: "agree", berenyi: "agree", dohal: "agree", hambalek: "neutral" }
   },
@@ -432,13 +431,13 @@ window.VAA_DATA.questions.trnava_vuc = [
   },
   {
     t: "Skládka v Seredi",
-    q: "Má kraj cez svoj územný plán zablokovať nové odpadové a priemyselné prevádzky v okolí Serede a Dolnej Stredy, kým sa nezačne sanácia skládky lúženca?",
-    w: "Po Niklovej hute Sereď (výroba 1963 – 1994) zostala medzi Sereďou a Dolnou Stredou skládka lúženca — približne 6 miliónov ton odpadu s ťažkými kovmi, miestami vysoká desiatky metrov. Sanácia je vecou štátu a súkromného vlastníka a roky sa nepohla; obyvatelia žiadali riešenie aj petíciou. Kraj skládku sanovať nemôže, má však v rukách záväznú časť územného plánu — môže v okolí obmedziť ďalšie odpadové a priemyselné prevádzky, čím by však zablokoval aj investície a pracovné miesta.",
+    q: "Má kraj cez svoj územný plán zablokovať nové odpadové a priemyselné prevádzky v okolí Serede a Dolnej Stredy, kým sa nezačne sanácia skládky?",
+    w: "Po Niklovej hute Sereď (výroba 1963 – 1994) zostala medzi Sereďou a Dolnou Stredou skládka lúženca, približne 6 miliónov ton odpadu s ťažkými kovmi, miestami vysoká desiatky metrov. Sanácia je vecou štátu a súkromného vlastníka a roky sa nepohla; obyvatelia žiadali riešenie aj petíciou. Kraj skládku sanovať nemôže, má však v rukách záväznú časť územného plánu — môže v okolí obmedziť ďalšie odpadové a priemyselné prevádzky, čím by však zablokoval aj investície a pracovné miesta.",
     a: { viskupic: "neutral", lancaric: "agree", berenyi: "disagree", dohal: "agree", hambalek: "disagree" }
   },
   {
     t: "Jazyk menšín",
-    q: "Majú župné školy, sociálne zariadenia a úrad kraja povinne poskytovať služby a dokumenty aj v maďarčine v okresoch s maďarskou menšinou?",
+    q: "Majú krajské školy, sociálne zariadenia a úrad kraja povinne poskytovať služby a dokumenty aj v maďarčine v okresoch s maďarskou menšinou?",
     w: "V okresoch Dunajská Streda a Galanta žije početná maďarská menšina a kraj je zriaďovateľom tamojších stredných škôl, domovov sociálnych služieb aj kultúrnych inštitúcií. Povinná dvojjazyčnosť by uľahčila prístup k službám, znamenala by však náklady na preklady, tlmočenie a personál — a časť voličov ju vníma ako zbytočnú alebo politickú tému.",
     a: { viskupic: "neutral", lancaric: "disagree", berenyi: "agree", dohal: "neutral", hambalek: "disagree" }
   },
@@ -468,7 +467,7 @@ window.VAA_DATA.questions.trnava_vuc = [
   },
   {
     t: "Dochádzanie do Bratislavy",
-    q: "Má kraj prednostne platiť za integráciu s bratislavským dopravným systémom (jeden lístok na vlak, autobus a MHD v Bratislave), aj keď to znamená menej peňazí na spoje vnútri kraja?",
+    q: "Má kraj prednostne tlačiť na integráciu s bratislavským dopravným systémom (jeden lístok na vlak, autobus a MHD v Bratislave), aj keď to znamená menej peňazí na spoje vnútri kraja?",
     w: "Veľká časť kraja dochádza za prácou a školou do Bratislavy. Systém, ktorý to pokrýva, je bratislavský (IDS BK) a objednáva ho štát, Bratislavský kraj a mesto Bratislava a už dnes doň patria napríklad Kúty, Sládkovičovo, Pusté Úľany či Galanta. Rozšírenie na celý Trnavský kraj by dochádzajúcim dalo jeden lístok na vlak, prímestský autobus aj MHD, kraj by však musel prispievať do systému, ktorý neriadi, a menej by zostalo na spojenia medzi okresmi.",
     a: { viskupic: "agree", lancaric: "neutral", berenyi: "disagree", dohal: "disagree", hambalek: "neutral" }
   },
@@ -504,7 +503,7 @@ window.VAA_DATA.questions.trnava_vuc = [
   },
   {
     t: "Vzťah k vláde",
-    q: "Má predseda kraja verejne konfrontovať vládu, keď jej rozhodnutia poškodzujú kraj a keď hrozí, že kraj príde o štátne a európske peniaze?",
+    q: "Má predseda kraja verejne konfrontovať vládu, keď jej rozhodnutia poškodzujú kraj a hrozí, že kraj príde o štátne a európske peniaze?",
     w: "Kraj závisí od podielových daní a od štátnych rozhodnutí v doprave, školstve, zdravotníctve aj energetike. Ostrý verejný spor môže obhájiť záujmy kraja, ale aj skomplikovať prístup k dotáciám a spoluprácu na spoločných projektoch. Otázka je, či má župan tlačiť verejne, alebo vyjednávať potichu.",
     a: { viskupic: "agree", lancaric: "disagree", berenyi: "neutral", dohal: "agree", hambalek: "disagree" }
   }
