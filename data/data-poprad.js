@@ -24,7 +24,7 @@ window.VAA_DATA.questions.poprad_primator = [
   {
     t:'Mestský majetok',
     q:'Má mesto finančne prispievať na zľavnené vstupné do AquaCity pre Popradčanov, aj keby to stálo stovky tisíc eur ročne?',
-    w:'AquaCity je súkromná prevádzka. Mesto môže rokovať o rezidentskej zľave alebo ju spolufinancovať, no rovnaké peniaze by potom chýbali na iné mestské služby.',
+    w:'AquaCity je súkromná firma. Mesto môže rokovať o rezidentskej zľave alebo ju spolufinancovať, no rovnaké peniaze by potom chýbali na iné mestské služby.',
     a:{danko:'disagree', kralik:'disagree', bobak:'neutral'}
   },
   {
@@ -47,7 +47,7 @@ window.VAA_DATA.questions.poprad_primator = [
   },
   {
     t:'Cyklodoprava',
-    q:'Má mesto budovať oddelené cyklotrasy aj tam, kde sa zrušia parkovacie miesta alebo jazdný pruh?',
+    q:'Má mesto budovať oddelené cyklotrasy, aj keby sa zrušili niektoré parkovacie miesta alebo jazdný pruh?',
     w:'Oddelené cyklotrasy sú bezpečnejšie než jazda v premávke, ale v zastavaných uliciach často zaberú priestor používaný autami alebo parkovaním.',
     a:{danko:'neutral', kralik:'agree', bobak:'neutral'}
   },
@@ -95,7 +95,7 @@ window.VAA_DATA.questions.poprad_primator = [
   },
   {
     t:'Zeleň',
-    q:'Má mesto pri každej väčšej rekonštrukcii ulice vyčleniť najmenej 10 % rozpočtu na stromy, zeleň a opatrenia proti prehrievaniu?',
+    q:'Má mesto pri každej väčšej rekonštrukcii ulice vyčleniť najmenej 10 % z rozpočtu na nové stromy, zeleň a opatrenia proti prehrievaniu?',
     w:'Pevný podiel by zabezpečil, že zeleň nebude z projektu vypustená pri šetrení. Zároveň môže znížiť sumu na povrchy, parkovanie, osvetlenie alebo iné časti rekonštrukcie.',
     a:{danko:'neutral', kralik:'agree', bobak:'agree'}
   },
@@ -113,7 +113,7 @@ window.VAA_DATA.questions.poprad_primator = [
   },
   {
     t:'Priemysel',
-    q:'Má mesto odmietnuť podporu rozšírenia priemyselnej prevádzky, ak zvýši dopravu, hluk alebo emisie v susednej obytnej časti?',
+    q:'Má mesto odmietnuť podporu rozšírenia priemyselnej prevádzky, ak to zvýši dopravu, hluk alebo emisie v susednej obytnej časti?',
     w:'Rozšírenie prevádzky môže priniesť pracovné miesta a dane. Mesto však môže vo svojich stanoviskách a územnom plánovaní uprednostniť ochranu susedných obytných častí.',
     a:{danko:'disagree', kralik:'agree', bobak:'neutral'}
   },
