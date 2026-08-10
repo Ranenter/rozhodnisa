@@ -9,7 +9,10 @@ window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 // ── Kandidáti: Primátor / Primátorka Žiliny ──
 window.VAA_DATA.candidates['zilina_primator'] = [
   {id:'fiabane',name:'Peter Fiabáne',party:'Nezávislý / Iná Žilina / Žilina si zaslúži viac',color:'#0B6E4F',url:'https://www.peterfiabane.sk'},
-  {id:'cibulka',name:'Peter Cibulka',party:'Nezávislý',color:'#B02E0C',url:'https://www.petercibulka.sk'}
+  {id:'cibulka',name:'Peter Cibulka',party:'Nezávislý',color:'#B02E0C',url:'https://www.petercibulka.sk'},
+  {id:'johanes',name:'Rastislav Johanes',party:'Nezávislý',color:'#6A4C93',url:'https://johanes.sk/'},
+  {id:'kozlik',name:'Anton Kozlík',party:'Nezávislý',color:'#F4A261',url:''},
+  {id:'sokol',name:'Miroslav Sokol',party:'Nezávislý',color:'#264653',url:'https://www.facebook.com/people/Miroslav-Sokol/61575889321926/'}
 ];
 
 // ── Kandidáti: Predseda / Predsedníčka ŽSK ──
@@ -23,156 +26,31 @@ window.VAA_DATA.candidates['zilina_vuc'] = [
 
 // ── Otázky: Primátor / Primátorka Žiliny ──
 window.VAA_DATA.questions.zilina_primator = [
-
-  // Q1
-  {t:'Parkovanie',
-   q:'Je potrebné rozširovať platené parkovanie aj za cenu, že časť vodičov príde o bezplatné státie pri svojom byte/dome.',
-   w:'Parkovacia politika patrí medzi najviditeľnejšie komunálne témy v Žiline. Mesto postupne rozširuje regulované zóny, pričom cieľom je znížiť chaos, zvýšiť dostupnosť miest a zvýhodniť rezidentov. Kritici hovoria o strate komfortu a vyšších nákladoch pre domácnosti, podporovatelia o potrebe zaviesť pravidlá v preplnených štvrtiach.',
-   a:{fiabane:'agree',cibulka:'disagree'}},
-
-  // Q2
-  {t:'Doprava',
-   q:'Má mesto uprednostniť opravy hlavných ciest a križovatiek pred budovaním nových cyklotrás?',
-   w:'Žilina rieši dopravné preťaženie, stav ciest aj bezpečnosť cyklistov naraz. Rozpočet mesta je obmedzený, preto sa často rozhoduje medzi údržbou existujúcej automobilovej infraštruktúry a rozširovaním alternatívnej mobility. Ide o klasickú dilemu medzi krátkodobou úľavou pre vodičov a dlhodobou zmenou dopravného správania.',
-   a:{fiabane:'disagree',cibulka:'agree'}},
-
-  // Q3
-  {t:'Bývanie',
-   q:'Má Žilina stavať mestské nájomné byty v partnerstve so súkromnými investormi?',
-   w:'Žilina v roku 2026 rozbehla tému nájomného bývania ako odpoveď na drahé hypotéky a odchod mladých rodín. Sporné je najmä to, či má mesto do výstavby vstupovať cez developerskú spoločnosť a majetkové vklady, alebo radšej ponechať bytovú výstavbu trhu. Zástancovia hovoria o jedinom realistickom spôsobe, ako zvýšiť ponuku dostupných bytov, kritici o riziku nevýhodného nakladania s mestským majetkom.',
-   a:{fiabane:'agree',cibulka:'disagree'}},
-
-  // Q4
-  {t:'Majetok mesta',
-   q:'Má mesto prestať vkladať atraktívne pozemky do spoločných projektov a radšej ich prenajímať alebo predať za trhovú cenu?',
-   w:'V Žiline sa ostro diskutuje o tom, ako narábať s mestskými pozemkami, najmä pri väčších projektoch. Jedna línia tvrdí, že majetok mesta má zostať pod silnou verejnou kontrolou a prinášať stabilný výnos, druhá, že bez aktívneho vstupu mesta do projektov sa nájomné bývanie a ďalšie strategické investície nikdy nepohnú.',
-   a:{fiabane:'disagree',cibulka:'agree'}},
-
-  // Q5
-  {t:'Transparentnosť',
-   q:'Má mesto povinne zverejňovať všetky zmluvy, dodatky a odôvodnenia výberu dodávateľov pri zákazkách nad 5 000 eur?',
-   w:'Transparentnosť verejných zákaziek je dlhodobo silná téma vo všetkých väčších mestách. Zákon vyžaduje zverejňovanie zmlúv, no nie vždy detailné zdôvodnenie výberu víťaza v zrozumiteľnej podobe. Takéto pravidlo by zvýšilo kontrolu verejnosti, ale zároveň predĺžilo niektoré procesy a zvýšilo administratívu.',
-   a:{fiabane:'agree',cibulka:'agree'}},
-
-  // Q6
-  {t:'MHD',
-   q:'Má mesto pokračovať vo veľkých investíciách do trolejbusovej dopravy a depa aj v čase, keď obyvatelia tlačia na riešenie bežných problémov v uliciach?',
-   w:'Modernizácia trolejbusového depa patrí medzi najväčšie dopravné investície v novodobej histórii mesta. Podporovatelia hovoria o ekologickej a systémovej zmene MHD na desaťročia dopredu, kritici namietajú, že obyvatelia skôr cítia rozbité chodníky, parkovanie a zanedbanú každodennú údržbu.',
-   a:{fiabane:'agree',cibulka:'neutral'}},
-
-  // Q7
-  {t:'MHD',
-   q:'Mestská hromadná doprava v Žiline by mala byť lacnejšia alebo bezplatná pre vybrané skupiny, aj keby si to vyžiadalo vyššiu dotáciu z rozpočtu',
-   w:'Lacnejšia MHD môže pomôcť znížiť počet áut v meste a zlepšiť dostupnosť dopravy pre študentov, seniorov či pracujúcich s nižšími príjmami. Na druhej strane, každé zníženie cestovného znamená vyššiu záťaž pre mestský rozpočet alebo menší priestor na investície inde.',
-   a:{fiabane:'agree',cibulka:'agree'}},
-
-  // Q8
-  {t:'Cyklodoprava',
-   q:'Chceš oddelené cyklotrasy aj za cenu rušenia časti parkovacích miest alebo jazdných pruhov?',
-   w:'Cyklodoprava v Žiline rastie, ale sieť trás je stále neúplná a miestami nesúvislá. Ak má byť bicykel reálnou alternatívou, často to znamená ubrať priestor autám. Ide o hodnotový spor medzi komfortom individuálnej automobilovej dopravy a bezpečnosťou aktívnej mobility.',
-   a:{fiabane:'agree',cibulka:'disagree'}},
-
-  // Q9
-  {t:'Chodníky a cesty',
-   q:'Má byť oprava chodníkov, ciest a podjazdov hlavnou investičnou prioritou mesta pred novými vizionárskymi projektmi?',
-   w:'Mnohí obyvatelia hodnotia samosprávu podľa stavu ulíc, chodníkov, priechodov a verejného priestoru vo svojom okolí. Zároveň však mesto potrebuje myslieť aj na väčšie systémové investície. Táto otázka oddeľuje „dobrého správcu“ od „mestského vizionára“ — a hľadá správny pomer medzi nimi.',
-   a:{fiabane:'neutral',cibulka:'agree'}},
-
-  // Q10
-  {t:'Rozpočet',
-   q:'Má Žilina v nasledujúcich rokoch hospodáriť opatrnejšie a obmedziť nové projekty, ak by hrozilo ďalšie zadlžovanie mesta?',
-   w:'Rozpočet mesta rastie, no rastú aj očakávania na investície, údržbu a služby. Opatrnejší prístup znižuje finančné riziká, ale môže spomaliť rozvoj. Ambicióznejší prístup môže priniesť rýchlejšiu zmenu, no za cenu vyššieho tlaku na budúce rozpočty.',
-   a:{fiabane:'disagree',cibulka:'agree'}},
-
-  // Q11
-  {t:'Šport a voľný čas',
-   q:'Mesto má investovať do verejne dostupných športovísk, detských ihrísk a rekreačných zón aj na sídliskách.',
-   w:'Kvalita života v meste nezávisí len od dopravy a bývania, ale aj od toho, či majú ľudia dostupný verejný priestor pre šport, oddych a deti. Takéto projekty sú populárne a viditeľné, no zároveň konkurujú iným investičným prioritám, ktoré nemusia byť na prvý pohľad také atraktívne.',
-   a:{fiabane:'agree',cibulka:'agree'}},
-
-  // Q12
-  {t:'Zeleň',
-   q:'Má Žilina chrániť existujúce stromy a zeleň prísnejšie, aj keby to komplikovalo niektoré stavebné a dopravné projekty?',
-   w:'Stromy znižujú prehrievanie mesta, zlepšujú kvalitu ovzdušia a robia verejný priestor obývateľnejším. Na druhej strane, prísna ochrana zelene vie predĺžiť povoľovanie investícií, zvyšovať náklady a obmedziť niektoré dopravné riešenia. V komunálnej politike ide o častý konflikt medzi rozvojom a kvalitou prostredia.',
-   a:{fiabane:'agree',cibulka:'neutral'}},
-
-  // Q13
-  {t:'Developeri',
-   q:'Má mesto tvrdšie vyžadovať od investorov, aby pri veľkých projektoch spolufinancovali škôlky, cesty alebo verejné priestory?',
-   w:'Nová výstavba prináša mestu dane aj nových obyvateľov, ale zároveň tlak na školy, parkovanie, dopravu a služby. Niektoré mestá sa snažia od developerov pýtať väčší podiel na verejnej infraštruktúre. Otázka je, či to prinesie férovejší rozvoj, alebo iba spomalí bytovú výstavbu a zvýši ceny.',
-   a:{fiabane:'agree',cibulka:'agree'}},
-
-  // Q14
-  {t:'Digitalizácia',
-   q:'Mesto by malo zrýchliť digitalizáciu úradu a čo najviac podaní vybavovať online.',
-   w:'Digitalizácia môže ušetriť čas občanom aj úradníkom, zvýšiť kontrolovateľnosť procesov a znížiť priestor na nejasnosti. Zároveň však časť obyvateľov stále preferuje osobný kontakt alebo nemá dostatočné digitálne zručnosti. Dôležité je, či má mesto ísť rýchlo dopredu, alebo voliť opatrnejší prechod.',
-   a:{fiabane:'agree',cibulka:'neutral'}},
-
-  // Q15
-  {t:'Sociálna politika',
-   q:'Má mesto cielene investovať do pomoci ľuďom v bytovej a energetickej núdzi, aj keď to neprináša politicky hneď viditeľné výsledky?',
-   w:'Komunálna politika neznamená len cesty a parky, ale aj podporu ľudí, ktorí sa bez zásahu mesta môžu prepadnúť do hlbšej chudoby. Takéto opatrenia sú finančne náročné a menej „fotogenické“, no môžu znižovať dlhodobé sociálne problémy a tlak na ďalšie verejné služby.',
-   a:{fiabane:'agree',cibulka:'disagree'}},
-
-  // Q16
-  {t:'Bezpečnosť',
-   q:'Potrebuje Žilina viac mestských policajtov v uliciach?',
-   w:'Pocit bezpečia patrí medzi najčastejšie očakávania od mesta, najmä vo večerných hodinách, pri stanici, v podchodoch alebo na sídliskách. Posilnenie mestskej polície však znamená vyššie personálne a prevádzkové náklady a vyvoláva aj otázku, či je problém skôr v prevencii alebo v represii.',
-   a:{fiabane:'neutral',cibulka:'agree'}},
-
-  // Q17
-  {t:'Stanica a centrum',
-   q:'Má mesto urobiť z okolia železničnej a autobusovej stanice prioritu mesta, aj keby to odsunulo investície do iných častí Žiliny?',
-   w:'Stanica je pre mnohých prvý dojem z mesta a zároveň miesto, kde sa koncentrujú dopravné aj sociálne problémy. Investície do tejto zóny môžu mať veľký symbolický aj praktický efekt, no vždy znamenajú, že inde sa bude čakať dlhšie.',
-   a:{fiabane:'agree',cibulka:'agree'}},
-
-  // Q18
-  {t:'Majetkové spory',
-   q:'Má mesto v sporných prípadoch okolo lukratívnych pozemkov a komerčných projektov postupovať tvrdšie aj za cenu dlhých súdnych sporov?',
-   w:'Vzťahy mesta k niektorým súkromným investorom a firmám sú v Žiline témou už roky. Tvrdý postup môže byť signálom, že mesto chráni verejný záujem a svoj majetok, no zároveň môže predĺžiť neistotu a zablokovať riešenia na roky. Zmierlivejší postup môže priniesť rýchlejší kompromis, ale za cenu kritiky, že mesto ustupuje.',
-   a:{fiabane:'agree',cibulka:'agree'}},
-
-  // Q19
-  {t:'Participácia',
-   q:'Má Žilina každý rok vyčleniť časť rozpočtu na projekty, o ktorých priamo rozhodnú obyvatelia hlasovaním?',
-   w:'Participatívny rozpočet je spôsob, ako zapojiť ľudí do rozhodovania o časti verejných peňazí. Podporovatelia hovoria o väčšej dôvere a zodpovednosti obyvateľov za svoje okolie, kritici o riziku drobenia peňazí na malé projekty bez strategického dopadu.',
-   a:{fiabane:'agree',cibulka:'neutral'}},
-
-  // Q20
-  {t:'Kultúra',
-   q:'Chceš aby mesto podporovalo nezávislú kultúru a festivaly aj v čase rozpočtového tlaku?',
-   w:'Kultúra formuje identitu mesta, priťahuje návštevníkov a zvyšuje kvalitu života. Zároveň však býva medzi prvými oblasťami, kde sa šetrí, keď sú financie napäté. Otázka je, či je kultúra luxus navyše, alebo základná súčasť modernej mestskej politiky.',
-   a:{fiabane:'agree',cibulka:'neutral'}},
-
-  // Q21
-  {t:'Podnikanie',
-   q:'Má Žilina aktívnejšie lákať investorov a firmy, aj keby to znamenalo ústupky v povoľovacích procesoch alebo v majetkovej politike mesta?',
-   w:'Silnejšia investičná politika môže priniesť pracovné miesta, dane a nový rozvoj. No ak mesto príliš ustúpi developerom alebo veľkým investorom, môže oslabiť svoju vyjednávaciu pozíciu a verejný záujem. Je to spor medzi rýchlejším ekonomickým rastom a prísnejšou verejnou kontrolou.',
-   a:{fiabane:'neutral',cibulka:'agree'}},
-
-  // Q22
-  {t:'Školy a škôlky',
-   q:'Mesto má investovať do rozširovania kapacít škôlok a základných škôl v rastúcich štvrtiach pred reprezentatívnymi projektmi v centre.',
-   w:'Pre mladé rodiny je dostupnosť škôlok a škôl jednou z kľúčových tém pri rozhodovaní, či v meste zostať. Tieto investície sú menej viditeľné ako námestia či veľké stavby, ale majú silný dopad na každodenný život a dlhodobú atraktivitu mesta.',
-   a:{fiabane:'agree',cibulka:'agree'}},
-
-  // Q23
-  {t:'Verejný priestor',
-   q:'Je potrebné prísnejšie regulovať vizuálny smog, reklamné plochy a chaotické úpravy verejného priestoru.',
-   w:'Reklamné nosiče, nejednotný mobiliár a zanedbané priestory znižujú kvalitu mestského prostredia, aj keď nejde vždy o najhlasnejšiu politickú tému. Prísnejšia regulácia môže zlepšiť vzhľad mesta, no naráža na záujmy podnikateľov a vlastníkov plôch.',
-   a:{fiabane:'agree',cibulka:'neutral'}},
-
-  // Q24
-  {t:'Komunikácia mesta',
-   q:'Má primátor pravidelne zverejňovať zrozumiteľný účet splnených a nesplnených sľubov, aby si obyvatelia vedeli skontrolovať jeho výsledky?',
-   w:'Dôvera v komunálnu politiku často stojí na tom, či ľudia rozumejú, čo sa podarilo, čo sa nepodarilo a prečo. Verejný účet sľubov môže zvýšiť tlak na zodpovednosť, ale aj odhaliť zlyhania, ktoré politici radšej vysvetľujú priebežne a menej formálne.',
-   a:{fiabane:'agree',cibulka:'agree'}},
-
-  // Q25
-  {t:'Vízia',
-   q:'Je pre teba dôležitejšie, aby primátor Žiliny bol skôr dobrý manažér každodenných problémov než ambiciózny vizionár veľkých projektov?',
-   w:'Táto otázka odlišuje dva legitímne štýly komunálnej politiky. Jeden stavia na poriadku, údržbe, predvídateľnosti a každodennom servise mesta. Druhý na veľkých investíciách, rozvojových plánoch a snahe meniť smerovanie mesta vo väčšom meradle. Väčšina voličov nehľadá čistý extrém, ale pomer medzi oboma rolami.',
-   a:{fiabane:'disagree',cibulka:'agree'}}
+  {t:'Parkovanie',q:'Má Žilina pokračovať v rozširovaní plateného rezidentského parkovania aj na Vlčince a ďalšie časti mesta?',w:'Regulované parkovanie už platí v centre, na Hájiku a Solinkách a od 1. augusta 2026 aj na Hlinách V–VII a časti Bôrika. V roku 2027 majú nasledovať Vlčince. Regulácia zvýhodňuje rezidentov, ale ruší časť bezplatného státia.',a:{fiabane:'agree',cibulka:'disagree',johanes:'disagree',kozlik:'neutral',sokol:'disagree'}},
+  {t:'Fond mobility',q:'Má mesto z Fondu mobility dávať viac peňazí na opravy ciest a chodníkov než na nové cyklotrasy?',w:'Žilina plánuje v roku 2026 investovať do rozvoja viac ako 23,3 mil. €. Peniaze na dopravu sa delia medzi opravy existujúcich ciest a chodníkov a nové projekty mobility; vyšší podiel na opravy znamená pomalšie budovanie cyklotrás.',a:{fiabane:'disagree',cibulka:'agree',johanes:'agree',kozlik:'agree',sokol:'agree'}},
+  {t:'Nájomné bývanie',q:'Má mesto vstúpiť do spoločného podniku so súkromným fondom na výstavbu nájomných bytov, ak tým získa stovky bytov rýchlejšie?',w:'V Žiline eviduje systém podporovaného nájomného bývania približne 670 záujemcov, v celom kraji vyše 1 300. Spoločný podnik so súkromným fondom môže výstavbu urýchliť, ale mesto zdieľa kontrolu aj budúci ekonomický úžitok.',a:{fiabane:'agree',cibulka:'neutral',johanes:'neutral',kozlik:'agree',sokol:'neutral'}},
+  {t:'Majetok mesta',q:'Má mesto vkladať svoje lukratívne pozemky do spoločných projektov nájomného bývania namiesto ich predaja alebo dlhodobého prenájmu za trhovú cenu?',w:'Mesto má približne 1 110 nájomných bytov a zároveň stovky ďalších záujemcov o dostupné bývanie. Vklad mestského pozemku môže pomôcť postaviť nové byty bez plného financovania mesta, predaj alebo prenájom však prináša jasnejší trhový výnos.',a:{fiabane:'agree',cibulka:'disagree',johanes:'agree',kozlik:'neutral',sokol:'neutral'}},
+  {t:'Kontrola projektov',q:'Má zastupiteľstvo znovu schváliť každý veľký projekt, ktorého cena sa zvýši o viac než 10 %?',w:'Žilina plánuje v roku 2026 investície za viac ako 23,3 mil. €. Povinné nové hlasovanie pri zdražení projektu nad 10 % by posilnilo kontrolu poslancov, ale pri nečakaných stavebných prácach môže realizáciu spomaliť.',a:{fiabane:'neutral',cibulka:'agree',johanes:'agree',kozlik:'agree',sokol:'agree'}},
+  {t:'MHD',q:'Má mesto pokračovať vo veľkých investíciách do trolejbusovej dopravy a depa aj v čase, keď obyvatelia tlačia na riešenie bežných problémov v uliciach?',w:'Modernizácia trolejbusového depa stála približne 36,1 mil. €; pri hlavnej fáze pokrývali EÚ a štát 95 % nákladov a mesto 5 %. Ďalšie investície môžu zlepšiť MHD na desaťročia, ale súťažia s opravami ulíc a chodníkov.',a:{fiabane:'agree',cibulka:'neutral',johanes:'neutral',kozlik:'neutral',sokol:'neutral'}},
+  {t:'MHD',q:'Má Žilina zaviesť 20-minútový interval MHD na hlavných trasách počas pracovných dní, aj keby musela výrazne zvýšiť dotáciu dopravnému podniku?',w:'Dvadsaťminútový interval na hlavných trasách by skrátil čakanie a zvýšil použiteľnosť MHD. Znamenal by však viac kilometrov, vodičov a vozidiel, teda vyššiu pravidelnú dotáciu dopravnému podniku; presnú cenu takéhoto modelu mesto zatiaľ nezverejnilo.',a:{fiabane:'neutral',cibulka:'agree',johanes:'neutral',kozlik:'neutral',sokol:'neutral'}},
+  {t:'Cyklodoprava',q:'Má mesto budovať oddelené cyklotrasy aj tam, kde sa zrušia parkovacie miesta alebo jazdný pruh?',w:'Žilina v roku 2026 plánuje viac ako 23,3 mil. € investícií a doprava patrí medzi hlavné oblasti. V zastavaných uliciach sa však nový priestor nedá vždy vytvoriť bez zrušenia parkovacích miest alebo jazdného pruhu.',a:{fiabane:'agree',cibulka:'disagree',johanes:'disagree',kozlik:'disagree',sokol:'disagree'}},
+  {t:'Údržba',q:'Má mesto odložiť nové veľké projekty, kým výrazne nezníži investičný dlh na cestách, chodníkoch a podjazdoch?',w:'Žilina v roku 2026 zvýšila plánované investície na viac ako 23,3 mil. €, o viac než polovicu oproti predchádzajúcemu roku. Odklad nových projektov by uvoľnil kapacitu na opravy, ale môže ohroziť pripravené projekty a externé financovanie.',a:{fiabane:'disagree',cibulka:'agree',johanes:'agree',kozlik:'neutral',sokol:'agree'}},
+  {t:'Rozpočet',q:'Má Žilina hospodáriť opatrnejšie a obmedziť nové projekty, ak by hrozilo ďalšie zadlžovanie mesta?',w:'Rozpočet mesta na rok 2026 je približne 138,6 mil. €, z toho viac než 113 mil. € tvoria bežné výdavky a približne 21 mil. € investície. Nový dlh môže urýchliť projekty, ale splátky znižujú priestor v ďalších rozpočtoch.',a:{fiabane:'neutral',cibulka:'agree',johanes:'agree',kozlik:'agree',sokol:'agree'}},
+  {t:'Šport',q:'Má mesto uprednostniť menšie športoviská na sídliskách pred ďalším veľkým športovým projektom?',w:'Mesto pripravuje napríklad novú multifunkčnú halu v Bánovej s hľadiskom pre približne 180 ľudí a štyrmi odbornými učebňami. Veľké zariadenie sústredí služby na jednom mieste; menšie športoviská rozdelia investície medzi viac štvrtí.',a:{fiabane:'neutral',cibulka:'agree',johanes:'agree',kozlik:'agree',sokol:'neutral'}},
+  {t:'Zeleň',q:'Má Žilina chrániť existujúce stromy a zeleň prísnejšie, aj keby to komplikovalo niektoré stavebné a dopravné projekty?',w:'Pri väčších rekonštrukciách môže ochrana stromov meniť trasovanie ciest, parkovanie aj cenu projektu. Žilina má od roku 2026 nový manuál výsadby a zeleň používa aj ako opatrenie proti prehrievaniu a na zadržiavanie vody.',a:{fiabane:'agree',cibulka:'neutral',johanes:'neutral',kozlik:'neutral',sokol:'neutral'}},
+  {t:'Developeri',q:'Má Žilina znížiť poplatok za rozvoj z 35 na 20 €/m², ak by to mohlo podporiť novú bytovú výstavbu?',w:'Žilina vyberá pri novej výstavbe poplatok za rozvoj 35 €/m²; diskutovalo sa o znížení na 20 €/m². Nižšia sadzba znižuje náklady investora, ale mesto príde o peniaze, ktoré môže použiť na cesty, školy či inú infraštruktúru.',a:{fiabane:'disagree',cibulka:'neutral',johanes:'neutral',kozlik:'disagree',sokol:'agree'}},
+  {t:'Opravy',q:'Má mesto určovať poradie opráv ulíc podľa merateľných dát aj vtedy, keď obyvatelia alebo poslanci žiadajú inú prioritu?',w:'V roku 2026 mesto plánuje investície za viac ako 23,3 mil. €, preto nemôže opraviť všetko naraz. Poradie podľa technického stavu, dopravy či bezpečnosti obmedzuje politické zásahy, ale môže odsunúť problém, ktorý obyvatelia konkrétnej štvrte považujú za naliehavejší.',a:{fiabane:'neutral',cibulka:'disagree',johanes:'agree',kozlik:'neutral',sokol:'agree'}},
+  {t:'Sociálne bývanie',q:'Má mesto vyhradiť časť nových nájomných bytov pre ľudí v bytovej núdzi, aj keď sa tým predĺži čakanie ostatných žiadateľov?',w:'Žilina realizuje projekt dostupného bývania za približne 500 000 €, ktorý má do roku 2028 pomôcť najmenej 20 klientom v ohrození. Vyhradenie časti nových bytov týmto domácnostiam pomôže najzraniteľnejším, ale predĺži čakanie ostatných.',a:{fiabane:'agree',cibulka:'neutral',johanes:'neutral',kozlik:'neutral',sokol:'neutral'}},
+  {t:'Bezpečnosť',q:'Má mesto výrazne posilniť mestskú políciu a rozšíriť kamerový systém, aj keby menej peňazí zostalo na sociálnu prevenciu?',w:'Pred modernizáciou malo mesto približne 100 bezpečnostných kamier a systém sa ďalej rozširuje. Viac policajtov a kamier môže zvýšiť dohľad a rýchlosť zásahov, ale prináša trvalé personálne a prevádzkové náklady a menej peňazí na prevenciu.',a:{fiabane:'agree',cibulka:'neutral',johanes:'neutral',kozlik:'neutral',sokol:'neutral'}},
+  {t:'Stanica a centrum',q:'Má mesto investovať viac do okolia stanice a centra aj za cenu menších investícií na sídliskách?',w:'Žilina plánuje v roku 2026 investície za viac ako 23,3 mil. €, no rovnaké peniaze nemôžu ísť naraz do centra aj všetkých obytných štvrtí. Okolie stanice využíva veľa cestujúcich, kým investície na sídliskách zlepšujú každodenné služby obyvateľov.',a:{fiabane:'neutral',cibulka:'disagree',johanes:'disagree',kozlik:'disagree',sokol:'disagree'}},
+  {t:'Výstavba',q:'Má mesto obmedziť veľké bytové projekty v existujúcich štvrtiach, aj keby sa tým postavilo menej nových bytov?',w:'V Žiline je približne 670 záujemcov o podporované nájomné bývanie, takže tlak na nové byty je reálny. Zahusťovanie existujúcich štvrtí zvyšuje ponuku bez rozširovania mesta, ale môže zhoršiť dopravu, parkovanie a zaťažiť služby.',a:{fiabane:'neutral',cibulka:'neutral',johanes:'neutral',kozlik:'neutral',sokol:'neutral'}},
+  {t:'Participácia',q:'Majú obyvatelia priamo rozhodovať o 1 % bežných výdavkov mesta prostredníctvom participatívneho rozpočtu?',w:'Bežné výdavky Žiliny na rok 2026 presahujú 113 mil. €. Jedno percento je približne 1,13 mil. €, o ktorých by priamo rozhodovali obyvatelia; vedenie mesta by však stratilo časť voľnosti pri určovaní priorít.',a:{fiabane:'agree',cibulka:'agree',johanes:'neutral',kozlik:'agree',sokol:'neutral'}},
+  {t:'Kultúra',q:'Má Žilina garantovať kultúre najmenej 2 % bežných výdavkov, aj keby menej peňazí zostalo na cesty a športoviská?',w:'Bežné výdavky mesta na rok 2026 presahujú 113 mil. €, takže 2 % predstavujú približne 2,3 mil. € ročne. Samotný grantový program pre kultúrne projekty má v roku 2026 120 000 €; garantované 2 % by zahŕňali aj širšie kultúrne výdavky mesta.',a:{fiabane:'neutral',cibulka:'neutral',johanes:'neutral',kozlik:'neutral',sokol:'neutral'}},
+  {t:'Podnikanie',q:'Má Žilina aktívnejšie lákať investorov a firmy, aj keby to znamenalo ústupky v majetkovej politike mesta?',w:'Nová výstavba môže priniesť pracovné miesta a príjmy, ale mestské pozemky a infraštruktúra majú vlastnú trhovú hodnotu. Pri rozpočte mesta približne 138,6 mil. € môže aj väčšia majetková úľava znamenať citeľný verejný náklad.',a:{fiabane:'neutral',cibulka:'agree',johanes:'neutral',kozlik:'agree',sokol:'agree'}},
+  {t:'Školy a škôlky',q:'Má mesto odložiť obnovu historického centra, ak bez toho nevie rozšíriť kapacity škôlok v rastúcich štvrtiach?',w:'Mesto investuje aj do školských kapacít: projekt na ZŠ Javorku za približne 721 000 € modernizuje priestory pre asi 500 používateľov a zvyšuje kapacitu o 36 miest. Peniaze vložené do škôl však nemožno súčasne použiť na obnovu centra.',a:{fiabane:'neutral',cibulka:'agree',johanes:'agree',kozlik:'agree',sokol:'agree'}},
+  {t:'Verejný priestor',q:'Má mesto prísnejšie regulovať vizuálny smog, reklamné plochy a chaotické úpravy verejného priestoru?',w:'Prísnejšia regulácia môže obmedziť reklamné plochy a zjednotiť vzhľad ulíc, no zasahuje do využívania súkromného majetku a príjmov z reklamy.',a:{fiabane:'agree',cibulka:'neutral',johanes:'neutral',kozlik:'neutral',sokol:'neutral'}},
+  {t:'Technické služby',q:'Má Žilina zadávať viac údržby vlastným Technickým službám, aj keď súkromná firma ponúkne nižšiu cenu?',w:'V roku 2026 mesto po viac než 30 rokoch prevzalo správu komunikácií od externých spoločností pod vlastné Technické služby. Vlastná firma dáva mestu väčšiu kontrolu a rýchlejšie zadávanie prác, súkromník však môže pri konkrétnej zákazke ponúknuť nižšiu cenu.',a:{fiabane:'agree',cibulka:'agree',johanes:'neutral',kozlik:'neutral',sokol:'neutral'}},
+  {t:'Investície',q:'Má Žilina pokračovať v rozbehnutých veľkých projektoch aj za cenu pomalšieho riešenia každodennej údržby?',w:'Žilina plánuje v roku 2026 investície za viac ako 23,3 mil. €, čo je medziročne nárast o viac než polovicu. Dokončenie pripravených projektov môže využiť externé zdroje a už zaplatenú prípravu, ale viaže peniaze a kapacity potrebné na bežnú údržbu.',a:{fiabane:'agree',cibulka:'disagree',johanes:'disagree',kozlik:'disagree',sokol:'disagree'}}
 ];
 
 // ── Otázky: Predseda / Predsedníčka ŽSK ──
