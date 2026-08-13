@@ -17,11 +17,11 @@ window.VAA_DATA.candidates['zilina_primator'] = [
 
 // ── Kandidáti: Predseda / Predsedníčka ŽSK ──
 window.VAA_DATA.candidates['zilina_vuc'] = [
-  {id:'jurinova',name:'Erika Jurinová',party:'Nezávislá',color:'#7A2E8A',url:'https://jurinova.sk/'},
-  // POZN: Belousovová, Kapitulík a Choma – postoje sú ODHADNUTÉ (verified:false pre data.json)
-  {id:'belousovova',name:'Anna Belousovová',party:'Republika',color:'#2A4B9B',url:''},
+  {id:'jurinova',name:'Erika Jurinová',party:'Nezávislá / Slovensko / SaS / PS / KDH / Demokrati a ďalší',color:'#7A2E8A',url:'https://jurinova.sk/'},
+  {id:'belousovova',name:'Anna Belousovová',party:'Republika',color:'#795548',url:''},
   {id:'kapitulik',name:'Martin Kapitulík',party:'Nezávislý',color:'#0E7C86',url:'https://www.martinkapitulik.sk/'},
-  {id:'choma',name:'Igor Choma',party:'Smer-SD / Hlas-SD',color:'#C3112B',url:''}
+  {id:'choma',name:'Igor Choma',party:'Smer-SD / Hlas-SD',color:'#C3112B',url:''},
+  {id:'lucansky',name:'Adam Lučanský',party:'SNS',color:'#D4A017',url:''}
 ];
 
 // ── Otázky: Primátor / Primátorka Žiliny ──
@@ -55,129 +55,29 @@ window.VAA_DATA.questions.zilina_primator = [
 
 // ── Otázky: Predseda / Predsedníčka ŽSK ──
 window.VAA_DATA.questions.zilina_vuc = [
-  {t:'Cesty a mosty',
-   q:'Má Žilinský kraj dať absolútnu prioritu rekonštrukcii ciest II. a III. triedy, aj keby to spomalilo iné investície?',
-   w:'Správa ciest patrí medzi najviditeľnejšie kompetencie kraja. V Žilinskom kraji je téma stavu ciest a mostov mimoriadne citlivá pre horský terén, tranzit aj regionálne rozdiely. Otázka je, či má kraj sústrediť čo najviac peňazí práve sem, alebo udržať širšie investičné priority.',
-   a:{jurinova:'neutral',belousovova:'agree',kapitulik:'neutral',choma:'agree'}},
-
-  {t:'Verejná doprava',
-   q:'Je potrebné zachovať autobusové spojenia aj v menej obývaných oblastiach, aj keď sú stratové.',
-   w:'Riedko osídlené časti Oravy, Kysúc, Turca či Liptova sú odkázané na verejnú dopravu viac než veľké mestá. Ekonomicky nevýhodné linky však zaťažujú rozpočet. Rozhoduje sa medzi dostupnosťou služieb pre všetkých a efektívnym využitím verejných peňazí.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Nemocnice',
-   q:'Je správne dotovať svoje nemocnice a stabilizačné programy pre zdravotníkov, aj keď roky vykazujú stratu.',
-   w:'Nemocnice v pôsobnosti ŽSK čelia finančným problémom, ale zároveň patria medzi najdôležitejšie verejné služby v kraji. Kraj môže straty vnímať ako signál na tvrdšiu racionalizáciu alebo ako cenu za udržanie dostupnej zdravotnej starostlivosti v regiónoch.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Zdravotníci',
-   q:'Má kraj ponúkať motivačné programy pre sestry, lekárov a ďalší personál, aby ich udržal vo svojich zariadeniach?',
-   w:'Nedostatok zdravotníckeho personálu neohrozuje len kvalitu, ale aj samotnú dostupnosť zdravotnej starostlivosti. Motivačné programy stoja peniaze, no bez nich môže kraj strácať ľudí do väčších nemocníc či do zahraničia.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Sociálne služby',
-   q:'Má kraj viac investovať do zariadení sociálnych služieb a starostlivosti o seniorov aj za cenu menšieho priestoru pre iné oblasti?',
-   w:'Starnutie populácie zvyšuje tlak na domovy sociálnych služieb, opatrovateľské kapacity aj modernizáciu zariadení. Ide o jednu z najnáročnejších oblastí verejnej politiky, kde dopyt rastie rýchlejšie než rozpočtové možnosti.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Sociálne služby',
-   q:'Má kraj podporovať skôr rozširovanie vlastných zariadení než financovanie služieb u neverejných poskytovateľov?',
-   w:'Pri raste dopytu po sociálnych službách stojí kraj pred voľbou, či má viac budovať vlastné kapacity, alebo sa opierať aj o súkromných a cirkevných poskytovateľov. Obe cesty majú svoje náklady, limity aj ideové východiská.',
-   a:{jurinova:'neutral',belousovova:'agree',kapitulik:'neutral',choma:'agree'}},
-
-  {t:'Stredné školy',
-   q:'Má kraj prioritne investovať do modernizácie stredných škôl, aby lepšie reagovali na potreby trhu práce?',
-   w:'ŽSK je zriaďovateľom stredných škôl a nesie zodpovednosť za to, či absolventi nájdu uplatnenie. Modernizácia odborného vzdelávania môže pomôcť firmám aj mladým ľuďom, no vyžaduje vysoké investície a spoluprácu so zamestnávateľmi.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Stredné školy',
-   q:'Má kraj zachovať aj menšie stredné školy v slabších regiónoch, aj keď sú dlhodobo menej efektívne?',
-   w:'Menšie školy môžu byť pre región dôležité sociálne aj dopravne, no pri nízkom počte študentov bývajú drahšie na prevádzku. Spor je medzi regionálnou dostupnosťou vzdelania a racionalizáciou siete škôl.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'neutral',choma:'agree'}},
-
-  {t:'Trh práce',
-   q:'Má kraj užšie prepájať odborné školy s veľkými firmami a priemyselnými klastrami, aj keby sa tým časť odborov viac podriadila potrebám trhu?',
-   w:'Žilinský kraj patrí medzi priemyselne najsilnejšie regióny Slovenska, no firmy zároveň upozorňujú na nedostatok pripravených absolventov. Väčšie prepojenie škôl s praxou môže zvýšiť zamestnateľnosť, no zároveň vyvoláva obavy, aby školy nestratili širšiu vzdelávaciu funkciu.',
-   a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Ovzdušie',
-   q:'Má kraj viac investovať do znižovania znečistenia ovzdušia v regiónoch ako Kysuce, Orava a Turiec, aj keď to nie je jeho najviditeľnejšia kompetencia?',
-   w:'Pretrvávajúce problémy s prachovými časticami a benzo[a]pyrénom sú spojené najmä s vykurovaním domácností tuhými palivami. Kraj nemá v rukách všetky nástroje, no môže koordinovať projekty, podporovať osvetu, energetické riešenia a tlak na systémové opatrenia.',
-   a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'neutral'}},
-
-  {t:'Energetika',
-   q:'Má kraj urýchliť zatepľovanie a energetické úspory vo svojich budovách, aj keď sa investície vrátia až o niekoľko rokov?',
-   w:'Župa spravuje veľké množstvo budov napr. školy, nemocnice, kultúrne inštitúcie či zariadenia sociálnych služieb. Energetické úspory znižujú budúce náklady, no vyžadujú značné vstupné investície.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
- {t:'Nemocnice',
-   q:'Ak by si to vyžadovala finančná situácia, mal by kraj pristúpiť aj k nepopulárnym zmenám v riadení svojich nemocníc?',
-   w:'Straty nemocníc vytvárajú tlak na vedenie kraja, aby nehľadalo len dodatočné peniaze, ale aj hlbšie manažérske opatrenia. Takéto kroky môžu byť nevyhnutné, no zároveň politicky aj sociálne citlivé.',
-   a:{jurinova:'neutral',belousovova:'neutral',kapitulik:'agree',choma:'neutral'}},
-
-  {t:'Energetika',
-   q:'Má kraj pri modernizácii svojich budov uprednostniť čo najrýchlejšie zníženie prevádzkových nákladov pred reprezentatívnymi rekonštrukciami?',
-   w:'Po energetickej kríze sa ukázalo, že mnohé krajské budovy sú drahé na prevádzku. Otázka preto znie, či má byť hlavným cieľom úspora energií a funkčnosť, alebo širšie, vizuálne a architektonicky ambicióznejšie obnovy.',
-   a:{jurinova:'neutral',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Rozpočet',
-   q:'Má kraj v neistých časoch hospodáriť opatrnejšie a obmedziť nové ambiciózne projekty?',
-   w:'Kraj hospodári s rozpočtom v stovkách miliónov eur a musí vyvažovať investície, prevádzku aj financovanie služieb. Opatrnosť znižuje riziko budúcich problémov, ale môže spomaliť rozvoj a čerpanie vonkajších zdrojov.',
-   a:{jurinova:'disagree',belousovova:'agree',kapitulik:'disagree',choma:'disagree'}},
-
- {t:'Cesty a mosty',
-   q:'Má kraj presúvať viac peňazí na havarijný stav mostov a rizikových úsekov aj za cenu obmedzenia nových projektov?',
-   w:'V horských regiónoch kraja sú mosty a zosuvné úseky kľúčovou podmienkou bezpečnej dopravy. Opravy týchto miest bývajú technicky aj finančne veľmi náročné, no ich odklad zvyšuje bezpečnostné aj ekonomické riziká.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'neutral',choma:'agree'}},
-
-  {t:'Eurofondy',
-   q:'Má byť pre kraj prioritou pripraviť čo najviac projektov na eurofondy, aj keď si to vyžiada vyššie spolufinancovanie z vlastného rozpočtu?',
-   w:'Externé zdroje vedia výrazne posunúť školy, nemocnice, cesty či kultúru. No aj eurofondový projekt niečo stojí a vyžaduje schopný aparát, prípravu a spoluúčasť. Otázka je, či má kraj hrať aktívne a vo veľkom, alebo opatrnejšie.',
-   a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Vyľudňovanie regiónov',
-   q:'Má kraj cielene posilňovať služby v odľahlejších regiónoch, aj keď je to drahšie než sústrediť ich do väčších centier?',
-   w:'Jednou z najväčších výziev ŽSK je rozdiel medzi centrami a perifériami. Posilňovanie služieb v menších mestách a obciach môže zlepšiť kvalitu života aj udržať obyvateľov v regióne, no je finančne náročnejšie než centralizácia.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Regionálna rovnováha',
-   q:'Má vedenie kraja garantovať vyrovnanejšie zastúpenie regiónov vo vedení župy a pri veľkých investíciách?',
-   w:'Žilinský kraj má silné regionálne identity ako Kysuce, Orava, Turiec, Liptov aj Horné Považie často sledujú, či nie sú pri investíciách prehliadané. Otázka smeruje k tomu, či má byť regionálna vyváženosť explicitnou politickou zásadou.',
-   a:{jurinova:'neutral',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Cestovný ruch',
-   q:'Má kraj viac investovať do cestovného ruchu, aj keď výsledky takých projektov sa prejavia až neskôr?',
-   w:'Liptov, Orava, Malá Fatra či Kysuce majú silný turistický potenciál. Cielená podpora cestovného ruchu môže priniesť pracovné miesta a príjmy, no nie vždy je jasné, či investície prinášajú férový úžitok pre celý kraj.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Životné prostredie',
-   q:'Má kraj viac podporovať cyklotrasy a ekologickú dopravu aj za cenu, že časť voličov to nepovažuje za prioritu?',
-   w:'Kraj má v rukách najmä plánovanie, koordináciu a vlastné investície, nie všetky ekologické politiky. Napriek tomu môže ovplyvniť, či bude mobilita a verejné budovy šetrnejšie k životnému prostrediu. Ide o spor medzi dlhodobou udržateľnosťou a bezprostrednými každodennými problémami.',
-   a:{jurinova:'agree',belousovova:'disagree',kapitulik:'agree',choma:'neutral'}},
-
-  {t:'Transparentnosť',
-   q:'Má kraj zverejňovať zrozumiteľné odôvodnenia veľkých zmlúv a investičných rozhodnutí ešte pred ich schválením?',
-   w:'Formálne zverejnenie dokumentov často nestačí na to, aby sa v nich občania vyznali. Lepšia transparentnosť by mohla zvýšiť dôveru a verejnú kontrolu, no zároveň predĺžiť procesy a zvýšiť administratívnu záťaž úradu.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'neutral'}},
-
-  {t:'Verejná doprava',
-   q:'Má kraj ďalej rozširovať integrovanú dopravu a jednotný cestovný lístok aj vtedy, ak si to vyžiada vyššie dotácie?',
-   w:'Integrovaná doprava má zjednodušiť cestovanie medzi vlakmi, autobusmi a mestskou dopravou. Prínosom je väčší komfort pre cestujúcich a lepšie prepojenie regiónov, nevýhodou sú vyššie nároky na organizáciu a financovanie systému.',
-   a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Participácia',
-   q:'Má kraj viac zapájať starostov, primátorov a verejnosť do tvorby priorít, aj keby bolo rozhodovanie pomalšie?',
-   w:'Vyššia participácia môže zvýšiť legitimitu rozhodnutí a pomôcť lepšie zachytiť potreby územia. Zároveň však môže spomaliť prijímanie rozhodnutí a oslabiť schopnosť vedenia konať rýchlo a strategicky.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Kontrola výkonu',
-   q:'Má predseda kraja pravidelne zverejňovať prehľad splnených a nesplnených sľubov a merateľných výsledkov župy?',
-   w:'Krajská politika býva pre mnohých voličov menej čitateľná než komunálna či národná. Verejný účet sľubov by mohol zvýšiť kontrolu a tlak na výsledky, no zároveň by vystavil vedenie kraja priebežnej verejnej kritike.',
-   a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree'}},
-
-  {t:'Investičná filozofia',
-   q:'Má byť župan skôr tvrdý správca rozpočtu a služieb než politický líder veľkých vízií?',
-   w:'Aj pri krajskej politike ide často o stret dvoch štýlov. Jeden stavia na opatrnom hospodárení, detailnom manažmente a stabilite služieb. Druhý na väčších rozvojových projektoch, aktívnejšom získavaní zdrojov a ambícii meniť smerovanie kraja výraznejšie.',
-   a:{jurinova:'disagree',belousovova:'agree',kapitulik:'disagree',choma:'disagree'}}
+  {t:'Mosty',q:'Má kraj presunúť ďalších 10 miliónov eur z nových projektov do opráv mostov?',w:'V zlom stave je 123 krajských mostov a ďalších 45 je vo veľmi zlom stave. Ich obnova by podľa odhadov stála viac než 100 mil. €. Ďalších 10 miliónov by opravy urýchlilo, ale chýbali by pri školách, nemocniciach či nových projektoch.',a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'agree',lucansky:'agree'}},
+  {t:'Orava',q:'Má kraj uprednostniť nový most cez Oravskú priehradu pred veľkými investíciami v ostatných regiónoch?',w:'Most v Námestove má približne 300 metrov, denne po ňom prejde okolo 7 400 vozidiel a je vo veľmi zlom stave. Priorita nového mosta by pomohla Orave, ale mohla by odsunúť veľké projekty na Kysuciach, v Turci, Liptove či okolí Žiliny.',a:{jurinova:'agree',belousovova:'neutral',kapitulik:'neutral',choma:'neutral',lucansky:'neutral'}},
+  {t:'Verejná doprava',q:'Má kraj zachovať priame autobusové spoje do malých obcí aj tam, kde ich pravidelne využíva len málo cestujúcich?',w:'Riedko osídlené časti Oravy, Kysúc, Turca a Liptova sú na autobusoch často závislé. Slabo využívané spoje však stoja na jedného cestujúceho viac; ich rušenie znižuje náklady, ale zhoršuje dostupnosť práce, škôl a lekárov.',a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'neutral',lucansky:'agree'}},
+  {t:'Nemocnice – oddelenia',q:'Má kraj zachovať všetky nemocničné oddelenia aj vtedy, keď sú dlhodobo stratové a časť výkonov možno presunúť do väčšej nemocnice?',w:'Krajské nemocnice skončili podľa údajov ŽSK za rok 2025 spolu so stratou približne 4,5 mil. €. Zachovanie menších oddelení skracuje pacientom cestovanie, ale pri nedostatku personálu môže byť drahšie než sústredenie výkonov do väčších pracovísk.',a:{jurinova:'agree',belousovova:'agree',kapitulik:'neutral',choma:'neutral',lucansky:'agree'}},
+  {t:'Zdravotníci',q:'Má kraj ponúkať lekárom a sestrám náborové príspevky a zvýhodnené bývanie, aj keby rovnakú podporu nedostali učitelia a sociálni pracovníci?',w:'Od roku 2018 podporil ŽSK stabilizačnými programami 1 545 zdravotníkov sumou viac ako 1,55 mil. €. Silnejšie benefity môžu pomôcť nemocniciam obsadiť miesta, ale zvýhodnia jednu skupinu krajských profesií pred ostatnými.',a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'neutral',lucansky:'agree'}},
+  {t:'Sociálne služby – poskytovatelia',q:'Má kraj podporovať skôr rozširovanie vlastných zariadení než financovanie služieb u neverejných poskytovateľov?',w:'ŽSK poskytuje vo vlastných zariadeniach sociálne služby približne 3 300 klientom a uvádza investície do tejto oblasti za 11 mil. €. Vlastné zariadenia dávajú kraju väčšiu kontrolu, neverejní poskytovatelia môžu kapacity rozšíriť bez budovania všetkého krajom.',a:{jurinova:'neutral',belousovova:'agree',kapitulik:'neutral',choma:'agree',lucansky:'neutral'}},
+  {t:'Stredné školy – sieť',q:'Má kraj zlúčiť strednú školu s nízkym počtom žiakov, ak ušetrené peniaze použije na lepšie vybavenie škôl v tom istom okrese?',w:'Menšia škola môže byť pre región dôležitá, no pri nízkom počte žiakov má vyššie náklady na jedného študenta. Zlúčenie môže uvoľniť peniaze na dielne, laboratóriá či učiteľov, ale zhorší dostupnosť školy pre časť obcí.',a:{jurinova:'neutral',belousovova:'disagree',kapitulik:'agree',choma:'agree',lucansky:'disagree'}},
+  {t:'Vzdelávanie a práca',q:'Má kraj prispôsobiť viac odborov na stredných školách potrebám veľkých priemyselných zamestnávateľov, aj keby ubudlo všeobecnejších odborov?',w:'ŽSK uvádza približne 1 300 žiakov v duálnom vzdelávaní a viac než 200 zapojených zamestnávateľov. Silnejšie prepojenie škôl s firmami môže zlepšiť uplatnenie absolventov, ale zúžiť výber všeobecnejšie zameraného štúdia.',a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'agree',lucansky:'neutral'}},
+  {t:'Bývanie mladých',q:'Má kraj vyčleniť časť svojho majetku na nájomné bývanie pre mladých namiesto jeho predaja za najvyššiu cenu?',w:'V prieskume s 11 042 respondentmi plánuje zostať v kraji len 22 % maturantov. Dostupné bývanie môže mladým pomôcť zostať, ale využitie krajského majetku pod trhovým výnosom znamená menej peňazí na iné investície.',a:{jurinova:'neutral',belousovova:'neutral',kapitulik:'agree',choma:'neutral',lucansky:'agree'}},
+  {t:'Sociálna starostlivosť',q:'Má kraj investovať viac do domácej opatrovateľskej starostlivosti namiesto ďalšieho rozširovania pobytových zariadení?',w:'ŽSK poskytuje vo vlastných zariadeniach služby približne 3 300 klientom. Domáca starostlivosť umožní časti seniorov zostať dlhšie doma, ale potrebuje sieť pracovníkov a pri ťažkej odkázanosti nedokáže pobytové zariadenie úplne nahradiť.',a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'neutral',lucansky:'neutral'}},
+  {t:'Energetika',q:'Má si kraj vziať úver na zateplenie škôl, nemocníc a sociálnych zariadení, ak sa má splácať z budúcich úspor energie?',w:'ŽSK spravuje desiatky škôl, zdravotníckych a sociálnych budov. Úver umožní energetické obnovy skôr a môže znížiť budúce účty, ale návratnosť závisí od cien energií a skutočne dosiahnutých úspor.',a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'agree',lucansky:'neutral'}},
+  {t:'Rozpočet',q:'Má kraj ďalej využívať úvery na spolufinancovanie investícií, aj keď tým zvýši svoje zadlženie?',w:'Rozpočet ŽSK po úpravách v roku 2026 presiahol 332 mil. €. Súčasné vedenie uvádza pokles zadlženosti z 34,59 % na 23,36 %. Úver môže urýchliť projekty a čerpanie externých zdrojov, ale vytvára splátky pre ďalšie roky.',a:{jurinova:'agree',belousovova:'disagree',kapitulik:'agree',choma:'agree',lucansky:'neutral'}},
+  {t:'Eurofondy',q:'Má kraj prispôsobiť svoje investície eurofondovým výzvam, aj keď by bez nich dal prednosť iným projektom?',w:'Súčasné vedenie uvádza 72,6 mil. € schválených investícií z obdobia 2021–2027, pričom 93 % pokrývajú externé zdroje. Eurofondy šetria vlastný rozpočet, ale ich podmienky môžu určovať, čo a kedy kraj postaví.',a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'agree',lucansky:'neutral'}},
+  {t:'Regionálna rovnováha',q:'Má kraj presunúť väčší podiel nových investícií do Oravy, Kysúc a Turca aj za cenu menšieho objemu projektov v Žiline a Liptove?',w:'Žilinský kraj tvoria regióny s rozdielnou dopravou, pracovnými príležitosťami aj dostupnosťou služieb. Väčší presun peňazí na periférie môže znižovať regionálne rozdiely, ale znamená menej projektov v ekonomicky silnejších centrách.',a:{jurinova:'neutral',belousovova:'agree',kapitulik:'neutral',choma:'neutral',lucansky:'agree'}},
+  {t:'Regionálne kvóty',q:'Má kraj garantovať každému regiónu minimálny podiel investičného rozpočtu bez ohľadu na počet obyvateľov a pripravenosť projektov?',w:'Pevný minimálny podiel môže zabrániť dlhodobému prehliadaniu menších regiónov. Zároveň môže presunúť peniaze z naliehavejšieho alebo lepšie pripraveného projektu len preto, aby sa dodržala regionálna kvóta.',a:{jurinova:'disagree',belousovova:'agree',kapitulik:'disagree',choma:'neutral',lucansky:'agree'}},
+  {t:'Cestovný ruch',q:'Má kraj financovať turistickú dopravu a cyklotrasy aj tam, kde ich využívajú najmä návštevníci a nie miestni obyvatelia?',w:'Liptov, Orava a Malá Fatra patria medzi hlavné turistické oblasti kraja. Investície do dopravy a cyklotrás môžu podporiť služby a pracovné miesta, ale časť nákladov nesie kraj aj vtedy, keď infraštruktúru využívajú najmä návštevníci.',a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'neutral',lucansky:'agree'}},
+  {t:'Vážska cyklotrasa',q:'Má kraj pokračovať v rozširovaní Vážskej cyklotrasy, aj keď musí zároveň investovať viac než 100 miliónov eur do zlých mostov?',w:'ŽSK uvádza 17,5 km hotovej Vážskej cyklotrasy a ďalších 23 km v príprave. Zároveň je 168 mostov v zlom alebo veľmi zlom stave a ich obnova by stála viac než 100 mil. €. Zdroje nie sú vždy zameniteľné, oba programy však potrebujú prípravu a spolufinancovanie.',a:{jurinova:'agree',belousovova:'disagree',kapitulik:'agree',choma:'disagree',lucansky:'neutral'}},
+  {t:'Kontrola projektov',q:'Má zastupiteľstvo znovu schváliť každý veľký projekt, ktorý počas realizácie zdražie o viac než 10 %?',w:'Pri veľkých stavbách môžu cenu zvýšiť nepredvídané práce alebo rast nákladov. Nové hlasovanie pri náraste nad 10 % posilní kontrolu poslancov, ale môže realizáciu spomaliť. Hranica 10 % je navrhovaný kontrolný mechanizmus, nie dnešné pravidlo ŽSK.',a:{jurinova:'neutral',belousovova:'agree',kapitulik:'agree',choma:'neutral',lucansky:'agree'}},
+  {t:'Integrovaná doprava',q:'Má kraj zvyšovať dotácie na integrovanú dopravu, aby boli prestupy a spoločné lístky lacnejšie?',w:'ŽSK rozšíril integrovanú dopravu naprieč krajom a od roku 2018 nasadil 179 nových prímestských autobusov. Lacnejšie spoločné cestovanie môže prilákať ľudí z áut, ale znamená vyššiu pravidelnú dotáciu z krajského rozpočtu.',a:{jurinova:'agree',belousovova:'neutral',kapitulik:'agree',choma:'neutral',lucansky:'agree'}},
+  {t:'Miestne veto',q:'Majú starostovia a primátori dostať právo zablokovať veľký krajský projekt vo svojom území, ak s ním miestna samospráva nesúhlasí?',w:'Miestne veto by posilnilo postavenie obcí pri projektoch na ich území. Zároveň by jedna samospráva mohla zastaviť cestu, školu či zariadenie, ktoré je dôležité pre širší región a využívajú ho obyvatelia viacerých okresov.',a:{jurinova:'disagree',belousovova:'agree',kapitulik:'disagree',choma:'disagree',lucansky:'neutral'}},
+  {t:'Hodnota za peniaze',q:'Má kraj pri investíciách uprednostniť projekty s najvyšším merateľným prínosom pred rovnomerným rozdelením peňazí medzi regióny?',w:'ŽSK už používa princíp Hodnota za peniaze pri posudzovaní projektov. Takéto hodnotenie môže poslať viac peňazí tam, kde projekt využije najviac ľudí alebo prinesie najväčšie úspory, ale menšie regióny môžu dostávať menej.',a:{jurinova:'agree',belousovova:'disagree',kapitulik:'agree',choma:'agree',lucansky:'disagree'}},
+  {t:'Nemocnice – technika',q:'Má kraj sústrediť drahú diagnostickú techniku do väčších nemocníc, aj keď pacienti z menších regiónov budú cestovať ďalej?',w:'ŽSK uvádza od roku 2018 približne 21 mil. € investícií do zdravotníckych oddelení a pracovísk vrátane CT a MR. Sústreďovanie drahej techniky môže zlepšiť využitie personálu a prístrojov, ale zhorší dostupnosť pre vzdialenejšie okresy.',a:{jurinova:'disagree',belousovova:'disagree',kapitulik:'neutral',choma:'agree',lucansky:'disagree'}},
+  {t:'Sociálne služby – personál',q:'Má kraj obmedziť rozširovanie sociálnych zariadení, kým nezvýši platy a počet ich pracovníkov?',w:'Krajské zariadenia poskytujú služby približne 3 300 klientom. Nové kapacity skracujú čakanie, ale bez dostatku personálu sa ťažko prevádzkujú kvalitne; vyššie mzdy a viac pracovníkov zase spomaľujú otváranie ďalších miest.',a:{jurinova:'agree',belousovova:'agree',kapitulik:'agree',choma:'neutral',lucansky:'neutral'}},
+  {t:'Stredné školy – odbory',q:'Má kraj výrazne obmedziť počet odborov, po ktorých absolventoch je dlhodobo malý dopyt na trhu práce?',w:'ŽSK investoval do stredných škôl približne 38,7 mil. € a zároveň prepája odborné vzdelávanie s viac než 200 zamestnávateľmi. Obmedzenie slabo uplatniteľných odborov môže presunúť kapacity perspektívnejším smerom, ale zúži žiakom výber.',a:{jurinova:'agree',belousovova:'disagree',kapitulik:'agree',choma:'agree',lucansky:'disagree'}},
+  {t:'Krajský majetok',q:'Má kraj predávať nepotrebný majetok a použiť peniaze na investície, aj keď by ho mohol dlhodobo prenajímať?',w:'Predaj majetku prinesie jednorazovo viac peňazí na cesty, školy či nemocnice a zníži náklady na správu. Dlhodobý prenájom ponechá majetok vo vlastníctve kraja a môže prinášať príjem roky, no neposkytne veľkú sumu okamžite.',a:{jurinova:'neutral',belousovova:'agree',kapitulik:'neutral',choma:'agree',lucansky:'neutral'}}
 ];
-
