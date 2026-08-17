@@ -22,13 +22,13 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Infraštruktúra',
     q:'Má sa mesto zaviazať, že na opravy ciest a chodníkov vyčlení každý rok pevne stanovený podiel z rozpočtu, aj keď sa tým obmedzí financovanie iných oblastí?',
     w:'Pevný podiel z rozpočtu by mestu každý rok zaručil peniaze na cesty a chodníky a uľahčil plánovanie opráv. Zároveň by však ubral peniaze z iných oblastí, napríklad zo škôl, športu či sociálnych služieb.',
-    a:{ilasova:'neutral', demecko:'agree', akram:'agree', godus:'disagree', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'neutral', demecko:'agree', akram:'agree', godus:'disagree', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Infraštruktúra',
     q:'Má mesto každý rok zverejniť plán opráv ciest po jednotlivých uliciach?',
     w:'Verejný plán by ukázal, ktoré ulice sa majú opravovať, kedy a za koľko. Na konci roka by obyvatelia mohli porovnať plán so skutočne vykonanými opravami.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Železnica',
@@ -40,7 +40,7 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Práca a poriadok',
     q:'Má mesto vytvoriť platené pracovné tímy pre dlhodobo nezamestnaných, aj keď budú drahšie než zákazka pre súkromnú firmu?',
     w:'Mestské pracovné tímy by mohli pomáhať s čistením, zeleňou a drobnou údržbou. Mesto by však muselo zabezpečiť vedenie, vybavenie a kontrolu kvality.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'neutral', uhrin:'agree', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'neutral', uhrin:'disagree', bednarova:'agree'}
   },
   {
     t:'Sociálna pomoc',
@@ -64,7 +64,7 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Doprava a verejný priestor',
     q:'Má mesto v centre zrušiť časť parkovacích miest, aby vytvorilo širšie chodníky, cyklotrasy a viac zelene?',
     w:'Verejný priestor v centre je obmedzený. Viac priestoru pre peších, bicykle a stromy môže zvýšiť bezpečnosť a kvalitu centra, ale zníži počet miest pre autá.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'neutral', godus:'neutral', uhrin:'disagree', bednarova:'neutral'}
+    a:{ilasova:'agree', demecko:'disagree', akram:'neutral', godus:'neutral', uhrin:'neutral', bednarova:'neutral'}
   },
   {
     t:'Transparentnosť',
@@ -76,19 +76,19 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Transparentnosť',
     q:'Má mesto zverejňovať ceny a meškania veľkých projektov?',
     w:'Obyvatelia by videli pôvodný rozpočet, konečnú cenu, plánovaný termín a dôvody zmien. Zverejňovanie zvyšuje kontrolu, ale môže odhaliť chyby v príprave alebo riadení projektu.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Participácia',
     q:'Majú obyvatelia rozhodovať o 1 % mestského rozpočtu?',
     w:'Jedno percento z rozpočtu približne 60 miliónov eur predstavuje okolo 600 000 eur. Obyvatelia by hlasovali o menších projektoch, no populárne nápady môžu dostať prednosť pred odbornými alebo menej viditeľnými potrebami.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Participácia',
     q:'Má mesto konzultovať veľké plány s obyvateľmi ešte pred ich schválením?',
     w:'Skoré konzultácie môžu odhaliť problémy pred schválením projektu. Zároveň môžu rozhodovanie spomaliť a vytvoriť konflikt medzi odborným návrhom, poslancami a verejnosťou.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Kultúra',
@@ -118,43 +118,43 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Sídliská',
     q:'Má mesto presunúť väčšiu časť nových investícií z centra do chodníkov, parkovania, zelene a ihrísk na sídliskách?',
     w:'Projekty v centre reprezentujú mesto a podporujú služby a návštevnosť. Väčšina obyvateľov však každodenne rieši stav chodníkov, parkovania, vnútroblokov a ihrísk na sídliskách.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'agree', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Financie',
     q:'Má si mesto vziať nový úver na rýchlejšie opravy ciest a chodníkov, aj keď tým obmedzí rozpočty v ďalších rokoch?',
     w:'Úver umožní urobiť viac opráv skôr, ale mesto bude v ďalších rokoch platiť istinu a úroky. Nové zadlženie preto zrýchli dnešné investície na úkor časti budúcich rozpočtov.',
-    a:{ilasova:'neutral', demecko:'agree', akram:'neutral', godus:'disagree', uhrin:'disagree', bednarova:'neutral'}
+    a:{ilasova:'neutral', demecko:'agree', akram:'neutral', godus:'disagree', uhrin:'neutral', bednarova:'neutral'}
   },
   {
     t:'Odpady',
     q:'Má mesto znížiť poplatok za odpad seniorom a nízkopríjmovým rodinám, aj keby ho ostatným obyvateľom muselo mierne zvýšiť?',
     w:'Úľava by pomohla domácnostiam s nižšími príjmami. Náklady na odpad však musia byť zaplatené, takže výpadok by pokryl rozpočet mesta alebo ostatní poplatníci.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'disagree', bednarova:'agree'}
   },
   {
     t:'Mestský podnik',
     q:'Má mesto zadávať údržbu ciest, zelene a verejných priestorov prednostne mestskému MEPOS-u, aj keď súkromná firma ponúkne nižšiu cenu?',
     w:'MEPOS je sociálny podnik v stopercentnom vlastníctve mesta. Mesto nad ním má priamu kontrolu a podnik vytvára aj sociálne pracovné miesta. Súkromná firma však môže ponúknuť nižšiu cenu alebo špecializovanejšiu službu.',
-    a:{ilasova:'agree', demecko:'agree', akram:'agree', godus:'neutral', uhrin:'agree', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'agree', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'agree'}
   },
   {
     t:'Bývanie',
     q:'Má mesto stavať nové nájomné byty aj za cenu ďalšieho zadlženia?',
     w:'Mestské byty môžu pomôcť mladým rodinám, pracovníkom škôl a služieb aj ľuďom, ktorí nedosiahnu na komerčné bývanie. Výstavba však vyžaduje úver, mestské pozemky alebo presun peňazí z iných investícií.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Školy',
     q:'Majú mať rekonštrukcie škôl prednosť pred veľkými investíciami do športu a turizmu?',
     w:'Mesto financuje školské budovy aj športové a turistické zariadenia. Pri obmedzenom rozpočte musí rozhodnúť, či majú mať každodenné potreby škôl prednosť pred viditeľnejšími projektmi.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Šport',
     q:'Má mesto uprednostniť menšie športoviská na sídliskách pred jedným veľkým športovým projektom?',
     w:'Menšie ihriská a športoviská využívajú obyvatelia jednotlivých štvrtí každý deň. Veľký projekt môže priniesť významné podujatia a reprezentovať mesto, ale sústredí peniaze do jedného zariadenia.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'agree', bednarova:'agree'}
   },
   {
     t:'Mestský majetok',
