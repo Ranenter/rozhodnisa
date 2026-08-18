@@ -655,7 +655,6 @@ body{
 .v-pill .ti{font-size:.7rem}
 .v-banner{display:none}
 @media(min-width:601px){
-  .v-pill{display:none}
   .v-banner{display:flex;align-items:center;gap:6px;font-size:.72rem;color:#1a6b2e;background:#e6f4ea;border-top:1px solid #c3e6cb;padding:.45rem .9rem;margin:.6rem -.9rem -.9rem;border-radius:0 0 8px 8px}
   .v-banner .ti{font-size:.85rem}
 }
@@ -1069,7 +1068,7 @@ body.agent-on .agent-view{display:block}
 .ag-role-label{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--sk-red);margin-bottom:.65rem}
 .ag-cand{background:#fff;border:1px solid var(--border);border-radius:8px;margin-bottom:.4rem;overflow:hidden}
 .ag-cand[open]{border-color:var(--sk-blue)}
-.ag-cand-summary{display:flex;align-items:baseline;gap:.75rem;padding:.65rem .9rem;cursor:pointer;list-style:none}
+.ag-cand-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:.35rem .75rem;padding:.65rem .9rem;cursor:pointer;list-style:none}
 .ag-cand-summary::-webkit-details-marker{display:none}
 .ag-cand-summary:hover{background:var(--surface)}
 .ag-cand[open] .ag-cand-summary{background:var(--surface);border-bottom:1px solid var(--border)}
@@ -1077,6 +1076,7 @@ body.agent-on .agent-view{display:block}
 .ag-cand-party{font-size:.72rem;color:var(--muted)}
 .ag-cand-body{padding:.8rem .9rem}
 .ag-bio{font-size:.85rem;color:var(--muted);margin-bottom:.65rem;line-height:1.6}
+.ag-verified{font-size:.7rem;font-weight:700;color:#1a6b2e;background:#e6f4ea;border-radius:20px;padding:.12rem .5rem;white-space:nowrap}
 .ag-meta{display:flex;gap:.5rem;font-size:.8rem;margin-bottom:.7rem}
 .ag-meta dt{font-weight:600;color:var(--muted)}
 .ag-meta dd a{color:var(--sk-blue)}
@@ -1962,13 +1962,15 @@ const VAA = (function(){
   // ── Verified candidates (answered the questionnaire directly) ──
   // Scoped by race key (city_type), because candidate ids are not unique across races:
   // 'geci' = Ľubomír Geci (Bratislava primátor, overené) ale aj Marián Geci (PSK župan, NEoverené).
-  const VERIFIED_BY_RACE = {
+  const VERIFIED_BY_RACE = window.VERIFIED_BY_RACE = {
     mochnacky: ['presov_primator'],
     lorinc:    ['kosice_primator'],
     geci:      ['bratislava_primator'],
     porvaz:    ['kosice_vuc', 'snv_vuc', 'michalovce_vuc'],
     majersky:  ['presov_vuc', 'poprad_vuc'],
-    cahoj:     ['bratislava_primator']
+    cahoj:     ['bratislava_primator'],
+    uhrin:     ['snv_primator'],
+    kozlik:    ['zilina_primator']
   };
 
   function _showResults(){
@@ -3756,11 +3758,15 @@ const VAA = (function(){
       : 'Predseda ' + String(meta.vuc||'').replace(/^Voľba župana\s*/,'').trim();
     var h = '<div class="ag-role"><h3 class="ag-role-label">'+esc(role)+'</h3>';
     cands.forEach(function(c){
+      var isVer = ((window.VERIFIED_BY_RACE && window.VERIFIED_BY_RACE[c.id]) || []).indexOf(key) !== -1;
       h += '<details class="ag-cand"><summary class="ag-cand-summary">'
         +  '<span class="ag-cand-name">'+esc(c.name)+'</span>'
-        +  '<span class="ag-cand-party">'+esc(c.party||'')+'</span></summary>'
+        +  '<span class="ag-cand-party">'+esc(c.party||'')+'</span>'
+        +  (isVer ? '<span class="ag-verified">\u2713 Overené odpovede</span>' : '')
+        +  '</summary>'
         +  '<div class="ag-cand-body">';
       if(c.bio) h += '<p class="ag-bio">'+esc(c.bio)+'</p>';
+      if(isVer) h += '<p class="ag-bio"><strong>Kandidát vyplnil dotazník \u2014 odpovede sú overené.</strong></p>';
       if(c.url) h += '<dl class="ag-meta"><dt>Web</dt><dd><a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.url)+'</a></dd></dl>';
       h += '<table class="ag-table"><thead><tr><th>Téma</th><th>Otázka</th><th>Postoj</th></tr></thead><tbody>';
       qs.forEach(function(q){
