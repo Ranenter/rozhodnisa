@@ -13,7 +13,7 @@ window.VAA_DATA.candidates['bystrica_primator'] = [
 
 window.VAA_DATA.candidates['bystrica_vuc'] = [
   {id:'lunter',name:'Ondrej Lunter',party:'Nezávislý / úradujúci predseda',color:'#2E8B57',url:'https://ondrejlunter.sk'},
-  {id:'suja',name:'Miroslav Suja',party:'Republika',color:'#795548',url:''},
+  {id:'suja',name:'Miroslav Suja',party:'Republika',color:'#795548',url:'https://www.hnutie-republika.sk/predstavitelia/miroslav-suja/'},
   {id:'malatinec',name:'Roman Malatinec',party:'Strana vidieka',color:'#8B6F47',url:'https://stranavidieka.sk/'}
 ];
 
@@ -64,7 +64,7 @@ window.VAA_DATA.questions.bystrica_primator = [
    a:{sobota:'agree',javorcikova:'neutral',molitoris:'agree'}},
 
   {t:'Výstavba',
-   q:'Má mesto obmedziť veľké bytové projekty v existujúcich štvrtiach, ak by výrazne zvýšili dopravu a tlak na parkovanie?',
+   q:'Má mesto obmedziť veľké bytové projekty v existujúcich štvrtiach, ak by výrazne zvýšili intentizu dopravy a tlak na parkovanie?',
    w:'Nové byty zvyšujú ponuku bývania a počet obyvateľov, no väčšie projekty môžu priniesť stovky nových áut a vyšší tlak na školy, parkovanie či verejný priestor. Prísnejšie limity chránia existujúce štvrte, ale spomalia bytovú výstavbu.',
    a:{sobota:'agree',javorcikova:'neutral',molitoris:'disagree'}},
 
@@ -84,7 +84,7 @@ window.VAA_DATA.questions.bystrica_primator = [
    a:{sobota:'disagree',javorcikova:'neutral',molitoris:'disagree'}},
 
   {t:'Školy a šport',
-   q:'Má mesto odložiť novú multifunkčnú športovú halu, ak bez toho nevie financovať opravy škôl, škôlok a ihrísk?',
+   q:'Má mesto odložiť novú multifunkčnú športovú halu, ak nevie financovať opravy škôl, škôlok a ihrísk?',
    w:'Mesto v roku 2026 realizuje rozsiahle školské investície a zároveň sa v kampani objavil návrh novej multifunkčnej haly. Hala môže slúžiť športu a podujatiam, no pri obmedzenom rozpočte súťaží s obnovou každodenných zariadení pre deti.',
    a:{sobota:'agree',javorcikova:'agree',molitoris:'agree'}},
 
@@ -94,7 +94,7 @@ window.VAA_DATA.questions.bystrica_primator = [
    a:{sobota:'agree',javorcikova:'disagree',molitoris:'agree'}},
 
   {t:'Kultúra',
-   q:'Má mesto garantovať kultúre najmenej 2 % bežných výdavkov, aj keby menej zostalo na cesty a šport?',
+   q:'Má mesto garantovať kultúre najmenej 2 % bežných výdavkov, aj keby tým menej zostalo na cesty a šport?',
    w:'Celkový rozpočet mesta na rok 2026 je približne 150 mil. €. Pevná 2-percentná hranica by chránila kultúru pred škrtmi, ale zároveň by časť bežných výdavkov nemohla byť podľa aktuálnej potreby presunutá na dopravu, šport či iné služby.',
    a:{sobota:'disagree',javorcikova:'agree',molitoris:'disagree'}},
 
@@ -119,7 +119,7 @@ window.VAA_DATA.questions.bystrica_primator = [
    a:{sobota:'neutral',javorcikova:'disagree',molitoris:'agree'}},
 
   {t:'Podnikanie a inovácie',
-   q:'Má mesto vytvoriť vlastnú agentúru na prilákanie investorov a startupov, aj keby to znamenalo nové trvalé výdavky mesta?',
+   q:'Má mesto vytvoriť vlastnú agentúru na prilákanie investorov, aj keby to znamenalo nové trvalé výdavky mesta?',
    w:'V kampani sa objavil cieľ podporiť vznik najmenej 50 nových startupov do roku 2030 cez aktívnejšiu mestskú podporu podnikania. Vlastná agentúra môže priniesť investície a pracovné miesta, ale vytvára nové personálne a prevádzkové náklady.',
    a:{sobota:'disagree',javorcikova:'agree',molitoris:'agree'}},
 
@@ -186,7 +186,7 @@ window.VAA_DATA.questions.bystrica_vuc = [
    a:{lunter:'agree',suja:'neutral',malatinec:'agree'}},
 
   {t:'Stredné školy',
-   q:'Má kraj pokračovať v spájaní menších stredných škôl do väčších kampusov, ak tým ušetrí na prevádzke?',
+   q:'Má kraj pokračovať v spájaní menších stredných škôl do väčších kampusov, ak sa tým ušetrí na ich prevádzke?',
    w:'Už uskutočnené spájanie stredných škôl do kampusov má podľa BBSK priniesť úsporu viac než 2 mil. € ročne. Väčšie školy môžu efektívnejšie využívať budovy a vybavenie, no niektorým žiakom sa môže zhoršiť dostupnosť školy alebo výber odboru.',
    a:{lunter:'agree',suja:'disagree',malatinec:'disagree'}},
 
@@ -211,7 +211,7 @@ window.VAA_DATA.questions.bystrica_vuc = [
    a:{lunter:'agree',suja:'disagree',malatinec:'disagree'}},
 
   {t:'Finančná rezerva',
-   q:'Má kraj držať vysokú finančnú rezervu aj vtedy, keď by sa tieto peniaze dali okamžite použiť na cesty a služby?',
+   q:'Má kraj držať svoju vysokú finančnú rezervu aj vtedy, keď by sa tieto peniaze dali okamžite použiť na cesty a služby?',
    w:'BBSK si v rozpočte 2026 vytvoril rezervu 11 mil. € pre prípad horšieho vývoja príjmov. Rezerva znižuje finančné riziko, ale rovnaké peniaze by sa dali použiť na opravy, školy alebo sociálne služby už dnes.',
    a:{lunter:'disagree',suja:'disagree',malatinec:'neutral'}},
 
@@ -221,7 +221,7 @@ window.VAA_DATA.questions.bystrica_vuc = [
    a:{lunter:'neutral',suja:'agree',malatinec:'agree'}},
 
   {t:'Technologické centrá',
-   q:'Má kraj investovať do nových technologických centier pre firmy a mladých aj za cenu menších investícií do ciest, škôl či sociálnych služieb?',
+   q:'Má kraj investovať do nových technologických centier pre firmy aj za cenu menších investícií do ciest, škôl či sociálnych služieb?',
    w:'V kraji sa diskutuje o vzniku piatich technologických centier zameraných napríklad na strojárstvo, drevárstvo či potravinárstvo. Môžu podporiť inovácie a pracovné miesta, ale vyžadujú peniaze a personál, ktoré nemožno použiť inde.',
    a:{lunter:'agree',suja:'disagree',malatinec:'disagree'}},
 
@@ -231,17 +231,17 @@ window.VAA_DATA.questions.bystrica_vuc = [
    a:{lunter:'neutral',suja:'disagree',malatinec:'disagree'}},
 
   {t:'Cestovný ruch',
-   q:'Má kraj zvyšovať investície do turistickej infraštruktúry aj tam, kde ju využívajú najmä návštevníci a nie miestni obyvatelia?',
+   q:'Má kraj zvyšovať investície do turistickej infraštruktúry aj tam, kde ju využívajú najmä turisti a nie miestni obyvatelia?',
    w:'Na regionálny rozvoj a cestovný ruch má BBSK v roku 2026 približne 4,6 mil. €. Turistická infraštruktúra môže priniesť pracovné miesta a tržby službám, ale časť nákladov nesie kraj aj tam, kde ju miestni využívajú málo.',
    a:{lunter:'agree',suja:'disagree',malatinec:'neutral'}},
 
   {t:'Nemocnica Lučenec',
    q:'Má kraj ponechať areál nemocnice v Lučenci v dlhodobom nájme súkromnému prevádzkovateľovi, ak tým zabezpečí kontinuitu zdravotnej starostlivosti?',
-   w:'Zastupiteľstvo BBSK v júli 2026 riešilo transformáciu zmluvy o správe a nájme nemocničného areálu v Lučenci s cieľom zachovať kontinuitu zdravotnej starostlivosti. Súkromný prevádzkovateľ nesie časť rizika, kraj však má menšiu priamu kontrolu.',
+   w:'Zastupiteľstvo BBSK v júli 2026 riešilo transformáciu zmluvy o správe a nájme nemocničného areálu v Lučenci s cieľom zachovať kontinuitu zdravotnej starostlivosti. Súkromný prevádzkovateľ nesie časť rizika, kraj však má menšiu priamu kontrolu. Okrem toho, chce skupina Agel tiež kúpiť nemocnicu v Lučenci,',
    a:{lunter:'agree',suja:'disagree',malatinec:'disagree'}},
 
   {t:'Kontrola projektov',
-   q:'Ak veľký krajský projekt zdražie o viac než 10 %, majú o pokračovaní znovu hlasovať poslanci?',
+   q:'Ak veľký krajský projekt zdražie o viac než 10 %, majú o jeho pokračovaní znovu hlasovať poslanci?',
    w:'BBSK hospodári v roku 2026 s rozpočtom približne 457 mil. € a realizuje desiatky veľkých investícií. Nové hlasovanie pri náraste nad 10 % zvýši kontrolu nad peniazmi, ale pri nečakaných stavebných prácach môže projekt zdržať. Hranica 10 % je návrh otázky.',
    a:{lunter:'disagree',suja:'agree',malatinec:'agree'}},
 
@@ -251,7 +251,7 @@ window.VAA_DATA.questions.bystrica_vuc = [
    a:{lunter:'agree',suja:'disagree',malatinec:'neutral'}},
 
   {t:'Energetické úspory',
-   q:'Má kraj uprednostniť energeticky úspornejšiu rekonštrukciu budovy aj vtedy, keď je na začiatku drahšia?',
+   q:'Má kraj uprednostniť energeticky úspornejšiu rekonštrukciu budovy aj vtedy, keď je investícia na začiatku drahšia?',
    w:'BBSK modernizuje školy, kultúrne budovy aj sociálne zariadenia s cieľom znižovať spotrebu energie. Pri Divadle J. G. Tajovského išla väčšina investície nad 2,5 mil. € do energetickej obnovy; vyšší vstupný náklad môže znížiť účty v ďalších rokoch.',
    a:{lunter:'agree',suja:'disagree',malatinec:'agree'}},
 
