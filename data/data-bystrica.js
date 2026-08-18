@@ -1,5 +1,4 @@
 // ── Volebná kalkulačka 2026 — BANSKÁ BYSTRICA + BANSKOBYSTRICKÝ KRAJ ──
-// Aktualizované 18. 8. 2026. Kandidáti sú verejne ohlásení; lehota na podanie kandidátnych listín ešte neuplynula.
 
 window.VAA_DATA = window.VAA_DATA || {};
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
