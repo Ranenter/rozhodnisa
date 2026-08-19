@@ -29,7 +29,7 @@ window.VAA_DATA.questions.nitra_primator = [
    a:{hattas:'agree',uhrikova:'disagree',krsiak:'agree',illes:'agree'}},
 
   {t:'Cesty a chodníky',
-   q:'Má mesto odložiť nové veľké projekty, kým výrazne nezlepší stav ciest a chodníkov?',
+   q:'Má mesto odložiť nové veľké projekty, kým sa výrazne nezlepší stav ciest a chodníkov?',
    w:'Rozpočet Nitry na rok 2026 bol pôvodne schválený vo výške približne 134,1 mil. € a mesto zároveň schválilo úver 12,1 mil. € na investície. Väčší dôraz na opravy zlepší každodennú infraštruktúru, ale môže odsunúť nové rozvojové projekty.',
    a:{hattas:'disagree',uhrikova:'agree',krsiak:'agree',illes:'agree'}},
 
@@ -129,7 +129,7 @@ window.VAA_DATA.questions.nitra_primator = [
    a:{hattas:'agree',uhrikova:'disagree',krsiak:'disagree',illes:'disagree'}},
 
   {t:'Kasárne pod Zoborom',
-   q:'Má mesto investovať do premeny Kasární pod Zoborom na verejný a rekreačný areál aj za cenu menších investícií v iných častiach Nitry?',
+   q:'Má mesto investovať do premeny Kasární pod Zoborom a vytvoriť verejný a rekreačný areál aj za cenu odloženia menších investícií v iných častiach Nitry?',
    w:'Kasárne pod Zoborom sú rozsiahly bývalý vojenský areál, ktorý mesto rieši v projekte URBACT GreenPlace spolu s 9 ďalšími európskymi partnermi. V areáli už vzniklo Kreatívne centrum rekonštrukciou 4 budov. Ďalšia obnova môže priniesť komunitné, rekreačné a zelené priestory, ale vyžaduje viacročné investície.',
    a:{hattas:'agree',uhrikova:'disagree',krsiak:'agree',illes:'agree'}},
 
