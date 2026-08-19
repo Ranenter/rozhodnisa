@@ -11,7 +11,7 @@ window.VAA_DATA.candidates['zilina_primator'] = [
   {id:'fiabane',name:'Peter Fiabáne',party:'Nezávislý / Iná Žilina / Žilina si zaslúži viac',color:'#0B6E4F',url:'https://www.peterfiabane.sk'},
   {id:'cibulka',name:'Peter Cibulka',party:'Nezávislý',color:'#B02E0C',url:'https://www.petercibulka.sk'},
   {id:'johanes',name:'Rastislav Johanes',party:'Nezávislý',color:'#6A4C93',url:'https://johanes.sk/'},
-  {id:'kozlik',name:'Anton Kozlík',party:'Nezávislý',color:'#F4A261',url:''},
+  {id:'kozlik',name:'Anton Kozlík',party:'Nezávislý',color:'#F4A261',url:'https://jednomesto.sk/'},
   {id:'sokol',name:'Miroslav Sokol',party:'Nezávislý',color:'#264653',url:'https://www.facebook.com/people/Miroslav-Sokol/61575889321926/'}
 ];
 
