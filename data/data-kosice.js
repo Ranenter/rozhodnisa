@@ -9,7 +9,7 @@ window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
 window.VAA_DATA.candidates['kosice_primator'] = [{id:'polac',name:'Jaroslav Polaček',party:'Košické hnutie 2030 / Smer-SD / Hlas-SD / KDH / SaS / Nova / DS-ODS / Maďarská aliancia (úradujúci primátor)',color:'#0097a7',url:'https://jaropolacek.sk'},{id:'mudrak',name:'Martin Mudrák',party:'PS / Demokrati / Za ľudí /',color:'#64b5f6',url:'https://martinmudrak.sk'},{id:'lorinc',name:'Ladislav Lörinc',party:'Košická strana',color:'#ffd166',url:'https://ladislavlorinc.sk'},{id:'sabol',name:'Miroslav Sabol',party:'Nezávislý',color:'#455A64',url:'https://mirosabol.sk'},{id:'kovac',name:'Lenka Kovačevičová',party:'Nezávislá',color:'#C2185B',url:'https://lenkakovacevicova.sk/'},{id:'riabov',name:'Alexander Riabov',party:'Nezávislý / SNS',color:'#6D4C41',url:'https://linktr.ee/riabov'}];
 window.VAA_DATA.candidates['kosice_vuc'] = [
   {id:'trnka',  name:'Rastislav Trnka',   party:'Nezávislý / Maďarská aliancia (obžalovaný úradujúci predseda)',  color:'#78909c',url:'https://rastotrnka.sk'},
-  {id:'simko',  name:'Igor Šimko',        party:'Hlas-SD / Smer-SD',       color:'#e63946',url:'https://igorsimko.sk'},
+  {id:'simko',  name:'Igor Šimko',        party:'Hlas-SD / Smer-SD / Republika',       color:'#e63946',url:'https://igorsimko.sk'},
   {id:'porvaz', name:'Marián Porvažník',  party:'PS / Demokrati / Za ľudí / SaS / KDH / Hnutie Slovensko / OKS',            color:'#64b5f6',url:'https://porvaznik.sk'},
   {id:'kodraz', name:'Džemal Kodrazi',    party:'Nezávislý',               color:'#ff8f00',url:'https://dzemalkodrazi.sk'},
 ];
