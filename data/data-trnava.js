@@ -80,8 +80,8 @@ window.VAA_DATA.candidates['trnava_vuc'] = [
 window.VAA_DATA.questions.trnava_primator = [
   {
     t: "Smerovanie mesta",
-    q: "Má Trnava pokračovať v smere nastavenom počas éry Petra Bročku?",
-    w: "Mesto uvádza pripravované projekty v hodnote viac než 80 miliónov eur. Voľby preto rozhodnú aj o tom, či má nové vedenie pokračovať v doterajšom investičnom smere, alebo má priority mesta výraznejšie zmeniť.",
+    q: "Má Trnava pokračovať v doterajšom investičnom smerovaní mesta z posledných rokov?",
+    w: "Mesto hospodári s rozpočtom okolo 114 miliónov eur ročne a jeho zadlženosť sa pohybuje okolo 28 %. Voľby rozhodnú, či nové vedenie udrží doterajší kurz veľkých obnov verejných priestorov, alebo priority výraznejšie prestaví — napríklad na drobné opravy a sídliská. Väčšia zmena smeru však môže spomaliť už rozbehnuté projekty.",
     a: {
       nemcovska: "agree",
       baros: "disagree",
@@ -146,8 +146,8 @@ window.VAA_DATA.questions.trnava_primator = [
   },
   {
     t: "Participácia",
-    q: "Má mať mestská časť právo zastaviť veľký projekt, ak sa proti nemu postaví väčšina obyvateľov?",
-    w: "Veľké projekty môžu ovplyvniť dopravu, zeleň, parkovanie alebo charakter celej mestskej časti. Právo miestnej väčšiny projekt zastaviť by posilnilo rozhodovanie obyvateľov, ale mohlo by predĺžiť prípravu investícií a umožniť menšej časti mesta blokovať projekt dôležitý pre celú Trnavu.",
+    q: "Majú mať obyvatelia dotknutej lokality právo zastaviť veľký mestský projekt, ak sa proti nemu postaví ich väčšina (napríklad v miestnom referende)?",
+    w: "Trnava nemá samostatné mestské časti s vlastnými zastupiteľstvami; vôľu obyvateľov jednej lokality možno zistiť petíciou alebo miestnym referendom — ukázala to aj parkovacia petícia s vyše 19 000 podpismi, ktorá vyústila do referenda. Právo miestnej väčšiny zastaviť projekt by posilnilo ich vplyv, mohlo by však blokovať investície dôležité pre celé mesto a predĺžiť prípravu.",
     a: {
       nemcovska: "neutral",
       baros: "agree",
@@ -189,9 +189,9 @@ window.VAA_DATA.questions.trnava_primator = [
     }
   },
   {
-    t: "Doprava",
-    q: "Má mesto uprednostniť plynulosť áut pred cyklotrasami a pešími zónami?",
-    w: "Niektoré dopravné riešenia pomáhajú autám, iné chodcom, cyklistom alebo kvalite verejného priestoru. Pri projektoch za desiatky miliónov eur je dôležité určiť, čo má mať prednosť, keď nie je možné vyhovieť všetkým.",
+    t: "Verejné priestory",
+    q: "Má mesto udržať nízky poplatok za odpad, aj keď jeho zber a spracovanie stoja viac, než sa na poplatku vyberie?",
+    w: "Trnavčania platia za komunálny odpad 38,33 € ročne — najnižší poplatok spomedzi všetkých krajských miest — a mesto vytriedi približne 49 % odpadu. Náklady na zber a spracovanie (okolo 4,65 milióna eur) však prevyšujú príjem z poplatku, rozdiel dopláca mesto z rozpočtu. Vyšší poplatok by pokryl reálne náklady a motivoval k triedeniu, no zaťažil by domácnosti.",
     a: {
       nemcovska: "disagree",
       baros: "agree",
@@ -211,14 +211,14 @@ window.VAA_DATA.questions.trnava_primator = [
     }
   },
   {
-    t: "Parkovanie",
-    q: "Má mesto zvýhodniť parkovanie pre návštevy rezidentov a malé prevádzky?",
-    w: "Parkovacia politika ovplyvňuje aj rodinné návštevy, remeselníkov, služby a malé podniky v centre. Keďže platené parkovanie funguje vo viacerých pásmach, aj malé zmeny pravidiel môžu mať veľký dopad na dostupnosť centra.",
+    t: "Zeleň",
+    q: "Má mesto ďalej investovať do fotovoltiky a energetických úspor na mestských budovách, aj keď sa vložené peniaze vrátia až po rokoch?",
+    w: "Mesto má fotovoltické panely na všetkých základných školách a ďalších budovách a zaviedlo energetický manažment na sledovanie spotreby. Ďalšie investície do obnoviteľných zdrojov a zatepľovania znižujú účty za energie aj emisie, ich návratnosť je však dlhá a peniaze medzitým chýbajú pri rýchlejšie viditeľných projektoch.",
     a: {
-      nemcovska: "disagree",
-      baros: "agree",
-      horvathova: "agree",
-      cajkova: "neutral"
+      nemcovska: "agree",
+      baros: "disagree",
+      horvathova: "neutral",
+      cajkova: "agree"
     }
   },
   {
@@ -234,11 +234,11 @@ window.VAA_DATA.questions.trnava_primator = [
   },
   {
     t: "Priemysel a bývanie",
-    q: "Má Trnava obmedziť priemysel, ak zhoršuje život v obytných častiach?",
+    q: "Má mesto uprednostniť kvalitu bývania pred ďalším rozširovaním priemyslu, aj keď priemysel prináša pracovné miesta a príjmy?",
     w: "Stellantis je jeden z najväčších zamestnávateľov v meste a priemysel prináša pracovné miesta aj príjmy. Zároveň však zvyšuje dopravu, tlak na bývanie a zaťaženie okrajových častí mesta.",
     a: {
       nemcovska: "neutral",
-      baros: "neutral",
+      baros: "disagree",
       horvathova: "agree",
       cajkova: "agree"
     }
@@ -322,8 +322,8 @@ window.VAA_DATA.questions.trnava_primator = [
   },
   {
     t: "Transparentnosť",
-    q: "Má mesto pri zákazkách uprednostniť kvalitu pred najnižšou cenou?",
-    w: "Trnava pripravuje projekty v hodnote viac než 80 miliónov eur. Pri takýchto investíciách môže byť dôležitá nielen najnižšia cena, ale aj životnosť, servisné náklady a kvalita. Vyššia kvalita však môže znamenať vyššie počiatočné výdavky.",
+    q: "Má mesto vo verejných súťažiach hodnotiť aj kvalitu a životnosť, aj keď to zvýši počiatočnú cenu a riziko odvolaní neúspešných uchádzačov?",
+    w: "Mesto ročne obstaráva stavby a služby za desiatky miliónov eur. Kritérium najnižšej ceny je jednoduché a ťažšie napadnuteľné, no môže viesť k vyšším nákladom na údržbu a kratšej životnosti. Zohľadnenie kvality a životnosti môže priniesť trvácnejší výsledok, zvyšuje však počiatočnú cenu aj priestor na odvolania, ktoré súťaž predlžujú.",
     a: {
       nemcovska: "neutral",
       baros: "agree",
@@ -332,25 +332,25 @@ window.VAA_DATA.questions.trnava_primator = [
     }
   },
   {
-    t: "Mestský majetok",
-    q: "Má mesto zverejňovať jasné pravidlá nájmov mestských priestorov?",
-    w: "Mestské priestory môžu slúžiť podnikaniu, službám, kultúre alebo verejnoprospešným aktivitám. Pri rozpočte mesta okolo 114 miliónov eur je dôležité, aby bolo jasné, ako sa mestský majetok využíva a za akých podmienok sa prenajíma.",
+    t: "Verejné priestory",
+    q: "Má mesto prednostne dofinancovať mestskú políciu a doplniť chýbajúcich príslušníkov, aj keď to znamená menej peňazí na iné služby?",
+    w: "Organizačný poriadok mestskej polície ráta so 48 príslušníkmi pre nepretržitú službu a 26 pre parkovaciu, tieto stavy sa však dlhodobo nedarí naplniť — noví policajti len nahrádzajú odchody do dôchodku. Posilnenie hliadok by zvýšilo bezpečnosť a poriadok, znamenalo by však vyššie mzdové náklady na úkor iných priorít mesta.",
     a: {
-      nemcovska: "disagree",
+      nemcovska: "agree",
       baros: "agree",
-      horvathova: "agree",
-      cajkova: "agree"
+      horvathova: "neutral",
+      cajkova: "disagree"
     }
   },
   {
-    t: "Komunikácia",
-    q: "Má mesto robiť pravidelné stretnutia v každej časti Trnavy?",
-    w: "Trnava má viac než 62 700 obyvateľov a viacero častí s rozdielnymi problémami. Pravidelné stretnutia by mohli zlepšiť komunikáciu s obyvateľmi, ale znamenali by viac času, administratívy a verejných záväzkov.",
+    t: "Bývanie",
+    q: "Má mesto rozšíriť kapacity zariadení a opatrovateľskej služby pre seniorov, aj za cenu vyšších prevádzkových nákladov?",
+    w: "Mestské Zariadenie pre seniorov má kapacitu 130 miest a dve zariadenia opatrovateľskej služby ďalšie desiatky; záujem prevyšuje ponuku a mesto vedie poradovník čakateľov. Rozšírenie kapacít a domácej opatrovateľskej služby by pomohlo starnúcemu obyvateľstvu zostať v meste, znamenalo by však trvalé prevádzkové náklady konkurujúce iným výdavkom.",
     a: {
-      nemcovska: "neutral",
-      baros: "agree",
+      nemcovska: "agree",
+      baros: "disagree",
       horvathova: "agree",
-      cajkova: "agree"
+      cajkova: "neutral"
     }
   }
 ];
@@ -455,15 +455,15 @@ window.VAA_DATA.questions.trnava_vuc = [
   },
   {
     t: "Stratové spoje",
-    q: "Má kraj zrušiť trvalo prázdne autobusové spoje a peniaze presunúť na posilnenie vyťažených liniek?",
-    w: "Kraj objednáva prímestskú autobusovú dopravu za 28,3 milióna eur ročne. Časť spojov vozí denne len jednotky cestujúcich, inde autobusy v špičke nestíhajú. Zrušenie prázdnych spojov uvoľní peniaze, ale obce, ktoré o ne prídu, zostanú bez spojenia.",
-    a: { viskupic: "agree", lancaric: "neutral", berenyi: "neutral", dohal: "disagree", hambalek: "neutral" }
+    q: "Má kraj zrušiť autobusové spoje s trvalo nízkou obsadenosťou, aj keď niektoré obce zostanú úplne bez verejného spojenia?",
+    w: "Kraj objednáva prímestskú autobusovú dopravu za 28,3 milióna eur ročne. Časť spojov vozí denne len jednotky cestujúcich, inde autobusy v špičke nestíhajú. Zrušenie málo využívaných spojov uvoľní peniaze na posilnenie vyťažených liniek, no obce, ktoré o spoje prídu, môžu zostať bez verejnej dopravy — najmä pre seniorov a študentov bez auta.",
+    a: { viskupic: "agree", lancaric: "disagree", berenyi: "disagree", dohal: "disagree", hambalek: "agree" }
   },
   {
-    t: "Školské športoviská",
-    q: "Má kraj otvoriť športoviská pri stredných školách verejnosti a platiť ich prevádzku aj mimo vyučovania?",
-    w: "Kraj vlastní telocvične a ihriská pri 44 stredných školách, ktoré sú popoludní a cez víkendy väčšinou zatvorené. Otvorenie verejnosti by dalo deťom a komunitám priestor na šport bez novej výstavby, znamenalo by však náklady na správcov, energie a údržbu a zodpovednosť za škody.",
-    a: { viskupic: "agree", lancaric: "agree", berenyi: "neutral", dohal: "agree", hambalek: "agree" }
+    t: "Solárne parky",
+    q: "Má kraj cez svoj územný plán obmedziť veľké solárne parky na najkvalitnejšej poľnohospodárskej pôde, aj keď tým obce a vlastníci prídu o príjmy z prenájmu?",
+    w: "Trnavský kraj má najúrodnejšiu pôdu na Slovensku hneď po Nitrianskom — poľnohospodárska pôda tvorí vyše 70 % jeho rozlohy. Solárne parky prinášajú čistú elektrinu a vlastníkom pôdy nájom, zaberajú však ornú pôdu na desaťročia. Kraj môže cez záväznú časť územného plánu ich umiestňovanie na najbonitnejšej pôde obmedziť — tým však zníži príjmy obcí aj vlastníkov a spomalí rozvoj obnoviteľných zdrojov.",
+    a: { viskupic: "agree", lancaric: "disagree", berenyi: "agree", dohal: "neutral", hambalek: "disagree" }
   },
   {
     t: "Dochádzanie do Bratislavy",
@@ -490,10 +490,10 @@ window.VAA_DATA.questions.trnava_vuc = [
     a: { viskupic: "disagree", lancaric: "agree", berenyi: "agree", dohal: "agree", hambalek: "agree" }
   },
   {
-    t: "Investičný portál",
-    q: "Má kraj zverejniť verejný portál so všetkými projektmi, rozpočtami, termínmi, dodatkami a meškaniami?",
-    w: "Kraj investuje desiatky miliónov eur ročne do ciest, škôl, sociálnych zariadení a kultúry. Verejný prehľad by uľahčil kontrolu a porovnávanie projektov, zároveň by však zvýšil tlak na úrad a dodávateľov pri každom meškaní či zmene ceny.",
-    a: { viskupic: "neutral", lancaric: "agree", berenyi: "agree", dohal: "agree", hambalek: "disagree" }
+    t: "Spaľovňa odpadu",
+    q: "Má kraj podporiť výstavbu regionálnej spaľovne odpadu s výrobou energie namiesto ďalšieho skládkovania, aj proti odporu okolitých obcí?",
+    w: "Väčšina komunálneho odpadu v kraji dnes končí na skládkach, ktorých kapacity sa napĺňajú, a od roku 2035 musí Slovensko skládkovať najviac 10 % odpadu. Súkromní investori pripravujú v kraji zariadenia na energetické zhodnocovanie odpadu — pri Malženiciach (pôvodne pri Zavare) s kapacitou okolo 130-tisíc ton ročne a ďalšie pri Skalici — proti obom vznikli petície obyvateľov. Kraj ich môže cez územný plán a politickú podporu umožniť, alebo sa postaviť na stranu dotknutých obcí.",
+    a: { viskupic: "disagree", lancaric: "agree", berenyi: "disagree", dohal: "agree", hambalek: "agree" }
   },
   {
     t: "Vedenie župných organizácií",
