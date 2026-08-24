@@ -1,7 +1,5 @@
 // ══ DATA: TRENČÍN ══
-// Postoje kandidátov sú NAŠTUDOVANÉ (nie odhady). Otázky prešli readability passom 16.7.2026.
-// 2 kandidáti/rasa (pole ešte nie je finálne — očakáva sa tretí kandidát na primátora).
-// Pozn.: pri 2 kandidátoch a poctivých postojoch nemusí sada dosiahnuť 60% rozdeľujúcich;
+// Postoje kandidátov sú NAŠTUDOVANÉ (nie odhady)
 // VUC otázky Q11 (integrovaná doprava), Q18 (úver) a Q20 (vietor) kandidátov nerozlišujú.
 window.VAA_DATA = window.VAA_DATA || {};
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
