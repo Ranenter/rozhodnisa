@@ -164,7 +164,7 @@ window.VAA_DATA.questions.snv_primator = [
   },
   {
     t:'Parkovanie',
-    q:'Má mesto postaviť parkovací dom aj za cenu nového úveru a plateného parkovania v jeho okolí?',
+    q:'Má mesto postaviť parkovací dom aj za cenu nového úveru a zavedenia plateného parkovania v jeho okolí?',
     w:'Parkovací dom môže uvoľniť ulice a zvýšiť počet miest bez ďalšieho zaberania verejného priestoru. Je však drahý a bez plateného parkovania v okolí môže zostať málo využívaný.',
     a:{ilasova:'neutral', demecko:'agree', akram:'neutral', godus:'neutral', uhrin:'agree', bednarova:'neutral'}
   }
