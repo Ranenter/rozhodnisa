@@ -22,7 +22,7 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Infraštruktúra',
     q:'Má sa mesto zaviazať, že na opravy ciest a chodníkov vyčlení každý rok pevne stanovený podiel z rozpočtu, aj keď sa tým obmedzí financovanie iných oblastí?',
     w:'Pevný podiel z rozpočtu by mestu každý rok zaručil peniaze na cesty a chodníky a uľahčil plánovanie opráv. Zároveň by však ubral peniaze z iných oblastí, napríklad zo škôl, športu či sociálnych služieb.',
-    a:{ilasova:'neutral', demecko:'agree', akram:'agree', godus:'disagree', uhrin:'agree', bednarova:'agree'}
+    a:{ilasova:'neutral', demecko:'agree', akram:'agree', godus:'disagree', uhrin:'agree', bednarova:'neutral'}
   },
   {
     t:'Infraštruktúra',
@@ -40,13 +40,13 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Práca a poriadok',
     q:'Má mesto vytvoriť platené pracovné tímy pre dlhodobo nezamestnaných, aj keď budú drahšie než zákazka pre súkromnú firmu?',
     w:'Mestské pracovné tímy by mohli pomáhať s čistením, zeleňou a drobnou údržbou. Mesto by však muselo zabezpečiť vedenie, vybavenie a kontrolu kvality.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'neutral', uhrin:'disagree', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'neutral', uhrin:'disagree', bednarova:'neutral'}
   },
   {
     t:'Sociálna pomoc',
     q:'Má mesto presunúť časť peňazí z projektov určených rómskej menšine do pomoci všetkým nízkopríjmovým domácnostiam?',
     w:'Projekty pre rómsku menšinu môžu cielene riešiť bývanie, vzdelávanie, zamestnanosť a problémy v konkrétnych lokalitách. Pomoc podľa príjmu by bola dostupná všetkým chudobným domácnostiam, ale menej by sa sústredila na špecifické príčiny sociálneho vylúčenia.',
-    a:{ilasova:'disagree', demecko:'agree', akram:'disagree', godus:'neutral', uhrin:'agree', bednarova:'neutral'}
+    a:{ilasova:'disagree', demecko:'agree', akram:'disagree', godus:'neutral', uhrin:'agree', bednarova:'disagree'}
   },
   {
     t:'Bezpečnosť',
@@ -58,13 +58,13 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Parkovanie',
     q:'Má mesto zaviesť rezidentské parkovanie, pri ktorom bude prvé auto domácnosti lacné, ale za druhé a tretie sa bude platiť výrazne viac?',
     w:'Takýto systém zvýhodňuje domácnosti s jedným autom a obmedzuje dlhodobé obsadzovanie ulíc viacerými vozidlami jednej domácnosti. Vyššie poplatky však môžu zasiahnuť rodiny, ktoré viac áut potrebujú.',
-    a:{ilasova:'neutral', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'neutral'}
+    a:{ilasova:'neutral', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'disagree'}
   },
   {
     t:'Doprava a verejný priestor',
     q:'Má mesto v centre zrušiť časť parkovacích miest, aby vytvorilo širšie chodníky, cyklotrasy a viac zelene?',
     w:'Verejný priestor v centre je obmedzený. Viac priestoru pre peších, bicykle a stromy môže zvýšiť bezpečnosť a kvalitu centra, ale zníži počet miest pre autá.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'neutral', godus:'neutral', uhrin:'neutral', bednarova:'neutral'}
+    a:{ilasova:'agree', demecko:'disagree', akram:'neutral', godus:'neutral', uhrin:'neutral', bednarova:'disagree'}
   },
   {
     t:'Transparentnosť',
@@ -82,7 +82,7 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Participácia',
     q:'Majú obyvatelia rozhodovať o 1 % mestského rozpočtu?',
     w:'Jedno percento z rozpočtu približne 60 miliónov eur predstavuje okolo 600 000 eur. Obyvatelia by hlasovali o menších projektoch, no populárne nápady môžu dostať prednosť pred odbornými alebo menej viditeľnými potrebami.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'agree', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'agree', bednarova:'neutral'}
   },
   {
     t:'Participácia',
@@ -94,13 +94,13 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Kultúra',
     q:'Má mesto garantovať kultúre najmenej 2 % bežných výdavkov, teda približne 965 000 eur ročne, aj keby zostalo menej peňazí na cesty a športoviská?',
     w:'Dve percentá bežných výdavkov mesta predstavujú podľa rozpočtu na rok 2026 približne 965 000 eur. Garantované minimum by uľahčilo plánovanie kultúrnych organizácií a podujatí, ale znížilo by flexibilitu pri naliehavých opravách.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'neutral', godus:'disagree', uhrin:'neutral', bednarova:'neutral'}
+    a:{ilasova:'agree', demecko:'neutral', akram:'neutral', godus:'disagree', uhrin:'neutral', bednarova:'disagree'}
   },
   {
     t:'Turizmus',
     q:'Má mesto financovať pravidelnú turistickú dopravu zo stanice do Slovenského raja, aj keď bude časť spojov stratová?',
     w:'Spišská Nová Ves sa prezentuje ako vstupná brána do Slovenského raja. Priame spojenie by mohlo pomôcť návštevníkom, hotelom a reštauráciám, ale mesto by muselo doplácať aj na slabo využívané spoje.',
-    a:{ilasova:'agree', demecko:'agree', akram:'neutral', godus:'disagree', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'agree', akram:'neutral', godus:'disagree', uhrin:'neutral', bednarova:'neutral'}
   },
   {
     t:'ZOO',
@@ -130,19 +130,19 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Odpady',
     q:'Má mesto znížiť poplatok za odpad seniorom a nízkopríjmovým rodinám, aj keby ho ostatným obyvateľom muselo mierne zvýšiť?',
     w:'Úľava by pomohla domácnostiam s nižšími príjmami. Náklady na odpad však musia byť zaplatené, takže výpadok by pokryl rozpočet mesta alebo ostatní poplatníci.',
-    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'disagree', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'disagree', akram:'agree', godus:'agree', uhrin:'disagree', bednarova:'neutral'}
   },
   {
     t:'Mestský podnik',
     q:'Má mesto zadávať údržbu ciest, zelene a verejných priestorov prednostne mestskému MEPOS-u, aj keď súkromná firma ponúkne nižšiu cenu?',
     w:'MEPOS je sociálny podnik v stopercentnom vlastníctve mesta. Mesto nad ním má priamu kontrolu a podnik vytvára aj sociálne pracovné miesta. Súkromná firma však môže ponúknuť nižšiu cenu alebo špecializovanejšiu službu.',
-    a:{ilasova:'agree', demecko:'agree', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'agree', akram:'agree', godus:'neutral', uhrin:'neutral', bednarova:'neutral'}
   },
   {
     t:'Bývanie',
     q:'Má mesto stavať nové nájomné byty aj za cenu ďalšieho zadlženia?',
     w:'Mestské byty môžu pomôcť mladým rodinám, pracovníkom škôl a služieb aj ľuďom, ktorí nedosiahnu na komerčné bývanie. Výstavba však vyžaduje úver, mestské pozemky alebo presun peňazí z iných investícií.',
-    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'agree', bednarova:'agree'}
+    a:{ilasova:'agree', demecko:'neutral', akram:'agree', godus:'neutral', uhrin:'agree', bednarova:'neutral'}
   },
   {
     t:'Školy',
@@ -160,7 +160,7 @@ window.VAA_DATA.questions.snv_primator = [
     t:'Mestský majetok',
     q:'Má mesto predať nepotrebný majetok najvyššej ponuke, aj keď ho miestne združenie chce využívať na komunitné účely?',
     w:'Najvyššia ponuka prinesie mestu okamžitý príjem a znižuje riziko zvýhodňovania. Komunitné využitie môže mať dlhodobý verejný prínos, aj keď mestu prinesie menej peňazí.',
-    a:{ilasova:'disagree', demecko:'agree', akram:'disagree', godus:'neutral', uhrin:'neutral', bednarova:'disagree'}
+    a:{ilasova:'disagree', demecko:'agree', akram:'disagree', godus:'neutral', uhrin:'neutral', bednarova:'neutral'}
   },
   {
     t:'Parkovanie',
