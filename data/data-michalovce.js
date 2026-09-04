@@ -1,5 +1,4 @@
 // ── Volebná kalkulačka 2026 — MICHALOVCE ──
-// Upravujte len tento súbor pre otázky a kandidátov mesta MICHALOVCE.
 // Odpovede sú pracovné odhady z verejných zdrojov; Juraj Čarný svoje odpovede potvrdil (overené).
 window.VAA_DATA = window.VAA_DATA || {};
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
@@ -8,7 +7,7 @@ window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 window.VAA_DATA.candidates['michalovce_primator'] = [
   {id:'dufinec', name:'Miroslav Dufinec', party:'Smer-SD / Hlas-SD / Sme rodina / SNS / SMS (úradujúci primátor)', color:'#e63946', url:'https://www.dufinec.sk'},
   {id:'sibal', name:'Erik Sibal', party:'Nezávislý kandidát', color:'#2196F3', url:''},
-  {id:'vidovenec', name:'Miroslav Vidovenec', party:'PS / Demokrati / SaS / KDH / Hnutie Slovensko', color:'#4caf50', url:''},
+  {id:'vidovenec', name:'Miroslav Vidovenec', party:'PS / Demokrati / SaS / KDH / Hnutie Slovensko', color:'#4caf50', url:'https://mirovidovenec.sk/'},
   {id:'carny', name:'Juraj Čarný', party:'Nezávislý kandidát', color:'#ff9800', url:'https://www.facebook.com/jurko.carny/'},
   {id:'goda', name:'Dušan Goda', party:'Nezávislý kandidát', color:'#00838F', url:''},
   {id:'copakova', name:'Eva Copáková', party:'MySlovensko', color:'#AD1457', url:'https://myslovensko.sk/'},
