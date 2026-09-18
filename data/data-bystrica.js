@@ -5,7 +5,7 @@ window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 
 window.VAA_DATA.candidates['bystrica_primator'] = [
-  {id:'sobota', name:'Tomáš Sobota', party:'Nezávislý / KDH / Konzervatívci - Kresťanská únia', color:'#275C9A', url:'https://tsobota.sk/'},
+  {id:'sobota', name:'Tomáš Sobota', party:'Nezávislý / KDH / Konzervatívci - Kresťanská únia / DS-ODS', color:'#275C9A', url:'https://tsobota.sk/'},
   {id:'javorcikova', name:'Diana Javorčíková', party:'PS / SaS / Demokrati / Banskobystrická alternatíva', color:'#1E4E9D', url:'https://dianajavorcikova.sk/'},
   {id:'molitoris', name:'Matúš Molitoris', party:'Nezávislý', color:'#6B5B95', url:'https://molitoris.sk/'},
   {id:'nosko', name:'Ján Nosko', party:'Nezávislý / Smer-SD / Hlas-SD (úradujúci primátor)', color:'#4A235A', url:'https://www.jannosko.sk/'},
