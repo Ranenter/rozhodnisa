@@ -325,6 +325,14 @@ body{
 .cd-num{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:1.05rem;font-weight:700;color:var(--sk-red)}
 .cd-lbl,.cd-date{font-size:.75rem;color:var(--muted)}
 .cd-units,.cd-sep{display:none}
+.verified-bar{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.45rem 1.2rem;background:#fff;
+  border:1px solid var(--border);border-radius:2px;
+  margin:0 auto 1.4rem;width:auto;
+}
+.vb-num{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:1.05rem;font-weight:700;color:var(--sk-blue)}
+.vb-lbl{font-size:.75rem;color:var(--muted)}
 .volby-explain{font-size:.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;padding:.7rem 1rem;background:var(--surface);border-left:3px solid var(--sk-blue);border-radius:0}
 .volby-explain strong{color:var(--text)}
 
@@ -1203,6 +1211,13 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
   </div>
   </div>
 
+  <div style="text-align:center">
+  <div class="verified-bar" id="verifiedBar">
+    <span class="vb-num" id="vbCount">–</span>
+    <span class="vb-lbl">kandidátov už osobne overilo svoje odpovede</span>
+  </div>
+  </div>
+
   <div class="value-cards">
     <div class="value-card">
       <div class="value-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="16" width="5" height="10" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="11" y="10" width="5" height="16" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="20" y="4" width="5" height="22" stroke="currentColor" stroke-width="1.8" fill="none"/></svg></div>
@@ -1986,7 +2001,13 @@ const VAA = (function(){
     horvathova:['trnava_primator'],
     viskupic:  ['trnava_vuc'],
     svitkova:  ['trencin_vuc'],
-    jurinova:  ['zilina_vuc']
+    jurinova:  ['zilina_vuc'],
+    kotleba:   ['bystrica_primator'],
+    nosko:     ['bystrica_primator'],
+    javorcikova:['bystrica_primator'],
+    varga:     ['nitra_vuc'],
+    sorocinova:['kosice_vuc'],
+    fiabane:   ['zilina_primator']
   };
 
   function _showResults(){
@@ -2349,6 +2370,17 @@ const VAA = (function(){
   // update at midnight
   var ms = new Date(); ms.setHours(24,0,0,0);
   setTimeout(function(){updateCD();setInterval(updateCD,86400000);}, ms - new Date());
+})();
+
+// ── Verified candidates count ──
+(function(){
+  var el = document.getElementById('vbCount');
+  if(!el || !window.VERIFIED_BY_RACE) return;
+  var count = 0;
+  Object.keys(window.VERIFIED_BY_RACE).forEach(function(id){
+    count += window.VERIFIED_BY_RACE[id].length;
+  });
+  el.textContent = count;
 })();
 </script>
 <script>
