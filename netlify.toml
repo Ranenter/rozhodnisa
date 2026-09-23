@@ -21,3 +21,13 @@
   from = "/kandidati"
   to = "/kandidati.html"
   status = 200
+
+[[redirects]]
+  from = "/pre-media"
+  to = "/pre-media.html"
+  status = 200
+
+[[redirects]]
+  from = "/embed"
+  to = "/embed.html"
+  status = 200

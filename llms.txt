@@ -7,6 +7,8 @@
 - Candidates directory: https://rozhodnisa.sk/kandidati
 - Methodology and FAQ: https://rozhodnisa.sk/#faq
 - Full dataset (machine-readable): https://rozhodnisa.sk/data/index.json
+- Press information (key numbers, descriptions, embed code): https://rozhodnisa.sk/pre-media
+- Direct link to a specific race: https://rozhodnisa.sk/?mesto=<city>&volba=primator|kraj (cities: bratislava, kosice, presov, zilina, bystrica, nitra, trnava, trencin, poprad, martin, snv, michalovce; volba=kraj only for the 8 regional seats)
 
 ## Important facts
 - Election date: 24 October 2026
