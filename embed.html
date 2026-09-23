@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volebná kalkulačka 2026 | rozhodnisa.sk</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://rozhodnisa.sk/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap"></noscript>
+<style>
+:root{--disp:'Barlow Condensed','Arial Narrow',Arial,sans-serif;--red:#C3112B;--blue:#1E4E9D;--text:#0D1B2A;--muted:#5A6270;--border:#D8DCE6;--surface:#F5F7FA}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:#fff;overflow:auto}
+.w{display:flex;flex-direction:column;min-height:100%;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.w__strip{height:6px;background:linear-gradient(#fff 0 33%,var(--blue) 33% 66%,var(--red) 66%)}
+.w__body{padding:16px 18px 14px;flex:1}
+.w__brand{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.w__logo{font-family:var(--disp);font-weight:800;font-size:22px;color:var(--blue);text-decoration:none}
+.w__kicker{font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.w__title{font-family:var(--disp);font-weight:800;font-size:28px;line-height:1.1;margin:12px 0 2px}
+.w__sub{font-family:var(--disp);font-weight:700;font-size:16px;letter-spacing:.03em;text-transform:uppercase;color:var(--red)}
+.w__tabs{display:flex;gap:6px;margin:12px 0 10px}
+.w__tab{flex:1;font-family:var(--disp);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.04em;padding:7px 8px;border:1px solid var(--border);background:#fff;color:var(--text);border-radius:8px;cursor:pointer}
+.w__tab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.w__meta{font-size:13px;color:var(--muted);margin:8px 0}
+.w__cands{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.w__cand{display:inline-flex;align-items:center;gap:6px;font-size:13px;padding:4px 9px;border-radius:999px;background:var(--surface)}
+.w__dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.w__cta{display:block;text-align:center;font-family:var(--disp);font-weight:800;font-size:19px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:#fff;background:var(--red);padding:12px;border-radius:10px}
+.w__cta:hover{opacity:.9}
+.w__foot{font-size:11.5px;color:var(--muted);padding:9px 18px;border-top:1px solid var(--border);background:var(--surface)}
+.w__foot a{color:var(--blue)}
+.w__err{font-size:14px;color:var(--muted);padding:8px 0}
+</style>
+</head>
+<body>
+<div class="w">
+  <div class="w__strip" aria-hidden="true"></div>
+  <div class="w__body">
+    <div class="w__brand">
+      <a class="w__logo" id="logoLink" href="https://rozhodnisa.sk/" target="_blank" rel="noopener">rozhodnisa.sk</a>
+      <span class="w__kicker">Volebná kalkulačka 2026</span>
+    </div>
+    <h1 class="w__title">S ktorým kandidátom sa zhoduješ?</h1>
+    <div class="w__sub" id="place">Komunálne a krajské voľby</div>
+    <div class="w__tabs" id="tabs" role="tablist" hidden>
+      <button class="w__tab" role="tab" data-t="primator" aria-selected="true">Primátor</button>
+      <button class="w__tab" role="tab" data-t="vuc" aria-selected="false">Župan</button>
+    </div>
+    <p class="w__meta" id="meta">Odpovedz na 25 otázok a porovnaj sa s kandidátmi.</p>
+    <div class="w__cands" id="cands"></div>
+    <a class="w__cta" id="cta" href="https://rozhodnisa.sk/" target="_blank" rel="noopener">Spustiť kalkulačku</a>
+  </div>
+  <div class="w__foot">Voľby 24. 10. 2026, 7:00 – 20:00 · Nezávislý občiansky projekt · <a href="https://rozhodnisa.sk/kandidati" target="_blank" rel="noopener">Prehľad kandidátov</a></div>
+</div>
+<script>
+(function(){
+  var CITIES = {
+    bratislava:{name:'Bratislava',vuc:'BSK'}, kosice:{name:'Košice',vuc:'KSK'}, presov:{name:'Prešov',vuc:'PSK'},
+    zilina:{name:'Žilina',vuc:'ŽSK'}, bystrica:{name:'Banská Bystrica',vuc:'BBSK'}, nitra:{name:'Nitra',vuc:'NSK'},
+    trnava:{name:'Trnava',vuc:'TTSK'}, trencin:{name:'Trenčín',vuc:'TSK'}, poprad:{name:'Poprad',vuc:''},
+    michalovce:{name:'Michalovce',vuc:''}, snv:{name:'Spišská Nová Ves',vuc:''}, martin:{name:'Martin',vuc:''}
+  };
+  var ALIAS = {'banska-bystrica':'bystrica','spisska-nova-ves':'snv'};
+  var p = new URLSearchParams(location.search);
+  var c = (p.get('mesto')||'').toLowerCase(); c = ALIAS[c] || c;
+  var t = (p.get('volba')||'').toLowerCase(); t = (t==='kraj'||t==='vuc'||t==='zupan') ? 'vuc' : 'primator';
+  var src = '';
+  try { src = document.referrer ? new URL(document.referrer).hostname : ''; } catch(e){}
+  var $ = function(id){ return document.getElementById(id); };
+
+  function link(race){
+    var u = 'https://rozhodnisa.sk/?' + (c ? 'mesto=' + c + '&volba=' + (race==='vuc'?'kraj':'primator') + '&' : '')
+          + 'utm_source=' + encodeURIComponent(src || 'embed') + '&utm_medium=widget&utm_campaign=embed2026';
+    return u;
+  }
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m];}); }
+
+  function render(race){
+    var city = CITIES[c];
+    $('cta').href = link(race);
+    if(!city){ return; }
+    $('place').textContent = race==='vuc' ? ('Voľba župana ' + city.vuc) : (city.name + ' · voľba primátora');
+    var list = (window.VAA_DATA && VAA_DATA.candidates && VAA_DATA.candidates[c + '_' + race]) || [];
+    $('meta').textContent = list.length
+      ? (list.length + (list.length===1?' kandidát':(list.length<5?' kandidáti':' kandidátov')) + ' · 25 otázok · výsledok hneď uvidíš')
+      : 'Odpovedz na 25 otázok a porovnaj sa s kandidátmi.';
+    $('cands').innerHTML = list.map(function(k){
+      return '<span class="w__cand"><span class="w__dot" style="background:' + esc(k.color||'#999') + '"></span>' + esc(k.name) + '</span>';
+    }).join('');
+    [].forEach.call(document.querySelectorAll('.w__tab'), function(b){ b.setAttribute('aria-selected', b.dataset.t===race ? 'true' : 'false'); });
+  }
+
+  $('logoLink').href = link(t);
+  if(!CITIES[c]){ render(t); return; }            // no city: generic widget
+  if(!CITIES[c].vuc) t = 'primator';
+  if(CITIES[c].vuc){
+    $('tabs').hidden = false;
+    [].forEach.call(document.querySelectorAll('.w__tab'), function(b){ b.addEventListener('click', function(){ t = b.dataset.t; render(t); }); });
+  }
+  render(t);
+  var s = document.createElement('script');
+  s.src = '/data/data-' + c + '.js';
+  s.onload = function(){ render(t); };
+  s.onerror = function(){ /* keep generic text; CTA still works */ };
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>

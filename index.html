@@ -78,8 +78,8 @@
   "@type": "Event",
   "name": "Komunálne a krajské voľby 2026",
   "alternateName": "Komunálne a župné voľby 2026",
-  "startDate": "2026-10-24T07:00",
-  "endDate": "2026-10-24T20:00",
+  "startDate": "2026-10-24T07:00:00+02:00",
+  "endDate": "2026-10-24T20:00:00+02:00",
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {
@@ -178,7 +178,6 @@
 }
 </script>
 
-<title>Volebná kalkulačka 2026 | Koho voliť v komunálnych voľbách</title>
 <!-- Preconnect to reduce font latency -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -679,6 +678,13 @@ body{
 .sh-tw{background:#1da1f2;color:#fff}
 .sh-cp{background:#fff;border:1px solid var(--border);color:var(--text)}
 .sh-btn:hover{opacity:.82}
+.share-card{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
+.share-card h5{font-family:var(--font-display);font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.2rem;color:var(--text)}
+.share-card p{margin-bottom:.7rem}
+.sh-img{background:var(--sk-blue);color:#fff}
+.sh-dl{background:#fff;border:1px solid var(--border);color:var(--text)}
+.share-card__preview{display:none;width:100%;max-width:340px;margin:.8rem auto 0;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.share-card__preview.show{display:block}
 
 .url-box,.share-url-input{display:none}
 
@@ -1411,6 +1417,15 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
         <button class="sh-btn sh-tw" onclick="VAA.shareTW()" aria-label="Zdieľať na X / Twitter">X / Twitter</button>
         <button class="sh-btn sh-cp" onclick="VAA.copyURL()" aria-label="Kopírovať odkaz">Kopírovať</button>
       </div>
+      <div class="share-card">
+        <h5>Obrázok s výsledkom</h5>
+        <p>Obrázok obsahuje len tvoje tri najlepšie zhody, nie tvoje odpovede.</p>
+        <div class="share-btns">
+          <button class="sh-btn sh-img" onclick="VAA.shareImage()" aria-label="Zdieľať obrázok s výsledkom">Zdieľať obrázok</button>
+          <button class="sh-btn sh-dl" onclick="VAA.downloadImage()" aria-label="Stiahnuť obrázok s výsledkom">Stiahnuť obrázok</button>
+        </div>
+        <img class="share-card__preview" id="shareCardPreview" alt="Náhľad obrázka s výsledkom">
+      </div>
 
     </div>
 
@@ -1571,6 +1586,7 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
         <div class="footer-col__title">Sprievodcovia</div>
         <a class="footer-link" href="/ako-volit">Ako voliť</a>
         <a class="footer-link" href="/kandidati">Prehľad kandidátov</a>
+        <a class="footer-link" href="/pre-media">Pre médiá</a>
       </div>
 
       <div class="footer-col">
@@ -2063,7 +2079,9 @@ const VAA = (function(){
     const shareText = `Moje v\u00fdsledky vo Volebnej kalkula\u010dke 2026 (${meta.name} \u2013 ${typeLbl}): najlep\u0161ia zhoda ${top.pct}% s ${top.name}. Zisti aj ty!`;
     const shareURL = window.location.href.split('?')[0]+'?city='+city+'&type='+type;
     document.getElementById('shareURL') && (document.getElementById('shareURL').textContent = shareURL);
-    window._vaaShare = { text: shareText, url: shareURL };
+    window._vaaShare = { text: shareText, url: shareURL,
+      card: { place: meta.name, race: typeLbl, top: results.slice(0,3).map(r=>({ name:r.name, party:r.party, pct:r.pct, color:r.color, verified:(VERIFIED_BY_RACE[r.id]||[]).includes(key) })) } };
+    const _pv = document.getElementById('shareCardPreview'); if(_pv){ _pv.classList.remove('show'); _pv.removeAttribute('src'); }
 
     // detail
     const dl = document.getElementById('detailList');
@@ -2178,6 +2196,109 @@ const VAA = (function(){
     navigator.clipboard.writeText(txt).then(()=>{ const t=document.getElementById('toast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2400); }).catch(()=>{ prompt('Skop\u00edruj odkaz:',txt); });
   }
 
+  // ── Shareable result card (1080×1080 PNG, rendered client-side, nothing is uploaded) ──
+  function _fit(ctx, text, maxW){
+    if(ctx.measureText(text).width <= maxW) return text;
+    let t = text;
+    while(t.length > 1 && ctx.measureText(t + '…').width > maxW) t = t.slice(0,-1);
+    return t.trimEnd() + '…';
+  }
+  function _renderCard(){
+    const d = window._vaaShare && window._vaaShare.card;
+    if(!d) return Promise.reject(new Error('no data'));
+    const fontsReady = (document.fonts && document.fonts.load)
+      ? Promise.all([document.fonts.load('700 60px "Barlow Condensed"'), document.fonts.load('800 60px "Barlow Condensed"')]).catch(()=>{})
+      : Promise.resolve();
+    return fontsReady.then(()=>{
+      const W = 1080, H = 1080, P = 80;
+      const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+      const x = cv.getContext('2d');
+      const DISP = '"Barlow Condensed","Arial Narrow",Arial,sans-serif';
+      const BODY = 'system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif';
+      // background + tricolour strip
+      x.fillStyle = '#FFFFFF'; x.fillRect(0,0,W,H);
+      [['#FFFFFF',0],['#1E4E9D',1],['#C3112B',2]].forEach(([col,i])=>{ x.fillStyle = col; x.fillRect(0, i*8, W, 8); });
+      x.fillStyle = '#D8DCE6'; x.fillRect(0, 0, W, 1);
+      // header
+      x.fillStyle = '#1E4E9D'; x.font = `800 58px ${DISP}`; x.textBaseline = 'alphabetic';
+      x.fillText('rozhodnisa.sk', P, 118);
+      x.fillStyle = '#5A6270'; x.font = `600 30px ${DISP}`;
+      x.fillText('VOLEBNÁ KALKULAČKA 2026', P, 160);
+      // title
+      x.fillStyle = '#0D1B2A'; x.font = `800 76px ${DISP}`;
+      x.fillText('Moja najlepšia zhoda', P, 280);
+      x.fillStyle = '#C3112B'; x.font = `700 40px ${DISP}`;
+      x.fillText(_fit(x, `${d.place} · ${d.race}`.toUpperCase(), W-2*P), P, 336);
+      // rows
+      let y = 420;
+      d.top.forEach((r, i)=>{
+        const rowH = 150;
+        const big = i === 0;
+        // name
+        x.fillStyle = '#0D1B2A'; x.font = `${big?800:700} ${big?54:46}px ${DISP}`;
+        const pctTxt = r.pct + ' %';
+        x.save(); x.font = `800 ${big?72:58}px ${DISP}`; const pctW = x.measureText(pctTxt).width; x.restore();
+        x.fillText(_fit(x, r.name, W-2*P-pctW-40), P, y + 44);
+        // party + verified
+        x.fillStyle = '#5A6270'; x.font = `400 26px ${BODY}`;
+        let party = r.party || '';
+        const ver = r.verified ? '  ✓ overené odpovede' : '';
+        x.fillText(_fit(x, party, W-2*P-pctW-40-(ver?250:0)), P, y + 84);
+        if(ver){ const pw = x.measureText(_fit(x, party, W-2*P-pctW-40-250)).width; x.fillStyle = '#1A7A42'; x.font = `600 26px ${BODY}`; x.fillText(ver, P + pw, y + 84); }
+        // pct
+        x.fillStyle = r.color || '#1E4E9D'; x.font = `800 ${big?72:58}px ${DISP}`; x.textAlign = 'right';
+        x.fillText(pctTxt, W-P, y + (big?56:50)); x.textAlign = 'left';
+        // bar
+        const bw = W-2*P, by = y + 104;
+        x.fillStyle = '#EEF1F6'; x.fillRect(P, by, bw, 14);
+        x.fillStyle = r.color || '#1E4E9D'; x.fillRect(P, by, Math.max(6, bw * Math.min(100, r.pct) / 100), 14);
+        y += rowH + (big?10:0);
+      });
+      // disclaimer
+      x.fillStyle = '#5A6270'; x.font = `400 24px ${BODY}`;
+      x.fillText('Zhoda podľa odpovedí na otázky, nie odporúčanie, koho voliť.', P, 900);
+      // footer band
+      x.fillStyle = '#1E4E9D'; x.fillRect(0, 940, W, 140);
+      x.fillStyle = '#FFFFFF'; x.font = `800 46px ${DISP}`;
+      x.fillText('Zisti, s kým sa zhoduješ ty', P, 1010);
+      x.font = `600 32px ${DISP}`; x.globalAlpha = .85;
+      x.fillText('rozhodnisa.sk · voľby 24. 10. 2026', P, 1054); x.globalAlpha = 1;
+      return new Promise((res, rej)=> cv.toBlob(b=> b ? res(b) : rej(new Error('toBlob failed')), 'image/png'));
+    });
+  }
+  function _showPreview(blob){
+    const pv = document.getElementById('shareCardPreview');
+    if(!pv) return;
+    if(pv.dataset.url) URL.revokeObjectURL(pv.dataset.url);
+    const u = URL.createObjectURL(blob); pv.dataset.url = u; pv.src = u; pv.classList.add('show');
+  }
+  function _fileName(){
+    const d = window._vaaShare.card;
+    const slug = (d.place + '-' + d.race).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    return 'rozhodnisa-' + slug + '.png';
+  }
+  function _track(ev){ try{ if(window.umami) umami.track(ev, { mesto: city, typ: type }); }catch(e){} }
+  function downloadImage(){
+    _renderCard().then(blob=>{
+      _showPreview(blob);
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = _fileName();
+      document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
+      _track('share-image-download');
+    }).catch(()=> alert('Obrázok sa nepodarilo vytvoriť.'));
+  }
+  function shareImage(){
+    _renderCard().then(blob=>{
+      _showPreview(blob);
+      const file = new File([blob], _fileName(), { type: 'image/png' });
+      const s = window._vaaShare;
+      if(navigator.canShare && navigator.canShare({ files: [file] })){
+        navigator.share({ files: [file], text: s.text + ' ' + s.url }).then(()=>_track('share-image')).catch(()=>{});
+      } else {
+        downloadImage();   // desktop fallback: download, the user attaches it themselves
+      }
+    }).catch(()=> alert('Obrázok sa nepodarilo vytvoriť.'));
+  }
+
   // \u2500\u2500 Navigation \u2500\u2500
   function _showScreen(id){
     document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
@@ -2203,17 +2324,25 @@ const VAA = (function(){
     _showScreen('sc-welcome');
   }
 
-  // \u2500\u2500 URL param restore \u2500\u2500
-  (function(){
+  // ── Deep links: /?mesto=nitra&volba=primator|kraj  (legacy: ?city=nitra&type=primator|vuc) ──
+  function _applyDeepLink(){
     const p = new URLSearchParams(window.location.search);
-    const c = p.get('city'), t = p.get('type');
-    if(c && t && window.VAA_DATA.questions && window.VAA_DATA.questions[`${c}_${t}`]){
-      const tb = document.querySelector(`.type-card[onclick*="'${t}'"]`);
-      if(tb) pickType(t, tb);
-      const cb = document.querySelector(`.city-card[onclick*="'${c}'"]`);
-      if(cb && !cb.classList.contains('locked')) pickLocation(c, cb);
-    }
-  })();
+    const ALIAS = {'banska-bystrica':'bystrica','banskabystrica':'bystrica','spisska-nova-ves':'snv','spisskanovaves':'snv'};
+    let c = (p.get('mesto') || p.get('city') || '').toLowerCase().trim();
+    c = ALIAS[c] || c;
+    let t = (p.get('volba') || p.get('type') || '').toLowerCase().trim();
+    if(t === 'kraj' || t === 'zupan' || t === 'vuc') t = 'vuc'; else if(t) t = 'primator';
+    if(!c || !CITY_META[c]) return;
+    if(!t) t = 'primator';
+    if(t === 'vuc' && !CITY_META[c].vuc) t = 'primator';   // city without a regional race
+    const tb = document.querySelector(`.type-card[onclick*="'${t}'"]`);
+    if(!tb) return;
+    pickType(t, tb);
+    const grid = document.getElementById(t === 'primator' ? 'cityGrid' : 'krajGrid');
+    const cb = grid && grid.querySelector(`.city-card[onclick*="'${c}'"]`);
+    if(cb && !cb.classList.contains('locked')) pickLocation(c, cb);
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', _applyDeepLink); else _applyDeepLink();
 
 
   // ── Priority topics ──
@@ -2334,7 +2463,7 @@ const VAA = (function(){
     // Finance is appended inside the turnout card by _renderTurnout, so nothing here
   }
 
-  return { pickCity, pickLocation, pickType, startQuiz, ans, goBack, restart, shareFB, shareLI, shareTW, copyURL, toggleInfo, toggleDetail, pickPriority, confirmPriorities };
+  return { pickCity, pickLocation, pickType, startQuiz, ans, goBack, restart, shareFB, shareLI, shareTW, copyURL, shareImage, downloadImage, toggleInfo, toggleDetail, pickPriority, confirmPriorities };
 })();
 
 
@@ -2356,31 +2485,41 @@ const VAA = (function(){
   });
 })();
 
-// ── Election countdown ──
+// ── Election countdown (polls open 07:00–20:00 CEST, 24 Oct 2026) ──
 (function(){
+  var OPEN  = Date.UTC(2026, 9, 24, 5, 0, 0);   // 07:00 CEST
+  var CLOSE = Date.UTC(2026, 9, 24, 18, 0, 0);  // 20:00 CEST
   function updateCD(){
+    var bar = document.getElementById('countdownBar');
     var el = document.getElementById('cdDays');
-    if(!el) return;
-    var target = new Date(2026, 9, 24); // Oct 24 2026, local midnight
-    var now = new Date();
-    var diff = Math.floor((target - now) / 86400000);
-    el.textContent = diff > 0 ? diff : '0';
+    if(!bar || !el) return;
+    var lab = bar.querySelector('.cd-label'), unit = bar.querySelector('.cd-lbl');
+    var now = Date.now();
+    if(now < OPEN){
+      var skToday = Math.floor((now + 2*3600000) / 86400000);        // calendar day in Slovakia (CEST)
+      var days = Math.floor(Date.UTC(2026, 9, 24) / 86400000) - skToday;
+      if(days >= 1){
+        lab.textContent = 'Do volieb zostáva'; el.textContent = days;
+        unit.textContent = days === 1 ? 'deň' : (days < 5 ? 'dni' : 'dní');
+      } else {
+        lab.textContent = 'Voľby sú dnes'; el.textContent = '7:00 – 20:00'; unit.textContent = '';
+      }
+    } else if(now < CLOSE){
+      lab.textContent = 'Voľby práve prebiehajú'; el.textContent = 'do 20:00'; unit.textContent = '';
+    } else {
+      lab.textContent = 'Voľby sa skončili'; el.textContent = ''; unit.textContent = '';
+    }
   }
   updateCD();
-  // update at midnight
-  var ms = new Date(); ms.setHours(24,0,0,0);
-  setTimeout(function(){updateCD();setInterval(updateCD,86400000);}, ms - new Date());
+  setInterval(updateCD, 60000);
 })();
 
 // ── Verified candidates count ──
 (function(){
   var el = document.getElementById('vbCount');
   if(!el || !window.VERIFIED_BY_RACE) return;
-  var count = 0;
-  Object.keys(window.VERIFIED_BY_RACE).forEach(function(id){
-    count += window.VERIFIED_BY_RACE[id].length;
-  });
-  el.textContent = count;
+  // count people, not races (Porvaz, Majerský etc. are verified in several kraj races)
+  el.textContent = Object.keys(window.VERIFIED_BY_RACE).length;
 })();
 </script>
 <script>
