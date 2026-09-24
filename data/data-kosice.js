@@ -5,8 +5,8 @@ window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
 window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 
 window.VAA_DATA.candidates['kosice_primator'] = [
-  {id:'polac', name:'Jaroslav Polaček', party:'Košické hnutie 2030 / Smer-SD / Hlas-SD / KDH / SaS / Nova / DS-ODS / Maďarská aliancia (úradujúci primátor)', color:'#0097a7', url:'https://jaropolacek.sk'},
-  {id:'mudrak', name:'Martin Mudrák', party:'PS / Demokrati / Za ľudí /', color:'#64b5f6', url:'https://martinmudrak.sk'},
+  {id:'polac', name:'Jaroslav Polaček', party:'Smer-SD / Hlas-SD / KDH / SaS / Nova / DS-ODS / Maďarská aliancia (úradujúci primátor)', color:'#0097a7', url:'https://jaropolacek.sk'},
+  {id:'mudrak', name:'Martin Mudrák', party:'PS / Demokrati / Za ľudí', color:'#64b5f6', url:'https://martinmudrak.sk'},
   {id:'lorinc', name:'Ladislav Lörinc', party:'Košická strana', color:'#ffd166', url:'https://ladislavlorinc.sk'},
   {id:'sabol', name:'Miroslav Sabol', party:'Nezávislý', color:'#455A64', url:'https://mirosabol.sk'},
   {id:'kovac', name:'Lenka Kovačevičová', party:'Tím Košice / Starostovia a nezávislí kandidáti / Právo na pravdu', color:'#C2185B', url:'https://lenkakovacevicova.sk/'},
