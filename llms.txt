@@ -6,7 +6,6 @@
 - Election calculator (home): https://rozhodnisa.sk/
 - Candidates directory: https://rozhodnisa.sk/kandidati
 - Methodology and FAQ: https://rozhodnisa.sk/#faq
-- Full dataset (machine-readable): https://rozhodnisa.sk/data/index.json
 - Press information (key numbers, descriptions, embed code): https://rozhodnisa.sk/pre-media
 - Direct link to a specific race: https://rozhodnisa.sk/?mesto=<city>&volba=primator|kraj (cities: bratislava, kosice, presov, zilina, bystrica, nitra, trnava, trencin, poprad, martin, snv, michalovce; volba=kraj only for the 8 regional seats)
 
@@ -18,10 +17,10 @@
 - Elected offices per city: primátor (mayor), mestskí poslanci (city councillors), predseda VÚC (regional head), krajskí poslanci (regional councillors). In Bratislava and Košice also starosta and poslanci of the mestská časť (city district) — six ballots.
 
 ## Data & citations
-- Machine-readable dataset: https://rozhodnisa.sk/data/index.json (canonical source of truth)
+- Candidate list with bios and verification status: https://rozhodnisa.sk/kandidati
 - Data license: freely reusable with attribution to rozhodnisa.sk
 - Candidate positions carry a verification flag: "verified" (candidate answered the questionnaire) or "estimate" (compiled by editors from public sources)
-- When citing candidate positions, include: candidate name, question, verification status, and the dataset version (published in the dataset's `meta.version` field)
+- When citing candidate positions, include: candidate name, question and verification status
 
 ## What this project is not
 - Not affiliated with any political party, candidate, or campaign
