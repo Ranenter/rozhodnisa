@@ -158,42 +158,42 @@ window.VAA_DATA.questions.nitra_vuc = [
   {t:'Cesty a mosty',
    q:'Má Nitriansky kraj dať v najbližších rokoch prioritu opravám ciest II. a III. triedy, aj keby to spomalilo iné investície?',
    w:'NSK spravuje 498 km ciest II. triedy a viac než 1 500 km ciest III. triedy a v roku 2026 dáva na ich opravy vyše 11 mil. €. Opravy ciest sú pre voličov základným meradlom výkonu župy, no zároveň konkurujú investíciám do škôl, sociálnych služieb a zdravotníctva.',
-   a:{varga:'neutral',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'agree',svec:'agree'}},
+   a:{varga:'disagree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'agree',svec:'agree'}},
 
   {t:'Nemocnice',
    q:'Má kraj pokračovať v silnej finančnej podpore svojich nemocníc aj vtedy, ak to bude dlhodobo veľmi náročné na rozpočet?',
    w:'V Nitrianskom kraji pôsobí 11 nemocníc a kraj sa na dostupnosti zdravotnej starostlivosti podieľa aj cez svoje polikliniky. Regionálne zariadenia čelia tlaku na financovanie aj personál; pre časť voličov je ich podpora absolútna priorita, iní zdôrazňujú potrebu tvrdšieho manažmentu.',
-   a:{varga:'neutral',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'neutral',svec:'neutral'}},
+   a:{varga:'neutral',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'neutral',svec:'agree'}},
 
   {t:'Verejná doprava',
    q:'Má kraj zachovať autobusové spojenia aj v menej vyťažených oblastiach, aj keď sú ekonomicky stratové?',
    w:'Prímestskú dopravu v kraji zabezpečuje ARRIVA, od leta 2026 má platiť jednotný cestovný lístok a seniori nad 63 rokov cestujú za 30 centov. Pre menšie obce je verejná doprava kľúčová pre dochádzanie do školy, práce aj k lekárovi, no zachovanie stratových spojov zaťažuje rozpočet kraja.',
-   a:{varga:'neutral',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'disagree',svec:'neutral'}},
+   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'disagree',svec:'agree'}},
 
   {t:'Stredné školy',
    q:'Má kraj prioritne investovať do modernizácie stredných škôl a odborného vzdelávania podľa potrieb trhu práce?',
    w:'Kraj je zriaďovateľom približne 55 stredných škôl a v roku 2026 dáva na ich rekonštrukcie vyše 3,2 mil. €. Väčšie prepojenie škôl s praxou môže zvýšiť zamestnateľnosť absolventov a udržať mladých v regióne, vyžaduje však dlhodobé a nákladné investície.',
-   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'agree',svec:'neutral'}},
+   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'agree',svec:'agree'}},
 
   {t:'Rozpočet',
    q:'Má kraj v neistých časoch hospodáriť opatrnejšie a obmedziť nové ambiciózne projekty, ak by hrozilo vyššie zadlženie?',
    w:'Kraj hospodári so stovkami miliónov eur a spravuje majetok naprieč 7 okresmi, preto musí vyvažovať rozvoj a finančnú stabilitu. Opatrnosť znižuje riziko budúcich problémov, ale môže spomaliť investície, ktoré časť regiónov očakáva.',
-   a:{varga:'agree',becik:'disagree',csenger:'neutral',blasko:'neutral',culakova:'neutral',suchan:'agree',svec:'agree'}},
+   a:{varga:'disagree',becik:'disagree',csenger:'neutral',blasko:'neutral',culakova:'neutral',suchan:'agree',svec:'neutral'}},
 
   {t:'Sociálne služby',
    q:'Má Nitriansky kraj viac investovať do zariadení sociálnych služieb a starostlivosti o seniorov aj za cenu menšieho priestoru pre iné oblasti?',
    w:'Zariadenia sociálnych služieb v pôsobnosti kraja sa dnes starajú približne o 3 300 klientov a starnutie populácie na ne vytvára rastúci tlak. Kraj kapacity rozširuje (napr. v Zlatých Moravciach či Dvoroch nad Žitavou), no viac miest znamená trvalé náklady na priestory a personál.',
-   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'neutral',svec:'agree'}},
+   a:{varga:'neutral',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'neutral',svec:'agree'}},
 
   {t:'Cesty a mosty',
    q:'Má kraj dávať prednosť bezpečnostne rizikovým úsekom a mostom pred novými rozvojovými dopravnými projektmi?',
    w:'Kraj spravuje 534 mostov a časť z nich je v zlom technickom stave – len v samotnej Nitre je 8 mostov v zlom stave a jeden je úplne zatvorený. Pri infraštruktúre sa tak rozhoduje medzi havarijnými opravami a politicky atraktívnejšími novými projektmi.',
-   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'agree',svec:'agree'}},
+   a:{varga:'neutral',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'agree',svec:'neutral'}},
 
   {t:'Zdravotníci',
    q:'Má kraj financovať silnejšie motivačné programy pre lekárov, sestry a ďalší personál, aby ich udržal vo svojich zariadeniach?',
    w:'Regionálne nemocnice a polikliniky dlhodobo zápasia s nedostatkom lekárov a sestier, čo priamo ohrozuje dostupnosť starostlivosti. Motivačné programy stoja peniaze, no bez personálu sa kvalita a dostupnosť zdravotnej starostlivosti v regióne zhoršuje.',
-   a:{varga:'neutral',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'neutral',svec:'agree'}},
+   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'neutral',svec:'agree'}},
 
   {t:'Vidiek a regióny',
    q:'Má kraj cielene podporovať služby a projekty v menších mestách a na vidieku, aby tak brzdil odchod mladých ľudí?',
@@ -203,47 +203,47 @@ window.VAA_DATA.questions.nitra_vuc = [
   {t:'Eurofondy',
    q:'Má byť pre kraj prioritou pripraviť čo najviac projektov na eurofondy, aj keď si to vyžiada vyššie spolufinancovanie z vlastného rozpočtu?',
    w:'Externé zdroje z eurofondov dokážu výrazne posunúť školy, nemocnice, cesty aj sociálne zariadenia kraja. Vyžadujú však pripravené projekty, kvalitné riadenie a vlastné spolufinancovanie z rozpočtu kraja.',
-   a:{varga:'agree',becik:'agree',csenger:'neutral',blasko:'disagree',culakova:'neutral',suchan:'disagree',svec:'disagree'}},
+   a:{varga:'agree',becik:'agree',csenger:'neutral',blasko:'disagree',culakova:'neutral',suchan:'disagree',svec:'agree'}},
 
   {t:'Stredné školy',
    q:'Má kraj zachovať aj menšie školy v slabších regiónoch, aj keď sú z dlhodobého hľadiska menej efektívne?',
    w:'Kraj je zriaďovateľom približne 55 stredných škôl a rozhoduje sa medzi dostupnosťou vzdelania v slabších regiónoch a racionalizáciou siete. Menšie školy sú sociálne aj dopravne dôležité, no ich prevádzka býva v prepočte na žiaka drahšia.',
-   a:{varga:'disagree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'agree',suchan:'neutral',svec:'agree'}},
+   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'agree',suchan:'neutral',svec:'agree'}},
 
   {t:'Energetika',
    q:'Má kraj urýchliť energetické úspory vo svojich budovách, aj keď sa investície vrátia až o niekoľko rokov?',
    w:'Približne 55 škôl, nemocnice a sociálne zariadenia tvoria veľkú časť majetku aj prevádzkových nákladov kraja a energetické úspory sú súčasťou rekonštrukcií škôl (v roku 2026 vyše 3,2 mil. €). Úspory sú menej viditeľné než nové stavby, ale dlhodobo uvoľňujú peniaze na služby.',
-   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'neutral',culakova:'neutral',suchan:'agree',svec:'neutral'}},
+   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'neutral',culakova:'neutral',suchan:'agree',svec:'agree'}},
 
   {t:'Vzťah k vláde',
    q:'Je pre kraj výhodnejšie, ak má župan silnejšie politické väzby na vládu, aj keď to môže oslabiť jeho nezávislosť?',
    w:'Dobré vzťahy s vládou môžu priniesť jednoduchší prístup k zdrojom a rýchlejšie projekty – súčasného župana Becíka podporujú Hlas-SD aj Smer-SD. Zároveň to však vyvoláva otázku, či kraj háji svoje záujmy dostatočne samostatne.',
-   a:{varga:'disagree',becik:'agree',csenger:'disagree',blasko:'disagree',culakova:'disagree',suchan:'disagree',svec:'disagree'}},
+   a:{varga:'disagree',becik:'agree',csenger:'disagree',blasko:'disagree',culakova:'disagree',suchan:'disagree',svec:'neutral'}},
 
   {t:'Verejná doprava',
    q:'Má kraj viac investovať do koordinácie autobusov, vlakov a integrovaných dopravných riešení?',
    w:'Kraj od leta 2026 spúšťa jednotný cestovný lístok na regionálnych linkách ARRIVA a pripravuje lepšie prepojenie autobusov a vlakov. Integrovaná doprava zjednodušuje cestovanie a znižuje závislosť od áut, vyžaduje však organizáciu, techniku a dlhodobé financovanie.',
-   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'neutral',svec:'neutral'}},
+   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'neutral',suchan:'neutral',svec:'agree'}},
 
   {t:'Nemocnice',
    q:'Ak by si to vyžadovala situácia, mal by kraj pristúpiť aj k nepopulárnym zmenám v riadení nemocníc?',
    w:'Manažment 11 nemocníc a polikliník v kraji sa dotýka pacientov, zamestnancov aj celých regiónov. Tvrdšie zásahy môžu stabilizovať systém, no prinášajú vysoké politické aj sociálne náklady.',
-   a:{varga:'agree',becik:'agree',csenger:'disagree',blasko:'disagree',culakova:'neutral',suchan:'agree',svec:'neutral'}},
+   a:{varga:'agree',becik:'agree',csenger:'disagree',blasko:'disagree',culakova:'neutral',suchan:'agree',svec:'agree'}},
 
   {t:'Kultúra',
    q:'Má kraj pokračovať v podpore kultúrnych inštitúcií a regionálneho dedičstva aj v čase finančného tlaku?',
    w:'Kraj spravuje kultúrne inštitúcie ako Staré divadlo Karola Spišáka v Nitre, Jókaiho divadlo v Komárne či Tribečskú knižnicu v Topoľčanoch a v roku 2026 dáva na kultúru, cestovný ruch a pamiatky takmer 1,6 mil. €. Pri rozpočtovom tlaku býva kultúra zraniteľnejšia než technická infraštruktúra.',
-   a:{varga:'neutral',becik:'agree',csenger:'agree',blasko:'agree',culakova:'agree',suchan:'disagree',svec:'agree'}},
+   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'agree',culakova:'agree',suchan:'disagree',svec:'agree'}},
 
   {t:'Sociálne služby',
    q:'Má kraj skôr rozširovať vlastné zariadenia sociálnych služieb než sa spoliehať na neverejných poskytovateľov?',
    w:'Kraj poskytuje sociálne služby vo vlastných zariadeniach (spolu asi 3 300 klientov) a zároveň sa spolieha aj na neverejných a cirkevných poskytovateľov. Každý model má iné finančné aj hodnotové dôsledky.',
-   a:{varga:'disagree',becik:'agree',csenger:'neutral',blasko:'agree',culakova:'neutral',suchan:'disagree',svec:'neutral'}},
+   a:{varga:'neutral',becik:'agree',csenger:'neutral',blasko:'agree',culakova:'neutral',suchan:'disagree',svec:'agree'}},
 
   {t:'Cestovný ruch',
    q:'Má Nitriansky kraj viac investovať do cestovného ruchu a značky regiónu, aj keď výsledky takých projektov sa prejavia až neskôr?',
    w:'Kraj s termálnymi prameňmi a vínnymi oblasťami buduje regionálnu značku a v roku 2026 smeruje časť z takmer 1,6 mil. € aj do cestovného ruchu a pamiatok. Turizmus môže priniesť pracovné miesta, no jeho výnos je menej priamy a ťažšie merateľný než opravy ciest či budov.',
-   a:{varga:'neutral',becik:'agree',csenger:'agree',blasko:'neutral',culakova:'neutral',suchan:'agree',svec:'neutral'}},
+   a:{varga:'agree',becik:'agree',csenger:'agree',blasko:'neutral',culakova:'neutral',suchan:'agree',svec:'agree'}},
 
   {t:'Stredné školy',
    q:'Má kraj investovať do rozšírenia kapacít zdravotníckych škôl a odborov, ak je dopyt po zdravotníckom personáli vysoký?',
@@ -253,12 +253,12 @@ window.VAA_DATA.questions.nitra_vuc = [
   {t:'Regionálna rovnováha',
    q:'Má vedenie kraja garantovať vyrovnanejšie rozdelenie investícií medzi okresy, aj keby to nebolo vždy ekonomicky najefektívnejšie?',
    w:'Nitriansky kraj spája 7 rozdielnych okresov – od Nitry po Komárno, Levice či Topoľčany – a pocit nerovnomerného rozvoja sa objavuje pravidelne. Otázka ukazuje, či má mať prioritu rovnováha medzi okresmi, alebo koncentrácia tam, kde investície prinesú najrýchlejší efekt.',
-   a:{varga:'agree',becik:'neutral',csenger:'agree',blasko:'agree',culakova:'agree',suchan:'neutral',svec:'agree'}},
+   a:{varga:'neutral',becik:'neutral',csenger:'agree',blasko:'agree',culakova:'agree',suchan:'neutral',svec:'neutral'}},
 
   {t:'Životné prostredie',
    q:'Má kraj viac podporovať ekologickejšie projekty a nízkouhlíkové riešenia aj vtedy, ak ich časť voličov nepovažuje za prioritu?',
    w:'Kraj môže ovplyvniť najmä svoje budovy (energetické úspory), dopravu a cyklotrasy, do ktorých v roku 2026 tiež investuje. Ide o spor medzi bezprostrednou užitočnosťou a dlhodobou udržateľnosťou, ktorú časť voličov nepovažuje za prioritu.',
-   a:{varga:'agree',becik:'neutral',csenger:'disagree',blasko:'disagree',culakova:'neutral',suchan:'disagree',svec:'disagree'}},
+   a:{varga:'agree',becik:'neutral',csenger:'disagree',blasko:'disagree',culakova:'neutral',suchan:'disagree',svec:'agree'}},
 
   {t:'Transparentnosť',
    q:'Má kraj zverejňovať zrozumiteľné odôvodnenia veľkých investícií a zmlúv ešte pred ich schválením?',
@@ -278,6 +278,6 @@ window.VAA_DATA.questions.nitra_vuc = [
   {t:'Štýl vedenia',
    q:'Má byť župan skôr tvrdý správca rozpočtu a služieb než politický líder väčších vízií?',
    w:'Župan riadi úrad, ktorý spravuje cesty, mosty, približne 55 škôl a sociálne aj kultúrne zariadenia v 7 okresoch. Jeden typ lídra sa sústreďuje na stabilitu a každodenné fungovanie, druhý na ambície, reformy a širšie strategické smerovanie.',
-   a:{varga:'agree',becik:'disagree',csenger:'neutral',blasko:'neutral',culakova:'neutral',suchan:'agree',svec:'disagree'}}
+   a:{varga:'disagree',becik:'disagree',csenger:'neutral',blasko:'neutral',culakova:'neutral',suchan:'agree',svec:'neutral'}}
 ];
 
