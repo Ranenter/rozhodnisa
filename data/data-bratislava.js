@@ -7,7 +7,7 @@ window.VAA_DATA = window.VAA_DATA || {};
 // ── Kandidáti ──
 window.VAA_DATA.candidates = window.VAA_DATA.candidates || {};
 window.VAA_DATA.candidates['bratislava_primator'] = [{id:'vallo',name:'Matúš Vallo',party:'Team Bratislava / PS / SaS / Demokrati',color:'#e63946',url:'https://teamba.sk'},{id:'geci',name:'Ľubomír Geci',party:'Nezávislý / MySlovensko',color:'#78909c',url:'https://www.lubomirgeci.sk'},{id:'subova',name:'Zuzana Šubová',party:'Pirátska strana - Slovensko',color:'#37474f',url:'https://www.slovenskipirati.sk'},
-  {id:'raz',name:'Jozef Ráž ml.',party:'Nezávislý / Smer-SD / Hlas-SD / SNS / Republika',color:'#8B0000',url:'https://jozefraz.sk/'}
+  {id:'raz',name:'Jozef Ráž ml.',party:'Nezávislý / Smer-SD / Hlas-SD / SNS',color:'#8B0000',url:'https://jozefraz.sk/'}
 ];
 window.VAA_DATA.candidates['bratislava_vuc'] = [{id:'droba',name:'Juraj Droba',party:'Team Bratislava / PS / SaS / Demokrati',color:'#0097a7',url:'https://www.droba.sk/'},{id:'krajco',name:'Zuzana Krajčovičová',party:'Právo na pravdu / Starostovia a nezávislí kandidáti',color:'#2e7d32',url:'https://zupanka.sk'},{id:'staruch',name:'Dávid Staruch',party:'Nezávislý',color:'#2471A3',url:'https://staruch.eu'},{id:'gajarsky',name:'Rastislav Gajarský',party:'Smer-SD / Hlas-SD / SNS',color:'#C3112B',url:'https://www.rasto-gajarsky.sk/'},{id:'chalabala',name:'Ján Chalabala',party:'KSS',color:'#B71C1C',url:'https://kss.sk/'},{id:'liska',name:'Ľudovít Líška',party:'Jednota Slovanov',color:'#3949AB',url:'https://jednotaslovanov.sk/'},{id:'polacek',name:'Peter Poláček',party:'Slovexit',color:'#E65100',url:'https://peterpolacek.sk/'}];
 
