@@ -30,6 +30,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;colo
 .w__cands{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
 .w__cand{display:inline-flex;align-items:center;gap:6px;font-size:13px;padding:4px 9px;border-radius:999px;background:var(--surface)}
 .w__dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+html,body{height:auto}.w{min-height:0}
 .w__cta{display:block;text-align:center;font-family:var(--disp);font-weight:800;font-size:19px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:#fff;background:var(--red);padding:12px;border-radius:10px}
 .w__cta:hover{opacity:.9}
 .w__foot{font-size:11.5px;color:var(--muted);padding:9px 18px;border-top:1px solid var(--border);background:var(--surface)}
@@ -49,7 +50,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;colo
     <div class="w__sub" id="place">Komunálne a krajské voľby</div>
     <div class="w__tabs" id="tabs" role="tablist" hidden>
       <button class="w__tab" role="tab" data-t="primator" aria-selected="true">Primátor</button>
-      <button class="w__tab" role="tab" data-t="vuc" aria-selected="false">Župan</button>
+      <button class="w__tab" role="tab" data-t="vuc" aria-selected="false">Predseda kraja</button>
     </div>
     <p class="w__meta" id="meta">Odpovedz na 25 otázok a porovnaj sa s kandidátmi.</p>
     <div class="w__cands" id="cands"></div>
@@ -72,6 +73,15 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;colo
   var src = '';
   try { src = document.referrer ? new URL(document.referrer).hostname : ''; } catch(e){}
   var $ = function(id){ return document.getElementById(id); };
+  var wid = p.get('wid') || '';
+  function sendHeight(){
+    if(window.parent === window) return;
+    var h = Math.ceil(document.querySelector('.w').getBoundingClientRect().height) + 2;
+    try{ window.parent.postMessage({ type:'rozhodnisa-embed-height', wid: wid, height: h }, '*'); }catch(e){}
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  if(window.ResizeObserver){ new ResizeObserver(sendHeight).observe(document.documentElement); }
 
   function link(race){
     var u = 'https://rozhodnisa.sk/?' + (c ? 'mesto=' + c + '&volba=' + (race==='vuc'?'kraj':'primator') + '&' : '')
@@ -84,7 +94,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;colo
     var city = CITIES[c];
     $('cta').href = link(race);
     if(!city){ return; }
-    $('place').textContent = race==='vuc' ? ('Voľba župana ' + city.vuc) : (city.name + ' · voľba primátora');
+    $('place').textContent = race==='vuc' ? ('Voľba predsedu kraja · ' + city.vuc) : (city.name + ' · voľba primátora');
     var list = (window.VAA_DATA && VAA_DATA.candidates && VAA_DATA.candidates[c + '_' + race]) || [];
     $('meta').textContent = list.length
       ? (list.length + (list.length===1?' kandidát':(list.length<5?' kandidáti':' kandidátov')) + ' · 25 otázok · výsledok hneď uvidíš')
@@ -93,6 +103,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;colo
       return '<span class="w__cand"><span class="w__dot" style="background:' + esc(k.color||'#999') + '"></span>' + esc(k.name) + '</span>';
     }).join('');
     [].forEach.call(document.querySelectorAll('.w__tab'), function(b){ b.setAttribute('aria-selected', b.dataset.t===race ? 'true' : 'false'); });
+    sendHeight();
   }
 
   $('logoLink').href = link(t);

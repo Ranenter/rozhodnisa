@@ -21,7 +21,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap"></noscript>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
- {"@type":"WebPage","@id":"https://rozhodnisa.sk/pre-media","url":"https://rozhodnisa.sk/pre-media","name":"Pre médiá","inLanguage":"sk","dateModified":"2026-10-01","isPartOf":{"@id":"https://rozhodnisa.sk/#website"}},
+ {"@type":"WebPage","@id":"https://rozhodnisa.sk/pre-media","url":"https://rozhodnisa.sk/pre-media","name":"Pre médiá","inLanguage":"sk","dateModified":"2026-10-02","isPartOf":{"@id":"https://rozhodnisa.sk/#website"}},
  {"@type":"WebSite","@id":"https://rozhodnisa.sk/#website","url":"https://rozhodnisa.sk/","name":"rozhodnisa.sk","inLanguage":"sk"},
  {"@type":"Organization","name":"Občania štátu","url":"https://rozhodnisa.sk/","logo":"https://rozhodnisa.sk/apple-touch-icon.png","sameAs":["https://github.com/Ranenter/rozhodnisa"]},
  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Domov","item":"https://rozhodnisa.sk/"},{"@type":"ListItem","position":2,"name":"Pre médiá","item":"https://rozhodnisa.sk/pre-media"}]}
@@ -56,6 +56,9 @@ ul.facts li{margin:6px 0}
 .gen{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
 .gen label{display:block;font-weight:600;font-size:14px;margin:10px 0 4px}
 .gen select{width:100%;font:inherit;padding:8px;border:1px solid var(--border);border-radius:8px;background:#fff}
+.gen__types{display:flex;flex-direction:column;gap:4px}
+.gen__type{display:flex;align-items:baseline;gap:6px;font-weight:400!important;margin:0!important;font-size:14px}
+.gen__type span{color:var(--muted);font-size:13px}
 .gen textarea{width:100%;height:150px;font:13px/1.45 ui-monospace,Menlo,Consolas,monospace;padding:10px;border:1px solid var(--border);border-radius:8px;margin-top:12px;resize:vertical}
 .gen iframe{width:100%;max-width:480px;height:480px;border:0}
 .note{font-size:13px;color:var(--muted);margin-top:8px}
@@ -80,12 +83,12 @@ footer{border-top:1px solid var(--border);margin-top:30px;padding:18px 20px;text
 
   <div class="stats">
     <div class="stat"><b>12</b><span>miest, voľba primátora</span></div>
-    <div class="stat"><b>8</b><span>krajov, voľba župana</span></div>
-    <div class="stat"><b>138</b><span>kandidátov</span></div>
-    <div class="stat"><b>33</b><span>kandidátov osobne overilo svoje odpovede</span></div>
+    <div class="stat"><b>8</b><span>krajov, voľba predsedu kraja</span></div>
+    <div class="stat"><b id="statCands">125</b><span>kandidátov na primátora a predsedu kraja</span></div>
+    <div class="stat"><b id="statVerified">34</b><span>kandidátov osobne overilo svoje odpovede</span></div>
     <div class="stat"><b>25</b><span>otázok v každej voľbe</span></div>
   </div>
-  <p class="asof">Stav k 1. 10. 2026. Počet overených kandidátov priebežne rastie.</p>
+  <p class="asof" id="statAsof">Čísla sa aktualizujú automaticky z údajov kalkulačky.</p>
 
   <h2>Ako kalkulačka funguje</h2>
   <ul class="facts">
@@ -100,12 +103,12 @@ footer{border-top:1px solid var(--border);margin-top:30px;padding:18px 20px;text
   <h2>Popis na prevzatie</h2>
   <div class="copybox">
     <h3>Krátky</h3>
-    <p id="descShort">Volebná kalkulačka rozhodnisa.sk pomáha voličom v komunálnych a krajských voľbách 2026 porovnať svoje postoje s kandidátmi na primátora a župana. Je nestranícka, bezplatná a bez registrácie.</p>
+    <p id="descShort">Volebná kalkulačka rozhodnisa.sk pomáha voličom v komunálnych a krajských voľbách 2026 porovnať svoje postoje s kandidátmi na primátora a predsedu kraja. Je nestranícka, bezplatná a bez registrácie.</p>
     <button class="btn" data-copy="descShort">Kopírovať</button>
   </div>
   <div class="copybox">
     <h3>Dlhší</h3>
-    <p id="descLong">rozhodnisa.sk je občianska a nestranícka volebná kalkulačka pre komunálne a krajské voľby 24. októbra 2026. Pokrýva voľbu primátora v 12 mestách a voľbu župana v 8 krajoch. Volič odpovie na 25 otázok o miestnych témach a uvidí percentuálnu zhodu s jednotlivými kandidátmi. Odpovede kandidátov, ktorí vyplnili formulár, sú označené ako overené, ostatné sú odhady na základe verejných vyjadrení. Kalkulačka je bezplatná, bez registrácie, reklám a cookies a jej zdrojový kód je verejný.</p>
+    <p id="descLong">rozhodnisa.sk je občianska a nestranícka volebná kalkulačka pre komunálne a krajské voľby 24. októbra 2026. Pokrýva voľbu primátora v 12 mestách a voľbu predsedu kraja vo všetkých 8 krajoch. Volič odpovie na 25 otázok o miestnych témach a uvidí percentuálnu zhodu s jednotlivými kandidátmi. Odpovede kandidátov, ktorí vyplnili formulár, sú označené ako overené, ostatné sú odhady na základe verejných vyjadrení. Kalkulačka je bezplatná, bez registrácie, reklám a cookies a jej zdrojový kód je verejný.</p>
     <button class="btn" data-copy="descLong">Kopírovať</button>
   </div>
 
@@ -113,13 +116,16 @@ footer{border-top:1px solid var(--border);margin-top:30px;padding:18px 20px;text
   <p style="max-width:760px">Widget ukáže kandidátov vo vybranej voľbe a tlačidlo, ktoré čitateľa otvorí priamo v kalkulačke pre dané mesto alebo kraj. Stačí skopírovať kód do HTML bloku vo vašom redakčnom systéme.</p>
   <div class="gen">
     <div>
-      <label for="gMesto">Mesto</label>
-      <select id="gMesto"></select>
-      <label for="gVolba">Voľba</label>
-      <select id="gVolba"><option value="primator">Primátor</option><option value="kraj">Župan (kraj)</option></select>
+      <label for="gRace">Voľba</label>
+      <select id="gRace"></select>
+      <label>Typ kódu</label>
+      <div class="gen__types">
+        <label class="gen__type"><input type="radio" name="gType" value="script" checked> Automatická výška <span>(odporúčané)</span></label>
+        <label class="gen__type"><input type="radio" name="gType" value="iframe"> Len iframe <span>(ak váš systém nepovoľuje skripty)</span></label>
+      </div>
       <textarea id="gCode" readonly aria-label="Kód na vloženie"></textarea>
       <button class="btn btn--primary" data-copy="gCode" style="margin-top:8px">Kopírovať kód</button>
-      <p class="note">Voľba župana je dostupná pre krajské mestá. Widget sa zmestí do šírky od 300 px.</p>
+      <p class="note">Widget sa zmestí do šírky od 300 px a údaje o kandidátoch sa v ňom aktualizujú automaticky. Pri type „Automatická výška“ sa výška prispôsobí obsahu.</p>
     </div>
     <div>
       <iframe id="gPreview" title="Náhľad widgetu" loading="lazy"></iframe>
@@ -146,26 +152,49 @@ footer{border-top:1px solid var(--border);margin-top:30px;padding:18px 20px;text
 <script>
 (function(){
   var BASE = 'https://rozhodnisa.sk';
-  var CITIES = [
-    ['bratislava','Bratislava',1],['kosice','Košice',1],['presov','Prešov',1],['zilina','Žilina',1],
-    ['bystrica','Banská Bystrica',1],['nitra','Nitra',1],['trnava','Trnava',1],['trencin','Trenčín',1],
-    ['poprad','Poprad',0],['martin','Martin',0],['snv','Spišská Nová Ves',0],['michalovce','Michalovce',0]
-  ];
-  var m = document.getElementById('gMesto'), v = document.getElementById('gVolba'),
-      code = document.getElementById('gCode'), pv = document.getElementById('gPreview');
-  m.innerHTML = CITIES.map(function(c){ return '<option value="'+c[0]+'">'+c[1]+'</option>'; }).join('');
-  function hasKraj(k){ return CITIES.some(function(c){ return c[0]===k && c[2]; }); }
+  var CITIES = [['bratislava','Bratislava'],['kosice','Košice'],['presov','Prešov'],['zilina','Žilina'],['bystrica','Banská Bystrica'],['nitra','Nitra'],
+    ['trnava','Trnava'],['trencin','Trenčín'],['poprad','Poprad'],['martin','Martin'],['snv','Spišská Nová Ves'],['michalovce','Michalovce']];
+  var KRAJE = [['bratislava','Bratislavský kraj'],['trnava','Trnavský kraj'],['trencin','Trenčiansky kraj'],['nitra','Nitriansky kraj'],
+    ['zilina','Žilinský kraj'],['bystrica','Banskobystrický kraj'],['presov','Prešovský kraj'],['kosice','Košický kraj']];
+  var sel = document.getElementById('gRace'), code = document.getElementById('gCode'), pv = document.getElementById('gPreview');
+  sel.innerHTML = '<optgroup label="Primátor mesta">' + CITIES.map(function(c){ return '<option value="primator|'+c[0]+'">'+c[1]+'</option>'; }).join('') + '</optgroup>' +
+                  '<optgroup label="Predseda samosprávneho kraja">' + KRAJE.map(function(k){ return '<option value="kraj|'+k[0]+'">'+k[1]+'</option>'; }).join('') + '</optgroup>';
   function update(){
-    var k = m.value;
-    v.querySelector('option[value=kraj]').disabled = !hasKraj(k);
-    if(!hasKraj(k)) v.value = 'primator';
-    var q = 'mesto=' + k + '&volba=' + v.value;
-    code.value =
-      '<iframe src="' + BASE + '/embed?' + q + '" width="100%" height="480" style="border:0;max-width:480px" loading="lazy" title="Volebná kalkulačka 2026 – rozhodnisa.sk"></iframe>\n' +
-      '<p style="font:13px/1.4 Arial,sans-serif;margin:6px 0 0">Zdroj: <a href="' + BASE + '/?' + q + '">Volebná kalkulačka 2026 rozhodnisa.sk</a></p>';
+    var parts = sel.value.split('|'), volba = parts[0], mesto = parts[1];
+    var q = 'mesto=' + mesto + '&volba=' + volba;
+    var type = document.querySelector('input[name=gType]:checked').value;
+    var src = '<p style="font:13px/1.4 Arial,sans-serif;margin:6px 0 0">Zdroj: <a href="' + BASE + '/?' + q + '">Volebná kalkulačka 2026 rozhodnisa.sk</a></p>';
+    code.value = type === 'script'
+      ? '<div data-rozhodnisa data-mesto="' + mesto + '" data-volba="' + volba + '"></div>\n<script async src="' + BASE + '/embed.js"></' + 'script>\n' + src
+      : '<iframe src="' + BASE + '/embed?' + q + '" width="100%" height="520" style="border:0;max-width:480px" loading="lazy" title="Volebná kalkulačka 2026 – rozhodnisa.sk"></iframe>\n' + src;
     pv.src = '/embed?' + q;
   }
-  m.addEventListener('change', update); v.addEventListener('change', update); update();
+  sel.addEventListener('change', update);
+  [].forEach.call(document.querySelectorAll('input[name=gType]'), function(r){ r.addEventListener('change', update); });
+  update();
+
+  // live numbers from the calculator data
+  (function(){
+    var files = CITIES.map(function(c){ return '/data/data-' + c[0] + '.js'; });
+    // verified candidates are listed inside index.html (VERIFIED_BY_RACE); count the entries there
+    fetch('/').then(function(r){ return r.text(); }).then(function(html){
+      var m = html.match(/const VERIFIED_BY_RACE = window\.VERIFIED_BY_RACE = \{([\s\S]*?)\n  \};/);
+      if(!m) return;
+      var n = (m[1].match(/^\s*[a-z]+\s*:/gm) || []).length;
+      if(n > 0) document.getElementById('statVerified').textContent = n;
+    }).catch(function(){});
+    var left = files.length;
+    function done(){
+      if(--left) return;
+      var D = window.VAA_DATA || {}, C = D.candidates || {}, names = {};
+      Object.keys(C).forEach(function(k){ (C[k]||[]).forEach(function(x){ names[x.name] = 1; }); });
+      var n = Object.keys(names).length;
+      if(n > 0) document.getElementById('statCands').textContent = n;
+      var d = new Date();
+      document.getElementById('statAsof').textContent = 'Stav k ' + d.getDate() + '. ' + (d.getMonth()+1) + '. ' + d.getFullYear() + '. Čísla sa aktualizujú automaticky z údajov kalkulačky.';
+    }
+    files.forEach(function(f){ var s = document.createElement('script'); s.src = f; s.onload = done; s.onerror = done; document.head.appendChild(s); });
+  })();
 
   function toast(){ var t = document.getElementById('toast'); t.classList.add('show'); setTimeout(function(){ t.classList.remove('show'); }, 1800); }
   [].forEach.call(document.querySelectorAll('[data-copy]'), function(b){
