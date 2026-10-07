@@ -305,7 +305,7 @@ body{
 }
 .stat-item{display:flex;flex-direction:column;align-items:center;padding:.7rem 1.4rem;flex:1}
 .stat-num{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:1.3rem;font-weight:700;color:var(--sk-blue);line-height:1}
-.stat-lbl{font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:.15rem}
+.stat-lbl{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-top:.15rem}
 .stat-sep{width:1px;height:2rem;background:var(--border);flex-shrink:0}
 
 /* ── Countdown ── */
@@ -866,7 +866,7 @@ body{
   .stats-strip{max-width:100%;margin:0 .9rem 1.2rem;border-radius:0}
   .stat-item{padding:.55rem 0;flex:1}
   .stat-num{font-size:1.1rem}
-  .stat-lbl{font-size:.58rem}
+  .stat-lbl{font-size:.75rem}
   .value-cards{grid-template-columns:1fr;gap:1.2rem;padding:0 1.2rem}
   .value-card{flex-direction:row;align-items:flex-start;gap:.85rem;padding:0}
   .value-icon{flex-shrink:0;padding-top:.1rem;width:28px;height:28px}
@@ -1152,6 +1152,8 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
   .nav-link[aria-current="page"]::after{content:"";position:absolute;left:.7rem;right:.7rem;bottom:.12rem;
     height:2px;background:var(--sk-red);border-radius:2px}
 }
+
+@media (max-width:768px){.agent-toggle{display:none!important}}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
 </head>
@@ -1221,7 +1223,7 @@ body.agent-on .agent-toggle__thumb{transform:translateX(16px);background:#1A7A42
     <div class="badge-vote">Nenechaj rozhodovať iných o tvojom meste a kraji. Choď voliť.</div>
     <div class="hero-crest-bg"><svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 L98 20 L98 68 Q98 100 50 114 Q2 100 2 68 L2 20 Z" fill="#0B4EA2"/></svg></div>
     <p class="tagline">Odpovedz na 25 otázok a zisti, ktorý/á kandidát/ka myslí podobne ako ty.</p>
-    <p class="hero-cities">Bratislava · Košice · Prešov · Žilina · Banská Bystrica · Nitra · Trnava · Poprad · Michalovce · Spišská Nová Ves</p>
+    <p class="hero-cities">Bratislava · Košice · Prešov · Žilina · Banská Bystrica · Nitra · Trnava · Trenčín · Martin · Poprad · Michalovce · Spišská Nová Ves</p>
   </div>
 
   <div class="stats-strip">
