@@ -7,7 +7,7 @@ window.VAA_DATA.questions = window.VAA_DATA.questions || {};
 window.VAA_DATA.candidates['snv_primator'] = [
   {id:'ilasova', name:'Judita Iľašová', party:'Progresívne Slovensko / SaS / Hnutie Slovensko', color:'#3a86ff', url:'https://progresivne.sk'},
   {id:'demecko', name:'Dávid Demečko', party:'Hlas-SD / Smer-SD / Sme rodina / Republika / Konzervatívci – Kresťanská únia', color:'#e63946', url:'https://strana-hlas.sk'},
-  {id:'akram', name:'Adnan Akram', party:'Demokrati / KDH / DS-ODS', color:'#06d6a0', url:'https://addyakram.sk'},
+  {id:'akram', name:'Adnan Akram', party:'Demokrati / KDH / DS-ODS / PS', color:'#06d6a0', url:'https://addyakram.sk'},
   {id:'godus', name:'Lukáš Goduš', party:'Nezávislý', color:'#f4a261', url:'https://www.lukasgodus.sk/'},
   {id:'uhrin', name:'Miroslav Uhrin', party:'Nezávislý', color:'#8338ec', url:'https://miroslavuhrin.sk/'},
   {id:'bednarova', name:'Ľubica Bednárová', party:'Nezávislá', color:'#ff8f00', url:''},
