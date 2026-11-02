@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Výsledky volieb 2026: primátori, predsedovia krajov, hlasy | rozhodnisa.sk</title>
+  <meta name="description" content="Kto vyhral komunálne a krajské voľby 24. októbra 2026: primátori 12 miest, predsedovia 8 krajov a starostovia 4 mestských častí. Hlasy, percentá, účasť, rozpočty a sledovanie postojov zvolených." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rozhodnisa.sk/vysledky" />
+  <meta name="theme-color" content="#1E4E9D" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Výsledky volieb 2026: kto vyhral v 12 mestách a 8 krajoch | rozhodnisa.sk" />
+  <meta property="og:description" content="Hlasy a percentá zvolených primátorov, predsedov krajov a starostov, rozpočty miest a krajov a sledovanie ich postojov." />
+  <meta property="og:url" content="https://rozhodnisa.sk/vysledky" />
+  <meta property="og:site_name" content="rozhodnisa.sk" />
+  <meta property="og:locale" content="sk_SK" />
+  <meta property="og:image" content="https://rozhodnisa.sk/rozhodnisa-og.png">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://rozhodnisa.sk/rozhodnisa-og.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap">
+  <style>
+  /* ── Tokens (matches index.html / kandidati.html exactly) ── */
+  :root {
+    --font-display:'Barlow Condensed','Arial Narrow',sans-serif;
+    --sk-red:#C3112B;
+    --sk-blue:#1E4E9D;
+    --bg:#FFFFFF;
+    --surface:#F5F7FA;
+    --surface2:#EEF1F6;
+    --border:#D8DCE6;
+    --text:#0D1B2A;
+    --muted:#5A6270;
+    --green:#1A7A42;
+    --max:960px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  button,a{touch-action:manipulation}
+  html{scroll-behavior:smooth}
+  body{font-family:'Calibri','Trebuchet MS',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+  /* ── Hero ── */
+  .page-hero{background:#fff;padding:2.5rem 1.4rem 2rem;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+  .page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#fff 33.3%,var(--sk-blue) 33.3% 66.6%,var(--sk-red) 66.6%)}
+  .hero-emblem{margin:0 auto .9rem;display:flex;justify-content:center}
+  .hero-eyebrow{font-family:var(--font-display);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--sk-blue);margin-bottom:.5rem;display:block}
+  .page-hero h1{font-family:var(--font-display);font-size:clamp(1.7rem,5.5vw,2.8rem);font-weight:800;line-height:1.08;color:var(--sk-blue);text-transform:uppercase;letter-spacing:-.01em;margin-bottom:.3rem}
+  .page-hero h1 span{color:var(--sk-red)}
+  .tricolor-bar{height:5px;width:150px;margin:.6rem auto 1.1rem;border-radius:99px;overflow:hidden;background:linear-gradient(90deg,#e0e0e0 33.3%,var(--sk-blue) 33.3% 66.6%,var(--sk-red) 66.6%);box-shadow:0 0 0 1px rgba(0,0,0,.06)}
+  .page-hero .tagline{color:var(--muted);font-size:.92rem;max-width:560px;margin:0 auto .4rem;line-height:1.65}
+  .badge-date{display:inline-flex;align-items:center;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--sk-blue);border-radius:2px;padding:.35rem .9rem;font-size:.78rem;font-weight:600;color:var(--sk-blue);margin-top:.8rem}
+
+  /* ── Quiz strip ── */
+  .quiz-strip{background:var(--sk-blue);padding:.9rem 1.4rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;border-bottom:1px solid rgba(0,0,0,.08)}
+  .quiz-strip__text{color:rgba(255,255,255,.88);font-size:.85rem;flex:1;min-width:180px;line-height:1.5}
+  .quiz-strip__text strong{color:#fff}
+  .quiz-strip__btn,.quiz-strip__btn:link,.quiz-strip__btn:visited,.quiz-strip__btn:hover,.quiz-strip__btn:active{background:var(--sk-red);color:#fff!important;font-family:var(--font-display);font-size:.85rem;font-weight:700;padding:.5rem 1.1rem;border-radius:8px;text-decoration:none;white-space:nowrap;text-transform:uppercase;letter-spacing:.04em;flex-shrink:0;transition:background .15s}
+  .quiz-strip__btn:hover{background:#A00E22}
+
+  /* ── Page body ── */
+  .page-body{max-width:var(--max);margin:0 auto;padding:2.4rem 1.4rem 4rem}
+
+  /* ── Sections ── */
+  .section{margin-bottom:3.2rem}
+  .section h2{font-family:var(--font-display);font-size:1.3rem;font-weight:800;color:var(--text);text-transform:uppercase;letter-spacing:.01em;margin-bottom:1.1rem;padding-bottom:.6rem;border-bottom:2px solid var(--surface);display:flex;align-items:center;gap:.6rem}
+  .section h2 .h2-icon{display:inline-block;width:4px;height:18px;background:var(--sk-red);border-radius:2px;flex-shrink:0}
+  .section p{color:var(--muted);margin-bottom:.85rem;line-height:1.65}
+  .section p:last-child{margin-bottom:0}
+  .section a{color:var(--sk-blue);text-decoration:underline;text-underline-offset:3px}
+  .section a:hover{color:#163D82}
+  .strong-text{color:var(--text);font-weight:700}
+
+  /* ── Alerts ── */
+  .alert{display:flex;gap:.75rem;border-radius:10px;padding:.85rem 1rem;margin-top:1rem;font-size:.86rem}
+  .alert-icon{flex-shrink:0;width:18px;height:18px;border-radius:50%;font-size:.68rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .alert p{margin:0;line-height:1.6}
+  .alert-warning{background:#FDEEEF;border:1px solid rgba(195,17,43,.2)}
+  .alert-warning .alert-icon{background:var(--sk-red);color:#fff}
+  .alert-warning p{color:#7B1A23}
+  .alert-warning a{color:var(--sk-red)}
+  .alert-info{background:#EEF5FF;border:1px solid rgba(30,78,157,.2)}
+  .alert-info .alert-icon{background:var(--sk-blue);color:#fff}
+  .alert-info p{color:#163D82}
+
+  /* ── Tables ── */
+  .data-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 1px 6px rgba(0,0,0,.05)}
+  .data-table thead th{text-align:left;font-family:var(--font-display);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sk-blue);padding:.6rem .85rem;background:var(--surface);border-bottom:1px solid var(--border)}
+  .data-table tbody tr{border-bottom:1px solid var(--border)}
+  .data-table tbody tr:last-child{border-bottom:none}
+  .data-table tbody td{padding:.7rem .85rem;color:var(--muted);vertical-align:top}
+  .data-table tbody td:first-child{color:var(--text);font-weight:700}
+  .table-note{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:.5rem}
+
+  /* ── Steps ── */
+  .steps{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
+  .step{display:flex;gap:.85rem;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+  .step-num{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--sk-blue);color:#fff;font-family:var(--font-display);font-size:.78rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .step-text{font-size:.88rem;color:var(--muted);padding-top:2px;line-height:1.55}
+  .step-text strong{color:var(--text)}
+
+  /* ── CTA block ── */
+  .cta-block{background:var(--sk-blue);border-radius:14px;padding:1.6rem 1.4rem;margin-top:.3rem;display:flex;flex-direction:column;gap:.85rem}
+  .cta-block p{color:rgba(255,255,255,.88);font-size:.9rem;margin:0;line-height:1.65}
+  .cta-btn,.cta-btn:link,.cta-btn:visited,.cta-btn:hover,.cta-btn:active{display:inline-flex;align-items:center;gap:.4rem;background:var(--sk-red);color:#fff!important;font-family:var(--font-display);font-size:.85rem;font-weight:700;padding:.65rem 1.3rem;border-radius:8px;text-decoration:none;width:fit-content;text-transform:uppercase;letter-spacing:.04em;transition:background .15s}
+  .cta-btn:hover{background:#A00E22}
+
+  /* ── Commission box ── */
+  .commission-box{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:.3rem;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+  .commission-header{background:var(--surface);padding:1rem 1.2rem;border-bottom:1px solid var(--border)}
+  .commission-header h3{font-family:var(--font-display);font-size:1.05rem;font-weight:800;color:var(--sk-blue);text-transform:uppercase;letter-spacing:.01em;margin-bottom:.25rem}
+  .commission-header p{font-size:.82rem;color:var(--muted);margin:0}
+  .commission-body{padding:1.2rem}
+  .commission-body p{color:var(--muted);font-size:.88rem;margin-bottom:.85rem}
+  .commission-conditions{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:.85rem 0}
+  .condition-item{display:flex;gap:.5rem;align-items:flex-start;font-size:.82rem;color:var(--muted);background:var(--surface);border-radius:8px;padding:.6rem .7rem}
+  .condition-icon{color:var(--sk-blue);font-weight:800;flex-shrink:0}
+  .commission-steps{display:flex;flex-direction:column;gap:.55rem;margin-top:.9rem}
+  .commission-step{display:flex;gap:.7rem;align-items:flex-start;font-size:.84rem;color:var(--muted)}
+  .commission-step-num{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--sk-blue);color:#fff;font-family:var(--font-display);font-size:.68rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .commission-step strong{color:var(--text)}
+  .reward-badge{display:inline-flex;align-items:center;gap:.4rem;background:#F0FDF4;border:1px solid #86EFAC;color:var(--green);font-size:.82rem;font-weight:600;padding:.4rem .8rem;border-radius:20px;margin-top:.85rem}
+  .commission-links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
+  .commission-link{display:inline-flex;align-items:center;gap:.35rem;background:#EEF5FF;color:var(--sk-blue);font-size:.8rem;font-weight:700;padding:.45rem .9rem;border-radius:8px;text-decoration:none;transition:background .15s}
+  .commission-link:hover{background:#D6E7FB}
+
+  /* ── FAQ ── */
+  .faq-list{display:flex;flex-direction:column;gap:.4rem;margin-top:1rem}
+  details{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+  summary{padding:.85rem 1.05rem;font-size:.9rem;font-weight:700;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:.75rem;transition:background .15s}
+  summary:hover{background:var(--surface)}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';font-size:1.2rem;font-weight:400;color:var(--sk-blue);flex-shrink:0;transition:transform .2s}
+  details[open] summary{border-bottom:1px solid var(--border)}
+  details[open] summary::after{transform:rotate(45deg)}
+  .faq-answer{padding:.85rem 1.05rem .95rem;font-size:.84rem;color:var(--muted);line-height:1.65}
+  .faq-answer a{color:var(--sk-blue)}
+
+  /* ── Sources ── */
+  .sources-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}
+  .source-item{display:flex;gap:.7rem;align-items:flex-start;font-size:.86rem;background:#fff;border:1px solid var(--border);border-radius:10px;padding:.7rem .85rem;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+  .source-icon{flex-shrink:0;width:7px;height:7px;border-radius:50%;background:var(--sk-blue);margin-top:.45rem}
+  .source-item a{color:var(--sk-blue);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+  .source-note{display:block;font-size:.74rem;color:var(--muted);margin-top:.15rem}
+  .source-plain{color:var(--text);font-weight:600}
+
+  /* ── Footer (matches kandidati.html / index.html) ── */
+  .site-footer{background:var(--sk-blue);color:rgba(255,255,255,.7);font-size:.82rem;line-height:1.6;padding:2.5rem 1rem 1.5rem}
+  .site-footer__inner{max-width:var(--max);margin:0 auto}
+  .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem}
+  .footer-col__title{font-family:var(--font-display);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.95);margin-bottom:.6rem}
+  .footer-col p{margin:0 0 .5rem;color:rgba(255,255,255,.55)}
+  .footer-col strong{color:rgba(255,255,255,.85)}
+  .footer-link{display:block;margin-top:.3rem;color:rgba(255,255,255,.8);text-decoration:none;font-size:.8rem}
+  .footer-link:hover{color:#fff;text-decoration:underline}
+  .footer-donate{display:inline-block;margin:.5rem 0;padding:.45rem .9rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:2px;color:rgba(255,255,255,.85);text-decoration:none;font-size:.82rem;transition:background .15s}
+  .footer-donate:hover{background:rgba(255,255,255,.18)}
+  .footer-contact{margin-top:.7rem!important;color:rgba(255,255,255,.5)}
+  .footer-contact a{color:rgba(255,255,255,.8);text-decoration:none}
+  .footer-contact a:hover{text-decoration:underline}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:1rem;display:flex;flex-wrap:wrap;gap:.4rem .7rem;align-items:center;color:rgba(255,255,255,.35);font-size:.75rem}
+  .footer-dot{color:rgba(255,255,255,.18)}
+
+  /* ── Responsive ── */
+
+
+  /* ── Party accordion ── */
+  .party-accordion{display:flex;flex-direction:column;gap:4px;margin:.65rem 0 1rem}
+  .party-item{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .party-item[open]{border-color:var(--sk-blue);box-shadow:0 2px 10px rgba(30,78,157,.1)}
+  .party-summary{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.65rem .9rem;cursor:pointer;list-style:none;transition:background .12s}
+  .party-summary::-webkit-details-marker{display:none}
+  .party-summary:hover{background:var(--surface)}
+  .party-item[open] .party-summary{background:var(--surface)}
+  .party-name{font-size:.87rem;font-weight:700;color:var(--text)}
+  .party-tag{font-family:var(--font-display);font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:.18rem .55rem;border-radius:20px;white-space:nowrap;flex-shrink:0}
+  .party-tag--form{background:#e6f4ea;color:#1a6b2e}
+  .party-tag--contact{background:#EEF1F6;color:var(--muted)}
+  .party-body{padding:.55rem .9rem .75rem;font-size:.84rem;color:var(--muted);border-top:1px solid var(--border);line-height:1.6}
+  .party-body a{color:var(--sk-blue)}
+
+  /* ── Burger menu ── */
+  .site-nav{position:absolute;top:1rem;right:1.2rem;z-index:200}
+  .burger-btn{background:none;border:none;cursor:pointer;padding:.4rem;display:flex;flex-direction:column;gap:5px;border-radius:6px;transition:background .15s}
+  .burger-btn:hover{background:var(--surface2)}
+  .burger-btn span{display:block;width:22px;height:2px;background:var(--sk-blue);border-radius:2px;transition:transform .2s,opacity .2s}
+  .burger-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger-btn.open span:nth-child(2){opacity:0}
+  .burger-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .nav-dropdown{display:none;position:absolute;top:calc(100% + .5rem);right:0;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.1),0 0 0 1px rgba(0,0,0,.05);min-width:220px;overflow:hidden;animation:fadeUp .18s ease}
+  .nav-dropdown.open{display:block}
+  .nav-dropdown__label{font-family:var(--font-display);font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);padding:.7rem 1rem .35rem;display:block;border-bottom:1px solid var(--border)}
+  .nav-link{display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;font-size:.87rem;font-weight:600;color:var(--text);text-decoration:none;transition:background .12s}
+  .nav-link:hover{background:var(--surface);color:var(--sk-blue)}
+  .nav-link__icon{width:16px;height:16px;flex-shrink:0;opacity:.6}
+  .nav-divider{height:1px;background:var(--border);margin:0}
+
+  @media(max-width:600px){
+    .page-hero{padding:2rem 1rem 1.5rem}
+    .page-body{padding:2rem 1rem 3rem}
+    .commission-conditions{grid-template-columns:1fr}
+    .data-table thead{display:none}
+    .data-table tbody td{display:block;padding:.4rem .85rem}
+    .data-table tbody td:first-child{padding-top:.75rem}
+    .data-table tbody td:last-child{padding-bottom:.75rem}
+    .footer-grid{grid-template-columns:1fr}
+    .site-footer{padding:2rem .9rem 1.2rem}
+    .footer-bottom{flex-direction:column;align-items:flex-start}
+    .quiz-strip{flex-direction:column;gap:.7rem;padding:.9rem}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  
+.ai-strip{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:.7rem .9rem;margin:0 0 1.6rem}
+.ai-strip__label{font-size:.82rem;color:var(--muted);margin:0;flex:1;min-width:200px;line-height:1.5}
+.ai-strip__btns{display:flex;gap:.4rem;flex-wrap:wrap}
+.ai-btn,.ai-btn:link,.ai-btn:visited{display:inline-flex;align-items:center;gap:.35rem;font-size:.78rem;font-weight:600;color:var(--text)!important;background:#fff;border:1px solid var(--border);border-radius:7px;padding:.35rem .6rem;text-decoration:none!important}
+.ai-btn:hover{border-color:var(--sk-blue);color:var(--sk-blue)!important}
+.ai-strip__note{flex-basis:100%;font-size:.72rem;color:var(--muted);margin:.1rem 0 0;opacity:.85}
+.daygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.7rem;margin:1rem 0 0}
+.daycard{background:#fff;border:1px solid var(--border);border-radius:11px;padding:.85rem .95rem;box-shadow:0 1px 2px rgba(13,27,42,.04)}
+.daycard__k{font-family:var(--font-display);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--sk-blue);margin:0 0 .3rem}
+.daycard__v{font-size:.92rem;font-weight:700;color:var(--text);margin:0 0 .2rem;line-height:1.35}
+.daycard__d{font-size:.79rem;color:var(--muted);margin:0;line-height:1.5}
+.statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.7rem;margin:1rem 0}
+.statbox{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:.85rem;text-align:center}
+.statbox__n{font-family:var(--font-display);font-size:1.75rem;font-weight:800;color:var(--sk-red);line-height:1;margin:0 0 .25rem}
+.statbox__l{font-size:.76rem;color:var(--muted);margin:0;line-height:1.45}
+.why-lead{font-size:1rem!important;color:var(--text)!important;font-weight:600;line-height:1.6!important}
+
+</style>
+
+  <style>
+.rs-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0 0;border:1px solid var(--border);border-radius:12px;background:#fff}
+.rs-table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:520px}
+.rs-table th{text-align:left;font-family:var(--font-display);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sk-blue);padding:.6rem .75rem;background:var(--surface);border-bottom:1px solid var(--border)}
+.rs-table td{padding:.65rem .75rem;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text)}
+.rs-table tr:last-child td{border-bottom:none}
+.rs-table .num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.rs-table td a{color:var(--sk-blue);font-weight:700;text-decoration:none}
+.rs-sub{display:block;font-size:.76rem;color:var(--muted);margin-top:.15rem}
+.rs-party{display:block;font-size:.76rem;color:var(--muted);margin-top:.15rem;line-height:1.35}
+.rc{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.1rem 1.15rem 1rem;margin:1rem 0 1.2rem;box-shadow:0 1px 6px rgba(0,0,0,.04);scroll-margin-top:1rem}
+.rc-head{display:flex;flex-direction:column;gap:.1rem;margin-bottom:.8rem}
+.rc-type{font-family:var(--font-display);font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--sk-red)}
+.rc h3{font-family:var(--font-display);font-size:1.45rem;font-weight:800;margin:0;color:var(--text);line-height:1.1}
+.rw{display:flex;gap:.9rem;align-items:center;background:var(--surface);border-radius:12px;padding:.8rem .9rem;margin-bottom:.9rem}
+.rw-img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;box-shadow:0 2px 6px rgba(0,0,0,.14)}
+.rw-badge{display:inline-block;background:var(--green);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .5rem;border-radius:99px}
+.rw-name{font-family:var(--font-display);font-size:1.3rem;font-weight:800;line-height:1.1;margin:.25rem 0 .1rem}
+.rw-party{font-size:.78rem;color:var(--muted);line-height:1.35}
+.rw-num{font-size:.9rem;margin-top:.3rem;color:var(--text)}
+.rw-num strong{font-size:1.05rem;color:var(--green)}
+.rbars{list-style:none;margin:0 0 .9rem;padding:0;display:flex;flex-direction:column;gap:.55rem}
+.rb-top{display:flex;justify-content:space-between;gap:.75rem;font-size:.86rem;line-height:1.3;margin-bottom:.2rem}
+.rb-name{color:var(--text)}
+.rb--win .rb-name{font-weight:800}
+.rb-val{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.rb-val strong{color:var(--text)}
+.rb-note{font-size:.72rem;color:var(--muted);font-weight:400}
+.rb-track{height:8px;background:var(--surface2);border-radius:99px;overflow:hidden}
+.rb-fill{height:100%;background:#8A95A8;border-radius:99px}
+.rb--win .rb-fill{background:var(--sk-blue)}
+.rb--rest .rb-fill{background:#C5CBD6}
+.mps{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .8rem}
+.mp{display:inline-flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:.35rem .6rem;min-width:88px}
+.mp-l{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.mp-v{font-size:.92rem;font-weight:800;color:var(--text);white-space:nowrap}
+.mp-odhad{font-size:.62rem;font-weight:700;color:#8a5a00;background:#f9eeda;border-radius:4px;padding:0 .25rem;vertical-align:middle}
+.mp-dlh.g .mp-v{color:var(--green)} .mp-dlh.y .mp-v{color:#9a6a00} .mp-dlh.r .mp-v{color:var(--sk-red)}
+.rc-src{font-size:.74rem;color:var(--muted);line-height:1.55;margin:.7rem 0 0}
+.rc-src a{color:var(--sk-blue)}
+.tr{margin:.2rem 0 0}
+.tr summary{font-size:.88rem;flex-wrap:wrap;position:relative;padding-right:2.4rem}
+.tr summary::after{position:absolute;right:1rem;top:.8rem}
+.tr-count{flex-basis:100%;font-size:.74rem;font-weight:600;color:var(--muted)}
+.tr-count:empty{display:none}
+.tr-body{padding:.75rem 1rem .9rem}
+.tr-note{font-size:.8rem;color:var(--muted);line-height:1.5;margin:0 0 .7rem}
+.tr-note--est{background:#f9eeda;color:#6b4a00;border-radius:8px;padding:.45rem .6rem}
+.tr-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.tr-item{border:1px solid var(--border);border-radius:10px;padding:.55rem .7rem;font-size:.86rem;line-height:1.45}
+.tr-top{display:flex;flex-wrap:wrap;gap:.35rem .5rem;align-items:center;margin-bottom:.25rem}
+.tr-pos{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:.1rem .45rem;border-radius:99px}
+.tr-pos.agree{background:#e5f4e4;color:#1A7A42} .tr-pos.disagree{background:#fbebeb;color:#a10e24}
+.tr-topic{font-size:.72rem;color:var(--muted)}
+.tr-st{margin-left:auto;font-size:.7rem;font-weight:700;padding:.1rem .5rem;border-radius:99px;white-space:nowrap}
+.tr-st.sledujeme{background:var(--surface2);color:var(--muted)} .tr-st.plni{background:#e7f1fb;color:var(--sk-blue)}
+.tr-st.splnene{background:#e5f4e4;color:#1A7A42} .tr-st.rozpor{background:#fbebeb;color:#a10e24}
+.tr-ev{font-size:.78rem;color:var(--muted);margin:.3rem 0 0}
+.tr-ev a{color:var(--sk-blue)}
+.tr-neutral{font-size:.78rem;color:var(--muted);margin:.7rem 0 0}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 0}
+@media(max-width:600px){.rs-table{min-width:0}.rs-hide{display:none}.rs-table th,.rs-table td{padding:.6rem .55rem}.rc{padding:.95rem .9rem .9rem}.rw-img{width:54px;height:54px}.rc h3{font-size:1.3rem}.rb-top{font-size:.82rem}}
+</style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="01484d93-85f0-4918-ba88-6ea95df2122a"></script>
+</head>
+<body>
+
+<div class="page-hero">
+<nav class="site-nav" aria-label="Navigácia">
+  <button class="burger-btn" id="burgerBtn" aria-expanded="false" aria-controls="navDropdown" aria-label="Otvoriť menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-dropdown" id="navDropdown">
+    <span class="nav-dropdown__label">rozhodnisa.sk</span>
+    <a href="/vysledky" class="nav-link">
+      <svg class="nav-link__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2.5" y="8" width="2.6" height="5.5" rx=".6" stroke="currentColor" stroke-width="1.3"/><rect x="6.7" y="4.5" width="2.6" height="9" rx=".6" stroke="currentColor" stroke-width="1.3"/><rect x="10.9" y="2.5" width="2.6" height="11" rx=".6" stroke="currentColor" stroke-width="1.3"/></svg>
+      Výsledky volieb
+    </a>
+    <a href="/vysledky" class="nav-link" aria-current="page">
+      <svg class="nav-link__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2.5" y="8" width="2.6" height="5.5" rx=".6" stroke="currentColor" stroke-width="1.3"/><rect x="6.7" y="4.5" width="2.6" height="9" rx=".6" stroke="currentColor" stroke-width="1.3"/><rect x="10.9" y="2.5" width="2.6" height="11" rx=".6" stroke="currentColor" stroke-width="1.3"/></svg>
+      Výsledky volieb
+    </a>
+    <a href="/" class="nav-link">
+      <svg class="nav-link__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 8.5l2 2 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volebná kalkulačka
+    </a>
+    <a href="/kandidati" class="nav-link">
+      <svg class="nav-link__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M5 7h6M5 9.5h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      Prehľad kandidátov
+    </a>
+    <div class="nav-divider"></div>
+    <a href="/ako-volit" class="nav-link">
+      <svg class="nav-link__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Ako voliť
+    </a>
+  </div>
+</nav>
+  <div class="hero-emblem" aria-hidden="true">
+    <img src="data:image/png;base64,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" width="40" height="50" alt="Štátny znak SR" fetchpriority="high" decoding="async" style="filter:drop-shadow(0 2px 8px rgba(0,0,0,.18))">
+  </div>
+  <p class="hero-eyebrow">Voľby 24. októbra 2026</p>
+  <h1>Kto <span>vyhral</span> voľby 2026</h1>
+  <div class="tricolor-bar"></div>
+  <p class="tagline">Primátori 12 miest, predsedovia 8 krajov a starostovia 4 mestských častí: hlasy, percentá a účasť, rozpočty a zadlženosť, a sledovanie toho, či zvolení konajú podľa svojich postojov.</p>
+  <div class="badge-date">Výsledky Štatistického úradu SR</div>
+</div>
+
+<div class="quiz-strip">
+  <p class="quiz-strip__text"><strong>Ako sa zhoduješ so zvolenými?</strong> Kalkulačka stále funguje: odpovedz na 25 otázok a porovnaj sa so zvoleným primátorom a predsedom kraja aj s ostatnými kandidátmi.</p>
+  <a href="/" class="quiz-strip__btn">Porovnaj sa so zvolenými</a>
+</div>
+
+<main class="page-body" id="main-content">
+  <div class="section">
+    <h2><span class="h2-icon"></span>Primátori miest</h2>
+    <p>Zvolení primátori v 12 mestách, ktoré pokrývala kalkulačka. Podiel je z platných hlasov.</p>
+    <div class="rs-wrap"><table class="rs-table">
+      <thead><tr><th>Voľba</th><th>Zvolený/á</th><th class="num">Podiel a hlasy</th><th class="num rs-hide">Účasť</th></tr></thead>
+      <tbody><tr><td><a href="#bratislava-primator">Bratislava</a></td><td><strong>Matúš Vallo</strong><span class="rs-party">Team Bratislava / PS / SaS / Demokrati</span></td><td class="num"><strong>64,36 %</strong><span class="rs-sub">121 846 hlasov</span></td><td class="num rs-hide">47,4 %</td></tr><tr><td><a href="#kosice-primator">Košice</a></td><td><strong>Ladislav Lörinc</strong><span class="rs-party">Košická strana</span></td><td class="num"><strong>39,89 %</strong><span class="rs-sub">27 364 hlasov</span></td><td class="num rs-hide">37,11 %</td></tr><tr><td><a href="#presov-primator">Prešov</a></td><td><strong>František Oľha</strong><span class="rs-party">Demokrati / PS / DS-ODS</span></td><td class="num"><strong>40,69 %</strong><span class="rs-sub">12 125 hlasov</span></td><td class="num rs-hide">44,19 %</td></tr><tr><td><a href="#zilina-primator">Žilina</a></td><td><strong>Peter Fiabáne</strong><span class="rs-party">Nezávislý</span></td><td class="num"><strong>41,22 %</strong><span class="rs-sub">11 854 hlasov</span></td><td class="num rs-hide">42,98 %</td></tr><tr><td><a href="#bystrica-primator">Banská Bystrica</a></td><td><strong>Ján Nosko</strong><span class="rs-party">Nezávislý / Smer-SD / Hlas-SD</span></td><td class="num"><strong>46,78 %</strong><span class="rs-sub">12 629 hlasov</span></td><td class="num rs-hide">44,47 %</td></tr><tr><td><a href="#nitra-primator">Nitra</a></td><td><strong>Marek Hattas</strong><span class="rs-party">Tím kraj Nitra / PS / SaS / KDH / Demokrati / Hnutie Slovensko</span></td><td class="num"><strong>50,66 %</strong><span class="rs-sub">13 459 hlasov</span></td><td class="num rs-hide">41 %</td></tr><tr><td><a href="#trnava-primator">Trnava</a></td><td><strong>Eva Nemčovská</strong><span class="rs-party">Nezávislá / Lepšia Trnava</span></td><td class="num"><strong>60,47 %</strong><span class="rs-sub">13 411 hlasov</span></td><td class="num rs-hide">42 %</td></tr><tr><td><a href="#trencin-primator">Trenčín</a></td><td><strong>Ján Forgáč</strong><span class="rs-party">Nezávislý</span></td><td class="num"><strong>69,17 %</strong><span class="rs-sub">12 413 hlasov</span></td><td class="num rs-hide">39,66 %</td></tr><tr><td><a href="#martin-primator">Martin</a></td><td><strong>Michal Uherčík</strong><span class="rs-party">SaS / PS / KDH / Hnutie Slovensko / Demokrati / OKS</span></td><td class="num"><strong>39,06 %</strong><span class="rs-sub">6 546 hlasov</span></td><td class="num rs-hide">39,33 %</td></tr><tr><td><a href="#poprad-primator">Poprad</a></td><td><strong>Jozef Králik</strong><span class="rs-party">Nezávislý</span></td><td class="num"><strong>49,91 %</strong><span class="rs-sub">8 088 hlasov</span></td><td class="num rs-hide">41,01 %</td></tr><tr><td><a href="#michalovce-primator">Michalovce</a></td><td><strong>Miroslav Dufinec</strong><span class="rs-party">Smer-SD / Hlas-SD / SNS / Sme rodina / SMS</span></td><td class="num"><strong>45,4 %</strong><span class="rs-sub">4 410 hlasov</span></td><td class="num rs-hide">34,51 %</td></tr><tr><td><a href="#snv-primator">Spišská Nová Ves</a></td><td><strong>Dávid Demečko</strong><span class="rs-party">Hlas-SD / Smer-SD / Sme rodina / Republika / Konzervatívci – Kresťanská únia</span></td><td class="num"><strong>37,48 %</strong><span class="rs-sub">4 176 hlasov</span></td><td class="num rs-hide">40,83 %</td></tr></tbody>
+    </table></div>
+  </div>
+  <div class="section">
+    <h2><span class="h2-icon"></span>Predsedovia krajov</h2>
+    <p>Všetkých osem predsedov krajov svoj post obhájilo.</p>
+    <div class="rs-wrap"><table class="rs-table">
+      <thead><tr><th>Voľba</th><th>Zvolený/á</th><th class="num">Podiel a hlasy</th><th class="num rs-hide">Účasť</th></tr></thead>
+      <tbody><tr><td><a href="#bratislava-vuc">Bratislavský kraj (BSK)</a></td><td><strong>Juraj Droba</strong><span class="rs-party">Team Bratislava / PS / SaS / Demokrati</span></td><td class="num"><strong>70,96 %</strong><span class="rs-sub">188 732 hlasov</span></td><td class="num rs-hide">46,5 %</td></tr><tr><td><a href="#trnava-vuc">Trnavský kraj (TTSK)</a></td><td><strong>Jozef Viskupič</strong><span class="rs-party">PS / SaS / KDH / Demokrati / Hnutie Slovensko / OKS / Magyar Fórum</span></td><td class="num"><strong>54,04 %</strong><span class="rs-sub">103 083 hlasov</span></td><td class="num rs-hide">44,4 %</td></tr><tr><td><a href="#trencin-vuc">Trenčiansky kraj (TSK)</a></td><td><strong>Jaroslav Baška</strong><span class="rs-party">Smer-SD / Hlas-SD / SNS / Republika</span></td><td class="num"><strong>57,44 %</strong><span class="rs-sub">119 827 hlasov</span></td><td class="num rs-hide">47,5 %</td></tr><tr><td><a href="#nitra-vuc">Nitriansky kraj (NSK)</a></td><td><strong>Branislav Becík</strong><span class="rs-party">Hlas-SD / Smer-SD / Republika</span></td><td class="num"><strong>50,47 %</strong><span class="rs-sub">115 058 hlasov</span></td><td class="num rs-hide">45,3 %</td></tr><tr><td><a href="#zilina-vuc">Žilinský kraj (ŽSK)</a></td><td><strong>Erika Jurinová</strong><span class="rs-party">Nezávislá / Hnutie Slovensko / KDH / Za ľudí / NOVA / SaS / PS / Demokrati / OKS / ODS / Konzervatívci</span></td><td class="num"><strong>52,06 %</strong><span class="rs-sub">134 617 hlasov</span></td><td class="num rs-hide">50,1 %</td></tr><tr><td><a href="#bystrica-vuc">Banskobystrický kraj (BBSK)</a></td><td><strong>Ondrej Lunter</strong><span class="rs-party">Nezávislý / SaS / Hlas-SD / KDH / PS / Maďarská aliancia</span></td><td class="num"><strong>64,81 %</strong><span class="rs-sub">135 971 hlasov</span></td><td class="num rs-hide">46,2 %</td></tr><tr><td><a href="#presov-vuc">Prešovský kraj (PSK)</a></td><td><strong>Milan Majerský</strong><span class="rs-party">KDH / Hnutie Slovensko / SaS / Za ľudí / Konzervatívci-KÚ / PS</span></td><td class="num"><strong>48,77 %</strong><span class="rs-sub">138 819 hlasov</span></td><td class="num rs-hide">49,9 %</td></tr><tr><td><a href="#kosice-vuc">Košický kraj (KSK)</a></td><td><strong>Rastislav Trnka</strong><span class="rs-party">Nezávislý / Maďarská aliancia</span></td><td class="num"><strong>32 %</strong><span class="rs-sub">76 421 hlasov</span></td><td class="num rs-hide">42,5 %</td></tr></tbody>
+    </table></div>
+  </div>
+  <div class="section">
+    <h2><span class="h2-icon"></span>Starostovia mestských častí</h2>
+    <p>Štyri najväčšie mestské časti Bratislavy a Košíc, ktoré sme mali v zozname kandidátov.</p>
+    <div class="rs-wrap"><table class="rs-table">
+      <thead><tr><th>Voľba</th><th>Zvolený/á</th><th class="num">Podiel a hlasy</th><th class="num rs-hide">Účasť</th></tr></thead>
+      <tbody><tr><td><a href="#ba-stare-mesto">Bratislava-Staré Mesto</a></td><td><strong>Matej Vagač</strong><span class="rs-party">PS / Team Bratislava / SaS / Demokrati</span></td><td class="num"><strong>62,18 %</strong><span class="rs-sub">11 588 hlasov</span></td><td class="num rs-hide">46 %</td></tr><tr><td><a href="#ba-petrzalka">Bratislava-Petržalka</a></td><td><strong>Ján Hrčka</strong><span class="rs-party">Nezávislý / Strana Krajina</span></td><td class="num"><strong>54,36 %</strong><span class="rs-sub">22 665 hlasov</span></td><td class="num rs-hide">46,4 %</td></tr><tr><td><a href="#ke-stare-mesto">Košice-Staré Mesto</a></td><td><strong>Igor Holéczy</strong><span class="rs-party">PS / Demokrati / Za ľudí / Maďarská aliancia</span></td><td class="num"><strong>40,68 %</strong><span class="rs-sub">2 690 hlasov</span></td><td class="num rs-hide">37,88 %</td></tr><tr><td><a href="#ke-zapad">Košice-Západ</a></td><td><strong>Marcel Vrchota</strong><span class="rs-party">SaS / PS / Za ľudí / Hnutie Slovensko / Demokrati / DS-ODS</span></td><td class="num"><strong>32,32 %</strong><span class="rs-sub">3 317 hlasov</span></td><td class="num rs-hide">34,7 %</td></tr></tbody>
+    </table></div>
+  </div>
+  <div class="section">
+    <h2><span class="h2-icon"></span>Sľuby pod lupou</h2>
+    <p>Pred voľbami sme od každého kandidáta zbierali postoje k 25 konkrétnym otázkam. Pri zvolených primátoroch a predsedoch krajov teraz sledujeme, či konajú v súlade s nimi. Pri každej voľbe nižšie rozbaľ „Sľuby pod lupou“.</p>
+    <div class="legend"><span class="tr-st sledujeme">Sledujeme</span><span class="tr-st plni">Plní sa</span><span class="tr-st splnene">Splnené</span><span class="tr-st rozpor">V rozpore s postojom</span></div>
+    <p style="margin-top:.7rem">Stav meníme len na základe overiteľného zdroja: hlasovania zastupiteľstva, schváleného rozpočtu, uznesenia alebo oficiálneho vyhlásenia. Pri kandidátoch, ktorí odpovede neoverili, ide o postoje, ktoré sme odhadli z verejných zdrojov, a tak ich aj označujeme.</p>
+  </div>
+  <div class="section"><h2><span class="h2-icon"></span>Primátori 12 miest: podrobne</h2><article class="rc" id="bratislava-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Bratislava</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/bratislava-vallo.webp" alt="Matúš Vallo" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Matúš Vallo</div><div class="rw-party">Team Bratislava / PS / SaS / Demokrati</div><div class="rw-num"><strong>64,36 %</strong> · 121 846 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Matúš Vallo</span><span class="rb-val"><strong>64,36 %</strong> · 121 846 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Jozef Ráž</span><span class="rb-val"><strong>32,32 %</strong> · 61 183 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:50.2%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Zuzana Šubová</span><span class="rb-val"><strong>1,82 %</strong> · 3 451 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:2.8%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Ľubomír Geci</span><span class="rb-val"><strong>0,79 %</strong> · 1 502 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:1.2%"></div></div></li><li class="rb rb--rest"><div class="rb-top"><span class="rb-name">Odstúpení kandidáti (2)</span><span class="rb-val"><strong>0,69 %</strong> · 1 312 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:1.1%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">47,4 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2026</span><span class="mp-v">761 mil. €</span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 601 €</span></span><span class="mp mp-dlh y" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">46 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">45</span></span></div>
+    <details class="tr" data-key="bratislava_primator" data-mesto="bratislava" data-meno="Matúš Vallo" data-overene="0" data-rod="m">
+        <summary><span>Sľuby pod lupou: Matúš Vallo</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 47,4 % (196 611 z 415 017 voličov). Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.postoj.sk/volby/komunalne-volby-2026/obec/582000/bratislava" target="_blank" rel="noopener">Postoj</a> · <a href="https://www.topky.sk/cl/2005799/9524409/Komunalne-volby-2026---Bratislava--kandidati-na-primatora--poslanci-a-vysledky" target="_blank" rel="noopener">Topky</a>.<br>Rozpočet a dlh: Schválený rozpočet HM SR Bratislavy 2026, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="kosice-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Košice</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/kosice-lorinc.webp" alt="Ladislav Lörinc" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Ladislav Lörinc</div><div class="rw-party">Košická strana</div><div class="rw-num"><strong>39,89 %</strong> · 27 364 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Ladislav Lörinc</span><span class="rb-val"><strong>39,89 %</strong> · 27 364 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Jaroslav Polaček</span><span class="rb-val"><strong>21,52 %</strong> · 14 766 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:53.9%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Martin Mudrák</span><span class="rb-val"><strong>18,68 %</strong> · 12 816 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:46.8%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Lenka Kovačevičová</span><span class="rb-val"><strong>12,41 %</strong> · 8 513 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:31.1%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Alexander Riabov</span><span class="rb-val"><strong>4,63 %</strong> · 3 177 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:11.6%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Ladislav Lőrincz</span><span class="rb-val"><strong>2,03 %</strong> · 1 397 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:5.1%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Miroslav Sabol</span><span class="rb-val"><strong>0,55 %</strong> · 378 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:1.4%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Alexander Székely</span><span class="rb-val"><strong>0,26 %</strong> · 181 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:0.7%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">37,11 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2026</span><span class="mp-v">438 mil. €</span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 921 €</span></span><span class="mp mp-dlh y" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">35 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">51</span></span></div>
+    <details class="tr" data-key="kosice_primator" data-mesto="kosice" data-meno="Ladislav Lörinc" data-overene="1" data-rod="m">
+        <summary><span>Sľuby pod lupou: Ladislav Lörinc</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 37,11 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.kosicak.sk/clanky/14741/kolko-hlasov-ziskali-vsetci-kandidati-na-primatora-v-okresnych-mestach-kosickeho-kraja-kompletne-vysledky" target="_blank" rel="noopener">Košičák</a>.<br>Rozpočet a dlh: Schválený rozpočet mesta Košice 2026, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="presov-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Prešov</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/presov-olha.webp" alt="František Oľha" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">František Oľha</div><div class="rw-party">Demokrati / PS / DS-ODS</div><div class="rw-num"><strong>40,69 %</strong> · 12 125 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">František Oľha</span><span class="rb-val"><strong>40,69 %</strong> · 12 125 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Pavel Hagyari</span><span class="rb-val"><strong>24,12 %</strong> · 7 187 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:59.3%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Rastislav Mochnacký</span><span class="rb-val"><strong>13,3 %</strong> · 3 964 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:32.7%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Artúr Benes</span><span class="rb-val"><strong>8,54 %</strong> · 2 545 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:21.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Martin Eštočák</span><span class="rb-val"><strong>6,8 %</strong> · 2 027 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:16.7%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Svetlana Pavlovičová</span><span class="rb-val"><strong>6,53 %</strong> · 1 948 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:16.0%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">44,19 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2025</span><span class="mp-v">155 mil. €</span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 761 €</span></span><span class="mp mp-dlh y" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">39 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">31</span></span></div>
+    <details class="tr" data-key="presov_primator" data-mesto="presov" data-meno="František Oľha" data-overene="0" data-rod="m">
+        <summary><span>Sľuby pod lupou: František Oľha</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 44,19 % (30 396 z 68 781 voličov). Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.presovak.sk/clanky/15978/kolko-hlasov-ziskali-vsetci-kandidati-na-primatora-v-okresnych-mestach-presovskeho-kraja-kompletne-vysledky" target="_blank" rel="noopener">Prešovák</a>.<br>Rozpočet a dlh: Schválený rozpočet mesta Prešov 2025, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="zilina-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Žilina</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/zilina-fiabane.webp" alt="Peter Fiabáne" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Peter Fiabáne</div><div class="rw-party">Nezávislý</div><div class="rw-num"><strong>41,22 %</strong> · 11 854 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Peter Fiabáne</span><span class="rb-val"><strong>41,22 %</strong> · 11 854 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Rastislav Johanes</span><span class="rb-val"><strong>28,52 %</strong> · 8 203 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:69.2%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Peter Cibulka</span><span class="rb-val"><strong>22,07 %</strong> · 6 348 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:53.5%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Miroslav Sokol</span><span class="rb-val"><strong>3,2 %</strong> · 921 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:7.8%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Michal Milo</span><span class="rb-val"><strong>2,9 %</strong> · 834 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:7.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Anton Kozlík</span><span class="rb-val"><strong>1,52 %</strong> · 439 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:3.7%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Ivan Magát</span><span class="rb-val"><strong>0,4 %</strong> · 116 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:1.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Bohumil Kostolný <span class="rb-note">odstúpil/a</span></span><span class="rb-val"><strong>0,13 %</strong> · 39 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:0.3%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">42,98 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2024</span><span class="mp-v">165 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 964 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">28 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">31</span></span></div>
+    <details class="tr" data-key="zilina_primator" data-mesto="zilina" data-meno="Peter Fiabáne" data-overene="1" data-rod="m">
+        <summary><span>Sľuby pod lupou: Peter Fiabáne</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 42,98 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.zilinak.sk/clanky/43635/kolko-hlasov-ziskali-vsetci-kandidati-na-primatora-v-okresnych-mestach-zilinskeho-kraja-kompletne-vysledky" target="_blank" rel="noopener">Žilinák</a>.<br>Rozpočet a dlh: Záverečný účet mesta Žilina 2024, odhad pre 2025, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="bystrica-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Banská Bystrica</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/bb-nosko.webp" alt="Ján Nosko" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Ján Nosko</div><div class="rw-party">Nezávislý / Smer-SD / Hlas-SD</div><div class="rw-num"><strong>46,78 %</strong> · 12 629 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Ján Nosko</span><span class="rb-val"><strong>46,78 %</strong> · 12 629 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Diana Javorčíková</span><span class="rb-val"><strong>42,94 %</strong> · 11 591 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:91.8%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Matúš Molitoris</span><span class="rb-val"><strong>6,94 %</strong> · 1 875 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:14.8%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Marian Kotleba</span><span class="rb-val"><strong>2,84 %</strong> · 769 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:6.1%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Tomáš Sobota <span class="rb-note">odstúpil/a</span></span><span class="rb-val"><strong>0,37 %</strong> · 102 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:0.8%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Ondrej Vereš <span class="rb-note">odstúpil/a</span></span><span class="rb-val"><strong>0,09 %</strong> · 25 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:0.2%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">44,47 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2024</span><span class="mp-v">130 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 757 €</span></span><span class="mp mp-dlh y" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">32 %</span></span><span class="mp" title="Počet z obdobia 2022 – 2026"><span class="mp-l">Poslanci</span><span class="mp-v">31*</span></span></div>
+    <details class="tr" data-key="bystrica_primator" data-mesto="bystrica" data-meno="Ján Nosko" data-overene="1" data-rod="m">
+        <summary><span>Sľuby pod lupou: Ján Nosko</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 44,47 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.bystricak.sk/clanky/13553/kolko-hlasov-ziskali-vsetci-kandidati-na-primatora-v-okresnych-mestach-banskobystrickeho-kraja-kompletne-vysledky" target="_blank" rel="noopener">Bystričák</a>.<br>Rozpočet a dlh: Záverečný účet mesta Banská Bystrica 2024, odhad pre 2025, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="nitra-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Nitra</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/nitra-hattas.webp" alt="Marek Hattas" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Marek Hattas</div><div class="rw-party">Tím kraj Nitra / PS / SaS / KDH / Demokrati / Hnutie Slovensko</div><div class="rw-num"><strong>50,66 %</strong> · 13 459 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Marek Hattas</span><span class="rb-val"><strong>50,66 %</strong> · 13 459 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Igor Kršiak</span><span class="rb-val"><strong>39,1 %</strong> · 10 379 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:77.2%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Marek Illéš</span><span class="rb-val"><strong>6,3 %</strong> · 1 685 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:12.4%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Zuzana Uhríková</span><span class="rb-val"><strong>3,9 %</strong> · 1 041 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:7.7%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">41 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2024</span><span class="mp-v">115 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 716 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">25 %</span></span><span class="mp" title="Počet z obdobia 2022 – 2026"><span class="mp-l">Poslanci</span><span class="mp-v">31*</span></span></div>
+    <details class="tr" data-key="nitra_primator" data-mesto="nitra" data-meno="Marek Hattas" data-overene="0" data-rod="m">
+        <summary><span>Sľuby pod lupou: Marek Hattas</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 41 % (27 101 z 66 075 voličov). Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.topky.sk/cl/2005799/9525965/Komunalne-volby-2026---Nitra--kandidati-na-primatora--poslanci-a-vysledky" target="_blank" rel="noopener">Topky</a>.<br>Rozpočet a dlh: Záverečný účet mesta Nitra 2024, odhad pre 2025, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="trnava-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Trnava</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/trnava-nemcovska.webp" alt="Eva Nemčovská" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolená</span><div class="rw-name">Eva Nemčovská</div><div class="rw-party">Nezávislá / Lepšia Trnava</div><div class="rw-num"><strong>60,47 %</strong> · 13 411 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Eva Nemčovská</span><span class="rb-val"><strong>60,47 %</strong> · 13 411 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Branislav Baroš</span><span class="rb-val"><strong>30,9 %</strong> · 6 848 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:51.1%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Martin Pullmann</span><span class="rb-val"><strong>3,7 %</strong> · 826 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:6.1%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Andrea Čajková</span><span class="rb-val"><strong>3,4 %</strong> · 744 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:5.6%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Jozef Obselka</span><span class="rb-val"><strong>1,2 %</strong> · 267 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:2.0%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">42 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2026</span><span class="mp-v">114 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 818 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">28 %</span></span><span class="mp" title="Počet z obdobia 2022 – 2026"><span class="mp-l">Poslanci</span><span class="mp-v">31*</span></span></div>
+    <details class="tr" data-key="trnava_primator" data-mesto="trnava" data-meno="Eva Nemčovská" data-overene="0" data-rod="f">
+        <summary><span>Sľuby pod lupou: Eva Nemčovská</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 42 % (22 740 z 54 190 voličov). Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.topky.sk/cl/2005799/9525073/Komunalne-volby-2026---Trnava--kandidati-na-primatora--poslanci-a-vysledky" target="_blank" rel="noopener">Topky</a>.<br>Rozpočet a dlh: Rozpočet mesta Trnava 2026; dlh podľa INEKO 2024 (odhad), <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="trencin-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Trenčín</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/trencin-forgac.webp" alt="Ján Forgáč" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Ján Forgáč</div><div class="rw-party">Nezávislý</div><div class="rw-num"><strong>69,17 %</strong> · 12 413 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Ján Forgáč</span><span class="rb-val"><strong>69,17 %</strong> · 12 413 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Miloš Mičega</span><span class="rb-val"><strong>23,42 %</strong> · 4 203 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:33.9%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Danica Birošová</span><span class="rb-val"><strong>4,86 %</strong> · 873 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:7.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Michal Bratranec</span><span class="rb-val"><strong>2,53 %</strong> · 455 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:3.7%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">39,66 %</span></span><span class="mp"><span class="mp-l">Rozpočet </span><span class="mp-v">58 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 055 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">30 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">25</span></span></div>
+    <details class="tr" data-key="trencin_primator" data-mesto="trencin" data-meno="Ján Forgáč" data-overene="0" data-rod="m">
+        <summary><span>Sľuby pod lupou: Ján Forgáč</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 39,66 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.trencinak.sk/clanky/14284/kolko-hlasov-ziskali-vsetci-kandidati-na-primatora-v-okresnych-mestach-trencianskeho-kraja-kompletne-vysledky" target="_blank" rel="noopener">Trenčínak</a>.<br>Rozpočet a dlh: vlastný odhad, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="martin-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Martin</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/martin-uhercik.webp" alt="Michal Uherčík" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Michal Uherčík</div><div class="rw-party">SaS / PS / KDH / Hnutie Slovensko / Demokrati / OKS</div><div class="rw-num"><strong>39,06 %</strong> · 6 546 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Michal Uherčík</span><span class="rb-val"><strong>39,06 %</strong> · 6 546 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Milan Ftorek</span><span class="rb-val"><strong>21,64 %</strong> · 3 627 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:55.4%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Ján Danko</span><span class="rb-val"><strong>20,95 %</strong> · 3 511 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:53.6%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Pavol Zemko</span><span class="rb-val"><strong>9,96 %</strong> · 1 669 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:25.5%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Igor Hubáček</span><span class="rb-val"><strong>2,7 %</strong> · 453 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:6.9%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Matej Turzo</span><span class="rb-val"><strong>2,53 %</strong> · 424 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:6.5%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Renáta Habrunová</span><span class="rb-val"><strong>1,39 %</strong> · 233 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:3.6%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Jozef Petráš</span><span class="rb-val"><strong>0,9 %</strong> · 151 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:2.3%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Marek Belák <span class="rb-note">odstúpil/a</span></span><span class="rb-val"><strong>0,85 %</strong> · 143 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:2.2%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">39,33 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2026</span><span class="mp-v">72 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 440 €</span></span><span class="mp mp-dlh y" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">35 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">25</span></span></div>
+    <details class="tr" data-key="martin_primator" data-mesto="martin" data-meno="Michal Uherčík" data-overene="1" data-rod="m">
+        <summary><span>Sľuby pod lupou: Michal Uherčík</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 39,33 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.zilinak.sk/clanky/43635/kolko-hlasov-ziskali-vsetci-kandidati-na-primatora-v-okresnych-mestach-zilinskeho-kraja-kompletne-vysledky" target="_blank" rel="noopener">Žilinák</a>.<br>Rozpočet a dlh: Odhad 2026 (rozpočet mesta Martin 2024 = 68,9 mil. €, rastúci trend); prepočet na 49 997 obyv.; dlh podľa INEKO (odhad), <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="poprad-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Poprad</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/poprad-kralik.webp" alt="Jozef Králik" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Jozef Králik</div><div class="rw-party">Nezávislý</div><div class="rw-num"><strong>49,91 %</strong> · 8 088 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Jozef Králik</span><span class="rb-val"><strong>49,91 %</strong> · 8 088 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Anton Danko</span><span class="rb-val"><strong>44,22 %</strong> · 7 167 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:88.6%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Mikuláš Bobák</span><span class="rb-val"><strong>3,62 %</strong> · 587 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:7.3%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Roderik Ledecký</span><span class="rb-val"><strong>1,18 %</strong> · 192 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:2.4%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Patrik Františka</span><span class="rb-val"><strong>1,04 %</strong> · 170 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:2.1%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">41,01 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2025</span><span class="mp-v">76 mil. €</span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 520 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">8 %</span></span><span class="mp" title="Počet z obdobia 2022 – 2026"><span class="mp-l">Poslanci</span><span class="mp-v">19*</span></span></div>
+    <details class="tr" data-key="poprad_primator" data-mesto="poprad" data-meno="Jozef Králik" data-overene="1" data-rod="m">
+        <summary><span>Sľuby pod lupou: Jozef Králik</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 41,01 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.presovak.sk/clanky/15978/kolko-hlasov-ziskali-vsetci-kandidati-na-primatora-v-okresnych-mestach-presovskeho-kraja-kompletne-vysledky" target="_blank" rel="noopener">Prešovák</a>.<br>Rozpočet a dlh: Rozpočet mesta Poprad 2025, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="michalovce-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Michalovce</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/michalovce-dufinec.webp" alt="Miroslav Dufinec" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Miroslav Dufinec</div><div class="rw-party">Smer-SD / Hlas-SD / SNS / Sme rodina / SMS</div><div class="rw-num"><strong>45,4 %</strong> · 4 410 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Miroslav Dufinec</span><span class="rb-val"><strong>45,4 %</strong> · 4 410 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Miroslav Vidovenec</span><span class="rb-val"><strong>30,81 %</strong> · 2 993 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:67.9%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Dušan Goda</span><span class="rb-val"><strong>8,44 %</strong> · 820 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:18.6%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Erik Sibal</span><span class="rb-val"><strong>6,8 %</strong> · 661 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:15.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Juraj Čarný</span><span class="rb-val"><strong>5,59 %</strong> · 543 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:12.3%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Eva Copáková</span><span class="rb-val"><strong>2,15 %</strong> · 209 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:4.7%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Jozef Bobík <span class="rb-note">odstúpil/a</span></span><span class="rb-val"><strong>0,78 %</strong> · 76 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:1.7%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">34,51 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2025</span><span class="mp-v">47 mil. €</span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 300 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">20 %</span></span><span class="mp" title="Počet z obdobia 2022 – 2026"><span class="mp-l">Poslanci</span><span class="mp-v">25*</span></span></div>
+    <details class="tr" data-key="michalovce_primator" data-mesto="michalovce" data-meno="Miroslav Dufinec" data-overene="0" data-rod="m">
+        <summary><span>Sľuby pod lupou: Miroslav Dufinec</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 34,51 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.kosicak.sk/clanky/14741/kolko-hlasov-ziskali-vsetci-kandidati-na-primatora-v-okresnych-mestach-kosickeho-kraja-kompletne-vysledky" target="_blank" rel="noopener">Košičák</a>.<br>Rozpočet a dlh: Rozpočet mesta Michalovce 2025, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="snv-primator">
+    <div class="rc-head"><span class="rc-type">Primátor</span><h3>Spišská Nová Ves</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/snv-demecko.webp" alt="Dávid Demečko" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Dávid Demečko</div><div class="rw-party">Hlas-SD / Smer-SD / Sme rodina / Republika / Konzervatívci – Kresťanská únia</div><div class="rw-num"><strong>37,48 %</strong> · 4 176 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Dávid Demečko</span><span class="rb-val"><strong>37,48 %</strong> · 4 176 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Adnan Akram</span><span class="rb-val"><strong>29,56 %</strong> · 3 294 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:78.9%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Pavol Bečarik</span><span class="rb-val"><strong>20,51 %</strong> · 2 286 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:54.7%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Lukáš Goduš</span><span class="rb-val"><strong>5,73 %</strong> · 639 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:15.3%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Ľubica Bednárová</span><span class="rb-val"><strong>2,8 %</strong> · 313 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:7.5%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Miroslav Uhrin</span><span class="rb-val"><strong>2,52 %</strong> · 281 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:6.7%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Judita Iľašová <span class="rb-note">odstúpil/a</span></span><span class="rb-val"><strong>1,36 %</strong> · 152 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:3.6%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">40,83 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2026</span><span class="mp-v">60 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">1 622 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">30 %</span></span><span class="mp" title="Počet z obdobia 2022 – 2026"><span class="mp-l">Poslanci</span><span class="mp-v">19*</span></span></div>
+    <details class="tr" data-key="snv_primator" data-mesto="snv" data-meno="Dávid Demečko" data-overene="0" data-rod="m">
+        <summary><span>Sľuby pod lupou: Dávid Demečko</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 40,83 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.kosicak.sk/clanky/14741/kolko-hlasov-ziskali-vsetci-kandidati-na-primatora-v-okresnych-mestach-kosickeho-kraja-kompletne-vysledky" target="_blank" rel="noopener">Košičák</a>.<br>Rozpočet a dlh: Rozpočet mesta Spišská Nová Ves 2026; dlh podľa INEKO 2024 (odhad), <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article></div><div class="section"><h2><span class="h2-icon"></span>Predsedovia 8 krajov: podrobne</h2><article class="rc" id="bratislava-vuc">
+    <div class="rc-head"><span class="rc-type">Predseda kraja</span><h3>Bratislavský kraj (BSK)</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/bratislava-droba.webp" alt="Juraj Droba" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Juraj Droba</div><div class="rw-party">Team Bratislava / PS / SaS / Demokrati</div><div class="rw-num"><strong>70,96 %</strong> · 188 732 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Juraj Droba</span><span class="rb-val"><strong>70,96 %</strong> · 188 732 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Rastislav Gajarský</span><span class="rb-val"><strong>11,54 %</strong> · 30 695 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:16.3%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Zuzana Krajčovičová</span><span class="rb-val"><strong>9,6 %</strong> · 25 556 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:13.5%"></div></div></li><li class="rb rb--rest"><div class="rb-top"><span class="rb-name">Ostatní kandidáti (4)</span><span class="rb-val"><strong>7,86 %</strong> · 20 958 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:11.1%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">46,5 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2025</span><span class="mp-v">720 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">978 €</span></span><span class="mp mp-dlh y" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">31 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">56</span></span></div>
+    <details class="tr" data-key="bratislava_vuc" data-mesto="bratislava" data-meno="Juraj Droba" data-overene="0" data-rod="m">
+        <summary><span>Sľuby pod lupou: Juraj Droba</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 46,5 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.postoj.sk/volby/komunalne-volby-2026/kraj/1/bratislavsky-kraj" target="_blank" rel="noopener">Postoj</a>.<br>Rozpočet a dlh: BSK rozpočet 2025, odhad pre 2026, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="trnava-vuc">
+    <div class="rc-head"><span class="rc-type">Predseda kraja</span><h3>Trnavský kraj (TTSK)</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/trnava-viskupic.webp" alt="Jozef Viskupič" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Jozef Viskupič</div><div class="rw-party">PS / SaS / KDH / Demokrati / Hnutie Slovensko / OKS / Magyar Fórum</div><div class="rw-num"><strong>54,04 %</strong> · 103 083 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Jozef Viskupič</span><span class="rb-val"><strong>54,04 %</strong> · 103 083 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">József Berényi</span><span class="rb-val"><strong>20,86 %</strong> · 39 790 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:38.6%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Peter Hambálek</span><span class="rb-val"><strong>11,67 %</strong> · 22 263 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:21.6%"></div></div></li><li class="rb rb--rest"><div class="rb-top"><span class="rb-name">Ostatní kandidáti (4)</span><span class="rb-val"><strong>13,4 %</strong> · 25 585 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:24.8%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">44,4 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2026</span><span class="mp-v">320 mil. €</span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">514 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">30 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">40</span></span></div>
+    <details class="tr" data-key="trnava_vuc" data-mesto="trnava" data-meno="Jozef Viskupič" data-overene="1" data-rod="m">
+        <summary><span>Sľuby pod lupou: Jozef Viskupič</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 44,4 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.postoj.sk/volby/komunalne-volby-2026/kraj/2/trnavsky-kraj" target="_blank" rel="noopener">Postoj</a>.<br>Rozpočet a dlh: Schválený rozpočet TTSK 2026 (vrátane fin. operácií); zadlženosť k 31. 12. 2025, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="trencin-vuc">
+    <div class="rc-head"><span class="rc-type">Predseda kraja</span><h3>Trenčiansky kraj (TSK)</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/trencin-baska.webp" alt="Jaroslav Baška" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Jaroslav Baška</div><div class="rw-party">Smer-SD / Hlas-SD / SNS / Republika</div><div class="rw-num"><strong>57,44 %</strong> · 119 827 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Jaroslav Baška</span><span class="rb-val"><strong>57,44 %</strong> · 119 827 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Natália Svítková</span><span class="rb-val"><strong>39,02 %</strong> · 81 400 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:67.9%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Daniel Galas</span><span class="rb-val"><strong>2,29 %</strong> · 4 787 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:4.0%"></div></div></li><li class="rb rb--rest"><div class="rb-top"><span class="rb-name">Ostatní kandidáti (1)</span><span class="rb-val"><strong>1,24 %</strong> · 2 595 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:2.2%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">47,5 %</span></span><span class="mp"><span class="mp-l">Rozpočet </span><span class="mp-v">290 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">512 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">30 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">44</span></span></div>
+    <details class="tr" data-key="trencin_vuc" data-mesto="trencin" data-meno="Jaroslav Baška" data-overene="0" data-rod="m">
+        <summary><span>Sľuby pod lupou: Jaroslav Baška</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 47,5 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.postoj.sk/volby/komunalne-volby-2026/kraj/3/trenciansky-kraj" target="_blank" rel="noopener">Postoj</a>.<br>Rozpočet a dlh: vlastný odhad, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="nitra-vuc">
+    <div class="rc-head"><span class="rc-type">Predseda kraja</span><h3>Nitriansky kraj (NSK)</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/nitra-becik.webp" alt="Branislav Becík" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Branislav Becík</div><div class="rw-party">Hlas-SD / Smer-SD / Republika</div><div class="rw-num"><strong>50,47 %</strong> · 115 058 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Branislav Becík</span><span class="rb-val"><strong>50,47 %</strong> · 115 058 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Henrich Varga</span><span class="rb-val"><strong>28,86 %</strong> · 65 807 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:57.2%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Tibor Csenger</span><span class="rb-val"><strong>10,4 %</strong> · 23 726 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:20.6%"></div></div></li><li class="rb rb--rest"><div class="rb-top"><span class="rb-name">Ostatní kandidáti (4)</span><span class="rb-val"><strong>10,24 %</strong> · 23 370 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:20.3%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">45,3 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2025</span><span class="mp-v">302 mil. €</span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">448 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">6 %</span></span><span class="mp" title="Počet z obdobia 2022 – 2026"><span class="mp-l">Poslanci</span><span class="mp-v">57*</span></span></div>
+    <details class="tr" data-key="nitra_vuc" data-mesto="nitra" data-meno="Branislav Becík" data-overene="0" data-rod="m">
+        <summary><span>Sľuby pod lupou: Branislav Becík</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 45,3 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.postoj.sk/volby/komunalne-volby-2026/kraj/4/nitriansky-kraj" target="_blank" rel="noopener">Postoj</a>.<br>Rozpočet a dlh: Schválený rozpočet NSK 2025, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="zilina-vuc">
+    <div class="rc-head"><span class="rc-type">Predseda kraja</span><h3>Žilinský kraj (ŽSK)</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/zilina-jurinova.webp" alt="Erika Jurinová" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolená</span><div class="rw-name">Erika Jurinová</div><div class="rw-party">Nezávislá / Hnutie Slovensko / KDH / Za ľudí / NOVA / SaS / PS / Demokrati / OKS / ODS / Konzervatívci</div><div class="rw-num"><strong>52,06 %</strong> · 134 617 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Erika Jurinová</span><span class="rb-val"><strong>52,06 %</strong> · 134 617 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Igor Choma</span><span class="rb-val"><strong>25,8 %</strong> · 66 725 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:49.6%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Martin Kapitulík</span><span class="rb-val"><strong>12,65 %</strong> · 32 721 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:24.3%"></div></div></li><li class="rb rb--rest"><div class="rb-top"><span class="rb-name">Ostatní kandidáti (4)</span><span class="rb-val"><strong>9,46 %</strong> · 24 482 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:18.2%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">50,1 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2025</span><span class="mp-v">375 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">540 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">22 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">56</span></span></div>
+    <details class="tr" data-key="zilina_vuc" data-mesto="zilina" data-meno="Erika Jurinová" data-overene="1" data-rod="f">
+        <summary><span>Sľuby pod lupou: Erika Jurinová</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 50,1 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.postoj.sk/volby/komunalne-volby-2026/kraj/5/zilinsky-kraj" target="_blank" rel="noopener">Postoj</a>.<br>Rozpočet a dlh: ŽSK rozpočet 2025, odhad, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="bystrica-vuc">
+    <div class="rc-head"><span class="rc-type">Predseda kraja</span><h3>Banskobystrický kraj (BBSK)</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/bb-lunter.webp" alt="Ondrej Lunter" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Ondrej Lunter</div><div class="rw-party">Nezávislý / SaS / Hlas-SD / KDH / PS / Maďarská aliancia</div><div class="rw-num"><strong>64,81 %</strong> · 135 971 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Ondrej Lunter</span><span class="rb-val"><strong>64,81 %</strong> · 135 971 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Miroslav Suja</span><span class="rb-val"><strong>14,99 %</strong> · 31 465 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:23.1%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Marian Kotleba</span><span class="rb-val"><strong>9,11 %</strong> · 19 128 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:14.1%"></div></div></li><li class="rb rb--rest"><div class="rb-top"><span class="rb-name">Ostatní kandidáti (4)</span><span class="rb-val"><strong>11,04 %</strong> · 23 204 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:17.0%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">46,2 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2025</span><span class="mp-v">340 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">528 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">28 %</span></span><span class="mp" title="Počet z obdobia 2022 – 2026"><span class="mp-l">Poslanci</span><span class="mp-v">49*</span></span></div>
+    <details class="tr" data-key="bystrica_vuc" data-mesto="bystrica" data-meno="Ondrej Lunter" data-overene="1" data-rod="m">
+        <summary><span>Sľuby pod lupou: Ondrej Lunter</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 46,2 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.postoj.sk/volby/komunalne-volby-2026/kraj/6/banskobystricky-kraj" target="_blank" rel="noopener">Postoj</a>.<br>Rozpočet a dlh: BBSK rozpočet 2025, odhad, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="presov-vuc">
+    <div class="rc-head"><span class="rc-type">Predseda kraja</span><h3>Prešovský kraj (PSK)</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/presov-majersky.webp" alt="Milan Majerský" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Milan Majerský</div><div class="rw-party">KDH / Hnutie Slovensko / SaS / Za ľudí / Konzervatívci-KÚ / PS</div><div class="rw-num"><strong>48,77 %</strong> · 138 819 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Milan Majerský</span><span class="rb-val"><strong>48,77 %</strong> · 138 819 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Milan Mazurek</span><span class="rb-val"><strong>35,18 %</strong> · 100 131 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:72.1%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Samuel Migaľ</span><span class="rb-val"><strong>6,05 %</strong> · 17 240 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:12.4%"></div></div></li><li class="rb rb--rest"><div class="rb-top"><span class="rb-name">Ostatní kandidáti (8)</span><span class="rb-val"><strong>9,95 %</strong> · 28 404 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:20.4%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">49,9 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2026</span><span class="mp-v">553 mil. €</span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">683 €</span></span><span class="mp mp-dlh g" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">30 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">67</span></span></div>
+    <details class="tr" data-key="presov_vuc" data-mesto="presov" data-meno="Milan Majerský" data-overene="1" data-rod="m">
+        <summary><span>Sľuby pod lupou: Milan Majerský</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 49,9 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.postoj.sk/volby/komunalne-volby-2026/kraj/7/presovsky-kraj" target="_blank" rel="noopener">Postoj</a>.<br>Rozpočet a dlh: Schválený rozpočet PSK 2026, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article><article class="rc" id="kosice-vuc">
+    <div class="rc-head"><span class="rc-type">Predseda kraja</span><h3>Košický kraj (KSK)</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/kosice-trnka.webp" alt="Rastislav Trnka" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Rastislav Trnka</div><div class="rw-party">Nezávislý / Maďarská aliancia</div><div class="rw-num"><strong>32 %</strong> · 76 421 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Rastislav Trnka</span><span class="rb-val"><strong>32 %</strong> · 76 421 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Marián Porvažník</span><span class="rb-val"><strong>30,7 %</strong> · 73 304 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:95.9%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Igor Šimko</span><span class="rb-val"><strong>24,15 %</strong> · 57 682 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:75.5%"></div></div></li><li class="rb rb--rest"><div class="rb-top"><span class="rb-name">Ostatní kandidáti (3)</span><span class="rb-val"><strong>13,13 %</strong> · 31 366 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:41.0%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">42,5 %</span></span><span class="mp"><span class="mp-l">Rozpočet 2025</span><span class="mp-v">390 mil. € <span class="mp-odhad">odhad</span></span></span><span class="mp"><span class="mp-l">Na obyvateľa</span><span class="mp-v">500 €</span></span><span class="mp mp-dlh y" title="Dlh voči bežným príjmom podľa posledných záverečných účtov (INEKO). Zákonný limit je 60 %."><span class="mp-l">Zadlženosť</span><span class="mp-v">32 %</span></span><span class="mp" title="Počet poslancov zvolených 24. 10. 2026"><span class="mp-l">Poslanci</span><span class="mp-v">59</span></span></div>
+    <details class="tr" data-key="kosice_vuc" data-mesto="kosice" data-meno="Rastislav Trnka" data-overene="0" data-rod="m">
+        <summary><span>Sľuby pod lupou: Rastislav Trnka</span><span class="tr-count"></span></summary>
+        <div class="tr-body"><p class="tr-loading">Načítavam postoje…</p></div>
+      </details>
+    <p class="rc-src">Účasť 42,5 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.postoj.sk/volby/komunalne-volby-2026/kraj/8/kosicky-kraj" target="_blank" rel="noopener">Postoj</a>.<br>Rozpočet a dlh: KSK rozpočet 2025, odhad, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>.</p>
+  </article></div><div class="section"><h2><span class="h2-icon"></span>Starostovia 4 mestských častí: podrobne</h2><article class="rc" id="ba-stare-mesto">
+    <div class="rc-head"><span class="rc-type">Starosta mestskej časti</span><h3>Bratislava-Staré Mesto</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/bratislava-vagac.webp" alt="Matej Vagač" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Matej Vagač</div><div class="rw-party">PS / Team Bratislava / SaS / Demokrati</div><div class="rw-num"><strong>62,18 %</strong> · 11 588 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Matej Vagač</span><span class="rb-val"><strong>62,18 %</strong> · 11 588 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Zuzana Aufrichtová</span><span class="rb-val"><strong>19,8 %</strong> · 3 692 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:31.8%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Miroslav Vetrík</span><span class="rb-val"><strong>10,4 %</strong> · 1 949 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:16.7%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Petra Hitková</span><span class="rb-val"><strong>7,5 %</strong> · 1 407 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:12.1%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">46 %</span></span></div>
+    
+    <p class="rc-src">Účasť 46 % (19 901 z 43 235 voličov). Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.topky.sk/cl/2005799/9524411/Komunalne-volby-2026---Bratislava-Stare-Mesto--kandidati-na-starostu--poslanci-a-vysledky" target="_blank" rel="noopener">Topky</a>.</p>
+  </article><article class="rc" id="ba-petrzalka">
+    <div class="rc-head"><span class="rc-type">Starosta mestskej časti</span><h3>Bratislava-Petržalka</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/bratislava-hrcka.webp" alt="Ján Hrčka" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Ján Hrčka</div><div class="rw-party">Nezávislý / Strana Krajina</div><div class="rw-num"><strong>54,36 %</strong> · 22 665 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Ján Hrčka</span><span class="rb-val"><strong>54,36 %</strong> · 22 665 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Daniel Klimovský</span><span class="rb-val"><strong>34,4 %</strong> · 14 330 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:63.3%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Juraj Mravec</span><span class="rb-val"><strong>11,2 %</strong> · 4 693 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:20.6%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">46,4 %</span></span></div>
+    
+    <p class="rc-src">Účasť 46,4 % (43 896 z 94 606 voličov). Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.topky.sk/cl/2005799/9524439/Komunalne-volby-2026---Bratislava-Petrzalka--kandidati-na-starostu--poslanci-a-vysledky" target="_blank" rel="noopener">Topky</a>.</p>
+  </article><article class="rc" id="ke-stare-mesto">
+    <div class="rc-head"><span class="rc-type">Starosta mestskej časti</span><h3>Košice-Staré Mesto</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/kosice-holeczy.webp" alt="Igor Holéczy" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Igor Holéczy</div><div class="rw-party">PS / Demokrati / Za ľudí / Maďarská aliancia</div><div class="rw-num"><strong>40,68 %</strong> · 2 690 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Igor Holéczy</span><span class="rb-val"><strong>40,68 %</strong> · 2 690 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Igor Petrovčik</span><span class="rb-val"><strong>25,62 %</strong> · 1 694 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:63.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Renáta Zolnaiová</span><span class="rb-val"><strong>9,37 %</strong> · 620 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:23.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Alena Zvarová Bašistová</span><span class="rb-val"><strong>9,01 %</strong> · 596 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:22.1%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Peter Škripko</span><span class="rb-val"><strong>8,4 %</strong> · 556 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:20.6%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Michal Djordjevič</span><span class="rb-val"><strong>6,89 %</strong> · 456 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:16.9%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">37,88 %</span></span></div>
+    
+    <p class="rc-src">Účasť 37,88 %. Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://kosicednes.sk/kosice/igor-holeczy-bude-novym-starostom-mc-kosice-stare-mesto" target="_blank" rel="noopener">Košice:dnes</a>.</p>
+  </article><article class="rc" id="ke-zapad">
+    <div class="rc-head"><span class="rc-type">Starosta mestskej časti</span><h3>Košice-Západ</h3></div>
+    <div class="rw"><img class="rw-img" src="/assets/candidates/kosice-vrchota.webp" alt="Marcel Vrchota" width="200" height="200" loading="lazy" decoding="async"><div><span class="rw-badge">Zvolený</span><div class="rw-name">Marcel Vrchota</div><div class="rw-party">SaS / PS / Za ľudí / Hnutie Slovensko / Demokrati / DS-ODS</div><div class="rw-num"><strong>32,32 %</strong> · 3 317 hlasov</div></div></div>
+    <ul class="rbars"><li class="rb rb--win"><div class="rb-top"><span class="rb-name">Marcel Vrchota</span><span class="rb-val"><strong>32,32 %</strong> · 3 317 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:100.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Patrícia Helfenová</span><span class="rb-val"><strong>14 %</strong> · 1 433 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:43.3%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Andrej Sitkár</span><span class="rb-val"><strong>12,6 %</strong> · 1 298 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:39.0%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Michal Starec</span><span class="rb-val"><strong>11,1 %</strong> · 1 140 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:34.3%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Dominik Karaffa</span><span class="rb-val"><strong>10,8 %</strong> · 1 113 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:33.4%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Peter Berinšter</span><span class="rb-val"><strong>6,1 %</strong> · 622 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:18.9%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Beáta Zemková</span><span class="rb-val"><strong>5,4 %</strong> · 558 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:16.7%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Filip Gaál</span><span class="rb-val"><strong>4,6 %</strong> · 475 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:14.2%"></div></div></li><li class="rb"><div class="rb-top"><span class="rb-name">Zdenko Lipták</span><span class="rb-val"><strong>3 %</strong> · 305 hl.</span></div><div class="rb-track"><div class="rb-fill" style="width:9.3%"></div></div></li></ul>
+    <div class="mps"><span class="mp"><span class="mp-l">Účasť 2026</span><span class="mp-v">34,7 %</span></span></div>
+    
+    <p class="rc-src">Účasť 34,7 % (10 895 z 31 373 voličov). Zdroj výsledkov: Štatistický úrad SR, prevzaté z: <a href="https://www.topky.sk/cl/2005799/9529411/Komunalne-volby-2026---Kosice-Zapad--kandidati-na-starostu--poslanci-a-vysledky" target="_blank" rel="noopener">Topky</a>.</p>
+  </article></div>
+  <div class="section">
+    <h2><span class="h2-icon"></span>Zdroje</h2>
+    <p>Výsledky: <a href="https://volby.statistics.sk" target="_blank" rel="noopener">Štatistický úrad SR</a>, prevzaté z článkov uvedených pri každej voľbe; Štátna komisia pre voľby výsledky potvrdila. Pri krajoch uvádzame troch najúspešnejších kandidátov a ostatných spolu. Rozpočty a zadlženosť sú údaje, ktoré sme zverejnili pred voľbami (rozpočty miest a krajov, <a href="http://www.hospodarenieobci.sk" target="_blank" rel="noopener">INEKO</a>); hodnoty označené „odhad“ sú vlastný odhad. Poslanci označení hviezdičkou: počet z obdobia 2022 – 2026.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-col__title">O projekte</div>
+        <p>Volebná kalkulačka 2026 je nezávislý občiansky projekt skupiny <strong>Občania štátu</strong>. Nevznikla na objednávku žiadnej strany, kandidáta ani sponzora. Nikto z nás za túto prácu nedostáva odmenu.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col__title">Transparentnosť</div>
+        <p>Všetky pozície kandidátov sú odvodené z verejne dostupných volebných programov, rozhovorov a hlasovaní. Každé priradenie je overiteľné.</p>
+        <a class="footer-link" href="https://github.com/Ranenter/rozhodnisa" target="_blank" rel="noopener">→ GitHub repozitár</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col__title">Sprievodcovia</div>
+        <a class="footer-link" href="/vysledky">Výsledky volieb 2026</a>
+        <a class="footer-link" href="/vysledky">Výsledky volieb 2026</a>
+        <a class="footer-link" href="/ako-volit">Ako voliť 2026</a>
+        <a class="footer-link" href="/kandidati">Prehľad kandidátov</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col__title">Podpora</div>
+        <p>Robíme to radi a zadarmo, ale ak sa ti páči čo robíme, nepodporuj nás - pomôž radšej zvieratkám:</p>
+        <a class="footer-donate" href="https://www.uvp.sk/ako-pomoct/" target="_blank" rel="noopener">Darovať útulku</a>
+        <p class="footer-contact"><a href="#" onclick="this.href='mail'+('to:ranenter7@'+'proton.me');return true;">Napíšte nám</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Občania štátu</span>
+      <span class="footer-dot">·</span>
+      <span>Erby miest: <a href="https://commons.wikimedia.org" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55)">Wikimedia Commons</a>, CC BY-SA 4.0</span>
+      <span class="footer-dot">·</span>
+      <span>Nezávislý občiansky projekt · Anonymné odpovede · Žiadne cookies · Žiadna reklama</span>
+      <span class="footer-dot">·</span>
+      <a href="https://github.com/Ranenter/rozhodnisa/blob/main/LICENSE" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55)">MIT License</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var btn = document.getElementById('burgerBtn');
+  var dd  = document.getElementById('navDropdown');
+  if(!btn || !dd) return;
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = dd.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(){ 
+    dd.classList.remove('open'); 
+    btn.classList.remove('open'); 
+    btn.setAttribute('aria-expanded','false'); 
+  });
+})();
+</script>
+<script>
+(function(){
+  var ST={sledujeme:'Sledujeme',plni:'Plní sa',splnene:'Splnené',rozpor:'V rozpore s postojom'};
+  var loaded={};
+  function load(src){ if(loaded[src]) return loaded[src];
+    loaded[src]=new Promise(function(ok,ko){ var s=document.createElement('script'); s.src=src; s.onload=ok; s.onerror=ko; document.head.appendChild(s); });
+    return loaded[src]; }
+  function esc(t){ return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function norm(t){ return String(t).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim(); }
+  function stavy(key){ var S=window.SLUBY&&window.SLUBY.stavy; return (S&&S[key])||{}; }
+  function counts(key,qs,id){ var st=stavy(key),n=0,ok=0,bad=0;
+    qs.forEach(function(q,i){ var a=q.a&&q.a[id]; if(a!=='agree'&&a!=='disagree') return; n++; var s=(st[i+1]||{}).stav; if(s==='splnene') ok++; if(s==='rozpor') bad++; });
+    return {n:n,ok:ok,bad:bad}; }
+  function render(det){
+    var key=det.dataset.key, mesto=det.dataset.mesto, meno=det.dataset.meno, body=det.querySelector('.tr-body');
+    Promise.all([load('/data/data-sluby.js'), load('/data/data-'+mesto+'.js')]).then(function(){
+      var D=window.VAA_DATA||{}, cands=(D.candidates||{})[key]||[], qs=(D.questions||{})[key]||[];
+      var c=cands.filter(function(x){ return norm(x.name)===norm(meno); })[0];
+      if(!c||!qs.length){ body.innerHTML='<p class="tr-note">Postoje sa nepodarilo načítať.</p>'; return; }
+      var st=stavy(key), neutral=0, items='';
+      qs.forEach(function(q,i){
+        var a=q.a&&q.a[c.id];
+        if(a!=='agree'&&a!=='disagree'){ neutral++; return; }
+        var s=st[i+1]||{}, code=ST[s.stav]?s.stav:'sledujeme';
+        var ev='';
+        if(s.text||s.odkaz){ ev='<p class="tr-ev">'+(s.datum?esc(s.datum.split('-').reverse().join('. '))+': ':'')+esc(s.text||'')+(s.odkaz?' <a href="'+esc(s.odkaz)+'" target="_blank" rel="noopener">Zdroj</a>':'')+'</p>'; }
+        items+='<li class="tr-item"><div class="tr-top"><span class="tr-pos '+a+'">'+(a==='agree'?'Súhlasí':'Nesúhlasí')+'</span><span class="tr-topic">'+(i+1)+'. '+esc(q.t||'')+'</span><span class="tr-st '+code+'">'+ST[code]+'</span></div>'+esc(q.q)+ev+'</li>';
+      });
+      var note= det.dataset.overene==='1'
+        ? '<p class="tr-note">Tieto postoje '+(det.dataset.rod==='f'?'kandidátka':'kandidát')+' osobne potvrdil'+(det.dataset.rod==='f'?'a':'')+' vo formulári pred voľbami. Stav meníme len na základe overiteľného zdroja, napríklad hlasovania zastupiteľstva, rozpočtu alebo uznesenia.</p>'
+        : '<p class="tr-note tr-note--est">Tieto postoje sú náš odhad z verejných zdrojov, '+(det.dataset.rod==='f'?'kandidátka':'kandidát')+' ich neoveril'+(det.dataset.rod==='f'?'a':'')+'. Stav meníme len na základe overiteľného zdroja, napríklad hlasovania zastupiteľstva, rozpočtu alebo uznesenia.</p>';
+      var k=counts(key,qs,c.id), pl=function(n,a,b,c2){return n===1?a:(n>=2&&n<=4?b:c2);};
+      var tc=det.querySelector('.tr-count'); if(tc) tc.textContent=k.n+' '+pl(k.n,'postoj','postoje','postojov')+' · '+k.ok+' splnen'+pl(k.ok,'ý','é','ých')+' · '+k.bad+' v rozpore';
+      body.innerHTML=note+'<ul class="tr-list">'+items+'</ul>'+(neutral?'<p class="tr-neutral">Pri '+neutral+' ďalších otázkach mal'+(det.dataset.rod==='f'?'a':'')+' neutrálny postoj, tie nesledujeme.</p>':'');
+    }).catch(function(){ body.innerHTML='<p class="tr-note">Postoje sa nepodarilo načítať. Skús obnoviť stránku.</p>'; });
+  }
+  document.querySelectorAll('details.tr').forEach(function(det){
+    det.addEventListener('toggle',function(){ if(det.open&&!det.dataset.done){ det.dataset.done='1'; render(det); } });
+  });
+})();
+</script>
+</body>
+</html>
